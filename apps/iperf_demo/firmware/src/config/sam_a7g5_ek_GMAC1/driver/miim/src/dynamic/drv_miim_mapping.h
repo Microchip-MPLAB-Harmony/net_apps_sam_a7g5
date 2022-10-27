@@ -86,6 +86,7 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
         GMAC_MIIM_SYSCLK_DIV_BY_48  /*DOM-IGNORE-BEGIN*/ = 0x03 /*DOM-IGNORE-END*/ ,
         GMAC_MIIM_SYSCLK_DIV_BY_64  /*DOM-IGNORE-BEGIN*/ = 0x04 /*DOM-IGNORE-END*/ ,
         GMAC_MIIM_SYSCLK_DIV_BY_96  /*DOM-IGNORE-BEGIN*/ = 0x05 /*DOM-IGNORE-END*/ ,
+        GMAC_MIIM_SYSCLK_DIV_ABOVE_96  /*DOM-IGNORE-BEGIN*/ = 0x06 /*DOM-IGNORE-END*/ ,
 
     } GMAC_MIIM_CLK;
     
@@ -223,7 +224,7 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
         } 
         else 
         { 
-            clock_dividor = 0; 
+            clock_dividor = GMAC_MIIM_SYSCLK_DIV_ABOVE_96; 
         } 
         
         //disable tx if it is already enabled

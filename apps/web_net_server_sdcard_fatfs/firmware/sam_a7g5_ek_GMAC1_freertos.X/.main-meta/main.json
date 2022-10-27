@@ -1,0 +1,76 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.1.0",
+		"name": "com.microchip.mcu32.mplabx.project.net_apps_sam_a7g5_web_net_server_sdcard_fatfs_sam_a7g5_ek_GMAC1_freertos",
+		"version": "3.7.0",
+		"displayName": "TCP/IP WEB-NET Server SDMMC Application Example for SAMA7G5 Family",
+		"projectName": "web_net_server_sdcard_fatfs_GMAC1_freertos",
+		"shortDescription": "The Web Net Server SDCard configuration demonstrates creating an HTTP web server on a Microchip evaluation board. The FAT FS File System is used for storing the web pages on an external SD Card.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=6.00"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=4.00"
+			}
+		],
+		"dfp": {
+			"name": "SAMA7G5_DFP",
+			"semverRange": "^1.0.56"
+		},
+		"configurator": {
+			"name": "MCC",
+			"semverRange": ">=5.2.0"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "SAMA7G54",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit", "SAMA7G54-EK"
+			],
+			[
+				"Harmony", "Middleware", "TCP/IP", "WEB_NET_SERVER_SDCARD_FATFS"
+			],
+			[
+				"Middleware", "TCP/IP", "WEB_NET_SERVER_SDCARD_FATFS"
+			]
+		],
+		"peripherals": [
+			"MAC"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"Middleware",
+			"TCP/IP",
+			"SAMA7G54",
+			"SAMA7G5 Family",
+			"Ethernet MAC",
+			"GMAC"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

@@ -255,8 +255,8 @@ extern "C" {
 
 /*** iperf Configuration ***/
 #define TCPIP_STACK_USE_IPERF
-#define TCPIP_IPERF_TX_BUFFER_SIZE		8192
-#define TCPIP_IPERF_RX_BUFFER_SIZE  	8192
+#define TCPIP_IPERF_TX_BUFFER_SIZE		4096
+#define TCPIP_IPERF_RX_BUFFER_SIZE  	4096
 #define TCPIP_IPERF_TX_WAIT_TMO     	100
 #define TCPIP_IPERF_TX_QUEUE_LIMIT  	2
 #define TCPIP_IPERF_TIMING_ERROR_MARGIN 0
@@ -279,7 +279,7 @@ extern "C" {
 
 /*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       76800
+#define TCPIP_STACK_DRAM_SIZE                       128000
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
@@ -309,7 +309,7 @@ extern "C" {
 #define TCPIP_STACK_USE_TCP
 #define TCPIP_STACK_USE_UDP
 
-#define TCPIP_STACK_TICK_RATE		        		5
+#define TCPIP_STACK_TICK_RATE		        		1
 #define TCPIP_STACK_SECURE_PORT_ENTRIES             10
 
 #define TCPIP_STACK_ALIAS_INTERFACE_SUPPORT   false
@@ -337,8 +337,8 @@ extern "C" {
 /*** UDP Configuration ***/
 #define TCPIP_UDP_MAX_SOCKETS		                	10
 #define TCPIP_UDP_SOCKET_DEFAULT_TX_SIZE		    	512
-#define TCPIP_UDP_SOCKET_DEFAULT_TX_QUEUE_LIMIT    	 	3
-#define TCPIP_UDP_SOCKET_DEFAULT_RX_QUEUE_LIMIT			3
+#define TCPIP_UDP_SOCKET_DEFAULT_TX_QUEUE_LIMIT    	 	20
+#define TCPIP_UDP_SOCKET_DEFAULT_RX_QUEUE_LIMIT			20
 #define TCPIP_UDP_USE_POOL_BUFFERS   false
 #define TCPIP_UDP_USE_TX_CHECKSUM             			true
 #define TCPIP_UDP_USE_RX_CHECKSUM             			true
@@ -461,25 +461,25 @@ extern "C" {
 #define TCPIP_GMAC0_RX_BUFF_COUNT_THRESHOLD_QUE5          0
 #define TCPIP_GMAC0_RX_BUFF_ALLOC_COUNT_QUE5              0
 #define TCPIP_GMAC0_RX_FILTERS                       \
-														TCPIP_MAC_RX_FILTER_TYPE_BCAST_ACCEPT |\
-														TCPIP_MAC_RX_FILTER_TYPE_MCAST_ACCEPT |\
-														TCPIP_MAC_RX_FILTER_TYPE_UCAST_ACCEPT |\
-														TCPIP_MAC_RX_FILTER_TYPE_CRC_ERROR_REJECT |\
-														  0
-	   
+                                                        TCPIP_MAC_RX_FILTER_TYPE_BCAST_ACCEPT |\
+                                                        TCPIP_MAC_RX_FILTER_TYPE_MCAST_ACCEPT |\
+                                                        TCPIP_MAC_RX_FILTER_TYPE_UCAST_ACCEPT |\
+                                                        TCPIP_MAC_RX_FILTER_TYPE_CRC_ERROR_REJECT |\
+                                                          0
+       
 #define TCPIP_GMAC0_SCREEN1_COUNT_QUE        0 
 #define TCPIP_GMAC0_SCREEN2_COUNT_QUE        0       
 
 #define TCPIP_GMAC0_ETH_OPEN_FLAGS                   \
-														TCPIP_ETH_OPEN_AUTO |\
-														TCPIP_ETH_OPEN_FDUPLEX |\
-														TCPIP_ETH_OPEN_HDUPLEX |\
-														TCPIP_ETH_OPEN_1000 |\
-														TCPIP_ETH_OPEN_100 |\
-														TCPIP_ETH_OPEN_10 |\
-														TCPIP_ETH_OPEN_MDIX_AUTO |\
-														TCPIP_ETH_OPEN_RGMII |\
-														0
+                                                        TCPIP_ETH_OPEN_AUTO |\
+                                                        TCPIP_ETH_OPEN_FDUPLEX |\
+                                                        TCPIP_ETH_OPEN_HDUPLEX |\
+                                                        TCPIP_ETH_OPEN_1000 |\
+                                                        TCPIP_ETH_OPEN_100 |\
+                                                        TCPIP_ETH_OPEN_10 |\
+                                                        TCPIP_ETH_OPEN_MDIX_AUTO |\
+                                                        TCPIP_ETH_OPEN_RGMII |\
+                                                        0
 
 #define TCPIP_GMAC0_MODULE_ID                       GMAC0_BASE_ADDRESS
 

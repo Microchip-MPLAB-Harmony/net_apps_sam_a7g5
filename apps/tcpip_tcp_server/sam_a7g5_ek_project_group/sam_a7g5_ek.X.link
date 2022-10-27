@@ -1,2 +1,4 @@
 ..\firmware\sam_a7g5_ek_GMAC0.X
 ..\firmware\sam_a7g5_ek_GMAC1.X
+..\firmware\sam_a7g5_ek_GMAC0_freertos.X
+..\firmware\sam_a7g5_ek_GMAC1_freertos.X

@@ -108,7 +108,7 @@ extern "C" {
 
 
 #define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			1
-#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			1
+#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			2
 #define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		0
 #define SYS_CONSOLE_PRINT_BUFFER_SIZE        		200
 
@@ -139,6 +139,26 @@ extern "C" {
 // Section: Middleware & Other Library Configuration
 // *****************************************************************************
 // *****************************************************************************
+
+
+/*** DNS Client Configuration ***/
+#define TCPIP_STACK_USE_DNS
+#define TCPIP_DNS_CLIENT_SERVER_TMO					60
+#define TCPIP_DNS_CLIENT_TASK_PROCESS_RATE			200
+#define TCPIP_DNS_CLIENT_CACHE_ENTRIES				5
+#define TCPIP_DNS_CLIENT_CACHE_ENTRY_TMO			0
+#define TCPIP_DNS_CLIENT_CACHE_PER_IPV4_ADDRESS		5
+#define TCPIP_DNS_CLIENT_CACHE_PER_IPV6_ADDRESS		1
+#define TCPIP_DNS_CLIENT_ADDRESS_TYPE			    IP_ADDRESS_TYPE_IPV4
+#define TCPIP_DNS_CLIENT_CACHE_DEFAULT_TTL_VAL		1200
+#define TCPIP_DNS_CLIENT_LOOKUP_RETRY_TMO			2
+#define TCPIP_DNS_CLIENT_MAX_HOSTNAME_LEN			64
+#define TCPIP_DNS_CLIENT_MAX_SELECT_INTERFACES		4
+#define TCPIP_DNS_CLIENT_DELETE_OLD_ENTRIES			true
+#define TCPIP_DNS_CLIENT_CONSOLE_CMD               	true
+#define TCPIP_DNS_CLIENT_USER_NOTIFICATION   false
+
+
 
 /*** ICMPv4 Server Configuration ***/
 #define TCPIP_STACK_USE_ICMP_SERVER
@@ -235,8 +255,8 @@ extern "C" {
 
 /*** iperf Configuration ***/
 #define TCPIP_STACK_USE_IPERF
-#define TCPIP_IPERF_TX_BUFFER_SIZE		3
-#define TCPIP_IPERF_RX_BUFFER_SIZE  	16384
+#define TCPIP_IPERF_TX_BUFFER_SIZE		4096
+#define TCPIP_IPERF_RX_BUFFER_SIZE  	4096
 #define TCPIP_IPERF_TX_WAIT_TMO     	100
 #define TCPIP_IPERF_TX_QUEUE_LIMIT  	2
 #define TCPIP_IPERF_TIMING_ERROR_MARGIN 0
@@ -259,7 +279,7 @@ extern "C" {
 
 /*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       79872
+#define TCPIP_STACK_DRAM_SIZE                       128000
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
@@ -289,7 +309,7 @@ extern "C" {
 #define TCPIP_STACK_USE_TCP
 #define TCPIP_STACK_USE_UDP
 
-#define TCPIP_STACK_TICK_RATE		        		5
+#define TCPIP_STACK_TICK_RATE		        		1
 #define TCPIP_STACK_SECURE_PORT_ENTRIES             10
 
 #define TCPIP_STACK_ALIAS_INTERFACE_SUPPORT   false
@@ -317,8 +337,8 @@ extern "C" {
 /*** UDP Configuration ***/
 #define TCPIP_UDP_MAX_SOCKETS		                	10
 #define TCPIP_UDP_SOCKET_DEFAULT_TX_SIZE		    	512
-#define TCPIP_UDP_SOCKET_DEFAULT_TX_QUEUE_LIMIT    	 	3
-#define TCPIP_UDP_SOCKET_DEFAULT_RX_QUEUE_LIMIT			3
+#define TCPIP_UDP_SOCKET_DEFAULT_TX_QUEUE_LIMIT    	 	20
+#define TCPIP_UDP_SOCKET_DEFAULT_RX_QUEUE_LIMIT			20
 #define TCPIP_UDP_USE_POOL_BUFFERS   false
 #define TCPIP_UDP_USE_TX_CHECKSUM             			true
 #define TCPIP_UDP_USE_RX_CHECKSUM             			true
@@ -373,21 +393,6 @@ extern "C" {
 #define NO_WOLFSSL_MEMORY
 // ---------- FUNCTIONAL CONFIGURATION END ----------
 
-
-/*** DNS Server Configuration ***/
-#define TCPIP_STACK_USE_DNS_SERVER
-#define TCPIP_DNSS_HOST_NAME_LEN		    	64
-#define TCPIP_DNSS_REPLY_BOARD_ADDR				true
-#define TCPIP_DNSS_CACHE_PER_IPV4_ADDRESS		2
-#define TCPIP_DNSS_CACHE_PER_IPV6_ADDRESS		1
-#define TCPIP_DNSS_TTL_TIME						600
-#define TCPIP_DNSS_TASK_PROCESS_RATE			33
-#define TCPIP_DNSS_DELETE_OLD_LEASE				true
-#define TCPIP_DNSS_CONSOLE_CMD           false
-/***Maximum DNS server Cache entries. It is the sum of TCPIP_DNSS_CACHE_PER_IPV4_ADDRESS and TCPIP_DNSS_CACHE_PER_IPV6_ADDRESS.***/
-#define TCPIP_DNSS_CACHE_MAX_SERVER_ENTRIES     (TCPIP_DNSS_CACHE_PER_IPV4_ADDRESS + TCPIP_DNSS_CACHE_PER_IPV6_ADDRESS)
-
-
 #define DRV_KSZ8081_PHY_CONFIG_FLAGS       ( 0 \
                                                     | DRV_ETHPHY_CFG_RMII \
                                                     )
@@ -426,24 +431,24 @@ extern "C" {
 #define TCPIP_GMAC1_RX_BUFF_COUNT_THRESHOLD_QUE1          0
 #define TCPIP_GMAC1_RX_BUFF_ALLOC_COUNT_QUE1              0
 #define TCPIP_GMAC1_RX_FILTERS                       \
-														TCPIP_MAC_RX_FILTER_TYPE_BCAST_ACCEPT |\
-														TCPIP_MAC_RX_FILTER_TYPE_MCAST_ACCEPT |\
-														TCPIP_MAC_RX_FILTER_TYPE_UCAST_ACCEPT |\
-														TCPIP_MAC_RX_FILTER_TYPE_CRC_ERROR_REJECT |\
-														  0
-	   
+                                                        TCPIP_MAC_RX_FILTER_TYPE_BCAST_ACCEPT |\
+                                                        TCPIP_MAC_RX_FILTER_TYPE_MCAST_ACCEPT |\
+                                                        TCPIP_MAC_RX_FILTER_TYPE_UCAST_ACCEPT |\
+                                                        TCPIP_MAC_RX_FILTER_TYPE_CRC_ERROR_REJECT |\
+                                                          0
+       
 #define TCPIP_GMAC1_SCREEN1_COUNT_QUE        0 
 #define TCPIP_GMAC1_SCREEN2_COUNT_QUE        0       
 
 #define TCPIP_GMAC1_ETH_OPEN_FLAGS                   \
-														TCPIP_ETH_OPEN_AUTO |\
-														TCPIP_ETH_OPEN_FDUPLEX |\
-														TCPIP_ETH_OPEN_HDUPLEX |\
-														TCPIP_ETH_OPEN_100 |\
-														TCPIP_ETH_OPEN_10 |\
-														TCPIP_ETH_OPEN_MDIX_AUTO |\
-														TCPIP_ETH_OPEN_RMII |\
-														0
+                                                        TCPIP_ETH_OPEN_AUTO |\
+                                                        TCPIP_ETH_OPEN_FDUPLEX |\
+                                                        TCPIP_ETH_OPEN_HDUPLEX |\
+                                                        TCPIP_ETH_OPEN_100 |\
+                                                        TCPIP_ETH_OPEN_10 |\
+                                                        TCPIP_ETH_OPEN_MDIX_AUTO |\
+                                                        TCPIP_ETH_OPEN_RMII |\
+                                                        0
 
 #define TCPIP_GMAC1_MODULE_ID                       GMAC1_BASE_ADDRESS
 

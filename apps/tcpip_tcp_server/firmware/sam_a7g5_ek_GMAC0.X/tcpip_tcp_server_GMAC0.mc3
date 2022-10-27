@@ -1,4 +1,4 @@
-<config configName="sam_a7g5_ek_GMAC0" projectName="tcpip_tcp_server_GMAC0" configVersion="1.1" device="SAMA7G54" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.4">
+<config configName="sam_a7g5_ek_GMAC0" projectName="tcpip_tcp_server_GMAC0" configVersion="1.1" device="SAMA7G54" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.12">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -305,14 +305,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;NETWORK LAYER&quot;&gt;
-      &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
-        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipArp&quot; x=&quot;300&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipIPv4&quot; x=&quot;160&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;tcpipIcmp&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-      &lt;/ElementPositions&gt;
-    &lt;/ComponentGraph&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;0&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; x=&quot;40&quot; y=&quot;59&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;TCP/IP STACK&quot; x=&quot;619&quot; y=&quot;141&quot;/&gt;
@@ -329,7 +322,28 @@
         &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;tc0&quot; x=&quot;55&quot; y=&quot;471&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;TCP/IP STACK&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;DATA LINK LAYER&quot;&gt;
+      &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
+        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;drvExtPhyKsz9131&quot; x=&quot;300&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;drvGmac0&quot; x=&quot;179&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;drvMiim&quot; x=&quot;420&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;tcpipNetConfig&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+      &lt;/ElementPositions&gt;
+    &lt;/ComponentGraph&gt;
+    &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;APPLICATION LAYER&quot;&gt;
+      &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
+        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipDhcp&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipDns&quot; x=&quot;180&quot; y=&quot;20&quot;/&gt;
+      &lt;/ElementPositions&gt;
+    &lt;/ComponentGraph&gt;
+    &lt;ComponentGraph dnOrder=&quot;3&quot; id=&quot;NETWORK LAYER&quot;&gt;
+      &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
+        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipArp&quot; x=&quot;300&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipIPv4&quot; x=&quot;160&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;tcpipIcmp&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+      &lt;/ElementPositions&gt;
+    &lt;/ComponentGraph&gt;
+    &lt;ComponentGraph dnOrder=&quot;4&quot; id=&quot;TCP/IP STACK&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;APPLICATION LAYER&quot; x=&quot;220&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;BASIC CONFIGURATION&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
@@ -338,27 +352,13 @@
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;TRANSPORT LAYER&quot; x=&quot;400&quot; y=&quot;20&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;ComponentGraph dnOrder=&quot;3&quot; id=&quot;APPLICATION LAYER&quot;&gt;
-      &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
-        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipDhcp&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipDns&quot; x=&quot;180&quot; y=&quot;20&quot;/&gt;
-      &lt;/ElementPositions&gt;
-    &lt;/ComponentGraph&gt;
-    &lt;ComponentGraph dnOrder=&quot;4&quot; id=&quot;BASIC CONFIGURATION&quot;&gt;
+    &lt;GraphSettings canvasHeight=&quot;576&quot; canvasWidth=&quot;762&quot; dnOrder=&quot;5&quot;/&gt;
+    &lt;ComponentGraph dnOrder=&quot;6&quot; id=&quot;BASIC CONFIGURATION&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipCmd&quot; x=&quot;200&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipStack&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;ComponentGraph dnOrder=&quot;5&quot; id=&quot;DATA LINK LAYER&quot;&gt;
-      &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
-        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;drvExtPhyKsz9131&quot; x=&quot;300&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;drvGmac0&quot; x=&quot;179&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;drvMiim&quot; x=&quot;420&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;tcpipNetConfig&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-      &lt;/ElementPositions&gt;
-    &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;576&quot; canvasWidth=&quot;762&quot; dnOrder=&quot;6&quot;/&gt;
     &lt;ComponentGraph dnOrder=&quot;7&quot; id=&quot;TRANSPORT LAYER&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipTcp&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
@@ -3187,7 +3187,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\dhcpv6.h</file>
-         <hash>b448d2602c6231b398bc4911ad732a51129d279f1924b3b7da22881e1eeb5b9d</hash>
+         <hash>1556a5bdc6ab281670d1eac3de606f9ee287a33c670e917c52b6eebb1ae7f236</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\src\dhcpv6_manager.h</file>
@@ -3219,7 +3219,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\src\tcpip_commands.c</file>
-         <hash>6bbf32362c5aa200e847590620ee8b9bc279fb98de3fb999d6204d7470b76138</hash>
+         <hash>c29397f6425469b2a59fddec84aad89f5875ab3182a5f50a300b85fc90cefa17</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\curve448.c</file>
@@ -3483,7 +3483,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\src\ipv4.c</file>
-         <hash>b2dddba80c06087661d58dadf895e7477df7ad89b266e9c34a08a601d250d64b</hash>
+         <hash>d3b7d144e5d23a2a9d00f9a9d61df8f750ac84a171168f69fa8324b074171364</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\wc_port.c</file>
@@ -3799,7 +3799,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\initialization.c</file>
-         <hash>87003599b2c993c36c0f574f28f31227b6be88bdb8b156dd340b9d5a715a20f5</hash>
+         <hash>628212039990ca8dac9cecbdd555983092de754f120ab4df3331340872e0feaa</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\peripheral\dwdt\plib_dwdt.c</file>
@@ -3899,7 +3899,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\src\tcpip_manager.c</file>
-         <hash>c0734865de5be2d7d78d3e72160a23f4fae8e48c1719c01ef5f68db8fdb36178</hash>
+         <hash>f4b3eba77d17b0b442c07a75318949aaaa68ac7dd15bc46f1b8df92aab2c0068</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\dsa.h</file>
@@ -3927,7 +3927,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\tcpip_mac_object.h</file>
-         <hash>20a88a71ee17a4699f2dfb9b91d4f06d3ac40cbbd2873af66b31d957828a3214</hash>
+         <hash>9b96c3129981b3788e6181ee317944215ee3ef3c55d3e90f679d6b57dc6a10d1</hash>
       </entry>
       <entry>
          <file>..\src\app.c</file>
@@ -3935,7 +3935,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\src\tcpip_manager_control.h</file>
-         <hash>32dae5f4dee90c2fd90c58fba6e08e6c109848f8ee53f984646216c8be3cc2e8</hash>
+         <hash>1981cdeb145068acc380c51673fd50a4d1963231eb2c652182b2147fbfc71bae</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\wolfmath.c</file>
@@ -3983,7 +3983,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\src\http_net_private.h</file>
-         <hash>00d7d01ef11c16f50a884eb439c025d8c08088edeccaae1061a31d26ecf0c4f7</hash>
+         <hash>fb7bef3cb16f55bbcd0b7c6b2e54db3cfb3cc45f0c0135c6fc8c4ab87b5c8a41</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\net_pres\pres\net_pres.h</file>
@@ -4243,7 +4243,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\tcpip.h</file>
-         <hash>ecc68969c9e61c0a9e9a578db6aa8749587b3edc95ae30c7137457d8010ee34a</hash>
+         <hash>5e3960fa5e74d990ad4a9bd20639b50ce9a18321c2a0c75d15a80e97fee9531f</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\asrc.h</file>
@@ -4319,7 +4319,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\driver\gmac\src\dynamic\drv_gmac_lib_samA7G5.c</file>
-         <hash>de3e0c618ec2ad6b21ee2fc0690220dfe3bcb9da36d8945a9bd1829ace06c9bb</hash>
+         <hash>395b3251c9ba6b3d161fd8b31c84976deebf9b66a6f24285d0bfca636a9e5473</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\CryptoLib_RedMod_pb.h</file>
@@ -4407,7 +4407,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\configuration.h</file>
-         <hash>d0b7a82c1093572e76682696beb9ed7060d1ed9dd5a7b6ac1a5cc048d87e7cab</hash>
+         <hash>56478f9be8e2988fc7f5b2b5089c1ab592796b736755c3532f6475abd5a7800e</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\wolfevent.h</file>
@@ -4479,7 +4479,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\driver\ethphy\src\dynamic\drv_ethphy.c</file>
-         <hash>968cbd8f026d82add35c8f6c26dd26a1cedb84fa544782dc535398b3016f8660</hash>
+         <hash>887ba6a84121ed0ca836289b29150b86719f6d87f49b1ddfc76c19b6b3d5f750</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\crypto\crypto.h</file>
@@ -4523,7 +4523,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\driver\gmac\drv_gmac.h</file>
-         <hash>6d3652772ca629b0470e01e00a7f43072b682acd99b1baa05b6bd97f77f2faea</hash>
+         <hash>dbc7fe064793bcb42959b3d00153b32c7f6a9631fa1ccffafce3160251c810c2</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\port\pic32\crypt_sha512_sam6156.c</file>
@@ -4759,11 +4759,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\tasks.c</file>
-         <hash>e47aa0f7d4d86d8d5566b8c18057f9e2dd0192d78eec9ad60dbd7e0ac10c0c61</hash>
+         <hash>ef15828a046e20dab0a86af621153223905e877ac48fd6682486e6212025edfb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\src\dhcpv6_private.h</file>
-         <hash>a48787ae83550a1a1c805cf7ebffeb9ca4f5e7cff75752ec37479bcc1ed0b2ff</hash>
+         <hash>1f0d6831821cf03435d0c23e932a564b10ebdf4685e1c2c7840b44808330c289</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\component\tzpm.h</file>
@@ -4835,7 +4835,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\tcpip_mac.h</file>
-         <hash>b1f57799872ef461c5b01ee5e4efdefaf04915bce8694e9c2cc8befbd54c0a1e</hash>
+         <hash>7bd5b120588392b86442fe81eb5547bc3985af8dd6252ab7fa039648724094f1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\system\time\src\sys_time.c</file>
@@ -4891,7 +4891,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\driver\miim\src\dynamic\drv_miim_mapping.h</file>
-         <hash>0b76ac5b4af625ae65bc611ec7792cfb6a3851640d8dcaa5b46982a7bca3d0a9</hash>
+         <hash>3b6066af8a9c4f214c9c600861386f40a0f36da90372e9ff4dc0b926a9642d76</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\tcpip_commands.h</file>
@@ -5175,7 +5175,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\tcpip_manager.h</file>
-         <hash>6d0ad761382702e8ebdeaedd4795ba08fcd6b671aa56550d9b1e2e8caedb695e</hash>
+         <hash>9d9bd4cb087b539129dc5a7c3ef62bd708de7de8064656632c788066d86e1416</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\dnss.h</file>
@@ -5231,7 +5231,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\src\http_net_manager.h</file>
-         <hash>7ca773d29b611a4ae5211affb541819f619d3dbbac05ebf92ae5bf01b08a6024</hash>
+         <hash>836d9ae7f5802514475e5168cf5ad235aaee5d5e631ab1135a64271fc5c95aa5</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\crypt_sha224_hw.h</file>

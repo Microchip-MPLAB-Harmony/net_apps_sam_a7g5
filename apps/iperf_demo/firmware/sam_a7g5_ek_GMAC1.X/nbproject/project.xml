@@ -4,7 +4,7 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>iperf_demo_GMAC1</name>
-            <creation-uuid>67f155b1-1f9b-4e64-9f85-b5e8ee7a7bc8</creation-uuid>
+            <creation-uuid>89762221-9248-4504-a366-662f24f2632f</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <c-extensions>c,S</c-extensions>
