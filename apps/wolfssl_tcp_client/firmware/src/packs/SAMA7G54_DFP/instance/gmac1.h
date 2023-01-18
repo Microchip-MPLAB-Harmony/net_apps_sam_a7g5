@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_GMAC1_INSTANCE_
 #define _SAMA7G_GMAC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for GMAC1 peripheral ========== */
-#define GMAC1_INSTANCE_ID                        (52)       /* Ethernet MAC */
 #define GMAC1_CLOCK_ID                           (52)       
-#define GMAC1_INSTANCE_ID_TSU                    (54)       /* Ethernet MAC - Time Stamp Unit Generic Clock - No Interrupt */
+#define GMAC1_INSTANCE_ID                        (52)       /* Ethernet MAC */
 #define GMAC1_INSTANCE_ID_Q1                     (121)      /* GMAC1 Queue 1 Interrupt signal toggled on a DMA write to the first word of each DMA data buffer associated with queue 1 */
+#define GMAC1_INSTANCE_ID_TSU                    (54)       /* Ethernet MAC - Time Stamp Unit Generic Clock - No Interrupt */
 
 #endif /* _SAMA7G_GMAC1_INSTANCE_ */

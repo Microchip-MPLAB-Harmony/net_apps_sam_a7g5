@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_ASRC_INSTANCE_
 #define _SAMA7G_ASRC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for ASRC peripheral ========== */
-#define ASRC_INSTANCE_ID                         (30)       /* Asynchronous Sample Rate Converter */
 #define ASRC_CLOCK_ID                            (30)       
+#define ASRC_INSTANCE_ID                         (30)       /* Asynchronous Sample Rate Converter */
 
 #endif /* _SAMA7G_ASRC_INSTANCE_ */

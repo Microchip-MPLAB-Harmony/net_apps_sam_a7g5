@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_OTPC_INSTANCE_
 #define _SAMA7G_OTPC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for OTPC peripheral ========== */
-#define OTPC_INSTANCE_ID                         (67)       /* One Time Programmable memory Controller */
 #define OTPC_EMULATION_ADDRESS                   (0xE0000000) 
 #define OTPC_EMULATION_SIZE                      (0x00001000) 
+#define OTPC_INSTANCE_ID                         (67)       /* One Time Programmable memory Controller */
 
 #endif /* _SAMA7G_OTPC_INSTANCE_ */

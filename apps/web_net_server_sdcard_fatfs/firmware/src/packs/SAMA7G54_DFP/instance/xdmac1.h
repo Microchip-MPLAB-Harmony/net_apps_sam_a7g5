@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_XDMAC1_INSTANCE_
 #define _SAMA7G_XDMAC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for XDMAC1 peripheral ========== */
-#define XDMAC1_INSTANCE_ID                       (23)       /* DMA 1, mem to periph, 32 Channels */
 #define XDMAC1_CLOCK_ID                          (23)       
+#define XDMAC1_INSTANCE_ID                       (23)       /* DMA 1, mem to periph, 32 Channels */
 #define XDMAC1_INSTANCE_ID_SINT                  (113)      /* DMA 1, mem to periph, 32 Channels, Secure INTerrupt */
 
 #endif /* _SAMA7G_XDMAC1_INSTANCE_ */

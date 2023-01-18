@@ -61,22 +61,21 @@
 
 
 /* Callback object for channel 0 */
-TC_TIMER_CALLBACK_OBJECT TC0_CH0_CallbackObj;
+static TC_TIMER_CALLBACK_OBJECT TC0_CH0_CallbackObj;
 
 /* Initialize channel in timer mode */
 void TC0_CH0_TimerInitialize (void)
 {
-    /* Use peripheral clock */
-    TC0_REGS->TC_CHANNEL[0].TC_EMR = TC_EMR_NODIVCLK_Msk;
     /* clock selection and waveform selection */
-    TC0_REGS->TC_CHANNEL[0].TC_CMR =  TC_CMR_WAVEFORM_WAVSEL_UP_RC | TC_CMR_WAVE_Msk ;
+    TC0_REGS->TC_CHANNEL[0].TC_CMR = TC_CMR_TCCLKS_TIMER_CLOCK5 | TC_CMR_WAVEFORM_WAVSEL_UP_RC | \
+                                                        TC_CMR_WAVE_Msk ;
 
     /* write period */
-    TC0_REGS->TC_CHANNEL[0].TC_RC = 0U;
+    TC0_REGS->TC_CHANNEL[0].TC_RC = 32U;
 
 
     /* enable interrupt */
-    TC0_REGS->TC_CHANNEL[0].TC_IER = TC_IER_CPAS_Msk;
+    TC0_REGS->TC_CHANNEL[0].TC_IER = TC_IER_CPCS_Msk;
     TC0_CH0_CallbackObj.callback_fn = NULL;
 }
 
@@ -94,7 +93,7 @@ void TC0_CH0_TimerStop (void)
 
 uint32_t TC0_CH0_TimerFrequencyGet( void )
 {
-    return (uint32_t)(200000000UL);
+    return (uint32_t)(32768UL);
 }
 
 /* Configure timer period */
@@ -131,9 +130,9 @@ void TC0_CH0_TimerCallbackRegister(TC_TIMER_CALLBACK callback, uintptr_t context
 /* Interrupt handler for Channel 0 */
 void TC0_CH0_InterruptHandler(void)
 {
-    TC_TIMER_STATUS timer_status = (TC_TIMER_STATUS)(TC0_REGS->TC_CHANNEL[0].TC_SR & TC_TIMER_STATUS_MSK);
+    TC_TIMER_STATUS timer_status = (TC0_REGS->TC_CHANNEL[0].TC_SR & TC_TIMER_STATUS_MSK);
     /* Call registered callback function */
-    if ((TC_TIMER_NONE != timer_status) && TC0_CH0_CallbackObj.callback_fn != NULL)
+    if ((TC_TIMER_NONE != timer_status) && (TC0_CH0_CallbackObj.callback_fn != NULL))
     {
         TC0_CH0_CallbackObj.callback_fn(timer_status, TC0_CH0_CallbackObj.context);
     }

@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_SPDIFRX_INSTANCE_
 #define _SAMA7G_SPDIFRX_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SPDIFRX peripheral ========== */
-#define SPDIFRX_INSTANCE_ID                      (84)       /* Sony Philips Digital Interface RX */
 #define SPDIFRX_CLOCK_ID                         (84)       
 #define SPDIFRX_DMAC_ID_RX                       (49)       
+#define SPDIFRX_INSTANCE_ID                      (84)       /* Sony Philips Digital Interface RX */
 
 #endif /* _SAMA7G_SPDIFRX_INSTANCE_ */

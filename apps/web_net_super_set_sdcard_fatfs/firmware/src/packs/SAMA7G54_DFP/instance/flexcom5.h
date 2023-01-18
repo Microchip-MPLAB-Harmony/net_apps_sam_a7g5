@@ -20,18 +20,18 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_FLEXCOM5_INSTANCE_
 #define _SAMA7G_FLEXCOM5_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for FLEXCOM5 peripheral ========== */
-#define FLEXCOM5_INSTANCE_ID                     (43)       /* Flexcom 5 */
 #define FLEXCOM5_CLOCK_ID                        (43)       
 #define FLEXCOM5_DMAC_ID_RX                      (15)       
 #define FLEXCOM5_DMAC_ID_TX                      (16)       
-#define FLEXCOM5_USART_FIFO_SIZE                 (32)       
+#define FLEXCOM5_INSTANCE_ID                     (43)       /* Flexcom 5 */
 #define FLEXCOM5_SPI_FIFO_SIZE                   (32)       
 #define FLEXCOM5_TWI_FIFO_SIZE                   (32)       
+#define FLEXCOM5_USART_FIFO_SIZE                 (32)       
 
 #endif /* _SAMA7G_FLEXCOM5_INSTANCE_ */

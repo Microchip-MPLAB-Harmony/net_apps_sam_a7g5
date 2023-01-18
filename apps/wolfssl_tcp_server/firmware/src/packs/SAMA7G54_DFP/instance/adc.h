@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_ADC_INSTANCE_
 #define _SAMA7G_ADC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for ADC peripheral ========== */
-#define ADC_INSTANCE_ID                          (26)       /* Analog-to-Digital Converter */
 #define ADC_DMAC_ID_RX                           (0)        
+#define ADC_INSTANCE_ID                          (26)       /* Analog-to-Digital Converter */
 
 #endif /* _SAMA7G_ADC_INSTANCE_ */

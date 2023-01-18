@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_ICM_INSTANCE_
 #define _SAMA7G_ICM_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for ICM peripheral ========== */
-#define ICM_INSTANCE_ID                          (55)       /* Integrity Check Monitor */
 #define ICM_CLOCK_ID                             (55)       
+#define ICM_INSTANCE_ID                          (55)       /* Integrity Check Monitor */
 #define ICM_INSTANCE_ID_SINT                     (122)      /* Integrity Check Monitor, Secure INTerrupt */
 
 #endif /* _SAMA7G_ICM_INSTANCE_ */

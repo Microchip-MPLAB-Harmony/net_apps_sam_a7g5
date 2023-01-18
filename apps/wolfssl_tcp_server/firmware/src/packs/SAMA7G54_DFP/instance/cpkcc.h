@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_CPKCC_INSTANCE_
 #define _SAMA7G_CPKCC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for CPKCC peripheral ========== */
-#define CPKCC_INSTANCE_ID                        (32)       /* Classic Public Key Cryptography Controller */
 #define CPKCC_CLOCK_ID                           (32)       
+#define CPKCC_INSTANCE_ID                        (32)       /* Classic Public Key Cryptography Controller */
 
 #endif /* _SAMA7G_CPKCC_INSTANCE_ */

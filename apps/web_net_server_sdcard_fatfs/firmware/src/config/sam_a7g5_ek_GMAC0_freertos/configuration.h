@@ -150,7 +150,7 @@ extern "C" {
 // *****************************************************************************
 // *****************************************************************************
 /* SDMMC Driver Global Configuration Options */
-#define DRV_SDMMC_INSTANCES_NUMBER                       1
+#define DRV_SDMMC_INSTANCES_NUMBER                       (1U)
 
 /*** MIIM Driver Configuration ***/
 #define DRV_MIIM_ETH_MODULE_ID_0                GMAC0_BASE_ADDRESS
@@ -230,9 +230,9 @@ extern "C" {
 #define TCPIP_HTTP_NET_USE_COOKIES
 #define TCPIP_HTTP_NET_USE_AUTHENTICATION
 #define TCPIP_HTTP_NET_MAX_DATA_LEN		        		100
-#define TCPIP_HTTP_NET_SKT_TX_BUFF_SIZE		    		1024
-#define TCPIP_HTTP_NET_SKT_RX_BUFF_SIZE		    		1024
-#define TCPIP_HTTP_NET_LISTEN_PORT		    		    80
+#define TCPIP_HTTP_NET_SKT_TX_BUFF_SIZE		    		2048
+#define TCPIP_HTTP_NET_SKT_RX_BUFF_SIZE		    		2048
+#define TCPIP_HTTP_NET_LISTEN_PORT		    		    443
 #define TCPIP_HTTP_NET_CONFIG_FLAGS                       \
                                                         TCPIP_HTTP_NET_MODULE_FLAG_SECURE_DEFAULT |\
                                                         TCPIP_HTTP_NET_MODULE_FLAG_DEFAULT
@@ -240,7 +240,7 @@ extern "C" {
 #define TCPIP_HTTP_NET_RESPONSE_BUFFER_SIZE				300
 #define TCPIP_HTTP_NET_COOKIE_BUFFER_SIZE				200
 #define TCPIP_HTTP_NET_FIND_PEEK_BUFF_SIZE				512
-#define TCPIP_HTTP_NET_FILE_PROCESS_BUFFER_SIZE         512
+#define TCPIP_HTTP_NET_FILE_PROCESS_BUFFER_SIZE         1024
 #define TCPIP_HTTP_NET_FILE_PROCESS_BUFFERS_NUMBER      4
 #define TCPIP_HTTP_NET_FILE_PROCESS_BUFFER_RETRIES      10
 #define TCPIP_HTTP_NET_CHUNKS_NUMBER                    10
@@ -392,7 +392,7 @@ extern "C" {
 
 /*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       122880
+#define TCPIP_STACK_DRAM_SIZE                       138240
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
@@ -445,7 +445,7 @@ extern "C" {
 
 
 /* TCP/IP RTOS Configurations*/
-#define TCPIP_RTOS_STACK_SIZE                1024
+#define TCPIP_RTOS_STACK_SIZE                8192
 #define TCPIP_RTOS_PRIORITY             1
 
 
@@ -528,7 +528,7 @@ extern "C" {
 
 /* MPLAB Harmony Net Presentation Layer Definitions*/
 #define NET_PRES_NUM_INSTANCE 1
-#define NET_PRES_NUM_SOCKETS 10
+#define NET_PRES_NUM_SOCKETS 20
 
 /* Net Pres RTOS Configurations*/
 #define NET_PRES_RTOS_STACK_SIZE                8192

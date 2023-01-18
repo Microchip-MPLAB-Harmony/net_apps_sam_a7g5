@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_PWM_INSTANCE_
 #define _SAMA7G_PWM_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PWM peripheral ========== */
-#define PWM_INSTANCE_ID                          (77)       /* Pulse Width Modulation */
 #define PWM_CLOCK_ID                             (77)       
 #define PWM_DMAC_ID_TX                           (39)       
+#define PWM_INSTANCE_ID                          (77)       /* Pulse Width Modulation */
 
 #endif /* _SAMA7G_PWM_INSTANCE_ */

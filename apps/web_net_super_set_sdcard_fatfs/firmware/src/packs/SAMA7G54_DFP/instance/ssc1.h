@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_SSC1_INSTANCE_
 #define _SAMA7G_SSC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SSC1 peripheral ========== */
-#define SSC1_INSTANCE_ID                         (87)       /* Synchronous Serial Interface 1 */
 #define SSC1_CLOCK_ID                            (87)       
 #define SSC1_DMAC_ID_RX                          (46)       
 #define SSC1_DMAC_ID_TX                          (47)       
+#define SSC1_INSTANCE_ID                         (87)       /* Synchronous Serial Interface 1 */
 
 #endif /* _SAMA7G_SSC1_INSTANCE_ */

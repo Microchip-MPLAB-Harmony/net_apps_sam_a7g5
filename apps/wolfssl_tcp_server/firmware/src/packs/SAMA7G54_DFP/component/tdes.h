@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_TDES_COMPONENT_H_
 #define _SAMA7G_TDES_COMPONENT_H_
 
@@ -51,6 +51,120 @@
 #define TDES_CR_UNLOCK_0                      (TDES_CR_UNLOCK_0_Val << TDES_CR_UNLOCK_Pos)         /* (TDES_CR) No effect. Position  */
 #define TDES_CR_UNLOCK_1                      (TDES_CR_UNLOCK_1_Val << TDES_CR_UNLOCK_Pos)         /* (TDES_CR) Unlocks the processing in case of abnormal event detection if TDES_WPMR.ACTION > 0. Position  */
 #define TDES_CR_Msk                           _UINT32_(0x01000101)                                 /* (TDES_CR) Register Mask  */
+
+
+/* -------- TDES_IDATAR : (TDES Offset: 0x40) ( /W 32) Input Data Register x -------- */
+#define TDES_IDATAR_IDATA_Pos                 _UINT32_(0)                                          /* (TDES_IDATAR) Input Data Position */
+#define TDES_IDATAR_IDATA_Msk                 (_UINT32_(0xFFFFFFFF) << TDES_IDATAR_IDATA_Pos)      /* (TDES_IDATAR) Input Data Mask */
+#define TDES_IDATAR_IDATA(value)              (TDES_IDATAR_IDATA_Msk & (_UINT32_(value) << TDES_IDATAR_IDATA_Pos)) /* Assigment of value for IDATA in the TDES_IDATAR register */
+#define TDES_IDATAR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (TDES_IDATAR) Register Mask  */
+
+
+/* -------- TDES_IDR : (TDES Offset: 0x14) ( /W 32) Interrupt Disable Register -------- */
+#define TDES_IDR_DATRDY_Pos                   _UINT32_(0)                                          /* (TDES_IDR) Data Ready Interrupt Disable Position */
+#define TDES_IDR_DATRDY_Msk                   (_UINT32_(0x1) << TDES_IDR_DATRDY_Pos)               /* (TDES_IDR) Data Ready Interrupt Disable Mask */
+#define TDES_IDR_DATRDY(value)                (TDES_IDR_DATRDY_Msk & (_UINT32_(value) << TDES_IDR_DATRDY_Pos)) /* Assigment of value for DATRDY in the TDES_IDR register */
+#define TDES_IDR_URAD_Pos                     _UINT32_(8)                                          /* (TDES_IDR) Unspecified Register Access Detection Interrupt Disable Position */
+#define TDES_IDR_URAD_Msk                     (_UINT32_(0x1) << TDES_IDR_URAD_Pos)                 /* (TDES_IDR) Unspecified Register Access Detection Interrupt Disable Mask */
+#define TDES_IDR_URAD(value)                  (TDES_IDR_URAD_Msk & (_UINT32_(value) << TDES_IDR_URAD_Pos)) /* Assigment of value for URAD in the TDES_IDR register */
+#define TDES_IDR_SECE_Pos                     _UINT32_(16)                                         /* (TDES_IDR) Security and/or Safety Event Interrupt Disable Position */
+#define TDES_IDR_SECE_Msk                     (_UINT32_(0x1) << TDES_IDR_SECE_Pos)                 /* (TDES_IDR) Security and/or Safety Event Interrupt Disable Mask */
+#define TDES_IDR_SECE(value)                  (TDES_IDR_SECE_Msk & (_UINT32_(value) << TDES_IDR_SECE_Pos)) /* Assigment of value for SECE in the TDES_IDR register */
+#define TDES_IDR_Msk                          _UINT32_(0x00010101)                                 /* (TDES_IDR) Register Mask  */
+
+
+/* -------- TDES_IER : (TDES Offset: 0x10) ( /W 32) Interrupt Enable Register -------- */
+#define TDES_IER_DATRDY_Pos                   _UINT32_(0)                                          /* (TDES_IER) Data Ready Interrupt Enable Position */
+#define TDES_IER_DATRDY_Msk                   (_UINT32_(0x1) << TDES_IER_DATRDY_Pos)               /* (TDES_IER) Data Ready Interrupt Enable Mask */
+#define TDES_IER_DATRDY(value)                (TDES_IER_DATRDY_Msk & (_UINT32_(value) << TDES_IER_DATRDY_Pos)) /* Assigment of value for DATRDY in the TDES_IER register */
+#define TDES_IER_URAD_Pos                     _UINT32_(8)                                          /* (TDES_IER) Unspecified Register Access Detection Interrupt Enable Position */
+#define TDES_IER_URAD_Msk                     (_UINT32_(0x1) << TDES_IER_URAD_Pos)                 /* (TDES_IER) Unspecified Register Access Detection Interrupt Enable Mask */
+#define TDES_IER_URAD(value)                  (TDES_IER_URAD_Msk & (_UINT32_(value) << TDES_IER_URAD_Pos)) /* Assigment of value for URAD in the TDES_IER register */
+#define TDES_IER_SECE_Pos                     _UINT32_(16)                                         /* (TDES_IER) Security and/or Safety Event Interrupt Enable Position */
+#define TDES_IER_SECE_Msk                     (_UINT32_(0x1) << TDES_IER_SECE_Pos)                 /* (TDES_IER) Security and/or Safety Event Interrupt Enable Mask */
+#define TDES_IER_SECE(value)                  (TDES_IER_SECE_Msk & (_UINT32_(value) << TDES_IER_SECE_Pos)) /* Assigment of value for SECE in the TDES_IER register */
+#define TDES_IER_Msk                          _UINT32_(0x00010101)                                 /* (TDES_IER) Register Mask  */
+
+
+/* -------- TDES_IMR : (TDES Offset: 0x18) ( R/ 32) Interrupt Mask Register -------- */
+#define TDES_IMR_RESETVALUE                   _UINT32_(0x00)                                       /*  (TDES_IMR) Interrupt Mask Register  Reset Value */
+
+#define TDES_IMR_DATRDY_Pos                   _UINT32_(0)                                          /* (TDES_IMR) Data Ready Interrupt Mask Position */
+#define TDES_IMR_DATRDY_Msk                   (_UINT32_(0x1) << TDES_IMR_DATRDY_Pos)               /* (TDES_IMR) Data Ready Interrupt Mask Mask */
+#define TDES_IMR_DATRDY(value)                (TDES_IMR_DATRDY_Msk & (_UINT32_(value) << TDES_IMR_DATRDY_Pos)) /* Assigment of value for DATRDY in the TDES_IMR register */
+#define TDES_IMR_URAD_Pos                     _UINT32_(8)                                          /* (TDES_IMR) Unspecified Register Access Detection Interrupt Mask Position */
+#define TDES_IMR_URAD_Msk                     (_UINT32_(0x1) << TDES_IMR_URAD_Pos)                 /* (TDES_IMR) Unspecified Register Access Detection Interrupt Mask Mask */
+#define TDES_IMR_URAD(value)                  (TDES_IMR_URAD_Msk & (_UINT32_(value) << TDES_IMR_URAD_Pos)) /* Assigment of value for URAD in the TDES_IMR register */
+#define TDES_IMR_SECE_Pos                     _UINT32_(16)                                         /* (TDES_IMR) Security and/or Safety Event Interrupt Mask Position */
+#define TDES_IMR_SECE_Msk                     (_UINT32_(0x1) << TDES_IMR_SECE_Pos)                 /* (TDES_IMR) Security and/or Safety Event Interrupt Mask Mask */
+#define TDES_IMR_SECE(value)                  (TDES_IMR_SECE_Msk & (_UINT32_(value) << TDES_IMR_SECE_Pos)) /* Assigment of value for SECE in the TDES_IMR register */
+#define TDES_IMR_Msk                          _UINT32_(0x00010101)                                 /* (TDES_IMR) Register Mask  */
+
+
+/* -------- TDES_ISR : (TDES Offset: 0x1C) ( R/ 32) Interrupt Status Register -------- */
+#define TDES_ISR_RESETVALUE                   _UINT32_(0x00)                                       /*  (TDES_ISR) Interrupt Status Register  Reset Value */
+
+#define TDES_ISR_DATRDY_Pos                   _UINT32_(0)                                          /* (TDES_ISR) Data Ready (cleared by setting TDES_CR.START or TDES_CR.SWRST, or by reading TDES_ODATARx) Position */
+#define TDES_ISR_DATRDY_Msk                   (_UINT32_(0x1) << TDES_ISR_DATRDY_Pos)               /* (TDES_ISR) Data Ready (cleared by setting TDES_CR.START or TDES_CR.SWRST, or by reading TDES_ODATARx) Mask */
+#define TDES_ISR_DATRDY(value)                (TDES_ISR_DATRDY_Msk & (_UINT32_(value) << TDES_ISR_DATRDY_Pos)) /* Assigment of value for DATRDY in the TDES_ISR register */
+#define   TDES_ISR_DATRDY_0_Val               _UINT32_(0x0)                                        /* (TDES_ISR) Output data is not valid.  */
+#define   TDES_ISR_DATRDY_1_Val               _UINT32_(0x1)                                        /* (TDES_ISR) Encryption or decryption process is completed.  */
+#define TDES_ISR_DATRDY_0                     (TDES_ISR_DATRDY_0_Val << TDES_ISR_DATRDY_Pos)       /* (TDES_ISR) Output data is not valid. Position  */
+#define TDES_ISR_DATRDY_1                     (TDES_ISR_DATRDY_1_Val << TDES_ISR_DATRDY_Pos)       /* (TDES_ISR) Encryption or decryption process is completed. Position  */
+#define TDES_ISR_URAD_Pos                     _UINT32_(8)                                          /* (TDES_ISR) Unspecified Register Access Detection Status (cleared by setting TDES_CR.SWRST) Position */
+#define TDES_ISR_URAD_Msk                     (_UINT32_(0x1) << TDES_ISR_URAD_Pos)                 /* (TDES_ISR) Unspecified Register Access Detection Status (cleared by setting TDES_CR.SWRST) Mask */
+#define TDES_ISR_URAD(value)                  (TDES_ISR_URAD_Msk & (_UINT32_(value) << TDES_ISR_URAD_Pos)) /* Assigment of value for URAD in the TDES_ISR register */
+#define   TDES_ISR_URAD_0_Val                 _UINT32_(0x0)                                        /* (TDES_ISR) No unspecified register access has been detected since the last write of TDES_CR.SWRST.  */
+#define   TDES_ISR_URAD_1_Val                 _UINT32_(0x1)                                        /* (TDES_ISR) At least one unspecified register access has been detected since the last write of TDES_CR.SWRST.  */
+#define TDES_ISR_URAD_0                       (TDES_ISR_URAD_0_Val << TDES_ISR_URAD_Pos)           /* (TDES_ISR) No unspecified register access has been detected since the last write of TDES_CR.SWRST. Position  */
+#define TDES_ISR_URAD_1                       (TDES_ISR_URAD_1_Val << TDES_ISR_URAD_Pos)           /* (TDES_ISR) At least one unspecified register access has been detected since the last write of TDES_CR.SWRST. Position  */
+#define TDES_ISR_URAT_Pos                     _UINT32_(12)                                         /* (TDES_ISR) Unspecified Register Access (cleared by setting TDES_CR.SWRST) Position */
+#define TDES_ISR_URAT_Msk                     (_UINT32_(0x3) << TDES_ISR_URAT_Pos)                 /* (TDES_ISR) Unspecified Register Access (cleared by setting TDES_CR.SWRST) Mask */
+#define TDES_ISR_URAT(value)                  (TDES_ISR_URAT_Msk & (_UINT32_(value) << TDES_ISR_URAT_Pos)) /* Assigment of value for URAT in the TDES_ISR register */
+#define   TDES_ISR_URAT_IDR_WR_PROCESSING_Val _UINT32_(0x0)                                        /* (TDES_ISR) TDES_IDATAR written during data processing when SMOD = 0x2 mode.  */
+#define   TDES_ISR_URAT_ODR_RD_PROCESSING_Val _UINT32_(0x1)                                        /* (TDES_ISR) TDES_ODATAR read during data processing.  */
+#define   TDES_ISR_URAT_MR_WR_PROCESSING_Val  _UINT32_(0x2)                                        /* (TDES_ISR) TDES_MR written during data processing.  */
+#define   TDES_ISR_URAT_WOR_RD_ACCESS_Val     _UINT32_(0x3)                                        /* (TDES_ISR) Write-only register read access.  */
+#define TDES_ISR_URAT_IDR_WR_PROCESSING       (TDES_ISR_URAT_IDR_WR_PROCESSING_Val << TDES_ISR_URAT_Pos) /* (TDES_ISR) TDES_IDATAR written during data processing when SMOD = 0x2 mode. Position  */
+#define TDES_ISR_URAT_ODR_RD_PROCESSING       (TDES_ISR_URAT_ODR_RD_PROCESSING_Val << TDES_ISR_URAT_Pos) /* (TDES_ISR) TDES_ODATAR read during data processing. Position  */
+#define TDES_ISR_URAT_MR_WR_PROCESSING        (TDES_ISR_URAT_MR_WR_PROCESSING_Val << TDES_ISR_URAT_Pos) /* (TDES_ISR) TDES_MR written during data processing. Position  */
+#define TDES_ISR_URAT_WOR_RD_ACCESS           (TDES_ISR_URAT_WOR_RD_ACCESS_Val << TDES_ISR_URAT_Pos) /* (TDES_ISR) Write-only register read access. Position  */
+#define TDES_ISR_SECE_Pos                     _UINT32_(16)                                         /* (TDES_ISR) Security and/or Safety Event Interrupt Mask Position */
+#define TDES_ISR_SECE_Msk                     (_UINT32_(0x1) << TDES_ISR_SECE_Pos)                 /* (TDES_ISR) Security and/or Safety Event Interrupt Mask Mask */
+#define TDES_ISR_SECE(value)                  (TDES_ISR_SECE_Msk & (_UINT32_(value) << TDES_ISR_SECE_Pos)) /* Assigment of value for SECE in the TDES_ISR register */
+#define   TDES_ISR_SECE_0_Val                 _UINT32_(0x0)                                        /* (TDES_ISR) There is no security report in TDES_WPSR.  */
+#define   TDES_ISR_SECE_1_Val                 _UINT32_(0x1)                                        /* (TDES_ISR) One security flag is set in TDES_WPSR.  */
+#define TDES_ISR_SECE_0                       (TDES_ISR_SECE_0_Val << TDES_ISR_SECE_Pos)           /* (TDES_ISR) There is no security report in TDES_WPSR. Position  */
+#define TDES_ISR_SECE_1                       (TDES_ISR_SECE_1_Val << TDES_ISR_SECE_Pos)           /* (TDES_ISR) One security flag is set in TDES_WPSR. Position  */
+#define TDES_ISR_Msk                          _UINT32_(0x00013101)                                 /* (TDES_ISR) Register Mask  */
+
+
+/* -------- TDES_IVR : (TDES Offset: 0x60) ( /W 32) Initialization Vector Register x -------- */
+#define TDES_IVR_IV_Pos                       _UINT32_(0)                                          /* (TDES_IVR) Initialization Vector Position */
+#define TDES_IVR_IV_Msk                       (_UINT32_(0xFFFFFFFF) << TDES_IVR_IV_Pos)            /* (TDES_IVR) Initialization Vector Mask */
+#define TDES_IVR_IV(value)                    (TDES_IVR_IV_Msk & (_UINT32_(value) << TDES_IVR_IV_Pos)) /* Assigment of value for IV in the TDES_IVR register */
+#define TDES_IVR_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (TDES_IVR) Register Mask  */
+
+
+/* -------- TDES_KEY1WR : (TDES Offset: 0x20) ( /W 32) Key 1 Word Register x -------- */
+#define TDES_KEY1WR_KEY1W_Pos                 _UINT32_(0)                                          /* (TDES_KEY1WR) Key 1 Word Position */
+#define TDES_KEY1WR_KEY1W_Msk                 (_UINT32_(0xFFFFFFFF) << TDES_KEY1WR_KEY1W_Pos)      /* (TDES_KEY1WR) Key 1 Word Mask */
+#define TDES_KEY1WR_KEY1W(value)              (TDES_KEY1WR_KEY1W_Msk & (_UINT32_(value) << TDES_KEY1WR_KEY1W_Pos)) /* Assigment of value for KEY1W in the TDES_KEY1WR register */
+#define TDES_KEY1WR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (TDES_KEY1WR) Register Mask  */
+
+
+/* -------- TDES_KEY2WR : (TDES Offset: 0x28) ( /W 32) Key 2 Word Register x -------- */
+#define TDES_KEY2WR_KEY2W_Pos                 _UINT32_(0)                                          /* (TDES_KEY2WR) Key 2 Word Position */
+#define TDES_KEY2WR_KEY2W_Msk                 (_UINT32_(0xFFFFFFFF) << TDES_KEY2WR_KEY2W_Pos)      /* (TDES_KEY2WR) Key 2 Word Mask */
+#define TDES_KEY2WR_KEY2W(value)              (TDES_KEY2WR_KEY2W_Msk & (_UINT32_(value) << TDES_KEY2WR_KEY2W_Pos)) /* Assigment of value for KEY2W in the TDES_KEY2WR register */
+#define TDES_KEY2WR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (TDES_KEY2WR) Register Mask  */
+
+
+/* -------- TDES_KEY3WR : (TDES Offset: 0x30) ( /W 32) Key 3 Word Register x -------- */
+#define TDES_KEY3WR_KEY3W_Pos                 _UINT32_(0)                                          /* (TDES_KEY3WR) Key 3 Word Position */
+#define TDES_KEY3WR_KEY3W_Msk                 (_UINT32_(0xFFFFFFFF) << TDES_KEY3WR_KEY3W_Pos)      /* (TDES_KEY3WR) Key 3 Word Mask */
+#define TDES_KEY3WR_KEY3W(value)              (TDES_KEY3WR_KEY3W_Msk & (_UINT32_(value) << TDES_KEY3WR_KEY3W_Pos)) /* Assigment of value for KEY3W in the TDES_KEY3WR register */
+#define TDES_KEY3WR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (TDES_KEY3WR) Register Mask  */
 
 
 /* -------- TDES_MR : (TDES Offset: 0x04) (R/W 32) Mode Register -------- */
@@ -141,113 +255,6 @@
 #define TDES_MR_Msk                           _UINT32_(0x8003B3D7)                                 /* (TDES_MR) Register Mask  */
 
 
-/* -------- TDES_IER : (TDES Offset: 0x10) ( /W 32) Interrupt Enable Register -------- */
-#define TDES_IER_DATRDY_Pos                   _UINT32_(0)                                          /* (TDES_IER) Data Ready Interrupt Enable Position */
-#define TDES_IER_DATRDY_Msk                   (_UINT32_(0x1) << TDES_IER_DATRDY_Pos)               /* (TDES_IER) Data Ready Interrupt Enable Mask */
-#define TDES_IER_DATRDY(value)                (TDES_IER_DATRDY_Msk & (_UINT32_(value) << TDES_IER_DATRDY_Pos)) /* Assigment of value for DATRDY in the TDES_IER register */
-#define TDES_IER_URAD_Pos                     _UINT32_(8)                                          /* (TDES_IER) Unspecified Register Access Detection Interrupt Enable Position */
-#define TDES_IER_URAD_Msk                     (_UINT32_(0x1) << TDES_IER_URAD_Pos)                 /* (TDES_IER) Unspecified Register Access Detection Interrupt Enable Mask */
-#define TDES_IER_URAD(value)                  (TDES_IER_URAD_Msk & (_UINT32_(value) << TDES_IER_URAD_Pos)) /* Assigment of value for URAD in the TDES_IER register */
-#define TDES_IER_SECE_Pos                     _UINT32_(16)                                         /* (TDES_IER) Security and/or Safety Event Interrupt Enable Position */
-#define TDES_IER_SECE_Msk                     (_UINT32_(0x1) << TDES_IER_SECE_Pos)                 /* (TDES_IER) Security and/or Safety Event Interrupt Enable Mask */
-#define TDES_IER_SECE(value)                  (TDES_IER_SECE_Msk & (_UINT32_(value) << TDES_IER_SECE_Pos)) /* Assigment of value for SECE in the TDES_IER register */
-#define TDES_IER_Msk                          _UINT32_(0x00010101)                                 /* (TDES_IER) Register Mask  */
-
-
-/* -------- TDES_IDR : (TDES Offset: 0x14) ( /W 32) Interrupt Disable Register -------- */
-#define TDES_IDR_DATRDY_Pos                   _UINT32_(0)                                          /* (TDES_IDR) Data Ready Interrupt Disable Position */
-#define TDES_IDR_DATRDY_Msk                   (_UINT32_(0x1) << TDES_IDR_DATRDY_Pos)               /* (TDES_IDR) Data Ready Interrupt Disable Mask */
-#define TDES_IDR_DATRDY(value)                (TDES_IDR_DATRDY_Msk & (_UINT32_(value) << TDES_IDR_DATRDY_Pos)) /* Assigment of value for DATRDY in the TDES_IDR register */
-#define TDES_IDR_URAD_Pos                     _UINT32_(8)                                          /* (TDES_IDR) Unspecified Register Access Detection Interrupt Disable Position */
-#define TDES_IDR_URAD_Msk                     (_UINT32_(0x1) << TDES_IDR_URAD_Pos)                 /* (TDES_IDR) Unspecified Register Access Detection Interrupt Disable Mask */
-#define TDES_IDR_URAD(value)                  (TDES_IDR_URAD_Msk & (_UINT32_(value) << TDES_IDR_URAD_Pos)) /* Assigment of value for URAD in the TDES_IDR register */
-#define TDES_IDR_SECE_Pos                     _UINT32_(16)                                         /* (TDES_IDR) Security and/or Safety Event Interrupt Disable Position */
-#define TDES_IDR_SECE_Msk                     (_UINT32_(0x1) << TDES_IDR_SECE_Pos)                 /* (TDES_IDR) Security and/or Safety Event Interrupt Disable Mask */
-#define TDES_IDR_SECE(value)                  (TDES_IDR_SECE_Msk & (_UINT32_(value) << TDES_IDR_SECE_Pos)) /* Assigment of value for SECE in the TDES_IDR register */
-#define TDES_IDR_Msk                          _UINT32_(0x00010101)                                 /* (TDES_IDR) Register Mask  */
-
-
-/* -------- TDES_IMR : (TDES Offset: 0x18) ( R/ 32) Interrupt Mask Register -------- */
-#define TDES_IMR_RESETVALUE                   _UINT32_(0x00)                                       /*  (TDES_IMR) Interrupt Mask Register  Reset Value */
-
-#define TDES_IMR_DATRDY_Pos                   _UINT32_(0)                                          /* (TDES_IMR) Data Ready Interrupt Mask Position */
-#define TDES_IMR_DATRDY_Msk                   (_UINT32_(0x1) << TDES_IMR_DATRDY_Pos)               /* (TDES_IMR) Data Ready Interrupt Mask Mask */
-#define TDES_IMR_DATRDY(value)                (TDES_IMR_DATRDY_Msk & (_UINT32_(value) << TDES_IMR_DATRDY_Pos)) /* Assigment of value for DATRDY in the TDES_IMR register */
-#define TDES_IMR_URAD_Pos                     _UINT32_(8)                                          /* (TDES_IMR) Unspecified Register Access Detection Interrupt Mask Position */
-#define TDES_IMR_URAD_Msk                     (_UINT32_(0x1) << TDES_IMR_URAD_Pos)                 /* (TDES_IMR) Unspecified Register Access Detection Interrupt Mask Mask */
-#define TDES_IMR_URAD(value)                  (TDES_IMR_URAD_Msk & (_UINT32_(value) << TDES_IMR_URAD_Pos)) /* Assigment of value for URAD in the TDES_IMR register */
-#define TDES_IMR_SECE_Pos                     _UINT32_(16)                                         /* (TDES_IMR) Security and/or Safety Event Interrupt Mask Position */
-#define TDES_IMR_SECE_Msk                     (_UINT32_(0x1) << TDES_IMR_SECE_Pos)                 /* (TDES_IMR) Security and/or Safety Event Interrupt Mask Mask */
-#define TDES_IMR_SECE(value)                  (TDES_IMR_SECE_Msk & (_UINT32_(value) << TDES_IMR_SECE_Pos)) /* Assigment of value for SECE in the TDES_IMR register */
-#define TDES_IMR_Msk                          _UINT32_(0x00010101)                                 /* (TDES_IMR) Register Mask  */
-
-
-/* -------- TDES_ISR : (TDES Offset: 0x1C) ( R/ 32) Interrupt Status Register -------- */
-#define TDES_ISR_RESETVALUE                   _UINT32_(0x00)                                       /*  (TDES_ISR) Interrupt Status Register  Reset Value */
-
-#define TDES_ISR_DATRDY_Pos                   _UINT32_(0)                                          /* (TDES_ISR) Data Ready (cleared by setting TDES_CR.START or TDES_CR.SWRST, or by reading TDES_ODATARx) Position */
-#define TDES_ISR_DATRDY_Msk                   (_UINT32_(0x1) << TDES_ISR_DATRDY_Pos)               /* (TDES_ISR) Data Ready (cleared by setting TDES_CR.START or TDES_CR.SWRST, or by reading TDES_ODATARx) Mask */
-#define TDES_ISR_DATRDY(value)                (TDES_ISR_DATRDY_Msk & (_UINT32_(value) << TDES_ISR_DATRDY_Pos)) /* Assigment of value for DATRDY in the TDES_ISR register */
-#define   TDES_ISR_DATRDY_0_Val               _UINT32_(0x0)                                        /* (TDES_ISR) Output data is not valid.  */
-#define   TDES_ISR_DATRDY_1_Val               _UINT32_(0x1)                                        /* (TDES_ISR) Encryption or decryption process is completed.  */
-#define TDES_ISR_DATRDY_0                     (TDES_ISR_DATRDY_0_Val << TDES_ISR_DATRDY_Pos)       /* (TDES_ISR) Output data is not valid. Position  */
-#define TDES_ISR_DATRDY_1                     (TDES_ISR_DATRDY_1_Val << TDES_ISR_DATRDY_Pos)       /* (TDES_ISR) Encryption or decryption process is completed. Position  */
-#define TDES_ISR_URAD_Pos                     _UINT32_(8)                                          /* (TDES_ISR) Unspecified Register Access Detection Status (cleared by setting TDES_CR.SWRST) Position */
-#define TDES_ISR_URAD_Msk                     (_UINT32_(0x1) << TDES_ISR_URAD_Pos)                 /* (TDES_ISR) Unspecified Register Access Detection Status (cleared by setting TDES_CR.SWRST) Mask */
-#define TDES_ISR_URAD(value)                  (TDES_ISR_URAD_Msk & (_UINT32_(value) << TDES_ISR_URAD_Pos)) /* Assigment of value for URAD in the TDES_ISR register */
-#define   TDES_ISR_URAD_0_Val                 _UINT32_(0x0)                                        /* (TDES_ISR) No unspecified register access has been detected since the last write of TDES_CR.SWRST.  */
-#define   TDES_ISR_URAD_1_Val                 _UINT32_(0x1)                                        /* (TDES_ISR) At least one unspecified register access has been detected since the last write of TDES_CR.SWRST.  */
-#define TDES_ISR_URAD_0                       (TDES_ISR_URAD_0_Val << TDES_ISR_URAD_Pos)           /* (TDES_ISR) No unspecified register access has been detected since the last write of TDES_CR.SWRST. Position  */
-#define TDES_ISR_URAD_1                       (TDES_ISR_URAD_1_Val << TDES_ISR_URAD_Pos)           /* (TDES_ISR) At least one unspecified register access has been detected since the last write of TDES_CR.SWRST. Position  */
-#define TDES_ISR_URAT_Pos                     _UINT32_(12)                                         /* (TDES_ISR) Unspecified Register Access (cleared by setting TDES_CR.SWRST) Position */
-#define TDES_ISR_URAT_Msk                     (_UINT32_(0x3) << TDES_ISR_URAT_Pos)                 /* (TDES_ISR) Unspecified Register Access (cleared by setting TDES_CR.SWRST) Mask */
-#define TDES_ISR_URAT(value)                  (TDES_ISR_URAT_Msk & (_UINT32_(value) << TDES_ISR_URAT_Pos)) /* Assigment of value for URAT in the TDES_ISR register */
-#define   TDES_ISR_URAT_IDR_WR_PROCESSING_Val _UINT32_(0x0)                                        /* (TDES_ISR) TDES_IDATAR written during data processing when SMOD = 0x2 mode.  */
-#define   TDES_ISR_URAT_ODR_RD_PROCESSING_Val _UINT32_(0x1)                                        /* (TDES_ISR) TDES_ODATAR read during data processing.  */
-#define   TDES_ISR_URAT_MR_WR_PROCESSING_Val  _UINT32_(0x2)                                        /* (TDES_ISR) TDES_MR written during data processing.  */
-#define   TDES_ISR_URAT_WOR_RD_ACCESS_Val     _UINT32_(0x3)                                        /* (TDES_ISR) Write-only register read access.  */
-#define TDES_ISR_URAT_IDR_WR_PROCESSING       (TDES_ISR_URAT_IDR_WR_PROCESSING_Val << TDES_ISR_URAT_Pos) /* (TDES_ISR) TDES_IDATAR written during data processing when SMOD = 0x2 mode. Position  */
-#define TDES_ISR_URAT_ODR_RD_PROCESSING       (TDES_ISR_URAT_ODR_RD_PROCESSING_Val << TDES_ISR_URAT_Pos) /* (TDES_ISR) TDES_ODATAR read during data processing. Position  */
-#define TDES_ISR_URAT_MR_WR_PROCESSING        (TDES_ISR_URAT_MR_WR_PROCESSING_Val << TDES_ISR_URAT_Pos) /* (TDES_ISR) TDES_MR written during data processing. Position  */
-#define TDES_ISR_URAT_WOR_RD_ACCESS           (TDES_ISR_URAT_WOR_RD_ACCESS_Val << TDES_ISR_URAT_Pos) /* (TDES_ISR) Write-only register read access. Position  */
-#define TDES_ISR_SECE_Pos                     _UINT32_(16)                                         /* (TDES_ISR) Security and/or Safety Event Interrupt Mask Position */
-#define TDES_ISR_SECE_Msk                     (_UINT32_(0x1) << TDES_ISR_SECE_Pos)                 /* (TDES_ISR) Security and/or Safety Event Interrupt Mask Mask */
-#define TDES_ISR_SECE(value)                  (TDES_ISR_SECE_Msk & (_UINT32_(value) << TDES_ISR_SECE_Pos)) /* Assigment of value for SECE in the TDES_ISR register */
-#define   TDES_ISR_SECE_0_Val                 _UINT32_(0x0)                                        /* (TDES_ISR) There is no security report in TDES_WPSR.  */
-#define   TDES_ISR_SECE_1_Val                 _UINT32_(0x1)                                        /* (TDES_ISR) One security flag is set in TDES_WPSR.  */
-#define TDES_ISR_SECE_0                       (TDES_ISR_SECE_0_Val << TDES_ISR_SECE_Pos)           /* (TDES_ISR) There is no security report in TDES_WPSR. Position  */
-#define TDES_ISR_SECE_1                       (TDES_ISR_SECE_1_Val << TDES_ISR_SECE_Pos)           /* (TDES_ISR) One security flag is set in TDES_WPSR. Position  */
-#define TDES_ISR_Msk                          _UINT32_(0x00013101)                                 /* (TDES_ISR) Register Mask  */
-
-
-/* -------- TDES_KEY1WR : (TDES Offset: 0x20) ( /W 32) Key 1 Word Register x -------- */
-#define TDES_KEY1WR_KEY1W_Pos                 _UINT32_(0)                                          /* (TDES_KEY1WR) Key 1 Word Position */
-#define TDES_KEY1WR_KEY1W_Msk                 (_UINT32_(0xFFFFFFFF) << TDES_KEY1WR_KEY1W_Pos)      /* (TDES_KEY1WR) Key 1 Word Mask */
-#define TDES_KEY1WR_KEY1W(value)              (TDES_KEY1WR_KEY1W_Msk & (_UINT32_(value) << TDES_KEY1WR_KEY1W_Pos)) /* Assigment of value for KEY1W in the TDES_KEY1WR register */
-#define TDES_KEY1WR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (TDES_KEY1WR) Register Mask  */
-
-
-/* -------- TDES_KEY2WR : (TDES Offset: 0x28) ( /W 32) Key 2 Word Register x -------- */
-#define TDES_KEY2WR_KEY2W_Pos                 _UINT32_(0)                                          /* (TDES_KEY2WR) Key 2 Word Position */
-#define TDES_KEY2WR_KEY2W_Msk                 (_UINT32_(0xFFFFFFFF) << TDES_KEY2WR_KEY2W_Pos)      /* (TDES_KEY2WR) Key 2 Word Mask */
-#define TDES_KEY2WR_KEY2W(value)              (TDES_KEY2WR_KEY2W_Msk & (_UINT32_(value) << TDES_KEY2WR_KEY2W_Pos)) /* Assigment of value for KEY2W in the TDES_KEY2WR register */
-#define TDES_KEY2WR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (TDES_KEY2WR) Register Mask  */
-
-
-/* -------- TDES_KEY3WR : (TDES Offset: 0x30) ( /W 32) Key 3 Word Register x -------- */
-#define TDES_KEY3WR_KEY3W_Pos                 _UINT32_(0)                                          /* (TDES_KEY3WR) Key 3 Word Position */
-#define TDES_KEY3WR_KEY3W_Msk                 (_UINT32_(0xFFFFFFFF) << TDES_KEY3WR_KEY3W_Pos)      /* (TDES_KEY3WR) Key 3 Word Mask */
-#define TDES_KEY3WR_KEY3W(value)              (TDES_KEY3WR_KEY3W_Msk & (_UINT32_(value) << TDES_KEY3WR_KEY3W_Pos)) /* Assigment of value for KEY3W in the TDES_KEY3WR register */
-#define TDES_KEY3WR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (TDES_KEY3WR) Register Mask  */
-
-
-/* -------- TDES_IDATAR : (TDES Offset: 0x40) ( /W 32) Input Data Register x -------- */
-#define TDES_IDATAR_IDATA_Pos                 _UINT32_(0)                                          /* (TDES_IDATAR) Input Data Position */
-#define TDES_IDATAR_IDATA_Msk                 (_UINT32_(0xFFFFFFFF) << TDES_IDATAR_IDATA_Pos)      /* (TDES_IDATAR) Input Data Mask */
-#define TDES_IDATAR_IDATA(value)              (TDES_IDATAR_IDATA_Msk & (_UINT32_(value) << TDES_IDATAR_IDATA_Pos)) /* Assigment of value for IDATA in the TDES_IDATAR register */
-#define TDES_IDATAR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (TDES_IDATAR) Register Mask  */
-
-
 /* -------- TDES_ODATAR : (TDES Offset: 0x50) ( R/ 32) Output Data Register x -------- */
 #define TDES_ODATAR_RESETVALUE                _UINT32_(0x00)                                       /*  (TDES_ODATAR) Output Data Register x  Reset Value */
 
@@ -255,22 +262,6 @@
 #define TDES_ODATAR_ODATA_Msk                 (_UINT32_(0xFFFFFFFF) << TDES_ODATAR_ODATA_Pos)      /* (TDES_ODATAR) Output Data Mask */
 #define TDES_ODATAR_ODATA(value)              (TDES_ODATAR_ODATA_Msk & (_UINT32_(value) << TDES_ODATAR_ODATA_Pos)) /* Assigment of value for ODATA in the TDES_ODATAR register */
 #define TDES_ODATAR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (TDES_ODATAR) Register Mask  */
-
-
-/* -------- TDES_IVR : (TDES Offset: 0x60) ( /W 32) Initialization Vector Register x -------- */
-#define TDES_IVR_IV_Pos                       _UINT32_(0)                                          /* (TDES_IVR) Initialization Vector Position */
-#define TDES_IVR_IV_Msk                       (_UINT32_(0xFFFFFFFF) << TDES_IVR_IV_Pos)            /* (TDES_IVR) Initialization Vector Mask */
-#define TDES_IVR_IV(value)                    (TDES_IVR_IV_Msk & (_UINT32_(value) << TDES_IVR_IV_Pos)) /* Assigment of value for IV in the TDES_IVR register */
-#define TDES_IVR_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (TDES_IVR) Register Mask  */
-
-
-/* -------- TDES_XTEA_RNDR : (TDES Offset: 0x70) (R/W 32) XTEA Rounds Register -------- */
-#define TDES_XTEA_RNDR_RESETVALUE             _UINT32_(0x00)                                       /*  (TDES_XTEA_RNDR) XTEA Rounds Register  Reset Value */
-
-#define TDES_XTEA_RNDR_XTEA_RNDS_Pos          _UINT32_(0)                                          /* (TDES_XTEA_RNDR) Number of Rounds Position */
-#define TDES_XTEA_RNDR_XTEA_RNDS_Msk          (_UINT32_(0x3F) << TDES_XTEA_RNDR_XTEA_RNDS_Pos)     /* (TDES_XTEA_RNDR) Number of Rounds Mask */
-#define TDES_XTEA_RNDR_XTEA_RNDS(value)       (TDES_XTEA_RNDR_XTEA_RNDS_Msk & (_UINT32_(value) << TDES_XTEA_RNDR_XTEA_RNDS_Pos)) /* Assigment of value for XTEA_RNDS in the TDES_XTEA_RNDR register */
-#define TDES_XTEA_RNDR_Msk                    _UINT32_(0x0000003F)                                 /* (TDES_XTEA_RNDR) Register Mask  */
 
 
 /* -------- TDES_WPMR : (TDES Offset: 0xE4) (R/W 32) Write Protection Mode Register -------- */
@@ -395,13 +386,27 @@
 #define TDES_WPSR_Msk                         _UINT32_(0x8FFFFF1F)                                 /* (TDES_WPSR) Register Mask  */
 
 
+/* -------- TDES_XTEA_RNDR : (TDES Offset: 0x70) (R/W 32) XTEA Rounds Register -------- */
+#define TDES_XTEA_RNDR_RESETVALUE             _UINT32_(0x00)                                       /*  (TDES_XTEA_RNDR) XTEA Rounds Register  Reset Value */
+
+#define TDES_XTEA_RNDR_XTEA_RNDS_Pos          _UINT32_(0)                                          /* (TDES_XTEA_RNDR) Number of Rounds Position */
+#define TDES_XTEA_RNDR_XTEA_RNDS_Msk          (_UINT32_(0x3F) << TDES_XTEA_RNDR_XTEA_RNDS_Pos)     /* (TDES_XTEA_RNDR) Number of Rounds Mask */
+#define TDES_XTEA_RNDR_XTEA_RNDS(value)       (TDES_XTEA_RNDR_XTEA_RNDS_Msk & (_UINT32_(value) << TDES_XTEA_RNDR_XTEA_RNDS_Pos)) /* Assigment of value for XTEA_RNDS in the TDES_XTEA_RNDR register */
+#define TDES_XTEA_RNDR_Msk                    _UINT32_(0x0000003F)                                 /* (TDES_XTEA_RNDR) Register Mask  */
+
+
 /** \brief TDES register offsets definitions */
 #define TDES_CR_REG_OFST               _UINT32_(0x00)      /* (TDES_CR) Control Register Offset */
-#define TDES_MR_REG_OFST               _UINT32_(0x04)      /* (TDES_MR) Mode Register Offset */
-#define TDES_IER_REG_OFST              _UINT32_(0x10)      /* (TDES_IER) Interrupt Enable Register Offset */
+#define TDES_IDATAR_REG_OFST           _UINT32_(0x40)      /* (TDES_IDATAR) Input Data Register x Offset */
+#define TDES_IDATAR0_REG_OFST          _UINT32_(0x40)      /* (TDES_IDATAR0) Input Data Register x Offset */
+#define TDES_IDATAR1_REG_OFST          _UINT32_(0x44)      /* (TDES_IDATAR1) Input Data Register x Offset */
 #define TDES_IDR_REG_OFST              _UINT32_(0x14)      /* (TDES_IDR) Interrupt Disable Register Offset */
+#define TDES_IER_REG_OFST              _UINT32_(0x10)      /* (TDES_IER) Interrupt Enable Register Offset */
 #define TDES_IMR_REG_OFST              _UINT32_(0x18)      /* (TDES_IMR) Interrupt Mask Register Offset */
 #define TDES_ISR_REG_OFST              _UINT32_(0x1C)      /* (TDES_ISR) Interrupt Status Register Offset */
+#define TDES_IVR_REG_OFST              _UINT32_(0x60)      /* (TDES_IVR) Initialization Vector Register x Offset */
+#define TDES_IVR0_REG_OFST             _UINT32_(0x60)      /* (TDES_IVR0) Initialization Vector Register x Offset */
+#define TDES_IVR1_REG_OFST             _UINT32_(0x64)      /* (TDES_IVR1) Initialization Vector Register x Offset */
 #define TDES_KEY1WR_REG_OFST           _UINT32_(0x20)      /* (TDES_KEY1WR) Key 1 Word Register x Offset */
 #define TDES_KEY1WR0_REG_OFST          _UINT32_(0x20)      /* (TDES_KEY1WR0) Key 1 Word Register x Offset */
 #define TDES_KEY1WR1_REG_OFST          _UINT32_(0x24)      /* (TDES_KEY1WR1) Key 1 Word Register x Offset */
@@ -411,18 +416,13 @@
 #define TDES_KEY3WR_REG_OFST           _UINT32_(0x30)      /* (TDES_KEY3WR) Key 3 Word Register x Offset */
 #define TDES_KEY3WR0_REG_OFST          _UINT32_(0x30)      /* (TDES_KEY3WR0) Key 3 Word Register x Offset */
 #define TDES_KEY3WR1_REG_OFST          _UINT32_(0x34)      /* (TDES_KEY3WR1) Key 3 Word Register x Offset */
-#define TDES_IDATAR_REG_OFST           _UINT32_(0x40)      /* (TDES_IDATAR) Input Data Register x Offset */
-#define TDES_IDATAR0_REG_OFST          _UINT32_(0x40)      /* (TDES_IDATAR0) Input Data Register x Offset */
-#define TDES_IDATAR1_REG_OFST          _UINT32_(0x44)      /* (TDES_IDATAR1) Input Data Register x Offset */
+#define TDES_MR_REG_OFST               _UINT32_(0x04)      /* (TDES_MR) Mode Register Offset */
 #define TDES_ODATAR_REG_OFST           _UINT32_(0x50)      /* (TDES_ODATAR) Output Data Register x Offset */
 #define TDES_ODATAR0_REG_OFST          _UINT32_(0x50)      /* (TDES_ODATAR0) Output Data Register x Offset */
 #define TDES_ODATAR1_REG_OFST          _UINT32_(0x54)      /* (TDES_ODATAR1) Output Data Register x Offset */
-#define TDES_IVR_REG_OFST              _UINT32_(0x60)      /* (TDES_IVR) Initialization Vector Register x Offset */
-#define TDES_IVR0_REG_OFST             _UINT32_(0x60)      /* (TDES_IVR0) Initialization Vector Register x Offset */
-#define TDES_IVR1_REG_OFST             _UINT32_(0x64)      /* (TDES_IVR1) Initialization Vector Register x Offset */
-#define TDES_XTEA_RNDR_REG_OFST        _UINT32_(0x70)      /* (TDES_XTEA_RNDR) XTEA Rounds Register Offset */
 #define TDES_WPMR_REG_OFST             _UINT32_(0xE4)      /* (TDES_WPMR) Write Protection Mode Register Offset */
 #define TDES_WPSR_REG_OFST             _UINT32_(0xE8)      /* (TDES_WPSR) Write Protection Status Register Offset */
+#define TDES_XTEA_RNDR_REG_OFST        _UINT32_(0x70)      /* (TDES_XTEA_RNDR) XTEA Rounds Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief TDES register API structure */

@@ -4,7 +4,7 @@
 
 
 project: wolfssl_tcp_client
-creation_date: 2022-12-20T22:01:41.669+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2023-01-18T11:35:44.439+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mhc_mode: Standalone            # [IDE|Standalone|Headless]
 mhc_version: v3.8.3
@@ -13,10 +13,10 @@ plugin_version: NA        # if MPLAB X plugin only
 compiler: xc32
 
 modules:
-    - {name: "csp", version: "v3.13.0"}
-    - {name: "core", version: "v3.11.0"}
-    - {name: "dev_packs", version: "v3.13.0"}
+    - {name: "csp", version: "unknown"}
+    - {name: "core", version: "unknown"}
+    - {name: "dev_packs", version: "unknown"}
     - {name: "wolfssl", version: "v4.7.0"}
-    - {name: "net", version: "unknown"}
+    - {name: "net", version: "v3.9.0"}
     - {name: "crypto", version: "unknown"}
 

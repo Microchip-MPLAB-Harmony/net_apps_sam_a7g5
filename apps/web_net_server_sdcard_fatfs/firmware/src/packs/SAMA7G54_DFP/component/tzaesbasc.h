@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_TZAESBASC_COMPONENT_H_
 #define _SAMA7G_TZAESBASC_COMPONENT_H_
 
@@ -45,134 +45,6 @@
 #define TZAESBASC_RTAR_TOP(value)             (TZAESBASC_RTAR_TOP_Msk & (_UINT32_(value) << TZAESBASC_RTAR_TOP_Pos)) /* Assigment of value for TOP in the TZAESBASC_RTAR register */
 #define TZAESBASC_RTAR_Msk                    _UINT32_(0xFFFFFFFF)                                 /* (TZAESBASC_RTAR) Register Mask  */
 
-
-/* -------- TZAESBASC_RSECR : (TZAESBASC Offset: 0x80) (R/W 32) Region Security -------- */
-#define TZAESBASC_RSECR_RESETVALUE            _UINT32_(0x00)                                       /*  (TZAESBASC_RSECR) Region Security  Reset Value */
-
-#define TZAESBASC_RSECR_SEC0_Pos              _UINT32_(0)                                          /* (TZAESBASC_RSECR) Region 0 Security Position */
-#define TZAESBASC_RSECR_SEC0_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC0_Pos)          /* (TZAESBASC_RSECR) Region 0 Security Mask */
-#define TZAESBASC_RSECR_SEC0(value)           (TZAESBASC_RSECR_SEC0_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC0_Pos)) /* Assigment of value for SEC0 in the TZAESBASC_RSECR register */
-#define   TZAESBASC_RSECR_SEC0_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
-#define   TZAESBASC_RSECR_SEC0_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
-#define TZAESBASC_RSECR_SEC0_0                (TZAESBASC_RSECR_SEC0_0_Val << TZAESBASC_RSECR_SEC0_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
-#define TZAESBASC_RSECR_SEC0_1                (TZAESBASC_RSECR_SEC0_1_Val << TZAESBASC_RSECR_SEC0_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
-#define TZAESBASC_RSECR_SEC1_Pos              _UINT32_(1)                                          /* (TZAESBASC_RSECR) Region 1 Security Position */
-#define TZAESBASC_RSECR_SEC1_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC1_Pos)          /* (TZAESBASC_RSECR) Region 1 Security Mask */
-#define TZAESBASC_RSECR_SEC1(value)           (TZAESBASC_RSECR_SEC1_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC1_Pos)) /* Assigment of value for SEC1 in the TZAESBASC_RSECR register */
-#define   TZAESBASC_RSECR_SEC1_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
-#define   TZAESBASC_RSECR_SEC1_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
-#define TZAESBASC_RSECR_SEC1_0                (TZAESBASC_RSECR_SEC1_0_Val << TZAESBASC_RSECR_SEC1_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
-#define TZAESBASC_RSECR_SEC1_1                (TZAESBASC_RSECR_SEC1_1_Val << TZAESBASC_RSECR_SEC1_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
-#define TZAESBASC_RSECR_SEC2_Pos              _UINT32_(2)                                          /* (TZAESBASC_RSECR) Region 2 Security Position */
-#define TZAESBASC_RSECR_SEC2_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC2_Pos)          /* (TZAESBASC_RSECR) Region 2 Security Mask */
-#define TZAESBASC_RSECR_SEC2(value)           (TZAESBASC_RSECR_SEC2_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC2_Pos)) /* Assigment of value for SEC2 in the TZAESBASC_RSECR register */
-#define   TZAESBASC_RSECR_SEC2_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
-#define   TZAESBASC_RSECR_SEC2_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
-#define TZAESBASC_RSECR_SEC2_0                (TZAESBASC_RSECR_SEC2_0_Val << TZAESBASC_RSECR_SEC2_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
-#define TZAESBASC_RSECR_SEC2_1                (TZAESBASC_RSECR_SEC2_1_Val << TZAESBASC_RSECR_SEC2_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
-#define TZAESBASC_RSECR_SEC3_Pos              _UINT32_(3)                                          /* (TZAESBASC_RSECR) Region 3 Security Position */
-#define TZAESBASC_RSECR_SEC3_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC3_Pos)          /* (TZAESBASC_RSECR) Region 3 Security Mask */
-#define TZAESBASC_RSECR_SEC3(value)           (TZAESBASC_RSECR_SEC3_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC3_Pos)) /* Assigment of value for SEC3 in the TZAESBASC_RSECR register */
-#define   TZAESBASC_RSECR_SEC3_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
-#define   TZAESBASC_RSECR_SEC3_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
-#define TZAESBASC_RSECR_SEC3_0                (TZAESBASC_RSECR_SEC3_0_Val << TZAESBASC_RSECR_SEC3_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
-#define TZAESBASC_RSECR_SEC3_1                (TZAESBASC_RSECR_SEC3_1_Val << TZAESBASC_RSECR_SEC3_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
-#define TZAESBASC_RSECR_SEC4_Pos              _UINT32_(4)                                          /* (TZAESBASC_RSECR) Region 4 Security Position */
-#define TZAESBASC_RSECR_SEC4_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC4_Pos)          /* (TZAESBASC_RSECR) Region 4 Security Mask */
-#define TZAESBASC_RSECR_SEC4(value)           (TZAESBASC_RSECR_SEC4_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC4_Pos)) /* Assigment of value for SEC4 in the TZAESBASC_RSECR register */
-#define   TZAESBASC_RSECR_SEC4_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
-#define   TZAESBASC_RSECR_SEC4_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
-#define TZAESBASC_RSECR_SEC4_0                (TZAESBASC_RSECR_SEC4_0_Val << TZAESBASC_RSECR_SEC4_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
-#define TZAESBASC_RSECR_SEC4_1                (TZAESBASC_RSECR_SEC4_1_Val << TZAESBASC_RSECR_SEC4_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
-#define TZAESBASC_RSECR_SEC5_Pos              _UINT32_(5)                                          /* (TZAESBASC_RSECR) Region 5 Security Position */
-#define TZAESBASC_RSECR_SEC5_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC5_Pos)          /* (TZAESBASC_RSECR) Region 5 Security Mask */
-#define TZAESBASC_RSECR_SEC5(value)           (TZAESBASC_RSECR_SEC5_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC5_Pos)) /* Assigment of value for SEC5 in the TZAESBASC_RSECR register */
-#define   TZAESBASC_RSECR_SEC5_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
-#define   TZAESBASC_RSECR_SEC5_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
-#define TZAESBASC_RSECR_SEC5_0                (TZAESBASC_RSECR_SEC5_0_Val << TZAESBASC_RSECR_SEC5_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
-#define TZAESBASC_RSECR_SEC5_1                (TZAESBASC_RSECR_SEC5_1_Val << TZAESBASC_RSECR_SEC5_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
-#define TZAESBASC_RSECR_SEC6_Pos              _UINT32_(6)                                          /* (TZAESBASC_RSECR) Region 6 Security Position */
-#define TZAESBASC_RSECR_SEC6_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC6_Pos)          /* (TZAESBASC_RSECR) Region 6 Security Mask */
-#define TZAESBASC_RSECR_SEC6(value)           (TZAESBASC_RSECR_SEC6_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC6_Pos)) /* Assigment of value for SEC6 in the TZAESBASC_RSECR register */
-#define   TZAESBASC_RSECR_SEC6_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
-#define   TZAESBASC_RSECR_SEC6_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
-#define TZAESBASC_RSECR_SEC6_0                (TZAESBASC_RSECR_SEC6_0_Val << TZAESBASC_RSECR_SEC6_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
-#define TZAESBASC_RSECR_SEC6_1                (TZAESBASC_RSECR_SEC6_1_Val << TZAESBASC_RSECR_SEC6_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
-#define TZAESBASC_RSECR_SEC7_Pos              _UINT32_(7)                                          /* (TZAESBASC_RSECR) Region 7 Security Position */
-#define TZAESBASC_RSECR_SEC7_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC7_Pos)          /* (TZAESBASC_RSECR) Region 7 Security Mask */
-#define TZAESBASC_RSECR_SEC7(value)           (TZAESBASC_RSECR_SEC7_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC7_Pos)) /* Assigment of value for SEC7 in the TZAESBASC_RSECR register */
-#define   TZAESBASC_RSECR_SEC7_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
-#define   TZAESBASC_RSECR_SEC7_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
-#define TZAESBASC_RSECR_SEC7_0                (TZAESBASC_RSECR_SEC7_0_Val << TZAESBASC_RSECR_SEC7_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
-#define TZAESBASC_RSECR_SEC7_1                (TZAESBASC_RSECR_SEC7_1_Val << TZAESBASC_RSECR_SEC7_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
-#define TZAESBASC_RSECR_Msk                   _UINT32_(0x000000FF)                                 /* (TZAESBASC_RSECR) Register Mask  */
-
-#define TZAESBASC_RSECR_SEC_Pos               _UINT32_(0)                                          /* (TZAESBASC_RSECR Position) Region 7 Security */
-#define TZAESBASC_RSECR_SEC_Msk               (_UINT32_(0xFF) << TZAESBASC_RSECR_SEC_Pos)          /* (TZAESBASC_RSECR Mask) SEC */
-#define TZAESBASC_RSECR_SEC(value)            (TZAESBASC_RSECR_SEC_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC_Pos)) 
-
-/* -------- TZAESBASC_RER : (TZAESBASC Offset: 0x84) ( /W 32) Region Enable -------- */
-#define TZAESBASC_RER_EN0_Pos                 _UINT32_(0)                                          /* (TZAESBASC_RER) Region 0 Enable Position */
-#define TZAESBASC_RER_EN0_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN0_Pos)             /* (TZAESBASC_RER) Region 0 Enable Mask */
-#define TZAESBASC_RER_EN0(value)              (TZAESBASC_RER_EN0_Msk & (_UINT32_(value) << TZAESBASC_RER_EN0_Pos)) /* Assigment of value for EN0 in the TZAESBASC_RER register */
-#define   TZAESBASC_RER_EN0_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
-#define   TZAESBASC_RER_EN0_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
-#define TZAESBASC_RER_EN0_0                   (TZAESBASC_RER_EN0_0_Val << TZAESBASC_RER_EN0_Pos)   /* (TZAESBASC_RER) No effect. Position  */
-#define TZAESBASC_RER_EN0_1                   (TZAESBASC_RER_EN0_1_Val << TZAESBASC_RER_EN0_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
-#define TZAESBASC_RER_EN1_Pos                 _UINT32_(1)                                          /* (TZAESBASC_RER) Region 1 Enable Position */
-#define TZAESBASC_RER_EN1_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN1_Pos)             /* (TZAESBASC_RER) Region 1 Enable Mask */
-#define TZAESBASC_RER_EN1(value)              (TZAESBASC_RER_EN1_Msk & (_UINT32_(value) << TZAESBASC_RER_EN1_Pos)) /* Assigment of value for EN1 in the TZAESBASC_RER register */
-#define   TZAESBASC_RER_EN1_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
-#define   TZAESBASC_RER_EN1_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
-#define TZAESBASC_RER_EN1_0                   (TZAESBASC_RER_EN1_0_Val << TZAESBASC_RER_EN1_Pos)   /* (TZAESBASC_RER) No effect. Position  */
-#define TZAESBASC_RER_EN1_1                   (TZAESBASC_RER_EN1_1_Val << TZAESBASC_RER_EN1_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
-#define TZAESBASC_RER_EN2_Pos                 _UINT32_(2)                                          /* (TZAESBASC_RER) Region 2 Enable Position */
-#define TZAESBASC_RER_EN2_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN2_Pos)             /* (TZAESBASC_RER) Region 2 Enable Mask */
-#define TZAESBASC_RER_EN2(value)              (TZAESBASC_RER_EN2_Msk & (_UINT32_(value) << TZAESBASC_RER_EN2_Pos)) /* Assigment of value for EN2 in the TZAESBASC_RER register */
-#define   TZAESBASC_RER_EN2_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
-#define   TZAESBASC_RER_EN2_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
-#define TZAESBASC_RER_EN2_0                   (TZAESBASC_RER_EN2_0_Val << TZAESBASC_RER_EN2_Pos)   /* (TZAESBASC_RER) No effect. Position  */
-#define TZAESBASC_RER_EN2_1                   (TZAESBASC_RER_EN2_1_Val << TZAESBASC_RER_EN2_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
-#define TZAESBASC_RER_EN3_Pos                 _UINT32_(3)                                          /* (TZAESBASC_RER) Region 3 Enable Position */
-#define TZAESBASC_RER_EN3_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN3_Pos)             /* (TZAESBASC_RER) Region 3 Enable Mask */
-#define TZAESBASC_RER_EN3(value)              (TZAESBASC_RER_EN3_Msk & (_UINT32_(value) << TZAESBASC_RER_EN3_Pos)) /* Assigment of value for EN3 in the TZAESBASC_RER register */
-#define   TZAESBASC_RER_EN3_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
-#define   TZAESBASC_RER_EN3_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
-#define TZAESBASC_RER_EN3_0                   (TZAESBASC_RER_EN3_0_Val << TZAESBASC_RER_EN3_Pos)   /* (TZAESBASC_RER) No effect. Position  */
-#define TZAESBASC_RER_EN3_1                   (TZAESBASC_RER_EN3_1_Val << TZAESBASC_RER_EN3_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
-#define TZAESBASC_RER_EN4_Pos                 _UINT32_(4)                                          /* (TZAESBASC_RER) Region 4 Enable Position */
-#define TZAESBASC_RER_EN4_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN4_Pos)             /* (TZAESBASC_RER) Region 4 Enable Mask */
-#define TZAESBASC_RER_EN4(value)              (TZAESBASC_RER_EN4_Msk & (_UINT32_(value) << TZAESBASC_RER_EN4_Pos)) /* Assigment of value for EN4 in the TZAESBASC_RER register */
-#define   TZAESBASC_RER_EN4_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
-#define   TZAESBASC_RER_EN4_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
-#define TZAESBASC_RER_EN4_0                   (TZAESBASC_RER_EN4_0_Val << TZAESBASC_RER_EN4_Pos)   /* (TZAESBASC_RER) No effect. Position  */
-#define TZAESBASC_RER_EN4_1                   (TZAESBASC_RER_EN4_1_Val << TZAESBASC_RER_EN4_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
-#define TZAESBASC_RER_EN5_Pos                 _UINT32_(5)                                          /* (TZAESBASC_RER) Region 5 Enable Position */
-#define TZAESBASC_RER_EN5_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN5_Pos)             /* (TZAESBASC_RER) Region 5 Enable Mask */
-#define TZAESBASC_RER_EN5(value)              (TZAESBASC_RER_EN5_Msk & (_UINT32_(value) << TZAESBASC_RER_EN5_Pos)) /* Assigment of value for EN5 in the TZAESBASC_RER register */
-#define   TZAESBASC_RER_EN5_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
-#define   TZAESBASC_RER_EN5_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
-#define TZAESBASC_RER_EN5_0                   (TZAESBASC_RER_EN5_0_Val << TZAESBASC_RER_EN5_Pos)   /* (TZAESBASC_RER) No effect. Position  */
-#define TZAESBASC_RER_EN5_1                   (TZAESBASC_RER_EN5_1_Val << TZAESBASC_RER_EN5_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
-#define TZAESBASC_RER_EN6_Pos                 _UINT32_(6)                                          /* (TZAESBASC_RER) Region 6 Enable Position */
-#define TZAESBASC_RER_EN6_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN6_Pos)             /* (TZAESBASC_RER) Region 6 Enable Mask */
-#define TZAESBASC_RER_EN6(value)              (TZAESBASC_RER_EN6_Msk & (_UINT32_(value) << TZAESBASC_RER_EN6_Pos)) /* Assigment of value for EN6 in the TZAESBASC_RER register */
-#define   TZAESBASC_RER_EN6_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
-#define   TZAESBASC_RER_EN6_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
-#define TZAESBASC_RER_EN6_0                   (TZAESBASC_RER_EN6_0_Val << TZAESBASC_RER_EN6_Pos)   /* (TZAESBASC_RER) No effect. Position  */
-#define TZAESBASC_RER_EN6_1                   (TZAESBASC_RER_EN6_1_Val << TZAESBASC_RER_EN6_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
-#define TZAESBASC_RER_EN7_Pos                 _UINT32_(7)                                          /* (TZAESBASC_RER) Region 7 Enable Position */
-#define TZAESBASC_RER_EN7_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN7_Pos)             /* (TZAESBASC_RER) Region 7 Enable Mask */
-#define TZAESBASC_RER_EN7(value)              (TZAESBASC_RER_EN7_Msk & (_UINT32_(value) << TZAESBASC_RER_EN7_Pos)) /* Assigment of value for EN7 in the TZAESBASC_RER register */
-#define   TZAESBASC_RER_EN7_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
-#define   TZAESBASC_RER_EN7_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
-#define TZAESBASC_RER_EN7_0                   (TZAESBASC_RER_EN7_0_Val << TZAESBASC_RER_EN7_Pos)   /* (TZAESBASC_RER) No effect. Position  */
-#define TZAESBASC_RER_EN7_1                   (TZAESBASC_RER_EN7_1_Val << TZAESBASC_RER_EN7_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
-#define TZAESBASC_RER_Msk                     _UINT32_(0x000000FF)                                 /* (TZAESBASC_RER) Register Mask  */
-
-#define TZAESBASC_RER_EN_Pos                  _UINT32_(0)                                          /* (TZAESBASC_RER Position) Region 7 Enable */
-#define TZAESBASC_RER_EN_Msk                  (_UINT32_(0xFF) << TZAESBASC_RER_EN_Pos)             /* (TZAESBASC_RER Mask) EN */
-#define TZAESBASC_RER_EN(value)               (TZAESBASC_RER_EN_Msk & (_UINT32_(value) << TZAESBASC_RER_EN_Pos)) 
 
 /* -------- TZAESBASC_RDR : (TZAESBASC Offset: 0x88) ( /W 32) Region Disable -------- */
 #define TZAESBASC_RDR_DIS0_Pos                _UINT32_(0)                                          /* (TZAESBASC_RDR) Region 0 Disable Position */
@@ -237,70 +109,68 @@
 #define TZAESBASC_RDR_DIS_Msk                 (_UINT32_(0xFF) << TZAESBASC_RDR_DIS_Pos)            /* (TZAESBASC_RDR Mask) DIS */
 #define TZAESBASC_RDR_DIS(value)              (TZAESBASC_RDR_DIS_Msk & (_UINT32_(value) << TZAESBASC_RDR_DIS_Pos)) 
 
-/* -------- TZAESBASC_RSR : (TZAESBASC Offset: 0x8C) ( R/ 32) Region Status -------- */
-#define TZAESBASC_RSR_RESETVALUE              _UINT32_(0x00)                                       /*  (TZAESBASC_RSR) Region Status  Reset Value */
+/* -------- TZAESBASC_RER : (TZAESBASC Offset: 0x84) ( /W 32) Region Enable -------- */
+#define TZAESBASC_RER_EN0_Pos                 _UINT32_(0)                                          /* (TZAESBASC_RER) Region 0 Enable Position */
+#define TZAESBASC_RER_EN0_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN0_Pos)             /* (TZAESBASC_RER) Region 0 Enable Mask */
+#define TZAESBASC_RER_EN0(value)              (TZAESBASC_RER_EN0_Msk & (_UINT32_(value) << TZAESBASC_RER_EN0_Pos)) /* Assigment of value for EN0 in the TZAESBASC_RER register */
+#define   TZAESBASC_RER_EN0_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
+#define   TZAESBASC_RER_EN0_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
+#define TZAESBASC_RER_EN0_0                   (TZAESBASC_RER_EN0_0_Val << TZAESBASC_RER_EN0_Pos)   /* (TZAESBASC_RER) No effect. Position  */
+#define TZAESBASC_RER_EN0_1                   (TZAESBASC_RER_EN0_1_Val << TZAESBASC_RER_EN0_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
+#define TZAESBASC_RER_EN1_Pos                 _UINT32_(1)                                          /* (TZAESBASC_RER) Region 1 Enable Position */
+#define TZAESBASC_RER_EN1_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN1_Pos)             /* (TZAESBASC_RER) Region 1 Enable Mask */
+#define TZAESBASC_RER_EN1(value)              (TZAESBASC_RER_EN1_Msk & (_UINT32_(value) << TZAESBASC_RER_EN1_Pos)) /* Assigment of value for EN1 in the TZAESBASC_RER register */
+#define   TZAESBASC_RER_EN1_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
+#define   TZAESBASC_RER_EN1_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
+#define TZAESBASC_RER_EN1_0                   (TZAESBASC_RER_EN1_0_Val << TZAESBASC_RER_EN1_Pos)   /* (TZAESBASC_RER) No effect. Position  */
+#define TZAESBASC_RER_EN1_1                   (TZAESBASC_RER_EN1_1_Val << TZAESBASC_RER_EN1_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
+#define TZAESBASC_RER_EN2_Pos                 _UINT32_(2)                                          /* (TZAESBASC_RER) Region 2 Enable Position */
+#define TZAESBASC_RER_EN2_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN2_Pos)             /* (TZAESBASC_RER) Region 2 Enable Mask */
+#define TZAESBASC_RER_EN2(value)              (TZAESBASC_RER_EN2_Msk & (_UINT32_(value) << TZAESBASC_RER_EN2_Pos)) /* Assigment of value for EN2 in the TZAESBASC_RER register */
+#define   TZAESBASC_RER_EN2_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
+#define   TZAESBASC_RER_EN2_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
+#define TZAESBASC_RER_EN2_0                   (TZAESBASC_RER_EN2_0_Val << TZAESBASC_RER_EN2_Pos)   /* (TZAESBASC_RER) No effect. Position  */
+#define TZAESBASC_RER_EN2_1                   (TZAESBASC_RER_EN2_1_Val << TZAESBASC_RER_EN2_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
+#define TZAESBASC_RER_EN3_Pos                 _UINT32_(3)                                          /* (TZAESBASC_RER) Region 3 Enable Position */
+#define TZAESBASC_RER_EN3_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN3_Pos)             /* (TZAESBASC_RER) Region 3 Enable Mask */
+#define TZAESBASC_RER_EN3(value)              (TZAESBASC_RER_EN3_Msk & (_UINT32_(value) << TZAESBASC_RER_EN3_Pos)) /* Assigment of value for EN3 in the TZAESBASC_RER register */
+#define   TZAESBASC_RER_EN3_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
+#define   TZAESBASC_RER_EN3_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
+#define TZAESBASC_RER_EN3_0                   (TZAESBASC_RER_EN3_0_Val << TZAESBASC_RER_EN3_Pos)   /* (TZAESBASC_RER) No effect. Position  */
+#define TZAESBASC_RER_EN3_1                   (TZAESBASC_RER_EN3_1_Val << TZAESBASC_RER_EN3_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
+#define TZAESBASC_RER_EN4_Pos                 _UINT32_(4)                                          /* (TZAESBASC_RER) Region 4 Enable Position */
+#define TZAESBASC_RER_EN4_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN4_Pos)             /* (TZAESBASC_RER) Region 4 Enable Mask */
+#define TZAESBASC_RER_EN4(value)              (TZAESBASC_RER_EN4_Msk & (_UINT32_(value) << TZAESBASC_RER_EN4_Pos)) /* Assigment of value for EN4 in the TZAESBASC_RER register */
+#define   TZAESBASC_RER_EN4_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
+#define   TZAESBASC_RER_EN4_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
+#define TZAESBASC_RER_EN4_0                   (TZAESBASC_RER_EN4_0_Val << TZAESBASC_RER_EN4_Pos)   /* (TZAESBASC_RER) No effect. Position  */
+#define TZAESBASC_RER_EN4_1                   (TZAESBASC_RER_EN4_1_Val << TZAESBASC_RER_EN4_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
+#define TZAESBASC_RER_EN5_Pos                 _UINT32_(5)                                          /* (TZAESBASC_RER) Region 5 Enable Position */
+#define TZAESBASC_RER_EN5_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN5_Pos)             /* (TZAESBASC_RER) Region 5 Enable Mask */
+#define TZAESBASC_RER_EN5(value)              (TZAESBASC_RER_EN5_Msk & (_UINT32_(value) << TZAESBASC_RER_EN5_Pos)) /* Assigment of value for EN5 in the TZAESBASC_RER register */
+#define   TZAESBASC_RER_EN5_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
+#define   TZAESBASC_RER_EN5_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
+#define TZAESBASC_RER_EN5_0                   (TZAESBASC_RER_EN5_0_Val << TZAESBASC_RER_EN5_Pos)   /* (TZAESBASC_RER) No effect. Position  */
+#define TZAESBASC_RER_EN5_1                   (TZAESBASC_RER_EN5_1_Val << TZAESBASC_RER_EN5_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
+#define TZAESBASC_RER_EN6_Pos                 _UINT32_(6)                                          /* (TZAESBASC_RER) Region 6 Enable Position */
+#define TZAESBASC_RER_EN6_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN6_Pos)             /* (TZAESBASC_RER) Region 6 Enable Mask */
+#define TZAESBASC_RER_EN6(value)              (TZAESBASC_RER_EN6_Msk & (_UINT32_(value) << TZAESBASC_RER_EN6_Pos)) /* Assigment of value for EN6 in the TZAESBASC_RER register */
+#define   TZAESBASC_RER_EN6_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
+#define   TZAESBASC_RER_EN6_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
+#define TZAESBASC_RER_EN6_0                   (TZAESBASC_RER_EN6_0_Val << TZAESBASC_RER_EN6_Pos)   /* (TZAESBASC_RER) No effect. Position  */
+#define TZAESBASC_RER_EN6_1                   (TZAESBASC_RER_EN6_1_Val << TZAESBASC_RER_EN6_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
+#define TZAESBASC_RER_EN7_Pos                 _UINT32_(7)                                          /* (TZAESBASC_RER) Region 7 Enable Position */
+#define TZAESBASC_RER_EN7_Msk                 (_UINT32_(0x1) << TZAESBASC_RER_EN7_Pos)             /* (TZAESBASC_RER) Region 7 Enable Mask */
+#define TZAESBASC_RER_EN7(value)              (TZAESBASC_RER_EN7_Msk & (_UINT32_(value) << TZAESBASC_RER_EN7_Pos)) /* Assigment of value for EN7 in the TZAESBASC_RER register */
+#define   TZAESBASC_RER_EN7_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RER) No effect.  */
+#define   TZAESBASC_RER_EN7_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RER) Enables the corresponding region.  */
+#define TZAESBASC_RER_EN7_0                   (TZAESBASC_RER_EN7_0_Val << TZAESBASC_RER_EN7_Pos)   /* (TZAESBASC_RER) No effect. Position  */
+#define TZAESBASC_RER_EN7_1                   (TZAESBASC_RER_EN7_1_Val << TZAESBASC_RER_EN7_Pos)   /* (TZAESBASC_RER) Enables the corresponding region. Position  */
+#define TZAESBASC_RER_Msk                     _UINT32_(0x000000FF)                                 /* (TZAESBASC_RER) Register Mask  */
 
-#define TZAESBASC_RSR_ES0_Pos                 _UINT32_(0)                                          /* (TZAESBASC_RSR) Region 0 Enable Status Position */
-#define TZAESBASC_RSR_ES0_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES0_Pos)             /* (TZAESBASC_RSR) Region 0 Enable Status Mask */
-#define TZAESBASC_RSR_ES0(value)              (TZAESBASC_RSR_ES0_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES0_Pos)) /* Assigment of value for ES0 in the TZAESBASC_RSR register */
-#define   TZAESBASC_RSR_ES0_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
-#define   TZAESBASC_RSR_ES0_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
-#define TZAESBASC_RSR_ES0_0                   (TZAESBASC_RSR_ES0_0_Val << TZAESBASC_RSR_ES0_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
-#define TZAESBASC_RSR_ES0_1                   (TZAESBASC_RSR_ES0_1_Val << TZAESBASC_RSR_ES0_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
-#define TZAESBASC_RSR_ES1_Pos                 _UINT32_(1)                                          /* (TZAESBASC_RSR) Region 1 Enable Status Position */
-#define TZAESBASC_RSR_ES1_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES1_Pos)             /* (TZAESBASC_RSR) Region 1 Enable Status Mask */
-#define TZAESBASC_RSR_ES1(value)              (TZAESBASC_RSR_ES1_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES1_Pos)) /* Assigment of value for ES1 in the TZAESBASC_RSR register */
-#define   TZAESBASC_RSR_ES1_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
-#define   TZAESBASC_RSR_ES1_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
-#define TZAESBASC_RSR_ES1_0                   (TZAESBASC_RSR_ES1_0_Val << TZAESBASC_RSR_ES1_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
-#define TZAESBASC_RSR_ES1_1                   (TZAESBASC_RSR_ES1_1_Val << TZAESBASC_RSR_ES1_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
-#define TZAESBASC_RSR_ES2_Pos                 _UINT32_(2)                                          /* (TZAESBASC_RSR) Region 2 Enable Status Position */
-#define TZAESBASC_RSR_ES2_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES2_Pos)             /* (TZAESBASC_RSR) Region 2 Enable Status Mask */
-#define TZAESBASC_RSR_ES2(value)              (TZAESBASC_RSR_ES2_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES2_Pos)) /* Assigment of value for ES2 in the TZAESBASC_RSR register */
-#define   TZAESBASC_RSR_ES2_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
-#define   TZAESBASC_RSR_ES2_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
-#define TZAESBASC_RSR_ES2_0                   (TZAESBASC_RSR_ES2_0_Val << TZAESBASC_RSR_ES2_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
-#define TZAESBASC_RSR_ES2_1                   (TZAESBASC_RSR_ES2_1_Val << TZAESBASC_RSR_ES2_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
-#define TZAESBASC_RSR_ES3_Pos                 _UINT32_(3)                                          /* (TZAESBASC_RSR) Region 3 Enable Status Position */
-#define TZAESBASC_RSR_ES3_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES3_Pos)             /* (TZAESBASC_RSR) Region 3 Enable Status Mask */
-#define TZAESBASC_RSR_ES3(value)              (TZAESBASC_RSR_ES3_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES3_Pos)) /* Assigment of value for ES3 in the TZAESBASC_RSR register */
-#define   TZAESBASC_RSR_ES3_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
-#define   TZAESBASC_RSR_ES3_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
-#define TZAESBASC_RSR_ES3_0                   (TZAESBASC_RSR_ES3_0_Val << TZAESBASC_RSR_ES3_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
-#define TZAESBASC_RSR_ES3_1                   (TZAESBASC_RSR_ES3_1_Val << TZAESBASC_RSR_ES3_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
-#define TZAESBASC_RSR_ES4_Pos                 _UINT32_(4)                                          /* (TZAESBASC_RSR) Region 4 Enable Status Position */
-#define TZAESBASC_RSR_ES4_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES4_Pos)             /* (TZAESBASC_RSR) Region 4 Enable Status Mask */
-#define TZAESBASC_RSR_ES4(value)              (TZAESBASC_RSR_ES4_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES4_Pos)) /* Assigment of value for ES4 in the TZAESBASC_RSR register */
-#define   TZAESBASC_RSR_ES4_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
-#define   TZAESBASC_RSR_ES4_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
-#define TZAESBASC_RSR_ES4_0                   (TZAESBASC_RSR_ES4_0_Val << TZAESBASC_RSR_ES4_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
-#define TZAESBASC_RSR_ES4_1                   (TZAESBASC_RSR_ES4_1_Val << TZAESBASC_RSR_ES4_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
-#define TZAESBASC_RSR_ES5_Pos                 _UINT32_(5)                                          /* (TZAESBASC_RSR) Region 5 Enable Status Position */
-#define TZAESBASC_RSR_ES5_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES5_Pos)             /* (TZAESBASC_RSR) Region 5 Enable Status Mask */
-#define TZAESBASC_RSR_ES5(value)              (TZAESBASC_RSR_ES5_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES5_Pos)) /* Assigment of value for ES5 in the TZAESBASC_RSR register */
-#define   TZAESBASC_RSR_ES5_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
-#define   TZAESBASC_RSR_ES5_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
-#define TZAESBASC_RSR_ES5_0                   (TZAESBASC_RSR_ES5_0_Val << TZAESBASC_RSR_ES5_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
-#define TZAESBASC_RSR_ES5_1                   (TZAESBASC_RSR_ES5_1_Val << TZAESBASC_RSR_ES5_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
-#define TZAESBASC_RSR_ES6_Pos                 _UINT32_(6)                                          /* (TZAESBASC_RSR) Region 6 Enable Status Position */
-#define TZAESBASC_RSR_ES6_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES6_Pos)             /* (TZAESBASC_RSR) Region 6 Enable Status Mask */
-#define TZAESBASC_RSR_ES6(value)              (TZAESBASC_RSR_ES6_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES6_Pos)) /* Assigment of value for ES6 in the TZAESBASC_RSR register */
-#define   TZAESBASC_RSR_ES6_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
-#define   TZAESBASC_RSR_ES6_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
-#define TZAESBASC_RSR_ES6_0                   (TZAESBASC_RSR_ES6_0_Val << TZAESBASC_RSR_ES6_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
-#define TZAESBASC_RSR_ES6_1                   (TZAESBASC_RSR_ES6_1_Val << TZAESBASC_RSR_ES6_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
-#define TZAESBASC_RSR_ES7_Pos                 _UINT32_(7)                                          /* (TZAESBASC_RSR) Region 7 Enable Status Position */
-#define TZAESBASC_RSR_ES7_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES7_Pos)             /* (TZAESBASC_RSR) Region 7 Enable Status Mask */
-#define TZAESBASC_RSR_ES7(value)              (TZAESBASC_RSR_ES7_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES7_Pos)) /* Assigment of value for ES7 in the TZAESBASC_RSR register */
-#define   TZAESBASC_RSR_ES7_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
-#define   TZAESBASC_RSR_ES7_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
-#define TZAESBASC_RSR_ES7_0                   (TZAESBASC_RSR_ES7_0_Val << TZAESBASC_RSR_ES7_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
-#define TZAESBASC_RSR_ES7_1                   (TZAESBASC_RSR_ES7_1_Val << TZAESBASC_RSR_ES7_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
-#define TZAESBASC_RSR_Msk                     _UINT32_(0x000000FF)                                 /* (TZAESBASC_RSR) Register Mask  */
-
-#define TZAESBASC_RSR_ES_Pos                  _UINT32_(0)                                          /* (TZAESBASC_RSR Position) Region 7 Enable Status */
-#define TZAESBASC_RSR_ES_Msk                  (_UINT32_(0xFF) << TZAESBASC_RSR_ES_Pos)             /* (TZAESBASC_RSR Mask) ES */
-#define TZAESBASC_RSR_ES(value)               (TZAESBASC_RSR_ES_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES_Pos)) 
+#define TZAESBASC_RER_EN_Pos                  _UINT32_(0)                                          /* (TZAESBASC_RER Position) Region 7 Enable */
+#define TZAESBASC_RER_EN_Msk                  (_UINT32_(0xFF) << TZAESBASC_RER_EN_Pos)             /* (TZAESBASC_RER Mask) EN */
+#define TZAESBASC_RER_EN(value)               (TZAESBASC_RER_EN_Msk & (_UINT32_(value) << TZAESBASC_RER_EN_Pos)) 
 
 /* -------- TZAESBASC_RESR : (TZAESBASC Offset: 0x90) ( R/ 32) Region Error Status -------- */
 #define TZAESBASC_RESR_RESETVALUE             _UINT32_(0x00)                                       /*  (TZAESBASC_RESR) Region Error Status  Reset Value */
@@ -367,6 +237,136 @@
 #define TZAESBASC_RESR_AER_Msk                (_UINT32_(0xFF) << TZAESBASC_RESR_AER_Pos)           /* (TZAESBASC_RESR Mask) AER */
 #define TZAESBASC_RESR_AER(value)             (TZAESBASC_RESR_AER_Msk & (_UINT32_(value) << TZAESBASC_RESR_AER_Pos)) 
 
+/* -------- TZAESBASC_RSECR : (TZAESBASC Offset: 0x80) (R/W 32) Region Security -------- */
+#define TZAESBASC_RSECR_RESETVALUE            _UINT32_(0x00)                                       /*  (TZAESBASC_RSECR) Region Security  Reset Value */
+
+#define TZAESBASC_RSECR_SEC0_Pos              _UINT32_(0)                                          /* (TZAESBASC_RSECR) Region 0 Security Position */
+#define TZAESBASC_RSECR_SEC0_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC0_Pos)          /* (TZAESBASC_RSECR) Region 0 Security Mask */
+#define TZAESBASC_RSECR_SEC0(value)           (TZAESBASC_RSECR_SEC0_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC0_Pos)) /* Assigment of value for SEC0 in the TZAESBASC_RSECR register */
+#define   TZAESBASC_RSECR_SEC0_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
+#define   TZAESBASC_RSECR_SEC0_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
+#define TZAESBASC_RSECR_SEC0_0                (TZAESBASC_RSECR_SEC0_0_Val << TZAESBASC_RSECR_SEC0_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
+#define TZAESBASC_RSECR_SEC0_1                (TZAESBASC_RSECR_SEC0_1_Val << TZAESBASC_RSECR_SEC0_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
+#define TZAESBASC_RSECR_SEC1_Pos              _UINT32_(1)                                          /* (TZAESBASC_RSECR) Region 1 Security Position */
+#define TZAESBASC_RSECR_SEC1_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC1_Pos)          /* (TZAESBASC_RSECR) Region 1 Security Mask */
+#define TZAESBASC_RSECR_SEC1(value)           (TZAESBASC_RSECR_SEC1_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC1_Pos)) /* Assigment of value for SEC1 in the TZAESBASC_RSECR register */
+#define   TZAESBASC_RSECR_SEC1_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
+#define   TZAESBASC_RSECR_SEC1_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
+#define TZAESBASC_RSECR_SEC1_0                (TZAESBASC_RSECR_SEC1_0_Val << TZAESBASC_RSECR_SEC1_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
+#define TZAESBASC_RSECR_SEC1_1                (TZAESBASC_RSECR_SEC1_1_Val << TZAESBASC_RSECR_SEC1_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
+#define TZAESBASC_RSECR_SEC2_Pos              _UINT32_(2)                                          /* (TZAESBASC_RSECR) Region 2 Security Position */
+#define TZAESBASC_RSECR_SEC2_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC2_Pos)          /* (TZAESBASC_RSECR) Region 2 Security Mask */
+#define TZAESBASC_RSECR_SEC2(value)           (TZAESBASC_RSECR_SEC2_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC2_Pos)) /* Assigment of value for SEC2 in the TZAESBASC_RSECR register */
+#define   TZAESBASC_RSECR_SEC2_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
+#define   TZAESBASC_RSECR_SEC2_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
+#define TZAESBASC_RSECR_SEC2_0                (TZAESBASC_RSECR_SEC2_0_Val << TZAESBASC_RSECR_SEC2_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
+#define TZAESBASC_RSECR_SEC2_1                (TZAESBASC_RSECR_SEC2_1_Val << TZAESBASC_RSECR_SEC2_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
+#define TZAESBASC_RSECR_SEC3_Pos              _UINT32_(3)                                          /* (TZAESBASC_RSECR) Region 3 Security Position */
+#define TZAESBASC_RSECR_SEC3_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC3_Pos)          /* (TZAESBASC_RSECR) Region 3 Security Mask */
+#define TZAESBASC_RSECR_SEC3(value)           (TZAESBASC_RSECR_SEC3_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC3_Pos)) /* Assigment of value for SEC3 in the TZAESBASC_RSECR register */
+#define   TZAESBASC_RSECR_SEC3_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
+#define   TZAESBASC_RSECR_SEC3_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
+#define TZAESBASC_RSECR_SEC3_0                (TZAESBASC_RSECR_SEC3_0_Val << TZAESBASC_RSECR_SEC3_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
+#define TZAESBASC_RSECR_SEC3_1                (TZAESBASC_RSECR_SEC3_1_Val << TZAESBASC_RSECR_SEC3_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
+#define TZAESBASC_RSECR_SEC4_Pos              _UINT32_(4)                                          /* (TZAESBASC_RSECR) Region 4 Security Position */
+#define TZAESBASC_RSECR_SEC4_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC4_Pos)          /* (TZAESBASC_RSECR) Region 4 Security Mask */
+#define TZAESBASC_RSECR_SEC4(value)           (TZAESBASC_RSECR_SEC4_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC4_Pos)) /* Assigment of value for SEC4 in the TZAESBASC_RSECR register */
+#define   TZAESBASC_RSECR_SEC4_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
+#define   TZAESBASC_RSECR_SEC4_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
+#define TZAESBASC_RSECR_SEC4_0                (TZAESBASC_RSECR_SEC4_0_Val << TZAESBASC_RSECR_SEC4_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
+#define TZAESBASC_RSECR_SEC4_1                (TZAESBASC_RSECR_SEC4_1_Val << TZAESBASC_RSECR_SEC4_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
+#define TZAESBASC_RSECR_SEC5_Pos              _UINT32_(5)                                          /* (TZAESBASC_RSECR) Region 5 Security Position */
+#define TZAESBASC_RSECR_SEC5_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC5_Pos)          /* (TZAESBASC_RSECR) Region 5 Security Mask */
+#define TZAESBASC_RSECR_SEC5(value)           (TZAESBASC_RSECR_SEC5_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC5_Pos)) /* Assigment of value for SEC5 in the TZAESBASC_RSECR register */
+#define   TZAESBASC_RSECR_SEC5_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
+#define   TZAESBASC_RSECR_SEC5_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
+#define TZAESBASC_RSECR_SEC5_0                (TZAESBASC_RSECR_SEC5_0_Val << TZAESBASC_RSECR_SEC5_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
+#define TZAESBASC_RSECR_SEC5_1                (TZAESBASC_RSECR_SEC5_1_Val << TZAESBASC_RSECR_SEC5_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
+#define TZAESBASC_RSECR_SEC6_Pos              _UINT32_(6)                                          /* (TZAESBASC_RSECR) Region 6 Security Position */
+#define TZAESBASC_RSECR_SEC6_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC6_Pos)          /* (TZAESBASC_RSECR) Region 6 Security Mask */
+#define TZAESBASC_RSECR_SEC6(value)           (TZAESBASC_RSECR_SEC6_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC6_Pos)) /* Assigment of value for SEC6 in the TZAESBASC_RSECR register */
+#define   TZAESBASC_RSECR_SEC6_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
+#define   TZAESBASC_RSECR_SEC6_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
+#define TZAESBASC_RSECR_SEC6_0                (TZAESBASC_RSECR_SEC6_0_Val << TZAESBASC_RSECR_SEC6_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
+#define TZAESBASC_RSECR_SEC6_1                (TZAESBASC_RSECR_SEC6_1_Val << TZAESBASC_RSECR_SEC6_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
+#define TZAESBASC_RSECR_SEC7_Pos              _UINT32_(7)                                          /* (TZAESBASC_RSECR) Region 7 Security Position */
+#define TZAESBASC_RSECR_SEC7_Msk              (_UINT32_(0x1) << TZAESBASC_RSECR_SEC7_Pos)          /* (TZAESBASC_RSECR) Region 7 Security Mask */
+#define TZAESBASC_RSECR_SEC7(value)           (TZAESBASC_RSECR_SEC7_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC7_Pos)) /* Assigment of value for SEC7 in the TZAESBASC_RSECR register */
+#define   TZAESBASC_RSECR_SEC7_0_Val          _UINT32_(0x0)                                        /* (TZAESBASC_RSECR) Region x is secure.  */
+#define   TZAESBASC_RSECR_SEC7_1_Val          _UINT32_(0x1)                                        /* (TZAESBASC_RSECR) Region x is non-secure.  */
+#define TZAESBASC_RSECR_SEC7_0                (TZAESBASC_RSECR_SEC7_0_Val << TZAESBASC_RSECR_SEC7_Pos) /* (TZAESBASC_RSECR) Region x is secure. Position  */
+#define TZAESBASC_RSECR_SEC7_1                (TZAESBASC_RSECR_SEC7_1_Val << TZAESBASC_RSECR_SEC7_Pos) /* (TZAESBASC_RSECR) Region x is non-secure. Position  */
+#define TZAESBASC_RSECR_Msk                   _UINT32_(0x000000FF)                                 /* (TZAESBASC_RSECR) Register Mask  */
+
+#define TZAESBASC_RSECR_SEC_Pos               _UINT32_(0)                                          /* (TZAESBASC_RSECR Position) Region 7 Security */
+#define TZAESBASC_RSECR_SEC_Msk               (_UINT32_(0xFF) << TZAESBASC_RSECR_SEC_Pos)          /* (TZAESBASC_RSECR Mask) SEC */
+#define TZAESBASC_RSECR_SEC(value)            (TZAESBASC_RSECR_SEC_Msk & (_UINT32_(value) << TZAESBASC_RSECR_SEC_Pos)) 
+
+/* -------- TZAESBASC_RSR : (TZAESBASC Offset: 0x8C) ( R/ 32) Region Status -------- */
+#define TZAESBASC_RSR_RESETVALUE              _UINT32_(0x00)                                       /*  (TZAESBASC_RSR) Region Status  Reset Value */
+
+#define TZAESBASC_RSR_ES0_Pos                 _UINT32_(0)                                          /* (TZAESBASC_RSR) Region 0 Enable Status Position */
+#define TZAESBASC_RSR_ES0_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES0_Pos)             /* (TZAESBASC_RSR) Region 0 Enable Status Mask */
+#define TZAESBASC_RSR_ES0(value)              (TZAESBASC_RSR_ES0_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES0_Pos)) /* Assigment of value for ES0 in the TZAESBASC_RSR register */
+#define   TZAESBASC_RSR_ES0_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
+#define   TZAESBASC_RSR_ES0_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
+#define TZAESBASC_RSR_ES0_0                   (TZAESBASC_RSR_ES0_0_Val << TZAESBASC_RSR_ES0_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
+#define TZAESBASC_RSR_ES0_1                   (TZAESBASC_RSR_ES0_1_Val << TZAESBASC_RSR_ES0_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
+#define TZAESBASC_RSR_ES1_Pos                 _UINT32_(1)                                          /* (TZAESBASC_RSR) Region 1 Enable Status Position */
+#define TZAESBASC_RSR_ES1_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES1_Pos)             /* (TZAESBASC_RSR) Region 1 Enable Status Mask */
+#define TZAESBASC_RSR_ES1(value)              (TZAESBASC_RSR_ES1_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES1_Pos)) /* Assigment of value for ES1 in the TZAESBASC_RSR register */
+#define   TZAESBASC_RSR_ES1_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
+#define   TZAESBASC_RSR_ES1_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
+#define TZAESBASC_RSR_ES1_0                   (TZAESBASC_RSR_ES1_0_Val << TZAESBASC_RSR_ES1_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
+#define TZAESBASC_RSR_ES1_1                   (TZAESBASC_RSR_ES1_1_Val << TZAESBASC_RSR_ES1_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
+#define TZAESBASC_RSR_ES2_Pos                 _UINT32_(2)                                          /* (TZAESBASC_RSR) Region 2 Enable Status Position */
+#define TZAESBASC_RSR_ES2_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES2_Pos)             /* (TZAESBASC_RSR) Region 2 Enable Status Mask */
+#define TZAESBASC_RSR_ES2(value)              (TZAESBASC_RSR_ES2_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES2_Pos)) /* Assigment of value for ES2 in the TZAESBASC_RSR register */
+#define   TZAESBASC_RSR_ES2_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
+#define   TZAESBASC_RSR_ES2_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
+#define TZAESBASC_RSR_ES2_0                   (TZAESBASC_RSR_ES2_0_Val << TZAESBASC_RSR_ES2_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
+#define TZAESBASC_RSR_ES2_1                   (TZAESBASC_RSR_ES2_1_Val << TZAESBASC_RSR_ES2_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
+#define TZAESBASC_RSR_ES3_Pos                 _UINT32_(3)                                          /* (TZAESBASC_RSR) Region 3 Enable Status Position */
+#define TZAESBASC_RSR_ES3_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES3_Pos)             /* (TZAESBASC_RSR) Region 3 Enable Status Mask */
+#define TZAESBASC_RSR_ES3(value)              (TZAESBASC_RSR_ES3_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES3_Pos)) /* Assigment of value for ES3 in the TZAESBASC_RSR register */
+#define   TZAESBASC_RSR_ES3_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
+#define   TZAESBASC_RSR_ES3_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
+#define TZAESBASC_RSR_ES3_0                   (TZAESBASC_RSR_ES3_0_Val << TZAESBASC_RSR_ES3_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
+#define TZAESBASC_RSR_ES3_1                   (TZAESBASC_RSR_ES3_1_Val << TZAESBASC_RSR_ES3_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
+#define TZAESBASC_RSR_ES4_Pos                 _UINT32_(4)                                          /* (TZAESBASC_RSR) Region 4 Enable Status Position */
+#define TZAESBASC_RSR_ES4_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES4_Pos)             /* (TZAESBASC_RSR) Region 4 Enable Status Mask */
+#define TZAESBASC_RSR_ES4(value)              (TZAESBASC_RSR_ES4_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES4_Pos)) /* Assigment of value for ES4 in the TZAESBASC_RSR register */
+#define   TZAESBASC_RSR_ES4_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
+#define   TZAESBASC_RSR_ES4_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
+#define TZAESBASC_RSR_ES4_0                   (TZAESBASC_RSR_ES4_0_Val << TZAESBASC_RSR_ES4_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
+#define TZAESBASC_RSR_ES4_1                   (TZAESBASC_RSR_ES4_1_Val << TZAESBASC_RSR_ES4_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
+#define TZAESBASC_RSR_ES5_Pos                 _UINT32_(5)                                          /* (TZAESBASC_RSR) Region 5 Enable Status Position */
+#define TZAESBASC_RSR_ES5_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES5_Pos)             /* (TZAESBASC_RSR) Region 5 Enable Status Mask */
+#define TZAESBASC_RSR_ES5(value)              (TZAESBASC_RSR_ES5_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES5_Pos)) /* Assigment of value for ES5 in the TZAESBASC_RSR register */
+#define   TZAESBASC_RSR_ES5_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
+#define   TZAESBASC_RSR_ES5_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
+#define TZAESBASC_RSR_ES5_0                   (TZAESBASC_RSR_ES5_0_Val << TZAESBASC_RSR_ES5_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
+#define TZAESBASC_RSR_ES5_1                   (TZAESBASC_RSR_ES5_1_Val << TZAESBASC_RSR_ES5_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
+#define TZAESBASC_RSR_ES6_Pos                 _UINT32_(6)                                          /* (TZAESBASC_RSR) Region 6 Enable Status Position */
+#define TZAESBASC_RSR_ES6_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES6_Pos)             /* (TZAESBASC_RSR) Region 6 Enable Status Mask */
+#define TZAESBASC_RSR_ES6(value)              (TZAESBASC_RSR_ES6_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES6_Pos)) /* Assigment of value for ES6 in the TZAESBASC_RSR register */
+#define   TZAESBASC_RSR_ES6_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
+#define   TZAESBASC_RSR_ES6_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
+#define TZAESBASC_RSR_ES6_0                   (TZAESBASC_RSR_ES6_0_Val << TZAESBASC_RSR_ES6_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
+#define TZAESBASC_RSR_ES6_1                   (TZAESBASC_RSR_ES6_1_Val << TZAESBASC_RSR_ES6_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
+#define TZAESBASC_RSR_ES7_Pos                 _UINT32_(7)                                          /* (TZAESBASC_RSR) Region 7 Enable Status Position */
+#define TZAESBASC_RSR_ES7_Msk                 (_UINT32_(0x1) << TZAESBASC_RSR_ES7_Pos)             /* (TZAESBASC_RSR) Region 7 Enable Status Mask */
+#define TZAESBASC_RSR_ES7(value)              (TZAESBASC_RSR_ES7_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES7_Pos)) /* Assigment of value for ES7 in the TZAESBASC_RSR register */
+#define   TZAESBASC_RSR_ES7_0_Val             _UINT32_(0x0)                                        /* (TZAESBASC_RSR) The corresponding region is disabled.  */
+#define   TZAESBASC_RSR_ES7_1_Val             _UINT32_(0x1)                                        /* (TZAESBASC_RSR) The corresponding region is enabled.  */
+#define TZAESBASC_RSR_ES7_0                   (TZAESBASC_RSR_ES7_0_Val << TZAESBASC_RSR_ES7_Pos)   /* (TZAESBASC_RSR) The corresponding region is disabled. Position  */
+#define TZAESBASC_RSR_ES7_1                   (TZAESBASC_RSR_ES7_1_Val << TZAESBASC_RSR_ES7_Pos)   /* (TZAESBASC_RSR) The corresponding region is enabled. Position  */
+#define TZAESBASC_RSR_Msk                     _UINT32_(0x000000FF)                                 /* (TZAESBASC_RSR) Register Mask  */
+
+#define TZAESBASC_RSR_ES_Pos                  _UINT32_(0)                                          /* (TZAESBASC_RSR Position) Region 7 Enable Status */
+#define TZAESBASC_RSR_ES_Msk                  (_UINT32_(0xFF) << TZAESBASC_RSR_ES_Pos)             /* (TZAESBASC_RSR Mask) ES */
+#define TZAESBASC_RSR_ES(value)               (TZAESBASC_RSR_ES_Msk & (_UINT32_(value) << TZAESBASC_RSR_ES_Pos)) 
+
 /* -------- TZAESBASC_RSSR : (TZAESBASC Offset: 0x94) ( R/ 32) Region Synchronization Status -------- */
 #define TZAESBASC_RSSR_RESETVALUE             _UINT32_(0x00)                                       /*  (TZAESBASC_RSSR) Region Synchronization Status  Reset Value */
 
@@ -378,6 +378,16 @@
 #define TZAESBASC_RSSR_SYNC_0                 (TZAESBASC_RSSR_SYNC_0_Val << TZAESBASC_RSSR_SYNC_Pos) /* (TZAESBASC_RSSR) Synchronization of the region configuration is done. Position  */
 #define TZAESBASC_RSSR_SYNC_1                 (TZAESBASC_RSSR_SYNC_1_Val << TZAESBASC_RSSR_SYNC_Pos) /* (TZAESBASC_RSSR) A region configuration is in progress. Position  */
 #define TZAESBASC_RSSR_Msk                    _UINT32_(0x00000001)                                 /* (TZAESBASC_RSSR) Register Mask  */
+
+
+/* -------- TZAESBASC_VERSION : (TZAESBASC Offset: 0xFC) ( R/ 32) Version Register -------- */
+#define TZAESBASC_VERSION_VERSION_Pos         _UINT32_(0)                                          /* (TZAESBASC_VERSION) Version of the Hardware Module Position */
+#define TZAESBASC_VERSION_VERSION_Msk         (_UINT32_(0xFFF) << TZAESBASC_VERSION_VERSION_Pos)   /* (TZAESBASC_VERSION) Version of the Hardware Module Mask */
+#define TZAESBASC_VERSION_VERSION(value)      (TZAESBASC_VERSION_VERSION_Msk & (_UINT32_(value) << TZAESBASC_VERSION_VERSION_Pos)) /* Assigment of value for VERSION in the TZAESBASC_VERSION register */
+#define TZAESBASC_VERSION_MFN_Pos             _UINT32_(16)                                         /* (TZAESBASC_VERSION) Metal Fix Number Position */
+#define TZAESBASC_VERSION_MFN_Msk             (_UINT32_(0x7) << TZAESBASC_VERSION_MFN_Pos)         /* (TZAESBASC_VERSION) Metal Fix Number Mask */
+#define TZAESBASC_VERSION_MFN(value)          (TZAESBASC_VERSION_MFN_Msk & (_UINT32_(value) << TZAESBASC_VERSION_MFN_Pos)) /* Assigment of value for MFN in the TZAESBASC_VERSION register */
+#define TZAESBASC_VERSION_Msk                 _UINT32_(0x00070FFF)                                 /* (TZAESBASC_VERSION) Register Mask  */
 
 
 /* -------- TZAESBASC_WPMR : (TZAESBASC Offset: 0xE4) (R/W 32) Write Protection Mode Register -------- */
@@ -414,28 +424,18 @@
 #define TZAESBASC_WPSR_Msk                    _UINT32_(0x00FFFF01)                                 /* (TZAESBASC_WPSR) Register Mask  */
 
 
-/* -------- TZAESBASC_VERSION : (TZAESBASC Offset: 0xFC) ( R/ 32) Version Register -------- */
-#define TZAESBASC_VERSION_VERSION_Pos         _UINT32_(0)                                          /* (TZAESBASC_VERSION) Version of the Hardware Module Position */
-#define TZAESBASC_VERSION_VERSION_Msk         (_UINT32_(0xFFF) << TZAESBASC_VERSION_VERSION_Pos)   /* (TZAESBASC_VERSION) Version of the Hardware Module Mask */
-#define TZAESBASC_VERSION_VERSION(value)      (TZAESBASC_VERSION_VERSION_Msk & (_UINT32_(value) << TZAESBASC_VERSION_VERSION_Pos)) /* Assigment of value for VERSION in the TZAESBASC_VERSION register */
-#define TZAESBASC_VERSION_MFN_Pos             _UINT32_(16)                                         /* (TZAESBASC_VERSION) Metal Fix Number Position */
-#define TZAESBASC_VERSION_MFN_Msk             (_UINT32_(0x7) << TZAESBASC_VERSION_MFN_Pos)         /* (TZAESBASC_VERSION) Metal Fix Number Mask */
-#define TZAESBASC_VERSION_MFN(value)          (TZAESBASC_VERSION_MFN_Msk & (_UINT32_(value) << TZAESBASC_VERSION_MFN_Pos)) /* Assigment of value for MFN in the TZAESBASC_VERSION register */
-#define TZAESBASC_VERSION_Msk                 _UINT32_(0x00070FFF)                                 /* (TZAESBASC_VERSION) Register Mask  */
-
-
 /** \brief TZAESBASC register offsets definitions */
 #define TZAESBASC_RBAR_REG_OFST        _UINT32_(0x00)      /* (TZAESBASC_RBAR) Region Base Address  Offset */
 #define TZAESBASC_RTAR_REG_OFST        _UINT32_(0x04)      /* (TZAESBASC_RTAR) Region Top Address  Offset */
-#define TZAESBASC_RSECR_REG_OFST       _UINT32_(0x80)      /* (TZAESBASC_RSECR) Region Security Offset */
-#define TZAESBASC_RER_REG_OFST         _UINT32_(0x84)      /* (TZAESBASC_RER) Region Enable Offset */
 #define TZAESBASC_RDR_REG_OFST         _UINT32_(0x88)      /* (TZAESBASC_RDR) Region Disable Offset */
-#define TZAESBASC_RSR_REG_OFST         _UINT32_(0x8C)      /* (TZAESBASC_RSR) Region Status Offset */
+#define TZAESBASC_RER_REG_OFST         _UINT32_(0x84)      /* (TZAESBASC_RER) Region Enable Offset */
 #define TZAESBASC_RESR_REG_OFST        _UINT32_(0x90)      /* (TZAESBASC_RESR) Region Error Status Offset */
+#define TZAESBASC_RSECR_REG_OFST       _UINT32_(0x80)      /* (TZAESBASC_RSECR) Region Security Offset */
+#define TZAESBASC_RSR_REG_OFST         _UINT32_(0x8C)      /* (TZAESBASC_RSR) Region Status Offset */
 #define TZAESBASC_RSSR_REG_OFST        _UINT32_(0x94)      /* (TZAESBASC_RSSR) Region Synchronization Status Offset */
+#define TZAESBASC_VERSION_REG_OFST     _UINT32_(0xFC)      /* (TZAESBASC_VERSION) Version Register Offset */
 #define TZAESBASC_WPMR_REG_OFST        _UINT32_(0xE4)      /* (TZAESBASC_WPMR) Write Protection Mode Register Offset */
 #define TZAESBASC_WPSR_REG_OFST        _UINT32_(0xE8)      /* (TZAESBASC_WPSR) Write Protection Status Register Offset */
-#define TZAESBASC_VERSION_REG_OFST     _UINT32_(0xFC)      /* (TZAESBASC_VERSION) Version Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief TZAESBASC_RID register API structure */

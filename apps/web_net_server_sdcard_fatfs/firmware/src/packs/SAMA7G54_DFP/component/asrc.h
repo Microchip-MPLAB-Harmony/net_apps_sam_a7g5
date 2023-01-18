@@ -20,13 +20,128 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_ASRC_COMPONENT_H_
 #define _SAMA7G_ASRC_COMPONENT_H_
 
 /* ************************************************************************** */
 /*   SOFTWARE API DEFINITION FOR ASRC                                         */
 /* ************************************************************************** */
+
+/* -------- ASRC_CH_CONF : (ASRC Offset: 0x20) (R/W 32) Channel Configuration Register -------- */
+#define ASRC_CH_CONF_RESETVALUE               _UINT32_(0x00)                                       /*  (ASRC_CH_CONF) Channel Configuration Register  Reset Value */
+
+#define ASRC_CH_CONF_THROPMODE_Pos            _UINT32_(0)                                          /* (ASRC_CH_CONF) Transmit Holding Registers Operating Mode Position */
+#define ASRC_CH_CONF_THROPMODE_Msk            (_UINT32_(0x7) << ASRC_CH_CONF_THROPMODE_Pos)        /* (ASRC_CH_CONF) Transmit Holding Registers Operating Mode Mask */
+#define ASRC_CH_CONF_THROPMODE(value)         (ASRC_CH_CONF_THROPMODE_Msk & (_UINT32_(value) << ASRC_CH_CONF_THROPMODE_Pos)) /* Assigment of value for THROPMODE in the ASRC_CH_CONF register */
+#define   ASRC_CH_CONF_THROPMODE_THRX_UPTO_2CH_Val _UINT32_(0x0)                                        /* (ASRC_CH_CONF) The ASRC_THRx can receive up to 2 audio streams (e.g. 1 stereo channel for each ASRC_THR). Each ASRC_THRx is routed on each Stereo DSP x.  */
+#define   ASRC_CH_CONF_THROPMODE_THR0_UPTO_4CH_Val _UINT32_(0x1)                                        /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_THR0). The ARSC_THR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_THR1). The ARSC_THR2 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_THR2). ASRC_THR3 must not be used.  */
+#define   ASRC_CH_CONF_THROPMODE_THR01_UPTO_4CH_Val _UINT32_(0x2)                                        /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_THR0). The ASRC_THR1 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_THR1). ASRC_THR2 and ASRC_THR3 must not be used.  */
+#define   ASRC_CH_CONF_THROPMODE_THR0_UPTO_6CH_Val _UINT32_(0x3)                                        /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 6 audio streams (e.g. up to 3 stereo channels on ASRC_THR0). The ARSC_THR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_THR1) ASRC_THR2 and ASRC_THR3 must not be used.  */
+#define   ASRC_CH_CONF_THROPMODE_THR0_UPTO_8CH_Val _UINT32_(0x4)                                        /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 8 audio streams (e.g. up to 4 stereo channels on ASRC_THR0). ASRC_THR1,ASRC_THR2 and ASRC_RHR3 must not be used.  */
+#define ASRC_CH_CONF_THROPMODE_THRX_UPTO_2CH  (ASRC_CH_CONF_THROPMODE_THRX_UPTO_2CH_Val << ASRC_CH_CONF_THROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_THRx can receive up to 2 audio streams (e.g. 1 stereo channel for each ASRC_THR). Each ASRC_THRx is routed on each Stereo DSP x. Position  */
+#define ASRC_CH_CONF_THROPMODE_THR0_UPTO_4CH  (ASRC_CH_CONF_THROPMODE_THR0_UPTO_4CH_Val << ASRC_CH_CONF_THROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_THR0). The ARSC_THR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_THR1). The ARSC_THR2 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_THR2). ASRC_THR3 must not be used. Position  */
+#define ASRC_CH_CONF_THROPMODE_THR01_UPTO_4CH (ASRC_CH_CONF_THROPMODE_THR01_UPTO_4CH_Val << ASRC_CH_CONF_THROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_THR0). The ASRC_THR1 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_THR1). ASRC_THR2 and ASRC_THR3 must not be used. Position  */
+#define ASRC_CH_CONF_THROPMODE_THR0_UPTO_6CH  (ASRC_CH_CONF_THROPMODE_THR0_UPTO_6CH_Val << ASRC_CH_CONF_THROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 6 audio streams (e.g. up to 3 stereo channels on ASRC_THR0). The ARSC_THR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_THR1) ASRC_THR2 and ASRC_THR3 must not be used. Position  */
+#define ASRC_CH_CONF_THROPMODE_THR0_UPTO_8CH  (ASRC_CH_CONF_THROPMODE_THR0_UPTO_8CH_Val << ASRC_CH_CONF_THROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 8 audio streams (e.g. up to 4 stereo channels on ASRC_THR0). ASRC_THR1,ASRC_THR2 and ASRC_RHR3 must not be used. Position  */
+#define ASRC_CH_CONF_RHROPMODE_Pos            _UINT32_(4)                                          /* (ASRC_CH_CONF) Receive Holding Registers Operating Mode Position */
+#define ASRC_CH_CONF_RHROPMODE_Msk            (_UINT32_(0x7) << ASRC_CH_CONF_RHROPMODE_Pos)        /* (ASRC_CH_CONF) Receive Holding Registers Operating Mode Mask */
+#define ASRC_CH_CONF_RHROPMODE(value)         (ASRC_CH_CONF_RHROPMODE_Msk & (_UINT32_(value) << ASRC_CH_CONF_RHROPMODE_Pos)) /* Assigment of value for RHROPMODE in the ASRC_CH_CONF register */
+#define   ASRC_CH_CONF_RHROPMODE_RHRX_UPTO_2CH_Val _UINT32_(0x0)                                        /* (ASRC_CH_CONF) The ASRC_RHRx can receive up to 2 audio streams (e.g. 1 stereo channel for each ASRC_RHR). Each ASRC_RHRx is routed on each Stereo DSP x.  */
+#define   ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_4CH_Val _UINT32_(0x1)                                        /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_RHR0). The ARSC_RHR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_RHR1). The ARSC_RHR2 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_RHR2). ASRC_RHR3 must not be used.  */
+#define   ASRC_CH_CONF_RHROPMODE_RHR01_UPTO_4CH_Val _UINT32_(0x2)                                        /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_RHR0). The ASRC_RHR1 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_RHR1). ASRC_RHR2 and ASRC_RHR3 must not be used.  */
+#define   ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_6CH_Val _UINT32_(0x3)                                        /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 6 audio streams (e.g. up to 3 stereo channels on ASRC_RHR0). The ARSC_RHR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_RHR1) ASRC_RHR2 and ASRC_RHR3 must not be used.  */
+#define   ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_8CH_Val _UINT32_(0x4)                                        /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 8 audio streams (e.g. up to 4 stereo channels on ASRC_RHR0). ASRC_RHR1,ASRC_RHR2 and ASRC_RHR3 must not be used.  */
+#define ASRC_CH_CONF_RHROPMODE_RHRX_UPTO_2CH  (ASRC_CH_CONF_RHROPMODE_RHRX_UPTO_2CH_Val << ASRC_CH_CONF_RHROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_RHRx can receive up to 2 audio streams (e.g. 1 stereo channel for each ASRC_RHR). Each ASRC_RHRx is routed on each Stereo DSP x. Position  */
+#define ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_4CH  (ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_4CH_Val << ASRC_CH_CONF_RHROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_RHR0). The ARSC_RHR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_RHR1). The ARSC_RHR2 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_RHR2). ASRC_RHR3 must not be used. Position  */
+#define ASRC_CH_CONF_RHROPMODE_RHR01_UPTO_4CH (ASRC_CH_CONF_RHROPMODE_RHR01_UPTO_4CH_Val << ASRC_CH_CONF_RHROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_RHR0). The ASRC_RHR1 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_RHR1). ASRC_RHR2 and ASRC_RHR3 must not be used. Position  */
+#define ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_6CH  (ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_6CH_Val << ASRC_CH_CONF_RHROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 6 audio streams (e.g. up to 3 stereo channels on ASRC_RHR0). The ARSC_RHR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_RHR1) ASRC_RHR2 and ASRC_RHR3 must not be used. Position  */
+#define ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_8CH  (ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_8CH_Val << ASRC_CH_CONF_RHROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 8 audio streams (e.g. up to 4 stereo channels on ASRC_RHR0). ASRC_RHR1,ASRC_RHR2 and ASRC_RHR3 must not be used. Position  */
+#define ASRC_CH_CONF_MONO0_Pos                _UINT32_(8)                                          /* (ASRC_CH_CONF) DSP 0 Mono Operating Mode Position */
+#define ASRC_CH_CONF_MONO0_Msk                (_UINT32_(0x1) << ASRC_CH_CONF_MONO0_Pos)            /* (ASRC_CH_CONF) DSP 0 Mono Operating Mode Mask */
+#define ASRC_CH_CONF_MONO0(value)             (ASRC_CH_CONF_MONO0_Msk & (_UINT32_(value) << ASRC_CH_CONF_MONO0_Pos)) /* Assigment of value for MONO0 in the ASRC_CH_CONF register */
+#define   ASRC_CH_CONF_MONO0_DISABLED_Val     _UINT32_(0x0)                                        /* (ASRC_CH_CONF) DSP operates in Stereo mode.  */
+#define   ASRC_CH_CONF_MONO0_ENABLED_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) DSP operates in Mono mode.  */
+#define ASRC_CH_CONF_MONO0_DISABLED           (ASRC_CH_CONF_MONO0_DISABLED_Val << ASRC_CH_CONF_MONO0_Pos) /* (ASRC_CH_CONF) DSP operates in Stereo mode. Position  */
+#define ASRC_CH_CONF_MONO0_ENABLED            (ASRC_CH_CONF_MONO0_ENABLED_Val << ASRC_CH_CONF_MONO0_Pos) /* (ASRC_CH_CONF) DSP operates in Mono mode. Position  */
+#define ASRC_CH_CONF_MONO1_Pos                _UINT32_(9)                                          /* (ASRC_CH_CONF) DSP 1 Mono Operating Mode Position */
+#define ASRC_CH_CONF_MONO1_Msk                (_UINT32_(0x1) << ASRC_CH_CONF_MONO1_Pos)            /* (ASRC_CH_CONF) DSP 1 Mono Operating Mode Mask */
+#define ASRC_CH_CONF_MONO1(value)             (ASRC_CH_CONF_MONO1_Msk & (_UINT32_(value) << ASRC_CH_CONF_MONO1_Pos)) /* Assigment of value for MONO1 in the ASRC_CH_CONF register */
+#define   ASRC_CH_CONF_MONO1_DISABLED_Val     _UINT32_(0x0)                                        /* (ASRC_CH_CONF) DSP operates in Stereo mode.  */
+#define   ASRC_CH_CONF_MONO1_ENABLED_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) DSP operates in Mono mode.  */
+#define ASRC_CH_CONF_MONO1_DISABLED           (ASRC_CH_CONF_MONO1_DISABLED_Val << ASRC_CH_CONF_MONO1_Pos) /* (ASRC_CH_CONF) DSP operates in Stereo mode. Position  */
+#define ASRC_CH_CONF_MONO1_ENABLED            (ASRC_CH_CONF_MONO1_ENABLED_Val << ASRC_CH_CONF_MONO1_Pos) /* (ASRC_CH_CONF) DSP operates in Mono mode. Position  */
+#define ASRC_CH_CONF_MONO2_Pos                _UINT32_(10)                                         /* (ASRC_CH_CONF) DSP 2 Mono Operating Mode Position */
+#define ASRC_CH_CONF_MONO2_Msk                (_UINT32_(0x1) << ASRC_CH_CONF_MONO2_Pos)            /* (ASRC_CH_CONF) DSP 2 Mono Operating Mode Mask */
+#define ASRC_CH_CONF_MONO2(value)             (ASRC_CH_CONF_MONO2_Msk & (_UINT32_(value) << ASRC_CH_CONF_MONO2_Pos)) /* Assigment of value for MONO2 in the ASRC_CH_CONF register */
+#define   ASRC_CH_CONF_MONO2_DISABLED_Val     _UINT32_(0x0)                                        /* (ASRC_CH_CONF) DSP operates in Stereo mode.  */
+#define   ASRC_CH_CONF_MONO2_ENABLED_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) DSP operates in Mono mode.  */
+#define ASRC_CH_CONF_MONO2_DISABLED           (ASRC_CH_CONF_MONO2_DISABLED_Val << ASRC_CH_CONF_MONO2_Pos) /* (ASRC_CH_CONF) DSP operates in Stereo mode. Position  */
+#define ASRC_CH_CONF_MONO2_ENABLED            (ASRC_CH_CONF_MONO2_ENABLED_Val << ASRC_CH_CONF_MONO2_Pos) /* (ASRC_CH_CONF) DSP operates in Mono mode. Position  */
+#define ASRC_CH_CONF_MONO3_Pos                _UINT32_(11)                                         /* (ASRC_CH_CONF) DSP 3 Mono Operating Mode Position */
+#define ASRC_CH_CONF_MONO3_Msk                (_UINT32_(0x1) << ASRC_CH_CONF_MONO3_Pos)            /* (ASRC_CH_CONF) DSP 3 Mono Operating Mode Mask */
+#define ASRC_CH_CONF_MONO3(value)             (ASRC_CH_CONF_MONO3_Msk & (_UINT32_(value) << ASRC_CH_CONF_MONO3_Pos)) /* Assigment of value for MONO3 in the ASRC_CH_CONF register */
+#define   ASRC_CH_CONF_MONO3_DISABLED_Val     _UINT32_(0x0)                                        /* (ASRC_CH_CONF) DSP operates in Stereo mode.  */
+#define   ASRC_CH_CONF_MONO3_ENABLED_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) DSP operates in Mono mode.  */
+#define ASRC_CH_CONF_MONO3_DISABLED           (ASRC_CH_CONF_MONO3_DISABLED_Val << ASRC_CH_CONF_MONO3_Pos) /* (ASRC_CH_CONF) DSP operates in Stereo mode. Position  */
+#define ASRC_CH_CONF_MONO3_ENABLED            (ASRC_CH_CONF_MONO3_ENABLED_Val << ASRC_CH_CONF_MONO3_Pos) /* (ASRC_CH_CONF) DSP operates in Mono mode. Position  */
+#define ASRC_CH_CONF_CHUNK0_Pos               _UINT32_(16)                                         /* (ASRC_CH_CONF) DMA DSP 0 CHUNK Size Position */
+#define ASRC_CH_CONF_CHUNK0_Msk               (_UINT32_(0x7) << ASRC_CH_CONF_CHUNK0_Pos)           /* (ASRC_CH_CONF) DMA DSP 0 CHUNK Size Mask */
+#define ASRC_CH_CONF_CHUNK0(value)            (ASRC_CH_CONF_CHUNK0_Msk & (_UINT32_(value) << ASRC_CH_CONF_CHUNK0_Pos)) /* Assigment of value for CHUNK0 in the ASRC_CH_CONF register */
+#define   ASRC_CH_CONF_CHUNK0_1_DATA_Val      _UINT32_(0x0)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK0_2_DATA_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK0_4_DATA_Val      _UINT32_(0x2)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK0_8_DATA_Val      _UINT32_(0x3)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK0_16_DATA_Val     _UINT32_(0x4)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event.  */
+#define ASRC_CH_CONF_CHUNK0_1_DATA            (ASRC_CH_CONF_CHUNK0_1_DATA_Val << ASRC_CH_CONF_CHUNK0_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK0_2_DATA            (ASRC_CH_CONF_CHUNK0_2_DATA_Val << ASRC_CH_CONF_CHUNK0_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK0_4_DATA            (ASRC_CH_CONF_CHUNK0_4_DATA_Val << ASRC_CH_CONF_CHUNK0_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK0_8_DATA            (ASRC_CH_CONF_CHUNK0_8_DATA_Val << ASRC_CH_CONF_CHUNK0_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK0_16_DATA           (ASRC_CH_CONF_CHUNK0_16_DATA_Val << ASRC_CH_CONF_CHUNK0_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK1_Pos               _UINT32_(20)                                         /* (ASRC_CH_CONF) DMA DSP 1 CHUNK Size Position */
+#define ASRC_CH_CONF_CHUNK1_Msk               (_UINT32_(0x7) << ASRC_CH_CONF_CHUNK1_Pos)           /* (ASRC_CH_CONF) DMA DSP 1 CHUNK Size Mask */
+#define ASRC_CH_CONF_CHUNK1(value)            (ASRC_CH_CONF_CHUNK1_Msk & (_UINT32_(value) << ASRC_CH_CONF_CHUNK1_Pos)) /* Assigment of value for CHUNK1 in the ASRC_CH_CONF register */
+#define   ASRC_CH_CONF_CHUNK1_1_DATA_Val      _UINT32_(0x0)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK1_2_DATA_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK1_4_DATA_Val      _UINT32_(0x2)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK1_8_DATA_Val      _UINT32_(0x3)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK1_16_DATA_Val     _UINT32_(0x4)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event.  */
+#define ASRC_CH_CONF_CHUNK1_1_DATA            (ASRC_CH_CONF_CHUNK1_1_DATA_Val << ASRC_CH_CONF_CHUNK1_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK1_2_DATA            (ASRC_CH_CONF_CHUNK1_2_DATA_Val << ASRC_CH_CONF_CHUNK1_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK1_4_DATA            (ASRC_CH_CONF_CHUNK1_4_DATA_Val << ASRC_CH_CONF_CHUNK1_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK1_8_DATA            (ASRC_CH_CONF_CHUNK1_8_DATA_Val << ASRC_CH_CONF_CHUNK1_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK1_16_DATA           (ASRC_CH_CONF_CHUNK1_16_DATA_Val << ASRC_CH_CONF_CHUNK1_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK2_Pos               _UINT32_(24)                                         /* (ASRC_CH_CONF) DMA DSP 2 CHUNK Size Position */
+#define ASRC_CH_CONF_CHUNK2_Msk               (_UINT32_(0x7) << ASRC_CH_CONF_CHUNK2_Pos)           /* (ASRC_CH_CONF) DMA DSP 2 CHUNK Size Mask */
+#define ASRC_CH_CONF_CHUNK2(value)            (ASRC_CH_CONF_CHUNK2_Msk & (_UINT32_(value) << ASRC_CH_CONF_CHUNK2_Pos)) /* Assigment of value for CHUNK2 in the ASRC_CH_CONF register */
+#define   ASRC_CH_CONF_CHUNK2_1_DATA_Val      _UINT32_(0x0)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK2_2_DATA_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK2_4_DATA_Val      _UINT32_(0x2)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK2_8_DATA_Val      _UINT32_(0x3)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK2_16_DATA_Val     _UINT32_(0x4)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event.  */
+#define ASRC_CH_CONF_CHUNK2_1_DATA            (ASRC_CH_CONF_CHUNK2_1_DATA_Val << ASRC_CH_CONF_CHUNK2_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK2_2_DATA            (ASRC_CH_CONF_CHUNK2_2_DATA_Val << ASRC_CH_CONF_CHUNK2_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK2_4_DATA            (ASRC_CH_CONF_CHUNK2_4_DATA_Val << ASRC_CH_CONF_CHUNK2_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK2_8_DATA            (ASRC_CH_CONF_CHUNK2_8_DATA_Val << ASRC_CH_CONF_CHUNK2_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK2_16_DATA           (ASRC_CH_CONF_CHUNK2_16_DATA_Val << ASRC_CH_CONF_CHUNK2_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK3_Pos               _UINT32_(28)                                         /* (ASRC_CH_CONF) DMA DSP 3 CHUNK Size Position */
+#define ASRC_CH_CONF_CHUNK3_Msk               (_UINT32_(0x7) << ASRC_CH_CONF_CHUNK3_Pos)           /* (ASRC_CH_CONF) DMA DSP 3 CHUNK Size Mask */
+#define ASRC_CH_CONF_CHUNK3(value)            (ASRC_CH_CONF_CHUNK3_Msk & (_UINT32_(value) << ASRC_CH_CONF_CHUNK3_Pos)) /* Assigment of value for CHUNK3 in the ASRC_CH_CONF register */
+#define   ASRC_CH_CONF_CHUNK3_1_DATA_Val      _UINT32_(0x0)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK3_2_DATA_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK3_4_DATA_Val      _UINT32_(0x2)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK3_8_DATA_Val      _UINT32_(0x3)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event.  */
+#define   ASRC_CH_CONF_CHUNK3_16_DATA_Val     _UINT32_(0x4)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event.  */
+#define ASRC_CH_CONF_CHUNK3_1_DATA            (ASRC_CH_CONF_CHUNK3_1_DATA_Val << ASRC_CH_CONF_CHUNK3_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK3_2_DATA            (ASRC_CH_CONF_CHUNK3_2_DATA_Val << ASRC_CH_CONF_CHUNK3_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK3_4_DATA            (ASRC_CH_CONF_CHUNK3_4_DATA_Val << ASRC_CH_CONF_CHUNK3_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK3_8_DATA            (ASRC_CH_CONF_CHUNK3_8_DATA_Val << ASRC_CH_CONF_CHUNK3_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_CHUNK3_16_DATA           (ASRC_CH_CONF_CHUNK3_16_DATA_Val << ASRC_CH_CONF_CHUNK3_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event. Position  */
+#define ASRC_CH_CONF_Msk                      _UINT32_(0x77770F77)                                 /* (ASRC_CH_CONF) Register Mask  */
+
+#define ASRC_CH_CONF_MONO_Pos                 _UINT32_(8)                                          /* (ASRC_CH_CONF Position) DSP x Mono Operating Mode */
+#define ASRC_CH_CONF_MONO_Msk                 (_UINT32_(0xF) << ASRC_CH_CONF_MONO_Pos)             /* (ASRC_CH_CONF Mask) MONO */
+#define ASRC_CH_CONF_MONO(value)              (ASRC_CH_CONF_MONO_Msk & (_UINT32_(value) << ASRC_CH_CONF_MONO_Pos)) 
 
 /* -------- ASRC_CR : (ASRC Offset: 0x00) ( /W 32) Control Register -------- */
 #define ASRC_CR_SWRST_Pos                     _UINT32_(0)                                          /* (ASRC_CR) Software Reset Position */
@@ -37,6 +152,317 @@
 #define ASRC_CR_SWRST_0                       (ASRC_CR_SWRST_0_Val << ASRC_CR_SWRST_Pos)           /* (ASRC_CR) No effect. Position  */
 #define ASRC_CR_SWRST_1                       (ASRC_CR_SWRST_1_Val << ASRC_CR_SWRST_Pos)           /* (ASRC_CR) Resets the ASRC. Position  */
 #define ASRC_CR_Msk                           _UINT32_(0x00000001)                                 /* (ASRC_CR) Register Mask  */
+
+
+/* -------- ASRC_ESR : (ASRC Offset: 0xA8) ( R/ 32) Error Status Register -------- */
+#define ASRC_ESR_RESETVALUE                   _UINT32_(0x00)                                       /*  (ASRC_ESR) Error Status Register  Reset Value */
+
+#define ASRC_ESR_INCFGERR_Pos                 _UINT32_(0)                                          /* (ASRC_ESR) Input Configuration Error Position */
+#define ASRC_ESR_INCFGERR_Msk                 (_UINT32_(0x1F) << ASRC_ESR_INCFGERR_Pos)            /* (ASRC_ESR) Input Configuration Error Mask */
+#define ASRC_ESR_INCFGERR(value)              (ASRC_ESR_INCFGERR_Msk & (_UINT32_(value) << ASRC_ESR_INCFGERR_Pos)) /* Assigment of value for INCFGERR in the ASRC_ESR register */
+#define   ASRC_ESR_INCFGERR_OUTCFG_OK_Val     _UINT32_(0x0)                                        /* (ASRC_ESR) Correct configuration of ASRC_MR, ASRC_VBPS_OUT, ASRC_CH_CONF.  */
+#define   ASRC_ESR_INCFGERR_OP0_D0_CHK16_8M_Val _UINT32_(0x1)                                        /* (ASRC_ESR) Channel operating mode 0, DSP0: CHUNK0=16 or CHUNK0=8 and MONO0=1 is not supported.  */
+#define   ASRC_ESR_INCFGERR_OP0_D1_CHK16_8M_Val _UINT32_(0x2)                                        /* (ASRC_ESR) Channel operating mode 0, DSP1: CHUNK1=16 or CHUNK1=8 and MONO1=1 is not supported.  */
+#define   ASRC_ESR_INCFGERR_OP0_D2_CHK16_8M_Val _UINT32_(0x3)                                        /* (ASRC_ESR) Channel operating mode 0, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported.  */
+#define   ASRC_ESR_INCFGERR_OP0_D3_CHK16_8M_Val _UINT32_(0x4)                                        /* (ASRC_ESR) Channel operating mode 0, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported.  */
+#define   ASRC_ESR_INCFGERR_OP1_D01_EN_Val    _UINT32_(0x5)                                        /* (ASRC_ESR) Channel operating mode 1, DSP0/1: enable configuration is not correct (1 DSP is disabled)  */
+#define   ASRC_ESR_INCFGERR_OP1_D01_M_Val     _UINT32_(0x6)                                        /* (ASRC_ESR) Channel operating mode 1, DSP0/1: MONO0=1, MONO1=0 is not supported.  */
+#define   ASRC_ESR_INCFGERR_OP1_D01_CHK16_Val _UINT32_(0x7)                                        /* (ASRC_ESR) Channel operating mode 1, DSP0/1: CHUNK0=16 is not supported.  */
+#define   ASRC_ESR_INCFGERR_OP1_D2_CHK16_8M_Val _UINT32_(0x8)                                        /* (ASRC_ESR) Channel operating mode 1, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported.  */
+#define   ASRC_ESR_INCFGERR_OP1_D3_CHK16_8M_Val _UINT32_(0x9)                                        /* (ASRC_ESR) Channel operating mode 1, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported.  */
+#define   ASRC_ESR_INCFGERR_OP2_D01_EN_Val    _UINT32_(0xA)                                        /* (ASRC_ESR) Channel operating mode 2, DSP0/1: enable configuration is not correct (1 DSP is disabled)  */
+#define   ASRC_ESR_INCFGERR_OP2_D01_M_Val     _UINT32_(0xB)                                        /* (ASRC_ESR) Channel operating mode 2, DSP0/1: MONO0=1, MONO1=0 is not supported.  */
+#define   ASRC_ESR_INCFGERR_OP2_D01_CHK16_Val _UINT32_(0xC)                                        /* (ASRC_ESR) Channel operating mode 2, DSP0/1: CHUNK0=16 is not supported.  */
+#define   ASRC_ESR_INCFGERR_OP2_D23_EN_Val    _UINT32_(0xD)                                        /* (ASRC_ESR) Channel operating mode 2, DSP2/3: enable configuration is not correct (1 DSP is disabled)  */
+#define   ASRC_ESR_INCFGERR_OP2_D23_M_Val     _UINT32_(0xE)                                        /* (ASRC_ESR) Channel operating mode 2, DSP2/3: MONO2=1, MONO3=0 is not supported.  */
+#define   ASRC_ESR_INCFGERR_OP2_D23_CHK16_Val _UINT32_(0xF)                                        /* (ASRC_ESR) Channel operating mode 2, DSP2/3: CHUNK2=16 is not supported.  */
+#define   ASRC_ESR_INCFGERR_OP3_D012_EN_Val   _UINT32_(0x10)                                       /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: enable configuration is not correct (at least 1 DSP is disabled)  */
+#define   ASRC_ESR_INCFGERR_OP3_D012_M_Val    _UINT32_(0x11)                                       /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 is not supported).  */
+#define   ASRC_ESR_INCFGERR_OP3_D012_CHK16_Val _UINT32_(0x12)                                       /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: CHUNK0=16 is not supported.  */
+#define   ASRC_ESR_INCFGERR_OP3_D3_CHK16_8M_Val _UINT32_(0x13)                                       /* (ASRC_ESR) Channel operating mode 3, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3 is not supported.  */
+#define   ASRC_ESR_INCFGERR_OP4_D0123_EN_Val  _UINT32_(0x14)                                       /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: enable configuration is not correct (at least 1 DSP is disabled)  */
+#define   ASRC_ESR_INCFGERR_OP4_D0123_M_Val   _UINT32_(0x15)                                       /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 or MONO3=0 is not supported).  */
+#define ASRC_ESR_INCFGERR_OUTCFG_OK           (ASRC_ESR_INCFGERR_OUTCFG_OK_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Correct configuration of ASRC_MR, ASRC_VBPS_OUT, ASRC_CH_CONF. Position  */
+#define ASRC_ESR_INCFGERR_OP0_D0_CHK16_8M     (ASRC_ESR_INCFGERR_OP0_D0_CHK16_8M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP0: CHUNK0=16 or CHUNK0=8 and MONO0=1 is not supported. Position  */
+#define ASRC_ESR_INCFGERR_OP0_D1_CHK16_8M     (ASRC_ESR_INCFGERR_OP0_D1_CHK16_8M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP1: CHUNK1=16 or CHUNK1=8 and MONO1=1 is not supported. Position  */
+#define ASRC_ESR_INCFGERR_OP0_D2_CHK16_8M     (ASRC_ESR_INCFGERR_OP0_D2_CHK16_8M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported. Position  */
+#define ASRC_ESR_INCFGERR_OP0_D3_CHK16_8M     (ASRC_ESR_INCFGERR_OP0_D3_CHK16_8M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported. Position  */
+#define ASRC_ESR_INCFGERR_OP1_D01_EN          (ASRC_ESR_INCFGERR_OP1_D01_EN_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP0/1: enable configuration is not correct (1 DSP is disabled) Position  */
+#define ASRC_ESR_INCFGERR_OP1_D01_M           (ASRC_ESR_INCFGERR_OP1_D01_M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP0/1: MONO0=1, MONO1=0 is not supported. Position  */
+#define ASRC_ESR_INCFGERR_OP1_D01_CHK16       (ASRC_ESR_INCFGERR_OP1_D01_CHK16_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP0/1: CHUNK0=16 is not supported. Position  */
+#define ASRC_ESR_INCFGERR_OP1_D2_CHK16_8M     (ASRC_ESR_INCFGERR_OP1_D2_CHK16_8M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported. Position  */
+#define ASRC_ESR_INCFGERR_OP1_D3_CHK16_8M     (ASRC_ESR_INCFGERR_OP1_D3_CHK16_8M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported. Position  */
+#define ASRC_ESR_INCFGERR_OP2_D01_EN          (ASRC_ESR_INCFGERR_OP2_D01_EN_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP0/1: enable configuration is not correct (1 DSP is disabled) Position  */
+#define ASRC_ESR_INCFGERR_OP2_D01_M           (ASRC_ESR_INCFGERR_OP2_D01_M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP0/1: MONO0=1, MONO1=0 is not supported. Position  */
+#define ASRC_ESR_INCFGERR_OP2_D01_CHK16       (ASRC_ESR_INCFGERR_OP2_D01_CHK16_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP0/1: CHUNK0=16 is not supported. Position  */
+#define ASRC_ESR_INCFGERR_OP2_D23_EN          (ASRC_ESR_INCFGERR_OP2_D23_EN_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP2/3: enable configuration is not correct (1 DSP is disabled) Position  */
+#define ASRC_ESR_INCFGERR_OP2_D23_M           (ASRC_ESR_INCFGERR_OP2_D23_M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP2/3: MONO2=1, MONO3=0 is not supported. Position  */
+#define ASRC_ESR_INCFGERR_OP2_D23_CHK16       (ASRC_ESR_INCFGERR_OP2_D23_CHK16_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP2/3: CHUNK2=16 is not supported. Position  */
+#define ASRC_ESR_INCFGERR_OP3_D012_EN         (ASRC_ESR_INCFGERR_OP3_D012_EN_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: enable configuration is not correct (at least 1 DSP is disabled) Position  */
+#define ASRC_ESR_INCFGERR_OP3_D012_M          (ASRC_ESR_INCFGERR_OP3_D012_M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 is not supported). Position  */
+#define ASRC_ESR_INCFGERR_OP3_D012_CHK16      (ASRC_ESR_INCFGERR_OP3_D012_CHK16_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: CHUNK0=16 is not supported. Position  */
+#define ASRC_ESR_INCFGERR_OP3_D3_CHK16_8M     (ASRC_ESR_INCFGERR_OP3_D3_CHK16_8M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3 is not supported. Position  */
+#define ASRC_ESR_INCFGERR_OP4_D0123_EN        (ASRC_ESR_INCFGERR_OP4_D0123_EN_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: enable configuration is not correct (at least 1 DSP is disabled) Position  */
+#define ASRC_ESR_INCFGERR_OP4_D0123_M         (ASRC_ESR_INCFGERR_OP4_D0123_M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 or MONO3=0 is not supported). Position  */
+#define ASRC_ESR_OUTCFGERR_Pos                _UINT32_(8)                                          /* (ASRC_ESR) Output Configuration Error Position */
+#define ASRC_ESR_OUTCFGERR_Msk                (_UINT32_(0x1F) << ASRC_ESR_OUTCFGERR_Pos)           /* (ASRC_ESR) Output Configuration Error Mask */
+#define ASRC_ESR_OUTCFGERR(value)             (ASRC_ESR_OUTCFGERR_Msk & (_UINT32_(value) << ASRC_ESR_OUTCFGERR_Pos)) /* Assigment of value for OUTCFGERR in the ASRC_ESR register */
+#define   ASRC_ESR_OUTCFGERR_OUTCFG_OK_Val    _UINT32_(0x0)                                        /* (ASRC_ESR) Correct configuration of ASRC_MR, ASRC_VBPS_OUT, ASRC_CH_CONF.  */
+#define   ASRC_ESR_OUTCFGERR_OP0_D0_CHK16_8M_Val _UINT32_(0x1)                                        /* (ASRC_ESR) Channel operating mode 0, DSP0: CHUNK0=16 or CHUNK0=8 and MONO0=1 is not supported.  */
+#define   ASRC_ESR_OUTCFGERR_OP0_D1_CHK16_8M_Val _UINT32_(0x2)                                        /* (ASRC_ESR) Channel operating mode 0, DSP1: CHUNK1=16 or CHUNK1=8 and MONO1=1 is not supported.  */
+#define   ASRC_ESR_OUTCFGERR_OP0_D2_CHK16_8M_Val _UINT32_(0x3)                                        /* (ASRC_ESR) Channel operating mode 0, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported.  */
+#define   ASRC_ESR_OUTCFGERR_OP0_D3_CHK16_8M_Val _UINT32_(0x4)                                        /* (ASRC_ESR) Channel operating mode 0, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported.  */
+#define   ASRC_ESR_OUTCFGERR_OP1_D01_EN_Val   _UINT32_(0x5)                                        /* (ASRC_ESR) Channel operating mode 1, DSP0/1: enable configuration is not correct (1 DSP is disabled)  */
+#define   ASRC_ESR_OUTCFGERR_OP1_D01_M_Val    _UINT32_(0x6)                                        /* (ASRC_ESR) Channel operating mode 1, DSP0/1: MONO0=1, MONO1=0 is not supported.  */
+#define   ASRC_ESR_OUTCFGERR_OP1_D01_CHK16_Val _UINT32_(0x7)                                        /* (ASRC_ESR) Channel operating mode 1, DSP0/1: CHUNK0=16 is not supported.  */
+#define   ASRC_ESR_OUTCFGERR_OP1_D2_CHK16_8M_Val _UINT32_(0x8)                                        /* (ASRC_ESR) Channel operating mode 1, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported.  */
+#define   ASRC_ESR_OUTCFGERR_OP1_D3_CHK16_8M_Val _UINT32_(0x9)                                        /* (ASRC_ESR) Channel operating mode 1, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported.  */
+#define   ASRC_ESR_OUTCFGERR_OP2_D01_EN_Val   _UINT32_(0xA)                                        /* (ASRC_ESR) Channel operating mode 2, DSP0/1: enable configuration is not correct (1 DSP is disabled)  */
+#define   ASRC_ESR_OUTCFGERR_OP2_D01_M_Val    _UINT32_(0xB)                                        /* (ASRC_ESR) Channel operating mode 2, DSP0/1: MONO0=1, MONO1=0 is not supported.  */
+#define   ASRC_ESR_OUTCFGERR_OP2_D01_CHK16_Val _UINT32_(0xC)                                        /* (ASRC_ESR) Channel operating mode 2, DSP0/1: CHUNK0=16 is not supported.  */
+#define   ASRC_ESR_OUTCFGERR_OP2_D23_EN_Val   _UINT32_(0xD)                                        /* (ASRC_ESR) Channel operating mode 2, DSP2/3: enable configuration is not correct (1 DSP is disabled)  */
+#define   ASRC_ESR_OUTCFGERR_OP2_D23_M_Val    _UINT32_(0xE)                                        /* (ASRC_ESR) Channel operating mode 2, DSP2/3: MONO2=1, MONO3=0 is not supported.  */
+#define   ASRC_ESR_OUTCFGERR_OP2_D23_CHK16_Val _UINT32_(0xF)                                        /* (ASRC_ESR) Channel operating mode 2, DSP2/3: CHUNK2=16 is not supported.  */
+#define   ASRC_ESR_OUTCFGERR_OP3_D012_EN_Val  _UINT32_(0x10)                                       /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: enable configuration is not correct (at least 1 DSP is disabled)  */
+#define   ASRC_ESR_OUTCFGERR_OP3_D012_M_Val   _UINT32_(0x11)                                       /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 is not supported).  */
+#define   ASRC_ESR_OUTCFGERR_OP3_D012_CHK16_Val _UINT32_(0x12)                                       /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: CHUNK0=16 is not supported.  */
+#define   ASRC_ESR_OUTCFGERR_OP3_D3_CHK16_8M_Val _UINT32_(0x13)                                       /* (ASRC_ESR) Channel operating mode 3, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3 is not supported.  */
+#define   ASRC_ESR_OUTCFGERR_OP4_D0123_EN_Val _UINT32_(0x14)                                       /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: enable configuration is not correct (at least 1 DSP is disabled)  */
+#define   ASRC_ESR_OUTCFGERR_OP4_D0123_M_Val  _UINT32_(0x15)                                       /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 or MONO3=0 is not supported).  */
+#define ASRC_ESR_OUTCFGERR_OUTCFG_OK          (ASRC_ESR_OUTCFGERR_OUTCFG_OK_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Correct configuration of ASRC_MR, ASRC_VBPS_OUT, ASRC_CH_CONF. Position  */
+#define ASRC_ESR_OUTCFGERR_OP0_D0_CHK16_8M    (ASRC_ESR_OUTCFGERR_OP0_D0_CHK16_8M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP0: CHUNK0=16 or CHUNK0=8 and MONO0=1 is not supported. Position  */
+#define ASRC_ESR_OUTCFGERR_OP0_D1_CHK16_8M    (ASRC_ESR_OUTCFGERR_OP0_D1_CHK16_8M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP1: CHUNK1=16 or CHUNK1=8 and MONO1=1 is not supported. Position  */
+#define ASRC_ESR_OUTCFGERR_OP0_D2_CHK16_8M    (ASRC_ESR_OUTCFGERR_OP0_D2_CHK16_8M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported. Position  */
+#define ASRC_ESR_OUTCFGERR_OP0_D3_CHK16_8M    (ASRC_ESR_OUTCFGERR_OP0_D3_CHK16_8M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported. Position  */
+#define ASRC_ESR_OUTCFGERR_OP1_D01_EN         (ASRC_ESR_OUTCFGERR_OP1_D01_EN_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP0/1: enable configuration is not correct (1 DSP is disabled) Position  */
+#define ASRC_ESR_OUTCFGERR_OP1_D01_M          (ASRC_ESR_OUTCFGERR_OP1_D01_M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP0/1: MONO0=1, MONO1=0 is not supported. Position  */
+#define ASRC_ESR_OUTCFGERR_OP1_D01_CHK16      (ASRC_ESR_OUTCFGERR_OP1_D01_CHK16_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP0/1: CHUNK0=16 is not supported. Position  */
+#define ASRC_ESR_OUTCFGERR_OP1_D2_CHK16_8M    (ASRC_ESR_OUTCFGERR_OP1_D2_CHK16_8M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported. Position  */
+#define ASRC_ESR_OUTCFGERR_OP1_D3_CHK16_8M    (ASRC_ESR_OUTCFGERR_OP1_D3_CHK16_8M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported. Position  */
+#define ASRC_ESR_OUTCFGERR_OP2_D01_EN         (ASRC_ESR_OUTCFGERR_OP2_D01_EN_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP0/1: enable configuration is not correct (1 DSP is disabled) Position  */
+#define ASRC_ESR_OUTCFGERR_OP2_D01_M          (ASRC_ESR_OUTCFGERR_OP2_D01_M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP0/1: MONO0=1, MONO1=0 is not supported. Position  */
+#define ASRC_ESR_OUTCFGERR_OP2_D01_CHK16      (ASRC_ESR_OUTCFGERR_OP2_D01_CHK16_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP0/1: CHUNK0=16 is not supported. Position  */
+#define ASRC_ESR_OUTCFGERR_OP2_D23_EN         (ASRC_ESR_OUTCFGERR_OP2_D23_EN_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP2/3: enable configuration is not correct (1 DSP is disabled) Position  */
+#define ASRC_ESR_OUTCFGERR_OP2_D23_M          (ASRC_ESR_OUTCFGERR_OP2_D23_M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP2/3: MONO2=1, MONO3=0 is not supported. Position  */
+#define ASRC_ESR_OUTCFGERR_OP2_D23_CHK16      (ASRC_ESR_OUTCFGERR_OP2_D23_CHK16_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP2/3: CHUNK2=16 is not supported. Position  */
+#define ASRC_ESR_OUTCFGERR_OP3_D012_EN        (ASRC_ESR_OUTCFGERR_OP3_D012_EN_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: enable configuration is not correct (at least 1 DSP is disabled) Position  */
+#define ASRC_ESR_OUTCFGERR_OP3_D012_M         (ASRC_ESR_OUTCFGERR_OP3_D012_M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 is not supported). Position  */
+#define ASRC_ESR_OUTCFGERR_OP3_D012_CHK16     (ASRC_ESR_OUTCFGERR_OP3_D012_CHK16_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: CHUNK0=16 is not supported. Position  */
+#define ASRC_ESR_OUTCFGERR_OP3_D3_CHK16_8M    (ASRC_ESR_OUTCFGERR_OP3_D3_CHK16_8M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3 is not supported. Position  */
+#define ASRC_ESR_OUTCFGERR_OP4_D0123_EN       (ASRC_ESR_OUTCFGERR_OP4_D0123_EN_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: enable configuration is not correct (at least 1 DSP is disabled) Position  */
+#define ASRC_ESR_OUTCFGERR_OP4_D0123_M        (ASRC_ESR_OUTCFGERR_OP4_D0123_M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 or MONO3=0 is not supported). Position  */
+#define ASRC_ESR_DERR_Pos                     _UINT32_(15)                                         /* (ASRC_ESR) DSP Overflow Error Position */
+#define ASRC_ESR_DERR_Msk                     (_UINT32_(0x1) << ASRC_ESR_DERR_Pos)                 /* (ASRC_ESR) DSP Overflow Error Mask */
+#define ASRC_ESR_DERR(value)                  (ASRC_ESR_DERR_Msk & (_UINT32_(value) << ASRC_ESR_DERR_Pos)) /* Assigment of value for DERR in the ASRC_ESR register */
+#define   ASRC_ESR_DERR_0_Val                 _UINT32_(0x0)                                        /* (ASRC_ESR) No DSP overflow error detected.  */
+#define   ASRC_ESR_DERR_1_Val                 _UINT32_(0x1)                                        /* (ASRC_ESR) The sampling frequency overpasses the value allowed by the configuration.  */
+#define ASRC_ESR_DERR_0                       (ASRC_ESR_DERR_0_Val << ASRC_ESR_DERR_Pos)           /* (ASRC_ESR) No DSP overflow error detected. Position  */
+#define ASRC_ESR_DERR_1                       (ASRC_ESR_DERR_1_Val << ASRC_ESR_DERR_Pos)           /* (ASRC_ESR) The sampling frequency overpasses the value allowed by the configuration. Position  */
+#define ASRC_ESR_Msk                          _UINT32_(0x00009F1F)                                 /* (ASRC_ESR) Register Mask  */
+
+
+/* -------- ASRC_IDR : (ASRC Offset: 0x78) ( /W 32) Interrupt Disable Register x -------- */
+#define ASRC_IDR_RXRDY_Pos                    _UINT32_(0)                                          /* (ASRC_IDR) Receive Ready Interrupt Disable Position */
+#define ASRC_IDR_RXRDY_Msk                    (_UINT32_(0x1) << ASRC_IDR_RXRDY_Pos)                /* (ASRC_IDR) Receive Ready Interrupt Disable Mask */
+#define ASRC_IDR_RXRDY(value)                 (ASRC_IDR_RXRDY_Msk & (_UINT32_(value) << ASRC_IDR_RXRDY_Pos)) /* Assigment of value for RXRDY in the ASRC_IDR register */
+#define ASRC_IDR_RXEMPTY_Pos                  _UINT32_(1)                                          /* (ASRC_IDR) Receive FIFO Empty Interrupt Disable Position */
+#define ASRC_IDR_RXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_IDR_RXEMPTY_Pos)              /* (ASRC_IDR) Receive FIFO Empty Interrupt Disable Mask */
+#define ASRC_IDR_RXEMPTY(value)               (ASRC_IDR_RXEMPTY_Msk & (_UINT32_(value) << ASRC_IDR_RXEMPTY_Pos)) /* Assigment of value for RXEMPTY in the ASRC_IDR register */
+#define ASRC_IDR_RXFULL_Pos                   _UINT32_(2)                                          /* (ASRC_IDR) Receive FIFO Full Interrupt Disable Position */
+#define ASRC_IDR_RXFULL_Msk                   (_UINT32_(0x1) << ASRC_IDR_RXFULL_Pos)               /* (ASRC_IDR) Receive FIFO Full Interrupt Disable Mask */
+#define ASRC_IDR_RXFULL(value)                (ASRC_IDR_RXFULL_Msk & (_UINT32_(value) << ASRC_IDR_RXFULL_Pos)) /* Assigment of value for RXFULL in the ASRC_IDR register */
+#define ASRC_IDR_RXCHUNK_Pos                  _UINT32_(3)                                          /* (ASRC_IDR) Receive FIFO Chunk Interrupt Disable Position */
+#define ASRC_IDR_RXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_IDR_RXCHUNK_Pos)              /* (ASRC_IDR) Receive FIFO Chunk Interrupt Disable Mask */
+#define ASRC_IDR_RXCHUNK(value)               (ASRC_IDR_RXCHUNK_Msk & (_UINT32_(value) << ASRC_IDR_RXCHUNK_Pos)) /* Assigment of value for RXCHUNK in the ASRC_IDR register */
+#define ASRC_IDR_RXUDR_Pos                    _UINT32_(4)                                          /* (ASRC_IDR) Receive Under Flow Interrupt Disable Position */
+#define ASRC_IDR_RXUDR_Msk                    (_UINT32_(0x1) << ASRC_IDR_RXUDR_Pos)                /* (ASRC_IDR) Receive Under Flow Interrupt Disable Mask */
+#define ASRC_IDR_RXUDR(value)                 (ASRC_IDR_RXUDR_Msk & (_UINT32_(value) << ASRC_IDR_RXUDR_Pos)) /* Assigment of value for RXUDR in the ASRC_IDR register */
+#define ASRC_IDR_RXOVR_Pos                    _UINT32_(5)                                          /* (ASRC_IDR) Receive Over Flow Interrupt Disable Position */
+#define ASRC_IDR_RXOVR_Msk                    (_UINT32_(0x1) << ASRC_IDR_RXOVR_Pos)                /* (ASRC_IDR) Receive Over Flow Interrupt Disable Mask */
+#define ASRC_IDR_RXOVR(value)                 (ASRC_IDR_RXOVR_Msk & (_UINT32_(value) << ASRC_IDR_RXOVR_Pos)) /* Assigment of value for RXOVR in the ASRC_IDR register */
+#define ASRC_IDR_TXRDY_Pos                    _UINT32_(8)                                          /* (ASRC_IDR) Transmit Ready Interrupt Disable Position */
+#define ASRC_IDR_TXRDY_Msk                    (_UINT32_(0x1) << ASRC_IDR_TXRDY_Pos)                /* (ASRC_IDR) Transmit Ready Interrupt Disable Mask */
+#define ASRC_IDR_TXRDY(value)                 (ASRC_IDR_TXRDY_Msk & (_UINT32_(value) << ASRC_IDR_TXRDY_Pos)) /* Assigment of value for TXRDY in the ASRC_IDR register */
+#define ASRC_IDR_TXEMPTY_Pos                  _UINT32_(9)                                          /* (ASRC_IDR) Transmit FIFO Empty Interrupt Disable Position */
+#define ASRC_IDR_TXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_IDR_TXEMPTY_Pos)              /* (ASRC_IDR) Transmit FIFO Empty Interrupt Disable Mask */
+#define ASRC_IDR_TXEMPTY(value)               (ASRC_IDR_TXEMPTY_Msk & (_UINT32_(value) << ASRC_IDR_TXEMPTY_Pos)) /* Assigment of value for TXEMPTY in the ASRC_IDR register */
+#define ASRC_IDR_TXFULL_Pos                   _UINT32_(10)                                         /* (ASRC_IDR) Transmit FIFO Full Interrupt Disable Position */
+#define ASRC_IDR_TXFULL_Msk                   (_UINT32_(0x1) << ASRC_IDR_TXFULL_Pos)               /* (ASRC_IDR) Transmit FIFO Full Interrupt Disable Mask */
+#define ASRC_IDR_TXFULL(value)                (ASRC_IDR_TXFULL_Msk & (_UINT32_(value) << ASRC_IDR_TXFULL_Pos)) /* Assigment of value for TXFULL in the ASRC_IDR register */
+#define ASRC_IDR_TXCHUNK_Pos                  _UINT32_(11)                                         /* (ASRC_IDR) Transmit FIFO Chunk Interrupt Disable Position */
+#define ASRC_IDR_TXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_IDR_TXCHUNK_Pos)              /* (ASRC_IDR) Transmit FIFO Chunk Interrupt Disable Mask */
+#define ASRC_IDR_TXCHUNK(value)               (ASRC_IDR_TXCHUNK_Msk & (_UINT32_(value) << ASRC_IDR_TXCHUNK_Pos)) /* Assigment of value for TXCHUNK in the ASRC_IDR register */
+#define ASRC_IDR_TXUDR_Pos                    _UINT32_(12)                                         /* (ASRC_IDR) Transmit Under Flow Interrupt Disable Position */
+#define ASRC_IDR_TXUDR_Msk                    (_UINT32_(0x1) << ASRC_IDR_TXUDR_Pos)                /* (ASRC_IDR) Transmit Under Flow Interrupt Disable Mask */
+#define ASRC_IDR_TXUDR(value)                 (ASRC_IDR_TXUDR_Msk & (_UINT32_(value) << ASRC_IDR_TXUDR_Pos)) /* Assigment of value for TXUDR in the ASRC_IDR register */
+#define ASRC_IDR_TXOVR_Pos                    _UINT32_(13)                                         /* (ASRC_IDR) Transmit Over Flow Interrupt Disable Position */
+#define ASRC_IDR_TXOVR_Msk                    (_UINT32_(0x1) << ASRC_IDR_TXOVR_Pos)                /* (ASRC_IDR) Transmit Over Flow Interrupt Disable Mask */
+#define ASRC_IDR_TXOVR(value)                 (ASRC_IDR_TXOVR_Msk & (_UINT32_(value) << ASRC_IDR_TXOVR_Pos)) /* Assigment of value for TXOVR in the ASRC_IDR register */
+#define ASRC_IDR_SECE_Pos                     _UINT32_(16)                                         /* (ASRC_IDR) Security/Safety Report Disable Position */
+#define ASRC_IDR_SECE_Msk                     (_UINT32_(0x1) << ASRC_IDR_SECE_Pos)                 /* (ASRC_IDR) Security/Safety Report Disable Mask */
+#define ASRC_IDR_SECE(value)                  (ASRC_IDR_SECE_Msk & (_UINT32_(value) << ASRC_IDR_SECE_Pos)) /* Assigment of value for SECE in the ASRC_IDR register */
+#define ASRC_IDR_LOCK_Pos                     _UINT32_(30)                                         /* (ASRC_IDR) DPLL locked Interrupt Disable Position */
+#define ASRC_IDR_LOCK_Msk                     (_UINT32_(0x1) << ASRC_IDR_LOCK_Pos)                 /* (ASRC_IDR) DPLL locked Interrupt Disable Mask */
+#define ASRC_IDR_LOCK(value)                  (ASRC_IDR_LOCK_Msk & (_UINT32_(value) << ASRC_IDR_LOCK_Pos)) /* Assigment of value for LOCK in the ASRC_IDR register */
+#define ASRC_IDR_UNLOCK_Pos                   _UINT32_(31)                                         /* (ASRC_IDR) DPLL Unlocked Interrupt Disable Position */
+#define ASRC_IDR_UNLOCK_Msk                   (_UINT32_(0x1) << ASRC_IDR_UNLOCK_Pos)               /* (ASRC_IDR) DPLL Unlocked Interrupt Disable Mask */
+#define ASRC_IDR_UNLOCK(value)                (ASRC_IDR_UNLOCK_Msk & (_UINT32_(value) << ASRC_IDR_UNLOCK_Pos)) /* Assigment of value for UNLOCK in the ASRC_IDR register */
+#define ASRC_IDR_Msk                          _UINT32_(0xC0013F3F)                                 /* (ASRC_IDR) Register Mask  */
+
+
+/* -------- ASRC_IER : (ASRC Offset: 0x68) ( /W 32) Interrupt Enable Register x -------- */
+#define ASRC_IER_RXRDY_Pos                    _UINT32_(0)                                          /* (ASRC_IER) Receive Ready Interrupt Enable Position */
+#define ASRC_IER_RXRDY_Msk                    (_UINT32_(0x1) << ASRC_IER_RXRDY_Pos)                /* (ASRC_IER) Receive Ready Interrupt Enable Mask */
+#define ASRC_IER_RXRDY(value)                 (ASRC_IER_RXRDY_Msk & (_UINT32_(value) << ASRC_IER_RXRDY_Pos)) /* Assigment of value for RXRDY in the ASRC_IER register */
+#define ASRC_IER_RXEMPTY_Pos                  _UINT32_(1)                                          /* (ASRC_IER) Receive FIFO Empty Interrupt Enable Position */
+#define ASRC_IER_RXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_IER_RXEMPTY_Pos)              /* (ASRC_IER) Receive FIFO Empty Interrupt Enable Mask */
+#define ASRC_IER_RXEMPTY(value)               (ASRC_IER_RXEMPTY_Msk & (_UINT32_(value) << ASRC_IER_RXEMPTY_Pos)) /* Assigment of value for RXEMPTY in the ASRC_IER register */
+#define ASRC_IER_RXFULL_Pos                   _UINT32_(2)                                          /* (ASRC_IER) Receive FIFO Full Interrupt Enable Position */
+#define ASRC_IER_RXFULL_Msk                   (_UINT32_(0x1) << ASRC_IER_RXFULL_Pos)               /* (ASRC_IER) Receive FIFO Full Interrupt Enable Mask */
+#define ASRC_IER_RXFULL(value)                (ASRC_IER_RXFULL_Msk & (_UINT32_(value) << ASRC_IER_RXFULL_Pos)) /* Assigment of value for RXFULL in the ASRC_IER register */
+#define ASRC_IER_RXCHUNK_Pos                  _UINT32_(3)                                          /* (ASRC_IER) Receive FIFO Chunk Interrupt Enable Position */
+#define ASRC_IER_RXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_IER_RXCHUNK_Pos)              /* (ASRC_IER) Receive FIFO Chunk Interrupt Enable Mask */
+#define ASRC_IER_RXCHUNK(value)               (ASRC_IER_RXCHUNK_Msk & (_UINT32_(value) << ASRC_IER_RXCHUNK_Pos)) /* Assigment of value for RXCHUNK in the ASRC_IER register */
+#define ASRC_IER_RXUDR_Pos                    _UINT32_(4)                                          /* (ASRC_IER) Receive Under Flow Interrupt Enable Position */
+#define ASRC_IER_RXUDR_Msk                    (_UINT32_(0x1) << ASRC_IER_RXUDR_Pos)                /* (ASRC_IER) Receive Under Flow Interrupt Enable Mask */
+#define ASRC_IER_RXUDR(value)                 (ASRC_IER_RXUDR_Msk & (_UINT32_(value) << ASRC_IER_RXUDR_Pos)) /* Assigment of value for RXUDR in the ASRC_IER register */
+#define ASRC_IER_RXOVR_Pos                    _UINT32_(5)                                          /* (ASRC_IER) Receive Over Flow Interrupt Enable Position */
+#define ASRC_IER_RXOVR_Msk                    (_UINT32_(0x1) << ASRC_IER_RXOVR_Pos)                /* (ASRC_IER) Receive Over Flow Interrupt Enable Mask */
+#define ASRC_IER_RXOVR(value)                 (ASRC_IER_RXOVR_Msk & (_UINT32_(value) << ASRC_IER_RXOVR_Pos)) /* Assigment of value for RXOVR in the ASRC_IER register */
+#define ASRC_IER_TXRDY_Pos                    _UINT32_(8)                                          /* (ASRC_IER) Transmit Ready Interrupt Enable Position */
+#define ASRC_IER_TXRDY_Msk                    (_UINT32_(0x1) << ASRC_IER_TXRDY_Pos)                /* (ASRC_IER) Transmit Ready Interrupt Enable Mask */
+#define ASRC_IER_TXRDY(value)                 (ASRC_IER_TXRDY_Msk & (_UINT32_(value) << ASRC_IER_TXRDY_Pos)) /* Assigment of value for TXRDY in the ASRC_IER register */
+#define ASRC_IER_TXEMPTY_Pos                  _UINT32_(9)                                          /* (ASRC_IER) Transmit FIFO Empty Interrupt Enable Position */
+#define ASRC_IER_TXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_IER_TXEMPTY_Pos)              /* (ASRC_IER) Transmit FIFO Empty Interrupt Enable Mask */
+#define ASRC_IER_TXEMPTY(value)               (ASRC_IER_TXEMPTY_Msk & (_UINT32_(value) << ASRC_IER_TXEMPTY_Pos)) /* Assigment of value for TXEMPTY in the ASRC_IER register */
+#define ASRC_IER_TXFULL_Pos                   _UINT32_(10)                                         /* (ASRC_IER) Transmit FIFO Full Interrupt Enable Position */
+#define ASRC_IER_TXFULL_Msk                   (_UINT32_(0x1) << ASRC_IER_TXFULL_Pos)               /* (ASRC_IER) Transmit FIFO Full Interrupt Enable Mask */
+#define ASRC_IER_TXFULL(value)                (ASRC_IER_TXFULL_Msk & (_UINT32_(value) << ASRC_IER_TXFULL_Pos)) /* Assigment of value for TXFULL in the ASRC_IER register */
+#define ASRC_IER_TXCHUNK_Pos                  _UINT32_(11)                                         /* (ASRC_IER) Transmit FIFO Chunk Interrupt Enable Position */
+#define ASRC_IER_TXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_IER_TXCHUNK_Pos)              /* (ASRC_IER) Transmit FIFO Chunk Interrupt Enable Mask */
+#define ASRC_IER_TXCHUNK(value)               (ASRC_IER_TXCHUNK_Msk & (_UINT32_(value) << ASRC_IER_TXCHUNK_Pos)) /* Assigment of value for TXCHUNK in the ASRC_IER register */
+#define ASRC_IER_TXUDR_Pos                    _UINT32_(12)                                         /* (ASRC_IER) Transmit Under Flow Interrupt Enable Position */
+#define ASRC_IER_TXUDR_Msk                    (_UINT32_(0x1) << ASRC_IER_TXUDR_Pos)                /* (ASRC_IER) Transmit Under Flow Interrupt Enable Mask */
+#define ASRC_IER_TXUDR(value)                 (ASRC_IER_TXUDR_Msk & (_UINT32_(value) << ASRC_IER_TXUDR_Pos)) /* Assigment of value for TXUDR in the ASRC_IER register */
+#define ASRC_IER_TXOVR_Pos                    _UINT32_(13)                                         /* (ASRC_IER) Transmit Over Flow Interrupt Enable Position */
+#define ASRC_IER_TXOVR_Msk                    (_UINT32_(0x1) << ASRC_IER_TXOVR_Pos)                /* (ASRC_IER) Transmit Over Flow Interrupt Enable Mask */
+#define ASRC_IER_TXOVR(value)                 (ASRC_IER_TXOVR_Msk & (_UINT32_(value) << ASRC_IER_TXOVR_Pos)) /* Assigment of value for TXOVR in the ASRC_IER register */
+#define ASRC_IER_SECE_Pos                     _UINT32_(16)                                         /* (ASRC_IER) Security/Safety Report Enable Position */
+#define ASRC_IER_SECE_Msk                     (_UINT32_(0x1) << ASRC_IER_SECE_Pos)                 /* (ASRC_IER) Security/Safety Report Enable Mask */
+#define ASRC_IER_SECE(value)                  (ASRC_IER_SECE_Msk & (_UINT32_(value) << ASRC_IER_SECE_Pos)) /* Assigment of value for SECE in the ASRC_IER register */
+#define ASRC_IER_LOCK_Pos                     _UINT32_(30)                                         /* (ASRC_IER) DPLL locked Interrupt Enable Position */
+#define ASRC_IER_LOCK_Msk                     (_UINT32_(0x1) << ASRC_IER_LOCK_Pos)                 /* (ASRC_IER) DPLL locked Interrupt Enable Mask */
+#define ASRC_IER_LOCK(value)                  (ASRC_IER_LOCK_Msk & (_UINT32_(value) << ASRC_IER_LOCK_Pos)) /* Assigment of value for LOCK in the ASRC_IER register */
+#define ASRC_IER_UNLOCK_Pos                   _UINT32_(31)                                         /* (ASRC_IER) DPLL Unlocked Interrupt Enable Position */
+#define ASRC_IER_UNLOCK_Msk                   (_UINT32_(0x1) << ASRC_IER_UNLOCK_Pos)               /* (ASRC_IER) DPLL Unlocked Interrupt Enable Mask */
+#define ASRC_IER_UNLOCK(value)                (ASRC_IER_UNLOCK_Msk & (_UINT32_(value) << ASRC_IER_UNLOCK_Pos)) /* Assigment of value for UNLOCK in the ASRC_IER register */
+#define ASRC_IER_Msk                          _UINT32_(0xC0013F3F)                                 /* (ASRC_IER) Register Mask  */
+
+
+/* -------- ASRC_IMR : (ASRC Offset: 0x88) ( R/ 32) Interrupt Mask Register x -------- */
+#define ASRC_IMR_RESETVALUE                   _UINT32_(0x00)                                       /*  (ASRC_IMR) Interrupt Mask Register x  Reset Value */
+
+#define ASRC_IMR_RXRDY_Pos                    _UINT32_(0)                                          /* (ASRC_IMR) Receive Ready Interrupt Mask Position */
+#define ASRC_IMR_RXRDY_Msk                    (_UINT32_(0x1) << ASRC_IMR_RXRDY_Pos)                /* (ASRC_IMR) Receive Ready Interrupt Mask Mask */
+#define ASRC_IMR_RXRDY(value)                 (ASRC_IMR_RXRDY_Msk & (_UINT32_(value) << ASRC_IMR_RXRDY_Pos)) /* Assigment of value for RXRDY in the ASRC_IMR register */
+#define ASRC_IMR_RXEMPTY_Pos                  _UINT32_(1)                                          /* (ASRC_IMR) Receive FIFO Empty Interrupt Mask Position */
+#define ASRC_IMR_RXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_IMR_RXEMPTY_Pos)              /* (ASRC_IMR) Receive FIFO Empty Interrupt Mask Mask */
+#define ASRC_IMR_RXEMPTY(value)               (ASRC_IMR_RXEMPTY_Msk & (_UINT32_(value) << ASRC_IMR_RXEMPTY_Pos)) /* Assigment of value for RXEMPTY in the ASRC_IMR register */
+#define ASRC_IMR_RXFULL_Pos                   _UINT32_(2)                                          /* (ASRC_IMR) Receive FIFO Full Interrupt Mask Position */
+#define ASRC_IMR_RXFULL_Msk                   (_UINT32_(0x1) << ASRC_IMR_RXFULL_Pos)               /* (ASRC_IMR) Receive FIFO Full Interrupt Mask Mask */
+#define ASRC_IMR_RXFULL(value)                (ASRC_IMR_RXFULL_Msk & (_UINT32_(value) << ASRC_IMR_RXFULL_Pos)) /* Assigment of value for RXFULL in the ASRC_IMR register */
+#define ASRC_IMR_RXCHUNK_Pos                  _UINT32_(3)                                          /* (ASRC_IMR) Receive FIFO Chunk Interrupt Mask Position */
+#define ASRC_IMR_RXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_IMR_RXCHUNK_Pos)              /* (ASRC_IMR) Receive FIFO Chunk Interrupt Mask Mask */
+#define ASRC_IMR_RXCHUNK(value)               (ASRC_IMR_RXCHUNK_Msk & (_UINT32_(value) << ASRC_IMR_RXCHUNK_Pos)) /* Assigment of value for RXCHUNK in the ASRC_IMR register */
+#define ASRC_IMR_RXUDR_Pos                    _UINT32_(4)                                          /* (ASRC_IMR) Receive Under Flow Interrupt Mask Position */
+#define ASRC_IMR_RXUDR_Msk                    (_UINT32_(0x1) << ASRC_IMR_RXUDR_Pos)                /* (ASRC_IMR) Receive Under Flow Interrupt Mask Mask */
+#define ASRC_IMR_RXUDR(value)                 (ASRC_IMR_RXUDR_Msk & (_UINT32_(value) << ASRC_IMR_RXUDR_Pos)) /* Assigment of value for RXUDR in the ASRC_IMR register */
+#define ASRC_IMR_RXOVR_Pos                    _UINT32_(5)                                          /* (ASRC_IMR) Receive Over Flow Interrupt Mask Position */
+#define ASRC_IMR_RXOVR_Msk                    (_UINT32_(0x1) << ASRC_IMR_RXOVR_Pos)                /* (ASRC_IMR) Receive Over Flow Interrupt Mask Mask */
+#define ASRC_IMR_RXOVR(value)                 (ASRC_IMR_RXOVR_Msk & (_UINT32_(value) << ASRC_IMR_RXOVR_Pos)) /* Assigment of value for RXOVR in the ASRC_IMR register */
+#define ASRC_IMR_TXRDY_Pos                    _UINT32_(8)                                          /* (ASRC_IMR) Transmit Ready Interrupt Mask Position */
+#define ASRC_IMR_TXRDY_Msk                    (_UINT32_(0x1) << ASRC_IMR_TXRDY_Pos)                /* (ASRC_IMR) Transmit Ready Interrupt Mask Mask */
+#define ASRC_IMR_TXRDY(value)                 (ASRC_IMR_TXRDY_Msk & (_UINT32_(value) << ASRC_IMR_TXRDY_Pos)) /* Assigment of value for TXRDY in the ASRC_IMR register */
+#define ASRC_IMR_TXEMPTY_Pos                  _UINT32_(9)                                          /* (ASRC_IMR) Transmit FIFO Empty Interrupt Mask Position */
+#define ASRC_IMR_TXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_IMR_TXEMPTY_Pos)              /* (ASRC_IMR) Transmit FIFO Empty Interrupt Mask Mask */
+#define ASRC_IMR_TXEMPTY(value)               (ASRC_IMR_TXEMPTY_Msk & (_UINT32_(value) << ASRC_IMR_TXEMPTY_Pos)) /* Assigment of value for TXEMPTY in the ASRC_IMR register */
+#define ASRC_IMR_TXFULL_Pos                   _UINT32_(10)                                         /* (ASRC_IMR) Transmit FIFO Full Interrupt Mask Position */
+#define ASRC_IMR_TXFULL_Msk                   (_UINT32_(0x1) << ASRC_IMR_TXFULL_Pos)               /* (ASRC_IMR) Transmit FIFO Full Interrupt Mask Mask */
+#define ASRC_IMR_TXFULL(value)                (ASRC_IMR_TXFULL_Msk & (_UINT32_(value) << ASRC_IMR_TXFULL_Pos)) /* Assigment of value for TXFULL in the ASRC_IMR register */
+#define ASRC_IMR_TXCHUNK_Pos                  _UINT32_(11)                                         /* (ASRC_IMR) Transmit FIFO Chunk Interrupt Mask Position */
+#define ASRC_IMR_TXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_IMR_TXCHUNK_Pos)              /* (ASRC_IMR) Transmit FIFO Chunk Interrupt Mask Mask */
+#define ASRC_IMR_TXCHUNK(value)               (ASRC_IMR_TXCHUNK_Msk & (_UINT32_(value) << ASRC_IMR_TXCHUNK_Pos)) /* Assigment of value for TXCHUNK in the ASRC_IMR register */
+#define ASRC_IMR_TXUDR_Pos                    _UINT32_(12)                                         /* (ASRC_IMR) Transmit Under Flow Interrupt Mask Position */
+#define ASRC_IMR_TXUDR_Msk                    (_UINT32_(0x1) << ASRC_IMR_TXUDR_Pos)                /* (ASRC_IMR) Transmit Under Flow Interrupt Mask Mask */
+#define ASRC_IMR_TXUDR(value)                 (ASRC_IMR_TXUDR_Msk & (_UINT32_(value) << ASRC_IMR_TXUDR_Pos)) /* Assigment of value for TXUDR in the ASRC_IMR register */
+#define ASRC_IMR_TXOVR_Pos                    _UINT32_(13)                                         /* (ASRC_IMR) Transmit Over Flow Interrupt Mask Position */
+#define ASRC_IMR_TXOVR_Msk                    (_UINT32_(0x1) << ASRC_IMR_TXOVR_Pos)                /* (ASRC_IMR) Transmit Over Flow Interrupt Mask Mask */
+#define ASRC_IMR_TXOVR(value)                 (ASRC_IMR_TXOVR_Msk & (_UINT32_(value) << ASRC_IMR_TXOVR_Pos)) /* Assigment of value for TXOVR in the ASRC_IMR register */
+#define ASRC_IMR_SECE_Pos                     _UINT32_(16)                                         /* (ASRC_IMR) Security/Safety Report Mask Position */
+#define ASRC_IMR_SECE_Msk                     (_UINT32_(0x1) << ASRC_IMR_SECE_Pos)                 /* (ASRC_IMR) Security/Safety Report Mask Mask */
+#define ASRC_IMR_SECE(value)                  (ASRC_IMR_SECE_Msk & (_UINT32_(value) << ASRC_IMR_SECE_Pos)) /* Assigment of value for SECE in the ASRC_IMR register */
+#define ASRC_IMR_LOCK_Pos                     _UINT32_(30)                                         /* (ASRC_IMR) DPLL locked Interrupt Mask Position */
+#define ASRC_IMR_LOCK_Msk                     (_UINT32_(0x1) << ASRC_IMR_LOCK_Pos)                 /* (ASRC_IMR) DPLL locked Interrupt Mask Mask */
+#define ASRC_IMR_LOCK(value)                  (ASRC_IMR_LOCK_Msk & (_UINT32_(value) << ASRC_IMR_LOCK_Pos)) /* Assigment of value for LOCK in the ASRC_IMR register */
+#define ASRC_IMR_UNLOCK_Pos                   _UINT32_(31)                                         /* (ASRC_IMR) DPLL Unlocked Interrupt Mask Position */
+#define ASRC_IMR_UNLOCK_Msk                   (_UINT32_(0x1) << ASRC_IMR_UNLOCK_Pos)               /* (ASRC_IMR) DPLL Unlocked Interrupt Mask Mask */
+#define ASRC_IMR_UNLOCK(value)                (ASRC_IMR_UNLOCK_Msk & (_UINT32_(value) << ASRC_IMR_UNLOCK_Pos)) /* Assigment of value for UNLOCK in the ASRC_IMR register */
+#define ASRC_IMR_Msk                          _UINT32_(0xC0013F3F)                                 /* (ASRC_IMR) Register Mask  */
+
+
+/* -------- ASRC_ISR : (ASRC Offset: 0x98) ( R/ 32) Interrupt Status Register x -------- */
+#define ASRC_ISR_RESETVALUE                   _UINT32_(0x80000302)                                 /*  (ASRC_ISR) Interrupt Status Register x  Reset Value */
+
+#define ASRC_ISR_RXRDY_Pos                    _UINT32_(0)                                          /* (ASRC_ISR) Receive Ready Interrupt Status Position */
+#define ASRC_ISR_RXRDY_Msk                    (_UINT32_(0x1) << ASRC_ISR_RXRDY_Pos)                /* (ASRC_ISR) Receive Ready Interrupt Status Mask */
+#define ASRC_ISR_RXRDY(value)                 (ASRC_ISR_RXRDY_Msk & (_UINT32_(value) << ASRC_ISR_RXRDY_Pos)) /* Assigment of value for RXRDY in the ASRC_ISR register */
+#define ASRC_ISR_RXEMPTY_Pos                  _UINT32_(1)                                          /* (ASRC_ISR) Receive FIFO Empty Interrupt Status Position */
+#define ASRC_ISR_RXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_ISR_RXEMPTY_Pos)              /* (ASRC_ISR) Receive FIFO Empty Interrupt Status Mask */
+#define ASRC_ISR_RXEMPTY(value)               (ASRC_ISR_RXEMPTY_Msk & (_UINT32_(value) << ASRC_ISR_RXEMPTY_Pos)) /* Assigment of value for RXEMPTY in the ASRC_ISR register */
+#define ASRC_ISR_RXFULL_Pos                   _UINT32_(2)                                          /* (ASRC_ISR) Receive FIFO Full Interrupt Status Position */
+#define ASRC_ISR_RXFULL_Msk                   (_UINT32_(0x1) << ASRC_ISR_RXFULL_Pos)               /* (ASRC_ISR) Receive FIFO Full Interrupt Status Mask */
+#define ASRC_ISR_RXFULL(value)                (ASRC_ISR_RXFULL_Msk & (_UINT32_(value) << ASRC_ISR_RXFULL_Pos)) /* Assigment of value for RXFULL in the ASRC_ISR register */
+#define ASRC_ISR_RXCHUNK_Pos                  _UINT32_(3)                                          /* (ASRC_ISR) Receive FIFO Chunk Interrupt Status Position */
+#define ASRC_ISR_RXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_ISR_RXCHUNK_Pos)              /* (ASRC_ISR) Receive FIFO Chunk Interrupt Status Mask */
+#define ASRC_ISR_RXCHUNK(value)               (ASRC_ISR_RXCHUNK_Msk & (_UINT32_(value) << ASRC_ISR_RXCHUNK_Pos)) /* Assigment of value for RXCHUNK in the ASRC_ISR register */
+#define ASRC_ISR_RXUDR_Pos                    _UINT32_(4)                                          /* (ASRC_ISR) Receive Under Flow Interrupt Status (cleared on read) Position */
+#define ASRC_ISR_RXUDR_Msk                    (_UINT32_(0x1) << ASRC_ISR_RXUDR_Pos)                /* (ASRC_ISR) Receive Under Flow Interrupt Status (cleared on read) Mask */
+#define ASRC_ISR_RXUDR(value)                 (ASRC_ISR_RXUDR_Msk & (_UINT32_(value) << ASRC_ISR_RXUDR_Pos)) /* Assigment of value for RXUDR in the ASRC_ISR register */
+#define ASRC_ISR_RXOVR_Pos                    _UINT32_(5)                                          /* (ASRC_ISR) Receive Over Flow Interrupt Status (cleared on read) Position */
+#define ASRC_ISR_RXOVR_Msk                    (_UINT32_(0x1) << ASRC_ISR_RXOVR_Pos)                /* (ASRC_ISR) Receive Over Flow Interrupt Status (cleared on read) Mask */
+#define ASRC_ISR_RXOVR(value)                 (ASRC_ISR_RXOVR_Msk & (_UINT32_(value) << ASRC_ISR_RXOVR_Pos)) /* Assigment of value for RXOVR in the ASRC_ISR register */
+#define ASRC_ISR_TXRDY_Pos                    _UINT32_(8)                                          /* (ASRC_ISR) Transmit Ready Interrupt Status Position */
+#define ASRC_ISR_TXRDY_Msk                    (_UINT32_(0x1) << ASRC_ISR_TXRDY_Pos)                /* (ASRC_ISR) Transmit Ready Interrupt Status Mask */
+#define ASRC_ISR_TXRDY(value)                 (ASRC_ISR_TXRDY_Msk & (_UINT32_(value) << ASRC_ISR_TXRDY_Pos)) /* Assigment of value for TXRDY in the ASRC_ISR register */
+#define ASRC_ISR_TXEMPTY_Pos                  _UINT32_(9)                                          /* (ASRC_ISR) Transmit FIFO Empty Interrupt Status Position */
+#define ASRC_ISR_TXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_ISR_TXEMPTY_Pos)              /* (ASRC_ISR) Transmit FIFO Empty Interrupt Status Mask */
+#define ASRC_ISR_TXEMPTY(value)               (ASRC_ISR_TXEMPTY_Msk & (_UINT32_(value) << ASRC_ISR_TXEMPTY_Pos)) /* Assigment of value for TXEMPTY in the ASRC_ISR register */
+#define ASRC_ISR_TXFULL_Pos                   _UINT32_(10)                                         /* (ASRC_ISR) Transmit FIFO Full Interrupt Status Position */
+#define ASRC_ISR_TXFULL_Msk                   (_UINT32_(0x1) << ASRC_ISR_TXFULL_Pos)               /* (ASRC_ISR) Transmit FIFO Full Interrupt Status Mask */
+#define ASRC_ISR_TXFULL(value)                (ASRC_ISR_TXFULL_Msk & (_UINT32_(value) << ASRC_ISR_TXFULL_Pos)) /* Assigment of value for TXFULL in the ASRC_ISR register */
+#define ASRC_ISR_TXCHUNK_Pos                  _UINT32_(11)                                         /* (ASRC_ISR) Transmit FIFO Chunk Interrupt Status Position */
+#define ASRC_ISR_TXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_ISR_TXCHUNK_Pos)              /* (ASRC_ISR) Transmit FIFO Chunk Interrupt Status Mask */
+#define ASRC_ISR_TXCHUNK(value)               (ASRC_ISR_TXCHUNK_Msk & (_UINT32_(value) << ASRC_ISR_TXCHUNK_Pos)) /* Assigment of value for TXCHUNK in the ASRC_ISR register */
+#define ASRC_ISR_TXUDR_Pos                    _UINT32_(12)                                         /* (ASRC_ISR) Transmit Under Flow Interrupt Status (cleared on read) Position */
+#define ASRC_ISR_TXUDR_Msk                    (_UINT32_(0x1) << ASRC_ISR_TXUDR_Pos)                /* (ASRC_ISR) Transmit Under Flow Interrupt Status (cleared on read) Mask */
+#define ASRC_ISR_TXUDR(value)                 (ASRC_ISR_TXUDR_Msk & (_UINT32_(value) << ASRC_ISR_TXUDR_Pos)) /* Assigment of value for TXUDR in the ASRC_ISR register */
+#define ASRC_ISR_TXOVR_Pos                    _UINT32_(13)                                         /* (ASRC_ISR) Transmit Over Flow Interrupt Status (cleared on read) Position */
+#define ASRC_ISR_TXOVR_Msk                    (_UINT32_(0x1) << ASRC_ISR_TXOVR_Pos)                /* (ASRC_ISR) Transmit Over Flow Interrupt Status (cleared on read) Mask */
+#define ASRC_ISR_TXOVR(value)                 (ASRC_ISR_TXOVR_Msk & (_UINT32_(value) << ASRC_ISR_TXOVR_Pos)) /* Assigment of value for TXOVR in the ASRC_ISR register */
+#define ASRC_ISR_SECE_Pos                     _UINT32_(16)                                         /* (ASRC_ISR) Security and/or Safety Event (cleared on read) Position */
+#define ASRC_ISR_SECE_Msk                     (_UINT32_(0x1) << ASRC_ISR_SECE_Pos)                 /* (ASRC_ISR) Security and/or Safety Event (cleared on read) Mask */
+#define ASRC_ISR_SECE(value)                  (ASRC_ISR_SECE_Msk & (_UINT32_(value) << ASRC_ISR_SECE_Pos)) /* Assigment of value for SECE in the ASRC_ISR register */
+#define   ASRC_ISR_SECE_0_Val                 _UINT32_(0x0)                                        /* (ASRC_ISR) No security or safety event has occurred since the last read of ASRC_ISR register  */
+#define   ASRC_ISR_SECE_1_Val                 _UINT32_(0x1)                                        /* (ASRC_ISR) One or more safety or security events has occurred since the last read of ASRC_ISR. For details on the event, refer to ASRC_WPSR.  */
+#define ASRC_ISR_SECE_0                       (ASRC_ISR_SECE_0_Val << ASRC_ISR_SECE_Pos)           /* (ASRC_ISR) No security or safety event has occurred since the last read of ASRC_ISR register Position  */
+#define ASRC_ISR_SECE_1                       (ASRC_ISR_SECE_1_Val << ASRC_ISR_SECE_Pos)           /* (ASRC_ISR) One or more safety or security events has occurred since the last read of ASRC_ISR. For details on the event, refer to ASRC_WPSR. Position  */
+#define ASRC_ISR_LOCK_Pos                     _UINT32_(30)                                         /* (ASRC_ISR) DPLL locked Interrupt Status Position */
+#define ASRC_ISR_LOCK_Msk                     (_UINT32_(0x1) << ASRC_ISR_LOCK_Pos)                 /* (ASRC_ISR) DPLL locked Interrupt Status Mask */
+#define ASRC_ISR_LOCK(value)                  (ASRC_ISR_LOCK_Msk & (_UINT32_(value) << ASRC_ISR_LOCK_Pos)) /* Assigment of value for LOCK in the ASRC_ISR register */
+#define ASRC_ISR_UNLOCK_Pos                   _UINT32_(31)                                         /* (ASRC_ISR) DPLL Unlocked Interrupt Status Position */
+#define ASRC_ISR_UNLOCK_Msk                   (_UINT32_(0x1) << ASRC_ISR_UNLOCK_Pos)               /* (ASRC_ISR) DPLL Unlocked Interrupt Status Mask */
+#define ASRC_ISR_UNLOCK(value)                (ASRC_ISR_UNLOCK_Msk & (_UINT32_(value) << ASRC_ISR_UNLOCK_Pos)) /* Assigment of value for UNLOCK in the ASRC_ISR register */
+#define ASRC_ISR_Msk                          _UINT32_(0xC0013F3F)                                 /* (ASRC_ISR) Register Mask  */
 
 
 /* -------- ASRC_MR : (ASRC Offset: 0x04) (R/W 32) Mode Register -------- */
@@ -93,6 +519,180 @@
 #define ASRC_RATIO_OUTRATIO_Msk               (_UINT32_(0xFFFF) << ASRC_RATIO_OUTRATIO_Pos)        /* (ASRC_RATIO) Output Internal Sampling Rate Ratio Mask */
 #define ASRC_RATIO_OUTRATIO(value)            (ASRC_RATIO_OUTRATIO_Msk & (_UINT32_(value) << ASRC_RATIO_OUTRATIO_Pos)) /* Assigment of value for OUTRATIO in the ASRC_RATIO register */
 #define ASRC_RATIO_Msk                        _UINT32_(0xFFFFFFFF)                                 /* (ASRC_RATIO) Register Mask  */
+
+
+/* -------- ASRC_RHR : (ASRC Offset: 0x28) ( R/ 32) Receive Holding Register x -------- */
+#define ASRC_RHR_RESETVALUE                   _UINT32_(0x00)                                       /*  (ASRC_RHR) Receive Holding Register x  Reset Value */
+
+#define ASRC_RHR_DATA_Pos                     _UINT32_(0)                                          /* (ASRC_RHR) Converted Data Position */
+#define ASRC_RHR_DATA_Msk                     (_UINT32_(0xFFFFFFFF) << ASRC_RHR_DATA_Pos)          /* (ASRC_RHR) Converted Data Mask */
+#define ASRC_RHR_DATA(value)                  (ASRC_RHR_DATA_Msk & (_UINT32_(value) << ASRC_RHR_DATA_Pos)) /* Assigment of value for DATA in the ASRC_RHR register */
+#define ASRC_RHR_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (ASRC_RHR) Register Mask  */
+
+
+/* -------- ASRC_THR : (ASRC Offset: 0x48) ( /W 32) Transmit Holding Register x -------- */
+#define ASRC_THR_DATA_Pos                     _UINT32_(0)                                          /* (ASRC_THR) Data to Convert Position */
+#define ASRC_THR_DATA_Msk                     (_UINT32_(0xFFFFFFFF) << ASRC_THR_DATA_Pos)          /* (ASRC_THR) Data to Convert Mask */
+#define ASRC_THR_DATA(value)                  (ASRC_THR_DATA_Msk & (_UINT32_(value) << ASRC_THR_DATA_Pos)) /* Assigment of value for DATA in the ASRC_THR register */
+#define ASRC_THR_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (ASRC_THR) Register Mask  */
+
+
+/* -------- ASRC_TRIG : (ASRC Offset: 0x24) (R/W 32) Trigger Selection Register -------- */
+#define ASRC_TRIG_RESETVALUE                  _UINT32_(0x00)                                       /*  (ASRC_TRIG) Trigger Selection Register  Reset Value */
+
+#define ASRC_TRIG_TRIGSELIN0_Pos              _UINT32_(0)                                          /* (ASRC_TRIG) Input Trigger Source Selection of Channel 0 Position */
+#define ASRC_TRIG_TRIGSELIN0_Msk              (_UINT32_(0xF) << ASRC_TRIG_TRIGSELIN0_Pos)          /* (ASRC_TRIG) Input Trigger Source Selection of Channel 0 Mask */
+#define ASRC_TRIG_TRIGSELIN0(value)           (ASRC_TRIG_TRIGSELIN0_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELIN0_Pos)) /* Assigment of value for TRIGSELIN0 in the ASRC_TRIG register */
+#define   ASRC_TRIG_TRIGSELIN0_GCLKDIV_Val    _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
+#define   ASRC_TRIG_TRIGSELIN0_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN0_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN0_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN0_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN0_SSC0_RF_Val    _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN0_SSC0_TF_Val    _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN0_SSC1_RF_Val    _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define ASRC_TRIG_TRIGSELIN0_GCLKDIV          (ASRC_TRIG_TRIGSELIN0_GCLKDIV_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
+#define ASRC_TRIG_TRIGSELIN0_I2SMCC0_ws       (ASRC_TRIG_TRIGSELIN0_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN0_I2SMCC1_ws       (ASRC_TRIG_TRIGSELIN0_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN0_PDMC0_data_synchro (ASRC_TRIG_TRIGSELIN0_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN0_PDMC1_data_synchro (ASRC_TRIG_TRIGSELIN0_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN0_SSC0_RF          (ASRC_TRIG_TRIGSELIN0_SSC0_RF_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN0_SSC0_TF          (ASRC_TRIG_TRIGSELIN0_SSC0_TF_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN0_SSC1_RF          (ASRC_TRIG_TRIGSELIN0_SSC1_RF_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN1_Pos              _UINT32_(4)                                          /* (ASRC_TRIG) Input Trigger Source Selection of Channel 1 Position */
+#define ASRC_TRIG_TRIGSELIN1_Msk              (_UINT32_(0xF) << ASRC_TRIG_TRIGSELIN1_Pos)          /* (ASRC_TRIG) Input Trigger Source Selection of Channel 1 Mask */
+#define ASRC_TRIG_TRIGSELIN1(value)           (ASRC_TRIG_TRIGSELIN1_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELIN1_Pos)) /* Assigment of value for TRIGSELIN1 in the ASRC_TRIG register */
+#define   ASRC_TRIG_TRIGSELIN1_GCLKDIV_Val    _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
+#define   ASRC_TRIG_TRIGSELIN1_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN1_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN1_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN1_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN1_SSC0_RF_Val    _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN1_SSC0_TF_Val    _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN1_SSC1_RF_Val    _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define ASRC_TRIG_TRIGSELIN1_GCLKDIV          (ASRC_TRIG_TRIGSELIN1_GCLKDIV_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
+#define ASRC_TRIG_TRIGSELIN1_I2SMCC0_ws       (ASRC_TRIG_TRIGSELIN1_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN1_I2SMCC1_ws       (ASRC_TRIG_TRIGSELIN1_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN1_PDMC0_data_synchro (ASRC_TRIG_TRIGSELIN1_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN1_PDMC1_data_synchro (ASRC_TRIG_TRIGSELIN1_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN1_SSC0_RF          (ASRC_TRIG_TRIGSELIN1_SSC0_RF_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN1_SSC0_TF          (ASRC_TRIG_TRIGSELIN1_SSC0_TF_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN1_SSC1_RF          (ASRC_TRIG_TRIGSELIN1_SSC1_RF_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN2_Pos              _UINT32_(8)                                          /* (ASRC_TRIG) Input Trigger Source Selection of Channel 2 Position */
+#define ASRC_TRIG_TRIGSELIN2_Msk              (_UINT32_(0xF) << ASRC_TRIG_TRIGSELIN2_Pos)          /* (ASRC_TRIG) Input Trigger Source Selection of Channel 2 Mask */
+#define ASRC_TRIG_TRIGSELIN2(value)           (ASRC_TRIG_TRIGSELIN2_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELIN2_Pos)) /* Assigment of value for TRIGSELIN2 in the ASRC_TRIG register */
+#define   ASRC_TRIG_TRIGSELIN2_GCLKDIV_Val    _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
+#define   ASRC_TRIG_TRIGSELIN2_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN2_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN2_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN2_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN2_SSC0_RF_Val    _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN2_SSC0_TF_Val    _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN2_SSC1_RF_Val    _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define ASRC_TRIG_TRIGSELIN2_GCLKDIV          (ASRC_TRIG_TRIGSELIN2_GCLKDIV_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
+#define ASRC_TRIG_TRIGSELIN2_I2SMCC0_ws       (ASRC_TRIG_TRIGSELIN2_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN2_I2SMCC1_ws       (ASRC_TRIG_TRIGSELIN2_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN2_PDMC0_data_synchro (ASRC_TRIG_TRIGSELIN2_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN2_PDMC1_data_synchro (ASRC_TRIG_TRIGSELIN2_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN2_SSC0_RF          (ASRC_TRIG_TRIGSELIN2_SSC0_RF_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN2_SSC0_TF          (ASRC_TRIG_TRIGSELIN2_SSC0_TF_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN2_SSC1_RF          (ASRC_TRIG_TRIGSELIN2_SSC1_RF_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN3_Pos              _UINT32_(12)                                         /* (ASRC_TRIG) Input Trigger Source Selection of Channel 3 Position */
+#define ASRC_TRIG_TRIGSELIN3_Msk              (_UINT32_(0xF) << ASRC_TRIG_TRIGSELIN3_Pos)          /* (ASRC_TRIG) Input Trigger Source Selection of Channel 3 Mask */
+#define ASRC_TRIG_TRIGSELIN3(value)           (ASRC_TRIG_TRIGSELIN3_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELIN3_Pos)) /* Assigment of value for TRIGSELIN3 in the ASRC_TRIG register */
+#define   ASRC_TRIG_TRIGSELIN3_GCLKDIV_Val    _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
+#define   ASRC_TRIG_TRIGSELIN3_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN3_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN3_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN3_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN3_SSC0_RF_Val    _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN3_SSC0_TF_Val    _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELIN3_SSC1_RF_Val    _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define ASRC_TRIG_TRIGSELIN3_GCLKDIV          (ASRC_TRIG_TRIGSELIN3_GCLKDIV_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
+#define ASRC_TRIG_TRIGSELIN3_I2SMCC0_ws       (ASRC_TRIG_TRIGSELIN3_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN3_I2SMCC1_ws       (ASRC_TRIG_TRIGSELIN3_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN3_PDMC0_data_synchro (ASRC_TRIG_TRIGSELIN3_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN3_PDMC1_data_synchro (ASRC_TRIG_TRIGSELIN3_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN3_SSC0_RF          (ASRC_TRIG_TRIGSELIN3_SSC0_RF_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN3_SSC0_TF          (ASRC_TRIG_TRIGSELIN3_SSC0_TF_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELIN3_SSC1_RF          (ASRC_TRIG_TRIGSELIN3_SSC1_RF_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT0_Pos             _UINT32_(16)                                         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 0 Position */
+#define ASRC_TRIG_TRIGSELOUT0_Msk             (_UINT32_(0xF) << ASRC_TRIG_TRIGSELOUT0_Pos)         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 0 Mask */
+#define ASRC_TRIG_TRIGSELOUT0(value)          (ASRC_TRIG_TRIGSELOUT0_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELOUT0_Pos)) /* Assigment of value for TRIGSELOUT0 in the ASRC_TRIG register */
+#define   ASRC_TRIG_TRIGSELOUT0_GCLKDIV_Val   _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
+#define   ASRC_TRIG_TRIGSELOUT0_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT0_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT0_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT0_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT0_SSC0_RF_Val   _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT0_SSC0_TF_Val   _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT0_SSC1_RF_Val   _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define ASRC_TRIG_TRIGSELOUT0_GCLKDIV         (ASRC_TRIG_TRIGSELOUT0_GCLKDIV_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
+#define ASRC_TRIG_TRIGSELOUT0_I2SMCC0_ws      (ASRC_TRIG_TRIGSELOUT0_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT0_I2SMCC1_ws      (ASRC_TRIG_TRIGSELOUT0_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT0_PDMC0_data_synchro (ASRC_TRIG_TRIGSELOUT0_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT0_PDMC1_data_synchro (ASRC_TRIG_TRIGSELOUT0_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT0_SSC0_RF         (ASRC_TRIG_TRIGSELOUT0_SSC0_RF_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT0_SSC0_TF         (ASRC_TRIG_TRIGSELOUT0_SSC0_TF_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT0_SSC1_RF         (ASRC_TRIG_TRIGSELOUT0_SSC1_RF_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT1_Pos             _UINT32_(20)                                         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 1 Position */
+#define ASRC_TRIG_TRIGSELOUT1_Msk             (_UINT32_(0xF) << ASRC_TRIG_TRIGSELOUT1_Pos)         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 1 Mask */
+#define ASRC_TRIG_TRIGSELOUT1(value)          (ASRC_TRIG_TRIGSELOUT1_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELOUT1_Pos)) /* Assigment of value for TRIGSELOUT1 in the ASRC_TRIG register */
+#define   ASRC_TRIG_TRIGSELOUT1_GCLKDIV_Val   _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
+#define   ASRC_TRIG_TRIGSELOUT1_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT1_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT1_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT1_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT1_SSC0_RF_Val   _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT1_SSC0_TF_Val   _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT1_SSC1_RF_Val   _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define ASRC_TRIG_TRIGSELOUT1_GCLKDIV         (ASRC_TRIG_TRIGSELOUT1_GCLKDIV_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
+#define ASRC_TRIG_TRIGSELOUT1_I2SMCC0_ws      (ASRC_TRIG_TRIGSELOUT1_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT1_I2SMCC1_ws      (ASRC_TRIG_TRIGSELOUT1_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT1_PDMC0_data_synchro (ASRC_TRIG_TRIGSELOUT1_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT1_PDMC1_data_synchro (ASRC_TRIG_TRIGSELOUT1_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT1_SSC0_RF         (ASRC_TRIG_TRIGSELOUT1_SSC0_RF_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT1_SSC0_TF         (ASRC_TRIG_TRIGSELOUT1_SSC0_TF_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT1_SSC1_RF         (ASRC_TRIG_TRIGSELOUT1_SSC1_RF_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT2_Pos             _UINT32_(24)                                         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 2 Position */
+#define ASRC_TRIG_TRIGSELOUT2_Msk             (_UINT32_(0xF) << ASRC_TRIG_TRIGSELOUT2_Pos)         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 2 Mask */
+#define ASRC_TRIG_TRIGSELOUT2(value)          (ASRC_TRIG_TRIGSELOUT2_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELOUT2_Pos)) /* Assigment of value for TRIGSELOUT2 in the ASRC_TRIG register */
+#define   ASRC_TRIG_TRIGSELOUT2_GCLKDIV_Val   _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
+#define   ASRC_TRIG_TRIGSELOUT2_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT2_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT2_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT2_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT2_SSC0_RF_Val   _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT2_SSC0_TF_Val   _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT2_SSC1_RF_Val   _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define ASRC_TRIG_TRIGSELOUT2_GCLKDIV         (ASRC_TRIG_TRIGSELOUT2_GCLKDIV_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
+#define ASRC_TRIG_TRIGSELOUT2_I2SMCC0_ws      (ASRC_TRIG_TRIGSELOUT2_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT2_I2SMCC1_ws      (ASRC_TRIG_TRIGSELOUT2_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT2_PDMC0_data_synchro (ASRC_TRIG_TRIGSELOUT2_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT2_PDMC1_data_synchro (ASRC_TRIG_TRIGSELOUT2_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT2_SSC0_RF         (ASRC_TRIG_TRIGSELOUT2_SSC0_RF_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT2_SSC0_TF         (ASRC_TRIG_TRIGSELOUT2_SSC0_TF_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT2_SSC1_RF         (ASRC_TRIG_TRIGSELOUT2_SSC1_RF_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT3_Pos             _UINT32_(28)                                         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 3 Position */
+#define ASRC_TRIG_TRIGSELOUT3_Msk             (_UINT32_(0xF) << ASRC_TRIG_TRIGSELOUT3_Pos)         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 3 Mask */
+#define ASRC_TRIG_TRIGSELOUT3(value)          (ASRC_TRIG_TRIGSELOUT3_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELOUT3_Pos)) /* Assigment of value for TRIGSELOUT3 in the ASRC_TRIG register */
+#define   ASRC_TRIG_TRIGSELOUT3_GCLKDIV_Val   _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
+#define   ASRC_TRIG_TRIGSELOUT3_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT3_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT3_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT3_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT3_SSC0_RF_Val   _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT3_SSC0_TF_Val   _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define   ASRC_TRIG_TRIGSELOUT3_SSC1_RF_Val   _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
+#define ASRC_TRIG_TRIGSELOUT3_GCLKDIV         (ASRC_TRIG_TRIGSELOUT3_GCLKDIV_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
+#define ASRC_TRIG_TRIGSELOUT3_I2SMCC0_ws      (ASRC_TRIG_TRIGSELOUT3_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT3_I2SMCC1_ws      (ASRC_TRIG_TRIGSELOUT3_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT3_PDMC0_data_synchro (ASRC_TRIG_TRIGSELOUT3_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT3_PDMC1_data_synchro (ASRC_TRIG_TRIGSELOUT3_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT3_SSC0_RF         (ASRC_TRIG_TRIGSELOUT3_SSC0_RF_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT3_SSC0_TF         (ASRC_TRIG_TRIGSELOUT3_SSC0_TF_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_TRIGSELOUT3_SSC1_RF         (ASRC_TRIG_TRIGSELOUT3_SSC1_RF_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
+#define ASRC_TRIG_Msk                         _UINT32_(0xFFFFFFFF)                                 /* (ASRC_TRIG) Register Mask  */
 
 
 /* -------- ASRC_VBPS_IN : (ASRC Offset: 0x18) (R/W 32) Valid Bit Per Sample In Register -------- */
@@ -275,606 +875,6 @@
 #define ASRC_VBPS_OUT_Msk                     _UINT32_(0x0F0F0F0F)                                 /* (ASRC_VBPS_OUT) Register Mask  */
 
 
-/* -------- ASRC_CH_CONF : (ASRC Offset: 0x20) (R/W 32) Channel Configuration Register -------- */
-#define ASRC_CH_CONF_RESETVALUE               _UINT32_(0x00)                                       /*  (ASRC_CH_CONF) Channel Configuration Register  Reset Value */
-
-#define ASRC_CH_CONF_THROPMODE_Pos            _UINT32_(0)                                          /* (ASRC_CH_CONF) Transmit Holding Registers Operating Mode Position */
-#define ASRC_CH_CONF_THROPMODE_Msk            (_UINT32_(0x7) << ASRC_CH_CONF_THROPMODE_Pos)        /* (ASRC_CH_CONF) Transmit Holding Registers Operating Mode Mask */
-#define ASRC_CH_CONF_THROPMODE(value)         (ASRC_CH_CONF_THROPMODE_Msk & (_UINT32_(value) << ASRC_CH_CONF_THROPMODE_Pos)) /* Assigment of value for THROPMODE in the ASRC_CH_CONF register */
-#define   ASRC_CH_CONF_THROPMODE_THRX_UPTO_2CH_Val _UINT32_(0x0)                                        /* (ASRC_CH_CONF) The ASRC_THRx can receive up to 2 audio streams (e.g. 1 stereo channel for each ASRC_THR). Each ASRC_THRx is routed on each Stereo DSP x.  */
-#define   ASRC_CH_CONF_THROPMODE_THR0_UPTO_4CH_Val _UINT32_(0x1)                                        /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_THR0). The ARSC_THR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_THR1). The ARSC_THR2 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_THR2). ASRC_THR3 must not be used.  */
-#define   ASRC_CH_CONF_THROPMODE_THR01_UPTO_4CH_Val _UINT32_(0x2)                                        /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_THR0). The ASRC_THR1 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_THR1). ASRC_THR2 and ASRC_THR3 must not be used.  */
-#define   ASRC_CH_CONF_THROPMODE_THR0_UPTO_6CH_Val _UINT32_(0x3)                                        /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 6 audio streams (e.g. up to 3 stereo channels on ASRC_THR0). The ARSC_THR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_THR1) ASRC_THR2 and ASRC_THR3 must not be used.  */
-#define   ASRC_CH_CONF_THROPMODE_THR0_UPTO_8CH_Val _UINT32_(0x4)                                        /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 8 audio streams (e.g. up to 4 stereo channels on ASRC_THR0). ASRC_THR1,ASRC_THR2 and ASRC_RHR3 must not be used.  */
-#define ASRC_CH_CONF_THROPMODE_THRX_UPTO_2CH  (ASRC_CH_CONF_THROPMODE_THRX_UPTO_2CH_Val << ASRC_CH_CONF_THROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_THRx can receive up to 2 audio streams (e.g. 1 stereo channel for each ASRC_THR). Each ASRC_THRx is routed on each Stereo DSP x. Position  */
-#define ASRC_CH_CONF_THROPMODE_THR0_UPTO_4CH  (ASRC_CH_CONF_THROPMODE_THR0_UPTO_4CH_Val << ASRC_CH_CONF_THROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_THR0). The ARSC_THR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_THR1). The ARSC_THR2 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_THR2). ASRC_THR3 must not be used. Position  */
-#define ASRC_CH_CONF_THROPMODE_THR01_UPTO_4CH (ASRC_CH_CONF_THROPMODE_THR01_UPTO_4CH_Val << ASRC_CH_CONF_THROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_THR0). The ASRC_THR1 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_THR1). ASRC_THR2 and ASRC_THR3 must not be used. Position  */
-#define ASRC_CH_CONF_THROPMODE_THR0_UPTO_6CH  (ASRC_CH_CONF_THROPMODE_THR0_UPTO_6CH_Val << ASRC_CH_CONF_THROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 6 audio streams (e.g. up to 3 stereo channels on ASRC_THR0). The ARSC_THR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_THR1) ASRC_THR2 and ASRC_THR3 must not be used. Position  */
-#define ASRC_CH_CONF_THROPMODE_THR0_UPTO_8CH  (ASRC_CH_CONF_THROPMODE_THR0_UPTO_8CH_Val << ASRC_CH_CONF_THROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_THR0 can receive up to 8 audio streams (e.g. up to 4 stereo channels on ASRC_THR0). ASRC_THR1,ASRC_THR2 and ASRC_RHR3 must not be used. Position  */
-#define ASRC_CH_CONF_RHROPMODE_Pos            _UINT32_(4)                                          /* (ASRC_CH_CONF) Receive Holding Registers Operating Mode Position */
-#define ASRC_CH_CONF_RHROPMODE_Msk            (_UINT32_(0x7) << ASRC_CH_CONF_RHROPMODE_Pos)        /* (ASRC_CH_CONF) Receive Holding Registers Operating Mode Mask */
-#define ASRC_CH_CONF_RHROPMODE(value)         (ASRC_CH_CONF_RHROPMODE_Msk & (_UINT32_(value) << ASRC_CH_CONF_RHROPMODE_Pos)) /* Assigment of value for RHROPMODE in the ASRC_CH_CONF register */
-#define   ASRC_CH_CONF_RHROPMODE_RHRX_UPTO_2CH_Val _UINT32_(0x0)                                        /* (ASRC_CH_CONF) The ASRC_RHRx can receive up to 2 audio streams (e.g. 1 stereo channel for each ASRC_RHR). Each ASRC_RHRx is routed on each Stereo DSP x.  */
-#define   ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_4CH_Val _UINT32_(0x1)                                        /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_RHR0). The ARSC_RHR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_RHR1). The ARSC_RHR2 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_RHR2). ASRC_RHR3 must not be used.  */
-#define   ASRC_CH_CONF_RHROPMODE_RHR01_UPTO_4CH_Val _UINT32_(0x2)                                        /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_RHR0). The ASRC_RHR1 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_RHR1). ASRC_RHR2 and ASRC_RHR3 must not be used.  */
-#define   ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_6CH_Val _UINT32_(0x3)                                        /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 6 audio streams (e.g. up to 3 stereo channels on ASRC_RHR0). The ARSC_RHR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_RHR1) ASRC_RHR2 and ASRC_RHR3 must not be used.  */
-#define   ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_8CH_Val _UINT32_(0x4)                                        /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 8 audio streams (e.g. up to 4 stereo channels on ASRC_RHR0). ASRC_RHR1,ASRC_RHR2 and ASRC_RHR3 must not be used.  */
-#define ASRC_CH_CONF_RHROPMODE_RHRX_UPTO_2CH  (ASRC_CH_CONF_RHROPMODE_RHRX_UPTO_2CH_Val << ASRC_CH_CONF_RHROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_RHRx can receive up to 2 audio streams (e.g. 1 stereo channel for each ASRC_RHR). Each ASRC_RHRx is routed on each Stereo DSP x. Position  */
-#define ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_4CH  (ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_4CH_Val << ASRC_CH_CONF_RHROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_RHR0). The ARSC_RHR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_RHR1). The ARSC_RHR2 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_RHR2). ASRC_RHR3 must not be used. Position  */
-#define ASRC_CH_CONF_RHROPMODE_RHR01_UPTO_4CH (ASRC_CH_CONF_RHROPMODE_RHR01_UPTO_4CH_Val << ASRC_CH_CONF_RHROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_RHR0). The ASRC_RHR1 can receive up to 4 audio streams (e.g. up to 2 stereo channels on ASRC_RHR1). ASRC_RHR2 and ASRC_RHR3 must not be used. Position  */
-#define ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_6CH  (ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_6CH_Val << ASRC_CH_CONF_RHROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 6 audio streams (e.g. up to 3 stereo channels on ASRC_RHR0). The ARSC_RHR1 can receive up to 2 audio streams (e.g. 1 stereo channel on ASRC_RHR1) ASRC_RHR2 and ASRC_RHR3 must not be used. Position  */
-#define ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_8CH  (ASRC_CH_CONF_RHROPMODE_RHR0_UPTO_8CH_Val << ASRC_CH_CONF_RHROPMODE_Pos) /* (ASRC_CH_CONF) The ASRC_RHR0 can receive up to 8 audio streams (e.g. up to 4 stereo channels on ASRC_RHR0). ASRC_RHR1,ASRC_RHR2 and ASRC_RHR3 must not be used. Position  */
-#define ASRC_CH_CONF_MONO0_Pos                _UINT32_(8)                                          /* (ASRC_CH_CONF) DSP 0 Mono Operating Mode Position */
-#define ASRC_CH_CONF_MONO0_Msk                (_UINT32_(0x1) << ASRC_CH_CONF_MONO0_Pos)            /* (ASRC_CH_CONF) DSP 0 Mono Operating Mode Mask */
-#define ASRC_CH_CONF_MONO0(value)             (ASRC_CH_CONF_MONO0_Msk & (_UINT32_(value) << ASRC_CH_CONF_MONO0_Pos)) /* Assigment of value for MONO0 in the ASRC_CH_CONF register */
-#define   ASRC_CH_CONF_MONO0_DISABLED_Val     _UINT32_(0x0)                                        /* (ASRC_CH_CONF) DSP operates in Stereo mode.  */
-#define   ASRC_CH_CONF_MONO0_ENABLED_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) DSP operates in Mono mode.  */
-#define ASRC_CH_CONF_MONO0_DISABLED           (ASRC_CH_CONF_MONO0_DISABLED_Val << ASRC_CH_CONF_MONO0_Pos) /* (ASRC_CH_CONF) DSP operates in Stereo mode. Position  */
-#define ASRC_CH_CONF_MONO0_ENABLED            (ASRC_CH_CONF_MONO0_ENABLED_Val << ASRC_CH_CONF_MONO0_Pos) /* (ASRC_CH_CONF) DSP operates in Mono mode. Position  */
-#define ASRC_CH_CONF_MONO1_Pos                _UINT32_(9)                                          /* (ASRC_CH_CONF) DSP 1 Mono Operating Mode Position */
-#define ASRC_CH_CONF_MONO1_Msk                (_UINT32_(0x1) << ASRC_CH_CONF_MONO1_Pos)            /* (ASRC_CH_CONF) DSP 1 Mono Operating Mode Mask */
-#define ASRC_CH_CONF_MONO1(value)             (ASRC_CH_CONF_MONO1_Msk & (_UINT32_(value) << ASRC_CH_CONF_MONO1_Pos)) /* Assigment of value for MONO1 in the ASRC_CH_CONF register */
-#define   ASRC_CH_CONF_MONO1_DISABLED_Val     _UINT32_(0x0)                                        /* (ASRC_CH_CONF) DSP operates in Stereo mode.  */
-#define   ASRC_CH_CONF_MONO1_ENABLED_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) DSP operates in Mono mode.  */
-#define ASRC_CH_CONF_MONO1_DISABLED           (ASRC_CH_CONF_MONO1_DISABLED_Val << ASRC_CH_CONF_MONO1_Pos) /* (ASRC_CH_CONF) DSP operates in Stereo mode. Position  */
-#define ASRC_CH_CONF_MONO1_ENABLED            (ASRC_CH_CONF_MONO1_ENABLED_Val << ASRC_CH_CONF_MONO1_Pos) /* (ASRC_CH_CONF) DSP operates in Mono mode. Position  */
-#define ASRC_CH_CONF_MONO2_Pos                _UINT32_(10)                                         /* (ASRC_CH_CONF) DSP 2 Mono Operating Mode Position */
-#define ASRC_CH_CONF_MONO2_Msk                (_UINT32_(0x1) << ASRC_CH_CONF_MONO2_Pos)            /* (ASRC_CH_CONF) DSP 2 Mono Operating Mode Mask */
-#define ASRC_CH_CONF_MONO2(value)             (ASRC_CH_CONF_MONO2_Msk & (_UINT32_(value) << ASRC_CH_CONF_MONO2_Pos)) /* Assigment of value for MONO2 in the ASRC_CH_CONF register */
-#define   ASRC_CH_CONF_MONO2_DISABLED_Val     _UINT32_(0x0)                                        /* (ASRC_CH_CONF) DSP operates in Stereo mode.  */
-#define   ASRC_CH_CONF_MONO2_ENABLED_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) DSP operates in Mono mode.  */
-#define ASRC_CH_CONF_MONO2_DISABLED           (ASRC_CH_CONF_MONO2_DISABLED_Val << ASRC_CH_CONF_MONO2_Pos) /* (ASRC_CH_CONF) DSP operates in Stereo mode. Position  */
-#define ASRC_CH_CONF_MONO2_ENABLED            (ASRC_CH_CONF_MONO2_ENABLED_Val << ASRC_CH_CONF_MONO2_Pos) /* (ASRC_CH_CONF) DSP operates in Mono mode. Position  */
-#define ASRC_CH_CONF_MONO3_Pos                _UINT32_(11)                                         /* (ASRC_CH_CONF) DSP 3 Mono Operating Mode Position */
-#define ASRC_CH_CONF_MONO3_Msk                (_UINT32_(0x1) << ASRC_CH_CONF_MONO3_Pos)            /* (ASRC_CH_CONF) DSP 3 Mono Operating Mode Mask */
-#define ASRC_CH_CONF_MONO3(value)             (ASRC_CH_CONF_MONO3_Msk & (_UINT32_(value) << ASRC_CH_CONF_MONO3_Pos)) /* Assigment of value for MONO3 in the ASRC_CH_CONF register */
-#define   ASRC_CH_CONF_MONO3_DISABLED_Val     _UINT32_(0x0)                                        /* (ASRC_CH_CONF) DSP operates in Stereo mode.  */
-#define   ASRC_CH_CONF_MONO3_ENABLED_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) DSP operates in Mono mode.  */
-#define ASRC_CH_CONF_MONO3_DISABLED           (ASRC_CH_CONF_MONO3_DISABLED_Val << ASRC_CH_CONF_MONO3_Pos) /* (ASRC_CH_CONF) DSP operates in Stereo mode. Position  */
-#define ASRC_CH_CONF_MONO3_ENABLED            (ASRC_CH_CONF_MONO3_ENABLED_Val << ASRC_CH_CONF_MONO3_Pos) /* (ASRC_CH_CONF) DSP operates in Mono mode. Position  */
-#define ASRC_CH_CONF_CHUNK0_Pos               _UINT32_(16)                                         /* (ASRC_CH_CONF) DMA DSP 0 CHUNK Size Position */
-#define ASRC_CH_CONF_CHUNK0_Msk               (_UINT32_(0x7) << ASRC_CH_CONF_CHUNK0_Pos)           /* (ASRC_CH_CONF) DMA DSP 0 CHUNK Size Mask */
-#define ASRC_CH_CONF_CHUNK0(value)            (ASRC_CH_CONF_CHUNK0_Msk & (_UINT32_(value) << ASRC_CH_CONF_CHUNK0_Pos)) /* Assigment of value for CHUNK0 in the ASRC_CH_CONF register */
-#define   ASRC_CH_CONF_CHUNK0_1_DATA_Val      _UINT32_(0x0)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK0_2_DATA_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK0_4_DATA_Val      _UINT32_(0x2)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK0_8_DATA_Val      _UINT32_(0x3)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK0_16_DATA_Val     _UINT32_(0x4)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event.  */
-#define ASRC_CH_CONF_CHUNK0_1_DATA            (ASRC_CH_CONF_CHUNK0_1_DATA_Val << ASRC_CH_CONF_CHUNK0_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK0_2_DATA            (ASRC_CH_CONF_CHUNK0_2_DATA_Val << ASRC_CH_CONF_CHUNK0_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK0_4_DATA            (ASRC_CH_CONF_CHUNK0_4_DATA_Val << ASRC_CH_CONF_CHUNK0_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK0_8_DATA            (ASRC_CH_CONF_CHUNK0_8_DATA_Val << ASRC_CH_CONF_CHUNK0_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK0_16_DATA           (ASRC_CH_CONF_CHUNK0_16_DATA_Val << ASRC_CH_CONF_CHUNK0_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK1_Pos               _UINT32_(20)                                         /* (ASRC_CH_CONF) DMA DSP 1 CHUNK Size Position */
-#define ASRC_CH_CONF_CHUNK1_Msk               (_UINT32_(0x7) << ASRC_CH_CONF_CHUNK1_Pos)           /* (ASRC_CH_CONF) DMA DSP 1 CHUNK Size Mask */
-#define ASRC_CH_CONF_CHUNK1(value)            (ASRC_CH_CONF_CHUNK1_Msk & (_UINT32_(value) << ASRC_CH_CONF_CHUNK1_Pos)) /* Assigment of value for CHUNK1 in the ASRC_CH_CONF register */
-#define   ASRC_CH_CONF_CHUNK1_1_DATA_Val      _UINT32_(0x0)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK1_2_DATA_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK1_4_DATA_Val      _UINT32_(0x2)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK1_8_DATA_Val      _UINT32_(0x3)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK1_16_DATA_Val     _UINT32_(0x4)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event.  */
-#define ASRC_CH_CONF_CHUNK1_1_DATA            (ASRC_CH_CONF_CHUNK1_1_DATA_Val << ASRC_CH_CONF_CHUNK1_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK1_2_DATA            (ASRC_CH_CONF_CHUNK1_2_DATA_Val << ASRC_CH_CONF_CHUNK1_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK1_4_DATA            (ASRC_CH_CONF_CHUNK1_4_DATA_Val << ASRC_CH_CONF_CHUNK1_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK1_8_DATA            (ASRC_CH_CONF_CHUNK1_8_DATA_Val << ASRC_CH_CONF_CHUNK1_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK1_16_DATA           (ASRC_CH_CONF_CHUNK1_16_DATA_Val << ASRC_CH_CONF_CHUNK1_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK2_Pos               _UINT32_(24)                                         /* (ASRC_CH_CONF) DMA DSP 2 CHUNK Size Position */
-#define ASRC_CH_CONF_CHUNK2_Msk               (_UINT32_(0x7) << ASRC_CH_CONF_CHUNK2_Pos)           /* (ASRC_CH_CONF) DMA DSP 2 CHUNK Size Mask */
-#define ASRC_CH_CONF_CHUNK2(value)            (ASRC_CH_CONF_CHUNK2_Msk & (_UINT32_(value) << ASRC_CH_CONF_CHUNK2_Pos)) /* Assigment of value for CHUNK2 in the ASRC_CH_CONF register */
-#define   ASRC_CH_CONF_CHUNK2_1_DATA_Val      _UINT32_(0x0)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK2_2_DATA_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK2_4_DATA_Val      _UINT32_(0x2)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK2_8_DATA_Val      _UINT32_(0x3)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK2_16_DATA_Val     _UINT32_(0x4)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event.  */
-#define ASRC_CH_CONF_CHUNK2_1_DATA            (ASRC_CH_CONF_CHUNK2_1_DATA_Val << ASRC_CH_CONF_CHUNK2_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK2_2_DATA            (ASRC_CH_CONF_CHUNK2_2_DATA_Val << ASRC_CH_CONF_CHUNK2_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK2_4_DATA            (ASRC_CH_CONF_CHUNK2_4_DATA_Val << ASRC_CH_CONF_CHUNK2_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK2_8_DATA            (ASRC_CH_CONF_CHUNK2_8_DATA_Val << ASRC_CH_CONF_CHUNK2_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK2_16_DATA           (ASRC_CH_CONF_CHUNK2_16_DATA_Val << ASRC_CH_CONF_CHUNK2_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK3_Pos               _UINT32_(28)                                         /* (ASRC_CH_CONF) DMA DSP 3 CHUNK Size Position */
-#define ASRC_CH_CONF_CHUNK3_Msk               (_UINT32_(0x7) << ASRC_CH_CONF_CHUNK3_Pos)           /* (ASRC_CH_CONF) DMA DSP 3 CHUNK Size Mask */
-#define ASRC_CH_CONF_CHUNK3(value)            (ASRC_CH_CONF_CHUNK3_Msk & (_UINT32_(value) << ASRC_CH_CONF_CHUNK3_Pos)) /* Assigment of value for CHUNK3 in the ASRC_CH_CONF register */
-#define   ASRC_CH_CONF_CHUNK3_1_DATA_Val      _UINT32_(0x0)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK3_2_DATA_Val      _UINT32_(0x1)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK3_4_DATA_Val      _UINT32_(0x2)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK3_8_DATA_Val      _UINT32_(0x3)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event.  */
-#define   ASRC_CH_CONF_CHUNK3_16_DATA_Val     _UINT32_(0x4)                                        /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event.  */
-#define ASRC_CH_CONF_CHUNK3_1_DATA            (ASRC_CH_CONF_CHUNK3_1_DATA_Val << ASRC_CH_CONF_CHUNK3_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 1 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK3_2_DATA            (ASRC_CH_CONF_CHUNK3_2_DATA_Val << ASRC_CH_CONF_CHUNK3_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 2 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK3_4_DATA            (ASRC_CH_CONF_CHUNK3_4_DATA_Val << ASRC_CH_CONF_CHUNK3_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 4 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK3_8_DATA            (ASRC_CH_CONF_CHUNK3_8_DATA_Val << ASRC_CH_CONF_CHUNK3_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 8 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_CHUNK3_16_DATA           (ASRC_CH_CONF_CHUNK3_16_DATA_Val << ASRC_CH_CONF_CHUNK3_Pos) /* (ASRC_CH_CONF) The DMA chunk size must be configured to transfer 16 data for each rising edge of the trigger event. Position  */
-#define ASRC_CH_CONF_Msk                      _UINT32_(0x77770F77)                                 /* (ASRC_CH_CONF) Register Mask  */
-
-#define ASRC_CH_CONF_MONO_Pos                 _UINT32_(8)                                          /* (ASRC_CH_CONF Position) DSP x Mono Operating Mode */
-#define ASRC_CH_CONF_MONO_Msk                 (_UINT32_(0xF) << ASRC_CH_CONF_MONO_Pos)             /* (ASRC_CH_CONF Mask) MONO */
-#define ASRC_CH_CONF_MONO(value)              (ASRC_CH_CONF_MONO_Msk & (_UINT32_(value) << ASRC_CH_CONF_MONO_Pos)) 
-
-/* -------- ASRC_TRIG : (ASRC Offset: 0x24) (R/W 32) Trigger Selection Register -------- */
-#define ASRC_TRIG_RESETVALUE                  _UINT32_(0x00)                                       /*  (ASRC_TRIG) Trigger Selection Register  Reset Value */
-
-#define ASRC_TRIG_TRIGSELIN0_Pos              _UINT32_(0)                                          /* (ASRC_TRIG) Input Trigger Source Selection of Channel 0 Position */
-#define ASRC_TRIG_TRIGSELIN0_Msk              (_UINT32_(0xF) << ASRC_TRIG_TRIGSELIN0_Pos)          /* (ASRC_TRIG) Input Trigger Source Selection of Channel 0 Mask */
-#define ASRC_TRIG_TRIGSELIN0(value)           (ASRC_TRIG_TRIGSELIN0_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELIN0_Pos)) /* Assigment of value for TRIGSELIN0 in the ASRC_TRIG register */
-#define   ASRC_TRIG_TRIGSELIN0_GCLKDIV_Val    _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
-#define   ASRC_TRIG_TRIGSELIN0_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN0_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN0_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN0_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN0_SSC0_RF_Val    _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN0_SSC0_TF_Val    _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN0_SSC1_RF_Val    _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define ASRC_TRIG_TRIGSELIN0_GCLKDIV          (ASRC_TRIG_TRIGSELIN0_GCLKDIV_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
-#define ASRC_TRIG_TRIGSELIN0_I2SMCC0_ws       (ASRC_TRIG_TRIGSELIN0_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN0_I2SMCC1_ws       (ASRC_TRIG_TRIGSELIN0_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN0_PDMC0_data_synchro (ASRC_TRIG_TRIGSELIN0_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN0_PDMC1_data_synchro (ASRC_TRIG_TRIGSELIN0_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN0_SSC0_RF          (ASRC_TRIG_TRIGSELIN0_SSC0_RF_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN0_SSC0_TF          (ASRC_TRIG_TRIGSELIN0_SSC0_TF_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN0_SSC1_RF          (ASRC_TRIG_TRIGSELIN0_SSC1_RF_Val << ASRC_TRIG_TRIGSELIN0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN1_Pos              _UINT32_(4)                                          /* (ASRC_TRIG) Input Trigger Source Selection of Channel 1 Position */
-#define ASRC_TRIG_TRIGSELIN1_Msk              (_UINT32_(0xF) << ASRC_TRIG_TRIGSELIN1_Pos)          /* (ASRC_TRIG) Input Trigger Source Selection of Channel 1 Mask */
-#define ASRC_TRIG_TRIGSELIN1(value)           (ASRC_TRIG_TRIGSELIN1_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELIN1_Pos)) /* Assigment of value for TRIGSELIN1 in the ASRC_TRIG register */
-#define   ASRC_TRIG_TRIGSELIN1_GCLKDIV_Val    _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
-#define   ASRC_TRIG_TRIGSELIN1_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN1_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN1_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN1_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN1_SSC0_RF_Val    _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN1_SSC0_TF_Val    _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN1_SSC1_RF_Val    _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define ASRC_TRIG_TRIGSELIN1_GCLKDIV          (ASRC_TRIG_TRIGSELIN1_GCLKDIV_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
-#define ASRC_TRIG_TRIGSELIN1_I2SMCC0_ws       (ASRC_TRIG_TRIGSELIN1_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN1_I2SMCC1_ws       (ASRC_TRIG_TRIGSELIN1_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN1_PDMC0_data_synchro (ASRC_TRIG_TRIGSELIN1_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN1_PDMC1_data_synchro (ASRC_TRIG_TRIGSELIN1_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN1_SSC0_RF          (ASRC_TRIG_TRIGSELIN1_SSC0_RF_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN1_SSC0_TF          (ASRC_TRIG_TRIGSELIN1_SSC0_TF_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN1_SSC1_RF          (ASRC_TRIG_TRIGSELIN1_SSC1_RF_Val << ASRC_TRIG_TRIGSELIN1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN2_Pos              _UINT32_(8)                                          /* (ASRC_TRIG) Input Trigger Source Selection of Channel 2 Position */
-#define ASRC_TRIG_TRIGSELIN2_Msk              (_UINT32_(0xF) << ASRC_TRIG_TRIGSELIN2_Pos)          /* (ASRC_TRIG) Input Trigger Source Selection of Channel 2 Mask */
-#define ASRC_TRIG_TRIGSELIN2(value)           (ASRC_TRIG_TRIGSELIN2_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELIN2_Pos)) /* Assigment of value for TRIGSELIN2 in the ASRC_TRIG register */
-#define   ASRC_TRIG_TRIGSELIN2_GCLKDIV_Val    _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
-#define   ASRC_TRIG_TRIGSELIN2_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN2_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN2_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN2_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN2_SSC0_RF_Val    _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN2_SSC0_TF_Val    _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN2_SSC1_RF_Val    _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define ASRC_TRIG_TRIGSELIN2_GCLKDIV          (ASRC_TRIG_TRIGSELIN2_GCLKDIV_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
-#define ASRC_TRIG_TRIGSELIN2_I2SMCC0_ws       (ASRC_TRIG_TRIGSELIN2_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN2_I2SMCC1_ws       (ASRC_TRIG_TRIGSELIN2_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN2_PDMC0_data_synchro (ASRC_TRIG_TRIGSELIN2_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN2_PDMC1_data_synchro (ASRC_TRIG_TRIGSELIN2_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN2_SSC0_RF          (ASRC_TRIG_TRIGSELIN2_SSC0_RF_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN2_SSC0_TF          (ASRC_TRIG_TRIGSELIN2_SSC0_TF_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN2_SSC1_RF          (ASRC_TRIG_TRIGSELIN2_SSC1_RF_Val << ASRC_TRIG_TRIGSELIN2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN3_Pos              _UINT32_(12)                                         /* (ASRC_TRIG) Input Trigger Source Selection of Channel 3 Position */
-#define ASRC_TRIG_TRIGSELIN3_Msk              (_UINT32_(0xF) << ASRC_TRIG_TRIGSELIN3_Pos)          /* (ASRC_TRIG) Input Trigger Source Selection of Channel 3 Mask */
-#define ASRC_TRIG_TRIGSELIN3(value)           (ASRC_TRIG_TRIGSELIN3_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELIN3_Pos)) /* Assigment of value for TRIGSELIN3 in the ASRC_TRIG register */
-#define   ASRC_TRIG_TRIGSELIN3_GCLKDIV_Val    _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
-#define   ASRC_TRIG_TRIGSELIN3_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN3_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN3_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN3_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN3_SSC0_RF_Val    _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN3_SSC0_TF_Val    _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELIN3_SSC1_RF_Val    _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define ASRC_TRIG_TRIGSELIN3_GCLKDIV          (ASRC_TRIG_TRIGSELIN3_GCLKDIV_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
-#define ASRC_TRIG_TRIGSELIN3_I2SMCC0_ws       (ASRC_TRIG_TRIGSELIN3_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN3_I2SMCC1_ws       (ASRC_TRIG_TRIGSELIN3_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN3_PDMC0_data_synchro (ASRC_TRIG_TRIGSELIN3_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN3_PDMC1_data_synchro (ASRC_TRIG_TRIGSELIN3_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN3_SSC0_RF          (ASRC_TRIG_TRIGSELIN3_SSC0_RF_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN3_SSC0_TF          (ASRC_TRIG_TRIGSELIN3_SSC0_TF_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELIN3_SSC1_RF          (ASRC_TRIG_TRIGSELIN3_SSC1_RF_Val << ASRC_TRIG_TRIGSELIN3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT0_Pos             _UINT32_(16)                                         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 0 Position */
-#define ASRC_TRIG_TRIGSELOUT0_Msk             (_UINT32_(0xF) << ASRC_TRIG_TRIGSELOUT0_Pos)         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 0 Mask */
-#define ASRC_TRIG_TRIGSELOUT0(value)          (ASRC_TRIG_TRIGSELOUT0_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELOUT0_Pos)) /* Assigment of value for TRIGSELOUT0 in the ASRC_TRIG register */
-#define   ASRC_TRIG_TRIGSELOUT0_GCLKDIV_Val   _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
-#define   ASRC_TRIG_TRIGSELOUT0_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT0_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT0_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT0_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT0_SSC0_RF_Val   _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT0_SSC0_TF_Val   _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT0_SSC1_RF_Val   _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define ASRC_TRIG_TRIGSELOUT0_GCLKDIV         (ASRC_TRIG_TRIGSELOUT0_GCLKDIV_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
-#define ASRC_TRIG_TRIGSELOUT0_I2SMCC0_ws      (ASRC_TRIG_TRIGSELOUT0_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT0_I2SMCC1_ws      (ASRC_TRIG_TRIGSELOUT0_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT0_PDMC0_data_synchro (ASRC_TRIG_TRIGSELOUT0_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT0_PDMC1_data_synchro (ASRC_TRIG_TRIGSELOUT0_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT0_SSC0_RF         (ASRC_TRIG_TRIGSELOUT0_SSC0_RF_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT0_SSC0_TF         (ASRC_TRIG_TRIGSELOUT0_SSC0_TF_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT0_SSC1_RF         (ASRC_TRIG_TRIGSELOUT0_SSC1_RF_Val << ASRC_TRIG_TRIGSELOUT0_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT1_Pos             _UINT32_(20)                                         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 1 Position */
-#define ASRC_TRIG_TRIGSELOUT1_Msk             (_UINT32_(0xF) << ASRC_TRIG_TRIGSELOUT1_Pos)         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 1 Mask */
-#define ASRC_TRIG_TRIGSELOUT1(value)          (ASRC_TRIG_TRIGSELOUT1_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELOUT1_Pos)) /* Assigment of value for TRIGSELOUT1 in the ASRC_TRIG register */
-#define   ASRC_TRIG_TRIGSELOUT1_GCLKDIV_Val   _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
-#define   ASRC_TRIG_TRIGSELOUT1_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT1_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT1_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT1_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT1_SSC0_RF_Val   _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT1_SSC0_TF_Val   _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT1_SSC1_RF_Val   _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define ASRC_TRIG_TRIGSELOUT1_GCLKDIV         (ASRC_TRIG_TRIGSELOUT1_GCLKDIV_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
-#define ASRC_TRIG_TRIGSELOUT1_I2SMCC0_ws      (ASRC_TRIG_TRIGSELOUT1_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT1_I2SMCC1_ws      (ASRC_TRIG_TRIGSELOUT1_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT1_PDMC0_data_synchro (ASRC_TRIG_TRIGSELOUT1_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT1_PDMC1_data_synchro (ASRC_TRIG_TRIGSELOUT1_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT1_SSC0_RF         (ASRC_TRIG_TRIGSELOUT1_SSC0_RF_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT1_SSC0_TF         (ASRC_TRIG_TRIGSELOUT1_SSC0_TF_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT1_SSC1_RF         (ASRC_TRIG_TRIGSELOUT1_SSC1_RF_Val << ASRC_TRIG_TRIGSELOUT1_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT2_Pos             _UINT32_(24)                                         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 2 Position */
-#define ASRC_TRIG_TRIGSELOUT2_Msk             (_UINT32_(0xF) << ASRC_TRIG_TRIGSELOUT2_Pos)         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 2 Mask */
-#define ASRC_TRIG_TRIGSELOUT2(value)          (ASRC_TRIG_TRIGSELOUT2_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELOUT2_Pos)) /* Assigment of value for TRIGSELOUT2 in the ASRC_TRIG register */
-#define   ASRC_TRIG_TRIGSELOUT2_GCLKDIV_Val   _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
-#define   ASRC_TRIG_TRIGSELOUT2_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT2_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT2_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT2_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT2_SSC0_RF_Val   _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT2_SSC0_TF_Val   _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT2_SSC1_RF_Val   _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define ASRC_TRIG_TRIGSELOUT2_GCLKDIV         (ASRC_TRIG_TRIGSELOUT2_GCLKDIV_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
-#define ASRC_TRIG_TRIGSELOUT2_I2SMCC0_ws      (ASRC_TRIG_TRIGSELOUT2_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT2_I2SMCC1_ws      (ASRC_TRIG_TRIGSELOUT2_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT2_PDMC0_data_synchro (ASRC_TRIG_TRIGSELOUT2_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT2_PDMC1_data_synchro (ASRC_TRIG_TRIGSELOUT2_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT2_SSC0_RF         (ASRC_TRIG_TRIGSELOUT2_SSC0_RF_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT2_SSC0_TF         (ASRC_TRIG_TRIGSELOUT2_SSC0_TF_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT2_SSC1_RF         (ASRC_TRIG_TRIGSELOUT2_SSC1_RF_Val << ASRC_TRIG_TRIGSELOUT2_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT3_Pos             _UINT32_(28)                                         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 3 Position */
-#define ASRC_TRIG_TRIGSELOUT3_Msk             (_UINT32_(0xF) << ASRC_TRIG_TRIGSELOUT3_Pos)         /* (ASRC_TRIG) Output Trigger Source Selection of Channel 3 Mask */
-#define ASRC_TRIG_TRIGSELOUT3(value)          (ASRC_TRIG_TRIGSELOUT3_Msk & (_UINT32_(value) << ASRC_TRIG_TRIGSELOUT3_Pos)) /* Assigment of value for TRIGSELOUT3 in the ASRC_TRIG register */
-#define   ASRC_TRIG_TRIGSELOUT3_GCLKDIV_Val   _UINT32_(0x0)                                        /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider).  */
-#define   ASRC_TRIG_TRIGSELOUT3_I2SMCC0_ws_Val _UINT32_(0x1)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT3_I2SMCC1_ws_Val _UINT32_(0x2)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT3_PDMC0_data_synchro_Val _UINT32_(0x3)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT3_PDMC1_data_synchro_Val _UINT32_(0x4)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT3_SSC0_RF_Val   _UINT32_(0x5)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT3_SSC0_TF_Val   _UINT32_(0x6)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define   ASRC_TRIG_TRIGSELOUT3_SSC1_RF_Val   _UINT32_(0x7)                                        /* (ASRC_TRIG) Trigger event from audio peripheral.  */
-#define ASRC_TRIG_TRIGSELOUT3_GCLKDIV         (ASRC_TRIG_TRIGSELOUT3_GCLKDIV_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Internal trigger event, a configurable division of GCLK (see ASRC_RATIOx for divider). Position  */
-#define ASRC_TRIG_TRIGSELOUT3_I2SMCC0_ws      (ASRC_TRIG_TRIGSELOUT3_I2SMCC0_ws_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT3_I2SMCC1_ws      (ASRC_TRIG_TRIGSELOUT3_I2SMCC1_ws_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT3_PDMC0_data_synchro (ASRC_TRIG_TRIGSELOUT3_PDMC0_data_synchro_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT3_PDMC1_data_synchro (ASRC_TRIG_TRIGSELOUT3_PDMC1_data_synchro_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT3_SSC0_RF         (ASRC_TRIG_TRIGSELOUT3_SSC0_RF_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT3_SSC0_TF         (ASRC_TRIG_TRIGSELOUT3_SSC0_TF_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_TRIGSELOUT3_SSC1_RF         (ASRC_TRIG_TRIGSELOUT3_SSC1_RF_Val << ASRC_TRIG_TRIGSELOUT3_Pos) /* (ASRC_TRIG) Trigger event from audio peripheral. Position  */
-#define ASRC_TRIG_Msk                         _UINT32_(0xFFFFFFFF)                                 /* (ASRC_TRIG) Register Mask  */
-
-
-/* -------- ASRC_RHR : (ASRC Offset: 0x28) ( R/ 32) Receive Holding Register x -------- */
-#define ASRC_RHR_RESETVALUE                   _UINT32_(0x00)                                       /*  (ASRC_RHR) Receive Holding Register x  Reset Value */
-
-#define ASRC_RHR_DATA_Pos                     _UINT32_(0)                                          /* (ASRC_RHR) Converted Data Position */
-#define ASRC_RHR_DATA_Msk                     (_UINT32_(0xFFFFFFFF) << ASRC_RHR_DATA_Pos)          /* (ASRC_RHR) Converted Data Mask */
-#define ASRC_RHR_DATA(value)                  (ASRC_RHR_DATA_Msk & (_UINT32_(value) << ASRC_RHR_DATA_Pos)) /* Assigment of value for DATA in the ASRC_RHR register */
-#define ASRC_RHR_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (ASRC_RHR) Register Mask  */
-
-
-/* -------- ASRC_THR : (ASRC Offset: 0x48) ( /W 32) Transmit Holding Register x -------- */
-#define ASRC_THR_DATA_Pos                     _UINT32_(0)                                          /* (ASRC_THR) Data to Convert Position */
-#define ASRC_THR_DATA_Msk                     (_UINT32_(0xFFFFFFFF) << ASRC_THR_DATA_Pos)          /* (ASRC_THR) Data to Convert Mask */
-#define ASRC_THR_DATA(value)                  (ASRC_THR_DATA_Msk & (_UINT32_(value) << ASRC_THR_DATA_Pos)) /* Assigment of value for DATA in the ASRC_THR register */
-#define ASRC_THR_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (ASRC_THR) Register Mask  */
-
-
-/* -------- ASRC_IER : (ASRC Offset: 0x68) ( /W 32) Interrupt Enable Register x -------- */
-#define ASRC_IER_RXRDY_Pos                    _UINT32_(0)                                          /* (ASRC_IER) Receive Ready Interrupt Enable Position */
-#define ASRC_IER_RXRDY_Msk                    (_UINT32_(0x1) << ASRC_IER_RXRDY_Pos)                /* (ASRC_IER) Receive Ready Interrupt Enable Mask */
-#define ASRC_IER_RXRDY(value)                 (ASRC_IER_RXRDY_Msk & (_UINT32_(value) << ASRC_IER_RXRDY_Pos)) /* Assigment of value for RXRDY in the ASRC_IER register */
-#define ASRC_IER_RXEMPTY_Pos                  _UINT32_(1)                                          /* (ASRC_IER) Receive FIFO Empty Interrupt Enable Position */
-#define ASRC_IER_RXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_IER_RXEMPTY_Pos)              /* (ASRC_IER) Receive FIFO Empty Interrupt Enable Mask */
-#define ASRC_IER_RXEMPTY(value)               (ASRC_IER_RXEMPTY_Msk & (_UINT32_(value) << ASRC_IER_RXEMPTY_Pos)) /* Assigment of value for RXEMPTY in the ASRC_IER register */
-#define ASRC_IER_RXFULL_Pos                   _UINT32_(2)                                          /* (ASRC_IER) Receive FIFO Full Interrupt Enable Position */
-#define ASRC_IER_RXFULL_Msk                   (_UINT32_(0x1) << ASRC_IER_RXFULL_Pos)               /* (ASRC_IER) Receive FIFO Full Interrupt Enable Mask */
-#define ASRC_IER_RXFULL(value)                (ASRC_IER_RXFULL_Msk & (_UINT32_(value) << ASRC_IER_RXFULL_Pos)) /* Assigment of value for RXFULL in the ASRC_IER register */
-#define ASRC_IER_RXCHUNK_Pos                  _UINT32_(3)                                          /* (ASRC_IER) Receive FIFO Chunk Interrupt Enable Position */
-#define ASRC_IER_RXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_IER_RXCHUNK_Pos)              /* (ASRC_IER) Receive FIFO Chunk Interrupt Enable Mask */
-#define ASRC_IER_RXCHUNK(value)               (ASRC_IER_RXCHUNK_Msk & (_UINT32_(value) << ASRC_IER_RXCHUNK_Pos)) /* Assigment of value for RXCHUNK in the ASRC_IER register */
-#define ASRC_IER_RXUDR_Pos                    _UINT32_(4)                                          /* (ASRC_IER) Receive Under Flow Interrupt Enable Position */
-#define ASRC_IER_RXUDR_Msk                    (_UINT32_(0x1) << ASRC_IER_RXUDR_Pos)                /* (ASRC_IER) Receive Under Flow Interrupt Enable Mask */
-#define ASRC_IER_RXUDR(value)                 (ASRC_IER_RXUDR_Msk & (_UINT32_(value) << ASRC_IER_RXUDR_Pos)) /* Assigment of value for RXUDR in the ASRC_IER register */
-#define ASRC_IER_RXOVR_Pos                    _UINT32_(5)                                          /* (ASRC_IER) Receive Over Flow Interrupt Enable Position */
-#define ASRC_IER_RXOVR_Msk                    (_UINT32_(0x1) << ASRC_IER_RXOVR_Pos)                /* (ASRC_IER) Receive Over Flow Interrupt Enable Mask */
-#define ASRC_IER_RXOVR(value)                 (ASRC_IER_RXOVR_Msk & (_UINT32_(value) << ASRC_IER_RXOVR_Pos)) /* Assigment of value for RXOVR in the ASRC_IER register */
-#define ASRC_IER_TXRDY_Pos                    _UINT32_(8)                                          /* (ASRC_IER) Transmit Ready Interrupt Enable Position */
-#define ASRC_IER_TXRDY_Msk                    (_UINT32_(0x1) << ASRC_IER_TXRDY_Pos)                /* (ASRC_IER) Transmit Ready Interrupt Enable Mask */
-#define ASRC_IER_TXRDY(value)                 (ASRC_IER_TXRDY_Msk & (_UINT32_(value) << ASRC_IER_TXRDY_Pos)) /* Assigment of value for TXRDY in the ASRC_IER register */
-#define ASRC_IER_TXEMPTY_Pos                  _UINT32_(9)                                          /* (ASRC_IER) Transmit FIFO Empty Interrupt Enable Position */
-#define ASRC_IER_TXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_IER_TXEMPTY_Pos)              /* (ASRC_IER) Transmit FIFO Empty Interrupt Enable Mask */
-#define ASRC_IER_TXEMPTY(value)               (ASRC_IER_TXEMPTY_Msk & (_UINT32_(value) << ASRC_IER_TXEMPTY_Pos)) /* Assigment of value for TXEMPTY in the ASRC_IER register */
-#define ASRC_IER_TXFULL_Pos                   _UINT32_(10)                                         /* (ASRC_IER) Transmit FIFO Full Interrupt Enable Position */
-#define ASRC_IER_TXFULL_Msk                   (_UINT32_(0x1) << ASRC_IER_TXFULL_Pos)               /* (ASRC_IER) Transmit FIFO Full Interrupt Enable Mask */
-#define ASRC_IER_TXFULL(value)                (ASRC_IER_TXFULL_Msk & (_UINT32_(value) << ASRC_IER_TXFULL_Pos)) /* Assigment of value for TXFULL in the ASRC_IER register */
-#define ASRC_IER_TXCHUNK_Pos                  _UINT32_(11)                                         /* (ASRC_IER) Transmit FIFO Chunk Interrupt Enable Position */
-#define ASRC_IER_TXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_IER_TXCHUNK_Pos)              /* (ASRC_IER) Transmit FIFO Chunk Interrupt Enable Mask */
-#define ASRC_IER_TXCHUNK(value)               (ASRC_IER_TXCHUNK_Msk & (_UINT32_(value) << ASRC_IER_TXCHUNK_Pos)) /* Assigment of value for TXCHUNK in the ASRC_IER register */
-#define ASRC_IER_TXUDR_Pos                    _UINT32_(12)                                         /* (ASRC_IER) Transmit Under Flow Interrupt Enable Position */
-#define ASRC_IER_TXUDR_Msk                    (_UINT32_(0x1) << ASRC_IER_TXUDR_Pos)                /* (ASRC_IER) Transmit Under Flow Interrupt Enable Mask */
-#define ASRC_IER_TXUDR(value)                 (ASRC_IER_TXUDR_Msk & (_UINT32_(value) << ASRC_IER_TXUDR_Pos)) /* Assigment of value for TXUDR in the ASRC_IER register */
-#define ASRC_IER_TXOVR_Pos                    _UINT32_(13)                                         /* (ASRC_IER) Transmit Over Flow Interrupt Enable Position */
-#define ASRC_IER_TXOVR_Msk                    (_UINT32_(0x1) << ASRC_IER_TXOVR_Pos)                /* (ASRC_IER) Transmit Over Flow Interrupt Enable Mask */
-#define ASRC_IER_TXOVR(value)                 (ASRC_IER_TXOVR_Msk & (_UINT32_(value) << ASRC_IER_TXOVR_Pos)) /* Assigment of value for TXOVR in the ASRC_IER register */
-#define ASRC_IER_SECE_Pos                     _UINT32_(16)                                         /* (ASRC_IER) Security/Safety Report Enable Position */
-#define ASRC_IER_SECE_Msk                     (_UINT32_(0x1) << ASRC_IER_SECE_Pos)                 /* (ASRC_IER) Security/Safety Report Enable Mask */
-#define ASRC_IER_SECE(value)                  (ASRC_IER_SECE_Msk & (_UINT32_(value) << ASRC_IER_SECE_Pos)) /* Assigment of value for SECE in the ASRC_IER register */
-#define ASRC_IER_LOCK_Pos                     _UINT32_(30)                                         /* (ASRC_IER) DPLL locked Interrupt Enable Position */
-#define ASRC_IER_LOCK_Msk                     (_UINT32_(0x1) << ASRC_IER_LOCK_Pos)                 /* (ASRC_IER) DPLL locked Interrupt Enable Mask */
-#define ASRC_IER_LOCK(value)                  (ASRC_IER_LOCK_Msk & (_UINT32_(value) << ASRC_IER_LOCK_Pos)) /* Assigment of value for LOCK in the ASRC_IER register */
-#define ASRC_IER_UNLOCK_Pos                   _UINT32_(31)                                         /* (ASRC_IER) DPLL Unlocked Interrupt Enable Position */
-#define ASRC_IER_UNLOCK_Msk                   (_UINT32_(0x1) << ASRC_IER_UNLOCK_Pos)               /* (ASRC_IER) DPLL Unlocked Interrupt Enable Mask */
-#define ASRC_IER_UNLOCK(value)                (ASRC_IER_UNLOCK_Msk & (_UINT32_(value) << ASRC_IER_UNLOCK_Pos)) /* Assigment of value for UNLOCK in the ASRC_IER register */
-#define ASRC_IER_Msk                          _UINT32_(0xC0013F3F)                                 /* (ASRC_IER) Register Mask  */
-
-
-/* -------- ASRC_IDR : (ASRC Offset: 0x78) ( /W 32) Interrupt Disable Register x -------- */
-#define ASRC_IDR_RXRDY_Pos                    _UINT32_(0)                                          /* (ASRC_IDR) Receive Ready Interrupt Disable Position */
-#define ASRC_IDR_RXRDY_Msk                    (_UINT32_(0x1) << ASRC_IDR_RXRDY_Pos)                /* (ASRC_IDR) Receive Ready Interrupt Disable Mask */
-#define ASRC_IDR_RXRDY(value)                 (ASRC_IDR_RXRDY_Msk & (_UINT32_(value) << ASRC_IDR_RXRDY_Pos)) /* Assigment of value for RXRDY in the ASRC_IDR register */
-#define ASRC_IDR_RXEMPTY_Pos                  _UINT32_(1)                                          /* (ASRC_IDR) Receive FIFO Empty Interrupt Disable Position */
-#define ASRC_IDR_RXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_IDR_RXEMPTY_Pos)              /* (ASRC_IDR) Receive FIFO Empty Interrupt Disable Mask */
-#define ASRC_IDR_RXEMPTY(value)               (ASRC_IDR_RXEMPTY_Msk & (_UINT32_(value) << ASRC_IDR_RXEMPTY_Pos)) /* Assigment of value for RXEMPTY in the ASRC_IDR register */
-#define ASRC_IDR_RXFULL_Pos                   _UINT32_(2)                                          /* (ASRC_IDR) Receive FIFO Full Interrupt Disable Position */
-#define ASRC_IDR_RXFULL_Msk                   (_UINT32_(0x1) << ASRC_IDR_RXFULL_Pos)               /* (ASRC_IDR) Receive FIFO Full Interrupt Disable Mask */
-#define ASRC_IDR_RXFULL(value)                (ASRC_IDR_RXFULL_Msk & (_UINT32_(value) << ASRC_IDR_RXFULL_Pos)) /* Assigment of value for RXFULL in the ASRC_IDR register */
-#define ASRC_IDR_RXCHUNK_Pos                  _UINT32_(3)                                          /* (ASRC_IDR) Receive FIFO Chunk Interrupt Disable Position */
-#define ASRC_IDR_RXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_IDR_RXCHUNK_Pos)              /* (ASRC_IDR) Receive FIFO Chunk Interrupt Disable Mask */
-#define ASRC_IDR_RXCHUNK(value)               (ASRC_IDR_RXCHUNK_Msk & (_UINT32_(value) << ASRC_IDR_RXCHUNK_Pos)) /* Assigment of value for RXCHUNK in the ASRC_IDR register */
-#define ASRC_IDR_RXUDR_Pos                    _UINT32_(4)                                          /* (ASRC_IDR) Receive Under Flow Interrupt Disable Position */
-#define ASRC_IDR_RXUDR_Msk                    (_UINT32_(0x1) << ASRC_IDR_RXUDR_Pos)                /* (ASRC_IDR) Receive Under Flow Interrupt Disable Mask */
-#define ASRC_IDR_RXUDR(value)                 (ASRC_IDR_RXUDR_Msk & (_UINT32_(value) << ASRC_IDR_RXUDR_Pos)) /* Assigment of value for RXUDR in the ASRC_IDR register */
-#define ASRC_IDR_RXOVR_Pos                    _UINT32_(5)                                          /* (ASRC_IDR) Receive Over Flow Interrupt Disable Position */
-#define ASRC_IDR_RXOVR_Msk                    (_UINT32_(0x1) << ASRC_IDR_RXOVR_Pos)                /* (ASRC_IDR) Receive Over Flow Interrupt Disable Mask */
-#define ASRC_IDR_RXOVR(value)                 (ASRC_IDR_RXOVR_Msk & (_UINT32_(value) << ASRC_IDR_RXOVR_Pos)) /* Assigment of value for RXOVR in the ASRC_IDR register */
-#define ASRC_IDR_TXRDY_Pos                    _UINT32_(8)                                          /* (ASRC_IDR) Transmit Ready Interrupt Disable Position */
-#define ASRC_IDR_TXRDY_Msk                    (_UINT32_(0x1) << ASRC_IDR_TXRDY_Pos)                /* (ASRC_IDR) Transmit Ready Interrupt Disable Mask */
-#define ASRC_IDR_TXRDY(value)                 (ASRC_IDR_TXRDY_Msk & (_UINT32_(value) << ASRC_IDR_TXRDY_Pos)) /* Assigment of value for TXRDY in the ASRC_IDR register */
-#define ASRC_IDR_TXEMPTY_Pos                  _UINT32_(9)                                          /* (ASRC_IDR) Transmit FIFO Empty Interrupt Disable Position */
-#define ASRC_IDR_TXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_IDR_TXEMPTY_Pos)              /* (ASRC_IDR) Transmit FIFO Empty Interrupt Disable Mask */
-#define ASRC_IDR_TXEMPTY(value)               (ASRC_IDR_TXEMPTY_Msk & (_UINT32_(value) << ASRC_IDR_TXEMPTY_Pos)) /* Assigment of value for TXEMPTY in the ASRC_IDR register */
-#define ASRC_IDR_TXFULL_Pos                   _UINT32_(10)                                         /* (ASRC_IDR) Transmit FIFO Full Interrupt Disable Position */
-#define ASRC_IDR_TXFULL_Msk                   (_UINT32_(0x1) << ASRC_IDR_TXFULL_Pos)               /* (ASRC_IDR) Transmit FIFO Full Interrupt Disable Mask */
-#define ASRC_IDR_TXFULL(value)                (ASRC_IDR_TXFULL_Msk & (_UINT32_(value) << ASRC_IDR_TXFULL_Pos)) /* Assigment of value for TXFULL in the ASRC_IDR register */
-#define ASRC_IDR_TXCHUNK_Pos                  _UINT32_(11)                                         /* (ASRC_IDR) Transmit FIFO Chunk Interrupt Disable Position */
-#define ASRC_IDR_TXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_IDR_TXCHUNK_Pos)              /* (ASRC_IDR) Transmit FIFO Chunk Interrupt Disable Mask */
-#define ASRC_IDR_TXCHUNK(value)               (ASRC_IDR_TXCHUNK_Msk & (_UINT32_(value) << ASRC_IDR_TXCHUNK_Pos)) /* Assigment of value for TXCHUNK in the ASRC_IDR register */
-#define ASRC_IDR_TXUDR_Pos                    _UINT32_(12)                                         /* (ASRC_IDR) Transmit Under Flow Interrupt Disable Position */
-#define ASRC_IDR_TXUDR_Msk                    (_UINT32_(0x1) << ASRC_IDR_TXUDR_Pos)                /* (ASRC_IDR) Transmit Under Flow Interrupt Disable Mask */
-#define ASRC_IDR_TXUDR(value)                 (ASRC_IDR_TXUDR_Msk & (_UINT32_(value) << ASRC_IDR_TXUDR_Pos)) /* Assigment of value for TXUDR in the ASRC_IDR register */
-#define ASRC_IDR_TXOVR_Pos                    _UINT32_(13)                                         /* (ASRC_IDR) Transmit Over Flow Interrupt Disable Position */
-#define ASRC_IDR_TXOVR_Msk                    (_UINT32_(0x1) << ASRC_IDR_TXOVR_Pos)                /* (ASRC_IDR) Transmit Over Flow Interrupt Disable Mask */
-#define ASRC_IDR_TXOVR(value)                 (ASRC_IDR_TXOVR_Msk & (_UINT32_(value) << ASRC_IDR_TXOVR_Pos)) /* Assigment of value for TXOVR in the ASRC_IDR register */
-#define ASRC_IDR_SECE_Pos                     _UINT32_(16)                                         /* (ASRC_IDR) Security/Safety Report Disable Position */
-#define ASRC_IDR_SECE_Msk                     (_UINT32_(0x1) << ASRC_IDR_SECE_Pos)                 /* (ASRC_IDR) Security/Safety Report Disable Mask */
-#define ASRC_IDR_SECE(value)                  (ASRC_IDR_SECE_Msk & (_UINT32_(value) << ASRC_IDR_SECE_Pos)) /* Assigment of value for SECE in the ASRC_IDR register */
-#define ASRC_IDR_LOCK_Pos                     _UINT32_(30)                                         /* (ASRC_IDR) DPLL locked Interrupt Disable Position */
-#define ASRC_IDR_LOCK_Msk                     (_UINT32_(0x1) << ASRC_IDR_LOCK_Pos)                 /* (ASRC_IDR) DPLL locked Interrupt Disable Mask */
-#define ASRC_IDR_LOCK(value)                  (ASRC_IDR_LOCK_Msk & (_UINT32_(value) << ASRC_IDR_LOCK_Pos)) /* Assigment of value for LOCK in the ASRC_IDR register */
-#define ASRC_IDR_UNLOCK_Pos                   _UINT32_(31)                                         /* (ASRC_IDR) DPLL Unlocked Interrupt Disable Position */
-#define ASRC_IDR_UNLOCK_Msk                   (_UINT32_(0x1) << ASRC_IDR_UNLOCK_Pos)               /* (ASRC_IDR) DPLL Unlocked Interrupt Disable Mask */
-#define ASRC_IDR_UNLOCK(value)                (ASRC_IDR_UNLOCK_Msk & (_UINT32_(value) << ASRC_IDR_UNLOCK_Pos)) /* Assigment of value for UNLOCK in the ASRC_IDR register */
-#define ASRC_IDR_Msk                          _UINT32_(0xC0013F3F)                                 /* (ASRC_IDR) Register Mask  */
-
-
-/* -------- ASRC_IMR : (ASRC Offset: 0x88) ( R/ 32) Interrupt Mask Register x -------- */
-#define ASRC_IMR_RESETVALUE                   _UINT32_(0x00)                                       /*  (ASRC_IMR) Interrupt Mask Register x  Reset Value */
-
-#define ASRC_IMR_RXRDY_Pos                    _UINT32_(0)                                          /* (ASRC_IMR) Receive Ready Interrupt Mask Position */
-#define ASRC_IMR_RXRDY_Msk                    (_UINT32_(0x1) << ASRC_IMR_RXRDY_Pos)                /* (ASRC_IMR) Receive Ready Interrupt Mask Mask */
-#define ASRC_IMR_RXRDY(value)                 (ASRC_IMR_RXRDY_Msk & (_UINT32_(value) << ASRC_IMR_RXRDY_Pos)) /* Assigment of value for RXRDY in the ASRC_IMR register */
-#define ASRC_IMR_RXEMPTY_Pos                  _UINT32_(1)                                          /* (ASRC_IMR) Receive FIFO Empty Interrupt Mask Position */
-#define ASRC_IMR_RXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_IMR_RXEMPTY_Pos)              /* (ASRC_IMR) Receive FIFO Empty Interrupt Mask Mask */
-#define ASRC_IMR_RXEMPTY(value)               (ASRC_IMR_RXEMPTY_Msk & (_UINT32_(value) << ASRC_IMR_RXEMPTY_Pos)) /* Assigment of value for RXEMPTY in the ASRC_IMR register */
-#define ASRC_IMR_RXFULL_Pos                   _UINT32_(2)                                          /* (ASRC_IMR) Receive FIFO Full Interrupt Mask Position */
-#define ASRC_IMR_RXFULL_Msk                   (_UINT32_(0x1) << ASRC_IMR_RXFULL_Pos)               /* (ASRC_IMR) Receive FIFO Full Interrupt Mask Mask */
-#define ASRC_IMR_RXFULL(value)                (ASRC_IMR_RXFULL_Msk & (_UINT32_(value) << ASRC_IMR_RXFULL_Pos)) /* Assigment of value for RXFULL in the ASRC_IMR register */
-#define ASRC_IMR_RXCHUNK_Pos                  _UINT32_(3)                                          /* (ASRC_IMR) Receive FIFO Chunk Interrupt Mask Position */
-#define ASRC_IMR_RXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_IMR_RXCHUNK_Pos)              /* (ASRC_IMR) Receive FIFO Chunk Interrupt Mask Mask */
-#define ASRC_IMR_RXCHUNK(value)               (ASRC_IMR_RXCHUNK_Msk & (_UINT32_(value) << ASRC_IMR_RXCHUNK_Pos)) /* Assigment of value for RXCHUNK in the ASRC_IMR register */
-#define ASRC_IMR_RXUDR_Pos                    _UINT32_(4)                                          /* (ASRC_IMR) Receive Under Flow Interrupt Mask Position */
-#define ASRC_IMR_RXUDR_Msk                    (_UINT32_(0x1) << ASRC_IMR_RXUDR_Pos)                /* (ASRC_IMR) Receive Under Flow Interrupt Mask Mask */
-#define ASRC_IMR_RXUDR(value)                 (ASRC_IMR_RXUDR_Msk & (_UINT32_(value) << ASRC_IMR_RXUDR_Pos)) /* Assigment of value for RXUDR in the ASRC_IMR register */
-#define ASRC_IMR_RXOVR_Pos                    _UINT32_(5)                                          /* (ASRC_IMR) Receive Over Flow Interrupt Mask Position */
-#define ASRC_IMR_RXOVR_Msk                    (_UINT32_(0x1) << ASRC_IMR_RXOVR_Pos)                /* (ASRC_IMR) Receive Over Flow Interrupt Mask Mask */
-#define ASRC_IMR_RXOVR(value)                 (ASRC_IMR_RXOVR_Msk & (_UINT32_(value) << ASRC_IMR_RXOVR_Pos)) /* Assigment of value for RXOVR in the ASRC_IMR register */
-#define ASRC_IMR_TXRDY_Pos                    _UINT32_(8)                                          /* (ASRC_IMR) Transmit Ready Interrupt Mask Position */
-#define ASRC_IMR_TXRDY_Msk                    (_UINT32_(0x1) << ASRC_IMR_TXRDY_Pos)                /* (ASRC_IMR) Transmit Ready Interrupt Mask Mask */
-#define ASRC_IMR_TXRDY(value)                 (ASRC_IMR_TXRDY_Msk & (_UINT32_(value) << ASRC_IMR_TXRDY_Pos)) /* Assigment of value for TXRDY in the ASRC_IMR register */
-#define ASRC_IMR_TXEMPTY_Pos                  _UINT32_(9)                                          /* (ASRC_IMR) Transmit FIFO Empty Interrupt Mask Position */
-#define ASRC_IMR_TXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_IMR_TXEMPTY_Pos)              /* (ASRC_IMR) Transmit FIFO Empty Interrupt Mask Mask */
-#define ASRC_IMR_TXEMPTY(value)               (ASRC_IMR_TXEMPTY_Msk & (_UINT32_(value) << ASRC_IMR_TXEMPTY_Pos)) /* Assigment of value for TXEMPTY in the ASRC_IMR register */
-#define ASRC_IMR_TXFULL_Pos                   _UINT32_(10)                                         /* (ASRC_IMR) Transmit FIFO Full Interrupt Mask Position */
-#define ASRC_IMR_TXFULL_Msk                   (_UINT32_(0x1) << ASRC_IMR_TXFULL_Pos)               /* (ASRC_IMR) Transmit FIFO Full Interrupt Mask Mask */
-#define ASRC_IMR_TXFULL(value)                (ASRC_IMR_TXFULL_Msk & (_UINT32_(value) << ASRC_IMR_TXFULL_Pos)) /* Assigment of value for TXFULL in the ASRC_IMR register */
-#define ASRC_IMR_TXCHUNK_Pos                  _UINT32_(11)                                         /* (ASRC_IMR) Transmit FIFO Chunk Interrupt Mask Position */
-#define ASRC_IMR_TXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_IMR_TXCHUNK_Pos)              /* (ASRC_IMR) Transmit FIFO Chunk Interrupt Mask Mask */
-#define ASRC_IMR_TXCHUNK(value)               (ASRC_IMR_TXCHUNK_Msk & (_UINT32_(value) << ASRC_IMR_TXCHUNK_Pos)) /* Assigment of value for TXCHUNK in the ASRC_IMR register */
-#define ASRC_IMR_TXUDR_Pos                    _UINT32_(12)                                         /* (ASRC_IMR) Transmit Under Flow Interrupt Mask Position */
-#define ASRC_IMR_TXUDR_Msk                    (_UINT32_(0x1) << ASRC_IMR_TXUDR_Pos)                /* (ASRC_IMR) Transmit Under Flow Interrupt Mask Mask */
-#define ASRC_IMR_TXUDR(value)                 (ASRC_IMR_TXUDR_Msk & (_UINT32_(value) << ASRC_IMR_TXUDR_Pos)) /* Assigment of value for TXUDR in the ASRC_IMR register */
-#define ASRC_IMR_TXOVR_Pos                    _UINT32_(13)                                         /* (ASRC_IMR) Transmit Over Flow Interrupt Mask Position */
-#define ASRC_IMR_TXOVR_Msk                    (_UINT32_(0x1) << ASRC_IMR_TXOVR_Pos)                /* (ASRC_IMR) Transmit Over Flow Interrupt Mask Mask */
-#define ASRC_IMR_TXOVR(value)                 (ASRC_IMR_TXOVR_Msk & (_UINT32_(value) << ASRC_IMR_TXOVR_Pos)) /* Assigment of value for TXOVR in the ASRC_IMR register */
-#define ASRC_IMR_SECE_Pos                     _UINT32_(16)                                         /* (ASRC_IMR) Security/Safety Report Mask Position */
-#define ASRC_IMR_SECE_Msk                     (_UINT32_(0x1) << ASRC_IMR_SECE_Pos)                 /* (ASRC_IMR) Security/Safety Report Mask Mask */
-#define ASRC_IMR_SECE(value)                  (ASRC_IMR_SECE_Msk & (_UINT32_(value) << ASRC_IMR_SECE_Pos)) /* Assigment of value for SECE in the ASRC_IMR register */
-#define ASRC_IMR_LOCK_Pos                     _UINT32_(30)                                         /* (ASRC_IMR) DPLL locked Interrupt Mask Position */
-#define ASRC_IMR_LOCK_Msk                     (_UINT32_(0x1) << ASRC_IMR_LOCK_Pos)                 /* (ASRC_IMR) DPLL locked Interrupt Mask Mask */
-#define ASRC_IMR_LOCK(value)                  (ASRC_IMR_LOCK_Msk & (_UINT32_(value) << ASRC_IMR_LOCK_Pos)) /* Assigment of value for LOCK in the ASRC_IMR register */
-#define ASRC_IMR_UNLOCK_Pos                   _UINT32_(31)                                         /* (ASRC_IMR) DPLL Unlocked Interrupt Mask Position */
-#define ASRC_IMR_UNLOCK_Msk                   (_UINT32_(0x1) << ASRC_IMR_UNLOCK_Pos)               /* (ASRC_IMR) DPLL Unlocked Interrupt Mask Mask */
-#define ASRC_IMR_UNLOCK(value)                (ASRC_IMR_UNLOCK_Msk & (_UINT32_(value) << ASRC_IMR_UNLOCK_Pos)) /* Assigment of value for UNLOCK in the ASRC_IMR register */
-#define ASRC_IMR_Msk                          _UINT32_(0xC0013F3F)                                 /* (ASRC_IMR) Register Mask  */
-
-
-/* -------- ASRC_ISR : (ASRC Offset: 0x98) ( R/ 32) Interrupt Status Register x -------- */
-#define ASRC_ISR_RESETVALUE                   _UINT32_(0x80000302)                                 /*  (ASRC_ISR) Interrupt Status Register x  Reset Value */
-
-#define ASRC_ISR_RXRDY_Pos                    _UINT32_(0)                                          /* (ASRC_ISR) Receive Ready Interrupt Status Position */
-#define ASRC_ISR_RXRDY_Msk                    (_UINT32_(0x1) << ASRC_ISR_RXRDY_Pos)                /* (ASRC_ISR) Receive Ready Interrupt Status Mask */
-#define ASRC_ISR_RXRDY(value)                 (ASRC_ISR_RXRDY_Msk & (_UINT32_(value) << ASRC_ISR_RXRDY_Pos)) /* Assigment of value for RXRDY in the ASRC_ISR register */
-#define ASRC_ISR_RXEMPTY_Pos                  _UINT32_(1)                                          /* (ASRC_ISR) Receive FIFO Empty Interrupt Status Position */
-#define ASRC_ISR_RXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_ISR_RXEMPTY_Pos)              /* (ASRC_ISR) Receive FIFO Empty Interrupt Status Mask */
-#define ASRC_ISR_RXEMPTY(value)               (ASRC_ISR_RXEMPTY_Msk & (_UINT32_(value) << ASRC_ISR_RXEMPTY_Pos)) /* Assigment of value for RXEMPTY in the ASRC_ISR register */
-#define ASRC_ISR_RXFULL_Pos                   _UINT32_(2)                                          /* (ASRC_ISR) Receive FIFO Full Interrupt Status Position */
-#define ASRC_ISR_RXFULL_Msk                   (_UINT32_(0x1) << ASRC_ISR_RXFULL_Pos)               /* (ASRC_ISR) Receive FIFO Full Interrupt Status Mask */
-#define ASRC_ISR_RXFULL(value)                (ASRC_ISR_RXFULL_Msk & (_UINT32_(value) << ASRC_ISR_RXFULL_Pos)) /* Assigment of value for RXFULL in the ASRC_ISR register */
-#define ASRC_ISR_RXCHUNK_Pos                  _UINT32_(3)                                          /* (ASRC_ISR) Receive FIFO Chunk Interrupt Status Position */
-#define ASRC_ISR_RXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_ISR_RXCHUNK_Pos)              /* (ASRC_ISR) Receive FIFO Chunk Interrupt Status Mask */
-#define ASRC_ISR_RXCHUNK(value)               (ASRC_ISR_RXCHUNK_Msk & (_UINT32_(value) << ASRC_ISR_RXCHUNK_Pos)) /* Assigment of value for RXCHUNK in the ASRC_ISR register */
-#define ASRC_ISR_RXUDR_Pos                    _UINT32_(4)                                          /* (ASRC_ISR) Receive Under Flow Interrupt Status (cleared on read) Position */
-#define ASRC_ISR_RXUDR_Msk                    (_UINT32_(0x1) << ASRC_ISR_RXUDR_Pos)                /* (ASRC_ISR) Receive Under Flow Interrupt Status (cleared on read) Mask */
-#define ASRC_ISR_RXUDR(value)                 (ASRC_ISR_RXUDR_Msk & (_UINT32_(value) << ASRC_ISR_RXUDR_Pos)) /* Assigment of value for RXUDR in the ASRC_ISR register */
-#define ASRC_ISR_RXOVR_Pos                    _UINT32_(5)                                          /* (ASRC_ISR) Receive Over Flow Interrupt Status (cleared on read) Position */
-#define ASRC_ISR_RXOVR_Msk                    (_UINT32_(0x1) << ASRC_ISR_RXOVR_Pos)                /* (ASRC_ISR) Receive Over Flow Interrupt Status (cleared on read) Mask */
-#define ASRC_ISR_RXOVR(value)                 (ASRC_ISR_RXOVR_Msk & (_UINT32_(value) << ASRC_ISR_RXOVR_Pos)) /* Assigment of value for RXOVR in the ASRC_ISR register */
-#define ASRC_ISR_TXRDY_Pos                    _UINT32_(8)                                          /* (ASRC_ISR) Transmit Ready Interrupt Status Position */
-#define ASRC_ISR_TXRDY_Msk                    (_UINT32_(0x1) << ASRC_ISR_TXRDY_Pos)                /* (ASRC_ISR) Transmit Ready Interrupt Status Mask */
-#define ASRC_ISR_TXRDY(value)                 (ASRC_ISR_TXRDY_Msk & (_UINT32_(value) << ASRC_ISR_TXRDY_Pos)) /* Assigment of value for TXRDY in the ASRC_ISR register */
-#define ASRC_ISR_TXEMPTY_Pos                  _UINT32_(9)                                          /* (ASRC_ISR) Transmit FIFO Empty Interrupt Status Position */
-#define ASRC_ISR_TXEMPTY_Msk                  (_UINT32_(0x1) << ASRC_ISR_TXEMPTY_Pos)              /* (ASRC_ISR) Transmit FIFO Empty Interrupt Status Mask */
-#define ASRC_ISR_TXEMPTY(value)               (ASRC_ISR_TXEMPTY_Msk & (_UINT32_(value) << ASRC_ISR_TXEMPTY_Pos)) /* Assigment of value for TXEMPTY in the ASRC_ISR register */
-#define ASRC_ISR_TXFULL_Pos                   _UINT32_(10)                                         /* (ASRC_ISR) Transmit FIFO Full Interrupt Status Position */
-#define ASRC_ISR_TXFULL_Msk                   (_UINT32_(0x1) << ASRC_ISR_TXFULL_Pos)               /* (ASRC_ISR) Transmit FIFO Full Interrupt Status Mask */
-#define ASRC_ISR_TXFULL(value)                (ASRC_ISR_TXFULL_Msk & (_UINT32_(value) << ASRC_ISR_TXFULL_Pos)) /* Assigment of value for TXFULL in the ASRC_ISR register */
-#define ASRC_ISR_TXCHUNK_Pos                  _UINT32_(11)                                         /* (ASRC_ISR) Transmit FIFO Chunk Interrupt Status Position */
-#define ASRC_ISR_TXCHUNK_Msk                  (_UINT32_(0x1) << ASRC_ISR_TXCHUNK_Pos)              /* (ASRC_ISR) Transmit FIFO Chunk Interrupt Status Mask */
-#define ASRC_ISR_TXCHUNK(value)               (ASRC_ISR_TXCHUNK_Msk & (_UINT32_(value) << ASRC_ISR_TXCHUNK_Pos)) /* Assigment of value for TXCHUNK in the ASRC_ISR register */
-#define ASRC_ISR_TXUDR_Pos                    _UINT32_(12)                                         /* (ASRC_ISR) Transmit Under Flow Interrupt Status (cleared on read) Position */
-#define ASRC_ISR_TXUDR_Msk                    (_UINT32_(0x1) << ASRC_ISR_TXUDR_Pos)                /* (ASRC_ISR) Transmit Under Flow Interrupt Status (cleared on read) Mask */
-#define ASRC_ISR_TXUDR(value)                 (ASRC_ISR_TXUDR_Msk & (_UINT32_(value) << ASRC_ISR_TXUDR_Pos)) /* Assigment of value for TXUDR in the ASRC_ISR register */
-#define ASRC_ISR_TXOVR_Pos                    _UINT32_(13)                                         /* (ASRC_ISR) Transmit Over Flow Interrupt Status (cleared on read) Position */
-#define ASRC_ISR_TXOVR_Msk                    (_UINT32_(0x1) << ASRC_ISR_TXOVR_Pos)                /* (ASRC_ISR) Transmit Over Flow Interrupt Status (cleared on read) Mask */
-#define ASRC_ISR_TXOVR(value)                 (ASRC_ISR_TXOVR_Msk & (_UINT32_(value) << ASRC_ISR_TXOVR_Pos)) /* Assigment of value for TXOVR in the ASRC_ISR register */
-#define ASRC_ISR_SECE_Pos                     _UINT32_(16)                                         /* (ASRC_ISR) Security and/or Safety Event (cleared on read) Position */
-#define ASRC_ISR_SECE_Msk                     (_UINT32_(0x1) << ASRC_ISR_SECE_Pos)                 /* (ASRC_ISR) Security and/or Safety Event (cleared on read) Mask */
-#define ASRC_ISR_SECE(value)                  (ASRC_ISR_SECE_Msk & (_UINT32_(value) << ASRC_ISR_SECE_Pos)) /* Assigment of value for SECE in the ASRC_ISR register */
-#define   ASRC_ISR_SECE_0_Val                 _UINT32_(0x0)                                        /* (ASRC_ISR) No security or safety event has occurred since the last read of ASRC_ISR register  */
-#define   ASRC_ISR_SECE_1_Val                 _UINT32_(0x1)                                        /* (ASRC_ISR) One or more safety or security events has occurred since the last read of ASRC_ISR. For details on the event, refer to ASRC_WPSR.  */
-#define ASRC_ISR_SECE_0                       (ASRC_ISR_SECE_0_Val << ASRC_ISR_SECE_Pos)           /* (ASRC_ISR) No security or safety event has occurred since the last read of ASRC_ISR register Position  */
-#define ASRC_ISR_SECE_1                       (ASRC_ISR_SECE_1_Val << ASRC_ISR_SECE_Pos)           /* (ASRC_ISR) One or more safety or security events has occurred since the last read of ASRC_ISR. For details on the event, refer to ASRC_WPSR. Position  */
-#define ASRC_ISR_LOCK_Pos                     _UINT32_(30)                                         /* (ASRC_ISR) DPLL locked Interrupt Status Position */
-#define ASRC_ISR_LOCK_Msk                     (_UINT32_(0x1) << ASRC_ISR_LOCK_Pos)                 /* (ASRC_ISR) DPLL locked Interrupt Status Mask */
-#define ASRC_ISR_LOCK(value)                  (ASRC_ISR_LOCK_Msk & (_UINT32_(value) << ASRC_ISR_LOCK_Pos)) /* Assigment of value for LOCK in the ASRC_ISR register */
-#define ASRC_ISR_UNLOCK_Pos                   _UINT32_(31)                                         /* (ASRC_ISR) DPLL Unlocked Interrupt Status Position */
-#define ASRC_ISR_UNLOCK_Msk                   (_UINT32_(0x1) << ASRC_ISR_UNLOCK_Pos)               /* (ASRC_ISR) DPLL Unlocked Interrupt Status Mask */
-#define ASRC_ISR_UNLOCK(value)                (ASRC_ISR_UNLOCK_Msk & (_UINT32_(value) << ASRC_ISR_UNLOCK_Pos)) /* Assigment of value for UNLOCK in the ASRC_ISR register */
-#define ASRC_ISR_Msk                          _UINT32_(0xC0013F3F)                                 /* (ASRC_ISR) Register Mask  */
-
-
-/* -------- ASRC_ESR : (ASRC Offset: 0xA8) ( R/ 32) Error Status Register -------- */
-#define ASRC_ESR_RESETVALUE                   _UINT32_(0x00)                                       /*  (ASRC_ESR) Error Status Register  Reset Value */
-
-#define ASRC_ESR_INCFGERR_Pos                 _UINT32_(0)                                          /* (ASRC_ESR) Input Configuration Error Position */
-#define ASRC_ESR_INCFGERR_Msk                 (_UINT32_(0x1F) << ASRC_ESR_INCFGERR_Pos)            /* (ASRC_ESR) Input Configuration Error Mask */
-#define ASRC_ESR_INCFGERR(value)              (ASRC_ESR_INCFGERR_Msk & (_UINT32_(value) << ASRC_ESR_INCFGERR_Pos)) /* Assigment of value for INCFGERR in the ASRC_ESR register */
-#define   ASRC_ESR_INCFGERR_OUTCFG_OK_Val     _UINT32_(0x0)                                        /* (ASRC_ESR) Correct configuration of ASRC_MR, ASRC_VBPS_OUT, ASRC_CH_CONF.  */
-#define   ASRC_ESR_INCFGERR_OP0_D0_CHK16_8M_Val _UINT32_(0x1)                                        /* (ASRC_ESR) Channel operating mode 0, DSP0: CHUNK0=16 or CHUNK0=8 and MONO0=1 is not supported.  */
-#define   ASRC_ESR_INCFGERR_OP0_D1_CHK16_8M_Val _UINT32_(0x2)                                        /* (ASRC_ESR) Channel operating mode 0, DSP1: CHUNK1=16 or CHUNK1=8 and MONO1=1 is not supported.  */
-#define   ASRC_ESR_INCFGERR_OP0_D2_CHK16_8M_Val _UINT32_(0x3)                                        /* (ASRC_ESR) Channel operating mode 0, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported.  */
-#define   ASRC_ESR_INCFGERR_OP0_D3_CHK16_8M_Val _UINT32_(0x4)                                        /* (ASRC_ESR) Channel operating mode 0, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported.  */
-#define   ASRC_ESR_INCFGERR_OP1_D01_EN_Val    _UINT32_(0x5)                                        /* (ASRC_ESR) Channel operating mode 1, DSP0/1: enable configuration is not correct (1 DSP is disabled)  */
-#define   ASRC_ESR_INCFGERR_OP1_D01_M_Val     _UINT32_(0x6)                                        /* (ASRC_ESR) Channel operating mode 1, DSP0/1: MONO0=1, MONO1=0 is not supported.  */
-#define   ASRC_ESR_INCFGERR_OP1_D01_CHK16_Val _UINT32_(0x7)                                        /* (ASRC_ESR) Channel operating mode 1, DSP0/1: CHUNK0=16 is not supported.  */
-#define   ASRC_ESR_INCFGERR_OP1_D2_CHK16_8M_Val _UINT32_(0x8)                                        /* (ASRC_ESR) Channel operating mode 1, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported.  */
-#define   ASRC_ESR_INCFGERR_OP1_D3_CHK16_8M_Val _UINT32_(0x9)                                        /* (ASRC_ESR) Channel operating mode 1, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported.  */
-#define   ASRC_ESR_INCFGERR_OP2_D01_EN_Val    _UINT32_(0xA)                                        /* (ASRC_ESR) Channel operating mode 2, DSP0/1: enable configuration is not correct (1 DSP is disabled)  */
-#define   ASRC_ESR_INCFGERR_OP2_D01_M_Val     _UINT32_(0xB)                                        /* (ASRC_ESR) Channel operating mode 2, DSP0/1: MONO0=1, MONO1=0 is not supported.  */
-#define   ASRC_ESR_INCFGERR_OP2_D01_CHK16_Val _UINT32_(0xC)                                        /* (ASRC_ESR) Channel operating mode 2, DSP0/1: CHUNK0=16 is not supported.  */
-#define   ASRC_ESR_INCFGERR_OP2_D23_EN_Val    _UINT32_(0xD)                                        /* (ASRC_ESR) Channel operating mode 2, DSP2/3: enable configuration is not correct (1 DSP is disabled)  */
-#define   ASRC_ESR_INCFGERR_OP2_D23_M_Val     _UINT32_(0xE)                                        /* (ASRC_ESR) Channel operating mode 2, DSP2/3: MONO2=1, MONO3=0 is not supported.  */
-#define   ASRC_ESR_INCFGERR_OP2_D23_CHK16_Val _UINT32_(0xF)                                        /* (ASRC_ESR) Channel operating mode 2, DSP2/3: CHUNK2=16 is not supported.  */
-#define   ASRC_ESR_INCFGERR_OP3_D012_EN_Val   _UINT32_(0x10)                                       /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: enable configuration is not correct (at least 1 DSP is disabled)  */
-#define   ASRC_ESR_INCFGERR_OP3_D012_M_Val    _UINT32_(0x11)                                       /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 is not supported).  */
-#define   ASRC_ESR_INCFGERR_OP3_D012_CHK16_Val _UINT32_(0x12)                                       /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: CHUNK0=16 is not supported.  */
-#define   ASRC_ESR_INCFGERR_OP3_D3_CHK16_8M_Val _UINT32_(0x13)                                       /* (ASRC_ESR) Channel operating mode 3, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3 is not supported.  */
-#define   ASRC_ESR_INCFGERR_OP4_D0123_EN_Val  _UINT32_(0x14)                                       /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: enable configuration is not correct (at least 1 DSP is disabled)  */
-#define   ASRC_ESR_INCFGERR_OP4_D0123_M_Val   _UINT32_(0x15)                                       /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 or MONO3=0 is not supported).  */
-#define ASRC_ESR_INCFGERR_OUTCFG_OK           (ASRC_ESR_INCFGERR_OUTCFG_OK_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Correct configuration of ASRC_MR, ASRC_VBPS_OUT, ASRC_CH_CONF. Position  */
-#define ASRC_ESR_INCFGERR_OP0_D0_CHK16_8M     (ASRC_ESR_INCFGERR_OP0_D0_CHK16_8M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP0: CHUNK0=16 or CHUNK0=8 and MONO0=1 is not supported. Position  */
-#define ASRC_ESR_INCFGERR_OP0_D1_CHK16_8M     (ASRC_ESR_INCFGERR_OP0_D1_CHK16_8M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP1: CHUNK1=16 or CHUNK1=8 and MONO1=1 is not supported. Position  */
-#define ASRC_ESR_INCFGERR_OP0_D2_CHK16_8M     (ASRC_ESR_INCFGERR_OP0_D2_CHK16_8M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported. Position  */
-#define ASRC_ESR_INCFGERR_OP0_D3_CHK16_8M     (ASRC_ESR_INCFGERR_OP0_D3_CHK16_8M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported. Position  */
-#define ASRC_ESR_INCFGERR_OP1_D01_EN          (ASRC_ESR_INCFGERR_OP1_D01_EN_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP0/1: enable configuration is not correct (1 DSP is disabled) Position  */
-#define ASRC_ESR_INCFGERR_OP1_D01_M           (ASRC_ESR_INCFGERR_OP1_D01_M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP0/1: MONO0=1, MONO1=0 is not supported. Position  */
-#define ASRC_ESR_INCFGERR_OP1_D01_CHK16       (ASRC_ESR_INCFGERR_OP1_D01_CHK16_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP0/1: CHUNK0=16 is not supported. Position  */
-#define ASRC_ESR_INCFGERR_OP1_D2_CHK16_8M     (ASRC_ESR_INCFGERR_OP1_D2_CHK16_8M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported. Position  */
-#define ASRC_ESR_INCFGERR_OP1_D3_CHK16_8M     (ASRC_ESR_INCFGERR_OP1_D3_CHK16_8M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported. Position  */
-#define ASRC_ESR_INCFGERR_OP2_D01_EN          (ASRC_ESR_INCFGERR_OP2_D01_EN_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP0/1: enable configuration is not correct (1 DSP is disabled) Position  */
-#define ASRC_ESR_INCFGERR_OP2_D01_M           (ASRC_ESR_INCFGERR_OP2_D01_M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP0/1: MONO0=1, MONO1=0 is not supported. Position  */
-#define ASRC_ESR_INCFGERR_OP2_D01_CHK16       (ASRC_ESR_INCFGERR_OP2_D01_CHK16_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP0/1: CHUNK0=16 is not supported. Position  */
-#define ASRC_ESR_INCFGERR_OP2_D23_EN          (ASRC_ESR_INCFGERR_OP2_D23_EN_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP2/3: enable configuration is not correct (1 DSP is disabled) Position  */
-#define ASRC_ESR_INCFGERR_OP2_D23_M           (ASRC_ESR_INCFGERR_OP2_D23_M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP2/3: MONO2=1, MONO3=0 is not supported. Position  */
-#define ASRC_ESR_INCFGERR_OP2_D23_CHK16       (ASRC_ESR_INCFGERR_OP2_D23_CHK16_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP2/3: CHUNK2=16 is not supported. Position  */
-#define ASRC_ESR_INCFGERR_OP3_D012_EN         (ASRC_ESR_INCFGERR_OP3_D012_EN_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: enable configuration is not correct (at least 1 DSP is disabled) Position  */
-#define ASRC_ESR_INCFGERR_OP3_D012_M          (ASRC_ESR_INCFGERR_OP3_D012_M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 is not supported). Position  */
-#define ASRC_ESR_INCFGERR_OP3_D012_CHK16      (ASRC_ESR_INCFGERR_OP3_D012_CHK16_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: CHUNK0=16 is not supported. Position  */
-#define ASRC_ESR_INCFGERR_OP3_D3_CHK16_8M     (ASRC_ESR_INCFGERR_OP3_D3_CHK16_8M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3 is not supported. Position  */
-#define ASRC_ESR_INCFGERR_OP4_D0123_EN        (ASRC_ESR_INCFGERR_OP4_D0123_EN_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: enable configuration is not correct (at least 1 DSP is disabled) Position  */
-#define ASRC_ESR_INCFGERR_OP4_D0123_M         (ASRC_ESR_INCFGERR_OP4_D0123_M_Val << ASRC_ESR_INCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 or MONO3=0 is not supported). Position  */
-#define ASRC_ESR_OUTCFGERR_Pos                _UINT32_(8)                                          /* (ASRC_ESR) Output Configuration Error Position */
-#define ASRC_ESR_OUTCFGERR_Msk                (_UINT32_(0x1F) << ASRC_ESR_OUTCFGERR_Pos)           /* (ASRC_ESR) Output Configuration Error Mask */
-#define ASRC_ESR_OUTCFGERR(value)             (ASRC_ESR_OUTCFGERR_Msk & (_UINT32_(value) << ASRC_ESR_OUTCFGERR_Pos)) /* Assigment of value for OUTCFGERR in the ASRC_ESR register */
-#define   ASRC_ESR_OUTCFGERR_OUTCFG_OK_Val    _UINT32_(0x0)                                        /* (ASRC_ESR) Correct configuration of ASRC_MR, ASRC_VBPS_OUT, ASRC_CH_CONF.  */
-#define   ASRC_ESR_OUTCFGERR_OP0_D0_CHK16_8M_Val _UINT32_(0x1)                                        /* (ASRC_ESR) Channel operating mode 0, DSP0: CHUNK0=16 or CHUNK0=8 and MONO0=1 is not supported.  */
-#define   ASRC_ESR_OUTCFGERR_OP0_D1_CHK16_8M_Val _UINT32_(0x2)                                        /* (ASRC_ESR) Channel operating mode 0, DSP1: CHUNK1=16 or CHUNK1=8 and MONO1=1 is not supported.  */
-#define   ASRC_ESR_OUTCFGERR_OP0_D2_CHK16_8M_Val _UINT32_(0x3)                                        /* (ASRC_ESR) Channel operating mode 0, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported.  */
-#define   ASRC_ESR_OUTCFGERR_OP0_D3_CHK16_8M_Val _UINT32_(0x4)                                        /* (ASRC_ESR) Channel operating mode 0, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported.  */
-#define   ASRC_ESR_OUTCFGERR_OP1_D01_EN_Val   _UINT32_(0x5)                                        /* (ASRC_ESR) Channel operating mode 1, DSP0/1: enable configuration is not correct (1 DSP is disabled)  */
-#define   ASRC_ESR_OUTCFGERR_OP1_D01_M_Val    _UINT32_(0x6)                                        /* (ASRC_ESR) Channel operating mode 1, DSP0/1: MONO0=1, MONO1=0 is not supported.  */
-#define   ASRC_ESR_OUTCFGERR_OP1_D01_CHK16_Val _UINT32_(0x7)                                        /* (ASRC_ESR) Channel operating mode 1, DSP0/1: CHUNK0=16 is not supported.  */
-#define   ASRC_ESR_OUTCFGERR_OP1_D2_CHK16_8M_Val _UINT32_(0x8)                                        /* (ASRC_ESR) Channel operating mode 1, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported.  */
-#define   ASRC_ESR_OUTCFGERR_OP1_D3_CHK16_8M_Val _UINT32_(0x9)                                        /* (ASRC_ESR) Channel operating mode 1, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported.  */
-#define   ASRC_ESR_OUTCFGERR_OP2_D01_EN_Val   _UINT32_(0xA)                                        /* (ASRC_ESR) Channel operating mode 2, DSP0/1: enable configuration is not correct (1 DSP is disabled)  */
-#define   ASRC_ESR_OUTCFGERR_OP2_D01_M_Val    _UINT32_(0xB)                                        /* (ASRC_ESR) Channel operating mode 2, DSP0/1: MONO0=1, MONO1=0 is not supported.  */
-#define   ASRC_ESR_OUTCFGERR_OP2_D01_CHK16_Val _UINT32_(0xC)                                        /* (ASRC_ESR) Channel operating mode 2, DSP0/1: CHUNK0=16 is not supported.  */
-#define   ASRC_ESR_OUTCFGERR_OP2_D23_EN_Val   _UINT32_(0xD)                                        /* (ASRC_ESR) Channel operating mode 2, DSP2/3: enable configuration is not correct (1 DSP is disabled)  */
-#define   ASRC_ESR_OUTCFGERR_OP2_D23_M_Val    _UINT32_(0xE)                                        /* (ASRC_ESR) Channel operating mode 2, DSP2/3: MONO2=1, MONO3=0 is not supported.  */
-#define   ASRC_ESR_OUTCFGERR_OP2_D23_CHK16_Val _UINT32_(0xF)                                        /* (ASRC_ESR) Channel operating mode 2, DSP2/3: CHUNK2=16 is not supported.  */
-#define   ASRC_ESR_OUTCFGERR_OP3_D012_EN_Val  _UINT32_(0x10)                                       /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: enable configuration is not correct (at least 1 DSP is disabled)  */
-#define   ASRC_ESR_OUTCFGERR_OP3_D012_M_Val   _UINT32_(0x11)                                       /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 is not supported).  */
-#define   ASRC_ESR_OUTCFGERR_OP3_D012_CHK16_Val _UINT32_(0x12)                                       /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: CHUNK0=16 is not supported.  */
-#define   ASRC_ESR_OUTCFGERR_OP3_D3_CHK16_8M_Val _UINT32_(0x13)                                       /* (ASRC_ESR) Channel operating mode 3, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3 is not supported.  */
-#define   ASRC_ESR_OUTCFGERR_OP4_D0123_EN_Val _UINT32_(0x14)                                       /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: enable configuration is not correct (at least 1 DSP is disabled)  */
-#define   ASRC_ESR_OUTCFGERR_OP4_D0123_M_Val  _UINT32_(0x15)                                       /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 or MONO3=0 is not supported).  */
-#define ASRC_ESR_OUTCFGERR_OUTCFG_OK          (ASRC_ESR_OUTCFGERR_OUTCFG_OK_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Correct configuration of ASRC_MR, ASRC_VBPS_OUT, ASRC_CH_CONF. Position  */
-#define ASRC_ESR_OUTCFGERR_OP0_D0_CHK16_8M    (ASRC_ESR_OUTCFGERR_OP0_D0_CHK16_8M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP0: CHUNK0=16 or CHUNK0=8 and MONO0=1 is not supported. Position  */
-#define ASRC_ESR_OUTCFGERR_OP0_D1_CHK16_8M    (ASRC_ESR_OUTCFGERR_OP0_D1_CHK16_8M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP1: CHUNK1=16 or CHUNK1=8 and MONO1=1 is not supported. Position  */
-#define ASRC_ESR_OUTCFGERR_OP0_D2_CHK16_8M    (ASRC_ESR_OUTCFGERR_OP0_D2_CHK16_8M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported. Position  */
-#define ASRC_ESR_OUTCFGERR_OP0_D3_CHK16_8M    (ASRC_ESR_OUTCFGERR_OP0_D3_CHK16_8M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 0, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported. Position  */
-#define ASRC_ESR_OUTCFGERR_OP1_D01_EN         (ASRC_ESR_OUTCFGERR_OP1_D01_EN_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP0/1: enable configuration is not correct (1 DSP is disabled) Position  */
-#define ASRC_ESR_OUTCFGERR_OP1_D01_M          (ASRC_ESR_OUTCFGERR_OP1_D01_M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP0/1: MONO0=1, MONO1=0 is not supported. Position  */
-#define ASRC_ESR_OUTCFGERR_OP1_D01_CHK16      (ASRC_ESR_OUTCFGERR_OP1_D01_CHK16_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP0/1: CHUNK0=16 is not supported. Position  */
-#define ASRC_ESR_OUTCFGERR_OP1_D2_CHK16_8M    (ASRC_ESR_OUTCFGERR_OP1_D2_CHK16_8M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP2: CHUNK2=16 or CHUNK2=8 and MONO2=1 is not supported. Position  */
-#define ASRC_ESR_OUTCFGERR_OP1_D3_CHK16_8M    (ASRC_ESR_OUTCFGERR_OP1_D3_CHK16_8M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 1, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3=1 is not supported. Position  */
-#define ASRC_ESR_OUTCFGERR_OP2_D01_EN         (ASRC_ESR_OUTCFGERR_OP2_D01_EN_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP0/1: enable configuration is not correct (1 DSP is disabled) Position  */
-#define ASRC_ESR_OUTCFGERR_OP2_D01_M          (ASRC_ESR_OUTCFGERR_OP2_D01_M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP0/1: MONO0=1, MONO1=0 is not supported. Position  */
-#define ASRC_ESR_OUTCFGERR_OP2_D01_CHK16      (ASRC_ESR_OUTCFGERR_OP2_D01_CHK16_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP0/1: CHUNK0=16 is not supported. Position  */
-#define ASRC_ESR_OUTCFGERR_OP2_D23_EN         (ASRC_ESR_OUTCFGERR_OP2_D23_EN_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP2/3: enable configuration is not correct (1 DSP is disabled) Position  */
-#define ASRC_ESR_OUTCFGERR_OP2_D23_M          (ASRC_ESR_OUTCFGERR_OP2_D23_M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP2/3: MONO2=1, MONO3=0 is not supported. Position  */
-#define ASRC_ESR_OUTCFGERR_OP2_D23_CHK16      (ASRC_ESR_OUTCFGERR_OP2_D23_CHK16_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 2, DSP2/3: CHUNK2=16 is not supported. Position  */
-#define ASRC_ESR_OUTCFGERR_OP3_D012_EN        (ASRC_ESR_OUTCFGERR_OP3_D012_EN_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: enable configuration is not correct (at least 1 DSP is disabled) Position  */
-#define ASRC_ESR_OUTCFGERR_OP3_D012_M         (ASRC_ESR_OUTCFGERR_OP3_D012_M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 is not supported). Position  */
-#define ASRC_ESR_OUTCFGERR_OP3_D012_CHK16     (ASRC_ESR_OUTCFGERR_OP3_D012_CHK16_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP0/1/2: CHUNK0=16 is not supported. Position  */
-#define ASRC_ESR_OUTCFGERR_OP3_D3_CHK16_8M    (ASRC_ESR_OUTCFGERR_OP3_D3_CHK16_8M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 3, DSP3: CHUNK3=16 or CHUNK3=8 and MONO3 is not supported. Position  */
-#define ASRC_ESR_OUTCFGERR_OP4_D0123_EN       (ASRC_ESR_OUTCFGERR_OP4_D0123_EN_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: enable configuration is not correct (at least 1 DSP is disabled) Position  */
-#define ASRC_ESR_OUTCFGERR_OP4_D0123_M        (ASRC_ESR_OUTCFGERR_OP4_D0123_M_Val << ASRC_ESR_OUTCFGERR_Pos) /* (ASRC_ESR) Channel operating mode 4, DSP0/1/2/3: mono configuration is not correct (e.g. MONO0=1, MONO1=0 or MONO2=0 or MONO3=0 is not supported). Position  */
-#define ASRC_ESR_DERR_Pos                     _UINT32_(15)                                         /* (ASRC_ESR) DSP Overflow Error Position */
-#define ASRC_ESR_DERR_Msk                     (_UINT32_(0x1) << ASRC_ESR_DERR_Pos)                 /* (ASRC_ESR) DSP Overflow Error Mask */
-#define ASRC_ESR_DERR(value)                  (ASRC_ESR_DERR_Msk & (_UINT32_(value) << ASRC_ESR_DERR_Pos)) /* Assigment of value for DERR in the ASRC_ESR register */
-#define   ASRC_ESR_DERR_0_Val                 _UINT32_(0x0)                                        /* (ASRC_ESR) No DSP overflow error detected.  */
-#define   ASRC_ESR_DERR_1_Val                 _UINT32_(0x1)                                        /* (ASRC_ESR) The sampling frequency overpasses the value allowed by the configuration.  */
-#define ASRC_ESR_DERR_0                       (ASRC_ESR_DERR_0_Val << ASRC_ESR_DERR_Pos)           /* (ASRC_ESR) No DSP overflow error detected. Position  */
-#define ASRC_ESR_DERR_1                       (ASRC_ESR_DERR_1_Val << ASRC_ESR_DERR_Pos)           /* (ASRC_ESR) The sampling frequency overpasses the value allowed by the configuration. Position  */
-#define ASRC_ESR_Msk                          _UINT32_(0x00009F1F)                                 /* (ASRC_ESR) Register Mask  */
-
-
 /* -------- ASRC_WPMR : (ASRC Offset: 0xE4) (R/W 32) Write Protection Mode Register -------- */
 #define ASRC_WPMR_RESETVALUE                  _UINT32_(0x00)                                       /*  (ASRC_WPMR) Write Protection Mode Register  Reset Value */
 
@@ -947,37 +947,19 @@
 
 
 /** \brief ASRC register offsets definitions */
-#define ASRC_CR_REG_OFST               _UINT32_(0x00)      /* (ASRC_CR) Control Register Offset */
-#define ASRC_MR_REG_OFST               _UINT32_(0x04)      /* (ASRC_MR) Mode Register Offset */
-#define ASRC_RATIO_REG_OFST            _UINT32_(0x08)      /* (ASRC_RATIO) Ratio Register of Stereo Channel x Offset */
-#define ASRC_RATIO0_REG_OFST           _UINT32_(0x08)      /* (ASRC_RATIO0) Ratio Register of Stereo Channel x Offset */
-#define ASRC_RATIO1_REG_OFST           _UINT32_(0x0C)      /* (ASRC_RATIO1) Ratio Register of Stereo Channel x Offset */
-#define ASRC_RATIO2_REG_OFST           _UINT32_(0x10)      /* (ASRC_RATIO2) Ratio Register of Stereo Channel x Offset */
-#define ASRC_RATIO3_REG_OFST           _UINT32_(0x14)      /* (ASRC_RATIO3) Ratio Register of Stereo Channel x Offset */
-#define ASRC_VBPS_IN_REG_OFST          _UINT32_(0x18)      /* (ASRC_VBPS_IN) Valid Bit Per Sample In Register Offset */
-#define ASRC_VBPS_OUT_REG_OFST         _UINT32_(0x1C)      /* (ASRC_VBPS_OUT) Valid Bit Per Sample Out Register Offset */
 #define ASRC_CH_CONF_REG_OFST          _UINT32_(0x20)      /* (ASRC_CH_CONF) Channel Configuration Register Offset */
-#define ASRC_TRIG_REG_OFST             _UINT32_(0x24)      /* (ASRC_TRIG) Trigger Selection Register Offset */
-#define ASRC_RHR_REG_OFST              _UINT32_(0x28)      /* (ASRC_RHR) Receive Holding Register x Offset */
-#define ASRC_RHR0_REG_OFST             _UINT32_(0x28)      /* (ASRC_RHR0) Receive Holding Register x Offset */
-#define ASRC_RHR1_REG_OFST             _UINT32_(0x2C)      /* (ASRC_RHR1) Receive Holding Register x Offset */
-#define ASRC_RHR2_REG_OFST             _UINT32_(0x30)      /* (ASRC_RHR2) Receive Holding Register x Offset */
-#define ASRC_RHR3_REG_OFST             _UINT32_(0x34)      /* (ASRC_RHR3) Receive Holding Register x Offset */
-#define ASRC_THR_REG_OFST              _UINT32_(0x48)      /* (ASRC_THR) Transmit Holding Register x Offset */
-#define ASRC_THR0_REG_OFST             _UINT32_(0x48)      /* (ASRC_THR0) Transmit Holding Register x Offset */
-#define ASRC_THR1_REG_OFST             _UINT32_(0x4C)      /* (ASRC_THR1) Transmit Holding Register x Offset */
-#define ASRC_THR2_REG_OFST             _UINT32_(0x50)      /* (ASRC_THR2) Transmit Holding Register x Offset */
-#define ASRC_THR3_REG_OFST             _UINT32_(0x54)      /* (ASRC_THR3) Transmit Holding Register x Offset */
-#define ASRC_IER_REG_OFST              _UINT32_(0x68)      /* (ASRC_IER) Interrupt Enable Register x Offset */
-#define ASRC_IER0_REG_OFST             _UINT32_(0x68)      /* (ASRC_IER0) Interrupt Enable Register x Offset */
-#define ASRC_IER1_REG_OFST             _UINT32_(0x6C)      /* (ASRC_IER1) Interrupt Enable Register x Offset */
-#define ASRC_IER2_REG_OFST             _UINT32_(0x70)      /* (ASRC_IER2) Interrupt Enable Register x Offset */
-#define ASRC_IER3_REG_OFST             _UINT32_(0x74)      /* (ASRC_IER3) Interrupt Enable Register x Offset */
+#define ASRC_CR_REG_OFST               _UINT32_(0x00)      /* (ASRC_CR) Control Register Offset */
+#define ASRC_ESR_REG_OFST              _UINT32_(0xA8)      /* (ASRC_ESR) Error Status Register Offset */
 #define ASRC_IDR_REG_OFST              _UINT32_(0x78)      /* (ASRC_IDR) Interrupt Disable Register x Offset */
 #define ASRC_IDR0_REG_OFST             _UINT32_(0x78)      /* (ASRC_IDR0) Interrupt Disable Register x Offset */
 #define ASRC_IDR1_REG_OFST             _UINT32_(0x7C)      /* (ASRC_IDR1) Interrupt Disable Register x Offset */
 #define ASRC_IDR2_REG_OFST             _UINT32_(0x80)      /* (ASRC_IDR2) Interrupt Disable Register x Offset */
 #define ASRC_IDR3_REG_OFST             _UINT32_(0x84)      /* (ASRC_IDR3) Interrupt Disable Register x Offset */
+#define ASRC_IER_REG_OFST              _UINT32_(0x68)      /* (ASRC_IER) Interrupt Enable Register x Offset */
+#define ASRC_IER0_REG_OFST             _UINT32_(0x68)      /* (ASRC_IER0) Interrupt Enable Register x Offset */
+#define ASRC_IER1_REG_OFST             _UINT32_(0x6C)      /* (ASRC_IER1) Interrupt Enable Register x Offset */
+#define ASRC_IER2_REG_OFST             _UINT32_(0x70)      /* (ASRC_IER2) Interrupt Enable Register x Offset */
+#define ASRC_IER3_REG_OFST             _UINT32_(0x74)      /* (ASRC_IER3) Interrupt Enable Register x Offset */
 #define ASRC_IMR_REG_OFST              _UINT32_(0x88)      /* (ASRC_IMR) Interrupt Mask Register x Offset */
 #define ASRC_IMR0_REG_OFST             _UINT32_(0x88)      /* (ASRC_IMR0) Interrupt Mask Register x Offset */
 #define ASRC_IMR1_REG_OFST             _UINT32_(0x8C)      /* (ASRC_IMR1) Interrupt Mask Register x Offset */
@@ -988,7 +970,25 @@
 #define ASRC_ISR1_REG_OFST             _UINT32_(0x9C)      /* (ASRC_ISR1) Interrupt Status Register x Offset */
 #define ASRC_ISR2_REG_OFST             _UINT32_(0xA0)      /* (ASRC_ISR2) Interrupt Status Register x Offset */
 #define ASRC_ISR3_REG_OFST             _UINT32_(0xA4)      /* (ASRC_ISR3) Interrupt Status Register x Offset */
-#define ASRC_ESR_REG_OFST              _UINT32_(0xA8)      /* (ASRC_ESR) Error Status Register Offset */
+#define ASRC_MR_REG_OFST               _UINT32_(0x04)      /* (ASRC_MR) Mode Register Offset */
+#define ASRC_RATIO_REG_OFST            _UINT32_(0x08)      /* (ASRC_RATIO) Ratio Register of Stereo Channel x Offset */
+#define ASRC_RATIO0_REG_OFST           _UINT32_(0x08)      /* (ASRC_RATIO0) Ratio Register of Stereo Channel x Offset */
+#define ASRC_RATIO1_REG_OFST           _UINT32_(0x0C)      /* (ASRC_RATIO1) Ratio Register of Stereo Channel x Offset */
+#define ASRC_RATIO2_REG_OFST           _UINT32_(0x10)      /* (ASRC_RATIO2) Ratio Register of Stereo Channel x Offset */
+#define ASRC_RATIO3_REG_OFST           _UINT32_(0x14)      /* (ASRC_RATIO3) Ratio Register of Stereo Channel x Offset */
+#define ASRC_RHR_REG_OFST              _UINT32_(0x28)      /* (ASRC_RHR) Receive Holding Register x Offset */
+#define ASRC_RHR0_REG_OFST             _UINT32_(0x28)      /* (ASRC_RHR0) Receive Holding Register x Offset */
+#define ASRC_RHR1_REG_OFST             _UINT32_(0x2C)      /* (ASRC_RHR1) Receive Holding Register x Offset */
+#define ASRC_RHR2_REG_OFST             _UINT32_(0x30)      /* (ASRC_RHR2) Receive Holding Register x Offset */
+#define ASRC_RHR3_REG_OFST             _UINT32_(0x34)      /* (ASRC_RHR3) Receive Holding Register x Offset */
+#define ASRC_THR_REG_OFST              _UINT32_(0x48)      /* (ASRC_THR) Transmit Holding Register x Offset */
+#define ASRC_THR0_REG_OFST             _UINT32_(0x48)      /* (ASRC_THR0) Transmit Holding Register x Offset */
+#define ASRC_THR1_REG_OFST             _UINT32_(0x4C)      /* (ASRC_THR1) Transmit Holding Register x Offset */
+#define ASRC_THR2_REG_OFST             _UINT32_(0x50)      /* (ASRC_THR2) Transmit Holding Register x Offset */
+#define ASRC_THR3_REG_OFST             _UINT32_(0x54)      /* (ASRC_THR3) Transmit Holding Register x Offset */
+#define ASRC_TRIG_REG_OFST             _UINT32_(0x24)      /* (ASRC_TRIG) Trigger Selection Register Offset */
+#define ASRC_VBPS_IN_REG_OFST          _UINT32_(0x18)      /* (ASRC_VBPS_IN) Valid Bit Per Sample In Register Offset */
+#define ASRC_VBPS_OUT_REG_OFST         _UINT32_(0x1C)      /* (ASRC_VBPS_OUT) Valid Bit Per Sample Out Register Offset */
 #define ASRC_WPMR_REG_OFST             _UINT32_(0xE4)      /* (ASRC_WPMR) Write Protection Mode Register Offset */
 #define ASRC_WPSR_REG_OFST             _UINT32_(0xE8)      /* (ASRC_WPSR) Write Protection Status Register Offset */
 

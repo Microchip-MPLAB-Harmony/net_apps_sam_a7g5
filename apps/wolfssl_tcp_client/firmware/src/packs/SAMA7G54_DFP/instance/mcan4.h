@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_MCAN4_INSTANCE_
 #define _SAMA7G_MCAN4_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for MCAN4 peripheral ========== */
-#define MCAN4_INSTANCE_ID                        (65)       /* Master CAN 4 */
 #define MCAN4_CLOCK_ID                           (65)       
+#define MCAN4_INSTANCE_ID                        (65)       /* Master CAN 4 */
 #define MCAN4_INSTANCE_ID_INT1                   (127)      /* MCAN4 interrupt1 */
 
 #endif /* _SAMA7G_MCAN4_INSTANCE_ */

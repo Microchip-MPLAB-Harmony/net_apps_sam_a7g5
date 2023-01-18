@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_SHA_INSTANCE_
 #define _SAMA7G_SHA_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SHA peripheral ========== */
-#define SHA_INSTANCE_ID                          (83)       /* Secure Hash Algorithm */
 #define SHA_CLOCK_ID                             (83)       
-#define SHA_INSTANCE_ID_SINT                     (144)      /* Secure Hash Algorithm, Secure INTerrupt */
 #define SHA_DMAC_ID_TX                           (48)       
+#define SHA_INSTANCE_ID                          (83)       /* Secure Hash Algorithm */
+#define SHA_INSTANCE_ID_SINT                     (144)      /* Secure Hash Algorithm, Secure INTerrupt */
 
 #endif /* _SAMA7G_SHA_INSTANCE_ */

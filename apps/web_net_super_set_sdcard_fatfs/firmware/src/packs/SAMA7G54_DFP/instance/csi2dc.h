@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_CSI2DC_INSTANCE_
 #define _SAMA7G_CSI2DC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for CSI2DC peripheral ========== */
-#define CSI2DC_INSTANCE_ID                       (34)       /* CSI to Demultiplexer Controller */
 #define CSI2DC_CLOCK_ID                          (34)       
+#define CSI2DC_INSTANCE_ID                       (34)       /* CSI to Demultiplexer Controller */
 
 #endif /* _SAMA7G_CSI2DC_INSTANCE_ */

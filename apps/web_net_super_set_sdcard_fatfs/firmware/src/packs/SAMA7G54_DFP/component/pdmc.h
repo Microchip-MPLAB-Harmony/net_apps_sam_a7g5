@@ -20,103 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_PDMC_COMPONENT_H_
 #define _SAMA7G_PDMC_COMPONENT_H_
 
 /* ************************************************************************** */
 /*   SOFTWARE API DEFINITION FOR PDMC                                         */
 /* ************************************************************************** */
-
-/* -------- PDMC_CR : (PDMC Offset: 0x00) ( /W 32) Control Register -------- */
-#define PDMC_CR_SWRST_Pos                     _UINT32_(0)                                          /* (PDMC_CR) Software Reset Position */
-#define PDMC_CR_SWRST_Msk                     (_UINT32_(0x1) << PDMC_CR_SWRST_Pos)                 /* (PDMC_CR) Software Reset Mask */
-#define PDMC_CR_SWRST(value)                  (PDMC_CR_SWRST_Msk & (_UINT32_(value) << PDMC_CR_SWRST_Pos)) /* Assigment of value for SWRST in the PDMC_CR register */
-#define   PDMC_CR_SWRST_0_Val                 _UINT32_(0x0)                                        /* (PDMC_CR) No effect.  */
-#define   PDMC_CR_SWRST_1_Val                 _UINT32_(0x1)                                        /* (PDMC_CR) Resets the PDMC interface.  */
-#define PDMC_CR_SWRST_0                       (PDMC_CR_SWRST_0_Val << PDMC_CR_SWRST_Pos)           /* (PDMC_CR) No effect. Position  */
-#define PDMC_CR_SWRST_1                       (PDMC_CR_SWRST_1_Val << PDMC_CR_SWRST_Pos)           /* (PDMC_CR) Resets the PDMC interface. Position  */
-#define PDMC_CR_Msk                           _UINT32_(0x00000001)                                 /* (PDMC_CR) Register Mask  */
-
-
-/* -------- PDMC_MR : (PDMC Offset: 0x04) (R/W 32) Mode Register -------- */
-#define PDMC_MR_RESETVALUE                    _UINT32_(0x00)                                       /*  (PDMC_MR) Mode Register  Reset Value */
-
-#define PDMC_MR_PDMCEN0_Pos                   _UINT32_(0)                                          /* (PDMC_MR) PDMC Channel 0 Enable Position */
-#define PDMC_MR_PDMCEN0_Msk                   (_UINT32_(0x1) << PDMC_MR_PDMCEN0_Pos)               /* (PDMC_MR) PDMC Channel 0 Enable Mask */
-#define PDMC_MR_PDMCEN0(value)                (PDMC_MR_PDMCEN0_Msk & (_UINT32_(value) << PDMC_MR_PDMCEN0_Pos)) /* Assigment of value for PDMCEN0 in the PDMC_MR register */
-#define   PDMC_MR_PDMCEN0_DISABLE_Val         _UINT32_(0x0)                                        /* (PDMC_MR) PDMC is disabled.  */
-#define   PDMC_MR_PDMCEN0_ENABLE_Val          _UINT32_(0x1)                                        /* (PDMC_MR) PDMC is enabled.  */
-#define PDMC_MR_PDMCEN0_DISABLE               (PDMC_MR_PDMCEN0_DISABLE_Val << PDMC_MR_PDMCEN0_Pos) /* (PDMC_MR) PDMC is disabled. Position  */
-#define PDMC_MR_PDMCEN0_ENABLE                (PDMC_MR_PDMCEN0_ENABLE_Val << PDMC_MR_PDMCEN0_Pos)  /* (PDMC_MR) PDMC is enabled. Position  */
-#define PDMC_MR_PDMCEN1_Pos                   _UINT32_(1)                                          /* (PDMC_MR) PDMC Channel 1 Enable Position */
-#define PDMC_MR_PDMCEN1_Msk                   (_UINT32_(0x1) << PDMC_MR_PDMCEN1_Pos)               /* (PDMC_MR) PDMC Channel 1 Enable Mask */
-#define PDMC_MR_PDMCEN1(value)                (PDMC_MR_PDMCEN1_Msk & (_UINT32_(value) << PDMC_MR_PDMCEN1_Pos)) /* Assigment of value for PDMCEN1 in the PDMC_MR register */
-#define   PDMC_MR_PDMCEN1_DISABLE_Val         _UINT32_(0x0)                                        /* (PDMC_MR) PDMC is disabled.  */
-#define   PDMC_MR_PDMCEN1_ENABLE_Val          _UINT32_(0x1)                                        /* (PDMC_MR) PDMC is enabled.  */
-#define PDMC_MR_PDMCEN1_DISABLE               (PDMC_MR_PDMCEN1_DISABLE_Val << PDMC_MR_PDMCEN1_Pos) /* (PDMC_MR) PDMC is disabled. Position  */
-#define PDMC_MR_PDMCEN1_ENABLE                (PDMC_MR_PDMCEN1_ENABLE_Val << PDMC_MR_PDMCEN1_Pos)  /* (PDMC_MR) PDMC is enabled. Position  */
-#define PDMC_MR_PDMCEN2_Pos                   _UINT32_(2)                                          /* (PDMC_MR) PDMC Channel 2 Enable Position */
-#define PDMC_MR_PDMCEN2_Msk                   (_UINT32_(0x1) << PDMC_MR_PDMCEN2_Pos)               /* (PDMC_MR) PDMC Channel 2 Enable Mask */
-#define PDMC_MR_PDMCEN2(value)                (PDMC_MR_PDMCEN2_Msk & (_UINT32_(value) << PDMC_MR_PDMCEN2_Pos)) /* Assigment of value for PDMCEN2 in the PDMC_MR register */
-#define   PDMC_MR_PDMCEN2_DISABLE_Val         _UINT32_(0x0)                                        /* (PDMC_MR) PDMC is disabled.  */
-#define   PDMC_MR_PDMCEN2_ENABLE_Val          _UINT32_(0x1)                                        /* (PDMC_MR) PDMC is enabled.  */
-#define PDMC_MR_PDMCEN2_DISABLE               (PDMC_MR_PDMCEN2_DISABLE_Val << PDMC_MR_PDMCEN2_Pos) /* (PDMC_MR) PDMC is disabled. Position  */
-#define PDMC_MR_PDMCEN2_ENABLE                (PDMC_MR_PDMCEN2_ENABLE_Val << PDMC_MR_PDMCEN2_Pos)  /* (PDMC_MR) PDMC is enabled. Position  */
-#define PDMC_MR_PDMCEN3_Pos                   _UINT32_(3)                                          /* (PDMC_MR) PDMC Channel 3 Enable Position */
-#define PDMC_MR_PDMCEN3_Msk                   (_UINT32_(0x1) << PDMC_MR_PDMCEN3_Pos)               /* (PDMC_MR) PDMC Channel 3 Enable Mask */
-#define PDMC_MR_PDMCEN3(value)                (PDMC_MR_PDMCEN3_Msk & (_UINT32_(value) << PDMC_MR_PDMCEN3_Pos)) /* Assigment of value for PDMCEN3 in the PDMC_MR register */
-#define   PDMC_MR_PDMCEN3_DISABLE_Val         _UINT32_(0x0)                                        /* (PDMC_MR) PDMC is disabled.  */
-#define   PDMC_MR_PDMCEN3_ENABLE_Val          _UINT32_(0x1)                                        /* (PDMC_MR) PDMC is enabled.  */
-#define PDMC_MR_PDMCEN3_DISABLE               (PDMC_MR_PDMCEN3_DISABLE_Val << PDMC_MR_PDMCEN3_Pos) /* (PDMC_MR) PDMC is disabled. Position  */
-#define PDMC_MR_PDMCEN3_ENABLE                (PDMC_MR_PDMCEN3_ENABLE_Val << PDMC_MR_PDMCEN3_Pos)  /* (PDMC_MR) PDMC is enabled. Position  */
-#define PDMC_MR_OSR_Pos                       _UINT32_(16)                                         /* (PDMC_MR) Audio Oversampling Ratio Position */
-#define PDMC_MR_OSR_Msk                       (_UINT32_(0x3) << PDMC_MR_OSR_Pos)                   /* (PDMC_MR) Audio Oversampling Ratio Mask */
-#define PDMC_MR_OSR(value)                    (PDMC_MR_OSR_Msk & (_UINT32_(value) << PDMC_MR_OSR_Pos)) /* Assigment of value for OSR in the PDMC_MR register */
-#define   PDMC_MR_OSR_OSR64_Val               _UINT32_(0x1)                                        /* (PDMC_MR) OSR is 64.  */
-#define   PDMC_MR_OSR_OSR128_Val              _UINT32_(0x2)                                        /* (PDMC_MR) OSR is 128.  */
-#define   PDMC_MR_OSR_OSR256_Val              _UINT32_(0x3)                                        /* (PDMC_MR) OSR is 256.  */
-#define PDMC_MR_OSR_OSR64                     (PDMC_MR_OSR_OSR64_Val << PDMC_MR_OSR_Pos)           /* (PDMC_MR) OSR is 64. Position  */
-#define PDMC_MR_OSR_OSR128                    (PDMC_MR_OSR_OSR128_Val << PDMC_MR_OSR_Pos)          /* (PDMC_MR) OSR is 128. Position  */
-#define PDMC_MR_OSR_OSR256                    (PDMC_MR_OSR_OSR256_Val << PDMC_MR_OSR_Pos)          /* (PDMC_MR) OSR is 256. Position  */
-#define PDMC_MR_SINCORDER_Pos                 _UINT32_(20)                                         /* (PDMC_MR) SINC Filter Order Position */
-#define PDMC_MR_SINCORDER_Msk                 (_UINT32_(0xF) << PDMC_MR_SINCORDER_Pos)             /* (PDMC_MR) SINC Filter Order Mask */
-#define PDMC_MR_SINCORDER(value)              (PDMC_MR_SINCORDER_Msk & (_UINT32_(value) << PDMC_MR_SINCORDER_Pos)) /* Assigment of value for SINCORDER in the PDMC_MR register */
-#define   PDMC_MR_SINCORDER_ORDER1_Val        _UINT32_(0x1)                                        /* (PDMC_MR) SINC filter order is 1.  */
-#define   PDMC_MR_SINCORDER_ORDER2_Val        _UINT32_(0x2)                                        /* (PDMC_MR) SINC filter order is 2.  */
-#define   PDMC_MR_SINCORDER_ORDER3_Val        _UINT32_(0x3)                                        /* (PDMC_MR) SINC filter order is 3. Recommended if SINC_OSR=0  */
-#define   PDMC_MR_SINCORDER_ORDER4_Val        _UINT32_(0x4)                                        /* (PDMC_MR) SINC filter order is 4.  */
-#define   PDMC_MR_SINCORDER_ORDER5_Val        _UINT32_(0x5)                                        /* (PDMC_MR) SINC filter order is 5.  */
-#define PDMC_MR_SINCORDER_ORDER1              (PDMC_MR_SINCORDER_ORDER1_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 1. Position  */
-#define PDMC_MR_SINCORDER_ORDER2              (PDMC_MR_SINCORDER_ORDER2_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 2. Position  */
-#define PDMC_MR_SINCORDER_ORDER3              (PDMC_MR_SINCORDER_ORDER3_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 3. Recommended if SINC_OSR=0 Position  */
-#define PDMC_MR_SINCORDER_ORDER4              (PDMC_MR_SINCORDER_ORDER4_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 4. Position  */
-#define PDMC_MR_SINCORDER_ORDER5              (PDMC_MR_SINCORDER_ORDER5_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 5. Position  */
-#define PDMC_MR_SINC_OSR_Pos                  _UINT32_(24)                                         /* (PDMC_MR) SINC Filter Oversampling Ratio Position */
-#define PDMC_MR_SINC_OSR_Msk                  (_UINT32_(0xF) << PDMC_MR_SINC_OSR_Pos)              /* (PDMC_MR) SINC Filter Oversampling Ratio Mask */
-#define PDMC_MR_SINC_OSR(value)               (PDMC_MR_SINC_OSR_Msk & (_UINT32_(value) << PDMC_MR_SINC_OSR_Pos)) /* Assigment of value for SINC_OSR in the PDMC_MR register */
-#define   PDMC_MR_SINC_OSR_DISABLE_Val        _UINT32_(0x0)                                        /* (PDMC_MR) Audio filtering mode. The SINC filter OSR is implicitly defined by the PDMC_MR.OSR field.  */
-#define   PDMC_MR_SINC_OSR_OSR8_Val           _UINT32_(0x1)                                        /* (PDMC_MR) The SINC filter OSR is 8.  */
-#define   PDMC_MR_SINC_OSR_OSR16_Val          _UINT32_(0x2)                                        /* (PDMC_MR) The SINC filter OSR is 16.  */
-#define   PDMC_MR_SINC_OSR_OSR32_Val          _UINT32_(0x3)                                        /* (PDMC_MR) The SINC filter OSR is 32.  */
-#define   PDMC_MR_SINC_OSR_OSR64_Val          _UINT32_(0x4)                                        /* (PDMC_MR) The SINC filter OSR is 64.  */
-#define   PDMC_MR_SINC_OSR_OSR128_Val         _UINT32_(0x5)                                        /* (PDMC_MR) The SINC filter OSR is 128.  */
-#define   PDMC_MR_SINC_OSR_OSR256_Val         _UINT32_(0x6)                                        /* (PDMC_MR) The SINC filter OSR is 256.  */
-#define PDMC_MR_SINC_OSR_DISABLE              (PDMC_MR_SINC_OSR_DISABLE_Val << PDMC_MR_SINC_OSR_Pos) /* (PDMC_MR) Audio filtering mode. The SINC filter OSR is implicitly defined by the PDMC_MR.OSR field. Position  */
-#define PDMC_MR_SINC_OSR_OSR8                 (PDMC_MR_SINC_OSR_OSR8_Val << PDMC_MR_SINC_OSR_Pos)  /* (PDMC_MR) The SINC filter OSR is 8. Position  */
-#define PDMC_MR_SINC_OSR_OSR16                (PDMC_MR_SINC_OSR_OSR16_Val << PDMC_MR_SINC_OSR_Pos) /* (PDMC_MR) The SINC filter OSR is 16. Position  */
-#define PDMC_MR_SINC_OSR_OSR32                (PDMC_MR_SINC_OSR_OSR32_Val << PDMC_MR_SINC_OSR_Pos) /* (PDMC_MR) The SINC filter OSR is 32. Position  */
-#define PDMC_MR_SINC_OSR_OSR64                (PDMC_MR_SINC_OSR_OSR64_Val << PDMC_MR_SINC_OSR_Pos) /* (PDMC_MR) The SINC filter OSR is 64. Position  */
-#define PDMC_MR_SINC_OSR_OSR128               (PDMC_MR_SINC_OSR_OSR128_Val << PDMC_MR_SINC_OSR_Pos) /* (PDMC_MR) The SINC filter OSR is 128. Position  */
-#define PDMC_MR_SINC_OSR_OSR256               (PDMC_MR_SINC_OSR_OSR256_Val << PDMC_MR_SINC_OSR_Pos) /* (PDMC_MR) The SINC filter OSR is 256. Position  */
-#define PDMC_MR_CHUNK_Pos                     _UINT32_(28)                                         /* (PDMC_MR) Chunk Size Position */
-#define PDMC_MR_CHUNK_Msk                     (_UINT32_(0xF) << PDMC_MR_CHUNK_Pos)                 /* (PDMC_MR) Chunk Size Mask */
-#define PDMC_MR_CHUNK(value)                  (PDMC_MR_CHUNK_Msk & (_UINT32_(value) << PDMC_MR_CHUNK_Pos)) /* Assigment of value for CHUNK in the PDMC_MR register */
-#define PDMC_MR_Msk                           _UINT32_(0xFFF3000F)                                 /* (PDMC_MR) Register Mask  */
-
-#define PDMC_MR_PDMCEN_Pos                    _UINT32_(0)                                          /* (PDMC_MR Position) PDMC Channel x Enable */
-#define PDMC_MR_PDMCEN_Msk                    (_UINT32_(0xF) << PDMC_MR_PDMCEN_Pos)                /* (PDMC_MR Mask) PDMCEN */
-#define PDMC_MR_PDMCEN(value)                 (PDMC_MR_PDMCEN_Msk & (_UINT32_(value) << PDMC_MR_PDMCEN_Pos)) 
 
 /* -------- PDMC_CFGR : (PDMC Offset: 0x08) (R/W 32) Configuration Register -------- */
 #define PDMC_CFGR_RESETVALUE                  _UINT32_(0x500044)                                   /*  (PDMC_CFGR) Configuration Register  Reset Value */
@@ -186,41 +96,15 @@
 #define PDMC_CFGR_PDMSEL_Msk                  (_UINT32_(0xF) << PDMC_CFGR_PDMSEL_Pos)              /* (PDMC_CFGR Mask) PDMSEL */
 #define PDMC_CFGR_PDMSEL(value)               (PDMC_CFGR_PDMSEL_Msk & (_UINT32_(value) << PDMC_CFGR_PDMSEL_Pos)) 
 
-/* -------- PDMC_RHR : (PDMC Offset: 0x0C) ( R/ 32) Receive Holding Register -------- */
-#define PDMC_RHR_RESETVALUE                   _UINT32_(0x00)                                       /*  (PDMC_RHR) Receive Holding Register  Reset Value */
-
-#define PDMC_RHR_DATA_Pos                     _UINT32_(0)                                          /* (PDMC_RHR) Converted Data Position */
-#define PDMC_RHR_DATA_Msk                     (_UINT32_(0xFFFFFF) << PDMC_RHR_DATA_Pos)            /* (PDMC_RHR) Converted Data Mask */
-#define PDMC_RHR_DATA(value)                  (PDMC_RHR_DATA_Msk & (_UINT32_(value) << PDMC_RHR_DATA_Pos)) /* Assigment of value for DATA in the PDMC_RHR register */
-#define PDMC_RHR_CHANNEL_Pos                  _UINT32_(24)                                         /* (PDMC_RHR) Channel Index of Data Position */
-#define PDMC_RHR_CHANNEL_Msk                  (_UINT32_(0xFF) << PDMC_RHR_CHANNEL_Pos)             /* (PDMC_RHR) Channel Index of Data Mask */
-#define PDMC_RHR_CHANNEL(value)               (PDMC_RHR_CHANNEL_Msk & (_UINT32_(value) << PDMC_RHR_CHANNEL_Pos)) /* Assigment of value for CHANNEL in the PDMC_RHR register */
-#define PDMC_RHR_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (PDMC_RHR) Register Mask  */
-
-
-/* -------- PDMC_IER : (PDMC Offset: 0x14) ( /W 32) Interrupt Enable Register -------- */
-#define PDMC_IER_RXRDY_Pos                    _UINT32_(0)                                          /* (PDMC_IER) Receive Ready Interrupt Enable Position */
-#define PDMC_IER_RXRDY_Msk                    (_UINT32_(0x1) << PDMC_IER_RXRDY_Pos)                /* (PDMC_IER) Receive Ready Interrupt Enable Mask */
-#define PDMC_IER_RXRDY(value)                 (PDMC_IER_RXRDY_Msk & (_UINT32_(value) << PDMC_IER_RXRDY_Pos)) /* Assigment of value for RXRDY in the PDMC_IER register */
-#define PDMC_IER_RXEMPTY_Pos                  _UINT32_(1)                                          /* (PDMC_IER) Receive FIFO Empty Interrupt Enable Position */
-#define PDMC_IER_RXEMPTY_Msk                  (_UINT32_(0x1) << PDMC_IER_RXEMPTY_Pos)              /* (PDMC_IER) Receive FIFO Empty Interrupt Enable Mask */
-#define PDMC_IER_RXEMPTY(value)               (PDMC_IER_RXEMPTY_Msk & (_UINT32_(value) << PDMC_IER_RXEMPTY_Pos)) /* Assigment of value for RXEMPTY in the PDMC_IER register */
-#define PDMC_IER_RXFULL_Pos                   _UINT32_(2)                                          /* (PDMC_IER) Receive FIFO Full Interrupt Enable Position */
-#define PDMC_IER_RXFULL_Msk                   (_UINT32_(0x1) << PDMC_IER_RXFULL_Pos)               /* (PDMC_IER) Receive FIFO Full Interrupt Enable Mask */
-#define PDMC_IER_RXFULL(value)                (PDMC_IER_RXFULL_Msk & (_UINT32_(value) << PDMC_IER_RXFULL_Pos)) /* Assigment of value for RXFULL in the PDMC_IER register */
-#define PDMC_IER_RXCHUNK_Pos                  _UINT32_(3)                                          /* (PDMC_IER) Receive FIFO Chunk Interrupt Enable Position */
-#define PDMC_IER_RXCHUNK_Msk                  (_UINT32_(0x1) << PDMC_IER_RXCHUNK_Pos)              /* (PDMC_IER) Receive FIFO Chunk Interrupt Enable Mask */
-#define PDMC_IER_RXCHUNK(value)               (PDMC_IER_RXCHUNK_Msk & (_UINT32_(value) << PDMC_IER_RXCHUNK_Pos)) /* Assigment of value for RXCHUNK in the PDMC_IER register */
-#define PDMC_IER_RXUDR_Pos                    _UINT32_(4)                                          /* (PDMC_IER) Receive Under Flow Interrupt Enable Position */
-#define PDMC_IER_RXUDR_Msk                    (_UINT32_(0x1) << PDMC_IER_RXUDR_Pos)                /* (PDMC_IER) Receive Under Flow Interrupt Enable Mask */
-#define PDMC_IER_RXUDR(value)                 (PDMC_IER_RXUDR_Msk & (_UINT32_(value) << PDMC_IER_RXUDR_Pos)) /* Assigment of value for RXUDR in the PDMC_IER register */
-#define PDMC_IER_RXOVR_Pos                    _UINT32_(5)                                          /* (PDMC_IER) Receive Over Flow Interrupt Enable Position */
-#define PDMC_IER_RXOVR_Msk                    (_UINT32_(0x1) << PDMC_IER_RXOVR_Pos)                /* (PDMC_IER) Receive Over Flow Interrupt Enable Mask */
-#define PDMC_IER_RXOVR(value)                 (PDMC_IER_RXOVR_Msk & (_UINT32_(value) << PDMC_IER_RXOVR_Pos)) /* Assigment of value for RXOVR in the PDMC_IER register */
-#define PDMC_IER_WPERR_Pos                    _UINT32_(28)                                         /* (PDMC_IER) Write Protection Error Enable Position */
-#define PDMC_IER_WPERR_Msk                    (_UINT32_(0x1) << PDMC_IER_WPERR_Pos)                /* (PDMC_IER) Write Protection Error Enable Mask */
-#define PDMC_IER_WPERR(value)                 (PDMC_IER_WPERR_Msk & (_UINT32_(value) << PDMC_IER_WPERR_Pos)) /* Assigment of value for WPERR in the PDMC_IER register */
-#define PDMC_IER_Msk                          _UINT32_(0x1000003F)                                 /* (PDMC_IER) Register Mask  */
+/* -------- PDMC_CR : (PDMC Offset: 0x00) ( /W 32) Control Register -------- */
+#define PDMC_CR_SWRST_Pos                     _UINT32_(0)                                          /* (PDMC_CR) Software Reset Position */
+#define PDMC_CR_SWRST_Msk                     (_UINT32_(0x1) << PDMC_CR_SWRST_Pos)                 /* (PDMC_CR) Software Reset Mask */
+#define PDMC_CR_SWRST(value)                  (PDMC_CR_SWRST_Msk & (_UINT32_(value) << PDMC_CR_SWRST_Pos)) /* Assigment of value for SWRST in the PDMC_CR register */
+#define   PDMC_CR_SWRST_0_Val                 _UINT32_(0x0)                                        /* (PDMC_CR) No effect.  */
+#define   PDMC_CR_SWRST_1_Val                 _UINT32_(0x1)                                        /* (PDMC_CR) Resets the PDMC interface.  */
+#define PDMC_CR_SWRST_0                       (PDMC_CR_SWRST_0_Val << PDMC_CR_SWRST_Pos)           /* (PDMC_CR) No effect. Position  */
+#define PDMC_CR_SWRST_1                       (PDMC_CR_SWRST_1_Val << PDMC_CR_SWRST_Pos)           /* (PDMC_CR) Resets the PDMC interface. Position  */
+#define PDMC_CR_Msk                           _UINT32_(0x00000001)                                 /* (PDMC_CR) Register Mask  */
 
 
 /* -------- PDMC_IDR : (PDMC Offset: 0x18) ( /W 32) Interrupt Disable Register -------- */
@@ -246,6 +130,31 @@
 #define PDMC_IDR_WPERR_Msk                    (_UINT32_(0x1) << PDMC_IDR_WPERR_Pos)                /* (PDMC_IDR) Write Protection Error Disable Mask */
 #define PDMC_IDR_WPERR(value)                 (PDMC_IDR_WPERR_Msk & (_UINT32_(value) << PDMC_IDR_WPERR_Pos)) /* Assigment of value for WPERR in the PDMC_IDR register */
 #define PDMC_IDR_Msk                          _UINT32_(0x1000003F)                                 /* (PDMC_IDR) Register Mask  */
+
+
+/* -------- PDMC_IER : (PDMC Offset: 0x14) ( /W 32) Interrupt Enable Register -------- */
+#define PDMC_IER_RXRDY_Pos                    _UINT32_(0)                                          /* (PDMC_IER) Receive Ready Interrupt Enable Position */
+#define PDMC_IER_RXRDY_Msk                    (_UINT32_(0x1) << PDMC_IER_RXRDY_Pos)                /* (PDMC_IER) Receive Ready Interrupt Enable Mask */
+#define PDMC_IER_RXRDY(value)                 (PDMC_IER_RXRDY_Msk & (_UINT32_(value) << PDMC_IER_RXRDY_Pos)) /* Assigment of value for RXRDY in the PDMC_IER register */
+#define PDMC_IER_RXEMPTY_Pos                  _UINT32_(1)                                          /* (PDMC_IER) Receive FIFO Empty Interrupt Enable Position */
+#define PDMC_IER_RXEMPTY_Msk                  (_UINT32_(0x1) << PDMC_IER_RXEMPTY_Pos)              /* (PDMC_IER) Receive FIFO Empty Interrupt Enable Mask */
+#define PDMC_IER_RXEMPTY(value)               (PDMC_IER_RXEMPTY_Msk & (_UINT32_(value) << PDMC_IER_RXEMPTY_Pos)) /* Assigment of value for RXEMPTY in the PDMC_IER register */
+#define PDMC_IER_RXFULL_Pos                   _UINT32_(2)                                          /* (PDMC_IER) Receive FIFO Full Interrupt Enable Position */
+#define PDMC_IER_RXFULL_Msk                   (_UINT32_(0x1) << PDMC_IER_RXFULL_Pos)               /* (PDMC_IER) Receive FIFO Full Interrupt Enable Mask */
+#define PDMC_IER_RXFULL(value)                (PDMC_IER_RXFULL_Msk & (_UINT32_(value) << PDMC_IER_RXFULL_Pos)) /* Assigment of value for RXFULL in the PDMC_IER register */
+#define PDMC_IER_RXCHUNK_Pos                  _UINT32_(3)                                          /* (PDMC_IER) Receive FIFO Chunk Interrupt Enable Position */
+#define PDMC_IER_RXCHUNK_Msk                  (_UINT32_(0x1) << PDMC_IER_RXCHUNK_Pos)              /* (PDMC_IER) Receive FIFO Chunk Interrupt Enable Mask */
+#define PDMC_IER_RXCHUNK(value)               (PDMC_IER_RXCHUNK_Msk & (_UINT32_(value) << PDMC_IER_RXCHUNK_Pos)) /* Assigment of value for RXCHUNK in the PDMC_IER register */
+#define PDMC_IER_RXUDR_Pos                    _UINT32_(4)                                          /* (PDMC_IER) Receive Under Flow Interrupt Enable Position */
+#define PDMC_IER_RXUDR_Msk                    (_UINT32_(0x1) << PDMC_IER_RXUDR_Pos)                /* (PDMC_IER) Receive Under Flow Interrupt Enable Mask */
+#define PDMC_IER_RXUDR(value)                 (PDMC_IER_RXUDR_Msk & (_UINT32_(value) << PDMC_IER_RXUDR_Pos)) /* Assigment of value for RXUDR in the PDMC_IER register */
+#define PDMC_IER_RXOVR_Pos                    _UINT32_(5)                                          /* (PDMC_IER) Receive Over Flow Interrupt Enable Position */
+#define PDMC_IER_RXOVR_Msk                    (_UINT32_(0x1) << PDMC_IER_RXOVR_Pos)                /* (PDMC_IER) Receive Over Flow Interrupt Enable Mask */
+#define PDMC_IER_RXOVR(value)                 (PDMC_IER_RXOVR_Msk & (_UINT32_(value) << PDMC_IER_RXOVR_Pos)) /* Assigment of value for RXOVR in the PDMC_IER register */
+#define PDMC_IER_WPERR_Pos                    _UINT32_(28)                                         /* (PDMC_IER) Write Protection Error Enable Position */
+#define PDMC_IER_WPERR_Msk                    (_UINT32_(0x1) << PDMC_IER_WPERR_Pos)                /* (PDMC_IER) Write Protection Error Enable Mask */
+#define PDMC_IER_WPERR(value)                 (PDMC_IER_WPERR_Msk & (_UINT32_(value) << PDMC_IER_WPERR_Pos)) /* Assigment of value for WPERR in the PDMC_IER register */
+#define PDMC_IER_Msk                          _UINT32_(0x1000003F)                                 /* (PDMC_IER) Register Mask  */
 
 
 /* -------- PDMC_IMR : (PDMC Offset: 0x1C) ( R/ 32) Interrupt Mask Register -------- */
@@ -337,6 +246,97 @@
 #define PDMC_ISR_Msk                          _UINT32_(0x1004003F)                                 /* (PDMC_ISR) Register Mask  */
 
 
+/* -------- PDMC_MR : (PDMC Offset: 0x04) (R/W 32) Mode Register -------- */
+#define PDMC_MR_RESETVALUE                    _UINT32_(0x00)                                       /*  (PDMC_MR) Mode Register  Reset Value */
+
+#define PDMC_MR_PDMCEN0_Pos                   _UINT32_(0)                                          /* (PDMC_MR) PDMC Channel 0 Enable Position */
+#define PDMC_MR_PDMCEN0_Msk                   (_UINT32_(0x1) << PDMC_MR_PDMCEN0_Pos)               /* (PDMC_MR) PDMC Channel 0 Enable Mask */
+#define PDMC_MR_PDMCEN0(value)                (PDMC_MR_PDMCEN0_Msk & (_UINT32_(value) << PDMC_MR_PDMCEN0_Pos)) /* Assigment of value for PDMCEN0 in the PDMC_MR register */
+#define   PDMC_MR_PDMCEN0_DISABLE_Val         _UINT32_(0x0)                                        /* (PDMC_MR) PDMC is disabled.  */
+#define   PDMC_MR_PDMCEN0_ENABLE_Val          _UINT32_(0x1)                                        /* (PDMC_MR) PDMC is enabled.  */
+#define PDMC_MR_PDMCEN0_DISABLE               (PDMC_MR_PDMCEN0_DISABLE_Val << PDMC_MR_PDMCEN0_Pos) /* (PDMC_MR) PDMC is disabled. Position  */
+#define PDMC_MR_PDMCEN0_ENABLE                (PDMC_MR_PDMCEN0_ENABLE_Val << PDMC_MR_PDMCEN0_Pos)  /* (PDMC_MR) PDMC is enabled. Position  */
+#define PDMC_MR_PDMCEN1_Pos                   _UINT32_(1)                                          /* (PDMC_MR) PDMC Channel 1 Enable Position */
+#define PDMC_MR_PDMCEN1_Msk                   (_UINT32_(0x1) << PDMC_MR_PDMCEN1_Pos)               /* (PDMC_MR) PDMC Channel 1 Enable Mask */
+#define PDMC_MR_PDMCEN1(value)                (PDMC_MR_PDMCEN1_Msk & (_UINT32_(value) << PDMC_MR_PDMCEN1_Pos)) /* Assigment of value for PDMCEN1 in the PDMC_MR register */
+#define   PDMC_MR_PDMCEN1_DISABLE_Val         _UINT32_(0x0)                                        /* (PDMC_MR) PDMC is disabled.  */
+#define   PDMC_MR_PDMCEN1_ENABLE_Val          _UINT32_(0x1)                                        /* (PDMC_MR) PDMC is enabled.  */
+#define PDMC_MR_PDMCEN1_DISABLE               (PDMC_MR_PDMCEN1_DISABLE_Val << PDMC_MR_PDMCEN1_Pos) /* (PDMC_MR) PDMC is disabled. Position  */
+#define PDMC_MR_PDMCEN1_ENABLE                (PDMC_MR_PDMCEN1_ENABLE_Val << PDMC_MR_PDMCEN1_Pos)  /* (PDMC_MR) PDMC is enabled. Position  */
+#define PDMC_MR_PDMCEN2_Pos                   _UINT32_(2)                                          /* (PDMC_MR) PDMC Channel 2 Enable Position */
+#define PDMC_MR_PDMCEN2_Msk                   (_UINT32_(0x1) << PDMC_MR_PDMCEN2_Pos)               /* (PDMC_MR) PDMC Channel 2 Enable Mask */
+#define PDMC_MR_PDMCEN2(value)                (PDMC_MR_PDMCEN2_Msk & (_UINT32_(value) << PDMC_MR_PDMCEN2_Pos)) /* Assigment of value for PDMCEN2 in the PDMC_MR register */
+#define   PDMC_MR_PDMCEN2_DISABLE_Val         _UINT32_(0x0)                                        /* (PDMC_MR) PDMC is disabled.  */
+#define   PDMC_MR_PDMCEN2_ENABLE_Val          _UINT32_(0x1)                                        /* (PDMC_MR) PDMC is enabled.  */
+#define PDMC_MR_PDMCEN2_DISABLE               (PDMC_MR_PDMCEN2_DISABLE_Val << PDMC_MR_PDMCEN2_Pos) /* (PDMC_MR) PDMC is disabled. Position  */
+#define PDMC_MR_PDMCEN2_ENABLE                (PDMC_MR_PDMCEN2_ENABLE_Val << PDMC_MR_PDMCEN2_Pos)  /* (PDMC_MR) PDMC is enabled. Position  */
+#define PDMC_MR_PDMCEN3_Pos                   _UINT32_(3)                                          /* (PDMC_MR) PDMC Channel 3 Enable Position */
+#define PDMC_MR_PDMCEN3_Msk                   (_UINT32_(0x1) << PDMC_MR_PDMCEN3_Pos)               /* (PDMC_MR) PDMC Channel 3 Enable Mask */
+#define PDMC_MR_PDMCEN3(value)                (PDMC_MR_PDMCEN3_Msk & (_UINT32_(value) << PDMC_MR_PDMCEN3_Pos)) /* Assigment of value for PDMCEN3 in the PDMC_MR register */
+#define   PDMC_MR_PDMCEN3_DISABLE_Val         _UINT32_(0x0)                                        /* (PDMC_MR) PDMC is disabled.  */
+#define   PDMC_MR_PDMCEN3_ENABLE_Val          _UINT32_(0x1)                                        /* (PDMC_MR) PDMC is enabled.  */
+#define PDMC_MR_PDMCEN3_DISABLE               (PDMC_MR_PDMCEN3_DISABLE_Val << PDMC_MR_PDMCEN3_Pos) /* (PDMC_MR) PDMC is disabled. Position  */
+#define PDMC_MR_PDMCEN3_ENABLE                (PDMC_MR_PDMCEN3_ENABLE_Val << PDMC_MR_PDMCEN3_Pos)  /* (PDMC_MR) PDMC is enabled. Position  */
+#define PDMC_MR_OSR_Pos                       _UINT32_(16)                                         /* (PDMC_MR) Audio Oversampling Ratio Position */
+#define PDMC_MR_OSR_Msk                       (_UINT32_(0x3) << PDMC_MR_OSR_Pos)                   /* (PDMC_MR) Audio Oversampling Ratio Mask */
+#define PDMC_MR_OSR(value)                    (PDMC_MR_OSR_Msk & (_UINT32_(value) << PDMC_MR_OSR_Pos)) /* Assigment of value for OSR in the PDMC_MR register */
+#define   PDMC_MR_OSR_OSR64_Val               _UINT32_(0x1)                                        /* (PDMC_MR) OSR is 64.  */
+#define   PDMC_MR_OSR_OSR128_Val              _UINT32_(0x2)                                        /* (PDMC_MR) OSR is 128.  */
+#define   PDMC_MR_OSR_OSR256_Val              _UINT32_(0x3)                                        /* (PDMC_MR) OSR is 256.  */
+#define PDMC_MR_OSR_OSR64                     (PDMC_MR_OSR_OSR64_Val << PDMC_MR_OSR_Pos)           /* (PDMC_MR) OSR is 64. Position  */
+#define PDMC_MR_OSR_OSR128                    (PDMC_MR_OSR_OSR128_Val << PDMC_MR_OSR_Pos)          /* (PDMC_MR) OSR is 128. Position  */
+#define PDMC_MR_OSR_OSR256                    (PDMC_MR_OSR_OSR256_Val << PDMC_MR_OSR_Pos)          /* (PDMC_MR) OSR is 256. Position  */
+#define PDMC_MR_SINCORDER_Pos                 _UINT32_(20)                                         /* (PDMC_MR) SINC Filter Order Position */
+#define PDMC_MR_SINCORDER_Msk                 (_UINT32_(0xF) << PDMC_MR_SINCORDER_Pos)             /* (PDMC_MR) SINC Filter Order Mask */
+#define PDMC_MR_SINCORDER(value)              (PDMC_MR_SINCORDER_Msk & (_UINT32_(value) << PDMC_MR_SINCORDER_Pos)) /* Assigment of value for SINCORDER in the PDMC_MR register */
+#define   PDMC_MR_SINCORDER_ORDER1_Val        _UINT32_(0x1)                                        /* (PDMC_MR) SINC filter order is 1.  */
+#define   PDMC_MR_SINCORDER_ORDER2_Val        _UINT32_(0x2)                                        /* (PDMC_MR) SINC filter order is 2.  */
+#define   PDMC_MR_SINCORDER_ORDER3_Val        _UINT32_(0x3)                                        /* (PDMC_MR) SINC filter order is 3. Recommended if SINC_OSR=0  */
+#define   PDMC_MR_SINCORDER_ORDER4_Val        _UINT32_(0x4)                                        /* (PDMC_MR) SINC filter order is 4.  */
+#define   PDMC_MR_SINCORDER_ORDER5_Val        _UINT32_(0x5)                                        /* (PDMC_MR) SINC filter order is 5.  */
+#define PDMC_MR_SINCORDER_ORDER1              (PDMC_MR_SINCORDER_ORDER1_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 1. Position  */
+#define PDMC_MR_SINCORDER_ORDER2              (PDMC_MR_SINCORDER_ORDER2_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 2. Position  */
+#define PDMC_MR_SINCORDER_ORDER3              (PDMC_MR_SINCORDER_ORDER3_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 3. Recommended if SINC_OSR=0 Position  */
+#define PDMC_MR_SINCORDER_ORDER4              (PDMC_MR_SINCORDER_ORDER4_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 4. Position  */
+#define PDMC_MR_SINCORDER_ORDER5              (PDMC_MR_SINCORDER_ORDER5_Val << PDMC_MR_SINCORDER_Pos) /* (PDMC_MR) SINC filter order is 5. Position  */
+#define PDMC_MR_SINC_OSR_Pos                  _UINT32_(24)                                         /* (PDMC_MR) SINC Filter Oversampling Ratio Position */
+#define PDMC_MR_SINC_OSR_Msk                  (_UINT32_(0xF) << PDMC_MR_SINC_OSR_Pos)              /* (PDMC_MR) SINC Filter Oversampling Ratio Mask */
+#define PDMC_MR_SINC_OSR(value)               (PDMC_MR_SINC_OSR_Msk & (_UINT32_(value) << PDMC_MR_SINC_OSR_Pos)) /* Assigment of value for SINC_OSR in the PDMC_MR register */
+#define   PDMC_MR_SINC_OSR_DISABLE_Val        _UINT32_(0x0)                                        /* (PDMC_MR) Audio filtering mode. The SINC filter OSR is implicitly defined by the PDMC_MR.OSR field.  */
+#define   PDMC_MR_SINC_OSR_OSR8_Val           _UINT32_(0x1)                                        /* (PDMC_MR) The SINC filter OSR is 8.  */
+#define   PDMC_MR_SINC_OSR_OSR16_Val          _UINT32_(0x2)                                        /* (PDMC_MR) The SINC filter OSR is 16.  */
+#define   PDMC_MR_SINC_OSR_OSR32_Val          _UINT32_(0x3)                                        /* (PDMC_MR) The SINC filter OSR is 32.  */
+#define   PDMC_MR_SINC_OSR_OSR64_Val          _UINT32_(0x4)                                        /* (PDMC_MR) The SINC filter OSR is 64.  */
+#define   PDMC_MR_SINC_OSR_OSR128_Val         _UINT32_(0x5)                                        /* (PDMC_MR) The SINC filter OSR is 128.  */
+#define   PDMC_MR_SINC_OSR_OSR256_Val         _UINT32_(0x6)                                        /* (PDMC_MR) The SINC filter OSR is 256.  */
+#define PDMC_MR_SINC_OSR_DISABLE              (PDMC_MR_SINC_OSR_DISABLE_Val << PDMC_MR_SINC_OSR_Pos) /* (PDMC_MR) Audio filtering mode. The SINC filter OSR is implicitly defined by the PDMC_MR.OSR field. Position  */
+#define PDMC_MR_SINC_OSR_OSR8                 (PDMC_MR_SINC_OSR_OSR8_Val << PDMC_MR_SINC_OSR_Pos)  /* (PDMC_MR) The SINC filter OSR is 8. Position  */
+#define PDMC_MR_SINC_OSR_OSR16                (PDMC_MR_SINC_OSR_OSR16_Val << PDMC_MR_SINC_OSR_Pos) /* (PDMC_MR) The SINC filter OSR is 16. Position  */
+#define PDMC_MR_SINC_OSR_OSR32                (PDMC_MR_SINC_OSR_OSR32_Val << PDMC_MR_SINC_OSR_Pos) /* (PDMC_MR) The SINC filter OSR is 32. Position  */
+#define PDMC_MR_SINC_OSR_OSR64                (PDMC_MR_SINC_OSR_OSR64_Val << PDMC_MR_SINC_OSR_Pos) /* (PDMC_MR) The SINC filter OSR is 64. Position  */
+#define PDMC_MR_SINC_OSR_OSR128               (PDMC_MR_SINC_OSR_OSR128_Val << PDMC_MR_SINC_OSR_Pos) /* (PDMC_MR) The SINC filter OSR is 128. Position  */
+#define PDMC_MR_SINC_OSR_OSR256               (PDMC_MR_SINC_OSR_OSR256_Val << PDMC_MR_SINC_OSR_Pos) /* (PDMC_MR) The SINC filter OSR is 256. Position  */
+#define PDMC_MR_CHUNK_Pos                     _UINT32_(28)                                         /* (PDMC_MR) Chunk Size Position */
+#define PDMC_MR_CHUNK_Msk                     (_UINT32_(0xF) << PDMC_MR_CHUNK_Pos)                 /* (PDMC_MR) Chunk Size Mask */
+#define PDMC_MR_CHUNK(value)                  (PDMC_MR_CHUNK_Msk & (_UINT32_(value) << PDMC_MR_CHUNK_Pos)) /* Assigment of value for CHUNK in the PDMC_MR register */
+#define PDMC_MR_Msk                           _UINT32_(0xFFF3000F)                                 /* (PDMC_MR) Register Mask  */
+
+#define PDMC_MR_PDMCEN_Pos                    _UINT32_(0)                                          /* (PDMC_MR Position) PDMC Channel x Enable */
+#define PDMC_MR_PDMCEN_Msk                    (_UINT32_(0xF) << PDMC_MR_PDMCEN_Pos)                /* (PDMC_MR Mask) PDMCEN */
+#define PDMC_MR_PDMCEN(value)                 (PDMC_MR_PDMCEN_Msk & (_UINT32_(value) << PDMC_MR_PDMCEN_Pos)) 
+
+/* -------- PDMC_RHR : (PDMC Offset: 0x0C) ( R/ 32) Receive Holding Register -------- */
+#define PDMC_RHR_RESETVALUE                   _UINT32_(0x00)                                       /*  (PDMC_RHR) Receive Holding Register  Reset Value */
+
+#define PDMC_RHR_DATA_Pos                     _UINT32_(0)                                          /* (PDMC_RHR) Converted Data Position */
+#define PDMC_RHR_DATA_Msk                     (_UINT32_(0xFFFFFF) << PDMC_RHR_DATA_Pos)            /* (PDMC_RHR) Converted Data Mask */
+#define PDMC_RHR_DATA(value)                  (PDMC_RHR_DATA_Msk & (_UINT32_(value) << PDMC_RHR_DATA_Pos)) /* Assigment of value for DATA in the PDMC_RHR register */
+#define PDMC_RHR_CHANNEL_Pos                  _UINT32_(24)                                         /* (PDMC_RHR) Channel Index of Data Position */
+#define PDMC_RHR_CHANNEL_Msk                  (_UINT32_(0xFF) << PDMC_RHR_CHANNEL_Pos)             /* (PDMC_RHR) Channel Index of Data Mask */
+#define PDMC_RHR_CHANNEL(value)               (PDMC_RHR_CHANNEL_Msk & (_UINT32_(value) << PDMC_RHR_CHANNEL_Pos)) /* Assigment of value for CHANNEL in the PDMC_RHR register */
+#define PDMC_RHR_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (PDMC_RHR) Register Mask  */
+
+
 /* -------- PDMC_WPMR : (PDMC Offset: 0x2C) (R/W 32) Write Protection Mode Register -------- */
 #define PDMC_WPMR_RESETVALUE                  _UINT32_(0x00)                                       /*  (PDMC_WPMR) Write Protection Mode Register  Reset Value */
 
@@ -386,14 +386,14 @@
 
 
 /** \brief PDMC register offsets definitions */
-#define PDMC_CR_REG_OFST               _UINT32_(0x00)      /* (PDMC_CR) Control Register Offset */
-#define PDMC_MR_REG_OFST               _UINT32_(0x04)      /* (PDMC_MR) Mode Register Offset */
 #define PDMC_CFGR_REG_OFST             _UINT32_(0x08)      /* (PDMC_CFGR) Configuration Register Offset */
-#define PDMC_RHR_REG_OFST              _UINT32_(0x0C)      /* (PDMC_RHR) Receive Holding Register Offset */
-#define PDMC_IER_REG_OFST              _UINT32_(0x14)      /* (PDMC_IER) Interrupt Enable Register Offset */
+#define PDMC_CR_REG_OFST               _UINT32_(0x00)      /* (PDMC_CR) Control Register Offset */
 #define PDMC_IDR_REG_OFST              _UINT32_(0x18)      /* (PDMC_IDR) Interrupt Disable Register Offset */
+#define PDMC_IER_REG_OFST              _UINT32_(0x14)      /* (PDMC_IER) Interrupt Enable Register Offset */
 #define PDMC_IMR_REG_OFST              _UINT32_(0x1C)      /* (PDMC_IMR) Interrupt Mask Register Offset */
 #define PDMC_ISR_REG_OFST              _UINT32_(0x20)      /* (PDMC_ISR) Interrupt Status Register Offset */
+#define PDMC_MR_REG_OFST               _UINT32_(0x04)      /* (PDMC_MR) Mode Register Offset */
+#define PDMC_RHR_REG_OFST              _UINT32_(0x0C)      /* (PDMC_RHR) Receive Holding Register Offset */
 #define PDMC_WPMR_REG_OFST             _UINT32_(0x2C)      /* (PDMC_WPMR) Write Protection Mode Register Offset */
 #define PDMC_WPSR_REG_OFST             _UINT32_(0x30)      /* (PDMC_WPSR) Write Protection Status Register Offset */
 

@@ -20,7 +20,7 @@
  *
  */
 
-/* File generated from device description version 2022-02-07T12:32:53Z */
+/* File generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G54_H_
 #define _SAMA7G54_H_
 

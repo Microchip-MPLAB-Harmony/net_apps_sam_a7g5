@@ -83,10 +83,7 @@ extern "C" {
 #define SYS_TIME_INDEX_0                            (0)
 #define SYS_TIME_MAX_TIMERS                         (5)
 #define SYS_TIME_HW_COUNTER_WIDTH                   (32)
-#define SYS_TIME_HW_COUNTER_PERIOD                  (4294967295U)
-#define SYS_TIME_HW_COUNTER_HALF_PERIOD             (SYS_TIME_HW_COUNTER_PERIOD>>1)
-#define SYS_TIME_CPU_CLOCK_FREQUENCY                (800000000)
-#define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (936)
+#define SYS_TIME_TICK_FREQ_IN_HZ                    (1024)
 
 #define SYS_CONSOLE_INDEX_0                       0
 
@@ -181,11 +178,6 @@ extern "C" {
 #define WOLFSSL_USER_IO
 #define NO_WRITEV
 #define MICROCHIP_TCPIP
-#define HAVE_FFDHE_2048
-#define HAVE_FFDHE_3072
-#define HAVE_FFDHE_4096
-#define HAVE_FFDHE_6144
-#define HAVE_FFDHE_8192
 #define WOLFSSL_DTLS
 #define NO_PWDBASED
 #define NO_ERROR_STRINGS
@@ -293,7 +285,7 @@ extern "C" {
 
 /*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       102400
+#define TCPIP_STACK_DRAM_SIZE                       128000
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
@@ -419,9 +411,9 @@ extern "C" {
 #define NO_HC128
 #define NO_RABBIT
 #define HAVE_ECC
-#define HAVE_DH
+#define NO_DH
 #define NO_DSA
-#define FP_MAX_BITS 16384
+#define FP_MAX_BITS 4096
 #define USE_CERT_BUFFERS_2048
 #define WC_RSA_PSS
 #define NO_DEV_RANDOM
@@ -443,20 +435,6 @@ extern "C" {
 
 
 
-
-
-
-#define DRV_KSZ9131_PHY_CONFIG_FLAGS       ( 0 \
-                                                    | DRV_ETHPHY_CFG_RGMII \
-                                                    | DRV_ETHPHY_CFG_DEFAULT \
-                                                    )
-
-#define DRV_KSZ9131_PHY_LINK_INIT_DELAY        500
-#define DRV_KSZ9131_PHY_ADDRESS                7
-#define DRV_KSZ9131_PHY_PERIPHERAL_ID          GMAC0_BASE_ADDRESS
-#define DRV_ETHPHY_KSZ9131_NEG_INIT_TMO        1
-#define DRV_ETHPHY_KSZ9131_NEG_DONE_TMO        2000
-#define DRV_ETHPHY_KSZ9131_RESET_CLR_TMO       500
 
 
 /*** GMAC0 Configuration ***/
@@ -552,6 +530,20 @@ extern "C" {
 #define DRV_GMAC0_NUMBER_OF_QUEUES               6
 #define DRV_GMAC0_RMII_MODE                      0
 
+
+
+
+#define DRV_KSZ9131_PHY_CONFIG_FLAGS       ( 0 \
+                                                    | DRV_ETHPHY_CFG_RGMII \
+                                                    | DRV_ETHPHY_CFG_DEFAULT \
+                                                    )
+
+#define DRV_KSZ9131_PHY_LINK_INIT_DELAY        500
+#define DRV_KSZ9131_PHY_ADDRESS                7
+#define DRV_KSZ9131_PHY_PERIPHERAL_ID          GMAC0_BASE_ADDRESS
+#define DRV_ETHPHY_KSZ9131_NEG_INIT_TMO        1
+#define DRV_ETHPHY_KSZ9131_NEG_DONE_TMO        2000
+#define DRV_ETHPHY_KSZ9131_RESET_CLR_TMO       500
 
 
 

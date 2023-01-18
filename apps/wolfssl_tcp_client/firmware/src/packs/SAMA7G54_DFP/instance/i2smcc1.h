@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_I2SMCC1_INSTANCE_
 #define _SAMA7G_I2SMCC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for I2SMCC1 peripheral ========== */
-#define I2SMCC1_INSTANCE_ID                      (58)       /* Inter-IC Sound Controller 1 */
 #define I2SMCC1_CLOCK_ID                         (58)       
 #define I2SMCC1_DMAC_ID_RX                       (35)       
 #define I2SMCC1_DMAC_ID_TX                       (36)       
+#define I2SMCC1_INSTANCE_ID                      (58)       /* Inter-IC Sound Controller 1 */
 
 #endif /* _SAMA7G_I2SMCC1_INSTANCE_ */

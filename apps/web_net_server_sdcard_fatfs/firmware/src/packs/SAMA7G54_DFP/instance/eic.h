@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_EIC_INSTANCE_
 #define _SAMA7G_EIC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for EIC peripheral ========== */
-#define EIC_INSTANCE_ID                          (37)       /* External  Interrupt Controller */
 #define EIC_CLOCK_ID                             (37)       
+#define EIC_INSTANCE_ID                          (37)       /* External  Interrupt Controller */
 #define EIC_INSTANCE_ID_EXT_IRQ0                 (153)      /* External  Interrupt ID0 (FIQ) */
 #define EIC_INSTANCE_ID_EXT_IRQ1                 (154)      /* External  Interrupt ID1 (IRQ) */
 

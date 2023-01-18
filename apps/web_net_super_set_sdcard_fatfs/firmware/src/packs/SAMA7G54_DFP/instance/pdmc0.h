@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_PDMC0_INSTANCE_
 #define _SAMA7G_PDMC0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PDMC0 peripheral ========== */
-#define PDMC0_INSTANCE_ID                        (68)       /* Pulse Density Modulation Interface Controller 0 */
 #define PDMC0_CLOCK_ID                           (68)       
 #define PDMC0_DMAC_ID_RX                         (37)       
+#define PDMC0_INSTANCE_ID                        (68)       /* Pulse Density Modulation Interface Controller 0 */
 
 #endif /* _SAMA7G_PDMC0_INSTANCE_ */

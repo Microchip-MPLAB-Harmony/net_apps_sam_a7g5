@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_TCPCB_INSTANCE_
 #define _SAMA7G_TCPCB_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for TCPCB peripheral ========== */
-#define TCPCB_INSTANCE_ID                        (95)       /* USB Type-C Port Controller B */
 #define TCPCB_CLOCK_ID                           (95)       
+#define TCPCB_INSTANCE_ID                        (95)       /* USB Type-C Port Controller B */
 
 #endif /* _SAMA7G_TCPCB_INSTANCE_ */

@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_ISC_INSTANCE_
 #define _SAMA7G_ISC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for ISC peripheral ========== */
-#define ISC_INSTANCE_ID                          (56)       /* Camera Interface */
 #define ISC_CLOCK_ID                             (56)       
+#define ISC_INSTANCE_ID                          (56)       /* Camera Interface */
 
 #endif /* _SAMA7G_ISC_INSTANCE_ */

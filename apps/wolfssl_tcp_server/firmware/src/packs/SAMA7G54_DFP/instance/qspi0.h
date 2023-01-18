@@ -20,15 +20,15 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_QSPI0_INSTANCE_
 #define _SAMA7G_QSPI0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for QSPI0 peripheral ========== */
-#define QSPI0_INSTANCE_ID                        (78)       /* Quad IO Serial Peripheral Interface 0 */
 #define QSPI0_CLOCK_ID                           (78)       
 #define QSPI0_DMAC_ID_RX                         (40)       
 #define QSPI0_DMAC_ID_TX                         (41)       
+#define QSPI0_INSTANCE_ID                        (78)       /* Quad IO Serial Peripheral Interface 0 */
 
 #endif /* _SAMA7G_QSPI0_INSTANCE_ */

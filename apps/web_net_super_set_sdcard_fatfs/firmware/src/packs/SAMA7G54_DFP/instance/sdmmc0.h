@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_SDMMC0_INSTANCE_
 #define _SAMA7G_SDMMC0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SDMMC0 peripheral ========== */
-#define SDMMC0_INSTANCE_ID                       (80)       /* Ultra High Speed SD Host controller 0 (eMMC 5.1) */
 #define SDMMC0_CLOCK_ID                          (80)       
+#define SDMMC0_INSTANCE_ID                       (80)       /* Ultra High Speed SD Host controller 0 (eMMC 5.1) */
 #define SDMMC0_INSTANCE_ID_TIMER                 (141)      /* Ultra High Speed SD Host controller 0 (eMMC 5.1) Timer interrupt */
 
 #endif /* _SAMA7G_SDMMC0_INSTANCE_ */

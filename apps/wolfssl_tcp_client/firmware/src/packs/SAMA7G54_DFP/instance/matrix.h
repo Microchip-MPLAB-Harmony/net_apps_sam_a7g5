@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_MATRIX_INSTANCE_
 #define _SAMA7G_MATRIX_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for MATRIX peripheral ========== */
-#define MATRIX_INSTANCE_ID                       (60)       /* HSS AHB Matrix */
 #define MATRIX_CLOCK_ID                          (60)       
+#define MATRIX_INSTANCE_ID                       (60)       /* HSS AHB Matrix */
 
 #endif /* _SAMA7G_MATRIX_INSTANCE_ */

@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_TZAESB_COMPONENT_H_
 #define _SAMA7G_TZAESB_COMPONENT_H_
 
@@ -53,40 +53,24 @@
 #define TZAESB_CR_Msk                         _UINT32_(0x01000101)                                 /* (TZAESB_CR) Register Mask  */
 
 
-/* -------- TZAESB_MR : (TZAESB Offset: 0x04) (R/W 32) Mode Register -------- */
-#define TZAESB_MR_RESETVALUE                  _UINT32_(0x04)                                       /*  (TZAESB_MR) Mode Register  Reset Value */
+/* -------- TZAESB_EMR : (TZAESB Offset: 0xB0) (R/W 32) Extended Mode Register -------- */
+#define TZAESB_EMR_RESETVALUE                 _UINT32_(0x00)                                       /*  (TZAESB_EMR) Extended Mode Register  Reset Value */
 
-#define TZAESB_MR_PROCDLY_Pos                 _UINT32_(4)                                          /* (TZAESB_MR) Processing Delay Position */
-#define TZAESB_MR_PROCDLY_Msk                 (_UINT32_(0xF) << TZAESB_MR_PROCDLY_Pos)             /* (TZAESB_MR) Processing Delay Mask */
-#define TZAESB_MR_PROCDLY(value)              (TZAESB_MR_PROCDLY_Msk & (_UINT32_(value) << TZAESB_MR_PROCDLY_Pos)) /* Assigment of value for PROCDLY in the TZAESB_MR register */
-#define TZAESB_MR_OPMOD_Pos                   _UINT32_(12)                                         /* (TZAESB_MR) Operating Mode Position */
-#define TZAESB_MR_OPMOD_Msk                   (_UINT32_(0x7) << TZAESB_MR_OPMOD_Pos)               /* (TZAESB_MR) Operating Mode Mask */
-#define TZAESB_MR_OPMOD(value)                (TZAESB_MR_OPMOD_Msk & (_UINT32_(value) << TZAESB_MR_OPMOD_Pos)) /* Assigment of value for OPMOD in the TZAESB_MR register */
-#define   TZAESB_MR_OPMOD_CTR_Val             _UINT32_(0x4)                                        /* (TZAESB_MR) Counter mode (16-bit internal counter)  */
-#define TZAESB_MR_OPMOD_CTR                   (TZAESB_MR_OPMOD_CTR_Val << TZAESB_MR_OPMOD_Pos)     /* (TZAESB_MR) Counter mode (16-bit internal counter) Position  */
-#define TZAESB_MR_CKEY_Pos                    _UINT32_(20)                                         /* (TZAESB_MR) Key Position */
-#define TZAESB_MR_CKEY_Msk                    (_UINT32_(0xF) << TZAESB_MR_CKEY_Pos)                /* (TZAESB_MR) Key Mask */
-#define TZAESB_MR_CKEY(value)                 (TZAESB_MR_CKEY_Msk & (_UINT32_(value) << TZAESB_MR_CKEY_Pos)) /* Assigment of value for CKEY in the TZAESB_MR register */
-#define   TZAESB_MR_CKEY_PASSWD_Val           _UINT32_(0xE)                                        /* (TZAESB_MR) Must be written with 0xE the first time that TZAESB_MR is programmed. For subsequent programming of TZAESB_MR, any value can be written, including that of 0xE. Always reads as 0.  */
-#define TZAESB_MR_CKEY_PASSWD                 (TZAESB_MR_CKEY_PASSWD_Val << TZAESB_MR_CKEY_Pos)    /* (TZAESB_MR) Must be written with 0xE the first time that TZAESB_MR is programmed. For subsequent programming of TZAESB_MR, any value can be written, including that of 0xE. Always reads as 0. Position  */
-#define TZAESB_MR_TAMPCLR_Pos                 _UINT32_(31)                                         /* (TZAESB_MR) Tamper Clear Enable Position */
-#define TZAESB_MR_TAMPCLR_Msk                 (_UINT32_(0x1) << TZAESB_MR_TAMPCLR_Pos)             /* (TZAESB_MR) Tamper Clear Enable Mask */
-#define TZAESB_MR_TAMPCLR(value)              (TZAESB_MR_TAMPCLR_Msk & (_UINT32_(value) << TZAESB_MR_TAMPCLR_Pos)) /* Assigment of value for TAMPCLR in the TZAESB_MR register */
-#define   TZAESB_MR_TAMPCLR_0_Val             _UINT32_(0x0)                                        /* (TZAESB_MR) A tamper detection event has no effect on the TZAESB_KEYWRx key.  */
-#define   TZAESB_MR_TAMPCLR_1_Val             _UINT32_(0x1)                                        /* (TZAESB_MR) A tamper detection event immediately clears the TZAESB_KEYWRx key.  */
-#define TZAESB_MR_TAMPCLR_0                   (TZAESB_MR_TAMPCLR_0_Val << TZAESB_MR_TAMPCLR_Pos)   /* (TZAESB_MR) A tamper detection event has no effect on the TZAESB_KEYWRx key. Position  */
-#define TZAESB_MR_TAMPCLR_1                   (TZAESB_MR_TAMPCLR_1_Val << TZAESB_MR_TAMPCLR_Pos)   /* (TZAESB_MR) A tamper detection event immediately clears the TZAESB_KEYWRx key. Position  */
-#define TZAESB_MR_Msk                         _UINT32_(0x80F070F0)                                 /* (TZAESB_MR) Register Mask  */
-
-
-/* -------- TZAESB_IER : (TZAESB Offset: 0x10) ( /W 32) Interrupt Enable Register -------- */
-#define TZAESB_IER_URAD_Pos                   _UINT32_(8)                                          /* (TZAESB_IER) Unspecified Register Access Detection Interrupt Enable Position */
-#define TZAESB_IER_URAD_Msk                   (_UINT32_(0x1) << TZAESB_IER_URAD_Pos)               /* (TZAESB_IER) Unspecified Register Access Detection Interrupt Enable Mask */
-#define TZAESB_IER_URAD(value)                (TZAESB_IER_URAD_Msk & (_UINT32_(value) << TZAESB_IER_URAD_Pos)) /* Assigment of value for URAD in the TZAESB_IER register */
-#define TZAESB_IER_SECE_Pos                   _UINT32_(19)                                         /* (TZAESB_IER) Security and/or Safety Event Position */
-#define TZAESB_IER_SECE_Msk                   (_UINT32_(0x1) << TZAESB_IER_SECE_Pos)               /* (TZAESB_IER) Security and/or Safety Event Mask */
-#define TZAESB_IER_SECE(value)                (TZAESB_IER_SECE_Msk & (_UINT32_(value) << TZAESB_IER_SECE_Pos)) /* Assigment of value for SECE in the TZAESB_IER register */
-#define TZAESB_IER_Msk                        _UINT32_(0x00080100)                                 /* (TZAESB_IER) Register Mask  */
+#define TZAESB_EMR_PKWO_Pos                   _UINT32_(6)                                          /* (TZAESB_EMR) Private Key Write Once Position */
+#define TZAESB_EMR_PKWO_Msk                   (_UINT32_(0x1) << TZAESB_EMR_PKWO_Pos)               /* (TZAESB_EMR) Private Key Write Once Mask */
+#define TZAESB_EMR_PKWO(value)                (TZAESB_EMR_PKWO_Msk & (_UINT32_(value) << TZAESB_EMR_PKWO_Pos)) /* Assigment of value for PKWO in the TZAESB_EMR register */
+#define   TZAESB_EMR_PKWO_0_Val               _UINT32_(0x0)                                        /* (TZAESB_EMR) The Private Key internal registers can be written multiple times through the Private Key bus.  */
+#define   TZAESB_EMR_PKWO_1_Val               _UINT32_(0x1)                                        /* (TZAESB_EMR) The Private Key internal registers can be written only once through the Private Key bus until hardware reset.  */
+#define TZAESB_EMR_PKWO_0                     (TZAESB_EMR_PKWO_0_Val << TZAESB_EMR_PKWO_Pos)       /* (TZAESB_EMR) The Private Key internal registers can be written multiple times through the Private Key bus. Position  */
+#define TZAESB_EMR_PKWO_1                     (TZAESB_EMR_PKWO_1_Val << TZAESB_EMR_PKWO_Pos)       /* (TZAESB_EMR) The Private Key internal registers can be written only once through the Private Key bus until hardware reset. Position  */
+#define TZAESB_EMR_PKRS_Pos                   _UINT32_(7)                                          /* (TZAESB_EMR) Private Key Internal Register Select Position */
+#define TZAESB_EMR_PKRS_Msk                   (_UINT32_(0x1) << TZAESB_EMR_PKRS_Pos)               /* (TZAESB_EMR) Private Key Internal Register Select Mask */
+#define TZAESB_EMR_PKRS(value)                (TZAESB_EMR_PKRS_Msk & (_UINT32_(value) << TZAESB_EMR_PKRS_Pos)) /* Assigment of value for PKRS in the TZAESB_EMR register */
+#define   TZAESB_EMR_PKRS_0_Val               _UINT32_(0x0)                                        /* (TZAESB_EMR) The key used by the TZAESB is in the TZAESB_KEYWRx.  */
+#define   TZAESB_EMR_PKRS_1_Val               _UINT32_(0x1)                                        /* (TZAESB_EMR) The key used by the TZAESB is in the Private Key internal registers written through the Private Key bus.  */
+#define TZAESB_EMR_PKRS_0                     (TZAESB_EMR_PKRS_0_Val << TZAESB_EMR_PKRS_Pos)       /* (TZAESB_EMR) The key used by the TZAESB is in the TZAESB_KEYWRx. Position  */
+#define TZAESB_EMR_PKRS_1                     (TZAESB_EMR_PKRS_1_Val << TZAESB_EMR_PKRS_Pos)       /* (TZAESB_EMR) The key used by the TZAESB is in the Private Key internal registers written through the Private Key bus. Position  */
+#define TZAESB_EMR_Msk                        _UINT32_(0x000000C0)                                 /* (TZAESB_EMR) Register Mask  */
 
 
 /* -------- TZAESB_IDR : (TZAESB Offset: 0x14) ( /W 32) Interrupt Disable Register -------- */
@@ -97,6 +81,16 @@
 #define TZAESB_IDR_SECE_Msk                   (_UINT32_(0x1) << TZAESB_IDR_SECE_Pos)               /* (TZAESB_IDR) Security and/or Safety Event Mask */
 #define TZAESB_IDR_SECE(value)                (TZAESB_IDR_SECE_Msk & (_UINT32_(value) << TZAESB_IDR_SECE_Pos)) /* Assigment of value for SECE in the TZAESB_IDR register */
 #define TZAESB_IDR_Msk                        _UINT32_(0x00080100)                                 /* (TZAESB_IDR) Register Mask  */
+
+
+/* -------- TZAESB_IER : (TZAESB Offset: 0x10) ( /W 32) Interrupt Enable Register -------- */
+#define TZAESB_IER_URAD_Pos                   _UINT32_(8)                                          /* (TZAESB_IER) Unspecified Register Access Detection Interrupt Enable Position */
+#define TZAESB_IER_URAD_Msk                   (_UINT32_(0x1) << TZAESB_IER_URAD_Pos)               /* (TZAESB_IER) Unspecified Register Access Detection Interrupt Enable Mask */
+#define TZAESB_IER_URAD(value)                (TZAESB_IER_URAD_Msk & (_UINT32_(value) << TZAESB_IER_URAD_Pos)) /* Assigment of value for URAD in the TZAESB_IER register */
+#define TZAESB_IER_SECE_Pos                   _UINT32_(19)                                         /* (TZAESB_IER) Security and/or Safety Event Position */
+#define TZAESB_IER_SECE_Msk                   (_UINT32_(0x1) << TZAESB_IER_SECE_Pos)               /* (TZAESB_IER) Security and/or Safety Event Mask */
+#define TZAESB_IER_SECE(value)                (TZAESB_IER_SECE_Msk & (_UINT32_(value) << TZAESB_IER_SECE_Pos)) /* Assigment of value for SECE in the TZAESB_IER register */
+#define TZAESB_IER_Msk                        _UINT32_(0x00080100)                                 /* (TZAESB_IER) Register Mask  */
 
 
 /* -------- TZAESB_IMR : (TZAESB Offset: 0x18) ( R/ 32) Interrupt Mask Register -------- */
@@ -146,13 +140,6 @@
 #define TZAESB_ISR_Msk                        _UINT32_(0x0008F100)                                 /* (TZAESB_ISR) Register Mask  */
 
 
-/* -------- TZAESB_KEYWR : (TZAESB Offset: 0x20) ( /W 32) Key Word Register x -------- */
-#define TZAESB_KEYWR_KEYW_Pos                 _UINT32_(0)                                          /* (TZAESB_KEYWR) Key Word Position */
-#define TZAESB_KEYWR_KEYW_Msk                 (_UINT32_(0xFFFFFFFF) << TZAESB_KEYWR_KEYW_Pos)      /* (TZAESB_KEYWR) Key Word Mask */
-#define TZAESB_KEYWR_KEYW(value)              (TZAESB_KEYWR_KEYW_Msk & (_UINT32_(value) << TZAESB_KEYWR_KEYW_Pos)) /* Assigment of value for KEYW in the TZAESB_KEYWR register */
-#define TZAESB_KEYWR_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (TZAESB_KEYWR) Register Mask  */
-
-
 /* -------- TZAESB_IVR : (TZAESB Offset: 0x60) ( /W 32) Initialization Vector Register x -------- */
 #define TZAESB_IVR_IV_Pos                     _UINT32_(0)                                          /* (TZAESB_IVR) Initialization Vector Position */
 #define TZAESB_IVR_IV_Msk                     (_UINT32_(0xFFFFFFFF) << TZAESB_IVR_IV_Pos)          /* (TZAESB_IVR) Initialization Vector Mask */
@@ -160,24 +147,37 @@
 #define TZAESB_IVR_Msk                        _UINT32_(0xFFFFFFFF)                                 /* (TZAESB_IVR) Register Mask  */
 
 
-/* -------- TZAESB_EMR : (TZAESB Offset: 0xB0) (R/W 32) Extended Mode Register -------- */
-#define TZAESB_EMR_RESETVALUE                 _UINT32_(0x00)                                       /*  (TZAESB_EMR) Extended Mode Register  Reset Value */
+/* -------- TZAESB_KEYWR : (TZAESB Offset: 0x20) ( /W 32) Key Word Register x -------- */
+#define TZAESB_KEYWR_KEYW_Pos                 _UINT32_(0)                                          /* (TZAESB_KEYWR) Key Word Position */
+#define TZAESB_KEYWR_KEYW_Msk                 (_UINT32_(0xFFFFFFFF) << TZAESB_KEYWR_KEYW_Pos)      /* (TZAESB_KEYWR) Key Word Mask */
+#define TZAESB_KEYWR_KEYW(value)              (TZAESB_KEYWR_KEYW_Msk & (_UINT32_(value) << TZAESB_KEYWR_KEYW_Pos)) /* Assigment of value for KEYW in the TZAESB_KEYWR register */
+#define TZAESB_KEYWR_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (TZAESB_KEYWR) Register Mask  */
 
-#define TZAESB_EMR_PKWO_Pos                   _UINT32_(6)                                          /* (TZAESB_EMR) Private Key Write Once Position */
-#define TZAESB_EMR_PKWO_Msk                   (_UINT32_(0x1) << TZAESB_EMR_PKWO_Pos)               /* (TZAESB_EMR) Private Key Write Once Mask */
-#define TZAESB_EMR_PKWO(value)                (TZAESB_EMR_PKWO_Msk & (_UINT32_(value) << TZAESB_EMR_PKWO_Pos)) /* Assigment of value for PKWO in the TZAESB_EMR register */
-#define   TZAESB_EMR_PKWO_0_Val               _UINT32_(0x0)                                        /* (TZAESB_EMR) The Private Key internal registers can be written multiple times through the Private Key bus.  */
-#define   TZAESB_EMR_PKWO_1_Val               _UINT32_(0x1)                                        /* (TZAESB_EMR) The Private Key internal registers can be written only once through the Private Key bus until hardware reset.  */
-#define TZAESB_EMR_PKWO_0                     (TZAESB_EMR_PKWO_0_Val << TZAESB_EMR_PKWO_Pos)       /* (TZAESB_EMR) The Private Key internal registers can be written multiple times through the Private Key bus. Position  */
-#define TZAESB_EMR_PKWO_1                     (TZAESB_EMR_PKWO_1_Val << TZAESB_EMR_PKWO_Pos)       /* (TZAESB_EMR) The Private Key internal registers can be written only once through the Private Key bus until hardware reset. Position  */
-#define TZAESB_EMR_PKRS_Pos                   _UINT32_(7)                                          /* (TZAESB_EMR) Private Key Internal Register Select Position */
-#define TZAESB_EMR_PKRS_Msk                   (_UINT32_(0x1) << TZAESB_EMR_PKRS_Pos)               /* (TZAESB_EMR) Private Key Internal Register Select Mask */
-#define TZAESB_EMR_PKRS(value)                (TZAESB_EMR_PKRS_Msk & (_UINT32_(value) << TZAESB_EMR_PKRS_Pos)) /* Assigment of value for PKRS in the TZAESB_EMR register */
-#define   TZAESB_EMR_PKRS_0_Val               _UINT32_(0x0)                                        /* (TZAESB_EMR) The key used by the TZAESB is in the TZAESB_KEYWRx.  */
-#define   TZAESB_EMR_PKRS_1_Val               _UINT32_(0x1)                                        /* (TZAESB_EMR) The key used by the TZAESB is in the Private Key internal registers written through the Private Key bus.  */
-#define TZAESB_EMR_PKRS_0                     (TZAESB_EMR_PKRS_0_Val << TZAESB_EMR_PKRS_Pos)       /* (TZAESB_EMR) The key used by the TZAESB is in the TZAESB_KEYWRx. Position  */
-#define TZAESB_EMR_PKRS_1                     (TZAESB_EMR_PKRS_1_Val << TZAESB_EMR_PKRS_Pos)       /* (TZAESB_EMR) The key used by the TZAESB is in the Private Key internal registers written through the Private Key bus. Position  */
-#define TZAESB_EMR_Msk                        _UINT32_(0x000000C0)                                 /* (TZAESB_EMR) Register Mask  */
+
+/* -------- TZAESB_MR : (TZAESB Offset: 0x04) (R/W 32) Mode Register -------- */
+#define TZAESB_MR_RESETVALUE                  _UINT32_(0x04)                                       /*  (TZAESB_MR) Mode Register  Reset Value */
+
+#define TZAESB_MR_PROCDLY_Pos                 _UINT32_(4)                                          /* (TZAESB_MR) Processing Delay Position */
+#define TZAESB_MR_PROCDLY_Msk                 (_UINT32_(0xF) << TZAESB_MR_PROCDLY_Pos)             /* (TZAESB_MR) Processing Delay Mask */
+#define TZAESB_MR_PROCDLY(value)              (TZAESB_MR_PROCDLY_Msk & (_UINT32_(value) << TZAESB_MR_PROCDLY_Pos)) /* Assigment of value for PROCDLY in the TZAESB_MR register */
+#define TZAESB_MR_OPMOD_Pos                   _UINT32_(12)                                         /* (TZAESB_MR) Operating Mode Position */
+#define TZAESB_MR_OPMOD_Msk                   (_UINT32_(0x7) << TZAESB_MR_OPMOD_Pos)               /* (TZAESB_MR) Operating Mode Mask */
+#define TZAESB_MR_OPMOD(value)                (TZAESB_MR_OPMOD_Msk & (_UINT32_(value) << TZAESB_MR_OPMOD_Pos)) /* Assigment of value for OPMOD in the TZAESB_MR register */
+#define   TZAESB_MR_OPMOD_CTR_Val             _UINT32_(0x4)                                        /* (TZAESB_MR) Counter mode (16-bit internal counter)  */
+#define TZAESB_MR_OPMOD_CTR                   (TZAESB_MR_OPMOD_CTR_Val << TZAESB_MR_OPMOD_Pos)     /* (TZAESB_MR) Counter mode (16-bit internal counter) Position  */
+#define TZAESB_MR_CKEY_Pos                    _UINT32_(20)                                         /* (TZAESB_MR) Key Position */
+#define TZAESB_MR_CKEY_Msk                    (_UINT32_(0xF) << TZAESB_MR_CKEY_Pos)                /* (TZAESB_MR) Key Mask */
+#define TZAESB_MR_CKEY(value)                 (TZAESB_MR_CKEY_Msk & (_UINT32_(value) << TZAESB_MR_CKEY_Pos)) /* Assigment of value for CKEY in the TZAESB_MR register */
+#define   TZAESB_MR_CKEY_PASSWD_Val           _UINT32_(0xE)                                        /* (TZAESB_MR) Must be written with 0xE the first time that TZAESB_MR is programmed. For subsequent programming of TZAESB_MR, any value can be written, including that of 0xE. Always reads as 0.  */
+#define TZAESB_MR_CKEY_PASSWD                 (TZAESB_MR_CKEY_PASSWD_Val << TZAESB_MR_CKEY_Pos)    /* (TZAESB_MR) Must be written with 0xE the first time that TZAESB_MR is programmed. For subsequent programming of TZAESB_MR, any value can be written, including that of 0xE. Always reads as 0. Position  */
+#define TZAESB_MR_TAMPCLR_Pos                 _UINT32_(31)                                         /* (TZAESB_MR) Tamper Clear Enable Position */
+#define TZAESB_MR_TAMPCLR_Msk                 (_UINT32_(0x1) << TZAESB_MR_TAMPCLR_Pos)             /* (TZAESB_MR) Tamper Clear Enable Mask */
+#define TZAESB_MR_TAMPCLR(value)              (TZAESB_MR_TAMPCLR_Msk & (_UINT32_(value) << TZAESB_MR_TAMPCLR_Pos)) /* Assigment of value for TAMPCLR in the TZAESB_MR register */
+#define   TZAESB_MR_TAMPCLR_0_Val             _UINT32_(0x0)                                        /* (TZAESB_MR) A tamper detection event has no effect on the TZAESB_KEYWRx key.  */
+#define   TZAESB_MR_TAMPCLR_1_Val             _UINT32_(0x1)                                        /* (TZAESB_MR) A tamper detection event immediately clears the TZAESB_KEYWRx key.  */
+#define TZAESB_MR_TAMPCLR_0                   (TZAESB_MR_TAMPCLR_0_Val << TZAESB_MR_TAMPCLR_Pos)   /* (TZAESB_MR) A tamper detection event has no effect on the TZAESB_KEYWRx key. Position  */
+#define TZAESB_MR_TAMPCLR_1                   (TZAESB_MR_TAMPCLR_1_Val << TZAESB_MR_TAMPCLR_Pos)   /* (TZAESB_MR) A tamper detection event immediately clears the TZAESB_KEYWRx key. Position  */
+#define TZAESB_MR_Msk                         _UINT32_(0x80F070F0)                                 /* (TZAESB_MR) Register Mask  */
 
 
 /* -------- TZAESB_WPMR : (TZAESB Offset: 0xE4) (R/W 32) Write Protection Mode Register -------- */
@@ -304,22 +304,22 @@
 
 /** \brief TZAESB register offsets definitions */
 #define TZAESB_CR_REG_OFST             _UINT32_(0x00)      /* (TZAESB_CR) Control Register Offset */
-#define TZAESB_MR_REG_OFST             _UINT32_(0x04)      /* (TZAESB_MR) Mode Register Offset */
-#define TZAESB_IER_REG_OFST            _UINT32_(0x10)      /* (TZAESB_IER) Interrupt Enable Register Offset */
+#define TZAESB_EMR_REG_OFST            _UINT32_(0xB0)      /* (TZAESB_EMR) Extended Mode Register Offset */
 #define TZAESB_IDR_REG_OFST            _UINT32_(0x14)      /* (TZAESB_IDR) Interrupt Disable Register Offset */
+#define TZAESB_IER_REG_OFST            _UINT32_(0x10)      /* (TZAESB_IER) Interrupt Enable Register Offset */
 #define TZAESB_IMR_REG_OFST            _UINT32_(0x18)      /* (TZAESB_IMR) Interrupt Mask Register Offset */
 #define TZAESB_ISR_REG_OFST            _UINT32_(0x1C)      /* (TZAESB_ISR) Interrupt Status Register Offset */
-#define TZAESB_KEYWR_REG_OFST          _UINT32_(0x20)      /* (TZAESB_KEYWR) Key Word Register x Offset */
-#define TZAESB_KEYWR0_REG_OFST         _UINT32_(0x20)      /* (TZAESB_KEYWR0) Key Word Register x Offset */
-#define TZAESB_KEYWR1_REG_OFST         _UINT32_(0x24)      /* (TZAESB_KEYWR1) Key Word Register x Offset */
-#define TZAESB_KEYWR2_REG_OFST         _UINT32_(0x28)      /* (TZAESB_KEYWR2) Key Word Register x Offset */
-#define TZAESB_KEYWR3_REG_OFST         _UINT32_(0x2C)      /* (TZAESB_KEYWR3) Key Word Register x Offset */
 #define TZAESB_IVR_REG_OFST            _UINT32_(0x60)      /* (TZAESB_IVR) Initialization Vector Register x Offset */
 #define TZAESB_IVR0_REG_OFST           _UINT32_(0x60)      /* (TZAESB_IVR0) Initialization Vector Register x Offset */
 #define TZAESB_IVR1_REG_OFST           _UINT32_(0x64)      /* (TZAESB_IVR1) Initialization Vector Register x Offset */
 #define TZAESB_IVR2_REG_OFST           _UINT32_(0x68)      /* (TZAESB_IVR2) Initialization Vector Register x Offset */
 #define TZAESB_IVR3_REG_OFST           _UINT32_(0x6C)      /* (TZAESB_IVR3) Initialization Vector Register x Offset */
-#define TZAESB_EMR_REG_OFST            _UINT32_(0xB0)      /* (TZAESB_EMR) Extended Mode Register Offset */
+#define TZAESB_KEYWR_REG_OFST          _UINT32_(0x20)      /* (TZAESB_KEYWR) Key Word Register x Offset */
+#define TZAESB_KEYWR0_REG_OFST         _UINT32_(0x20)      /* (TZAESB_KEYWR0) Key Word Register x Offset */
+#define TZAESB_KEYWR1_REG_OFST         _UINT32_(0x24)      /* (TZAESB_KEYWR1) Key Word Register x Offset */
+#define TZAESB_KEYWR2_REG_OFST         _UINT32_(0x28)      /* (TZAESB_KEYWR2) Key Word Register x Offset */
+#define TZAESB_KEYWR3_REG_OFST         _UINT32_(0x2C)      /* (TZAESB_KEYWR3) Key Word Register x Offset */
+#define TZAESB_MR_REG_OFST             _UINT32_(0x04)      /* (TZAESB_MR) Mode Register Offset */
 #define TZAESB_WPMR_REG_OFST           _UINT32_(0xE4)      /* (TZAESB_WPMR) Write Protection Mode Register Offset */
 #define TZAESB_WPSR_REG_OFST           _UINT32_(0xE8)      /* (TZAESB_WPSR) Write Protection Status Register Offset */
 

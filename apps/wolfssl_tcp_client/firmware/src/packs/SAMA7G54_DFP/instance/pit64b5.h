@@ -20,14 +20,14 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_PIT64B5_INSTANCE_
 #define _SAMA7G_PIT64B5_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PIT64B5 peripheral ========== */
-#define PIT64B5_INSTANCE_ID                      (75)       /* 64-bit Periodic Interval Timer 5 */
 #define PIT64B5_CLOCK_ID                         (75)       
+#define PIT64B5_INSTANCE_ID                      (75)       /* 64-bit Periodic Interval Timer 5 */
 #define PIT64B5_INSTANCE_ID_SINT                 (140)      /* 64-bit Periodic Interval Timer 5, Secure INTerrupt */
 
 #endif /* _SAMA7G_PIT64B5_INSTANCE_ */

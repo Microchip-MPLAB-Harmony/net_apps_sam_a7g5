@@ -20,22 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_UDPHS_COMPONENT_H_
 #define _SAMA7G_UDPHS_COMPONENT_H_
 
 /* ************************************************************************** */
 /*   SOFTWARE API DEFINITION FOR UDPHS                                        */
 /* ************************************************************************** */
-
-/* -------- UDPHS_DMANXTDSC : (UDPHS Offset: 0x00) (R/W 32) UDPHS DMA Next Descriptor Address Register  -------- */
-#define UDPHS_DMANXTDSC_RESETVALUE            _UINT32_(0x00)                                       /*  (UDPHS_DMANXTDSC) UDPHS DMA Next Descriptor Address Register   Reset Value */
-
-#define UDPHS_DMANXTDSC_NXT_DSC_ADD_Pos       _UINT32_(0)                                          /* (UDPHS_DMANXTDSC) Next Descriptor Address Position */
-#define UDPHS_DMANXTDSC_NXT_DSC_ADD_Msk       (_UINT32_(0xFFFFFFFF) << UDPHS_DMANXTDSC_NXT_DSC_ADD_Pos) /* (UDPHS_DMANXTDSC) Next Descriptor Address Mask */
-#define UDPHS_DMANXTDSC_NXT_DSC_ADD(value)    (UDPHS_DMANXTDSC_NXT_DSC_ADD_Msk & (_UINT32_(value) << UDPHS_DMANXTDSC_NXT_DSC_ADD_Pos)) /* Assigment of value for NXT_DSC_ADD in the UDPHS_DMANXTDSC register */
-#define UDPHS_DMANXTDSC_Msk                   _UINT32_(0xFFFFFFFF)                                 /* (UDPHS_DMANXTDSC) Register Mask  */
-
 
 /* -------- UDPHS_DMAADDRESS : (UDPHS Offset: 0x04) (R/W 32) UDPHS DMA Channel Address Register  -------- */
 #define UDPHS_DMAADDRESS_RESETVALUE           _UINT32_(0x00)                                       /*  (UDPHS_DMAADDRESS) UDPHS DMA Channel Address Register   Reset Value */
@@ -109,6 +100,15 @@
 #define UDPHS_DMACONTROL_BUFF_LENGTH_Msk      (_UINT32_(0xFFFF) << UDPHS_DMACONTROL_BUFF_LENGTH_Pos) /* (UDPHS_DMACONTROL) Buffer Byte Length (Write-only) Mask */
 #define UDPHS_DMACONTROL_BUFF_LENGTH(value)   (UDPHS_DMACONTROL_BUFF_LENGTH_Msk & (_UINT32_(value) << UDPHS_DMACONTROL_BUFF_LENGTH_Pos)) /* Assigment of value for BUFF_LENGTH in the UDPHS_DMACONTROL register */
 #define UDPHS_DMACONTROL_Msk                  _UINT32_(0xFFFF00FF)                                 /* (UDPHS_DMACONTROL) Register Mask  */
+
+
+/* -------- UDPHS_DMANXTDSC : (UDPHS Offset: 0x00) (R/W 32) UDPHS DMA Next Descriptor Address Register  -------- */
+#define UDPHS_DMANXTDSC_RESETVALUE            _UINT32_(0x00)                                       /*  (UDPHS_DMANXTDSC) UDPHS DMA Next Descriptor Address Register   Reset Value */
+
+#define UDPHS_DMANXTDSC_NXT_DSC_ADD_Pos       _UINT32_(0)                                          /* (UDPHS_DMANXTDSC) Next Descriptor Address Position */
+#define UDPHS_DMANXTDSC_NXT_DSC_ADD_Msk       (_UINT32_(0xFFFFFFFF) << UDPHS_DMANXTDSC_NXT_DSC_ADD_Pos) /* (UDPHS_DMANXTDSC) Next Descriptor Address Mask */
+#define UDPHS_DMANXTDSC_NXT_DSC_ADD(value)    (UDPHS_DMANXTDSC_NXT_DSC_ADD_Msk & (_UINT32_(value) << UDPHS_DMANXTDSC_NXT_DSC_ADD_Pos)) /* Assigment of value for NXT_DSC_ADD in the UDPHS_DMANXTDSC register */
+#define UDPHS_DMANXTDSC_Msk                   _UINT32_(0xFFFFFFFF)                                 /* (UDPHS_DMANXTDSC) Register Mask  */
 
 
 /* -------- UDPHS_DMASTATUS : (UDPHS Offset: 0x0C) (R/W 32) UDPHS DMA Channel Status Register  -------- */
@@ -219,151 +219,232 @@
 #define UDPHS_EPTCFG_Msk                      _UINT32_(0x800003FF)                                 /* (UDPHS_EPTCFG) Register Mask  */
 
 
-/* -------- UDPHS_EPTCTLENB : (UDPHS Offset: 0x04) ( /W 32) UDPHS Endpoint Control Enable Register  -------- */
-#define UDPHS_EPTCTLENB_EPT_ENABL_Pos         _UINT32_(0)                                          /* (UDPHS_EPTCTLENB) Endpoint Enable Position */
-#define UDPHS_EPTCTLENB_EPT_ENABL_Msk         (_UINT32_(0x1) << UDPHS_EPTCTLENB_EPT_ENABL_Pos)     /* (UDPHS_EPTCTLENB) Endpoint Enable Mask */
-#define UDPHS_EPTCTLENB_EPT_ENABL(value)      (UDPHS_EPTCTLENB_EPT_ENABL_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_EPT_ENABL_Pos)) /* Assigment of value for EPT_ENABL in the UDPHS_EPTCTLENB register */
-#define   UDPHS_EPTCTLENB_EPT_ENABL_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_EPT_ENABL_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable endpoint according to the device configuration.  */
-#define UDPHS_EPTCTLENB_EPT_ENABL_0           (UDPHS_EPTCTLENB_EPT_ENABL_0_Val << UDPHS_EPTCTLENB_EPT_ENABL_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_EPT_ENABL_1           (UDPHS_EPTCTLENB_EPT_ENABL_1_Val << UDPHS_EPTCTLENB_EPT_ENABL_Pos) /* (UDPHS_EPTCTLENB) Enable endpoint according to the device configuration. Position  */
-#define UDPHS_EPTCTLENB_AUTO_VALID_Pos        _UINT32_(1)                                          /* (UDPHS_EPTCTLENB) Packet Auto-Valid Enable Position */
-#define UDPHS_EPTCTLENB_AUTO_VALID_Msk        (_UINT32_(0x1) << UDPHS_EPTCTLENB_AUTO_VALID_Pos)    /* (UDPHS_EPTCTLENB) Packet Auto-Valid Enable Mask */
-#define UDPHS_EPTCTLENB_AUTO_VALID(value)     (UDPHS_EPTCTLENB_AUTO_VALID_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_AUTO_VALID_Pos)) /* Assigment of value for AUTO_VALID in the UDPHS_EPTCTLENB register */
-#define   UDPHS_EPTCTLENB_AUTO_VALID_0_Val    _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_AUTO_VALID_1_Val    _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable this bit to automatically validate the current packet and switch to the next bank for both IN and OUT transfers.  */
-#define UDPHS_EPTCTLENB_AUTO_VALID_0          (UDPHS_EPTCTLENB_AUTO_VALID_0_Val << UDPHS_EPTCTLENB_AUTO_VALID_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_AUTO_VALID_1          (UDPHS_EPTCTLENB_AUTO_VALID_1_Val << UDPHS_EPTCTLENB_AUTO_VALID_Pos) /* (UDPHS_EPTCTLENB) Enable this bit to automatically validate the current packet and switch to the next bank for both IN and OUT transfers. Position  */
-#define UDPHS_EPTCTLENB_INTDIS_DMA_Pos        _UINT32_(3)                                          /* (UDPHS_EPTCTLENB) Interrupts Disable DMA Position */
-#define UDPHS_EPTCTLENB_INTDIS_DMA_Msk        (_UINT32_(0x1) << UDPHS_EPTCTLENB_INTDIS_DMA_Pos)    /* (UDPHS_EPTCTLENB) Interrupts Disable DMA Mask */
-#define UDPHS_EPTCTLENB_INTDIS_DMA(value)     (UDPHS_EPTCTLENB_INTDIS_DMA_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_INTDIS_DMA_Pos)) /* Assigment of value for INTDIS_DMA in the UDPHS_EPTCTLENB register */
-#define   UDPHS_EPTCTLENB_INTDIS_DMA_0_Val    _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_INTDIS_DMA_1_Val    _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) If set, when an enabled endpoint-originated interrupt is triggered, the DMA request is disabled.  */
-#define UDPHS_EPTCTLENB_INTDIS_DMA_0          (UDPHS_EPTCTLENB_INTDIS_DMA_0_Val << UDPHS_EPTCTLENB_INTDIS_DMA_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_INTDIS_DMA_1          (UDPHS_EPTCTLENB_INTDIS_DMA_1_Val << UDPHS_EPTCTLENB_INTDIS_DMA_Pos) /* (UDPHS_EPTCTLENB) If set, when an enabled endpoint-originated interrupt is triggered, the DMA request is disabled. Position  */
-#define UDPHS_EPTCTLENB_NYET_DIS_Pos          _UINT32_(4)                                          /* (UDPHS_EPTCTLENB) NYET Disable (Only for High Speed Bulk OUT endpoints) Position */
-#define UDPHS_EPTCTLENB_NYET_DIS_Msk          (_UINT32_(0x1) << UDPHS_EPTCTLENB_NYET_DIS_Pos)      /* (UDPHS_EPTCTLENB) NYET Disable (Only for High Speed Bulk OUT endpoints) Mask */
-#define UDPHS_EPTCTLENB_NYET_DIS(value)       (UDPHS_EPTCTLENB_NYET_DIS_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_NYET_DIS_Pos)) /* Assigment of value for NYET_DIS in the UDPHS_EPTCTLENB register */
-#define   UDPHS_EPTCTLENB_NYET_DIS_0_Val      _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_NYET_DIS_1_Val      _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Forces an ACK response to the next High Speed Bulk OUT transfer instead of a NYET response.  */
-#define UDPHS_EPTCTLENB_NYET_DIS_0            (UDPHS_EPTCTLENB_NYET_DIS_0_Val << UDPHS_EPTCTLENB_NYET_DIS_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_NYET_DIS_1            (UDPHS_EPTCTLENB_NYET_DIS_1_Val << UDPHS_EPTCTLENB_NYET_DIS_Pos) /* (UDPHS_EPTCTLENB) Forces an ACK response to the next High Speed Bulk OUT transfer instead of a NYET response. Position  */
-#define UDPHS_EPTCTLENB_ERR_OVFLW_Pos         _UINT32_(8)                                          /* (UDPHS_EPTCTLENB) Overflow Error Interrupt Enable Position */
-#define UDPHS_EPTCTLENB_ERR_OVFLW_Msk         (_UINT32_(0x1) << UDPHS_EPTCTLENB_ERR_OVFLW_Pos)     /* (UDPHS_EPTCTLENB) Overflow Error Interrupt Enable Mask */
-#define UDPHS_EPTCTLENB_ERR_OVFLW(value)      (UDPHS_EPTCTLENB_ERR_OVFLW_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_ERR_OVFLW_Pos)) /* Assigment of value for ERR_OVFLW in the UDPHS_EPTCTLENB register */
-#define   UDPHS_EPTCTLENB_ERR_OVFLW_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_ERR_OVFLW_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Overflow Error Interrupt.  */
-#define UDPHS_EPTCTLENB_ERR_OVFLW_0           (UDPHS_EPTCTLENB_ERR_OVFLW_0_Val << UDPHS_EPTCTLENB_ERR_OVFLW_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_ERR_OVFLW_1           (UDPHS_EPTCTLENB_ERR_OVFLW_1_Val << UDPHS_EPTCTLENB_ERR_OVFLW_Pos) /* (UDPHS_EPTCTLENB) Enable Overflow Error Interrupt. Position  */
-#define UDPHS_EPTCTLENB_RXRDY_TXKL_Pos        _UINT32_(9)                                          /* (UDPHS_EPTCTLENB) Received OUT Data Interrupt Enable Position */
-#define UDPHS_EPTCTLENB_RXRDY_TXKL_Msk        (_UINT32_(0x1) << UDPHS_EPTCTLENB_RXRDY_TXKL_Pos)    /* (UDPHS_EPTCTLENB) Received OUT Data Interrupt Enable Mask */
-#define UDPHS_EPTCTLENB_RXRDY_TXKL(value)     (UDPHS_EPTCTLENB_RXRDY_TXKL_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_RXRDY_TXKL_Pos)) /* Assigment of value for RXRDY_TXKL in the UDPHS_EPTCTLENB register */
-#define   UDPHS_EPTCTLENB_RXRDY_TXKL_0_Val    _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_RXRDY_TXKL_1_Val    _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Received OUT Data Interrupt.  */
-#define UDPHS_EPTCTLENB_RXRDY_TXKL_0          (UDPHS_EPTCTLENB_RXRDY_TXKL_0_Val << UDPHS_EPTCTLENB_RXRDY_TXKL_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_RXRDY_TXKL_1          (UDPHS_EPTCTLENB_RXRDY_TXKL_1_Val << UDPHS_EPTCTLENB_RXRDY_TXKL_Pos) /* (UDPHS_EPTCTLENB) Enable Received OUT Data Interrupt. Position  */
-#define UDPHS_EPTCTLENB_TX_COMPLT_Pos         _UINT32_(10)                                         /* (UDPHS_EPTCTLENB) Transmitted IN Data Complete Interrupt Enable Position */
-#define UDPHS_EPTCTLENB_TX_COMPLT_Msk         (_UINT32_(0x1) << UDPHS_EPTCTLENB_TX_COMPLT_Pos)     /* (UDPHS_EPTCTLENB) Transmitted IN Data Complete Interrupt Enable Mask */
-#define UDPHS_EPTCTLENB_TX_COMPLT(value)      (UDPHS_EPTCTLENB_TX_COMPLT_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_TX_COMPLT_Pos)) /* Assigment of value for TX_COMPLT in the UDPHS_EPTCTLENB register */
-#define   UDPHS_EPTCTLENB_TX_COMPLT_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_TX_COMPLT_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Transmitted IN Data Complete Interrupt.  */
-#define UDPHS_EPTCTLENB_TX_COMPLT_0           (UDPHS_EPTCTLENB_TX_COMPLT_0_Val << UDPHS_EPTCTLENB_TX_COMPLT_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_TX_COMPLT_1           (UDPHS_EPTCTLENB_TX_COMPLT_1_Val << UDPHS_EPTCTLENB_TX_COMPLT_Pos) /* (UDPHS_EPTCTLENB) Enable Transmitted IN Data Complete Interrupt. Position  */
-#define UDPHS_EPTCTLENB_TXRDY_Pos             _UINT32_(11)                                         /* (UDPHS_EPTCTLENB) TX Packet Ready Interrupt Enable Position */
-#define UDPHS_EPTCTLENB_TXRDY_Msk             (_UINT32_(0x1) << UDPHS_EPTCTLENB_TXRDY_Pos)         /* (UDPHS_EPTCTLENB) TX Packet Ready Interrupt Enable Mask */
-#define UDPHS_EPTCTLENB_TXRDY(value)          (UDPHS_EPTCTLENB_TXRDY_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_TXRDY_Pos)) /* Assigment of value for TXRDY in the UDPHS_EPTCTLENB register */
-#define   UDPHS_EPTCTLENB_TXRDY_0_Val         _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_TXRDY_1_Val         _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable TX Packet Ready/Transaction Error Interrupt.  */
-#define UDPHS_EPTCTLENB_TXRDY_0               (UDPHS_EPTCTLENB_TXRDY_0_Val << UDPHS_EPTCTLENB_TXRDY_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_TXRDY_1               (UDPHS_EPTCTLENB_TXRDY_1_Val << UDPHS_EPTCTLENB_TXRDY_Pos) /* (UDPHS_EPTCTLENB) Enable TX Packet Ready/Transaction Error Interrupt. Position  */
-#define UDPHS_EPTCTLENB_RX_SETUP_Pos          _UINT32_(12)                                         /* (UDPHS_EPTCTLENB) Received SETUP Position */
-#define UDPHS_EPTCTLENB_RX_SETUP_Msk          (_UINT32_(0x1) << UDPHS_EPTCTLENB_RX_SETUP_Pos)      /* (UDPHS_EPTCTLENB) Received SETUP Mask */
-#define UDPHS_EPTCTLENB_RX_SETUP(value)       (UDPHS_EPTCTLENB_RX_SETUP_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_RX_SETUP_Pos)) /* Assigment of value for RX_SETUP in the UDPHS_EPTCTLENB register */
-#define   UDPHS_EPTCTLENB_RX_SETUP_0_Val      _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_RX_SETUP_1_Val      _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable RX_SETUP Interrupt.  */
-#define UDPHS_EPTCTLENB_RX_SETUP_0            (UDPHS_EPTCTLENB_RX_SETUP_0_Val << UDPHS_EPTCTLENB_RX_SETUP_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_RX_SETUP_1            (UDPHS_EPTCTLENB_RX_SETUP_1_Val << UDPHS_EPTCTLENB_RX_SETUP_Pos) /* (UDPHS_EPTCTLENB) Enable RX_SETUP Interrupt. Position  */
-#define UDPHS_EPTCTLENB_STALL_SNT_Pos         _UINT32_(13)                                         /* (UDPHS_EPTCTLENB) Stall Sent Interrupt Enable Position */
-#define UDPHS_EPTCTLENB_STALL_SNT_Msk         (_UINT32_(0x1) << UDPHS_EPTCTLENB_STALL_SNT_Pos)     /* (UDPHS_EPTCTLENB) Stall Sent Interrupt Enable Mask */
-#define UDPHS_EPTCTLENB_STALL_SNT(value)      (UDPHS_EPTCTLENB_STALL_SNT_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_STALL_SNT_Pos)) /* Assigment of value for STALL_SNT in the UDPHS_EPTCTLENB register */
-#define   UDPHS_EPTCTLENB_STALL_SNT_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_STALL_SNT_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Stall Sent Interrupt.  */
-#define UDPHS_EPTCTLENB_STALL_SNT_0           (UDPHS_EPTCTLENB_STALL_SNT_0_Val << UDPHS_EPTCTLENB_STALL_SNT_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_STALL_SNT_1           (UDPHS_EPTCTLENB_STALL_SNT_1_Val << UDPHS_EPTCTLENB_STALL_SNT_Pos) /* (UDPHS_EPTCTLENB) Enable Stall Sent Interrupt. Position  */
-#define UDPHS_EPTCTLENB_NAK_IN_Pos            _UINT32_(14)                                         /* (UDPHS_EPTCTLENB) NAKIN Interrupt Enable Position */
-#define UDPHS_EPTCTLENB_NAK_IN_Msk            (_UINT32_(0x1) << UDPHS_EPTCTLENB_NAK_IN_Pos)        /* (UDPHS_EPTCTLENB) NAKIN Interrupt Enable Mask */
-#define UDPHS_EPTCTLENB_NAK_IN(value)         (UDPHS_EPTCTLENB_NAK_IN_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_NAK_IN_Pos)) /* Assigment of value for NAK_IN in the UDPHS_EPTCTLENB register */
-#define   UDPHS_EPTCTLENB_NAK_IN_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_NAK_IN_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable NAKIN Interrupt.  */
-#define UDPHS_EPTCTLENB_NAK_IN_0              (UDPHS_EPTCTLENB_NAK_IN_0_Val << UDPHS_EPTCTLENB_NAK_IN_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_NAK_IN_1              (UDPHS_EPTCTLENB_NAK_IN_1_Val << UDPHS_EPTCTLENB_NAK_IN_Pos) /* (UDPHS_EPTCTLENB) Enable NAKIN Interrupt. Position  */
-#define UDPHS_EPTCTLENB_NAK_OUT_Pos           _UINT32_(15)                                         /* (UDPHS_EPTCTLENB) NAKOUT Interrupt Enable Position */
-#define UDPHS_EPTCTLENB_NAK_OUT_Msk           (_UINT32_(0x1) << UDPHS_EPTCTLENB_NAK_OUT_Pos)       /* (UDPHS_EPTCTLENB) NAKOUT Interrupt Enable Mask */
-#define UDPHS_EPTCTLENB_NAK_OUT(value)        (UDPHS_EPTCTLENB_NAK_OUT_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_NAK_OUT_Pos)) /* Assigment of value for NAK_OUT in the UDPHS_EPTCTLENB register */
-#define   UDPHS_EPTCTLENB_NAK_OUT_0_Val       _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_NAK_OUT_1_Val       _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable NAKOUT Interrupt.  */
-#define UDPHS_EPTCTLENB_NAK_OUT_0             (UDPHS_EPTCTLENB_NAK_OUT_0_Val << UDPHS_EPTCTLENB_NAK_OUT_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_NAK_OUT_1             (UDPHS_EPTCTLENB_NAK_OUT_1_Val << UDPHS_EPTCTLENB_NAK_OUT_Pos) /* (UDPHS_EPTCTLENB) Enable NAKOUT Interrupt. Position  */
-#define UDPHS_EPTCTLENB_BUSY_BANK_Pos         _UINT32_(18)                                         /* (UDPHS_EPTCTLENB) Busy Bank Interrupt Enable Position */
-#define UDPHS_EPTCTLENB_BUSY_BANK_Msk         (_UINT32_(0x1) << UDPHS_EPTCTLENB_BUSY_BANK_Pos)     /* (UDPHS_EPTCTLENB) Busy Bank Interrupt Enable Mask */
-#define UDPHS_EPTCTLENB_BUSY_BANK(value)      (UDPHS_EPTCTLENB_BUSY_BANK_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_BUSY_BANK_Pos)) /* Assigment of value for BUSY_BANK in the UDPHS_EPTCTLENB register */
-#define   UDPHS_EPTCTLENB_BUSY_BANK_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_BUSY_BANK_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Busy Bank Interrupt.  */
-#define UDPHS_EPTCTLENB_BUSY_BANK_0           (UDPHS_EPTCTLENB_BUSY_BANK_0_Val << UDPHS_EPTCTLENB_BUSY_BANK_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_BUSY_BANK_1           (UDPHS_EPTCTLENB_BUSY_BANK_1_Val << UDPHS_EPTCTLENB_BUSY_BANK_Pos) /* (UDPHS_EPTCTLENB) Enable Busy Bank Interrupt. Position  */
-#define UDPHS_EPTCTLENB_SHRT_PCKT_Pos         _UINT32_(31)                                         /* (UDPHS_EPTCTLENB) Short Packet Send/Short Packet Interrupt Enable Position */
-#define UDPHS_EPTCTLENB_SHRT_PCKT_Msk         (_UINT32_(0x1) << UDPHS_EPTCTLENB_SHRT_PCKT_Pos)     /* (UDPHS_EPTCTLENB) Short Packet Send/Short Packet Interrupt Enable Mask */
-#define UDPHS_EPTCTLENB_SHRT_PCKT(value)      (UDPHS_EPTCTLENB_SHRT_PCKT_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_SHRT_PCKT_Pos)) /* Assigment of value for SHRT_PCKT in the UDPHS_EPTCTLENB register */
-#define   UDPHS_EPTCTLENB_SHRT_PCKT_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_SHRT_PCKT_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Short Packet Interrupt.  */
-#define UDPHS_EPTCTLENB_SHRT_PCKT_0           (UDPHS_EPTCTLENB_SHRT_PCKT_0_Val << UDPHS_EPTCTLENB_SHRT_PCKT_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_SHRT_PCKT_1           (UDPHS_EPTCTLENB_SHRT_PCKT_1_Val << UDPHS_EPTCTLENB_SHRT_PCKT_Pos) /* (UDPHS_EPTCTLENB) Enable Short Packet Interrupt. Position  */
-#define UDPHS_EPTCTLENB_Msk                   _UINT32_(0x8004FF1B)                                 /* (UDPHS_EPTCTLENB) Register Mask  */
+/* -------- UDPHS_EPTCLRSTA : (UDPHS Offset: 0x18) ( /W 32) UDPHS Endpoint Clear Status Register  -------- */
+#define UDPHS_EPTCLRSTA_FRCESTALL_Pos         _UINT32_(5)                                          /* (UDPHS_EPTCLRSTA) Stall Handshake Request Clear Position */
+#define UDPHS_EPTCLRSTA_FRCESTALL_Msk         (_UINT32_(0x1) << UDPHS_EPTCLRSTA_FRCESTALL_Pos)     /* (UDPHS_EPTCLRSTA) Stall Handshake Request Clear Mask */
+#define UDPHS_EPTCLRSTA_FRCESTALL(value)      (UDPHS_EPTCLRSTA_FRCESTALL_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_FRCESTALL_Pos)) /* Assigment of value for FRCESTALL in the UDPHS_EPTCLRSTA register */
+#define   UDPHS_EPTCLRSTA_FRCESTALL_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
+#define   UDPHS_EPTCLRSTA_FRCESTALL_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the STALL request. The next packets from host will not be STALLed.  */
+#define UDPHS_EPTCLRSTA_FRCESTALL_0           (UDPHS_EPTCLRSTA_FRCESTALL_0_Val << UDPHS_EPTCLRSTA_FRCESTALL_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
+#define UDPHS_EPTCLRSTA_FRCESTALL_1           (UDPHS_EPTCLRSTA_FRCESTALL_1_Val << UDPHS_EPTCLRSTA_FRCESTALL_Pos) /* (UDPHS_EPTCLRSTA) Clear the STALL request. The next packets from host will not be STALLed. Position  */
+#define UDPHS_EPTCLRSTA_TOGGLESQ_Pos          _UINT32_(6)                                          /* (UDPHS_EPTCLRSTA) Data Toggle Clear Position */
+#define UDPHS_EPTCLRSTA_TOGGLESQ_Msk          (_UINT32_(0x1) << UDPHS_EPTCLRSTA_TOGGLESQ_Pos)      /* (UDPHS_EPTCLRSTA) Data Toggle Clear Mask */
+#define UDPHS_EPTCLRSTA_TOGGLESQ(value)       (UDPHS_EPTCLRSTA_TOGGLESQ_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_TOGGLESQ_Pos)) /* Assigment of value for TOGGLESQ in the UDPHS_EPTCLRSTA register */
+#define   UDPHS_EPTCLRSTA_TOGGLESQ_0_Val      _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
+#define   UDPHS_EPTCLRSTA_TOGGLESQ_1_Val      _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the PID data of the current bank  */
+#define UDPHS_EPTCLRSTA_TOGGLESQ_0            (UDPHS_EPTCLRSTA_TOGGLESQ_0_Val << UDPHS_EPTCLRSTA_TOGGLESQ_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
+#define UDPHS_EPTCLRSTA_TOGGLESQ_1            (UDPHS_EPTCLRSTA_TOGGLESQ_1_Val << UDPHS_EPTCLRSTA_TOGGLESQ_Pos) /* (UDPHS_EPTCLRSTA) Clear the PID data of the current bank Position  */
+#define UDPHS_EPTCLRSTA_RXRDY_TXKL_Pos        _UINT32_(9)                                          /* (UDPHS_EPTCLRSTA) Received OUT Data Clear Position */
+#define UDPHS_EPTCLRSTA_RXRDY_TXKL_Msk        (_UINT32_(0x1) << UDPHS_EPTCLRSTA_RXRDY_TXKL_Pos)    /* (UDPHS_EPTCLRSTA) Received OUT Data Clear Mask */
+#define UDPHS_EPTCLRSTA_RXRDY_TXKL(value)     (UDPHS_EPTCLRSTA_RXRDY_TXKL_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_RXRDY_TXKL_Pos)) /* Assigment of value for RXRDY_TXKL in the UDPHS_EPTCLRSTA register */
+#define   UDPHS_EPTCLRSTA_RXRDY_TXKL_0_Val    _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
+#define   UDPHS_EPTCLRSTA_RXRDY_TXKL_1_Val    _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the RXRDY_TXKL flag of UDPHS_EPTSTAx.  */
+#define UDPHS_EPTCLRSTA_RXRDY_TXKL_0          (UDPHS_EPTCLRSTA_RXRDY_TXKL_0_Val << UDPHS_EPTCLRSTA_RXRDY_TXKL_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
+#define UDPHS_EPTCLRSTA_RXRDY_TXKL_1          (UDPHS_EPTCLRSTA_RXRDY_TXKL_1_Val << UDPHS_EPTCLRSTA_RXRDY_TXKL_Pos) /* (UDPHS_EPTCLRSTA) Clear the RXRDY_TXKL flag of UDPHS_EPTSTAx. Position  */
+#define UDPHS_EPTCLRSTA_TX_COMPLT_Pos         _UINT32_(10)                                         /* (UDPHS_EPTCLRSTA) Transmitted IN Data Complete Clear Position */
+#define UDPHS_EPTCLRSTA_TX_COMPLT_Msk         (_UINT32_(0x1) << UDPHS_EPTCLRSTA_TX_COMPLT_Pos)     /* (UDPHS_EPTCLRSTA) Transmitted IN Data Complete Clear Mask */
+#define UDPHS_EPTCLRSTA_TX_COMPLT(value)      (UDPHS_EPTCLRSTA_TX_COMPLT_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_TX_COMPLT_Pos)) /* Assigment of value for TX_COMPLT in the UDPHS_EPTCLRSTA register */
+#define   UDPHS_EPTCLRSTA_TX_COMPLT_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
+#define   UDPHS_EPTCLRSTA_TX_COMPLT_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the TX_COMPLT flag of UDPHS_EPTSTAx.  */
+#define UDPHS_EPTCLRSTA_TX_COMPLT_0           (UDPHS_EPTCLRSTA_TX_COMPLT_0_Val << UDPHS_EPTCLRSTA_TX_COMPLT_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
+#define UDPHS_EPTCLRSTA_TX_COMPLT_1           (UDPHS_EPTCLRSTA_TX_COMPLT_1_Val << UDPHS_EPTCLRSTA_TX_COMPLT_Pos) /* (UDPHS_EPTCLRSTA) Clear the TX_COMPLT flag of UDPHS_EPTSTAx. Position  */
+#define UDPHS_EPTCLRSTA_RX_SETUP_Pos          _UINT32_(12)                                         /* (UDPHS_EPTCLRSTA) Received SETUP Clear Position */
+#define UDPHS_EPTCLRSTA_RX_SETUP_Msk          (_UINT32_(0x1) << UDPHS_EPTCLRSTA_RX_SETUP_Pos)      /* (UDPHS_EPTCLRSTA) Received SETUP Clear Mask */
+#define UDPHS_EPTCLRSTA_RX_SETUP(value)       (UDPHS_EPTCLRSTA_RX_SETUP_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_RX_SETUP_Pos)) /* Assigment of value for RX_SETUP in the UDPHS_EPTCLRSTA register */
+#define   UDPHS_EPTCLRSTA_RX_SETUP_0_Val      _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
+#define   UDPHS_EPTCLRSTA_RX_SETUP_1_Val      _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the RX_SETUP flags of UDPHS_EPTSTAx.  */
+#define UDPHS_EPTCLRSTA_RX_SETUP_0            (UDPHS_EPTCLRSTA_RX_SETUP_0_Val << UDPHS_EPTCLRSTA_RX_SETUP_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
+#define UDPHS_EPTCLRSTA_RX_SETUP_1            (UDPHS_EPTCLRSTA_RX_SETUP_1_Val << UDPHS_EPTCLRSTA_RX_SETUP_Pos) /* (UDPHS_EPTCLRSTA) Clear the RX_SETUP flags of UDPHS_EPTSTAx. Position  */
+#define UDPHS_EPTCLRSTA_STALL_SNT_Pos         _UINT32_(13)                                         /* (UDPHS_EPTCLRSTA) Stall Sent Clear Position */
+#define UDPHS_EPTCLRSTA_STALL_SNT_Msk         (_UINT32_(0x1) << UDPHS_EPTCLRSTA_STALL_SNT_Pos)     /* (UDPHS_EPTCLRSTA) Stall Sent Clear Mask */
+#define UDPHS_EPTCLRSTA_STALL_SNT(value)      (UDPHS_EPTCLRSTA_STALL_SNT_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_STALL_SNT_Pos)) /* Assigment of value for STALL_SNT in the UDPHS_EPTCLRSTA register */
+#define   UDPHS_EPTCLRSTA_STALL_SNT_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
+#define   UDPHS_EPTCLRSTA_STALL_SNT_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the STALL_SNT flags of UDPHS_EPTSTAx.  */
+#define UDPHS_EPTCLRSTA_STALL_SNT_0           (UDPHS_EPTCLRSTA_STALL_SNT_0_Val << UDPHS_EPTCLRSTA_STALL_SNT_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
+#define UDPHS_EPTCLRSTA_STALL_SNT_1           (UDPHS_EPTCLRSTA_STALL_SNT_1_Val << UDPHS_EPTCLRSTA_STALL_SNT_Pos) /* (UDPHS_EPTCLRSTA) Clear the STALL_SNT flags of UDPHS_EPTSTAx. Position  */
+#define UDPHS_EPTCLRSTA_NAK_IN_Pos            _UINT32_(14)                                         /* (UDPHS_EPTCLRSTA) NAKIN Clear Position */
+#define UDPHS_EPTCLRSTA_NAK_IN_Msk            (_UINT32_(0x1) << UDPHS_EPTCLRSTA_NAK_IN_Pos)        /* (UDPHS_EPTCLRSTA) NAKIN Clear Mask */
+#define UDPHS_EPTCLRSTA_NAK_IN(value)         (UDPHS_EPTCLRSTA_NAK_IN_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_NAK_IN_Pos)) /* Assigment of value for NAK_IN in the UDPHS_EPTCLRSTA register */
+#define   UDPHS_EPTCLRSTA_NAK_IN_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
+#define   UDPHS_EPTCLRSTA_NAK_IN_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the NAK_IN flags of UDPHS_EPTSTAx.  */
+#define UDPHS_EPTCLRSTA_NAK_IN_0              (UDPHS_EPTCLRSTA_NAK_IN_0_Val << UDPHS_EPTCLRSTA_NAK_IN_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
+#define UDPHS_EPTCLRSTA_NAK_IN_1              (UDPHS_EPTCLRSTA_NAK_IN_1_Val << UDPHS_EPTCLRSTA_NAK_IN_Pos) /* (UDPHS_EPTCLRSTA) Clear the NAK_IN flags of UDPHS_EPTSTAx. Position  */
+#define UDPHS_EPTCLRSTA_NAK_OUT_Pos           _UINT32_(15)                                         /* (UDPHS_EPTCLRSTA) NAKOUT Clear Position */
+#define UDPHS_EPTCLRSTA_NAK_OUT_Msk           (_UINT32_(0x1) << UDPHS_EPTCLRSTA_NAK_OUT_Pos)       /* (UDPHS_EPTCLRSTA) NAKOUT Clear Mask */
+#define UDPHS_EPTCLRSTA_NAK_OUT(value)        (UDPHS_EPTCLRSTA_NAK_OUT_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_NAK_OUT_Pos)) /* Assigment of value for NAK_OUT in the UDPHS_EPTCLRSTA register */
+#define   UDPHS_EPTCLRSTA_NAK_OUT_0_Val       _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
+#define   UDPHS_EPTCLRSTA_NAK_OUT_1_Val       _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the NAK_OUT flag of UDPHS_EPTSTAx.  */
+#define UDPHS_EPTCLRSTA_NAK_OUT_0             (UDPHS_EPTCLRSTA_NAK_OUT_0_Val << UDPHS_EPTCLRSTA_NAK_OUT_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
+#define UDPHS_EPTCLRSTA_NAK_OUT_1             (UDPHS_EPTCLRSTA_NAK_OUT_1_Val << UDPHS_EPTCLRSTA_NAK_OUT_Pos) /* (UDPHS_EPTCLRSTA) Clear the NAK_OUT flag of UDPHS_EPTSTAx. Position  */
+#define UDPHS_EPTCLRSTA_Msk                   _UINT32_(0x0000F660)                                 /* (UDPHS_EPTCLRSTA) Register Mask  */
 
 /* ISOENDPT mode */
-#define UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_Pos _UINT32_(6)                                          /* (UDPHS_EPTCTLENB) DATAx Interrupt Enable (Only for high bandwidth Isochronous OUT endpoints) Position */
-#define UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_Msk (_UINT32_(0x1) << UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_Pos) /* (UDPHS_EPTCTLENB) DATAx Interrupt Enable (Only for high bandwidth Isochronous OUT endpoints) Mask */
-#define UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX(value) (UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_Pos))
-#define   UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable DATAx Interrupt.  */
-#define UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_0   (UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_0_Val << UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_1   (UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_1_Val << UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_Pos) /* (UDPHS_EPTCTLENB) Enable DATAx Interrupt. Position  */
-#define UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_Pos _UINT32_(7)                                          /* (UDPHS_EPTCTLENB) MDATA Interrupt Enable (Only for high bandwidth Isochronous OUT endpoints) Position */
-#define UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_Msk (_UINT32_(0x1) << UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_Pos) /* (UDPHS_EPTCTLENB) MDATA Interrupt Enable (Only for high bandwidth Isochronous OUT endpoints) Mask */
-#define UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX(value) (UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_Pos))
-#define   UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable MDATA Interrupt.  */
-#define UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_0   (UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_0_Val << UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_1   (UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_1_Val << UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_Pos) /* (UDPHS_EPTCTLENB) Enable MDATA Interrupt. Position  */
-#define UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_Pos _UINT32_(11)                                         /* (UDPHS_EPTCTLENB) TX Packet Ready/Transaction Error Interrupt Enable Position */
-#define UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_Msk (_UINT32_(0x1) << UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_Pos) /* (UDPHS_EPTCTLENB) TX Packet Ready/Transaction Error Interrupt Enable Mask */
-#define UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER(value) (UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_Pos))
-#define   UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable TX Packet Ready/Transaction Error Interrupt.  */
-#define UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_0 (UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_0_Val << UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_1 (UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_1_Val << UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_Pos) /* (UDPHS_EPTCTLENB) Enable TX Packet Ready/Transaction Error Interrupt. Position  */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_Pos _UINT32_(12)                                         /* (UDPHS_EPTCTLENB) Error Flow Interrupt Enable Position */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_Msk (_UINT32_(0x1) << UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCTLENB) Error Flow Interrupt Enable Mask */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO(value) (UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_Pos))
-#define   UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Error Flow ISO Interrupt.  */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_0 (UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_0_Val << UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_1 (UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_1_Val << UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCTLENB) Enable Error Flow ISO Interrupt. Position  */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_Pos _UINT32_(13)                                         /* (UDPHS_EPTCTLENB) ISO CRC Error/Number of Transaction Error Interrupt Enable Position */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_Msk (_UINT32_(0x1) << UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCTLENB) ISO CRC Error/Number of Transaction Error Interrupt Enable Mask */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR(value) (UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_Pos))
-#define   UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Error CRC ISO/Error Number of Transaction Interrupt.  */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_0 (UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_0_Val << UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_1 (UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_1_Val << UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCTLENB) Enable Error CRC ISO/Error Number of Transaction Interrupt. Position  */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_Pos _UINT32_(14)                                         /* (UDPHS_EPTCTLENB) Bank Flush Error Interrupt Enable Position */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_Msk (_UINT32_(0x1) << UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCTLENB) Bank Flush Error Interrupt Enable Mask */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH(value) (UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_Pos))
-#define   UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
-#define   UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Bank Flush Error Interrupt.  */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_0  (UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_0_Val << UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
-#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_1  (UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_1_Val << UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCTLENB) Enable Bank Flush Error Interrupt. Position  */
-#define UDPHS_EPTCTLENB_ISOENDPT_Msk          _UINT32_(0x000078C0)                                  /* (UDPHS_EPTCTLENB_ISOENDPT) Register Mask  */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_Pos _UINT32_(12)                                         /* (UDPHS_EPTCLRSTA) Error Flow Clear Position */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_Msk (_UINT32_(0x1) << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCLRSTA) Error Flow Clear Mask */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO(value) (UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_Pos))
+#define   UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
+#define   UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the ERR_FL_ISO flags of UDPHS_EPTSTAx.  */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_0 (UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_0_Val << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_1 (UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_1_Val << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCLRSTA) Clear the ERR_FL_ISO flags of UDPHS_EPTSTAx. Position  */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_Pos _UINT32_(13)                                         /* (UDPHS_EPTCLRSTA) Number of Transaction Error Clear Position */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_Msk (_UINT32_(0x1) << UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCLRSTA) Number of Transaction Error Clear Mask */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR(value) (UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_Pos))
+#define   UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
+#define   UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the ERR_CRC_NTR flags of UDPHS_EPTSTAx.  */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_0 (UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_0_Val << UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_1 (UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_1_Val << UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCLRSTA) Clear the ERR_CRC_NTR flags of UDPHS_EPTSTAx. Position  */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_Pos _UINT32_(14)                                         /* (UDPHS_EPTCLRSTA) Bank Flush Error Clear Position */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_Msk (_UINT32_(0x1) << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCLRSTA) Bank Flush Error Clear Mask */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH(value) (UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_Pos))
+#define   UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
+#define   UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the ERR_FLUSH flags of UDPHS_EPTSTAx.  */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_0  (UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_0_Val << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
+#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_1  (UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_1_Val << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCLRSTA) Clear the ERR_FLUSH flags of UDPHS_EPTSTAx. Position  */
+#define UDPHS_EPTCLRSTA_ISOENDPT_Msk          _UINT32_(0x00007000)                                  /* (UDPHS_EPTCLRSTA_ISOENDPT) Register Mask  */
+
+
+/* -------- UDPHS_EPTCTL : (UDPHS Offset: 0x0C) ( R/ 32) UDPHS Endpoint Control Register  -------- */
+#define UDPHS_EPTCTL_RESETVALUE               _UINT32_(0x00)                                       /*  (UDPHS_EPTCTL) UDPHS Endpoint Control Register   Reset Value */
+
+#define UDPHS_EPTCTL_EPT_ENABL_Pos            _UINT32_(0)                                          /* (UDPHS_EPTCTL) Endpoint Enable (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_EPT_ENABL_Msk            (_UINT32_(0x1) << UDPHS_EPTCTL_EPT_ENABL_Pos)        /* (UDPHS_EPTCTL) Endpoint Enable (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_EPT_ENABL(value)         (UDPHS_EPTCTL_EPT_ENABL_Msk & (_UINT32_(value) << UDPHS_EPTCTL_EPT_ENABL_Pos)) /* Assigment of value for EPT_ENABL in the UDPHS_EPTCTL register */
+#define   UDPHS_EPTCTL_EPT_ENABL_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) The endpoint is disabled according to the device configuration. Endpoint 0 should always be enabled after a hardware or UDPHS bus reset and participate in the device configuration.  */
+#define   UDPHS_EPTCTL_EPT_ENABL_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) The endpoint is enabled according to the device configuration.  */
+#define UDPHS_EPTCTL_EPT_ENABL_0              (UDPHS_EPTCTL_EPT_ENABL_0_Val << UDPHS_EPTCTL_EPT_ENABL_Pos) /* (UDPHS_EPTCTL) The endpoint is disabled according to the device configuration. Endpoint 0 should always be enabled after a hardware or UDPHS bus reset and participate in the device configuration. Position  */
+#define UDPHS_EPTCTL_EPT_ENABL_1              (UDPHS_EPTCTL_EPT_ENABL_1_Val << UDPHS_EPTCTL_EPT_ENABL_Pos) /* (UDPHS_EPTCTL) The endpoint is enabled according to the device configuration. Position  */
+#define UDPHS_EPTCTL_AUTO_VALID_Pos           _UINT32_(1)                                          /* (UDPHS_EPTCTL) Packet Auto-Valid Enabled (Not for CONTROL Endpoints) (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_AUTO_VALID_Msk           (_UINT32_(0x1) << UDPHS_EPTCTL_AUTO_VALID_Pos)       /* (UDPHS_EPTCTL) Packet Auto-Valid Enabled (Not for CONTROL Endpoints) (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_AUTO_VALID(value)        (UDPHS_EPTCTL_AUTO_VALID_Msk & (_UINT32_(value) << UDPHS_EPTCTL_AUTO_VALID_Pos)) /* Assigment of value for AUTO_VALID in the UDPHS_EPTCTL register */
+#define UDPHS_EPTCTL_INTDIS_DMA_Pos           _UINT32_(3)                                          /* (UDPHS_EPTCTL) Interrupt Disables DMA (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_INTDIS_DMA_Msk           (_UINT32_(0x1) << UDPHS_EPTCTL_INTDIS_DMA_Pos)       /* (UDPHS_EPTCTL) Interrupt Disables DMA (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_INTDIS_DMA(value)        (UDPHS_EPTCTL_INTDIS_DMA_Msk & (_UINT32_(value) << UDPHS_EPTCTL_INTDIS_DMA_Pos)) /* Assigment of value for INTDIS_DMA in the UDPHS_EPTCTL register */
+#define UDPHS_EPTCTL_NYET_DIS_Pos             _UINT32_(4)                                          /* (UDPHS_EPTCTL) NYET Disable (Only for High Speed Bulk OUT Endpoints) (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_NYET_DIS_Msk             (_UINT32_(0x1) << UDPHS_EPTCTL_NYET_DIS_Pos)         /* (UDPHS_EPTCTL) NYET Disable (Only for High Speed Bulk OUT Endpoints) (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_NYET_DIS(value)          (UDPHS_EPTCTL_NYET_DIS_Msk & (_UINT32_(value) << UDPHS_EPTCTL_NYET_DIS_Pos)) /* Assigment of value for NYET_DIS in the UDPHS_EPTCTL register */
+#define   UDPHS_EPTCTL_NYET_DIS_0_Val         _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Lets the hardware handle the handshake response for the High Speed Bulk OUT transfer.  */
+#define   UDPHS_EPTCTL_NYET_DIS_1_Val         _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Forces an ACK response to the next High Speed Bulk OUT transfer instead of a NYET response.  */
+#define UDPHS_EPTCTL_NYET_DIS_0               (UDPHS_EPTCTL_NYET_DIS_0_Val << UDPHS_EPTCTL_NYET_DIS_Pos) /* (UDPHS_EPTCTL) Lets the hardware handle the handshake response for the High Speed Bulk OUT transfer. Position  */
+#define UDPHS_EPTCTL_NYET_DIS_1               (UDPHS_EPTCTL_NYET_DIS_1_Val << UDPHS_EPTCTL_NYET_DIS_Pos) /* (UDPHS_EPTCTL) Forces an ACK response to the next High Speed Bulk OUT transfer instead of a NYET response. Position  */
+#define UDPHS_EPTCTL_ERR_OVFLW_Pos            _UINT32_(8)                                          /* (UDPHS_EPTCTL) Overflow Error Interrupt Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_ERR_OVFLW_Msk            (_UINT32_(0x1) << UDPHS_EPTCTL_ERR_OVFLW_Pos)        /* (UDPHS_EPTCTL) Overflow Error Interrupt Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_ERR_OVFLW(value)         (UDPHS_EPTCTL_ERR_OVFLW_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ERR_OVFLW_Pos)) /* Assigment of value for ERR_OVFLW in the UDPHS_EPTCTL register */
+#define   UDPHS_EPTCTL_ERR_OVFLW_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Overflow Error Interrupt is masked.  */
+#define   UDPHS_EPTCTL_ERR_OVFLW_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Overflow Error Interrupt is enabled.  */
+#define UDPHS_EPTCTL_ERR_OVFLW_0              (UDPHS_EPTCTL_ERR_OVFLW_0_Val << UDPHS_EPTCTL_ERR_OVFLW_Pos) /* (UDPHS_EPTCTL) Overflow Error Interrupt is masked. Position  */
+#define UDPHS_EPTCTL_ERR_OVFLW_1              (UDPHS_EPTCTL_ERR_OVFLW_1_Val << UDPHS_EPTCTL_ERR_OVFLW_Pos) /* (UDPHS_EPTCTL) Overflow Error Interrupt is enabled. Position  */
+#define UDPHS_EPTCTL_RXRDY_TXKL_Pos           _UINT32_(9)                                          /* (UDPHS_EPTCTL) Received OUT Data Interrupt Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_RXRDY_TXKL_Msk           (_UINT32_(0x1) << UDPHS_EPTCTL_RXRDY_TXKL_Pos)       /* (UDPHS_EPTCTL) Received OUT Data Interrupt Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_RXRDY_TXKL(value)        (UDPHS_EPTCTL_RXRDY_TXKL_Msk & (_UINT32_(value) << UDPHS_EPTCTL_RXRDY_TXKL_Pos)) /* Assigment of value for RXRDY_TXKL in the UDPHS_EPTCTL register */
+#define   UDPHS_EPTCTL_RXRDY_TXKL_0_Val       _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Received OUT Data Interrupt is masked.  */
+#define   UDPHS_EPTCTL_RXRDY_TXKL_1_Val       _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Received OUT Data Interrupt is enabled.  */
+#define UDPHS_EPTCTL_RXRDY_TXKL_0             (UDPHS_EPTCTL_RXRDY_TXKL_0_Val << UDPHS_EPTCTL_RXRDY_TXKL_Pos) /* (UDPHS_EPTCTL) Received OUT Data Interrupt is masked. Position  */
+#define UDPHS_EPTCTL_RXRDY_TXKL_1             (UDPHS_EPTCTL_RXRDY_TXKL_1_Val << UDPHS_EPTCTL_RXRDY_TXKL_Pos) /* (UDPHS_EPTCTL) Received OUT Data Interrupt is enabled. Position  */
+#define UDPHS_EPTCTL_TX_COMPLT_Pos            _UINT32_(10)                                         /* (UDPHS_EPTCTL) Transmitted IN Data Complete Interrupt Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_TX_COMPLT_Msk            (_UINT32_(0x1) << UDPHS_EPTCTL_TX_COMPLT_Pos)        /* (UDPHS_EPTCTL) Transmitted IN Data Complete Interrupt Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_TX_COMPLT(value)         (UDPHS_EPTCTL_TX_COMPLT_Msk & (_UINT32_(value) << UDPHS_EPTCTL_TX_COMPLT_Pos)) /* Assigment of value for TX_COMPLT in the UDPHS_EPTCTL register */
+#define   UDPHS_EPTCTL_TX_COMPLT_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Transmitted IN Data Complete Interrupt is masked.  */
+#define   UDPHS_EPTCTL_TX_COMPLT_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Transmitted IN Data Complete Interrupt is enabled.  */
+#define UDPHS_EPTCTL_TX_COMPLT_0              (UDPHS_EPTCTL_TX_COMPLT_0_Val << UDPHS_EPTCTL_TX_COMPLT_Pos) /* (UDPHS_EPTCTL) Transmitted IN Data Complete Interrupt is masked. Position  */
+#define UDPHS_EPTCTL_TX_COMPLT_1              (UDPHS_EPTCTL_TX_COMPLT_1_Val << UDPHS_EPTCTL_TX_COMPLT_Pos) /* (UDPHS_EPTCTL) Transmitted IN Data Complete Interrupt is enabled. Position  */
+#define UDPHS_EPTCTL_TXRDY_Pos                _UINT32_(11)                                         /* (UDPHS_EPTCTL) TX Packet Ready Interrupt Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_TXRDY_Msk                (_UINT32_(0x1) << UDPHS_EPTCTL_TXRDY_Pos)            /* (UDPHS_EPTCTL) TX Packet Ready Interrupt Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_TXRDY(value)             (UDPHS_EPTCTL_TXRDY_Msk & (_UINT32_(value) << UDPHS_EPTCTL_TXRDY_Pos)) /* Assigment of value for TXRDY in the UDPHS_EPTCTL register */
+#define   UDPHS_EPTCTL_TXRDY_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) TX Packet Ready Interrupt is masked.  */
+#define   UDPHS_EPTCTL_TXRDY_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) TX Packet Ready Interrupt is enabled.  */
+#define UDPHS_EPTCTL_TXRDY_0                  (UDPHS_EPTCTL_TXRDY_0_Val << UDPHS_EPTCTL_TXRDY_Pos) /* (UDPHS_EPTCTL) TX Packet Ready Interrupt is masked. Position  */
+#define UDPHS_EPTCTL_TXRDY_1                  (UDPHS_EPTCTL_TXRDY_1_Val << UDPHS_EPTCTL_TXRDY_Pos) /* (UDPHS_EPTCTL) TX Packet Ready Interrupt is enabled. Position  */
+#define UDPHS_EPTCTL_RX_SETUP_Pos             _UINT32_(12)                                         /* (UDPHS_EPTCTL) Received SETUP Interrupt Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_RX_SETUP_Msk             (_UINT32_(0x1) << UDPHS_EPTCTL_RX_SETUP_Pos)         /* (UDPHS_EPTCTL) Received SETUP Interrupt Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_RX_SETUP(value)          (UDPHS_EPTCTL_RX_SETUP_Msk & (_UINT32_(value) << UDPHS_EPTCTL_RX_SETUP_Pos)) /* Assigment of value for RX_SETUP in the UDPHS_EPTCTL register */
+#define   UDPHS_EPTCTL_RX_SETUP_0_Val         _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Received SETUP is masked.  */
+#define   UDPHS_EPTCTL_RX_SETUP_1_Val         _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Received SETUP is enabled.  */
+#define UDPHS_EPTCTL_RX_SETUP_0               (UDPHS_EPTCTL_RX_SETUP_0_Val << UDPHS_EPTCTL_RX_SETUP_Pos) /* (UDPHS_EPTCTL) Received SETUP is masked. Position  */
+#define UDPHS_EPTCTL_RX_SETUP_1               (UDPHS_EPTCTL_RX_SETUP_1_Val << UDPHS_EPTCTL_RX_SETUP_Pos) /* (UDPHS_EPTCTL) Received SETUP is enabled. Position  */
+#define UDPHS_EPTCTL_STALL_SNT_Pos            _UINT32_(13)                                         /* (UDPHS_EPTCTL) Stall Sent Interrupt Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_STALL_SNT_Msk            (_UINT32_(0x1) << UDPHS_EPTCTL_STALL_SNT_Pos)        /* (UDPHS_EPTCTL) Stall Sent Interrupt Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_STALL_SNT(value)         (UDPHS_EPTCTL_STALL_SNT_Msk & (_UINT32_(value) << UDPHS_EPTCTL_STALL_SNT_Pos)) /* Assigment of value for STALL_SNT in the UDPHS_EPTCTL register */
+#define   UDPHS_EPTCTL_STALL_SNT_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Stall Sent Interrupt is masked.  */
+#define   UDPHS_EPTCTL_STALL_SNT_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Stall Sent Interrupt is enabled.  */
+#define UDPHS_EPTCTL_STALL_SNT_0              (UDPHS_EPTCTL_STALL_SNT_0_Val << UDPHS_EPTCTL_STALL_SNT_Pos) /* (UDPHS_EPTCTL) Stall Sent Interrupt is masked. Position  */
+#define UDPHS_EPTCTL_STALL_SNT_1              (UDPHS_EPTCTL_STALL_SNT_1_Val << UDPHS_EPTCTL_STALL_SNT_Pos) /* (UDPHS_EPTCTL) Stall Sent Interrupt is enabled. Position  */
+#define UDPHS_EPTCTL_NAK_IN_Pos               _UINT32_(14)                                         /* (UDPHS_EPTCTL) NAKIN Interrupt Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_NAK_IN_Msk               (_UINT32_(0x1) << UDPHS_EPTCTL_NAK_IN_Pos)           /* (UDPHS_EPTCTL) NAKIN Interrupt Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_NAK_IN(value)            (UDPHS_EPTCTL_NAK_IN_Msk & (_UINT32_(value) << UDPHS_EPTCTL_NAK_IN_Pos)) /* Assigment of value for NAK_IN in the UDPHS_EPTCTL register */
+#define   UDPHS_EPTCTL_NAK_IN_0_Val           _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) NAKIN Interrupt is masked.  */
+#define   UDPHS_EPTCTL_NAK_IN_1_Val           _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) NAKIN Interrupt is enabled.  */
+#define UDPHS_EPTCTL_NAK_IN_0                 (UDPHS_EPTCTL_NAK_IN_0_Val << UDPHS_EPTCTL_NAK_IN_Pos) /* (UDPHS_EPTCTL) NAKIN Interrupt is masked. Position  */
+#define UDPHS_EPTCTL_NAK_IN_1                 (UDPHS_EPTCTL_NAK_IN_1_Val << UDPHS_EPTCTL_NAK_IN_Pos) /* (UDPHS_EPTCTL) NAKIN Interrupt is enabled. Position  */
+#define UDPHS_EPTCTL_NAK_OUT_Pos              _UINT32_(15)                                         /* (UDPHS_EPTCTL) NAKOUT Interrupt Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_NAK_OUT_Msk              (_UINT32_(0x1) << UDPHS_EPTCTL_NAK_OUT_Pos)          /* (UDPHS_EPTCTL) NAKOUT Interrupt Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_NAK_OUT(value)           (UDPHS_EPTCTL_NAK_OUT_Msk & (_UINT32_(value) << UDPHS_EPTCTL_NAK_OUT_Pos)) /* Assigment of value for NAK_OUT in the UDPHS_EPTCTL register */
+#define   UDPHS_EPTCTL_NAK_OUT_0_Val          _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) NAKOUT Interrupt is masked.  */
+#define   UDPHS_EPTCTL_NAK_OUT_1_Val          _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) NAKOUT Interrupt is enabled.  */
+#define UDPHS_EPTCTL_NAK_OUT_0                (UDPHS_EPTCTL_NAK_OUT_0_Val << UDPHS_EPTCTL_NAK_OUT_Pos) /* (UDPHS_EPTCTL) NAKOUT Interrupt is masked. Position  */
+#define UDPHS_EPTCTL_NAK_OUT_1                (UDPHS_EPTCTL_NAK_OUT_1_Val << UDPHS_EPTCTL_NAK_OUT_Pos) /* (UDPHS_EPTCTL) NAKOUT Interrupt is enabled. Position  */
+#define UDPHS_EPTCTL_BUSY_BANK_Pos            _UINT32_(18)                                         /* (UDPHS_EPTCTL) Busy Bank Interrupt Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_BUSY_BANK_Msk            (_UINT32_(0x1) << UDPHS_EPTCTL_BUSY_BANK_Pos)        /* (UDPHS_EPTCTL) Busy Bank Interrupt Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_BUSY_BANK(value)         (UDPHS_EPTCTL_BUSY_BANK_Msk & (_UINT32_(value) << UDPHS_EPTCTL_BUSY_BANK_Pos)) /* Assigment of value for BUSY_BANK in the UDPHS_EPTCTL register */
+#define   UDPHS_EPTCTL_BUSY_BANK_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) BUSY_BANK Interrupt is masked.  */
+#define   UDPHS_EPTCTL_BUSY_BANK_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) BUSY_BANK Interrupt is enabled.  */
+#define UDPHS_EPTCTL_BUSY_BANK_0              (UDPHS_EPTCTL_BUSY_BANK_0_Val << UDPHS_EPTCTL_BUSY_BANK_Pos) /* (UDPHS_EPTCTL) BUSY_BANK Interrupt is masked. Position  */
+#define UDPHS_EPTCTL_BUSY_BANK_1              (UDPHS_EPTCTL_BUSY_BANK_1_Val << UDPHS_EPTCTL_BUSY_BANK_Pos) /* (UDPHS_EPTCTL) BUSY_BANK Interrupt is enabled. Position  */
+#define UDPHS_EPTCTL_SHRT_PCKT_Pos            _UINT32_(31)                                         /* (UDPHS_EPTCTL) Short Packet Interrupt Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_SHRT_PCKT_Msk            (_UINT32_(0x1) << UDPHS_EPTCTL_SHRT_PCKT_Pos)        /* (UDPHS_EPTCTL) Short Packet Interrupt Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_SHRT_PCKT(value)         (UDPHS_EPTCTL_SHRT_PCKT_Msk & (_UINT32_(value) << UDPHS_EPTCTL_SHRT_PCKT_Pos)) /* Assigment of value for SHRT_PCKT in the UDPHS_EPTCTL register */
+#define   UDPHS_EPTCTL_SHRT_PCKT_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Short Packet Interrupt is masked.  */
+#define   UDPHS_EPTCTL_SHRT_PCKT_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Short Packet Interrupt is enabled.  */
+#define UDPHS_EPTCTL_SHRT_PCKT_0              (UDPHS_EPTCTL_SHRT_PCKT_0_Val << UDPHS_EPTCTL_SHRT_PCKT_Pos) /* (UDPHS_EPTCTL) Short Packet Interrupt is masked. Position  */
+#define UDPHS_EPTCTL_SHRT_PCKT_1              (UDPHS_EPTCTL_SHRT_PCKT_1_Val << UDPHS_EPTCTL_SHRT_PCKT_Pos) /* (UDPHS_EPTCTL) Short Packet Interrupt is enabled. Position  */
+#define UDPHS_EPTCTL_Msk                      _UINT32_(0x8004FF1B)                                 /* (UDPHS_EPTCTL) Register Mask  */
+
+/* ISOENDPT mode */
+#define UDPHS_EPTCTL_ISOENDPT_AUTO_VALID_Pos  _UINT32_(1)                                          /* (UDPHS_EPTCTL) Packet Auto-Valid Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_ISOENDPT_AUTO_VALID_Msk  (_UINT32_(0x1) << UDPHS_EPTCTL_ISOENDPT_AUTO_VALID_Pos) /* (UDPHS_EPTCTL) Packet Auto-Valid Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_ISOENDPT_AUTO_VALID(value) (UDPHS_EPTCTL_ISOENDPT_AUTO_VALID_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ISOENDPT_AUTO_VALID_Pos))
+#define UDPHS_EPTCTL_ISOENDPT_DATAX_RX_Pos    _UINT32_(6)                                          /* (UDPHS_EPTCTL) DATAx Interrupt Enabled (Only for High Bandwidth Isochronous OUT endpoints) (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_ISOENDPT_DATAX_RX_Msk    (_UINT32_(0x1) << UDPHS_EPTCTL_ISOENDPT_DATAX_RX_Pos) /* (UDPHS_EPTCTL) DATAx Interrupt Enabled (Only for High Bandwidth Isochronous OUT endpoints) (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_ISOENDPT_DATAX_RX(value) (UDPHS_EPTCTL_ISOENDPT_DATAX_RX_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ISOENDPT_DATAX_RX_Pos))
+#define   UDPHS_EPTCTL_ISOENDPT_DATAX_RX_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) No effect.  */
+#define   UDPHS_EPTCTL_ISOENDPT_DATAX_RX_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Send an interrupt when a DATA2, DATA1 or DATA0 packet has been received meaning the whole microframe data payload has been received.  */
+#define UDPHS_EPTCTL_ISOENDPT_DATAX_RX_0      (UDPHS_EPTCTL_ISOENDPT_DATAX_RX_0_Val << UDPHS_EPTCTL_ISOENDPT_DATAX_RX_Pos) /* (UDPHS_EPTCTL) No effect. Position  */
+#define UDPHS_EPTCTL_ISOENDPT_DATAX_RX_1      (UDPHS_EPTCTL_ISOENDPT_DATAX_RX_1_Val << UDPHS_EPTCTL_ISOENDPT_DATAX_RX_Pos) /* (UDPHS_EPTCTL) Send an interrupt when a DATA2, DATA1 or DATA0 packet has been received meaning the whole microframe data payload has been received. Position  */
+#define UDPHS_EPTCTL_ISOENDPT_MDATA_RX_Pos    _UINT32_(7)                                          /* (UDPHS_EPTCTL) MDATA Interrupt Enabled (Only for High Bandwidth Isochronous OUT endpoints) (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_ISOENDPT_MDATA_RX_Msk    (_UINT32_(0x1) << UDPHS_EPTCTL_ISOENDPT_MDATA_RX_Pos) /* (UDPHS_EPTCTL) MDATA Interrupt Enabled (Only for High Bandwidth Isochronous OUT endpoints) (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_ISOENDPT_MDATA_RX(value) (UDPHS_EPTCTL_ISOENDPT_MDATA_RX_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ISOENDPT_MDATA_RX_Pos))
+#define   UDPHS_EPTCTL_ISOENDPT_MDATA_RX_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) No effect.  */
+#define   UDPHS_EPTCTL_ISOENDPT_MDATA_RX_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Send an interrupt when an MDATA packet has been received and so at least one packet of the microframe data payload has been received.  */
+#define UDPHS_EPTCTL_ISOENDPT_MDATA_RX_0      (UDPHS_EPTCTL_ISOENDPT_MDATA_RX_0_Val << UDPHS_EPTCTL_ISOENDPT_MDATA_RX_Pos) /* (UDPHS_EPTCTL) No effect. Position  */
+#define UDPHS_EPTCTL_ISOENDPT_MDATA_RX_1      (UDPHS_EPTCTL_ISOENDPT_MDATA_RX_1_Val << UDPHS_EPTCTL_ISOENDPT_MDATA_RX_Pos) /* (UDPHS_EPTCTL) Send an interrupt when an MDATA packet has been received and so at least one packet of the microframe data payload has been received. Position  */
+#define UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_Pos  _UINT32_(11)                                         /* (UDPHS_EPTCTL) TX Packet Ready/Transaction Error Interrupt Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_Msk  (_UINT32_(0x1) << UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_Pos) /* (UDPHS_EPTCTL) TX Packet Ready/Transaction Error Interrupt Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER(value) (UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_Pos))
+#define   UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) TX Packet Ready/Transaction Error Interrupt is masked.  */
+#define   UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) TX Packet Ready/Transaction Error Interrupt is enabled.  */
+#define UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_0    (UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_0_Val << UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_Pos) /* (UDPHS_EPTCTL) TX Packet Ready/Transaction Error Interrupt is masked. Position  */
+#define UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_1    (UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_1_Val << UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_Pos) /* (UDPHS_EPTCTL) TX Packet Ready/Transaction Error Interrupt is enabled. Position  */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_Pos  _UINT32_(12)                                         /* (UDPHS_EPTCTL) Error Flow Interrupt Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_Msk  (_UINT32_(0x1) << UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCTL) Error Flow Interrupt Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO(value) (UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_Pos))
+#define   UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Error Flow Interrupt is masked.  */
+#define   UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Error Flow Interrupt is enabled.  */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_0    (UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_0_Val << UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCTL) Error Flow Interrupt is masked. Position  */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_1    (UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_1_Val << UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCTL) Error Flow Interrupt is enabled. Position  */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_Pos _UINT32_(13)                                         /* (UDPHS_EPTCTL) ISO CRC Error/Number of Transaction Error Interrupt Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_Msk (_UINT32_(0x1) << UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCTL) ISO CRC Error/Number of Transaction Error Interrupt Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR(value) (UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_Pos))
+#define   UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) ISO CRC error/number of Transaction Error Interrupt is masked.  */
+#define   UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) ISO CRC error/number of Transaction Error Interrupt is enabled.  */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_0   (UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_0_Val << UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCTL) ISO CRC error/number of Transaction Error Interrupt is masked. Position  */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_1   (UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_1_Val << UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCTL) ISO CRC error/number of Transaction Error Interrupt is enabled. Position  */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_Pos   _UINT32_(14)                                         /* (UDPHS_EPTCTL) Bank Flush Error Interrupt Enabled (cleared upon USB reset) Position */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_Msk   (_UINT32_(0x1) << UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCTL) Bank Flush Error Interrupt Enabled (cleared upon USB reset) Mask */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH(value) (UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_Pos))
+#define   UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Bank Flush Error Interrupt is masked.  */
+#define   UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Bank Flush Error Interrupt is enabled.  */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_0     (UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_0_Val << UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCTL) Bank Flush Error Interrupt is masked. Position  */
+#define UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_1     (UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_1_Val << UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCTL) Bank Flush Error Interrupt is enabled. Position  */
+#define UDPHS_EPTCTL_ISOENDPT_Msk             _UINT32_(0x000078C2)                                  /* (UDPHS_EPTCTL_ISOENDPT) Register Mask  */
 
 
 /* -------- UDPHS_EPTCTLDIS : (UDPHS Offset: 0x08) ( /W 32) UDPHS Endpoint Control Disable Register  -------- */
@@ -513,148 +594,151 @@
 #define UDPHS_EPTCTLDIS_ISOENDPT_Msk          _UINT32_(0x000078C0)                                  /* (UDPHS_EPTCTLDIS_ISOENDPT) Register Mask  */
 
 
-/* -------- UDPHS_EPTCTL : (UDPHS Offset: 0x0C) ( R/ 32) UDPHS Endpoint Control Register  -------- */
-#define UDPHS_EPTCTL_RESETVALUE               _UINT32_(0x00)                                       /*  (UDPHS_EPTCTL) UDPHS Endpoint Control Register   Reset Value */
-
-#define UDPHS_EPTCTL_EPT_ENABL_Pos            _UINT32_(0)                                          /* (UDPHS_EPTCTL) Endpoint Enable (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_EPT_ENABL_Msk            (_UINT32_(0x1) << UDPHS_EPTCTL_EPT_ENABL_Pos)        /* (UDPHS_EPTCTL) Endpoint Enable (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_EPT_ENABL(value)         (UDPHS_EPTCTL_EPT_ENABL_Msk & (_UINT32_(value) << UDPHS_EPTCTL_EPT_ENABL_Pos)) /* Assigment of value for EPT_ENABL in the UDPHS_EPTCTL register */
-#define   UDPHS_EPTCTL_EPT_ENABL_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) The endpoint is disabled according to the device configuration. Endpoint 0 should always be enabled after a hardware or UDPHS bus reset and participate in the device configuration.  */
-#define   UDPHS_EPTCTL_EPT_ENABL_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) The endpoint is enabled according to the device configuration.  */
-#define UDPHS_EPTCTL_EPT_ENABL_0              (UDPHS_EPTCTL_EPT_ENABL_0_Val << UDPHS_EPTCTL_EPT_ENABL_Pos) /* (UDPHS_EPTCTL) The endpoint is disabled according to the device configuration. Endpoint 0 should always be enabled after a hardware or UDPHS bus reset and participate in the device configuration. Position  */
-#define UDPHS_EPTCTL_EPT_ENABL_1              (UDPHS_EPTCTL_EPT_ENABL_1_Val << UDPHS_EPTCTL_EPT_ENABL_Pos) /* (UDPHS_EPTCTL) The endpoint is enabled according to the device configuration. Position  */
-#define UDPHS_EPTCTL_AUTO_VALID_Pos           _UINT32_(1)                                          /* (UDPHS_EPTCTL) Packet Auto-Valid Enabled (Not for CONTROL Endpoints) (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_AUTO_VALID_Msk           (_UINT32_(0x1) << UDPHS_EPTCTL_AUTO_VALID_Pos)       /* (UDPHS_EPTCTL) Packet Auto-Valid Enabled (Not for CONTROL Endpoints) (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_AUTO_VALID(value)        (UDPHS_EPTCTL_AUTO_VALID_Msk & (_UINT32_(value) << UDPHS_EPTCTL_AUTO_VALID_Pos)) /* Assigment of value for AUTO_VALID in the UDPHS_EPTCTL register */
-#define UDPHS_EPTCTL_INTDIS_DMA_Pos           _UINT32_(3)                                          /* (UDPHS_EPTCTL) Interrupt Disables DMA (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_INTDIS_DMA_Msk           (_UINT32_(0x1) << UDPHS_EPTCTL_INTDIS_DMA_Pos)       /* (UDPHS_EPTCTL) Interrupt Disables DMA (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_INTDIS_DMA(value)        (UDPHS_EPTCTL_INTDIS_DMA_Msk & (_UINT32_(value) << UDPHS_EPTCTL_INTDIS_DMA_Pos)) /* Assigment of value for INTDIS_DMA in the UDPHS_EPTCTL register */
-#define UDPHS_EPTCTL_NYET_DIS_Pos             _UINT32_(4)                                          /* (UDPHS_EPTCTL) NYET Disable (Only for High Speed Bulk OUT Endpoints) (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_NYET_DIS_Msk             (_UINT32_(0x1) << UDPHS_EPTCTL_NYET_DIS_Pos)         /* (UDPHS_EPTCTL) NYET Disable (Only for High Speed Bulk OUT Endpoints) (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_NYET_DIS(value)          (UDPHS_EPTCTL_NYET_DIS_Msk & (_UINT32_(value) << UDPHS_EPTCTL_NYET_DIS_Pos)) /* Assigment of value for NYET_DIS in the UDPHS_EPTCTL register */
-#define   UDPHS_EPTCTL_NYET_DIS_0_Val         _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Lets the hardware handle the handshake response for the High Speed Bulk OUT transfer.  */
-#define   UDPHS_EPTCTL_NYET_DIS_1_Val         _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Forces an ACK response to the next High Speed Bulk OUT transfer instead of a NYET response.  */
-#define UDPHS_EPTCTL_NYET_DIS_0               (UDPHS_EPTCTL_NYET_DIS_0_Val << UDPHS_EPTCTL_NYET_DIS_Pos) /* (UDPHS_EPTCTL) Lets the hardware handle the handshake response for the High Speed Bulk OUT transfer. Position  */
-#define UDPHS_EPTCTL_NYET_DIS_1               (UDPHS_EPTCTL_NYET_DIS_1_Val << UDPHS_EPTCTL_NYET_DIS_Pos) /* (UDPHS_EPTCTL) Forces an ACK response to the next High Speed Bulk OUT transfer instead of a NYET response. Position  */
-#define UDPHS_EPTCTL_ERR_OVFLW_Pos            _UINT32_(8)                                          /* (UDPHS_EPTCTL) Overflow Error Interrupt Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_ERR_OVFLW_Msk            (_UINT32_(0x1) << UDPHS_EPTCTL_ERR_OVFLW_Pos)        /* (UDPHS_EPTCTL) Overflow Error Interrupt Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_ERR_OVFLW(value)         (UDPHS_EPTCTL_ERR_OVFLW_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ERR_OVFLW_Pos)) /* Assigment of value for ERR_OVFLW in the UDPHS_EPTCTL register */
-#define   UDPHS_EPTCTL_ERR_OVFLW_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Overflow Error Interrupt is masked.  */
-#define   UDPHS_EPTCTL_ERR_OVFLW_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Overflow Error Interrupt is enabled.  */
-#define UDPHS_EPTCTL_ERR_OVFLW_0              (UDPHS_EPTCTL_ERR_OVFLW_0_Val << UDPHS_EPTCTL_ERR_OVFLW_Pos) /* (UDPHS_EPTCTL) Overflow Error Interrupt is masked. Position  */
-#define UDPHS_EPTCTL_ERR_OVFLW_1              (UDPHS_EPTCTL_ERR_OVFLW_1_Val << UDPHS_EPTCTL_ERR_OVFLW_Pos) /* (UDPHS_EPTCTL) Overflow Error Interrupt is enabled. Position  */
-#define UDPHS_EPTCTL_RXRDY_TXKL_Pos           _UINT32_(9)                                          /* (UDPHS_EPTCTL) Received OUT Data Interrupt Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_RXRDY_TXKL_Msk           (_UINT32_(0x1) << UDPHS_EPTCTL_RXRDY_TXKL_Pos)       /* (UDPHS_EPTCTL) Received OUT Data Interrupt Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_RXRDY_TXKL(value)        (UDPHS_EPTCTL_RXRDY_TXKL_Msk & (_UINT32_(value) << UDPHS_EPTCTL_RXRDY_TXKL_Pos)) /* Assigment of value for RXRDY_TXKL in the UDPHS_EPTCTL register */
-#define   UDPHS_EPTCTL_RXRDY_TXKL_0_Val       _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Received OUT Data Interrupt is masked.  */
-#define   UDPHS_EPTCTL_RXRDY_TXKL_1_Val       _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Received OUT Data Interrupt is enabled.  */
-#define UDPHS_EPTCTL_RXRDY_TXKL_0             (UDPHS_EPTCTL_RXRDY_TXKL_0_Val << UDPHS_EPTCTL_RXRDY_TXKL_Pos) /* (UDPHS_EPTCTL) Received OUT Data Interrupt is masked. Position  */
-#define UDPHS_EPTCTL_RXRDY_TXKL_1             (UDPHS_EPTCTL_RXRDY_TXKL_1_Val << UDPHS_EPTCTL_RXRDY_TXKL_Pos) /* (UDPHS_EPTCTL) Received OUT Data Interrupt is enabled. Position  */
-#define UDPHS_EPTCTL_TX_COMPLT_Pos            _UINT32_(10)                                         /* (UDPHS_EPTCTL) Transmitted IN Data Complete Interrupt Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_TX_COMPLT_Msk            (_UINT32_(0x1) << UDPHS_EPTCTL_TX_COMPLT_Pos)        /* (UDPHS_EPTCTL) Transmitted IN Data Complete Interrupt Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_TX_COMPLT(value)         (UDPHS_EPTCTL_TX_COMPLT_Msk & (_UINT32_(value) << UDPHS_EPTCTL_TX_COMPLT_Pos)) /* Assigment of value for TX_COMPLT in the UDPHS_EPTCTL register */
-#define   UDPHS_EPTCTL_TX_COMPLT_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Transmitted IN Data Complete Interrupt is masked.  */
-#define   UDPHS_EPTCTL_TX_COMPLT_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Transmitted IN Data Complete Interrupt is enabled.  */
-#define UDPHS_EPTCTL_TX_COMPLT_0              (UDPHS_EPTCTL_TX_COMPLT_0_Val << UDPHS_EPTCTL_TX_COMPLT_Pos) /* (UDPHS_EPTCTL) Transmitted IN Data Complete Interrupt is masked. Position  */
-#define UDPHS_EPTCTL_TX_COMPLT_1              (UDPHS_EPTCTL_TX_COMPLT_1_Val << UDPHS_EPTCTL_TX_COMPLT_Pos) /* (UDPHS_EPTCTL) Transmitted IN Data Complete Interrupt is enabled. Position  */
-#define UDPHS_EPTCTL_TXRDY_Pos                _UINT32_(11)                                         /* (UDPHS_EPTCTL) TX Packet Ready Interrupt Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_TXRDY_Msk                (_UINT32_(0x1) << UDPHS_EPTCTL_TXRDY_Pos)            /* (UDPHS_EPTCTL) TX Packet Ready Interrupt Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_TXRDY(value)             (UDPHS_EPTCTL_TXRDY_Msk & (_UINT32_(value) << UDPHS_EPTCTL_TXRDY_Pos)) /* Assigment of value for TXRDY in the UDPHS_EPTCTL register */
-#define   UDPHS_EPTCTL_TXRDY_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) TX Packet Ready Interrupt is masked.  */
-#define   UDPHS_EPTCTL_TXRDY_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) TX Packet Ready Interrupt is enabled.  */
-#define UDPHS_EPTCTL_TXRDY_0                  (UDPHS_EPTCTL_TXRDY_0_Val << UDPHS_EPTCTL_TXRDY_Pos) /* (UDPHS_EPTCTL) TX Packet Ready Interrupt is masked. Position  */
-#define UDPHS_EPTCTL_TXRDY_1                  (UDPHS_EPTCTL_TXRDY_1_Val << UDPHS_EPTCTL_TXRDY_Pos) /* (UDPHS_EPTCTL) TX Packet Ready Interrupt is enabled. Position  */
-#define UDPHS_EPTCTL_RX_SETUP_Pos             _UINT32_(12)                                         /* (UDPHS_EPTCTL) Received SETUP Interrupt Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_RX_SETUP_Msk             (_UINT32_(0x1) << UDPHS_EPTCTL_RX_SETUP_Pos)         /* (UDPHS_EPTCTL) Received SETUP Interrupt Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_RX_SETUP(value)          (UDPHS_EPTCTL_RX_SETUP_Msk & (_UINT32_(value) << UDPHS_EPTCTL_RX_SETUP_Pos)) /* Assigment of value for RX_SETUP in the UDPHS_EPTCTL register */
-#define   UDPHS_EPTCTL_RX_SETUP_0_Val         _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Received SETUP is masked.  */
-#define   UDPHS_EPTCTL_RX_SETUP_1_Val         _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Received SETUP is enabled.  */
-#define UDPHS_EPTCTL_RX_SETUP_0               (UDPHS_EPTCTL_RX_SETUP_0_Val << UDPHS_EPTCTL_RX_SETUP_Pos) /* (UDPHS_EPTCTL) Received SETUP is masked. Position  */
-#define UDPHS_EPTCTL_RX_SETUP_1               (UDPHS_EPTCTL_RX_SETUP_1_Val << UDPHS_EPTCTL_RX_SETUP_Pos) /* (UDPHS_EPTCTL) Received SETUP is enabled. Position  */
-#define UDPHS_EPTCTL_STALL_SNT_Pos            _UINT32_(13)                                         /* (UDPHS_EPTCTL) Stall Sent Interrupt Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_STALL_SNT_Msk            (_UINT32_(0x1) << UDPHS_EPTCTL_STALL_SNT_Pos)        /* (UDPHS_EPTCTL) Stall Sent Interrupt Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_STALL_SNT(value)         (UDPHS_EPTCTL_STALL_SNT_Msk & (_UINT32_(value) << UDPHS_EPTCTL_STALL_SNT_Pos)) /* Assigment of value for STALL_SNT in the UDPHS_EPTCTL register */
-#define   UDPHS_EPTCTL_STALL_SNT_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Stall Sent Interrupt is masked.  */
-#define   UDPHS_EPTCTL_STALL_SNT_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Stall Sent Interrupt is enabled.  */
-#define UDPHS_EPTCTL_STALL_SNT_0              (UDPHS_EPTCTL_STALL_SNT_0_Val << UDPHS_EPTCTL_STALL_SNT_Pos) /* (UDPHS_EPTCTL) Stall Sent Interrupt is masked. Position  */
-#define UDPHS_EPTCTL_STALL_SNT_1              (UDPHS_EPTCTL_STALL_SNT_1_Val << UDPHS_EPTCTL_STALL_SNT_Pos) /* (UDPHS_EPTCTL) Stall Sent Interrupt is enabled. Position  */
-#define UDPHS_EPTCTL_NAK_IN_Pos               _UINT32_(14)                                         /* (UDPHS_EPTCTL) NAKIN Interrupt Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_NAK_IN_Msk               (_UINT32_(0x1) << UDPHS_EPTCTL_NAK_IN_Pos)           /* (UDPHS_EPTCTL) NAKIN Interrupt Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_NAK_IN(value)            (UDPHS_EPTCTL_NAK_IN_Msk & (_UINT32_(value) << UDPHS_EPTCTL_NAK_IN_Pos)) /* Assigment of value for NAK_IN in the UDPHS_EPTCTL register */
-#define   UDPHS_EPTCTL_NAK_IN_0_Val           _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) NAKIN Interrupt is masked.  */
-#define   UDPHS_EPTCTL_NAK_IN_1_Val           _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) NAKIN Interrupt is enabled.  */
-#define UDPHS_EPTCTL_NAK_IN_0                 (UDPHS_EPTCTL_NAK_IN_0_Val << UDPHS_EPTCTL_NAK_IN_Pos) /* (UDPHS_EPTCTL) NAKIN Interrupt is masked. Position  */
-#define UDPHS_EPTCTL_NAK_IN_1                 (UDPHS_EPTCTL_NAK_IN_1_Val << UDPHS_EPTCTL_NAK_IN_Pos) /* (UDPHS_EPTCTL) NAKIN Interrupt is enabled. Position  */
-#define UDPHS_EPTCTL_NAK_OUT_Pos              _UINT32_(15)                                         /* (UDPHS_EPTCTL) NAKOUT Interrupt Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_NAK_OUT_Msk              (_UINT32_(0x1) << UDPHS_EPTCTL_NAK_OUT_Pos)          /* (UDPHS_EPTCTL) NAKOUT Interrupt Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_NAK_OUT(value)           (UDPHS_EPTCTL_NAK_OUT_Msk & (_UINT32_(value) << UDPHS_EPTCTL_NAK_OUT_Pos)) /* Assigment of value for NAK_OUT in the UDPHS_EPTCTL register */
-#define   UDPHS_EPTCTL_NAK_OUT_0_Val          _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) NAKOUT Interrupt is masked.  */
-#define   UDPHS_EPTCTL_NAK_OUT_1_Val          _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) NAKOUT Interrupt is enabled.  */
-#define UDPHS_EPTCTL_NAK_OUT_0                (UDPHS_EPTCTL_NAK_OUT_0_Val << UDPHS_EPTCTL_NAK_OUT_Pos) /* (UDPHS_EPTCTL) NAKOUT Interrupt is masked. Position  */
-#define UDPHS_EPTCTL_NAK_OUT_1                (UDPHS_EPTCTL_NAK_OUT_1_Val << UDPHS_EPTCTL_NAK_OUT_Pos) /* (UDPHS_EPTCTL) NAKOUT Interrupt is enabled. Position  */
-#define UDPHS_EPTCTL_BUSY_BANK_Pos            _UINT32_(18)                                         /* (UDPHS_EPTCTL) Busy Bank Interrupt Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_BUSY_BANK_Msk            (_UINT32_(0x1) << UDPHS_EPTCTL_BUSY_BANK_Pos)        /* (UDPHS_EPTCTL) Busy Bank Interrupt Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_BUSY_BANK(value)         (UDPHS_EPTCTL_BUSY_BANK_Msk & (_UINT32_(value) << UDPHS_EPTCTL_BUSY_BANK_Pos)) /* Assigment of value for BUSY_BANK in the UDPHS_EPTCTL register */
-#define   UDPHS_EPTCTL_BUSY_BANK_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) BUSY_BANK Interrupt is masked.  */
-#define   UDPHS_EPTCTL_BUSY_BANK_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) BUSY_BANK Interrupt is enabled.  */
-#define UDPHS_EPTCTL_BUSY_BANK_0              (UDPHS_EPTCTL_BUSY_BANK_0_Val << UDPHS_EPTCTL_BUSY_BANK_Pos) /* (UDPHS_EPTCTL) BUSY_BANK Interrupt is masked. Position  */
-#define UDPHS_EPTCTL_BUSY_BANK_1              (UDPHS_EPTCTL_BUSY_BANK_1_Val << UDPHS_EPTCTL_BUSY_BANK_Pos) /* (UDPHS_EPTCTL) BUSY_BANK Interrupt is enabled. Position  */
-#define UDPHS_EPTCTL_SHRT_PCKT_Pos            _UINT32_(31)                                         /* (UDPHS_EPTCTL) Short Packet Interrupt Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_SHRT_PCKT_Msk            (_UINT32_(0x1) << UDPHS_EPTCTL_SHRT_PCKT_Pos)        /* (UDPHS_EPTCTL) Short Packet Interrupt Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_SHRT_PCKT(value)         (UDPHS_EPTCTL_SHRT_PCKT_Msk & (_UINT32_(value) << UDPHS_EPTCTL_SHRT_PCKT_Pos)) /* Assigment of value for SHRT_PCKT in the UDPHS_EPTCTL register */
-#define   UDPHS_EPTCTL_SHRT_PCKT_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Short Packet Interrupt is masked.  */
-#define   UDPHS_EPTCTL_SHRT_PCKT_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Short Packet Interrupt is enabled.  */
-#define UDPHS_EPTCTL_SHRT_PCKT_0              (UDPHS_EPTCTL_SHRT_PCKT_0_Val << UDPHS_EPTCTL_SHRT_PCKT_Pos) /* (UDPHS_EPTCTL) Short Packet Interrupt is masked. Position  */
-#define UDPHS_EPTCTL_SHRT_PCKT_1              (UDPHS_EPTCTL_SHRT_PCKT_1_Val << UDPHS_EPTCTL_SHRT_PCKT_Pos) /* (UDPHS_EPTCTL) Short Packet Interrupt is enabled. Position  */
-#define UDPHS_EPTCTL_Msk                      _UINT32_(0x8004FF1B)                                 /* (UDPHS_EPTCTL) Register Mask  */
+/* -------- UDPHS_EPTCTLENB : (UDPHS Offset: 0x04) ( /W 32) UDPHS Endpoint Control Enable Register  -------- */
+#define UDPHS_EPTCTLENB_EPT_ENABL_Pos         _UINT32_(0)                                          /* (UDPHS_EPTCTLENB) Endpoint Enable Position */
+#define UDPHS_EPTCTLENB_EPT_ENABL_Msk         (_UINT32_(0x1) << UDPHS_EPTCTLENB_EPT_ENABL_Pos)     /* (UDPHS_EPTCTLENB) Endpoint Enable Mask */
+#define UDPHS_EPTCTLENB_EPT_ENABL(value)      (UDPHS_EPTCTLENB_EPT_ENABL_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_EPT_ENABL_Pos)) /* Assigment of value for EPT_ENABL in the UDPHS_EPTCTLENB register */
+#define   UDPHS_EPTCTLENB_EPT_ENABL_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_EPT_ENABL_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable endpoint according to the device configuration.  */
+#define UDPHS_EPTCTLENB_EPT_ENABL_0           (UDPHS_EPTCTLENB_EPT_ENABL_0_Val << UDPHS_EPTCTLENB_EPT_ENABL_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_EPT_ENABL_1           (UDPHS_EPTCTLENB_EPT_ENABL_1_Val << UDPHS_EPTCTLENB_EPT_ENABL_Pos) /* (UDPHS_EPTCTLENB) Enable endpoint according to the device configuration. Position  */
+#define UDPHS_EPTCTLENB_AUTO_VALID_Pos        _UINT32_(1)                                          /* (UDPHS_EPTCTLENB) Packet Auto-Valid Enable Position */
+#define UDPHS_EPTCTLENB_AUTO_VALID_Msk        (_UINT32_(0x1) << UDPHS_EPTCTLENB_AUTO_VALID_Pos)    /* (UDPHS_EPTCTLENB) Packet Auto-Valid Enable Mask */
+#define UDPHS_EPTCTLENB_AUTO_VALID(value)     (UDPHS_EPTCTLENB_AUTO_VALID_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_AUTO_VALID_Pos)) /* Assigment of value for AUTO_VALID in the UDPHS_EPTCTLENB register */
+#define   UDPHS_EPTCTLENB_AUTO_VALID_0_Val    _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_AUTO_VALID_1_Val    _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable this bit to automatically validate the current packet and switch to the next bank for both IN and OUT transfers.  */
+#define UDPHS_EPTCTLENB_AUTO_VALID_0          (UDPHS_EPTCTLENB_AUTO_VALID_0_Val << UDPHS_EPTCTLENB_AUTO_VALID_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_AUTO_VALID_1          (UDPHS_EPTCTLENB_AUTO_VALID_1_Val << UDPHS_EPTCTLENB_AUTO_VALID_Pos) /* (UDPHS_EPTCTLENB) Enable this bit to automatically validate the current packet and switch to the next bank for both IN and OUT transfers. Position  */
+#define UDPHS_EPTCTLENB_INTDIS_DMA_Pos        _UINT32_(3)                                          /* (UDPHS_EPTCTLENB) Interrupts Disable DMA Position */
+#define UDPHS_EPTCTLENB_INTDIS_DMA_Msk        (_UINT32_(0x1) << UDPHS_EPTCTLENB_INTDIS_DMA_Pos)    /* (UDPHS_EPTCTLENB) Interrupts Disable DMA Mask */
+#define UDPHS_EPTCTLENB_INTDIS_DMA(value)     (UDPHS_EPTCTLENB_INTDIS_DMA_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_INTDIS_DMA_Pos)) /* Assigment of value for INTDIS_DMA in the UDPHS_EPTCTLENB register */
+#define   UDPHS_EPTCTLENB_INTDIS_DMA_0_Val    _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_INTDIS_DMA_1_Val    _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) If set, when an enabled endpoint-originated interrupt is triggered, the DMA request is disabled.  */
+#define UDPHS_EPTCTLENB_INTDIS_DMA_0          (UDPHS_EPTCTLENB_INTDIS_DMA_0_Val << UDPHS_EPTCTLENB_INTDIS_DMA_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_INTDIS_DMA_1          (UDPHS_EPTCTLENB_INTDIS_DMA_1_Val << UDPHS_EPTCTLENB_INTDIS_DMA_Pos) /* (UDPHS_EPTCTLENB) If set, when an enabled endpoint-originated interrupt is triggered, the DMA request is disabled. Position  */
+#define UDPHS_EPTCTLENB_NYET_DIS_Pos          _UINT32_(4)                                          /* (UDPHS_EPTCTLENB) NYET Disable (Only for High Speed Bulk OUT endpoints) Position */
+#define UDPHS_EPTCTLENB_NYET_DIS_Msk          (_UINT32_(0x1) << UDPHS_EPTCTLENB_NYET_DIS_Pos)      /* (UDPHS_EPTCTLENB) NYET Disable (Only for High Speed Bulk OUT endpoints) Mask */
+#define UDPHS_EPTCTLENB_NYET_DIS(value)       (UDPHS_EPTCTLENB_NYET_DIS_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_NYET_DIS_Pos)) /* Assigment of value for NYET_DIS in the UDPHS_EPTCTLENB register */
+#define   UDPHS_EPTCTLENB_NYET_DIS_0_Val      _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_NYET_DIS_1_Val      _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Forces an ACK response to the next High Speed Bulk OUT transfer instead of a NYET response.  */
+#define UDPHS_EPTCTLENB_NYET_DIS_0            (UDPHS_EPTCTLENB_NYET_DIS_0_Val << UDPHS_EPTCTLENB_NYET_DIS_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_NYET_DIS_1            (UDPHS_EPTCTLENB_NYET_DIS_1_Val << UDPHS_EPTCTLENB_NYET_DIS_Pos) /* (UDPHS_EPTCTLENB) Forces an ACK response to the next High Speed Bulk OUT transfer instead of a NYET response. Position  */
+#define UDPHS_EPTCTLENB_ERR_OVFLW_Pos         _UINT32_(8)                                          /* (UDPHS_EPTCTLENB) Overflow Error Interrupt Enable Position */
+#define UDPHS_EPTCTLENB_ERR_OVFLW_Msk         (_UINT32_(0x1) << UDPHS_EPTCTLENB_ERR_OVFLW_Pos)     /* (UDPHS_EPTCTLENB) Overflow Error Interrupt Enable Mask */
+#define UDPHS_EPTCTLENB_ERR_OVFLW(value)      (UDPHS_EPTCTLENB_ERR_OVFLW_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_ERR_OVFLW_Pos)) /* Assigment of value for ERR_OVFLW in the UDPHS_EPTCTLENB register */
+#define   UDPHS_EPTCTLENB_ERR_OVFLW_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_ERR_OVFLW_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Overflow Error Interrupt.  */
+#define UDPHS_EPTCTLENB_ERR_OVFLW_0           (UDPHS_EPTCTLENB_ERR_OVFLW_0_Val << UDPHS_EPTCTLENB_ERR_OVFLW_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_ERR_OVFLW_1           (UDPHS_EPTCTLENB_ERR_OVFLW_1_Val << UDPHS_EPTCTLENB_ERR_OVFLW_Pos) /* (UDPHS_EPTCTLENB) Enable Overflow Error Interrupt. Position  */
+#define UDPHS_EPTCTLENB_RXRDY_TXKL_Pos        _UINT32_(9)                                          /* (UDPHS_EPTCTLENB) Received OUT Data Interrupt Enable Position */
+#define UDPHS_EPTCTLENB_RXRDY_TXKL_Msk        (_UINT32_(0x1) << UDPHS_EPTCTLENB_RXRDY_TXKL_Pos)    /* (UDPHS_EPTCTLENB) Received OUT Data Interrupt Enable Mask */
+#define UDPHS_EPTCTLENB_RXRDY_TXKL(value)     (UDPHS_EPTCTLENB_RXRDY_TXKL_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_RXRDY_TXKL_Pos)) /* Assigment of value for RXRDY_TXKL in the UDPHS_EPTCTLENB register */
+#define   UDPHS_EPTCTLENB_RXRDY_TXKL_0_Val    _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_RXRDY_TXKL_1_Val    _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Received OUT Data Interrupt.  */
+#define UDPHS_EPTCTLENB_RXRDY_TXKL_0          (UDPHS_EPTCTLENB_RXRDY_TXKL_0_Val << UDPHS_EPTCTLENB_RXRDY_TXKL_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_RXRDY_TXKL_1          (UDPHS_EPTCTLENB_RXRDY_TXKL_1_Val << UDPHS_EPTCTLENB_RXRDY_TXKL_Pos) /* (UDPHS_EPTCTLENB) Enable Received OUT Data Interrupt. Position  */
+#define UDPHS_EPTCTLENB_TX_COMPLT_Pos         _UINT32_(10)                                         /* (UDPHS_EPTCTLENB) Transmitted IN Data Complete Interrupt Enable Position */
+#define UDPHS_EPTCTLENB_TX_COMPLT_Msk         (_UINT32_(0x1) << UDPHS_EPTCTLENB_TX_COMPLT_Pos)     /* (UDPHS_EPTCTLENB) Transmitted IN Data Complete Interrupt Enable Mask */
+#define UDPHS_EPTCTLENB_TX_COMPLT(value)      (UDPHS_EPTCTLENB_TX_COMPLT_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_TX_COMPLT_Pos)) /* Assigment of value for TX_COMPLT in the UDPHS_EPTCTLENB register */
+#define   UDPHS_EPTCTLENB_TX_COMPLT_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_TX_COMPLT_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Transmitted IN Data Complete Interrupt.  */
+#define UDPHS_EPTCTLENB_TX_COMPLT_0           (UDPHS_EPTCTLENB_TX_COMPLT_0_Val << UDPHS_EPTCTLENB_TX_COMPLT_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_TX_COMPLT_1           (UDPHS_EPTCTLENB_TX_COMPLT_1_Val << UDPHS_EPTCTLENB_TX_COMPLT_Pos) /* (UDPHS_EPTCTLENB) Enable Transmitted IN Data Complete Interrupt. Position  */
+#define UDPHS_EPTCTLENB_TXRDY_Pos             _UINT32_(11)                                         /* (UDPHS_EPTCTLENB) TX Packet Ready Interrupt Enable Position */
+#define UDPHS_EPTCTLENB_TXRDY_Msk             (_UINT32_(0x1) << UDPHS_EPTCTLENB_TXRDY_Pos)         /* (UDPHS_EPTCTLENB) TX Packet Ready Interrupt Enable Mask */
+#define UDPHS_EPTCTLENB_TXRDY(value)          (UDPHS_EPTCTLENB_TXRDY_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_TXRDY_Pos)) /* Assigment of value for TXRDY in the UDPHS_EPTCTLENB register */
+#define   UDPHS_EPTCTLENB_TXRDY_0_Val         _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_TXRDY_1_Val         _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable TX Packet Ready/Transaction Error Interrupt.  */
+#define UDPHS_EPTCTLENB_TXRDY_0               (UDPHS_EPTCTLENB_TXRDY_0_Val << UDPHS_EPTCTLENB_TXRDY_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_TXRDY_1               (UDPHS_EPTCTLENB_TXRDY_1_Val << UDPHS_EPTCTLENB_TXRDY_Pos) /* (UDPHS_EPTCTLENB) Enable TX Packet Ready/Transaction Error Interrupt. Position  */
+#define UDPHS_EPTCTLENB_RX_SETUP_Pos          _UINT32_(12)                                         /* (UDPHS_EPTCTLENB) Received SETUP Position */
+#define UDPHS_EPTCTLENB_RX_SETUP_Msk          (_UINT32_(0x1) << UDPHS_EPTCTLENB_RX_SETUP_Pos)      /* (UDPHS_EPTCTLENB) Received SETUP Mask */
+#define UDPHS_EPTCTLENB_RX_SETUP(value)       (UDPHS_EPTCTLENB_RX_SETUP_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_RX_SETUP_Pos)) /* Assigment of value for RX_SETUP in the UDPHS_EPTCTLENB register */
+#define   UDPHS_EPTCTLENB_RX_SETUP_0_Val      _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_RX_SETUP_1_Val      _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable RX_SETUP Interrupt.  */
+#define UDPHS_EPTCTLENB_RX_SETUP_0            (UDPHS_EPTCTLENB_RX_SETUP_0_Val << UDPHS_EPTCTLENB_RX_SETUP_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_RX_SETUP_1            (UDPHS_EPTCTLENB_RX_SETUP_1_Val << UDPHS_EPTCTLENB_RX_SETUP_Pos) /* (UDPHS_EPTCTLENB) Enable RX_SETUP Interrupt. Position  */
+#define UDPHS_EPTCTLENB_STALL_SNT_Pos         _UINT32_(13)                                         /* (UDPHS_EPTCTLENB) Stall Sent Interrupt Enable Position */
+#define UDPHS_EPTCTLENB_STALL_SNT_Msk         (_UINT32_(0x1) << UDPHS_EPTCTLENB_STALL_SNT_Pos)     /* (UDPHS_EPTCTLENB) Stall Sent Interrupt Enable Mask */
+#define UDPHS_EPTCTLENB_STALL_SNT(value)      (UDPHS_EPTCTLENB_STALL_SNT_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_STALL_SNT_Pos)) /* Assigment of value for STALL_SNT in the UDPHS_EPTCTLENB register */
+#define   UDPHS_EPTCTLENB_STALL_SNT_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_STALL_SNT_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Stall Sent Interrupt.  */
+#define UDPHS_EPTCTLENB_STALL_SNT_0           (UDPHS_EPTCTLENB_STALL_SNT_0_Val << UDPHS_EPTCTLENB_STALL_SNT_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_STALL_SNT_1           (UDPHS_EPTCTLENB_STALL_SNT_1_Val << UDPHS_EPTCTLENB_STALL_SNT_Pos) /* (UDPHS_EPTCTLENB) Enable Stall Sent Interrupt. Position  */
+#define UDPHS_EPTCTLENB_NAK_IN_Pos            _UINT32_(14)                                         /* (UDPHS_EPTCTLENB) NAKIN Interrupt Enable Position */
+#define UDPHS_EPTCTLENB_NAK_IN_Msk            (_UINT32_(0x1) << UDPHS_EPTCTLENB_NAK_IN_Pos)        /* (UDPHS_EPTCTLENB) NAKIN Interrupt Enable Mask */
+#define UDPHS_EPTCTLENB_NAK_IN(value)         (UDPHS_EPTCTLENB_NAK_IN_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_NAK_IN_Pos)) /* Assigment of value for NAK_IN in the UDPHS_EPTCTLENB register */
+#define   UDPHS_EPTCTLENB_NAK_IN_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_NAK_IN_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable NAKIN Interrupt.  */
+#define UDPHS_EPTCTLENB_NAK_IN_0              (UDPHS_EPTCTLENB_NAK_IN_0_Val << UDPHS_EPTCTLENB_NAK_IN_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_NAK_IN_1              (UDPHS_EPTCTLENB_NAK_IN_1_Val << UDPHS_EPTCTLENB_NAK_IN_Pos) /* (UDPHS_EPTCTLENB) Enable NAKIN Interrupt. Position  */
+#define UDPHS_EPTCTLENB_NAK_OUT_Pos           _UINT32_(15)                                         /* (UDPHS_EPTCTLENB) NAKOUT Interrupt Enable Position */
+#define UDPHS_EPTCTLENB_NAK_OUT_Msk           (_UINT32_(0x1) << UDPHS_EPTCTLENB_NAK_OUT_Pos)       /* (UDPHS_EPTCTLENB) NAKOUT Interrupt Enable Mask */
+#define UDPHS_EPTCTLENB_NAK_OUT(value)        (UDPHS_EPTCTLENB_NAK_OUT_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_NAK_OUT_Pos)) /* Assigment of value for NAK_OUT in the UDPHS_EPTCTLENB register */
+#define   UDPHS_EPTCTLENB_NAK_OUT_0_Val       _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_NAK_OUT_1_Val       _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable NAKOUT Interrupt.  */
+#define UDPHS_EPTCTLENB_NAK_OUT_0             (UDPHS_EPTCTLENB_NAK_OUT_0_Val << UDPHS_EPTCTLENB_NAK_OUT_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_NAK_OUT_1             (UDPHS_EPTCTLENB_NAK_OUT_1_Val << UDPHS_EPTCTLENB_NAK_OUT_Pos) /* (UDPHS_EPTCTLENB) Enable NAKOUT Interrupt. Position  */
+#define UDPHS_EPTCTLENB_BUSY_BANK_Pos         _UINT32_(18)                                         /* (UDPHS_EPTCTLENB) Busy Bank Interrupt Enable Position */
+#define UDPHS_EPTCTLENB_BUSY_BANK_Msk         (_UINT32_(0x1) << UDPHS_EPTCTLENB_BUSY_BANK_Pos)     /* (UDPHS_EPTCTLENB) Busy Bank Interrupt Enable Mask */
+#define UDPHS_EPTCTLENB_BUSY_BANK(value)      (UDPHS_EPTCTLENB_BUSY_BANK_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_BUSY_BANK_Pos)) /* Assigment of value for BUSY_BANK in the UDPHS_EPTCTLENB register */
+#define   UDPHS_EPTCTLENB_BUSY_BANK_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_BUSY_BANK_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Busy Bank Interrupt.  */
+#define UDPHS_EPTCTLENB_BUSY_BANK_0           (UDPHS_EPTCTLENB_BUSY_BANK_0_Val << UDPHS_EPTCTLENB_BUSY_BANK_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_BUSY_BANK_1           (UDPHS_EPTCTLENB_BUSY_BANK_1_Val << UDPHS_EPTCTLENB_BUSY_BANK_Pos) /* (UDPHS_EPTCTLENB) Enable Busy Bank Interrupt. Position  */
+#define UDPHS_EPTCTLENB_SHRT_PCKT_Pos         _UINT32_(31)                                         /* (UDPHS_EPTCTLENB) Short Packet Send/Short Packet Interrupt Enable Position */
+#define UDPHS_EPTCTLENB_SHRT_PCKT_Msk         (_UINT32_(0x1) << UDPHS_EPTCTLENB_SHRT_PCKT_Pos)     /* (UDPHS_EPTCTLENB) Short Packet Send/Short Packet Interrupt Enable Mask */
+#define UDPHS_EPTCTLENB_SHRT_PCKT(value)      (UDPHS_EPTCTLENB_SHRT_PCKT_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_SHRT_PCKT_Pos)) /* Assigment of value for SHRT_PCKT in the UDPHS_EPTCTLENB register */
+#define   UDPHS_EPTCTLENB_SHRT_PCKT_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_SHRT_PCKT_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Short Packet Interrupt.  */
+#define UDPHS_EPTCTLENB_SHRT_PCKT_0           (UDPHS_EPTCTLENB_SHRT_PCKT_0_Val << UDPHS_EPTCTLENB_SHRT_PCKT_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_SHRT_PCKT_1           (UDPHS_EPTCTLENB_SHRT_PCKT_1_Val << UDPHS_EPTCTLENB_SHRT_PCKT_Pos) /* (UDPHS_EPTCTLENB) Enable Short Packet Interrupt. Position  */
+#define UDPHS_EPTCTLENB_Msk                   _UINT32_(0x8004FF1B)                                 /* (UDPHS_EPTCTLENB) Register Mask  */
 
 /* ISOENDPT mode */
-#define UDPHS_EPTCTL_ISOENDPT_AUTO_VALID_Pos  _UINT32_(1)                                          /* (UDPHS_EPTCTL) Packet Auto-Valid Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_ISOENDPT_AUTO_VALID_Msk  (_UINT32_(0x1) << UDPHS_EPTCTL_ISOENDPT_AUTO_VALID_Pos) /* (UDPHS_EPTCTL) Packet Auto-Valid Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_ISOENDPT_AUTO_VALID(value) (UDPHS_EPTCTL_ISOENDPT_AUTO_VALID_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ISOENDPT_AUTO_VALID_Pos))
-#define UDPHS_EPTCTL_ISOENDPT_DATAX_RX_Pos    _UINT32_(6)                                          /* (UDPHS_EPTCTL) DATAx Interrupt Enabled (Only for High Bandwidth Isochronous OUT endpoints) (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_ISOENDPT_DATAX_RX_Msk    (_UINT32_(0x1) << UDPHS_EPTCTL_ISOENDPT_DATAX_RX_Pos) /* (UDPHS_EPTCTL) DATAx Interrupt Enabled (Only for High Bandwidth Isochronous OUT endpoints) (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_ISOENDPT_DATAX_RX(value) (UDPHS_EPTCTL_ISOENDPT_DATAX_RX_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ISOENDPT_DATAX_RX_Pos))
-#define   UDPHS_EPTCTL_ISOENDPT_DATAX_RX_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) No effect.  */
-#define   UDPHS_EPTCTL_ISOENDPT_DATAX_RX_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Send an interrupt when a DATA2, DATA1 or DATA0 packet has been received meaning the whole microframe data payload has been received.  */
-#define UDPHS_EPTCTL_ISOENDPT_DATAX_RX_0      (UDPHS_EPTCTL_ISOENDPT_DATAX_RX_0_Val << UDPHS_EPTCTL_ISOENDPT_DATAX_RX_Pos) /* (UDPHS_EPTCTL) No effect. Position  */
-#define UDPHS_EPTCTL_ISOENDPT_DATAX_RX_1      (UDPHS_EPTCTL_ISOENDPT_DATAX_RX_1_Val << UDPHS_EPTCTL_ISOENDPT_DATAX_RX_Pos) /* (UDPHS_EPTCTL) Send an interrupt when a DATA2, DATA1 or DATA0 packet has been received meaning the whole microframe data payload has been received. Position  */
-#define UDPHS_EPTCTL_ISOENDPT_MDATA_RX_Pos    _UINT32_(7)                                          /* (UDPHS_EPTCTL) MDATA Interrupt Enabled (Only for High Bandwidth Isochronous OUT endpoints) (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_ISOENDPT_MDATA_RX_Msk    (_UINT32_(0x1) << UDPHS_EPTCTL_ISOENDPT_MDATA_RX_Pos) /* (UDPHS_EPTCTL) MDATA Interrupt Enabled (Only for High Bandwidth Isochronous OUT endpoints) (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_ISOENDPT_MDATA_RX(value) (UDPHS_EPTCTL_ISOENDPT_MDATA_RX_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ISOENDPT_MDATA_RX_Pos))
-#define   UDPHS_EPTCTL_ISOENDPT_MDATA_RX_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) No effect.  */
-#define   UDPHS_EPTCTL_ISOENDPT_MDATA_RX_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Send an interrupt when an MDATA packet has been received and so at least one packet of the microframe data payload has been received.  */
-#define UDPHS_EPTCTL_ISOENDPT_MDATA_RX_0      (UDPHS_EPTCTL_ISOENDPT_MDATA_RX_0_Val << UDPHS_EPTCTL_ISOENDPT_MDATA_RX_Pos) /* (UDPHS_EPTCTL) No effect. Position  */
-#define UDPHS_EPTCTL_ISOENDPT_MDATA_RX_1      (UDPHS_EPTCTL_ISOENDPT_MDATA_RX_1_Val << UDPHS_EPTCTL_ISOENDPT_MDATA_RX_Pos) /* (UDPHS_EPTCTL) Send an interrupt when an MDATA packet has been received and so at least one packet of the microframe data payload has been received. Position  */
-#define UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_Pos  _UINT32_(11)                                         /* (UDPHS_EPTCTL) TX Packet Ready/Transaction Error Interrupt Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_Msk  (_UINT32_(0x1) << UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_Pos) /* (UDPHS_EPTCTL) TX Packet Ready/Transaction Error Interrupt Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER(value) (UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_Pos))
-#define   UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) TX Packet Ready/Transaction Error Interrupt is masked.  */
-#define   UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) TX Packet Ready/Transaction Error Interrupt is enabled.  */
-#define UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_0    (UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_0_Val << UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_Pos) /* (UDPHS_EPTCTL) TX Packet Ready/Transaction Error Interrupt is masked. Position  */
-#define UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_1    (UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_1_Val << UDPHS_EPTCTL_ISOENDPT_TXRDY_TRER_Pos) /* (UDPHS_EPTCTL) TX Packet Ready/Transaction Error Interrupt is enabled. Position  */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_Pos  _UINT32_(12)                                         /* (UDPHS_EPTCTL) Error Flow Interrupt Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_Msk  (_UINT32_(0x1) << UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCTL) Error Flow Interrupt Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO(value) (UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_Pos))
-#define   UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Error Flow Interrupt is masked.  */
-#define   UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Error Flow Interrupt is enabled.  */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_0    (UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_0_Val << UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCTL) Error Flow Interrupt is masked. Position  */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_1    (UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_1_Val << UDPHS_EPTCTL_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCTL) Error Flow Interrupt is enabled. Position  */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_Pos _UINT32_(13)                                         /* (UDPHS_EPTCTL) ISO CRC Error/Number of Transaction Error Interrupt Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_Msk (_UINT32_(0x1) << UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCTL) ISO CRC Error/Number of Transaction Error Interrupt Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR(value) (UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_Pos))
-#define   UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) ISO CRC error/number of Transaction Error Interrupt is masked.  */
-#define   UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) ISO CRC error/number of Transaction Error Interrupt is enabled.  */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_0   (UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_0_Val << UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCTL) ISO CRC error/number of Transaction Error Interrupt is masked. Position  */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_1   (UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_1_Val << UDPHS_EPTCTL_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCTL) ISO CRC error/number of Transaction Error Interrupt is enabled. Position  */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_Pos   _UINT32_(14)                                         /* (UDPHS_EPTCTL) Bank Flush Error Interrupt Enabled (cleared upon USB reset) Position */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_Msk   (_UINT32_(0x1) << UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCTL) Bank Flush Error Interrupt Enabled (cleared upon USB reset) Mask */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH(value) (UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_Msk & (_UINT32_(value) << UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_Pos))
-#define   UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTL) Bank Flush Error Interrupt is masked.  */
-#define   UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTL) Bank Flush Error Interrupt is enabled.  */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_0     (UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_0_Val << UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCTL) Bank Flush Error Interrupt is masked. Position  */
-#define UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_1     (UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_1_Val << UDPHS_EPTCTL_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCTL) Bank Flush Error Interrupt is enabled. Position  */
-#define UDPHS_EPTCTL_ISOENDPT_Msk             _UINT32_(0x000078C2)                                  /* (UDPHS_EPTCTL_ISOENDPT) Register Mask  */
+#define UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_Pos _UINT32_(6)                                          /* (UDPHS_EPTCTLENB) DATAx Interrupt Enable (Only for high bandwidth Isochronous OUT endpoints) Position */
+#define UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_Msk (_UINT32_(0x1) << UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_Pos) /* (UDPHS_EPTCTLENB) DATAx Interrupt Enable (Only for high bandwidth Isochronous OUT endpoints) Mask */
+#define UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX(value) (UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_Pos))
+#define   UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable DATAx Interrupt.  */
+#define UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_0   (UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_0_Val << UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_1   (UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_1_Val << UDPHS_EPTCTLENB_ISOENDPT_DATAX_RX_Pos) /* (UDPHS_EPTCTLENB) Enable DATAx Interrupt. Position  */
+#define UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_Pos _UINT32_(7)                                          /* (UDPHS_EPTCTLENB) MDATA Interrupt Enable (Only for high bandwidth Isochronous OUT endpoints) Position */
+#define UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_Msk (_UINT32_(0x1) << UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_Pos) /* (UDPHS_EPTCTLENB) MDATA Interrupt Enable (Only for high bandwidth Isochronous OUT endpoints) Mask */
+#define UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX(value) (UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_Pos))
+#define   UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable MDATA Interrupt.  */
+#define UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_0   (UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_0_Val << UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_1   (UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_1_Val << UDPHS_EPTCTLENB_ISOENDPT_MDATA_RX_Pos) /* (UDPHS_EPTCTLENB) Enable MDATA Interrupt. Position  */
+#define UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_Pos _UINT32_(11)                                         /* (UDPHS_EPTCTLENB) TX Packet Ready/Transaction Error Interrupt Enable Position */
+#define UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_Msk (_UINT32_(0x1) << UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_Pos) /* (UDPHS_EPTCTLENB) TX Packet Ready/Transaction Error Interrupt Enable Mask */
+#define UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER(value) (UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_Pos))
+#define   UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable TX Packet Ready/Transaction Error Interrupt.  */
+#define UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_0 (UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_0_Val << UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_1 (UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_1_Val << UDPHS_EPTCTLENB_ISOENDPT_TXRDY_TRER_Pos) /* (UDPHS_EPTCTLENB) Enable TX Packet Ready/Transaction Error Interrupt. Position  */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_Pos _UINT32_(12)                                         /* (UDPHS_EPTCTLENB) Error Flow Interrupt Enable Position */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_Msk (_UINT32_(0x1) << UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCTLENB) Error Flow Interrupt Enable Mask */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO(value) (UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_Pos))
+#define   UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Error Flow ISO Interrupt.  */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_0 (UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_0_Val << UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_1 (UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_1_Val << UDPHS_EPTCTLENB_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCTLENB) Enable Error Flow ISO Interrupt. Position  */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_Pos _UINT32_(13)                                         /* (UDPHS_EPTCTLENB) ISO CRC Error/Number of Transaction Error Interrupt Enable Position */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_Msk (_UINT32_(0x1) << UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCTLENB) ISO CRC Error/Number of Transaction Error Interrupt Enable Mask */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR(value) (UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_Pos))
+#define   UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Error CRC ISO/Error Number of Transaction Interrupt.  */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_0 (UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_0_Val << UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_1 (UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_1_Val << UDPHS_EPTCTLENB_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCTLENB) Enable Error CRC ISO/Error Number of Transaction Interrupt. Position  */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_Pos _UINT32_(14)                                         /* (UDPHS_EPTCTLENB) Bank Flush Error Interrupt Enable Position */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_Msk (_UINT32_(0x1) << UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCTLENB) Bank Flush Error Interrupt Enable Mask */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH(value) (UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_Msk & (_UINT32_(value) << UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_Pos))
+#define   UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCTLENB) No effect.  */
+#define   UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCTLENB) Enable Bank Flush Error Interrupt.  */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_0  (UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_0_Val << UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCTLENB) No effect. Position  */
+#define UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_1  (UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_1_Val << UDPHS_EPTCTLENB_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCTLENB) Enable Bank Flush Error Interrupt. Position  */
+#define UDPHS_EPTCTLENB_ISOENDPT_Msk          _UINT32_(0x000078C0)                                  /* (UDPHS_EPTCTLENB_ISOENDPT) Register Mask  */
 
 
 /* -------- UDPHS_EPTSETSTA : (UDPHS Offset: 0x14) ( /W 32) UDPHS Endpoint Set Status Register  -------- */
@@ -690,90 +774,6 @@
 #define UDPHS_EPTSETSTA_ISOENDPT_TXRDY_TRER_0 (UDPHS_EPTSETSTA_ISOENDPT_TXRDY_TRER_0_Val << UDPHS_EPTSETSTA_ISOENDPT_TXRDY_TRER_Pos) /* (UDPHS_EPTSETSTA) No effect. Position  */
 #define UDPHS_EPTSETSTA_ISOENDPT_TXRDY_TRER_1 (UDPHS_EPTSETSTA_ISOENDPT_TXRDY_TRER_1_Val << UDPHS_EPTSETSTA_ISOENDPT_TXRDY_TRER_Pos) /* (UDPHS_EPTSETSTA) Set this bit after a packet has been written into the endpoint FIFO for IN data transfers Position  */
 #define UDPHS_EPTSETSTA_ISOENDPT_Msk          _UINT32_(0x00000800)                                  /* (UDPHS_EPTSETSTA_ISOENDPT) Register Mask  */
-
-
-/* -------- UDPHS_EPTCLRSTA : (UDPHS Offset: 0x18) ( /W 32) UDPHS Endpoint Clear Status Register  -------- */
-#define UDPHS_EPTCLRSTA_FRCESTALL_Pos         _UINT32_(5)                                          /* (UDPHS_EPTCLRSTA) Stall Handshake Request Clear Position */
-#define UDPHS_EPTCLRSTA_FRCESTALL_Msk         (_UINT32_(0x1) << UDPHS_EPTCLRSTA_FRCESTALL_Pos)     /* (UDPHS_EPTCLRSTA) Stall Handshake Request Clear Mask */
-#define UDPHS_EPTCLRSTA_FRCESTALL(value)      (UDPHS_EPTCLRSTA_FRCESTALL_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_FRCESTALL_Pos)) /* Assigment of value for FRCESTALL in the UDPHS_EPTCLRSTA register */
-#define   UDPHS_EPTCLRSTA_FRCESTALL_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
-#define   UDPHS_EPTCLRSTA_FRCESTALL_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the STALL request. The next packets from host will not be STALLed.  */
-#define UDPHS_EPTCLRSTA_FRCESTALL_0           (UDPHS_EPTCLRSTA_FRCESTALL_0_Val << UDPHS_EPTCLRSTA_FRCESTALL_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
-#define UDPHS_EPTCLRSTA_FRCESTALL_1           (UDPHS_EPTCLRSTA_FRCESTALL_1_Val << UDPHS_EPTCLRSTA_FRCESTALL_Pos) /* (UDPHS_EPTCLRSTA) Clear the STALL request. The next packets from host will not be STALLed. Position  */
-#define UDPHS_EPTCLRSTA_TOGGLESQ_Pos          _UINT32_(6)                                          /* (UDPHS_EPTCLRSTA) Data Toggle Clear Position */
-#define UDPHS_EPTCLRSTA_TOGGLESQ_Msk          (_UINT32_(0x1) << UDPHS_EPTCLRSTA_TOGGLESQ_Pos)      /* (UDPHS_EPTCLRSTA) Data Toggle Clear Mask */
-#define UDPHS_EPTCLRSTA_TOGGLESQ(value)       (UDPHS_EPTCLRSTA_TOGGLESQ_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_TOGGLESQ_Pos)) /* Assigment of value for TOGGLESQ in the UDPHS_EPTCLRSTA register */
-#define   UDPHS_EPTCLRSTA_TOGGLESQ_0_Val      _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
-#define   UDPHS_EPTCLRSTA_TOGGLESQ_1_Val      _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the PID data of the current bank  */
-#define UDPHS_EPTCLRSTA_TOGGLESQ_0            (UDPHS_EPTCLRSTA_TOGGLESQ_0_Val << UDPHS_EPTCLRSTA_TOGGLESQ_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
-#define UDPHS_EPTCLRSTA_TOGGLESQ_1            (UDPHS_EPTCLRSTA_TOGGLESQ_1_Val << UDPHS_EPTCLRSTA_TOGGLESQ_Pos) /* (UDPHS_EPTCLRSTA) Clear the PID data of the current bank Position  */
-#define UDPHS_EPTCLRSTA_RXRDY_TXKL_Pos        _UINT32_(9)                                          /* (UDPHS_EPTCLRSTA) Received OUT Data Clear Position */
-#define UDPHS_EPTCLRSTA_RXRDY_TXKL_Msk        (_UINT32_(0x1) << UDPHS_EPTCLRSTA_RXRDY_TXKL_Pos)    /* (UDPHS_EPTCLRSTA) Received OUT Data Clear Mask */
-#define UDPHS_EPTCLRSTA_RXRDY_TXKL(value)     (UDPHS_EPTCLRSTA_RXRDY_TXKL_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_RXRDY_TXKL_Pos)) /* Assigment of value for RXRDY_TXKL in the UDPHS_EPTCLRSTA register */
-#define   UDPHS_EPTCLRSTA_RXRDY_TXKL_0_Val    _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
-#define   UDPHS_EPTCLRSTA_RXRDY_TXKL_1_Val    _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the RXRDY_TXKL flag of UDPHS_EPTSTAx.  */
-#define UDPHS_EPTCLRSTA_RXRDY_TXKL_0          (UDPHS_EPTCLRSTA_RXRDY_TXKL_0_Val << UDPHS_EPTCLRSTA_RXRDY_TXKL_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
-#define UDPHS_EPTCLRSTA_RXRDY_TXKL_1          (UDPHS_EPTCLRSTA_RXRDY_TXKL_1_Val << UDPHS_EPTCLRSTA_RXRDY_TXKL_Pos) /* (UDPHS_EPTCLRSTA) Clear the RXRDY_TXKL flag of UDPHS_EPTSTAx. Position  */
-#define UDPHS_EPTCLRSTA_TX_COMPLT_Pos         _UINT32_(10)                                         /* (UDPHS_EPTCLRSTA) Transmitted IN Data Complete Clear Position */
-#define UDPHS_EPTCLRSTA_TX_COMPLT_Msk         (_UINT32_(0x1) << UDPHS_EPTCLRSTA_TX_COMPLT_Pos)     /* (UDPHS_EPTCLRSTA) Transmitted IN Data Complete Clear Mask */
-#define UDPHS_EPTCLRSTA_TX_COMPLT(value)      (UDPHS_EPTCLRSTA_TX_COMPLT_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_TX_COMPLT_Pos)) /* Assigment of value for TX_COMPLT in the UDPHS_EPTCLRSTA register */
-#define   UDPHS_EPTCLRSTA_TX_COMPLT_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
-#define   UDPHS_EPTCLRSTA_TX_COMPLT_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the TX_COMPLT flag of UDPHS_EPTSTAx.  */
-#define UDPHS_EPTCLRSTA_TX_COMPLT_0           (UDPHS_EPTCLRSTA_TX_COMPLT_0_Val << UDPHS_EPTCLRSTA_TX_COMPLT_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
-#define UDPHS_EPTCLRSTA_TX_COMPLT_1           (UDPHS_EPTCLRSTA_TX_COMPLT_1_Val << UDPHS_EPTCLRSTA_TX_COMPLT_Pos) /* (UDPHS_EPTCLRSTA) Clear the TX_COMPLT flag of UDPHS_EPTSTAx. Position  */
-#define UDPHS_EPTCLRSTA_RX_SETUP_Pos          _UINT32_(12)                                         /* (UDPHS_EPTCLRSTA) Received SETUP Clear Position */
-#define UDPHS_EPTCLRSTA_RX_SETUP_Msk          (_UINT32_(0x1) << UDPHS_EPTCLRSTA_RX_SETUP_Pos)      /* (UDPHS_EPTCLRSTA) Received SETUP Clear Mask */
-#define UDPHS_EPTCLRSTA_RX_SETUP(value)       (UDPHS_EPTCLRSTA_RX_SETUP_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_RX_SETUP_Pos)) /* Assigment of value for RX_SETUP in the UDPHS_EPTCLRSTA register */
-#define   UDPHS_EPTCLRSTA_RX_SETUP_0_Val      _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
-#define   UDPHS_EPTCLRSTA_RX_SETUP_1_Val      _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the RX_SETUP flags of UDPHS_EPTSTAx.  */
-#define UDPHS_EPTCLRSTA_RX_SETUP_0            (UDPHS_EPTCLRSTA_RX_SETUP_0_Val << UDPHS_EPTCLRSTA_RX_SETUP_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
-#define UDPHS_EPTCLRSTA_RX_SETUP_1            (UDPHS_EPTCLRSTA_RX_SETUP_1_Val << UDPHS_EPTCLRSTA_RX_SETUP_Pos) /* (UDPHS_EPTCLRSTA) Clear the RX_SETUP flags of UDPHS_EPTSTAx. Position  */
-#define UDPHS_EPTCLRSTA_STALL_SNT_Pos         _UINT32_(13)                                         /* (UDPHS_EPTCLRSTA) Stall Sent Clear Position */
-#define UDPHS_EPTCLRSTA_STALL_SNT_Msk         (_UINT32_(0x1) << UDPHS_EPTCLRSTA_STALL_SNT_Pos)     /* (UDPHS_EPTCLRSTA) Stall Sent Clear Mask */
-#define UDPHS_EPTCLRSTA_STALL_SNT(value)      (UDPHS_EPTCLRSTA_STALL_SNT_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_STALL_SNT_Pos)) /* Assigment of value for STALL_SNT in the UDPHS_EPTCLRSTA register */
-#define   UDPHS_EPTCLRSTA_STALL_SNT_0_Val     _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
-#define   UDPHS_EPTCLRSTA_STALL_SNT_1_Val     _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the STALL_SNT flags of UDPHS_EPTSTAx.  */
-#define UDPHS_EPTCLRSTA_STALL_SNT_0           (UDPHS_EPTCLRSTA_STALL_SNT_0_Val << UDPHS_EPTCLRSTA_STALL_SNT_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
-#define UDPHS_EPTCLRSTA_STALL_SNT_1           (UDPHS_EPTCLRSTA_STALL_SNT_1_Val << UDPHS_EPTCLRSTA_STALL_SNT_Pos) /* (UDPHS_EPTCLRSTA) Clear the STALL_SNT flags of UDPHS_EPTSTAx. Position  */
-#define UDPHS_EPTCLRSTA_NAK_IN_Pos            _UINT32_(14)                                         /* (UDPHS_EPTCLRSTA) NAKIN Clear Position */
-#define UDPHS_EPTCLRSTA_NAK_IN_Msk            (_UINT32_(0x1) << UDPHS_EPTCLRSTA_NAK_IN_Pos)        /* (UDPHS_EPTCLRSTA) NAKIN Clear Mask */
-#define UDPHS_EPTCLRSTA_NAK_IN(value)         (UDPHS_EPTCLRSTA_NAK_IN_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_NAK_IN_Pos)) /* Assigment of value for NAK_IN in the UDPHS_EPTCLRSTA register */
-#define   UDPHS_EPTCLRSTA_NAK_IN_0_Val        _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
-#define   UDPHS_EPTCLRSTA_NAK_IN_1_Val        _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the NAK_IN flags of UDPHS_EPTSTAx.  */
-#define UDPHS_EPTCLRSTA_NAK_IN_0              (UDPHS_EPTCLRSTA_NAK_IN_0_Val << UDPHS_EPTCLRSTA_NAK_IN_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
-#define UDPHS_EPTCLRSTA_NAK_IN_1              (UDPHS_EPTCLRSTA_NAK_IN_1_Val << UDPHS_EPTCLRSTA_NAK_IN_Pos) /* (UDPHS_EPTCLRSTA) Clear the NAK_IN flags of UDPHS_EPTSTAx. Position  */
-#define UDPHS_EPTCLRSTA_NAK_OUT_Pos           _UINT32_(15)                                         /* (UDPHS_EPTCLRSTA) NAKOUT Clear Position */
-#define UDPHS_EPTCLRSTA_NAK_OUT_Msk           (_UINT32_(0x1) << UDPHS_EPTCLRSTA_NAK_OUT_Pos)       /* (UDPHS_EPTCLRSTA) NAKOUT Clear Mask */
-#define UDPHS_EPTCLRSTA_NAK_OUT(value)        (UDPHS_EPTCLRSTA_NAK_OUT_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_NAK_OUT_Pos)) /* Assigment of value for NAK_OUT in the UDPHS_EPTCLRSTA register */
-#define   UDPHS_EPTCLRSTA_NAK_OUT_0_Val       _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
-#define   UDPHS_EPTCLRSTA_NAK_OUT_1_Val       _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the NAK_OUT flag of UDPHS_EPTSTAx.  */
-#define UDPHS_EPTCLRSTA_NAK_OUT_0             (UDPHS_EPTCLRSTA_NAK_OUT_0_Val << UDPHS_EPTCLRSTA_NAK_OUT_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
-#define UDPHS_EPTCLRSTA_NAK_OUT_1             (UDPHS_EPTCLRSTA_NAK_OUT_1_Val << UDPHS_EPTCLRSTA_NAK_OUT_Pos) /* (UDPHS_EPTCLRSTA) Clear the NAK_OUT flag of UDPHS_EPTSTAx. Position  */
-#define UDPHS_EPTCLRSTA_Msk                   _UINT32_(0x0000F660)                                 /* (UDPHS_EPTCLRSTA) Register Mask  */
-
-/* ISOENDPT mode */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_Pos _UINT32_(12)                                         /* (UDPHS_EPTCLRSTA) Error Flow Clear Position */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_Msk (_UINT32_(0x1) << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCLRSTA) Error Flow Clear Mask */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO(value) (UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_Pos))
-#define   UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
-#define   UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the ERR_FL_ISO flags of UDPHS_EPTSTAx.  */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_0 (UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_0_Val << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_1 (UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_1_Val << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FL_ISO_Pos) /* (UDPHS_EPTCLRSTA) Clear the ERR_FL_ISO flags of UDPHS_EPTSTAx. Position  */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_Pos _UINT32_(13)                                         /* (UDPHS_EPTCLRSTA) Number of Transaction Error Clear Position */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_Msk (_UINT32_(0x1) << UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCLRSTA) Number of Transaction Error Clear Mask */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR(value) (UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_Pos))
-#define   UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
-#define   UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the ERR_CRC_NTR flags of UDPHS_EPTSTAx.  */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_0 (UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_0_Val << UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_1 (UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_1_Val << UDPHS_EPTCLRSTA_ISOENDPT_ERR_CRC_NTR_Pos) /* (UDPHS_EPTCLRSTA) Clear the ERR_CRC_NTR flags of UDPHS_EPTSTAx. Position  */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_Pos _UINT32_(14)                                         /* (UDPHS_EPTCLRSTA) Bank Flush Error Clear Position */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_Msk (_UINT32_(0x1) << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCLRSTA) Bank Flush Error Clear Mask */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH(value) (UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_Msk & (_UINT32_(value) << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_Pos))
-#define   UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_0_Val _UINT32_(0x0)                                        /* (UDPHS_EPTCLRSTA) No effect.  */
-#define   UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_1_Val _UINT32_(0x1)                                        /* (UDPHS_EPTCLRSTA) Clear the ERR_FLUSH flags of UDPHS_EPTSTAx.  */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_0  (UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_0_Val << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCLRSTA) No effect. Position  */
-#define UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_1  (UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_1_Val << UDPHS_EPTCLRSTA_ISOENDPT_ERR_FLUSH_Pos) /* (UDPHS_EPTCLRSTA) Clear the ERR_FLUSH flags of UDPHS_EPTSTAx. Position  */
-#define UDPHS_EPTCLRSTA_ISOENDPT_Msk          _UINT32_(0x00007000)                                  /* (UDPHS_EPTCLRSTA_ISOENDPT) Register Mask  */
 
 
 /* -------- UDPHS_EPTSTA : (UDPHS Offset: 0x1C) ( R/ 32) UDPHS Endpoint Status Register  -------- */
@@ -889,6 +889,59 @@
 #define UDPHS_EPTSTA_ISOENDPT_Msk             _UINT32_(0x000378C0)                                  /* (UDPHS_EPTSTA_ISOENDPT) Register Mask  */
 
 
+/* -------- UDPHS_CLRINT : (UDPHS Offset: 0x18) ( /W 32) UDPHS Clear Interrupt Register -------- */
+#define UDPHS_CLRINT_DET_SUSPD_Pos            _UINT32_(1)                                          /* (UDPHS_CLRINT) Suspend Interrupt Clear Position */
+#define UDPHS_CLRINT_DET_SUSPD_Msk            (_UINT32_(0x1) << UDPHS_CLRINT_DET_SUSPD_Pos)        /* (UDPHS_CLRINT) Suspend Interrupt Clear Mask */
+#define UDPHS_CLRINT_DET_SUSPD(value)         (UDPHS_CLRINT_DET_SUSPD_Msk & (_UINT32_(value) << UDPHS_CLRINT_DET_SUSPD_Pos)) /* Assigment of value for DET_SUSPD in the UDPHS_CLRINT register */
+#define   UDPHS_CLRINT_DET_SUSPD_0_Val        _UINT32_(0x0)                                        /* (UDPHS_CLRINT) No effect.  */
+#define   UDPHS_CLRINT_DET_SUSPD_1_Val        _UINT32_(0x1)                                        /* (UDPHS_CLRINT) Clear the DET_SUSPD bit in UDPHS_INTSTA.  */
+#define UDPHS_CLRINT_DET_SUSPD_0              (UDPHS_CLRINT_DET_SUSPD_0_Val << UDPHS_CLRINT_DET_SUSPD_Pos) /* (UDPHS_CLRINT) No effect. Position  */
+#define UDPHS_CLRINT_DET_SUSPD_1              (UDPHS_CLRINT_DET_SUSPD_1_Val << UDPHS_CLRINT_DET_SUSPD_Pos) /* (UDPHS_CLRINT) Clear the DET_SUSPD bit in UDPHS_INTSTA. Position  */
+#define UDPHS_CLRINT_MICRO_SOF_Pos            _UINT32_(2)                                          /* (UDPHS_CLRINT) Micro Start Of Frame Interrupt Clear Position */
+#define UDPHS_CLRINT_MICRO_SOF_Msk            (_UINT32_(0x1) << UDPHS_CLRINT_MICRO_SOF_Pos)        /* (UDPHS_CLRINT) Micro Start Of Frame Interrupt Clear Mask */
+#define UDPHS_CLRINT_MICRO_SOF(value)         (UDPHS_CLRINT_MICRO_SOF_Msk & (_UINT32_(value) << UDPHS_CLRINT_MICRO_SOF_Pos)) /* Assigment of value for MICRO_SOF in the UDPHS_CLRINT register */
+#define   UDPHS_CLRINT_MICRO_SOF_0_Val        _UINT32_(0x0)                                        /* (UDPHS_CLRINT) No effect.  */
+#define   UDPHS_CLRINT_MICRO_SOF_1_Val        _UINT32_(0x1)                                        /* (UDPHS_CLRINT) Clear the MICRO_SOF bit in UDPHS_INTSTA.  */
+#define UDPHS_CLRINT_MICRO_SOF_0              (UDPHS_CLRINT_MICRO_SOF_0_Val << UDPHS_CLRINT_MICRO_SOF_Pos) /* (UDPHS_CLRINT) No effect. Position  */
+#define UDPHS_CLRINT_MICRO_SOF_1              (UDPHS_CLRINT_MICRO_SOF_1_Val << UDPHS_CLRINT_MICRO_SOF_Pos) /* (UDPHS_CLRINT) Clear the MICRO_SOF bit in UDPHS_INTSTA. Position  */
+#define UDPHS_CLRINT_INT_SOF_Pos              _UINT32_(3)                                          /* (UDPHS_CLRINT) Start Of Frame Interrupt Clear Position */
+#define UDPHS_CLRINT_INT_SOF_Msk              (_UINT32_(0x1) << UDPHS_CLRINT_INT_SOF_Pos)          /* (UDPHS_CLRINT) Start Of Frame Interrupt Clear Mask */
+#define UDPHS_CLRINT_INT_SOF(value)           (UDPHS_CLRINT_INT_SOF_Msk & (_UINT32_(value) << UDPHS_CLRINT_INT_SOF_Pos)) /* Assigment of value for INT_SOF in the UDPHS_CLRINT register */
+#define   UDPHS_CLRINT_INT_SOF_0_Val          _UINT32_(0x0)                                        /* (UDPHS_CLRINT) No effect.  */
+#define   UDPHS_CLRINT_INT_SOF_1_Val          _UINT32_(0x1)                                        /* (UDPHS_CLRINT) Clear the INT_SOF bit in UDPHS_INTSTA.  */
+#define UDPHS_CLRINT_INT_SOF_0                (UDPHS_CLRINT_INT_SOF_0_Val << UDPHS_CLRINT_INT_SOF_Pos) /* (UDPHS_CLRINT) No effect. Position  */
+#define UDPHS_CLRINT_INT_SOF_1                (UDPHS_CLRINT_INT_SOF_1_Val << UDPHS_CLRINT_INT_SOF_Pos) /* (UDPHS_CLRINT) Clear the INT_SOF bit in UDPHS_INTSTA. Position  */
+#define UDPHS_CLRINT_ENDRESET_Pos             _UINT32_(4)                                          /* (UDPHS_CLRINT) End Of Reset Interrupt Clear Position */
+#define UDPHS_CLRINT_ENDRESET_Msk             (_UINT32_(0x1) << UDPHS_CLRINT_ENDRESET_Pos)         /* (UDPHS_CLRINT) End Of Reset Interrupt Clear Mask */
+#define UDPHS_CLRINT_ENDRESET(value)          (UDPHS_CLRINT_ENDRESET_Msk & (_UINT32_(value) << UDPHS_CLRINT_ENDRESET_Pos)) /* Assigment of value for ENDRESET in the UDPHS_CLRINT register */
+#define   UDPHS_CLRINT_ENDRESET_0_Val         _UINT32_(0x0)                                        /* (UDPHS_CLRINT) No effect.  */
+#define   UDPHS_CLRINT_ENDRESET_1_Val         _UINT32_(0x1)                                        /* (UDPHS_CLRINT) Clear the ENDRESET bit in UDPHS_INTSTA.  */
+#define UDPHS_CLRINT_ENDRESET_0               (UDPHS_CLRINT_ENDRESET_0_Val << UDPHS_CLRINT_ENDRESET_Pos) /* (UDPHS_CLRINT) No effect. Position  */
+#define UDPHS_CLRINT_ENDRESET_1               (UDPHS_CLRINT_ENDRESET_1_Val << UDPHS_CLRINT_ENDRESET_Pos) /* (UDPHS_CLRINT) Clear the ENDRESET bit in UDPHS_INTSTA. Position  */
+#define UDPHS_CLRINT_WAKE_UP_Pos              _UINT32_(5)                                          /* (UDPHS_CLRINT) Wake Up CPU Interrupt Clear Position */
+#define UDPHS_CLRINT_WAKE_UP_Msk              (_UINT32_(0x1) << UDPHS_CLRINT_WAKE_UP_Pos)          /* (UDPHS_CLRINT) Wake Up CPU Interrupt Clear Mask */
+#define UDPHS_CLRINT_WAKE_UP(value)           (UDPHS_CLRINT_WAKE_UP_Msk & (_UINT32_(value) << UDPHS_CLRINT_WAKE_UP_Pos)) /* Assigment of value for WAKE_UP in the UDPHS_CLRINT register */
+#define   UDPHS_CLRINT_WAKE_UP_0_Val          _UINT32_(0x0)                                        /* (UDPHS_CLRINT) No effect.  */
+#define   UDPHS_CLRINT_WAKE_UP_1_Val          _UINT32_(0x1)                                        /* (UDPHS_CLRINT) Clear the WAKE_UP bit in UDPHS_INTSTA.  */
+#define UDPHS_CLRINT_WAKE_UP_0                (UDPHS_CLRINT_WAKE_UP_0_Val << UDPHS_CLRINT_WAKE_UP_Pos) /* (UDPHS_CLRINT) No effect. Position  */
+#define UDPHS_CLRINT_WAKE_UP_1                (UDPHS_CLRINT_WAKE_UP_1_Val << UDPHS_CLRINT_WAKE_UP_Pos) /* (UDPHS_CLRINT) Clear the WAKE_UP bit in UDPHS_INTSTA. Position  */
+#define UDPHS_CLRINT_ENDOFRSM_Pos             _UINT32_(6)                                          /* (UDPHS_CLRINT) End Of Resume Interrupt Clear Position */
+#define UDPHS_CLRINT_ENDOFRSM_Msk             (_UINT32_(0x1) << UDPHS_CLRINT_ENDOFRSM_Pos)         /* (UDPHS_CLRINT) End Of Resume Interrupt Clear Mask */
+#define UDPHS_CLRINT_ENDOFRSM(value)          (UDPHS_CLRINT_ENDOFRSM_Msk & (_UINT32_(value) << UDPHS_CLRINT_ENDOFRSM_Pos)) /* Assigment of value for ENDOFRSM in the UDPHS_CLRINT register */
+#define   UDPHS_CLRINT_ENDOFRSM_0_Val         _UINT32_(0x0)                                        /* (UDPHS_CLRINT) No effect.  */
+#define   UDPHS_CLRINT_ENDOFRSM_1_Val         _UINT32_(0x1)                                        /* (UDPHS_CLRINT) Clear the ENDOFRSM bit in UDPHS_INTSTA.  */
+#define UDPHS_CLRINT_ENDOFRSM_0               (UDPHS_CLRINT_ENDOFRSM_0_Val << UDPHS_CLRINT_ENDOFRSM_Pos) /* (UDPHS_CLRINT) No effect. Position  */
+#define UDPHS_CLRINT_ENDOFRSM_1               (UDPHS_CLRINT_ENDOFRSM_1_Val << UDPHS_CLRINT_ENDOFRSM_Pos) /* (UDPHS_CLRINT) Clear the ENDOFRSM bit in UDPHS_INTSTA. Position  */
+#define UDPHS_CLRINT_UPSTR_RES_Pos            _UINT32_(7)                                          /* (UDPHS_CLRINT) Upstream Resume Interrupt Clear Position */
+#define UDPHS_CLRINT_UPSTR_RES_Msk            (_UINT32_(0x1) << UDPHS_CLRINT_UPSTR_RES_Pos)        /* (UDPHS_CLRINT) Upstream Resume Interrupt Clear Mask */
+#define UDPHS_CLRINT_UPSTR_RES(value)         (UDPHS_CLRINT_UPSTR_RES_Msk & (_UINT32_(value) << UDPHS_CLRINT_UPSTR_RES_Pos)) /* Assigment of value for UPSTR_RES in the UDPHS_CLRINT register */
+#define   UDPHS_CLRINT_UPSTR_RES_0_Val        _UINT32_(0x0)                                        /* (UDPHS_CLRINT) No effect.  */
+#define   UDPHS_CLRINT_UPSTR_RES_1_Val        _UINT32_(0x1)                                        /* (UDPHS_CLRINT) Clear the UPSTR_RES bit in UDPHS_INTSTA.  */
+#define UDPHS_CLRINT_UPSTR_RES_0              (UDPHS_CLRINT_UPSTR_RES_0_Val << UDPHS_CLRINT_UPSTR_RES_Pos) /* (UDPHS_CLRINT) No effect. Position  */
+#define UDPHS_CLRINT_UPSTR_RES_1              (UDPHS_CLRINT_UPSTR_RES_1_Val << UDPHS_CLRINT_UPSTR_RES_Pos) /* (UDPHS_CLRINT) Clear the UPSTR_RES bit in UDPHS_INTSTA. Position  */
+#define UDPHS_CLRINT_Msk                      _UINT32_(0x000000FE)                                 /* (UDPHS_CLRINT) Register Mask  */
+
+
 /* -------- UDPHS_CTRL : (UDPHS Offset: 0x00) (R/W 32) UDPHS Control Register -------- */
 #define UDPHS_CTRL_RESETVALUE                 _UINT32_(0x200)                                      /*  (UDPHS_CTRL) UDPHS Control Register  Reset Value */
 
@@ -928,6 +981,125 @@
 #define UDPHS_CTRL_PULLD_DIS(value)           (UDPHS_CTRL_PULLD_DIS_Msk & (_UINT32_(value) << UDPHS_CTRL_PULLD_DIS_Pos)) /* Assigment of value for PULLD_DIS in the UDPHS_CTRL register */
 #define UDPHS_CTRL_Msk                        _UINT32_(0x00000FFF)                                 /* (UDPHS_CTRL) Register Mask  */
 
+
+/* -------- UDPHS_EPTRST : (UDPHS Offset: 0x1C) ( /W 32) UDPHS Endpoints Reset Register -------- */
+#define UDPHS_EPTRST_EPT_0_Pos                _UINT32_(0)                                          /* (UDPHS_EPTRST) Endpoint 0 Reset Position */
+#define UDPHS_EPTRST_EPT_0_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_0_Pos)            /* (UDPHS_EPTRST) Endpoint 0 Reset Mask */
+#define UDPHS_EPTRST_EPT_0(value)             (UDPHS_EPTRST_EPT_0_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_0_Pos)) /* Assigment of value for EPT_0 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_0_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_0_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_0_0                  (UDPHS_EPTRST_EPT_0_0_Val << UDPHS_EPTRST_EPT_0_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_0_1                  (UDPHS_EPTRST_EPT_0_1_Val << UDPHS_EPTRST_EPT_0_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_1_Pos                _UINT32_(1)                                          /* (UDPHS_EPTRST) Endpoint 1 Reset Position */
+#define UDPHS_EPTRST_EPT_1_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_1_Pos)            /* (UDPHS_EPTRST) Endpoint 1 Reset Mask */
+#define UDPHS_EPTRST_EPT_1(value)             (UDPHS_EPTRST_EPT_1_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_1_Pos)) /* Assigment of value for EPT_1 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_1_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_1_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_1_0                  (UDPHS_EPTRST_EPT_1_0_Val << UDPHS_EPTRST_EPT_1_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_1_1                  (UDPHS_EPTRST_EPT_1_1_Val << UDPHS_EPTRST_EPT_1_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_2_Pos                _UINT32_(2)                                          /* (UDPHS_EPTRST) Endpoint 2 Reset Position */
+#define UDPHS_EPTRST_EPT_2_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_2_Pos)            /* (UDPHS_EPTRST) Endpoint 2 Reset Mask */
+#define UDPHS_EPTRST_EPT_2(value)             (UDPHS_EPTRST_EPT_2_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_2_Pos)) /* Assigment of value for EPT_2 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_2_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_2_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_2_0                  (UDPHS_EPTRST_EPT_2_0_Val << UDPHS_EPTRST_EPT_2_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_2_1                  (UDPHS_EPTRST_EPT_2_1_Val << UDPHS_EPTRST_EPT_2_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_3_Pos                _UINT32_(3)                                          /* (UDPHS_EPTRST) Endpoint 3 Reset Position */
+#define UDPHS_EPTRST_EPT_3_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_3_Pos)            /* (UDPHS_EPTRST) Endpoint 3 Reset Mask */
+#define UDPHS_EPTRST_EPT_3(value)             (UDPHS_EPTRST_EPT_3_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_3_Pos)) /* Assigment of value for EPT_3 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_3_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_3_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_3_0                  (UDPHS_EPTRST_EPT_3_0_Val << UDPHS_EPTRST_EPT_3_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_3_1                  (UDPHS_EPTRST_EPT_3_1_Val << UDPHS_EPTRST_EPT_3_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_4_Pos                _UINT32_(4)                                          /* (UDPHS_EPTRST) Endpoint 4 Reset Position */
+#define UDPHS_EPTRST_EPT_4_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_4_Pos)            /* (UDPHS_EPTRST) Endpoint 4 Reset Mask */
+#define UDPHS_EPTRST_EPT_4(value)             (UDPHS_EPTRST_EPT_4_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_4_Pos)) /* Assigment of value for EPT_4 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_4_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_4_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_4_0                  (UDPHS_EPTRST_EPT_4_0_Val << UDPHS_EPTRST_EPT_4_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_4_1                  (UDPHS_EPTRST_EPT_4_1_Val << UDPHS_EPTRST_EPT_4_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_5_Pos                _UINT32_(5)                                          /* (UDPHS_EPTRST) Endpoint 5 Reset Position */
+#define UDPHS_EPTRST_EPT_5_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_5_Pos)            /* (UDPHS_EPTRST) Endpoint 5 Reset Mask */
+#define UDPHS_EPTRST_EPT_5(value)             (UDPHS_EPTRST_EPT_5_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_5_Pos)) /* Assigment of value for EPT_5 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_5_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_5_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_5_0                  (UDPHS_EPTRST_EPT_5_0_Val << UDPHS_EPTRST_EPT_5_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_5_1                  (UDPHS_EPTRST_EPT_5_1_Val << UDPHS_EPTRST_EPT_5_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_6_Pos                _UINT32_(6)                                          /* (UDPHS_EPTRST) Endpoint 6 Reset Position */
+#define UDPHS_EPTRST_EPT_6_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_6_Pos)            /* (UDPHS_EPTRST) Endpoint 6 Reset Mask */
+#define UDPHS_EPTRST_EPT_6(value)             (UDPHS_EPTRST_EPT_6_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_6_Pos)) /* Assigment of value for EPT_6 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_6_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_6_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_6_0                  (UDPHS_EPTRST_EPT_6_0_Val << UDPHS_EPTRST_EPT_6_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_6_1                  (UDPHS_EPTRST_EPT_6_1_Val << UDPHS_EPTRST_EPT_6_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_7_Pos                _UINT32_(7)                                          /* (UDPHS_EPTRST) Endpoint 7 Reset Position */
+#define UDPHS_EPTRST_EPT_7_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_7_Pos)            /* (UDPHS_EPTRST) Endpoint 7 Reset Mask */
+#define UDPHS_EPTRST_EPT_7(value)             (UDPHS_EPTRST_EPT_7_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_7_Pos)) /* Assigment of value for EPT_7 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_7_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_7_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_7_0                  (UDPHS_EPTRST_EPT_7_0_Val << UDPHS_EPTRST_EPT_7_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_7_1                  (UDPHS_EPTRST_EPT_7_1_Val << UDPHS_EPTRST_EPT_7_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_8_Pos                _UINT32_(8)                                          /* (UDPHS_EPTRST) Endpoint 8 Reset Position */
+#define UDPHS_EPTRST_EPT_8_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_8_Pos)            /* (UDPHS_EPTRST) Endpoint 8 Reset Mask */
+#define UDPHS_EPTRST_EPT_8(value)             (UDPHS_EPTRST_EPT_8_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_8_Pos)) /* Assigment of value for EPT_8 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_8_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_8_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_8_0                  (UDPHS_EPTRST_EPT_8_0_Val << UDPHS_EPTRST_EPT_8_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_8_1                  (UDPHS_EPTRST_EPT_8_1_Val << UDPHS_EPTRST_EPT_8_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_9_Pos                _UINT32_(9)                                          /* (UDPHS_EPTRST) Endpoint 9 Reset Position */
+#define UDPHS_EPTRST_EPT_9_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_9_Pos)            /* (UDPHS_EPTRST) Endpoint 9 Reset Mask */
+#define UDPHS_EPTRST_EPT_9(value)             (UDPHS_EPTRST_EPT_9_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_9_Pos)) /* Assigment of value for EPT_9 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_9_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_9_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_9_0                  (UDPHS_EPTRST_EPT_9_0_Val << UDPHS_EPTRST_EPT_9_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_9_1                  (UDPHS_EPTRST_EPT_9_1_Val << UDPHS_EPTRST_EPT_9_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_10_Pos               _UINT32_(10)                                         /* (UDPHS_EPTRST) Endpoint 10 Reset Position */
+#define UDPHS_EPTRST_EPT_10_Msk               (_UINT32_(0x1) << UDPHS_EPTRST_EPT_10_Pos)           /* (UDPHS_EPTRST) Endpoint 10 Reset Mask */
+#define UDPHS_EPTRST_EPT_10(value)            (UDPHS_EPTRST_EPT_10_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_10_Pos)) /* Assigment of value for EPT_10 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_10_0_Val           _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_10_1_Val           _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_10_0                 (UDPHS_EPTRST_EPT_10_0_Val << UDPHS_EPTRST_EPT_10_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_10_1                 (UDPHS_EPTRST_EPT_10_1_Val << UDPHS_EPTRST_EPT_10_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_11_Pos               _UINT32_(11)                                         /* (UDPHS_EPTRST) Endpoint 11 Reset Position */
+#define UDPHS_EPTRST_EPT_11_Msk               (_UINT32_(0x1) << UDPHS_EPTRST_EPT_11_Pos)           /* (UDPHS_EPTRST) Endpoint 11 Reset Mask */
+#define UDPHS_EPTRST_EPT_11(value)            (UDPHS_EPTRST_EPT_11_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_11_Pos)) /* Assigment of value for EPT_11 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_11_0_Val           _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_11_1_Val           _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_11_0                 (UDPHS_EPTRST_EPT_11_0_Val << UDPHS_EPTRST_EPT_11_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_11_1                 (UDPHS_EPTRST_EPT_11_1_Val << UDPHS_EPTRST_EPT_11_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_12_Pos               _UINT32_(12)                                         /* (UDPHS_EPTRST) Endpoint 12 Reset Position */
+#define UDPHS_EPTRST_EPT_12_Msk               (_UINT32_(0x1) << UDPHS_EPTRST_EPT_12_Pos)           /* (UDPHS_EPTRST) Endpoint 12 Reset Mask */
+#define UDPHS_EPTRST_EPT_12(value)            (UDPHS_EPTRST_EPT_12_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_12_Pos)) /* Assigment of value for EPT_12 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_12_0_Val           _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_12_1_Val           _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_12_0                 (UDPHS_EPTRST_EPT_12_0_Val << UDPHS_EPTRST_EPT_12_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_12_1                 (UDPHS_EPTRST_EPT_12_1_Val << UDPHS_EPTRST_EPT_12_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_13_Pos               _UINT32_(13)                                         /* (UDPHS_EPTRST) Endpoint 13 Reset Position */
+#define UDPHS_EPTRST_EPT_13_Msk               (_UINT32_(0x1) << UDPHS_EPTRST_EPT_13_Pos)           /* (UDPHS_EPTRST) Endpoint 13 Reset Mask */
+#define UDPHS_EPTRST_EPT_13(value)            (UDPHS_EPTRST_EPT_13_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_13_Pos)) /* Assigment of value for EPT_13 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_13_0_Val           _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_13_1_Val           _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_13_0                 (UDPHS_EPTRST_EPT_13_0_Val << UDPHS_EPTRST_EPT_13_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_13_1                 (UDPHS_EPTRST_EPT_13_1_Val << UDPHS_EPTRST_EPT_13_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_14_Pos               _UINT32_(14)                                         /* (UDPHS_EPTRST) Endpoint 14 Reset Position */
+#define UDPHS_EPTRST_EPT_14_Msk               (_UINT32_(0x1) << UDPHS_EPTRST_EPT_14_Pos)           /* (UDPHS_EPTRST) Endpoint 14 Reset Mask */
+#define UDPHS_EPTRST_EPT_14(value)            (UDPHS_EPTRST_EPT_14_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_14_Pos)) /* Assigment of value for EPT_14 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_14_0_Val           _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_14_1_Val           _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_14_0                 (UDPHS_EPTRST_EPT_14_0_Val << UDPHS_EPTRST_EPT_14_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_14_1                 (UDPHS_EPTRST_EPT_14_1_Val << UDPHS_EPTRST_EPT_14_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_EPT_15_Pos               _UINT32_(15)                                         /* (UDPHS_EPTRST) Endpoint 15 Reset Position */
+#define UDPHS_EPTRST_EPT_15_Msk               (_UINT32_(0x1) << UDPHS_EPTRST_EPT_15_Pos)           /* (UDPHS_EPTRST) Endpoint 15 Reset Mask */
+#define UDPHS_EPTRST_EPT_15(value)            (UDPHS_EPTRST_EPT_15_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_15_Pos)) /* Assigment of value for EPT_15 in the UDPHS_EPTRST register */
+#define   UDPHS_EPTRST_EPT_15_0_Val           _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
+#define   UDPHS_EPTRST_EPT_15_1_Val           _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
+#define UDPHS_EPTRST_EPT_15_0                 (UDPHS_EPTRST_EPT_15_0_Val << UDPHS_EPTRST_EPT_15_Pos) /* (UDPHS_EPTRST) No effect. Position  */
+#define UDPHS_EPTRST_EPT_15_1                 (UDPHS_EPTRST_EPT_15_1_Val << UDPHS_EPTRST_EPT_15_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
+#define UDPHS_EPTRST_Msk                      _UINT32_(0x0000FFFF)                                 /* (UDPHS_EPTRST) Register Mask  */
+
+#define UDPHS_EPTRST_EPT__Pos                 _UINT32_(0)                                          /* (UDPHS_EPTRST Position) Endpoint x5 Reset */
+#define UDPHS_EPTRST_EPT__Msk                 (_UINT32_(0xFFFF) << UDPHS_EPTRST_EPT__Pos)          /* (UDPHS_EPTRST Mask) EPT_ */
+#define UDPHS_EPTRST_EPT_(value)              (UDPHS_EPTRST_EPT__Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT__Pos)) 
 
 /* -------- UDPHS_FNUM : (UDPHS Offset: 0x04) ( R/ 32) UDPHS Frame Number Register -------- */
 #define UDPHS_FNUM_RESETVALUE                 _UINT32_(0x00)                                       /*  (UDPHS_FNUM) UDPHS Frame Number Register  Reset Value */
@@ -1395,178 +1567,6 @@
 #define UDPHS_INTSTA_DMA__Msk                 (_UINT32_(0x7F) << UDPHS_INTSTA_DMA__Pos)            /* (UDPHS_INTSTA Mask) DMA_ */
 #define UDPHS_INTSTA_DMA_(value)              (UDPHS_INTSTA_DMA__Msk & (_UINT32_(value) << UDPHS_INTSTA_DMA__Pos)) 
 
-/* -------- UDPHS_CLRINT : (UDPHS Offset: 0x18) ( /W 32) UDPHS Clear Interrupt Register -------- */
-#define UDPHS_CLRINT_DET_SUSPD_Pos            _UINT32_(1)                                          /* (UDPHS_CLRINT) Suspend Interrupt Clear Position */
-#define UDPHS_CLRINT_DET_SUSPD_Msk            (_UINT32_(0x1) << UDPHS_CLRINT_DET_SUSPD_Pos)        /* (UDPHS_CLRINT) Suspend Interrupt Clear Mask */
-#define UDPHS_CLRINT_DET_SUSPD(value)         (UDPHS_CLRINT_DET_SUSPD_Msk & (_UINT32_(value) << UDPHS_CLRINT_DET_SUSPD_Pos)) /* Assigment of value for DET_SUSPD in the UDPHS_CLRINT register */
-#define   UDPHS_CLRINT_DET_SUSPD_0_Val        _UINT32_(0x0)                                        /* (UDPHS_CLRINT) No effect.  */
-#define   UDPHS_CLRINT_DET_SUSPD_1_Val        _UINT32_(0x1)                                        /* (UDPHS_CLRINT) Clear the DET_SUSPD bit in UDPHS_INTSTA.  */
-#define UDPHS_CLRINT_DET_SUSPD_0              (UDPHS_CLRINT_DET_SUSPD_0_Val << UDPHS_CLRINT_DET_SUSPD_Pos) /* (UDPHS_CLRINT) No effect. Position  */
-#define UDPHS_CLRINT_DET_SUSPD_1              (UDPHS_CLRINT_DET_SUSPD_1_Val << UDPHS_CLRINT_DET_SUSPD_Pos) /* (UDPHS_CLRINT) Clear the DET_SUSPD bit in UDPHS_INTSTA. Position  */
-#define UDPHS_CLRINT_MICRO_SOF_Pos            _UINT32_(2)                                          /* (UDPHS_CLRINT) Micro Start Of Frame Interrupt Clear Position */
-#define UDPHS_CLRINT_MICRO_SOF_Msk            (_UINT32_(0x1) << UDPHS_CLRINT_MICRO_SOF_Pos)        /* (UDPHS_CLRINT) Micro Start Of Frame Interrupt Clear Mask */
-#define UDPHS_CLRINT_MICRO_SOF(value)         (UDPHS_CLRINT_MICRO_SOF_Msk & (_UINT32_(value) << UDPHS_CLRINT_MICRO_SOF_Pos)) /* Assigment of value for MICRO_SOF in the UDPHS_CLRINT register */
-#define   UDPHS_CLRINT_MICRO_SOF_0_Val        _UINT32_(0x0)                                        /* (UDPHS_CLRINT) No effect.  */
-#define   UDPHS_CLRINT_MICRO_SOF_1_Val        _UINT32_(0x1)                                        /* (UDPHS_CLRINT) Clear the MICRO_SOF bit in UDPHS_INTSTA.  */
-#define UDPHS_CLRINT_MICRO_SOF_0              (UDPHS_CLRINT_MICRO_SOF_0_Val << UDPHS_CLRINT_MICRO_SOF_Pos) /* (UDPHS_CLRINT) No effect. Position  */
-#define UDPHS_CLRINT_MICRO_SOF_1              (UDPHS_CLRINT_MICRO_SOF_1_Val << UDPHS_CLRINT_MICRO_SOF_Pos) /* (UDPHS_CLRINT) Clear the MICRO_SOF bit in UDPHS_INTSTA. Position  */
-#define UDPHS_CLRINT_INT_SOF_Pos              _UINT32_(3)                                          /* (UDPHS_CLRINT) Start Of Frame Interrupt Clear Position */
-#define UDPHS_CLRINT_INT_SOF_Msk              (_UINT32_(0x1) << UDPHS_CLRINT_INT_SOF_Pos)          /* (UDPHS_CLRINT) Start Of Frame Interrupt Clear Mask */
-#define UDPHS_CLRINT_INT_SOF(value)           (UDPHS_CLRINT_INT_SOF_Msk & (_UINT32_(value) << UDPHS_CLRINT_INT_SOF_Pos)) /* Assigment of value for INT_SOF in the UDPHS_CLRINT register */
-#define   UDPHS_CLRINT_INT_SOF_0_Val          _UINT32_(0x0)                                        /* (UDPHS_CLRINT) No effect.  */
-#define   UDPHS_CLRINT_INT_SOF_1_Val          _UINT32_(0x1)                                        /* (UDPHS_CLRINT) Clear the INT_SOF bit in UDPHS_INTSTA.  */
-#define UDPHS_CLRINT_INT_SOF_0                (UDPHS_CLRINT_INT_SOF_0_Val << UDPHS_CLRINT_INT_SOF_Pos) /* (UDPHS_CLRINT) No effect. Position  */
-#define UDPHS_CLRINT_INT_SOF_1                (UDPHS_CLRINT_INT_SOF_1_Val << UDPHS_CLRINT_INT_SOF_Pos) /* (UDPHS_CLRINT) Clear the INT_SOF bit in UDPHS_INTSTA. Position  */
-#define UDPHS_CLRINT_ENDRESET_Pos             _UINT32_(4)                                          /* (UDPHS_CLRINT) End Of Reset Interrupt Clear Position */
-#define UDPHS_CLRINT_ENDRESET_Msk             (_UINT32_(0x1) << UDPHS_CLRINT_ENDRESET_Pos)         /* (UDPHS_CLRINT) End Of Reset Interrupt Clear Mask */
-#define UDPHS_CLRINT_ENDRESET(value)          (UDPHS_CLRINT_ENDRESET_Msk & (_UINT32_(value) << UDPHS_CLRINT_ENDRESET_Pos)) /* Assigment of value for ENDRESET in the UDPHS_CLRINT register */
-#define   UDPHS_CLRINT_ENDRESET_0_Val         _UINT32_(0x0)                                        /* (UDPHS_CLRINT) No effect.  */
-#define   UDPHS_CLRINT_ENDRESET_1_Val         _UINT32_(0x1)                                        /* (UDPHS_CLRINT) Clear the ENDRESET bit in UDPHS_INTSTA.  */
-#define UDPHS_CLRINT_ENDRESET_0               (UDPHS_CLRINT_ENDRESET_0_Val << UDPHS_CLRINT_ENDRESET_Pos) /* (UDPHS_CLRINT) No effect. Position  */
-#define UDPHS_CLRINT_ENDRESET_1               (UDPHS_CLRINT_ENDRESET_1_Val << UDPHS_CLRINT_ENDRESET_Pos) /* (UDPHS_CLRINT) Clear the ENDRESET bit in UDPHS_INTSTA. Position  */
-#define UDPHS_CLRINT_WAKE_UP_Pos              _UINT32_(5)                                          /* (UDPHS_CLRINT) Wake Up CPU Interrupt Clear Position */
-#define UDPHS_CLRINT_WAKE_UP_Msk              (_UINT32_(0x1) << UDPHS_CLRINT_WAKE_UP_Pos)          /* (UDPHS_CLRINT) Wake Up CPU Interrupt Clear Mask */
-#define UDPHS_CLRINT_WAKE_UP(value)           (UDPHS_CLRINT_WAKE_UP_Msk & (_UINT32_(value) << UDPHS_CLRINT_WAKE_UP_Pos)) /* Assigment of value for WAKE_UP in the UDPHS_CLRINT register */
-#define   UDPHS_CLRINT_WAKE_UP_0_Val          _UINT32_(0x0)                                        /* (UDPHS_CLRINT) No effect.  */
-#define   UDPHS_CLRINT_WAKE_UP_1_Val          _UINT32_(0x1)                                        /* (UDPHS_CLRINT) Clear the WAKE_UP bit in UDPHS_INTSTA.  */
-#define UDPHS_CLRINT_WAKE_UP_0                (UDPHS_CLRINT_WAKE_UP_0_Val << UDPHS_CLRINT_WAKE_UP_Pos) /* (UDPHS_CLRINT) No effect. Position  */
-#define UDPHS_CLRINT_WAKE_UP_1                (UDPHS_CLRINT_WAKE_UP_1_Val << UDPHS_CLRINT_WAKE_UP_Pos) /* (UDPHS_CLRINT) Clear the WAKE_UP bit in UDPHS_INTSTA. Position  */
-#define UDPHS_CLRINT_ENDOFRSM_Pos             _UINT32_(6)                                          /* (UDPHS_CLRINT) End Of Resume Interrupt Clear Position */
-#define UDPHS_CLRINT_ENDOFRSM_Msk             (_UINT32_(0x1) << UDPHS_CLRINT_ENDOFRSM_Pos)         /* (UDPHS_CLRINT) End Of Resume Interrupt Clear Mask */
-#define UDPHS_CLRINT_ENDOFRSM(value)          (UDPHS_CLRINT_ENDOFRSM_Msk & (_UINT32_(value) << UDPHS_CLRINT_ENDOFRSM_Pos)) /* Assigment of value for ENDOFRSM in the UDPHS_CLRINT register */
-#define   UDPHS_CLRINT_ENDOFRSM_0_Val         _UINT32_(0x0)                                        /* (UDPHS_CLRINT) No effect.  */
-#define   UDPHS_CLRINT_ENDOFRSM_1_Val         _UINT32_(0x1)                                        /* (UDPHS_CLRINT) Clear the ENDOFRSM bit in UDPHS_INTSTA.  */
-#define UDPHS_CLRINT_ENDOFRSM_0               (UDPHS_CLRINT_ENDOFRSM_0_Val << UDPHS_CLRINT_ENDOFRSM_Pos) /* (UDPHS_CLRINT) No effect. Position  */
-#define UDPHS_CLRINT_ENDOFRSM_1               (UDPHS_CLRINT_ENDOFRSM_1_Val << UDPHS_CLRINT_ENDOFRSM_Pos) /* (UDPHS_CLRINT) Clear the ENDOFRSM bit in UDPHS_INTSTA. Position  */
-#define UDPHS_CLRINT_UPSTR_RES_Pos            _UINT32_(7)                                          /* (UDPHS_CLRINT) Upstream Resume Interrupt Clear Position */
-#define UDPHS_CLRINT_UPSTR_RES_Msk            (_UINT32_(0x1) << UDPHS_CLRINT_UPSTR_RES_Pos)        /* (UDPHS_CLRINT) Upstream Resume Interrupt Clear Mask */
-#define UDPHS_CLRINT_UPSTR_RES(value)         (UDPHS_CLRINT_UPSTR_RES_Msk & (_UINT32_(value) << UDPHS_CLRINT_UPSTR_RES_Pos)) /* Assigment of value for UPSTR_RES in the UDPHS_CLRINT register */
-#define   UDPHS_CLRINT_UPSTR_RES_0_Val        _UINT32_(0x0)                                        /* (UDPHS_CLRINT) No effect.  */
-#define   UDPHS_CLRINT_UPSTR_RES_1_Val        _UINT32_(0x1)                                        /* (UDPHS_CLRINT) Clear the UPSTR_RES bit in UDPHS_INTSTA.  */
-#define UDPHS_CLRINT_UPSTR_RES_0              (UDPHS_CLRINT_UPSTR_RES_0_Val << UDPHS_CLRINT_UPSTR_RES_Pos) /* (UDPHS_CLRINT) No effect. Position  */
-#define UDPHS_CLRINT_UPSTR_RES_1              (UDPHS_CLRINT_UPSTR_RES_1_Val << UDPHS_CLRINT_UPSTR_RES_Pos) /* (UDPHS_CLRINT) Clear the UPSTR_RES bit in UDPHS_INTSTA. Position  */
-#define UDPHS_CLRINT_Msk                      _UINT32_(0x000000FE)                                 /* (UDPHS_CLRINT) Register Mask  */
-
-
-/* -------- UDPHS_EPTRST : (UDPHS Offset: 0x1C) ( /W 32) UDPHS Endpoints Reset Register -------- */
-#define UDPHS_EPTRST_EPT_0_Pos                _UINT32_(0)                                          /* (UDPHS_EPTRST) Endpoint 0 Reset Position */
-#define UDPHS_EPTRST_EPT_0_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_0_Pos)            /* (UDPHS_EPTRST) Endpoint 0 Reset Mask */
-#define UDPHS_EPTRST_EPT_0(value)             (UDPHS_EPTRST_EPT_0_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_0_Pos)) /* Assigment of value for EPT_0 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_0_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_0_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_0_0                  (UDPHS_EPTRST_EPT_0_0_Val << UDPHS_EPTRST_EPT_0_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_0_1                  (UDPHS_EPTRST_EPT_0_1_Val << UDPHS_EPTRST_EPT_0_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_1_Pos                _UINT32_(1)                                          /* (UDPHS_EPTRST) Endpoint 1 Reset Position */
-#define UDPHS_EPTRST_EPT_1_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_1_Pos)            /* (UDPHS_EPTRST) Endpoint 1 Reset Mask */
-#define UDPHS_EPTRST_EPT_1(value)             (UDPHS_EPTRST_EPT_1_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_1_Pos)) /* Assigment of value for EPT_1 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_1_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_1_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_1_0                  (UDPHS_EPTRST_EPT_1_0_Val << UDPHS_EPTRST_EPT_1_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_1_1                  (UDPHS_EPTRST_EPT_1_1_Val << UDPHS_EPTRST_EPT_1_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_2_Pos                _UINT32_(2)                                          /* (UDPHS_EPTRST) Endpoint 2 Reset Position */
-#define UDPHS_EPTRST_EPT_2_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_2_Pos)            /* (UDPHS_EPTRST) Endpoint 2 Reset Mask */
-#define UDPHS_EPTRST_EPT_2(value)             (UDPHS_EPTRST_EPT_2_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_2_Pos)) /* Assigment of value for EPT_2 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_2_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_2_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_2_0                  (UDPHS_EPTRST_EPT_2_0_Val << UDPHS_EPTRST_EPT_2_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_2_1                  (UDPHS_EPTRST_EPT_2_1_Val << UDPHS_EPTRST_EPT_2_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_3_Pos                _UINT32_(3)                                          /* (UDPHS_EPTRST) Endpoint 3 Reset Position */
-#define UDPHS_EPTRST_EPT_3_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_3_Pos)            /* (UDPHS_EPTRST) Endpoint 3 Reset Mask */
-#define UDPHS_EPTRST_EPT_3(value)             (UDPHS_EPTRST_EPT_3_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_3_Pos)) /* Assigment of value for EPT_3 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_3_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_3_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_3_0                  (UDPHS_EPTRST_EPT_3_0_Val << UDPHS_EPTRST_EPT_3_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_3_1                  (UDPHS_EPTRST_EPT_3_1_Val << UDPHS_EPTRST_EPT_3_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_4_Pos                _UINT32_(4)                                          /* (UDPHS_EPTRST) Endpoint 4 Reset Position */
-#define UDPHS_EPTRST_EPT_4_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_4_Pos)            /* (UDPHS_EPTRST) Endpoint 4 Reset Mask */
-#define UDPHS_EPTRST_EPT_4(value)             (UDPHS_EPTRST_EPT_4_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_4_Pos)) /* Assigment of value for EPT_4 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_4_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_4_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_4_0                  (UDPHS_EPTRST_EPT_4_0_Val << UDPHS_EPTRST_EPT_4_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_4_1                  (UDPHS_EPTRST_EPT_4_1_Val << UDPHS_EPTRST_EPT_4_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_5_Pos                _UINT32_(5)                                          /* (UDPHS_EPTRST) Endpoint 5 Reset Position */
-#define UDPHS_EPTRST_EPT_5_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_5_Pos)            /* (UDPHS_EPTRST) Endpoint 5 Reset Mask */
-#define UDPHS_EPTRST_EPT_5(value)             (UDPHS_EPTRST_EPT_5_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_5_Pos)) /* Assigment of value for EPT_5 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_5_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_5_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_5_0                  (UDPHS_EPTRST_EPT_5_0_Val << UDPHS_EPTRST_EPT_5_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_5_1                  (UDPHS_EPTRST_EPT_5_1_Val << UDPHS_EPTRST_EPT_5_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_6_Pos                _UINT32_(6)                                          /* (UDPHS_EPTRST) Endpoint 6 Reset Position */
-#define UDPHS_EPTRST_EPT_6_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_6_Pos)            /* (UDPHS_EPTRST) Endpoint 6 Reset Mask */
-#define UDPHS_EPTRST_EPT_6(value)             (UDPHS_EPTRST_EPT_6_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_6_Pos)) /* Assigment of value for EPT_6 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_6_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_6_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_6_0                  (UDPHS_EPTRST_EPT_6_0_Val << UDPHS_EPTRST_EPT_6_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_6_1                  (UDPHS_EPTRST_EPT_6_1_Val << UDPHS_EPTRST_EPT_6_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_7_Pos                _UINT32_(7)                                          /* (UDPHS_EPTRST) Endpoint 7 Reset Position */
-#define UDPHS_EPTRST_EPT_7_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_7_Pos)            /* (UDPHS_EPTRST) Endpoint 7 Reset Mask */
-#define UDPHS_EPTRST_EPT_7(value)             (UDPHS_EPTRST_EPT_7_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_7_Pos)) /* Assigment of value for EPT_7 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_7_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_7_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_7_0                  (UDPHS_EPTRST_EPT_7_0_Val << UDPHS_EPTRST_EPT_7_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_7_1                  (UDPHS_EPTRST_EPT_7_1_Val << UDPHS_EPTRST_EPT_7_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_8_Pos                _UINT32_(8)                                          /* (UDPHS_EPTRST) Endpoint 8 Reset Position */
-#define UDPHS_EPTRST_EPT_8_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_8_Pos)            /* (UDPHS_EPTRST) Endpoint 8 Reset Mask */
-#define UDPHS_EPTRST_EPT_8(value)             (UDPHS_EPTRST_EPT_8_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_8_Pos)) /* Assigment of value for EPT_8 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_8_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_8_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_8_0                  (UDPHS_EPTRST_EPT_8_0_Val << UDPHS_EPTRST_EPT_8_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_8_1                  (UDPHS_EPTRST_EPT_8_1_Val << UDPHS_EPTRST_EPT_8_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_9_Pos                _UINT32_(9)                                          /* (UDPHS_EPTRST) Endpoint 9 Reset Position */
-#define UDPHS_EPTRST_EPT_9_Msk                (_UINT32_(0x1) << UDPHS_EPTRST_EPT_9_Pos)            /* (UDPHS_EPTRST) Endpoint 9 Reset Mask */
-#define UDPHS_EPTRST_EPT_9(value)             (UDPHS_EPTRST_EPT_9_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_9_Pos)) /* Assigment of value for EPT_9 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_9_0_Val            _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_9_1_Val            _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_9_0                  (UDPHS_EPTRST_EPT_9_0_Val << UDPHS_EPTRST_EPT_9_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_9_1                  (UDPHS_EPTRST_EPT_9_1_Val << UDPHS_EPTRST_EPT_9_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_10_Pos               _UINT32_(10)                                         /* (UDPHS_EPTRST) Endpoint 10 Reset Position */
-#define UDPHS_EPTRST_EPT_10_Msk               (_UINT32_(0x1) << UDPHS_EPTRST_EPT_10_Pos)           /* (UDPHS_EPTRST) Endpoint 10 Reset Mask */
-#define UDPHS_EPTRST_EPT_10(value)            (UDPHS_EPTRST_EPT_10_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_10_Pos)) /* Assigment of value for EPT_10 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_10_0_Val           _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_10_1_Val           _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_10_0                 (UDPHS_EPTRST_EPT_10_0_Val << UDPHS_EPTRST_EPT_10_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_10_1                 (UDPHS_EPTRST_EPT_10_1_Val << UDPHS_EPTRST_EPT_10_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_11_Pos               _UINT32_(11)                                         /* (UDPHS_EPTRST) Endpoint 11 Reset Position */
-#define UDPHS_EPTRST_EPT_11_Msk               (_UINT32_(0x1) << UDPHS_EPTRST_EPT_11_Pos)           /* (UDPHS_EPTRST) Endpoint 11 Reset Mask */
-#define UDPHS_EPTRST_EPT_11(value)            (UDPHS_EPTRST_EPT_11_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_11_Pos)) /* Assigment of value for EPT_11 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_11_0_Val           _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_11_1_Val           _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_11_0                 (UDPHS_EPTRST_EPT_11_0_Val << UDPHS_EPTRST_EPT_11_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_11_1                 (UDPHS_EPTRST_EPT_11_1_Val << UDPHS_EPTRST_EPT_11_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_12_Pos               _UINT32_(12)                                         /* (UDPHS_EPTRST) Endpoint 12 Reset Position */
-#define UDPHS_EPTRST_EPT_12_Msk               (_UINT32_(0x1) << UDPHS_EPTRST_EPT_12_Pos)           /* (UDPHS_EPTRST) Endpoint 12 Reset Mask */
-#define UDPHS_EPTRST_EPT_12(value)            (UDPHS_EPTRST_EPT_12_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_12_Pos)) /* Assigment of value for EPT_12 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_12_0_Val           _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_12_1_Val           _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_12_0                 (UDPHS_EPTRST_EPT_12_0_Val << UDPHS_EPTRST_EPT_12_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_12_1                 (UDPHS_EPTRST_EPT_12_1_Val << UDPHS_EPTRST_EPT_12_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_13_Pos               _UINT32_(13)                                         /* (UDPHS_EPTRST) Endpoint 13 Reset Position */
-#define UDPHS_EPTRST_EPT_13_Msk               (_UINT32_(0x1) << UDPHS_EPTRST_EPT_13_Pos)           /* (UDPHS_EPTRST) Endpoint 13 Reset Mask */
-#define UDPHS_EPTRST_EPT_13(value)            (UDPHS_EPTRST_EPT_13_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_13_Pos)) /* Assigment of value for EPT_13 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_13_0_Val           _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_13_1_Val           _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_13_0                 (UDPHS_EPTRST_EPT_13_0_Val << UDPHS_EPTRST_EPT_13_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_13_1                 (UDPHS_EPTRST_EPT_13_1_Val << UDPHS_EPTRST_EPT_13_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_14_Pos               _UINT32_(14)                                         /* (UDPHS_EPTRST) Endpoint 14 Reset Position */
-#define UDPHS_EPTRST_EPT_14_Msk               (_UINT32_(0x1) << UDPHS_EPTRST_EPT_14_Pos)           /* (UDPHS_EPTRST) Endpoint 14 Reset Mask */
-#define UDPHS_EPTRST_EPT_14(value)            (UDPHS_EPTRST_EPT_14_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_14_Pos)) /* Assigment of value for EPT_14 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_14_0_Val           _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_14_1_Val           _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_14_0                 (UDPHS_EPTRST_EPT_14_0_Val << UDPHS_EPTRST_EPT_14_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_14_1                 (UDPHS_EPTRST_EPT_14_1_Val << UDPHS_EPTRST_EPT_14_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_EPT_15_Pos               _UINT32_(15)                                         /* (UDPHS_EPTRST) Endpoint 15 Reset Position */
-#define UDPHS_EPTRST_EPT_15_Msk               (_UINT32_(0x1) << UDPHS_EPTRST_EPT_15_Pos)           /* (UDPHS_EPTRST) Endpoint 15 Reset Mask */
-#define UDPHS_EPTRST_EPT_15(value)            (UDPHS_EPTRST_EPT_15_Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT_15_Pos)) /* Assigment of value for EPT_15 in the UDPHS_EPTRST register */
-#define   UDPHS_EPTRST_EPT_15_0_Val           _UINT32_(0x0)                                        /* (UDPHS_EPTRST) No effect.  */
-#define   UDPHS_EPTRST_EPT_15_1_Val           _UINT32_(0x1)                                        /* (UDPHS_EPTRST) Reset the Endpointx state.  */
-#define UDPHS_EPTRST_EPT_15_0                 (UDPHS_EPTRST_EPT_15_0_Val << UDPHS_EPTRST_EPT_15_Pos) /* (UDPHS_EPTRST) No effect. Position  */
-#define UDPHS_EPTRST_EPT_15_1                 (UDPHS_EPTRST_EPT_15_1_Val << UDPHS_EPTRST_EPT_15_Pos) /* (UDPHS_EPTRST) Reset the Endpointx state. Position  */
-#define UDPHS_EPTRST_Msk                      _UINT32_(0x0000FFFF)                                 /* (UDPHS_EPTRST) Register Mask  */
-
-#define UDPHS_EPTRST_EPT__Pos                 _UINT32_(0)                                          /* (UDPHS_EPTRST Position) Endpoint x5 Reset */
-#define UDPHS_EPTRST_EPT__Msk                 (_UINT32_(0xFFFF) << UDPHS_EPTRST_EPT__Pos)          /* (UDPHS_EPTRST Mask) EPT_ */
-#define UDPHS_EPTRST_EPT_(value)              (UDPHS_EPTRST_EPT__Msk & (_UINT32_(value) << UDPHS_EPTRST_EPT__Pos)) 
-
 /* -------- UDPHS_TST : (UDPHS Offset: 0xE0) (R/W 32) UDPHS Test Register -------- */
 #define UDPHS_TST_RESETVALUE                  _UINT32_(0x00)                                       /*  (UDPHS_TST) UDPHS Test Register  Reset Value */
 
@@ -1614,23 +1614,23 @@
 #define UDPHS_TST_OPMODE(value)               (UDPHS_TST_OPMODE_Msk & (_UINT32_(value) << UDPHS_TST_OPMODE_Pos)) 
 
 /** \brief UDPHS register offsets definitions */
-#define UDPHS_DMANXTDSC_REG_OFST       _UINT32_(0x00)      /* (UDPHS_DMANXTDSC) UDPHS DMA Next Descriptor Address Register  Offset */
 #define UDPHS_DMAADDRESS_REG_OFST      _UINT32_(0x04)      /* (UDPHS_DMAADDRESS) UDPHS DMA Channel Address Register  Offset */
 #define UDPHS_DMACONTROL_REG_OFST      _UINT32_(0x08)      /* (UDPHS_DMACONTROL) UDPHS DMA Channel Control Register  Offset */
+#define UDPHS_DMANXTDSC_REG_OFST       _UINT32_(0x00)      /* (UDPHS_DMANXTDSC) UDPHS DMA Next Descriptor Address Register  Offset */
 #define UDPHS_DMASTATUS_REG_OFST       _UINT32_(0x0C)      /* (UDPHS_DMASTATUS) UDPHS DMA Channel Status Register  Offset */
 #define UDPHS_EPTCFG_REG_OFST          _UINT32_(0x00)      /* (UDPHS_EPTCFG) UDPHS Endpoint Configuration Register  Offset */
-#define UDPHS_EPTCTLENB_REG_OFST       _UINT32_(0x04)      /* (UDPHS_EPTCTLENB) UDPHS Endpoint Control Enable Register  Offset */
-#define UDPHS_EPTCTLDIS_REG_OFST       _UINT32_(0x08)      /* (UDPHS_EPTCTLDIS) UDPHS Endpoint Control Disable Register  Offset */
-#define UDPHS_EPTCTL_REG_OFST          _UINT32_(0x0C)      /* (UDPHS_EPTCTL) UDPHS Endpoint Control Register  Offset */
-#define UDPHS_EPTSETSTA_REG_OFST       _UINT32_(0x14)      /* (UDPHS_EPTSETSTA) UDPHS Endpoint Set Status Register  Offset */
 #define UDPHS_EPTCLRSTA_REG_OFST       _UINT32_(0x18)      /* (UDPHS_EPTCLRSTA) UDPHS Endpoint Clear Status Register  Offset */
+#define UDPHS_EPTCTL_REG_OFST          _UINT32_(0x0C)      /* (UDPHS_EPTCTL) UDPHS Endpoint Control Register  Offset */
+#define UDPHS_EPTCTLDIS_REG_OFST       _UINT32_(0x08)      /* (UDPHS_EPTCTLDIS) UDPHS Endpoint Control Disable Register  Offset */
+#define UDPHS_EPTCTLENB_REG_OFST       _UINT32_(0x04)      /* (UDPHS_EPTCTLENB) UDPHS Endpoint Control Enable Register  Offset */
+#define UDPHS_EPTSETSTA_REG_OFST       _UINT32_(0x14)      /* (UDPHS_EPTSETSTA) UDPHS Endpoint Set Status Register  Offset */
 #define UDPHS_EPTSTA_REG_OFST          _UINT32_(0x1C)      /* (UDPHS_EPTSTA) UDPHS Endpoint Status Register  Offset */
+#define UDPHS_CLRINT_REG_OFST          _UINT32_(0x18)      /* (UDPHS_CLRINT) UDPHS Clear Interrupt Register Offset */
 #define UDPHS_CTRL_REG_OFST            _UINT32_(0x00)      /* (UDPHS_CTRL) UDPHS Control Register Offset */
+#define UDPHS_EPTRST_REG_OFST          _UINT32_(0x1C)      /* (UDPHS_EPTRST) UDPHS Endpoints Reset Register Offset */
 #define UDPHS_FNUM_REG_OFST            _UINT32_(0x04)      /* (UDPHS_FNUM) UDPHS Frame Number Register Offset */
 #define UDPHS_IEN_REG_OFST             _UINT32_(0x10)      /* (UDPHS_IEN) UDPHS Interrupt Enable Register Offset */
 #define UDPHS_INTSTA_REG_OFST          _UINT32_(0x14)      /* (UDPHS_INTSTA) UDPHS Interrupt Status Register Offset */
-#define UDPHS_CLRINT_REG_OFST          _UINT32_(0x18)      /* (UDPHS_CLRINT) UDPHS Clear Interrupt Register Offset */
-#define UDPHS_EPTRST_REG_OFST          _UINT32_(0x1C)      /* (UDPHS_EPTRST) UDPHS Endpoints Reset Register Offset */
 #define UDPHS_TST_REG_OFST             _UINT32_(0xE0)      /* (UDPHS_TST) UDPHS Test Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))

@@ -20,13 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-02-07T12:32:53Z */
+/* file generated from device description version 2022-11-02T14:25:51Z */
 #ifndef _SAMA7G_HSMC_INSTANCE_
 #define _SAMA7G_HSMC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for HSMC peripheral ========== */
-#define HSMC_INSTANCE_ID                         (21)       /* Static Memory Controller - NAND Flash Controller */
 #define HSMC_CLOCK_ID                            (21)       
+#define HSMC_INSTANCE_ID                         (21)       /* Static Memory Controller - NAND Flash Controller */
 
 #endif /* _SAMA7G_HSMC_INSTANCE_ */
