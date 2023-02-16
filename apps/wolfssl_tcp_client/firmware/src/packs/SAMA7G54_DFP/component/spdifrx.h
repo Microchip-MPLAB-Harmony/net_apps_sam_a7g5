@@ -1,7 +1,7 @@
 /*
  * Component description for SPDIFRX
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-11-02T14:25:51Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_SPDIFRX_COMPONENT_H_
 #define _SAMA7G_SPDIFRX_COMPONENT_H_
 
@@ -57,53 +57,68 @@
 #define SPDIFRX_CR_Msk                        _UINT32_(0x00000001)                                 /* (SPDIFRX_CR) Register Mask  */
 
 
-/* -------- SPDIFRX_IDR : (SPDIFRX Offset: 0x14) ( /W 32) Interrupt Disable Register -------- */
-#define SPDIFRX_IDR_RXRDY_Pos                 _UINT32_(0)                                          /* (SPDIFRX_IDR) Receive Data Ready Interrupt Disable Position */
-#define SPDIFRX_IDR_RXRDY_Msk                 (_UINT32_(0x1) << SPDIFRX_IDR_RXRDY_Pos)             /* (SPDIFRX_IDR) Receive Data Ready Interrupt Disable Mask */
-#define SPDIFRX_IDR_RXRDY(value)              (SPDIFRX_IDR_RXRDY_Msk & (_UINT32_(value) << SPDIFRX_IDR_RXRDY_Pos)) /* Assigment of value for RXRDY in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_LOCKED_Pos                _UINT32_(1)                                          /* (SPDIFRX_IDR) Receiver Synchronized Interrupt Disable Position */
-#define SPDIFRX_IDR_LOCKED_Msk                (_UINT32_(0x1) << SPDIFRX_IDR_LOCKED_Pos)            /* (SPDIFRX_IDR) Receiver Synchronized Interrupt Disable Mask */
-#define SPDIFRX_IDR_LOCKED(value)             (SPDIFRX_IDR_LOCKED_Msk & (_UINT32_(value) << SPDIFRX_IDR_LOCKED_Pos)) /* Assigment of value for LOCKED in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_LOSS_Pos                  _UINT32_(2)                                          /* (SPDIFRX_IDR) Loss of Signal Activity While Locked Interrupt Disable Position */
-#define SPDIFRX_IDR_LOSS_Msk                  (_UINT32_(0x1) << SPDIFRX_IDR_LOSS_Pos)              /* (SPDIFRX_IDR) Loss of Signal Activity While Locked Interrupt Disable Mask */
-#define SPDIFRX_IDR_LOSS(value)               (SPDIFRX_IDR_LOSS_Msk & (_UINT32_(value) << SPDIFRX_IDR_LOSS_Pos)) /* Assigment of value for LOSS in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_BLOCKEND_Pos              _UINT32_(3)                                          /* (SPDIFRX_IDR) End of Block Interrupt Disable Position */
-#define SPDIFRX_IDR_BLOCKEND_Msk              (_UINT32_(0x1) << SPDIFRX_IDR_BLOCKEND_Pos)          /* (SPDIFRX_IDR) End of Block Interrupt Disable Mask */
-#define SPDIFRX_IDR_BLOCKEND(value)           (SPDIFRX_IDR_BLOCKEND_Msk & (_UINT32_(value) << SPDIFRX_IDR_BLOCKEND_Pos)) /* Assigment of value for BLOCKEND in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_SFE_Pos                   _UINT32_(4)                                          /* (SPDIFRX_IDR) Sampling Frequency Change Event Interrupt Disable Position */
-#define SPDIFRX_IDR_SFE_Msk                   (_UINT32_(0x1) << SPDIFRX_IDR_SFE_Pos)               /* (SPDIFRX_IDR) Sampling Frequency Change Event Interrupt Disable Mask */
-#define SPDIFRX_IDR_SFE(value)                (SPDIFRX_IDR_SFE_Msk & (_UINT32_(value) << SPDIFRX_IDR_SFE_Pos)) /* Assigment of value for SFE in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_PAR_ERR_Pos               _UINT32_(5)                                          /* (SPDIFRX_IDR) Parity Bit Error Interrupt Disable Position */
-#define SPDIFRX_IDR_PAR_ERR_Msk               (_UINT32_(0x1) << SPDIFRX_IDR_PAR_ERR_Pos)           /* (SPDIFRX_IDR) Parity Bit Error Interrupt Disable Mask */
-#define SPDIFRX_IDR_PAR_ERR(value)            (SPDIFRX_IDR_PAR_ERR_Msk & (_UINT32_(value) << SPDIFRX_IDR_PAR_ERR_Pos)) /* Assigment of value for PAR_ERR in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_OVERRUN_Pos               _UINT32_(6)                                          /* (SPDIFRX_IDR) FIFO Overrun, Interrupt Disable Position */
-#define SPDIFRX_IDR_OVERRUN_Msk               (_UINT32_(0x1) << SPDIFRX_IDR_OVERRUN_Pos)           /* (SPDIFRX_IDR) FIFO Overrun, Interrupt Disable Mask */
-#define SPDIFRX_IDR_OVERRUN(value)            (SPDIFRX_IDR_OVERRUN_Msk & (_UINT32_(value) << SPDIFRX_IDR_OVERRUN_Pos)) /* Assigment of value for OVERRUN in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_RXFULL_Pos                _UINT32_(7)                                          /* (SPDIFRX_IDR) Receiver FIFO Full Interrupt Disable Position */
-#define SPDIFRX_IDR_RXFULL_Msk                (_UINT32_(0x1) << SPDIFRX_IDR_RXFULL_Pos)            /* (SPDIFRX_IDR) Receiver FIFO Full Interrupt Disable Mask */
-#define SPDIFRX_IDR_RXFULL(value)             (SPDIFRX_IDR_RXFULL_Msk & (_UINT32_(value) << SPDIFRX_IDR_RXFULL_Pos)) /* Assigment of value for RXFULL in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_C1SC_Pos                  _UINT32_(8)                                          /* (SPDIFRX_IDR) Bit 0 to 31 Channel 1 Status Change Interrupt Disable Position */
-#define SPDIFRX_IDR_C1SC_Msk                  (_UINT32_(0x1) << SPDIFRX_IDR_C1SC_Pos)              /* (SPDIFRX_IDR) Bit 0 to 31 Channel 1 Status Change Interrupt Disable Mask */
-#define SPDIFRX_IDR_C1SC(value)               (SPDIFRX_IDR_C1SC_Msk & (_UINT32_(value) << SPDIFRX_IDR_C1SC_Pos)) /* Assigment of value for C1SC in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_C2SC_Pos                  _UINT32_(9)                                          /* (SPDIFRX_IDR) Bit 0 to 31 Channel 2 Status Change Interrupt Disable Position */
-#define SPDIFRX_IDR_C2SC_Msk                  (_UINT32_(0x1) << SPDIFRX_IDR_C2SC_Pos)              /* (SPDIFRX_IDR) Bit 0 to 31 Channel 2 Status Change Interrupt Disable Mask */
-#define SPDIFRX_IDR_C2SC(value)               (SPDIFRX_IDR_C2SC_Msk & (_UINT32_(value) << SPDIFRX_IDR_C2SC_Pos)) /* Assigment of value for C2SC in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_SECE_Pos                  _UINT32_(10)                                         /* (SPDIFRX_IDR) Security Report Interrupt Disable Position */
-#define SPDIFRX_IDR_SECE_Msk                  (_UINT32_(0x1) << SPDIFRX_IDR_SECE_Pos)              /* (SPDIFRX_IDR) Security Report Interrupt Disable Mask */
-#define SPDIFRX_IDR_SECE(value)               (SPDIFRX_IDR_SECE_Msk & (_UINT32_(value) << SPDIFRX_IDR_SECE_Pos)) /* Assigment of value for SECE in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_BLOCKST_Pos               _UINT32_(11)                                         /* (SPDIFRX_IDR) Start of Block Interrupt Disable Position */
-#define SPDIFRX_IDR_BLOCKST_Msk               (_UINT32_(0x1) << SPDIFRX_IDR_BLOCKST_Pos)           /* (SPDIFRX_IDR) Start of Block Interrupt Disable Mask */
-#define SPDIFRX_IDR_BLOCKST(value)            (SPDIFRX_IDR_BLOCKST_Msk & (_UINT32_(value) << SPDIFRX_IDR_BLOCKST_Pos)) /* Assigment of value for BLOCKST in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_NRZ_ERR_Pos               _UINT32_(12)                                         /* (SPDIFRX_IDR) NRZ Biphase Mark Error in payload data (code violation) Disable Position */
-#define SPDIFRX_IDR_NRZ_ERR_Msk               (_UINT32_(0x1) << SPDIFRX_IDR_NRZ_ERR_Pos)           /* (SPDIFRX_IDR) NRZ Biphase Mark Error in payload data (code violation) Disable Mask */
-#define SPDIFRX_IDR_NRZ_ERR(value)            (SPDIFRX_IDR_NRZ_ERR_Msk & (_UINT32_(value) << SPDIFRX_IDR_NRZ_ERR_Pos)) /* Assigment of value for NRZ_ERR in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_PRE_ERR_Pos               _UINT32_(13)                                         /* (SPDIFRX_IDR) Preamble Error (code violation) Disable Position */
-#define SPDIFRX_IDR_PRE_ERR_Msk               (_UINT32_(0x1) << SPDIFRX_IDR_PRE_ERR_Pos)           /* (SPDIFRX_IDR) Preamble Error (code violation) Disable Mask */
-#define SPDIFRX_IDR_PRE_ERR(value)            (SPDIFRX_IDR_PRE_ERR_Msk & (_UINT32_(value) << SPDIFRX_IDR_PRE_ERR_Pos)) /* Assigment of value for PRE_ERR in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_CP_ERR_Pos                _UINT32_(14)                                         /* (SPDIFRX_IDR) 16 Consecutive Preamble Errors Interrupt Disable Position */
-#define SPDIFRX_IDR_CP_ERR_Msk                (_UINT32_(0x1) << SPDIFRX_IDR_CP_ERR_Pos)            /* (SPDIFRX_IDR) 16 Consecutive Preamble Errors Interrupt Disable Mask */
-#define SPDIFRX_IDR_CP_ERR(value)             (SPDIFRX_IDR_CP_ERR_Msk & (_UINT32_(value) << SPDIFRX_IDR_CP_ERR_Pos)) /* Assigment of value for CP_ERR in the SPDIFRX_IDR register */
-#define SPDIFRX_IDR_Msk                       _UINT32_(0x00007FFF)                                 /* (SPDIFRX_IDR) Register Mask  */
+/* -------- SPDIFRX_MR : (SPDIFRX Offset: 0x04) (R/W 32) Mode Register -------- */
+#define SPDIFRX_MR_RESETVALUE                 _UINT32_(0x00)                                       /*  (SPDIFRX_MR) Mode Register  Reset Value */
+
+#define SPDIFRX_MR_RXEN_Pos                   _UINT32_(0)                                          /* (SPDIFRX_MR) SPDIF Receive Enable Position */
+#define SPDIFRX_MR_RXEN_Msk                   (_UINT32_(0x1) << SPDIFRX_MR_RXEN_Pos)               /* (SPDIFRX_MR) SPDIF Receive Enable Mask */
+#define SPDIFRX_MR_RXEN(value)                (SPDIFRX_MR_RXEN_Msk & (_UINT32_(value) << SPDIFRX_MR_RXEN_Pos)) /* Assigment of value for RXEN in the SPDIFRX_MR register */
+#define   SPDIFRX_MR_RXEN_DISABLE_Val         _UINT32_(0x0)                                        /* (SPDIFRX_MR) SPDIF receiver is disabled.  */
+#define   SPDIFRX_MR_RXEN_ENABLE_Val          _UINT32_(0x1)                                        /* (SPDIFRX_MR) SPDIF receiver is enabled.  */
+#define SPDIFRX_MR_RXEN_DISABLE               (SPDIFRX_MR_RXEN_DISABLE_Val << SPDIFRX_MR_RXEN_Pos) /* (SPDIFRX_MR) SPDIF receiver is disabled. Position  */
+#define SPDIFRX_MR_RXEN_ENABLE                (SPDIFRX_MR_RXEN_ENABLE_Val << SPDIFRX_MR_RXEN_Pos)  /* (SPDIFRX_MR) SPDIF receiver is enabled. Position  */
+#define SPDIFRX_MR_VBMODE_Pos                 _UINT32_(1)                                          /* (SPDIFRX_MR) Validity Bit Mode Position */
+#define SPDIFRX_MR_VBMODE_Msk                 (_UINT32_(0x1) << SPDIFRX_MR_VBMODE_Pos)             /* (SPDIFRX_MR) Validity Bit Mode Mask */
+#define SPDIFRX_MR_VBMODE(value)              (SPDIFRX_MR_VBMODE_Msk & (_UINT32_(value) << SPDIFRX_MR_VBMODE_Pos)) /* Assigment of value for VBMODE in the SPDIFRX_MR register */
+#define   SPDIFRX_MR_VBMODE_ALWAYS_LOAD_Val   _UINT32_(0x0)                                        /* (SPDIFRX_MR) Whatever the validity bit value is, the sample is loaded in FIFO.  */
+#define   SPDIFRX_MR_VBMODE_DISCARD_IF_VB1_Val _UINT32_(0x1)                                        /* (SPDIFRX_MR) The sample is loaded in FIFO only if the validity bit equals 0.  */
+#define SPDIFRX_MR_VBMODE_ALWAYS_LOAD         (SPDIFRX_MR_VBMODE_ALWAYS_LOAD_Val << SPDIFRX_MR_VBMODE_Pos) /* (SPDIFRX_MR) Whatever the validity bit value is, the sample is loaded in FIFO. Position  */
+#define SPDIFRX_MR_VBMODE_DISCARD_IF_VB1      (SPDIFRX_MR_VBMODE_DISCARD_IF_VB1_Val << SPDIFRX_MR_VBMODE_Pos) /* (SPDIFRX_MR) The sample is loaded in FIFO only if the validity bit equals 0. Position  */
+#define SPDIFRX_MR_ENDIAN_Pos                 _UINT32_(2)                                          /* (SPDIFRX_MR) Data Word Endian Mode Position */
+#define SPDIFRX_MR_ENDIAN_Msk                 (_UINT32_(0x1) << SPDIFRX_MR_ENDIAN_Pos)             /* (SPDIFRX_MR) Data Word Endian Mode Mask */
+#define SPDIFRX_MR_ENDIAN(value)              (SPDIFRX_MR_ENDIAN_Msk & (_UINT32_(value) << SPDIFRX_MR_ENDIAN_Pos)) /* Assigment of value for ENDIAN in the SPDIFRX_MR register */
+#define   SPDIFRX_MR_ENDIAN_LITTLE_Val        _UINT32_(0x0)                                        /* (SPDIFRX_MR) Little-endian mode for 24-bit samples.  */
+#define   SPDIFRX_MR_ENDIAN_BIG_Val           _UINT32_(0x1)                                        /* (SPDIFRX_MR) Big-endian mode for 24-bit samples.  */
+#define SPDIFRX_MR_ENDIAN_LITTLE              (SPDIFRX_MR_ENDIAN_LITTLE_Val << SPDIFRX_MR_ENDIAN_Pos) /* (SPDIFRX_MR) Little-endian mode for 24-bit samples. Position  */
+#define SPDIFRX_MR_ENDIAN_BIG                 (SPDIFRX_MR_ENDIAN_BIG_Val << SPDIFRX_MR_ENDIAN_Pos) /* (SPDIFRX_MR) Big-endian mode for 24-bit samples. Position  */
+#define SPDIFRX_MR_PBMODE_Pos                 _UINT32_(3)                                          /* (SPDIFRX_MR) Parity Bit Mode Position */
+#define SPDIFRX_MR_PBMODE_Msk                 (_UINT32_(0x1) << SPDIFRX_MR_PBMODE_Pos)             /* (SPDIFRX_MR) Parity Bit Mode Mask */
+#define SPDIFRX_MR_PBMODE(value)              (SPDIFRX_MR_PBMODE_Msk & (_UINT32_(value) << SPDIFRX_MR_PBMODE_Pos)) /* Assigment of value for PBMODE in the SPDIFRX_MR register */
+#define   SPDIFRX_MR_PBMODE_PARCHECK_Val      _UINT32_(0x0)                                        /* (SPDIFRX_MR) Parity check enabled on data payload.  */
+#define   SPDIFRX_MR_PBMODE_NOPARCHECK_Val    _UINT32_(0x1)                                        /* (SPDIFRX_MR) There is no parity check on data payload.  */
+#define SPDIFRX_MR_PBMODE_PARCHECK            (SPDIFRX_MR_PBMODE_PARCHECK_Val << SPDIFRX_MR_PBMODE_Pos) /* (SPDIFRX_MR) Parity check enabled on data payload. Position  */
+#define SPDIFRX_MR_PBMODE_NOPARCHECK          (SPDIFRX_MR_PBMODE_NOPARCHECK_Val << SPDIFRX_MR_PBMODE_Pos) /* (SPDIFRX_MR) There is no parity check on data payload. Position  */
+#define SPDIFRX_MR_DATAWIDTH_Pos              _UINT32_(4)                                          /* (SPDIFRX_MR) Sample Data Width Position */
+#define SPDIFRX_MR_DATAWIDTH_Msk              (_UINT32_(0x3) << SPDIFRX_MR_DATAWIDTH_Pos)          /* (SPDIFRX_MR) Sample Data Width Mask */
+#define SPDIFRX_MR_DATAWIDTH(value)           (SPDIFRX_MR_DATAWIDTH_Msk & (_UINT32_(value) << SPDIFRX_MR_DATAWIDTH_Pos)) /* Assigment of value for DATAWIDTH in the SPDIFRX_MR register */
+#define   SPDIFRX_MR_DATAWIDTH_24BIT_Val      _UINT32_(0x0)                                        /* (SPDIFRX_MR) The complete data field is stored in FIFO.  */
+#define   SPDIFRX_MR_DATAWIDTH_20BIT_Val      _UINT32_(0x1)                                        /* (SPDIFRX_MR) Only the 20 MSB are stored in the FIFO.  */
+#define   SPDIFRX_MR_DATAWIDTH_16BIT_Val      _UINT32_(0x2)                                        /* (SPDIFRX_MR) Only the 16 MSB are stored in the FIFO.  */
+#define SPDIFRX_MR_DATAWIDTH_24BIT            (SPDIFRX_MR_DATAWIDTH_24BIT_Val << SPDIFRX_MR_DATAWIDTH_Pos) /* (SPDIFRX_MR) The complete data field is stored in FIFO. Position  */
+#define SPDIFRX_MR_DATAWIDTH_20BIT            (SPDIFRX_MR_DATAWIDTH_20BIT_Val << SPDIFRX_MR_DATAWIDTH_Pos) /* (SPDIFRX_MR) Only the 20 MSB are stored in the FIFO. Position  */
+#define SPDIFRX_MR_DATAWIDTH_16BIT            (SPDIFRX_MR_DATAWIDTH_16BIT_Val << SPDIFRX_MR_DATAWIDTH_Pos) /* (SPDIFRX_MR) Only the 16 MSB are stored in the FIFO. Position  */
+#define SPDIFRX_MR_PACK_Pos                   _UINT32_(7)                                          /* (SPDIFRX_MR) Packed Data Mode in Receive Holding Register Position */
+#define SPDIFRX_MR_PACK_Msk                   (_UINT32_(0x1) << SPDIFRX_MR_PACK_Pos)               /* (SPDIFRX_MR) Packed Data Mode in Receive Holding Register Mask */
+#define SPDIFRX_MR_PACK(value)                (SPDIFRX_MR_PACK_Msk & (_UINT32_(value) << SPDIFRX_MR_PACK_Pos)) /* Assigment of value for PACK in the SPDIFRX_MR register */
+#define   SPDIFRX_MR_PACK_DISABLED_Val        _UINT32_(0x0)                                        /* (SPDIFRX_MR) Each read of SPDIFRX_RHR contains 1 sample and additional information (validity bit, parity bit, user data bit, channel status bit, byte 0 bit 1 of channel status and type of frame carrying the sample).  */
+#define   SPDIFRX_MR_PACK_ENABLED_Val         _UINT32_(0x1)                                        /* (SPDIFRX_MR) The 32-bit SPDIFRX_RHR contains only payload data. Depending on the value of SPDIFRX_MR.DATAWIDTH, the alignment of data differs. This mode optimizes the amount of system memory required to manage the samples.  */
+#define SPDIFRX_MR_PACK_DISABLED              (SPDIFRX_MR_PACK_DISABLED_Val << SPDIFRX_MR_PACK_Pos) /* (SPDIFRX_MR) Each read of SPDIFRX_RHR contains 1 sample and additional information (validity bit, parity bit, user data bit, channel status bit, byte 0 bit 1 of channel status and type of frame carrying the sample). Position  */
+#define SPDIFRX_MR_PACK_ENABLED               (SPDIFRX_MR_PACK_ENABLED_Val << SPDIFRX_MR_PACK_Pos) /* (SPDIFRX_MR) The 32-bit SPDIFRX_RHR contains only payload data. Depending on the value of SPDIFRX_MR.DATAWIDTH, the alignment of data differs. This mode optimizes the amount of system memory required to manage the samples. Position  */
+#define SPDIFRX_MR_SBMODE_Pos                 _UINT32_(8)                                          /* (SPDIFRX_MR) Start of Block Bit Mode Position */
+#define SPDIFRX_MR_SBMODE_Msk                 (_UINT32_(0x1) << SPDIFRX_MR_SBMODE_Pos)             /* (SPDIFRX_MR) Start of Block Bit Mode Mask */
+#define SPDIFRX_MR_SBMODE(value)              (SPDIFRX_MR_SBMODE_Msk & (_UINT32_(value) << SPDIFRX_MR_SBMODE_Pos)) /* Assigment of value for SBMODE in the SPDIFRX_MR register */
+#define   SPDIFRX_MR_SBMODE_ALWAYS_LOAD_Val   _UINT32_(0x0)                                        /* (SPDIFRX_MR) Whatever the preamble code , the sample is loaded in FIFO.  */
+#define   SPDIFRX_MR_SBMODE_DISCARD_Val       _UINT32_(0x1)                                        /* (SPDIFRX_MR) The sample is loaded in FIFO only if an Start of block is detected.  */
+#define SPDIFRX_MR_SBMODE_ALWAYS_LOAD         (SPDIFRX_MR_SBMODE_ALWAYS_LOAD_Val << SPDIFRX_MR_SBMODE_Pos) /* (SPDIFRX_MR) Whatever the preamble code , the sample is loaded in FIFO. Position  */
+#define SPDIFRX_MR_SBMODE_DISCARD             (SPDIFRX_MR_SBMODE_DISCARD_Val << SPDIFRX_MR_SBMODE_Pos) /* (SPDIFRX_MR) The sample is loaded in FIFO only if an Start of block is detected. Position  */
+#define SPDIFRX_MR_AUTORST_Pos                _UINT32_(24)                                         /* (SPDIFRX_MR) Consecutive Preamble Error Threshold Automatic Restart Position */
+#define SPDIFRX_MR_AUTORST_Msk                (_UINT32_(0x1) << SPDIFRX_MR_AUTORST_Pos)            /* (SPDIFRX_MR) Consecutive Preamble Error Threshold Automatic Restart Mask */
+#define SPDIFRX_MR_AUTORST(value)             (SPDIFRX_MR_AUTORST_Msk & (_UINT32_(value) << SPDIFRX_MR_AUTORST_Pos)) /* Assigment of value for AUTORST in the SPDIFRX_MR register */
+#define   SPDIFRX_MR_AUTORST_NOACTION_Val     _UINT32_(0x0)                                        /* (SPDIFRX_MR) No action whatever the number of consecutive preamble errors found during the period where SPDIFRX_RSR.ULOCK=0.  */
+#define   SPDIFRX_MR_AUTORST_UNLOCK_ON_PRE_ERR_Val _UINT32_(0x1)                                        /* (SPDIFRX_MR) If 16 consecutive preamble errors are detected, the clock recovery circuitry is restarted.  */
+#define SPDIFRX_MR_AUTORST_NOACTION           (SPDIFRX_MR_AUTORST_NOACTION_Val << SPDIFRX_MR_AUTORST_Pos) /* (SPDIFRX_MR) No action whatever the number of consecutive preamble errors found during the period where SPDIFRX_RSR.ULOCK=0. Position  */
+#define SPDIFRX_MR_AUTORST_UNLOCK_ON_PRE_ERR  (SPDIFRX_MR_AUTORST_UNLOCK_ON_PRE_ERR_Val << SPDIFRX_MR_AUTORST_Pos) /* (SPDIFRX_MR) If 16 consecutive preamble errors are detected, the clock recovery circuitry is restarted. Position  */
+#define SPDIFRX_MR_Msk                        _UINT32_(0x010001BF)                                 /* (SPDIFRX_MR) Register Mask  */
 
 
 /* -------- SPDIFRX_IER : (SPDIFRX Offset: 0x10) ( /W 32) Interrupt Enable Register -------- */
@@ -153,6 +168,55 @@
 #define SPDIFRX_IER_CP_ERR_Msk                (_UINT32_(0x1) << SPDIFRX_IER_CP_ERR_Pos)            /* (SPDIFRX_IER) 16 Consecutive Preamble Errors Interrupt Enable Mask */
 #define SPDIFRX_IER_CP_ERR(value)             (SPDIFRX_IER_CP_ERR_Msk & (_UINT32_(value) << SPDIFRX_IER_CP_ERR_Pos)) /* Assigment of value for CP_ERR in the SPDIFRX_IER register */
 #define SPDIFRX_IER_Msk                       _UINT32_(0x00007FFF)                                 /* (SPDIFRX_IER) Register Mask  */
+
+
+/* -------- SPDIFRX_IDR : (SPDIFRX Offset: 0x14) ( /W 32) Interrupt Disable Register -------- */
+#define SPDIFRX_IDR_RXRDY_Pos                 _UINT32_(0)                                          /* (SPDIFRX_IDR) Receive Data Ready Interrupt Disable Position */
+#define SPDIFRX_IDR_RXRDY_Msk                 (_UINT32_(0x1) << SPDIFRX_IDR_RXRDY_Pos)             /* (SPDIFRX_IDR) Receive Data Ready Interrupt Disable Mask */
+#define SPDIFRX_IDR_RXRDY(value)              (SPDIFRX_IDR_RXRDY_Msk & (_UINT32_(value) << SPDIFRX_IDR_RXRDY_Pos)) /* Assigment of value for RXRDY in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_LOCKED_Pos                _UINT32_(1)                                          /* (SPDIFRX_IDR) Receiver Synchronized Interrupt Disable Position */
+#define SPDIFRX_IDR_LOCKED_Msk                (_UINT32_(0x1) << SPDIFRX_IDR_LOCKED_Pos)            /* (SPDIFRX_IDR) Receiver Synchronized Interrupt Disable Mask */
+#define SPDIFRX_IDR_LOCKED(value)             (SPDIFRX_IDR_LOCKED_Msk & (_UINT32_(value) << SPDIFRX_IDR_LOCKED_Pos)) /* Assigment of value for LOCKED in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_LOSS_Pos                  _UINT32_(2)                                          /* (SPDIFRX_IDR) Loss of Signal Activity While Locked Interrupt Disable Position */
+#define SPDIFRX_IDR_LOSS_Msk                  (_UINT32_(0x1) << SPDIFRX_IDR_LOSS_Pos)              /* (SPDIFRX_IDR) Loss of Signal Activity While Locked Interrupt Disable Mask */
+#define SPDIFRX_IDR_LOSS(value)               (SPDIFRX_IDR_LOSS_Msk & (_UINT32_(value) << SPDIFRX_IDR_LOSS_Pos)) /* Assigment of value for LOSS in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_BLOCKEND_Pos              _UINT32_(3)                                          /* (SPDIFRX_IDR) End of Block Interrupt Disable Position */
+#define SPDIFRX_IDR_BLOCKEND_Msk              (_UINT32_(0x1) << SPDIFRX_IDR_BLOCKEND_Pos)          /* (SPDIFRX_IDR) End of Block Interrupt Disable Mask */
+#define SPDIFRX_IDR_BLOCKEND(value)           (SPDIFRX_IDR_BLOCKEND_Msk & (_UINT32_(value) << SPDIFRX_IDR_BLOCKEND_Pos)) /* Assigment of value for BLOCKEND in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_SFE_Pos                   _UINT32_(4)                                          /* (SPDIFRX_IDR) Sampling Frequency Change Event Interrupt Disable Position */
+#define SPDIFRX_IDR_SFE_Msk                   (_UINT32_(0x1) << SPDIFRX_IDR_SFE_Pos)               /* (SPDIFRX_IDR) Sampling Frequency Change Event Interrupt Disable Mask */
+#define SPDIFRX_IDR_SFE(value)                (SPDIFRX_IDR_SFE_Msk & (_UINT32_(value) << SPDIFRX_IDR_SFE_Pos)) /* Assigment of value for SFE in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_PAR_ERR_Pos               _UINT32_(5)                                          /* (SPDIFRX_IDR) Parity Bit Error Interrupt Disable Position */
+#define SPDIFRX_IDR_PAR_ERR_Msk               (_UINT32_(0x1) << SPDIFRX_IDR_PAR_ERR_Pos)           /* (SPDIFRX_IDR) Parity Bit Error Interrupt Disable Mask */
+#define SPDIFRX_IDR_PAR_ERR(value)            (SPDIFRX_IDR_PAR_ERR_Msk & (_UINT32_(value) << SPDIFRX_IDR_PAR_ERR_Pos)) /* Assigment of value for PAR_ERR in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_OVERRUN_Pos               _UINT32_(6)                                          /* (SPDIFRX_IDR) FIFO Overrun, Interrupt Disable Position */
+#define SPDIFRX_IDR_OVERRUN_Msk               (_UINT32_(0x1) << SPDIFRX_IDR_OVERRUN_Pos)           /* (SPDIFRX_IDR) FIFO Overrun, Interrupt Disable Mask */
+#define SPDIFRX_IDR_OVERRUN(value)            (SPDIFRX_IDR_OVERRUN_Msk & (_UINT32_(value) << SPDIFRX_IDR_OVERRUN_Pos)) /* Assigment of value for OVERRUN in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_RXFULL_Pos                _UINT32_(7)                                          /* (SPDIFRX_IDR) Receiver FIFO Full Interrupt Disable Position */
+#define SPDIFRX_IDR_RXFULL_Msk                (_UINT32_(0x1) << SPDIFRX_IDR_RXFULL_Pos)            /* (SPDIFRX_IDR) Receiver FIFO Full Interrupt Disable Mask */
+#define SPDIFRX_IDR_RXFULL(value)             (SPDIFRX_IDR_RXFULL_Msk & (_UINT32_(value) << SPDIFRX_IDR_RXFULL_Pos)) /* Assigment of value for RXFULL in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_C1SC_Pos                  _UINT32_(8)                                          /* (SPDIFRX_IDR) Bit 0 to 31 Channel 1 Status Change Interrupt Disable Position */
+#define SPDIFRX_IDR_C1SC_Msk                  (_UINT32_(0x1) << SPDIFRX_IDR_C1SC_Pos)              /* (SPDIFRX_IDR) Bit 0 to 31 Channel 1 Status Change Interrupt Disable Mask */
+#define SPDIFRX_IDR_C1SC(value)               (SPDIFRX_IDR_C1SC_Msk & (_UINT32_(value) << SPDIFRX_IDR_C1SC_Pos)) /* Assigment of value for C1SC in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_C2SC_Pos                  _UINT32_(9)                                          /* (SPDIFRX_IDR) Bit 0 to 31 Channel 2 Status Change Interrupt Disable Position */
+#define SPDIFRX_IDR_C2SC_Msk                  (_UINT32_(0x1) << SPDIFRX_IDR_C2SC_Pos)              /* (SPDIFRX_IDR) Bit 0 to 31 Channel 2 Status Change Interrupt Disable Mask */
+#define SPDIFRX_IDR_C2SC(value)               (SPDIFRX_IDR_C2SC_Msk & (_UINT32_(value) << SPDIFRX_IDR_C2SC_Pos)) /* Assigment of value for C2SC in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_SECE_Pos                  _UINT32_(10)                                         /* (SPDIFRX_IDR) Security Report Interrupt Disable Position */
+#define SPDIFRX_IDR_SECE_Msk                  (_UINT32_(0x1) << SPDIFRX_IDR_SECE_Pos)              /* (SPDIFRX_IDR) Security Report Interrupt Disable Mask */
+#define SPDIFRX_IDR_SECE(value)               (SPDIFRX_IDR_SECE_Msk & (_UINT32_(value) << SPDIFRX_IDR_SECE_Pos)) /* Assigment of value for SECE in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_BLOCKST_Pos               _UINT32_(11)                                         /* (SPDIFRX_IDR) Start of Block Interrupt Disable Position */
+#define SPDIFRX_IDR_BLOCKST_Msk               (_UINT32_(0x1) << SPDIFRX_IDR_BLOCKST_Pos)           /* (SPDIFRX_IDR) Start of Block Interrupt Disable Mask */
+#define SPDIFRX_IDR_BLOCKST(value)            (SPDIFRX_IDR_BLOCKST_Msk & (_UINT32_(value) << SPDIFRX_IDR_BLOCKST_Pos)) /* Assigment of value for BLOCKST in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_NRZ_ERR_Pos               _UINT32_(12)                                         /* (SPDIFRX_IDR) NRZ Biphase Mark Error in payload data (code violation) Disable Position */
+#define SPDIFRX_IDR_NRZ_ERR_Msk               (_UINT32_(0x1) << SPDIFRX_IDR_NRZ_ERR_Pos)           /* (SPDIFRX_IDR) NRZ Biphase Mark Error in payload data (code violation) Disable Mask */
+#define SPDIFRX_IDR_NRZ_ERR(value)            (SPDIFRX_IDR_NRZ_ERR_Msk & (_UINT32_(value) << SPDIFRX_IDR_NRZ_ERR_Pos)) /* Assigment of value for NRZ_ERR in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_PRE_ERR_Pos               _UINT32_(13)                                         /* (SPDIFRX_IDR) Preamble Error (code violation) Disable Position */
+#define SPDIFRX_IDR_PRE_ERR_Msk               (_UINT32_(0x1) << SPDIFRX_IDR_PRE_ERR_Pos)           /* (SPDIFRX_IDR) Preamble Error (code violation) Disable Mask */
+#define SPDIFRX_IDR_PRE_ERR(value)            (SPDIFRX_IDR_PRE_ERR_Msk & (_UINT32_(value) << SPDIFRX_IDR_PRE_ERR_Pos)) /* Assigment of value for PRE_ERR in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_CP_ERR_Pos                _UINT32_(14)                                         /* (SPDIFRX_IDR) 16 Consecutive Preamble Errors Interrupt Disable Position */
+#define SPDIFRX_IDR_CP_ERR_Msk                (_UINT32_(0x1) << SPDIFRX_IDR_CP_ERR_Pos)            /* (SPDIFRX_IDR) 16 Consecutive Preamble Errors Interrupt Disable Mask */
+#define SPDIFRX_IDR_CP_ERR(value)             (SPDIFRX_IDR_CP_ERR_Msk & (_UINT32_(value) << SPDIFRX_IDR_CP_ERR_Pos)) /* Assigment of value for CP_ERR in the SPDIFRX_IDR register */
+#define SPDIFRX_IDR_Msk                       _UINT32_(0x00007FFF)                                 /* (SPDIFRX_IDR) Register Mask  */
 
 
 /* -------- SPDIFRX_IMR : (SPDIFRX Offset: 0x18) ( R/ 32) Interrupt Mask Register -------- */
@@ -257,79 +321,6 @@
 #define SPDIFRX_ISR_Msk                       _UINT32_(0x00007FFF)                                 /* (SPDIFRX_ISR) Register Mask  */
 
 
-/* -------- SPDIFRX_MR : (SPDIFRX Offset: 0x04) (R/W 32) Mode Register -------- */
-#define SPDIFRX_MR_RESETVALUE                 _UINT32_(0x00)                                       /*  (SPDIFRX_MR) Mode Register  Reset Value */
-
-#define SPDIFRX_MR_RXEN_Pos                   _UINT32_(0)                                          /* (SPDIFRX_MR) SPDIF Receive Enable Position */
-#define SPDIFRX_MR_RXEN_Msk                   (_UINT32_(0x1) << SPDIFRX_MR_RXEN_Pos)               /* (SPDIFRX_MR) SPDIF Receive Enable Mask */
-#define SPDIFRX_MR_RXEN(value)                (SPDIFRX_MR_RXEN_Msk & (_UINT32_(value) << SPDIFRX_MR_RXEN_Pos)) /* Assigment of value for RXEN in the SPDIFRX_MR register */
-#define   SPDIFRX_MR_RXEN_DISABLE_Val         _UINT32_(0x0)                                        /* (SPDIFRX_MR) SPDIF receiver is disabled.  */
-#define   SPDIFRX_MR_RXEN_ENABLE_Val          _UINT32_(0x1)                                        /* (SPDIFRX_MR) SPDIF receiver is enabled.  */
-#define SPDIFRX_MR_RXEN_DISABLE               (SPDIFRX_MR_RXEN_DISABLE_Val << SPDIFRX_MR_RXEN_Pos) /* (SPDIFRX_MR) SPDIF receiver is disabled. Position  */
-#define SPDIFRX_MR_RXEN_ENABLE                (SPDIFRX_MR_RXEN_ENABLE_Val << SPDIFRX_MR_RXEN_Pos)  /* (SPDIFRX_MR) SPDIF receiver is enabled. Position  */
-#define SPDIFRX_MR_VBMODE_Pos                 _UINT32_(1)                                          /* (SPDIFRX_MR) Validity Bit Mode Position */
-#define SPDIFRX_MR_VBMODE_Msk                 (_UINT32_(0x1) << SPDIFRX_MR_VBMODE_Pos)             /* (SPDIFRX_MR) Validity Bit Mode Mask */
-#define SPDIFRX_MR_VBMODE(value)              (SPDIFRX_MR_VBMODE_Msk & (_UINT32_(value) << SPDIFRX_MR_VBMODE_Pos)) /* Assigment of value for VBMODE in the SPDIFRX_MR register */
-#define   SPDIFRX_MR_VBMODE_ALWAYS_LOAD_Val   _UINT32_(0x0)                                        /* (SPDIFRX_MR) Whatever the validity bit value is, the sample is loaded in FIFO.  */
-#define   SPDIFRX_MR_VBMODE_DISCARD_IF_VB1_Val _UINT32_(0x1)                                        /* (SPDIFRX_MR) The sample is loaded in FIFO only if the validity bit equals 0.  */
-#define SPDIFRX_MR_VBMODE_ALWAYS_LOAD         (SPDIFRX_MR_VBMODE_ALWAYS_LOAD_Val << SPDIFRX_MR_VBMODE_Pos) /* (SPDIFRX_MR) Whatever the validity bit value is, the sample is loaded in FIFO. Position  */
-#define SPDIFRX_MR_VBMODE_DISCARD_IF_VB1      (SPDIFRX_MR_VBMODE_DISCARD_IF_VB1_Val << SPDIFRX_MR_VBMODE_Pos) /* (SPDIFRX_MR) The sample is loaded in FIFO only if the validity bit equals 0. Position  */
-#define SPDIFRX_MR_ENDIAN_Pos                 _UINT32_(2)                                          /* (SPDIFRX_MR) Data Word Endian Mode Position */
-#define SPDIFRX_MR_ENDIAN_Msk                 (_UINT32_(0x1) << SPDIFRX_MR_ENDIAN_Pos)             /* (SPDIFRX_MR) Data Word Endian Mode Mask */
-#define SPDIFRX_MR_ENDIAN(value)              (SPDIFRX_MR_ENDIAN_Msk & (_UINT32_(value) << SPDIFRX_MR_ENDIAN_Pos)) /* Assigment of value for ENDIAN in the SPDIFRX_MR register */
-#define   SPDIFRX_MR_ENDIAN_LITTLE_Val        _UINT32_(0x0)                                        /* (SPDIFRX_MR) Little-endian mode for 24-bit samples.  */
-#define   SPDIFRX_MR_ENDIAN_BIG_Val           _UINT32_(0x1)                                        /* (SPDIFRX_MR) Big-endian mode for 24-bit samples.  */
-#define SPDIFRX_MR_ENDIAN_LITTLE              (SPDIFRX_MR_ENDIAN_LITTLE_Val << SPDIFRX_MR_ENDIAN_Pos) /* (SPDIFRX_MR) Little-endian mode for 24-bit samples. Position  */
-#define SPDIFRX_MR_ENDIAN_BIG                 (SPDIFRX_MR_ENDIAN_BIG_Val << SPDIFRX_MR_ENDIAN_Pos) /* (SPDIFRX_MR) Big-endian mode for 24-bit samples. Position  */
-#define SPDIFRX_MR_PBMODE_Pos                 _UINT32_(3)                                          /* (SPDIFRX_MR) Parity Bit Mode Position */
-#define SPDIFRX_MR_PBMODE_Msk                 (_UINT32_(0x1) << SPDIFRX_MR_PBMODE_Pos)             /* (SPDIFRX_MR) Parity Bit Mode Mask */
-#define SPDIFRX_MR_PBMODE(value)              (SPDIFRX_MR_PBMODE_Msk & (_UINT32_(value) << SPDIFRX_MR_PBMODE_Pos)) /* Assigment of value for PBMODE in the SPDIFRX_MR register */
-#define   SPDIFRX_MR_PBMODE_PARCHECK_Val      _UINT32_(0x0)                                        /* (SPDIFRX_MR) Parity check enabled on data payload.  */
-#define   SPDIFRX_MR_PBMODE_NOPARCHECK_Val    _UINT32_(0x1)                                        /* (SPDIFRX_MR) There is no parity check on data payload.  */
-#define SPDIFRX_MR_PBMODE_PARCHECK            (SPDIFRX_MR_PBMODE_PARCHECK_Val << SPDIFRX_MR_PBMODE_Pos) /* (SPDIFRX_MR) Parity check enabled on data payload. Position  */
-#define SPDIFRX_MR_PBMODE_NOPARCHECK          (SPDIFRX_MR_PBMODE_NOPARCHECK_Val << SPDIFRX_MR_PBMODE_Pos) /* (SPDIFRX_MR) There is no parity check on data payload. Position  */
-#define SPDIFRX_MR_DATAWIDTH_Pos              _UINT32_(4)                                          /* (SPDIFRX_MR) Sample Data Width Position */
-#define SPDIFRX_MR_DATAWIDTH_Msk              (_UINT32_(0x3) << SPDIFRX_MR_DATAWIDTH_Pos)          /* (SPDIFRX_MR) Sample Data Width Mask */
-#define SPDIFRX_MR_DATAWIDTH(value)           (SPDIFRX_MR_DATAWIDTH_Msk & (_UINT32_(value) << SPDIFRX_MR_DATAWIDTH_Pos)) /* Assigment of value for DATAWIDTH in the SPDIFRX_MR register */
-#define   SPDIFRX_MR_DATAWIDTH_24BIT_Val      _UINT32_(0x0)                                        /* (SPDIFRX_MR) The complete data field is stored in FIFO.  */
-#define   SPDIFRX_MR_DATAWIDTH_20BIT_Val      _UINT32_(0x1)                                        /* (SPDIFRX_MR) Only the 20 MSB are stored in the FIFO.  */
-#define   SPDIFRX_MR_DATAWIDTH_16BIT_Val      _UINT32_(0x2)                                        /* (SPDIFRX_MR) Only the 16 MSB are stored in the FIFO.  */
-#define SPDIFRX_MR_DATAWIDTH_24BIT            (SPDIFRX_MR_DATAWIDTH_24BIT_Val << SPDIFRX_MR_DATAWIDTH_Pos) /* (SPDIFRX_MR) The complete data field is stored in FIFO. Position  */
-#define SPDIFRX_MR_DATAWIDTH_20BIT            (SPDIFRX_MR_DATAWIDTH_20BIT_Val << SPDIFRX_MR_DATAWIDTH_Pos) /* (SPDIFRX_MR) Only the 20 MSB are stored in the FIFO. Position  */
-#define SPDIFRX_MR_DATAWIDTH_16BIT            (SPDIFRX_MR_DATAWIDTH_16BIT_Val << SPDIFRX_MR_DATAWIDTH_Pos) /* (SPDIFRX_MR) Only the 16 MSB are stored in the FIFO. Position  */
-#define SPDIFRX_MR_PACK_Pos                   _UINT32_(7)                                          /* (SPDIFRX_MR) Packed Data Mode in Receive Holding Register Position */
-#define SPDIFRX_MR_PACK_Msk                   (_UINT32_(0x1) << SPDIFRX_MR_PACK_Pos)               /* (SPDIFRX_MR) Packed Data Mode in Receive Holding Register Mask */
-#define SPDIFRX_MR_PACK(value)                (SPDIFRX_MR_PACK_Msk & (_UINT32_(value) << SPDIFRX_MR_PACK_Pos)) /* Assigment of value for PACK in the SPDIFRX_MR register */
-#define   SPDIFRX_MR_PACK_DISABLED_Val        _UINT32_(0x0)                                        /* (SPDIFRX_MR) Each read of SPDIFRX_RHR contains 1 sample and additional information (validity bit, parity bit, user data bit, channel status bit, byte 0 bit 1 of channel status and type of frame carrying the sample).  */
-#define   SPDIFRX_MR_PACK_ENABLED_Val         _UINT32_(0x1)                                        /* (SPDIFRX_MR) The 32-bit SPDIFRX_RHR contains only payload data. Depending on the value of SPDIFRX_MR.DATAWIDTH, the alignment of data differs. This mode optimizes the amount of system memory required to manage the samples.  */
-#define SPDIFRX_MR_PACK_DISABLED              (SPDIFRX_MR_PACK_DISABLED_Val << SPDIFRX_MR_PACK_Pos) /* (SPDIFRX_MR) Each read of SPDIFRX_RHR contains 1 sample and additional information (validity bit, parity bit, user data bit, channel status bit, byte 0 bit 1 of channel status and type of frame carrying the sample). Position  */
-#define SPDIFRX_MR_PACK_ENABLED               (SPDIFRX_MR_PACK_ENABLED_Val << SPDIFRX_MR_PACK_Pos) /* (SPDIFRX_MR) The 32-bit SPDIFRX_RHR contains only payload data. Depending on the value of SPDIFRX_MR.DATAWIDTH, the alignment of data differs. This mode optimizes the amount of system memory required to manage the samples. Position  */
-#define SPDIFRX_MR_SBMODE_Pos                 _UINT32_(8)                                          /* (SPDIFRX_MR) Start of Block Bit Mode Position */
-#define SPDIFRX_MR_SBMODE_Msk                 (_UINT32_(0x1) << SPDIFRX_MR_SBMODE_Pos)             /* (SPDIFRX_MR) Start of Block Bit Mode Mask */
-#define SPDIFRX_MR_SBMODE(value)              (SPDIFRX_MR_SBMODE_Msk & (_UINT32_(value) << SPDIFRX_MR_SBMODE_Pos)) /* Assigment of value for SBMODE in the SPDIFRX_MR register */
-#define   SPDIFRX_MR_SBMODE_ALWAYS_LOAD_Val   _UINT32_(0x0)                                        /* (SPDIFRX_MR) Whatever the preamble code , the sample is loaded in FIFO.  */
-#define   SPDIFRX_MR_SBMODE_DISCARD_Val       _UINT32_(0x1)                                        /* (SPDIFRX_MR) The sample is loaded in FIFO only if an Start of block is detected.  */
-#define SPDIFRX_MR_SBMODE_ALWAYS_LOAD         (SPDIFRX_MR_SBMODE_ALWAYS_LOAD_Val << SPDIFRX_MR_SBMODE_Pos) /* (SPDIFRX_MR) Whatever the preamble code , the sample is loaded in FIFO. Position  */
-#define SPDIFRX_MR_SBMODE_DISCARD             (SPDIFRX_MR_SBMODE_DISCARD_Val << SPDIFRX_MR_SBMODE_Pos) /* (SPDIFRX_MR) The sample is loaded in FIFO only if an Start of block is detected. Position  */
-#define SPDIFRX_MR_AUTORST_Pos                _UINT32_(24)                                         /* (SPDIFRX_MR) Consecutive Preamble Error Threshold Automatic Restart Position */
-#define SPDIFRX_MR_AUTORST_Msk                (_UINT32_(0x1) << SPDIFRX_MR_AUTORST_Pos)            /* (SPDIFRX_MR) Consecutive Preamble Error Threshold Automatic Restart Mask */
-#define SPDIFRX_MR_AUTORST(value)             (SPDIFRX_MR_AUTORST_Msk & (_UINT32_(value) << SPDIFRX_MR_AUTORST_Pos)) /* Assigment of value for AUTORST in the SPDIFRX_MR register */
-#define   SPDIFRX_MR_AUTORST_NOACTION_Val     _UINT32_(0x0)                                        /* (SPDIFRX_MR) No action whatever the number of consecutive preamble errors found during the period where SPDIFRX_RSR.ULOCK=0.  */
-#define   SPDIFRX_MR_AUTORST_UNLOCK_ON_PRE_ERR_Val _UINT32_(0x1)                                        /* (SPDIFRX_MR) If 16 consecutive preamble errors are detected, the clock recovery circuitry is restarted.  */
-#define SPDIFRX_MR_AUTORST_NOACTION           (SPDIFRX_MR_AUTORST_NOACTION_Val << SPDIFRX_MR_AUTORST_Pos) /* (SPDIFRX_MR) No action whatever the number of consecutive preamble errors found during the period where SPDIFRX_RSR.ULOCK=0. Position  */
-#define SPDIFRX_MR_AUTORST_UNLOCK_ON_PRE_ERR  (SPDIFRX_MR_AUTORST_UNLOCK_ON_PRE_ERR_Val << SPDIFRX_MR_AUTORST_Pos) /* (SPDIFRX_MR) If 16 consecutive preamble errors are detected, the clock recovery circuitry is restarted. Position  */
-#define SPDIFRX_MR_Msk                        _UINT32_(0x010001BF)                                 /* (SPDIFRX_MR) Register Mask  */
-
-
-/* -------- SPDIFRX_RHR : (SPDIFRX Offset: 0x24) ( R/ 32) Holding Register -------- */
-#define SPDIFRX_RHR_RESETVALUE                _UINT32_(0x00)                                       /*  (SPDIFRX_RHR) Holding Register  Reset Value */
-
-#define SPDIFRX_RHR_DATA_Pos                  _UINT32_(0)                                          /* (SPDIFRX_RHR) Channel 1 and 2 Data Position */
-#define SPDIFRX_RHR_DATA_Msk                  (_UINT32_(0xFFFFFFFF) << SPDIFRX_RHR_DATA_Pos)       /* (SPDIFRX_RHR) Channel 1 and 2 Data Mask */
-#define SPDIFRX_RHR_DATA(value)               (SPDIFRX_RHR_DATA_Msk & (_UINT32_(value) << SPDIFRX_RHR_DATA_Pos)) /* Assigment of value for DATA in the SPDIFRX_RHR register */
-#define SPDIFRX_RHR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (SPDIFRX_RHR) Register Mask  */
-
-
 /* -------- SPDIFRX_RSR : (SPDIFRX Offset: 0x20) ( R/ 32) Status Register -------- */
 #define SPDIFRX_RSR_RESETVALUE                _UINT32_(0x01)                                       /*  (SPDIFRX_RSR) Status Register  Reset Value */
 
@@ -367,16 +358,13 @@
 #define SPDIFRX_RSR_Msk                       _UINT32_(0x0FFF000F)                                 /* (SPDIFRX_RSR) Register Mask  */
 
 
-/* -------- SPDIFRX_VERSION : (SPDIFRX Offset: 0xFC) ( R/ 32) Version Register -------- */
-#define SPDIFRX_VERSION_RESETVALUE            _UINT32_(0x00)                                       /*  (SPDIFRX_VERSION) Version Register  Reset Value */
+/* -------- SPDIFRX_RHR : (SPDIFRX Offset: 0x24) ( R/ 32) Holding Register -------- */
+#define SPDIFRX_RHR_RESETVALUE                _UINT32_(0x00)                                       /*  (SPDIFRX_RHR) Holding Register  Reset Value */
 
-#define SPDIFRX_VERSION_VERSION_Pos           _UINT32_(0)                                          /* (SPDIFRX_VERSION) Version Position */
-#define SPDIFRX_VERSION_VERSION_Msk           (_UINT32_(0xFFF) << SPDIFRX_VERSION_VERSION_Pos)     /* (SPDIFRX_VERSION) Version Mask */
-#define SPDIFRX_VERSION_VERSION(value)        (SPDIFRX_VERSION_VERSION_Msk & (_UINT32_(value) << SPDIFRX_VERSION_VERSION_Pos)) /* Assigment of value for VERSION in the SPDIFRX_VERSION register */
-#define SPDIFRX_VERSION_MFN_Pos               _UINT32_(16)                                         /* (SPDIFRX_VERSION) Metal Fix Number Position */
-#define SPDIFRX_VERSION_MFN_Msk               (_UINT32_(0x7) << SPDIFRX_VERSION_MFN_Pos)           /* (SPDIFRX_VERSION) Metal Fix Number Mask */
-#define SPDIFRX_VERSION_MFN(value)            (SPDIFRX_VERSION_MFN_Msk & (_UINT32_(value) << SPDIFRX_VERSION_MFN_Pos)) /* Assigment of value for MFN in the SPDIFRX_VERSION register */
-#define SPDIFRX_VERSION_Msk                   _UINT32_(0x00070FFF)                                 /* (SPDIFRX_VERSION) Register Mask  */
+#define SPDIFRX_RHR_DATA_Pos                  _UINT32_(0)                                          /* (SPDIFRX_RHR) Channel 1 and 2 Data Position */
+#define SPDIFRX_RHR_DATA_Msk                  (_UINT32_(0xFFFFFFFF) << SPDIFRX_RHR_DATA_Pos)       /* (SPDIFRX_RHR) Channel 1 and 2 Data Mask */
+#define SPDIFRX_RHR_DATA(value)               (SPDIFRX_RHR_DATA_Msk & (_UINT32_(value) << SPDIFRX_RHR_DATA_Pos)) /* Assigment of value for DATA in the SPDIFRX_RHR register */
+#define SPDIFRX_RHR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (SPDIFRX_RHR) Register Mask  */
 
 
 /* -------- SPDIFRX_WPMR : (SPDIFRX Offset: 0xE4) (R/W 32) Write Protection Mode Register -------- */
@@ -457,6 +445,18 @@
 #define SPDIFRX_WPSR_Msk                      _UINT32_(0x03FFFF0D)                                 /* (SPDIFRX_WPSR) Register Mask  */
 
 
+/* -------- SPDIFRX_VERSION : (SPDIFRX Offset: 0xFC) ( R/ 32) Version Register -------- */
+#define SPDIFRX_VERSION_RESETVALUE            _UINT32_(0x00)                                       /*  (SPDIFRX_VERSION) Version Register  Reset Value */
+
+#define SPDIFRX_VERSION_VERSION_Pos           _UINT32_(0)                                          /* (SPDIFRX_VERSION) Version Position */
+#define SPDIFRX_VERSION_VERSION_Msk           (_UINT32_(0xFFF) << SPDIFRX_VERSION_VERSION_Pos)     /* (SPDIFRX_VERSION) Version Mask */
+#define SPDIFRX_VERSION_VERSION(value)        (SPDIFRX_VERSION_VERSION_Msk & (_UINT32_(value) << SPDIFRX_VERSION_VERSION_Pos)) /* Assigment of value for VERSION in the SPDIFRX_VERSION register */
+#define SPDIFRX_VERSION_MFN_Pos               _UINT32_(16)                                         /* (SPDIFRX_VERSION) Metal Fix Number Position */
+#define SPDIFRX_VERSION_MFN_Msk               (_UINT32_(0x7) << SPDIFRX_VERSION_MFN_Pos)           /* (SPDIFRX_VERSION) Metal Fix Number Mask */
+#define SPDIFRX_VERSION_MFN(value)            (SPDIFRX_VERSION_MFN_Msk & (_UINT32_(value) << SPDIFRX_VERSION_MFN_Pos)) /* Assigment of value for MFN in the SPDIFRX_VERSION register */
+#define SPDIFRX_VERSION_Msk                   _UINT32_(0x00070FFF)                                 /* (SPDIFRX_VERSION) Register Mask  */
+
+
 /** \brief SPDIFRX register offsets definitions */
 #define SPDIFRX_CHxSR_REG_OFST         _UINT32_(0x00)      /* (SPDIFRX_CHxSR) Channel X Status Register x Offset */
 #define SPDIFRX_CHxSR0_REG_OFST        _UINT32_(0x00)      /* (SPDIFRX_CHxSR0) Channel X Status Register x Offset */
@@ -473,16 +473,16 @@
 #define SPDIFRX_CHxUD4_REG_OFST        _UINT32_(0x28)      /* (SPDIFRX_CHxUD4) Channel X User Data Register x Offset */
 #define SPDIFRX_CHxUD5_REG_OFST        _UINT32_(0x2C)      /* (SPDIFRX_CHxUD5) Channel X User Data Register x Offset */
 #define SPDIFRX_CR_REG_OFST            _UINT32_(0x00)      /* (SPDIFRX_CR) Control Register Offset */
-#define SPDIFRX_IDR_REG_OFST           _UINT32_(0x14)      /* (SPDIFRX_IDR) Interrupt Disable Register Offset */
+#define SPDIFRX_MR_REG_OFST            _UINT32_(0x04)      /* (SPDIFRX_MR) Mode Register Offset */
 #define SPDIFRX_IER_REG_OFST           _UINT32_(0x10)      /* (SPDIFRX_IER) Interrupt Enable Register Offset */
+#define SPDIFRX_IDR_REG_OFST           _UINT32_(0x14)      /* (SPDIFRX_IDR) Interrupt Disable Register Offset */
 #define SPDIFRX_IMR_REG_OFST           _UINT32_(0x18)      /* (SPDIFRX_IMR) Interrupt Mask Register Offset */
 #define SPDIFRX_ISR_REG_OFST           _UINT32_(0x1C)      /* (SPDIFRX_ISR) Interrupt Status Register Offset */
-#define SPDIFRX_MR_REG_OFST            _UINT32_(0x04)      /* (SPDIFRX_MR) Mode Register Offset */
-#define SPDIFRX_RHR_REG_OFST           _UINT32_(0x24)      /* (SPDIFRX_RHR) Holding Register Offset */
 #define SPDIFRX_RSR_REG_OFST           _UINT32_(0x20)      /* (SPDIFRX_RSR) Status Register Offset */
-#define SPDIFRX_VERSION_REG_OFST       _UINT32_(0xFC)      /* (SPDIFRX_VERSION) Version Register Offset */
+#define SPDIFRX_RHR_REG_OFST           _UINT32_(0x24)      /* (SPDIFRX_RHR) Holding Register Offset */
 #define SPDIFRX_WPMR_REG_OFST          _UINT32_(0xE4)      /* (SPDIFRX_WPMR) Write Protection Mode Register Offset */
 #define SPDIFRX_WPSR_REG_OFST          _UINT32_(0xE8)      /* (SPDIFRX_WPSR) Write Protection Status Register Offset */
+#define SPDIFRX_VERSION_REG_OFST       _UINT32_(0xFC)      /* (SPDIFRX_VERSION) Version Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SPDIFRX_CH register API structure */

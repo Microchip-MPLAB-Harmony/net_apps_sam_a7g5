@@ -137,7 +137,7 @@ extern "C" {
 
 
 #define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			1
-#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			1
+#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			2
 #define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		0
 #define SYS_CONSOLE_PRINT_BUFFER_SIZE        		200
 
@@ -150,7 +150,7 @@ extern "C" {
 // *****************************************************************************
 // *****************************************************************************
 /* SDMMC Driver Global Configuration Options */
-#define DRV_SDMMC_INSTANCES_NUMBER                       (1U)
+#define DRV_SDMMC_INSTANCES_NUMBER                       1
 
 /*** MIIM Driver Configuration ***/
 #define DRV_MIIM_ETH_MODULE_ID_0                GMAC0_BASE_ADDRESS

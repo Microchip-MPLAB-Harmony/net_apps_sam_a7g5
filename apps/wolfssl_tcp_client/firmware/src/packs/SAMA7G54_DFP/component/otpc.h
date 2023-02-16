@@ -1,7 +1,7 @@
 /*
  * Component description for OTPC
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,50 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-11-02T14:25:51Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_OTPC_COMPONENT_H_
 #define _SAMA7G_OTPC_COMPONENT_H_
 
 /* ************************************************************************** */
 /*   SOFTWARE API DEFINITION FOR OTPC                                         */
 /* ************************************************************************** */
-
-/* -------- OTPC_AR : (OTPC Offset: 0x08) (R/W 32) Address Register -------- */
-#define OTPC_AR_RESETVALUE                    _UINT32_(0x00)                                       /*  (OTPC_AR) Address Register  Reset Value */
-
-#define OTPC_AR_DADDR_Pos                     _UINT32_(0)                                          /* (OTPC_AR) Data Address Position */
-#define OTPC_AR_DADDR_Msk                     (_UINT32_(0xFF) << OTPC_AR_DADDR_Pos)                /* (OTPC_AR) Data Address Mask */
-#define OTPC_AR_DADDR(value)                  (OTPC_AR_DADDR_Msk & (_UINT32_(value) << OTPC_AR_DADDR_Pos)) /* Assigment of value for DADDR in the OTPC_AR register */
-#define OTPC_AR_INCRT_Pos                     _UINT32_(16)                                         /* (OTPC_AR) Increment Type Position */
-#define OTPC_AR_INCRT_Msk                     (_UINT32_(0x1) << OTPC_AR_INCRT_Pos)                 /* (OTPC_AR) Increment Type Mask */
-#define OTPC_AR_INCRT(value)                  (OTPC_AR_INCRT_Msk & (_UINT32_(value) << OTPC_AR_INCRT_Pos)) /* Assigment of value for INCRT in the OTPC_AR register */
-#define   OTPC_AR_INCRT_AFTER_READ_Val        _UINT32_(0x0)                                        /* (OTPC_AR) Increment DADDR after a read of OTPC_DR.  */
-#define   OTPC_AR_INCRT_AFTER_WRITE_Val       _UINT32_(0x1)                                        /* (OTPC_AR) Increment DADDR after a write of OTPC_DR.  */
-#define OTPC_AR_INCRT_AFTER_READ              (OTPC_AR_INCRT_AFTER_READ_Val << OTPC_AR_INCRT_Pos)  /* (OTPC_AR) Increment DADDR after a read of OTPC_DR. Position  */
-#define OTPC_AR_INCRT_AFTER_WRITE             (OTPC_AR_INCRT_AFTER_WRITE_Val << OTPC_AR_INCRT_Pos) /* (OTPC_AR) Increment DADDR after a write of OTPC_DR. Position  */
-#define OTPC_AR_Msk                           _UINT32_(0x000100FF)                                 /* (OTPC_AR) Register Mask  */
-
-
-/* -------- OTPC_BAR : (OTPC Offset: 0x30) ( R/ 32) Boot Addresses Register -------- */
-#define OTPC_BAR_RESETVALUE                   _UINT32_(0x00)                                       /*  (OTPC_BAR) Boot Addresses Register  Reset Value */
-
-#define OTPC_BAR_BCADDR_Pos                   _UINT32_(0)                                          /* (OTPC_BAR) Boot Configuration Address Position */
-#define OTPC_BAR_BCADDR_Msk                   (_UINT32_(0xFFFF) << OTPC_BAR_BCADDR_Pos)            /* (OTPC_BAR) Boot Configuration Address Mask */
-#define OTPC_BAR_BCADDR(value)                (OTPC_BAR_BCADDR_Msk & (_UINT32_(value) << OTPC_BAR_BCADDR_Pos)) /* Assigment of value for BCADDR in the OTPC_BAR register */
-#define OTPC_BAR_SBCADDR_Pos                  _UINT32_(16)                                         /* (OTPC_BAR) Secure Boot Configuration Address Position */
-#define OTPC_BAR_SBCADDR_Msk                  (_UINT32_(0xFFFF) << OTPC_BAR_SBCADDR_Pos)           /* (OTPC_BAR) Secure Boot Configuration Address Mask */
-#define OTPC_BAR_SBCADDR(value)               (OTPC_BAR_SBCADDR_Msk & (_UINT32_(value) << OTPC_BAR_SBCADDR_Pos)) /* Assigment of value for SBCADDR in the OTPC_BAR register */
-#define OTPC_BAR_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (OTPC_BAR) Register Mask  */
-
-
-/* -------- OTPC_CAR : (OTPC Offset: 0x34) ( R/ 32) Custom Address Register -------- */
-#define OTPC_CAR_RESETVALUE                   _UINT32_(0x00)                                       /*  (OTPC_CAR) Custom Address Register  Reset Value */
-
-#define OTPC_CAR_CADDR_Pos                    _UINT32_(0)                                          /* (OTPC_CAR) Custom Address Position */
-#define OTPC_CAR_CADDR_Msk                    (_UINT32_(0xFFFF) << OTPC_CAR_CADDR_Pos)             /* (OTPC_CAR) Custom Address Mask */
-#define OTPC_CAR_CADDR(value)                 (OTPC_CAR_CADDR_Msk & (_UINT32_(value) << OTPC_CAR_CADDR_Pos)) /* Assigment of value for CADDR in the OTPC_CAR register */
-#define OTPC_CAR_Msk                          _UINT32_(0x0000FFFF)                                 /* (OTPC_CAR) Register Mask  */
-
 
 /* -------- OTPC_CR : (OTPC Offset: 0x00) ( /W 32) Control Register -------- */
 #define OTPC_CR_PGM_Pos                       _UINT32_(0)                                          /* (OTPC_CR) Program Packet Position */
@@ -135,115 +98,158 @@
 #define OTPC_CR_Msk                           _UINT32_(0xFFFF83D7)                                 /* (OTPC_CR) Register Mask  */
 
 
-/* -------- OTPC_DR : (OTPC Offset: 0x24) (R/W 32) Data Register -------- */
-#define OTPC_DR_RESETVALUE                    _UINT32_(0x00)                                       /*  (OTPC_DR) Data Register  Reset Value */
+/* -------- OTPC_MR : (OTPC Offset: 0x04) (R/W 32) Mode Register -------- */
+#define OTPC_MR_RESETVALUE                    _UINT32_(0x00)                                       /*  (OTPC_MR) Mode Register  Reset Value */
 
-#define OTPC_DR_DATA_Pos                      _UINT32_(0)                                          /* (OTPC_DR) Packet Data Position */
-#define OTPC_DR_DATA_Msk                      (_UINT32_(0xFFFFFFFF) << OTPC_DR_DATA_Pos)           /* (OTPC_DR) Packet Data Mask */
-#define OTPC_DR_DATA(value)                   (OTPC_DR_DATA_Msk & (_UINT32_(value) << OTPC_DR_DATA_Pos)) /* Assigment of value for DATA in the OTPC_DR register */
-#define OTPC_DR_Msk                           _UINT32_(0xFFFFFFFF)                                 /* (OTPC_DR) Register Mask  */
+#define OTPC_MR_UHCRRDIS_Pos                  _UINT32_(0)                                          /* (OTPC_MR) User Hardware Configuration Register Read Disable Position */
+#define OTPC_MR_UHCRRDIS_Msk                  (_UINT32_(0x1) << OTPC_MR_UHCRRDIS_Pos)              /* (OTPC_MR) User Hardware Configuration Register Read Disable Mask */
+#define OTPC_MR_UHCRRDIS(value)               (OTPC_MR_UHCRRDIS_Msk & (_UINT32_(value) << OTPC_MR_UHCRRDIS_Pos)) /* Assigment of value for UHCRRDIS in the OTPC_MR register */
+#define   OTPC_MR_UHCRRDIS_0_Val              _UINT32_(0x0)                                        /* (OTPC_MR) The User Hardware Configuration register can be read through the User Interface.  */
+#define   OTPC_MR_UHCRRDIS_1_Val              _UINT32_(0x1)                                        /* (OTPC_MR) The User Hardware Configuration register cannot be read through the User Interface.  */
+#define OTPC_MR_UHCRRDIS_0                    (OTPC_MR_UHCRRDIS_0_Val << OTPC_MR_UHCRRDIS_Pos)     /* (OTPC_MR) The User Hardware Configuration register can be read through the User Interface. Position  */
+#define OTPC_MR_UHCRRDIS_1                    (OTPC_MR_UHCRRDIS_1_Val << OTPC_MR_UHCRRDIS_Pos)     /* (OTPC_MR) The User Hardware Configuration register cannot be read through the User Interface. Position  */
+#define OTPC_MR_NPCKT_Pos                     _UINT32_(4)                                          /* (OTPC_MR) New Packet Position */
+#define OTPC_MR_NPCKT_Msk                     (_UINT32_(0x1) << OTPC_MR_NPCKT_Pos)                 /* (OTPC_MR) New Packet Mask */
+#define OTPC_MR_NPCKT(value)                  (OTPC_MR_NPCKT_Msk & (_UINT32_(value) << OTPC_MR_NPCKT_Pos)) /* Assigment of value for NPCKT in the OTPC_MR register */
+#define   OTPC_MR_NPCKT_0_Val                 _UINT32_(0x0)                                        /* (OTPC_MR) Updates the packet defined at the ADDR address.  */
+#define   OTPC_MR_NPCKT_1_Val                 _UINT32_(0x1)                                        /* (OTPC_MR) Creates a new packet.  */
+#define OTPC_MR_NPCKT_0                       (OTPC_MR_NPCKT_0_Val << OTPC_MR_NPCKT_Pos)           /* (OTPC_MR) Updates the packet defined at the ADDR address. Position  */
+#define OTPC_MR_NPCKT_1                       (OTPC_MR_NPCKT_1_Val << OTPC_MR_NPCKT_Pos)           /* (OTPC_MR) Creates a new packet. Position  */
+#define OTPC_MR_EMUL_Pos                      _UINT32_(7)                                          /* (OTPC_MR) Emulation Enable Position */
+#define OTPC_MR_EMUL_Msk                      (_UINT32_(0x1) << OTPC_MR_EMUL_Pos)                  /* (OTPC_MR) Emulation Enable Mask */
+#define OTPC_MR_EMUL(value)                   (OTPC_MR_EMUL_Msk & (_UINT32_(value) << OTPC_MR_EMUL_Pos)) /* Assigment of value for EMUL in the OTPC_MR register */
+#define   OTPC_MR_EMUL_0_Val                  _UINT32_(0x0)                                        /* (OTPC_MR) The Emulation mode of the User area is disabled, all accesses are computed in the OTP memory.  */
+#define   OTPC_MR_EMUL_1_Val                  _UINT32_(0x1)                                        /* (OTPC_MR) The Emulation mode of the User area is enabled, all accesses are computed in the Emulation memory.  */
+#define OTPC_MR_EMUL_0                        (OTPC_MR_EMUL_0_Val << OTPC_MR_EMUL_Pos)             /* (OTPC_MR) The Emulation mode of the User area is disabled, all accesses are computed in the OTP memory. Position  */
+#define OTPC_MR_EMUL_1                        (OTPC_MR_EMUL_1_Val << OTPC_MR_EMUL_Pos)             /* (OTPC_MR) The Emulation mode of the User area is enabled, all accesses are computed in the Emulation memory. Position  */
+#define OTPC_MR_RDDIS_Pos                     _UINT32_(8)                                          /* (OTPC_MR) Read Disable Position */
+#define OTPC_MR_RDDIS_Msk                     (_UINT32_(0x1) << OTPC_MR_RDDIS_Pos)                 /* (OTPC_MR) Read Disable Mask */
+#define OTPC_MR_RDDIS(value)                  (OTPC_MR_RDDIS_Msk & (_UINT32_(value) << OTPC_MR_RDDIS_Pos)) /* Assigment of value for RDDIS in the OTPC_MR register */
+#define   OTPC_MR_RDDIS_0_Val                 _UINT32_(0x0)                                        /* (OTPC_MR) The read capability of the OTPC_HR and OTPC_DR registers are enabled.  */
+#define   OTPC_MR_RDDIS_1_Val                 _UINT32_(0x1)                                        /* (OTPC_MR) The read capability of the OTPC_HR and OTPC_DR registers are disabled. In case of read, the returned value is 0.  */
+#define OTPC_MR_RDDIS_0                       (OTPC_MR_RDDIS_0_Val << OTPC_MR_RDDIS_Pos)           /* (OTPC_MR) The read capability of the OTPC_HR and OTPC_DR registers are enabled. Position  */
+#define OTPC_MR_RDDIS_1                       (OTPC_MR_RDDIS_1_Val << OTPC_MR_RDDIS_Pos)           /* (OTPC_MR) The read capability of the OTPC_HR and OTPC_DR registers are disabled. In case of read, the returned value is 0. Position  */
+#define OTPC_MR_WRDIS_Pos                     _UINT32_(9)                                          /* (OTPC_MR) Write Disable Position */
+#define OTPC_MR_WRDIS_Msk                     (_UINT32_(0x1) << OTPC_MR_WRDIS_Pos)                 /* (OTPC_MR) Write Disable Mask */
+#define OTPC_MR_WRDIS(value)                  (OTPC_MR_WRDIS_Msk & (_UINT32_(value) << OTPC_MR_WRDIS_Pos)) /* Assigment of value for WRDIS in the OTPC_MR register */
+#define   OTPC_MR_WRDIS_0_Val                 _UINT32_(0x0)                                        /* (OTPC_MR) The write capability of the OTPC_DR register is enabled.  */
+#define   OTPC_MR_WRDIS_1_Val                 _UINT32_(0x1)                                        /* (OTPC_MR) The write capability of the OTPC_DR register is disabled.  */
+#define OTPC_MR_WRDIS_0                       (OTPC_MR_WRDIS_0_Val << OTPC_MR_WRDIS_Pos)           /* (OTPC_MR) The write capability of the OTPC_DR register is enabled. Position  */
+#define OTPC_MR_WRDIS_1                       (OTPC_MR_WRDIS_1_Val << OTPC_MR_WRDIS_Pos)           /* (OTPC_MR) The write capability of the OTPC_DR register is disabled. Position  */
+#define OTPC_MR_KBDST_Pos                     _UINT32_(12)                                         /* (OTPC_MR) Key Bus Destination Position */
+#define OTPC_MR_KBDST_Msk                     (_UINT32_(0x3) << OTPC_MR_KBDST_Pos)                 /* (OTPC_MR) Key Bus Destination Mask */
+#define OTPC_MR_KBDST(value)                  (OTPC_MR_KBDST_Msk & (_UINT32_(value) << OTPC_MR_KBDST_Pos)) /* Assigment of value for KBDST in the OTPC_MR register */
+#define   OTPC_MR_KBDST_NONE_Val              _UINT32_(0x0)                                        /* (OTPC_MR) No destination selected (no transfer can occur).  */
+#define   OTPC_MR_KBDST_AES_Val               _UINT32_(0x1)                                        /* (OTPC_MR) The AES is the destination of the key transfer.  */
+#define   OTPC_MR_KBDST_TZAESB_Val            _UINT32_(0x2)                                        /* (OTPC_MR) The TrustZone AES Bridge is the destination of the key transfer.  */
+#define   OTPC_MR_KBDST_TDES_Val              _UINT32_(0x3)                                        /* (OTPC_MR) The TDES is the destination of the key transfer.  */
+#define OTPC_MR_KBDST_NONE                    (OTPC_MR_KBDST_NONE_Val << OTPC_MR_KBDST_Pos)        /* (OTPC_MR) No destination selected (no transfer can occur). Position  */
+#define OTPC_MR_KBDST_AES                     (OTPC_MR_KBDST_AES_Val << OTPC_MR_KBDST_Pos)         /* (OTPC_MR) The AES is the destination of the key transfer. Position  */
+#define OTPC_MR_KBDST_TZAESB                  (OTPC_MR_KBDST_TZAESB_Val << OTPC_MR_KBDST_Pos)      /* (OTPC_MR) The TrustZone AES Bridge is the destination of the key transfer. Position  */
+#define OTPC_MR_KBDST_TDES                    (OTPC_MR_KBDST_TDES_Val << OTPC_MR_KBDST_Pos)        /* (OTPC_MR) The TDES is the destination of the key transfer. Position  */
+#define OTPC_MR_LOCK_Pos                      _UINT32_(15)                                         /* (OTPC_MR) Lock Register Position */
+#define OTPC_MR_LOCK_Msk                      (_UINT32_(0x1) << OTPC_MR_LOCK_Pos)                  /* (OTPC_MR) Lock Register Mask */
+#define OTPC_MR_LOCK(value)                   (OTPC_MR_LOCK_Msk & (_UINT32_(value) << OTPC_MR_LOCK_Pos)) /* Assigment of value for LOCK in the OTPC_MR register */
+#define   OTPC_MR_LOCK_0_Val                  _UINT32_(0x0)                                        /* (OTPC_MR) The OTPC_MR register is unlocked; write access changes its value.  */
+#define   OTPC_MR_LOCK_1_Val                  _UINT32_(0x1)                                        /* (OTPC_MR) The OTPC_MR register is locked; write access does not change its value.  */
+#define OTPC_MR_LOCK_0                        (OTPC_MR_LOCK_0_Val << OTPC_MR_LOCK_Pos)             /* (OTPC_MR) The OTPC_MR register is unlocked; write access changes its value. Position  */
+#define OTPC_MR_LOCK_1                        (OTPC_MR_LOCK_1_Val << OTPC_MR_LOCK_Pos)             /* (OTPC_MR) The OTPC_MR register is locked; write access does not change its value. Position  */
+#define OTPC_MR_ADDR_Pos                      _UINT32_(16)                                         /* (OTPC_MR) Address Position */
+#define OTPC_MR_ADDR_Msk                      (_UINT32_(0xFFFF) << OTPC_MR_ADDR_Pos)               /* (OTPC_MR) Address Mask */
+#define OTPC_MR_ADDR(value)                   (OTPC_MR_ADDR_Msk & (_UINT32_(value) << OTPC_MR_ADDR_Pos)) /* Assigment of value for ADDR in the OTPC_MR register */
+#define OTPC_MR_Msk                           _UINT32_(0xFFFFB391)                                 /* (OTPC_MR) Register Mask  */
 
 
-/* -------- OTPC_HR : (OTPC Offset: 0x20) (R/W 32) Header Register -------- */
-#define OTPC_HR_RESETVALUE                    _UINT32_(0x00)                                       /*  (OTPC_HR) Header Register  Reset Value */
+/* -------- OTPC_AR : (OTPC Offset: 0x08) (R/W 32) Address Register -------- */
+#define OTPC_AR_RESETVALUE                    _UINT32_(0x00)                                       /*  (OTPC_AR) Address Register  Reset Value */
 
-#define OTPC_HR_PACKET_Pos                    _UINT32_(0)                                          /* (OTPC_HR) Packet Type Position */
-#define OTPC_HR_PACKET_Msk                    (_UINT32_(0x7) << OTPC_HR_PACKET_Pos)                /* (OTPC_HR) Packet Type Mask */
-#define OTPC_HR_PACKET(value)                 (OTPC_HR_PACKET_Msk & (_UINT32_(value) << OTPC_HR_PACKET_Pos)) /* Assigment of value for PACKET in the OTPC_HR register */
-#define   OTPC_HR_PACKET_REGULAR_Val          _UINT32_(0x1)                                        /* (OTPC_HR) Regular packet accessible through the User Interface  */
-#define   OTPC_HR_PACKET_KEY_Val              _UINT32_(0x2)                                        /* (OTPC_HR) Key packet accessible only through the Key Buses  */
-#define   OTPC_HR_PACKET_BOOT_CONFIGURATION_Val _UINT32_(0x3)                                        /* (OTPC_HR) Boot Configuration packet  */
-#define   OTPC_HR_PACKET_SECURE_BOOT_CONFIGURATION_Val _UINT32_(0x4)                                        /* (OTPC_HR) Secure Boot Configuration packet  */
-#define   OTPC_HR_PACKET_HARDWARE_CONFIGURATION_Val _UINT32_(0x5)                                        /* (OTPC_HR) Hardware Configuration packet  */
-#define   OTPC_HR_PACKET_CUSTOM_Val           _UINT32_(0x6)                                        /* (OTPC_HR) Custom packet  */
-#define OTPC_HR_PACKET_REGULAR                (OTPC_HR_PACKET_REGULAR_Val << OTPC_HR_PACKET_Pos)   /* (OTPC_HR) Regular packet accessible through the User Interface Position  */
-#define OTPC_HR_PACKET_KEY                    (OTPC_HR_PACKET_KEY_Val << OTPC_HR_PACKET_Pos)       /* (OTPC_HR) Key packet accessible only through the Key Buses Position  */
-#define OTPC_HR_PACKET_BOOT_CONFIGURATION     (OTPC_HR_PACKET_BOOT_CONFIGURATION_Val << OTPC_HR_PACKET_Pos) /* (OTPC_HR) Boot Configuration packet Position  */
-#define OTPC_HR_PACKET_SECURE_BOOT_CONFIGURATION (OTPC_HR_PACKET_SECURE_BOOT_CONFIGURATION_Val << OTPC_HR_PACKET_Pos) /* (OTPC_HR) Secure Boot Configuration packet Position  */
-#define OTPC_HR_PACKET_HARDWARE_CONFIGURATION (OTPC_HR_PACKET_HARDWARE_CONFIGURATION_Val << OTPC_HR_PACKET_Pos) /* (OTPC_HR) Hardware Configuration packet Position  */
-#define OTPC_HR_PACKET_CUSTOM                 (OTPC_HR_PACKET_CUSTOM_Val << OTPC_HR_PACKET_Pos)    /* (OTPC_HR) Custom packet Position  */
-#define OTPC_HR_LOCK_Pos                      _UINT32_(3)                                          /* (OTPC_HR) Lock Status Position */
-#define OTPC_HR_LOCK_Msk                      (_UINT32_(0x1) << OTPC_HR_LOCK_Pos)                  /* (OTPC_HR) Lock Status Mask */
-#define OTPC_HR_LOCK(value)                   (OTPC_HR_LOCK_Msk & (_UINT32_(value) << OTPC_HR_LOCK_Pos)) /* Assigment of value for LOCK in the OTPC_HR register */
-#define   OTPC_HR_LOCK_0_Val                  _UINT32_(0x0)                                        /* (OTPC_HR) The packet is not locked.  */
-#define   OTPC_HR_LOCK_1_Val                  _UINT32_(0x1)                                        /* (OTPC_HR) The packet is locked.  */
-#define OTPC_HR_LOCK_0                        (OTPC_HR_LOCK_0_Val << OTPC_HR_LOCK_Pos)             /* (OTPC_HR) The packet is not locked. Position  */
-#define OTPC_HR_LOCK_1                        (OTPC_HR_LOCK_1_Val << OTPC_HR_LOCK_Pos)             /* (OTPC_HR) The packet is locked. Position  */
-#define OTPC_HR_INVLD_Pos                     _UINT32_(4)                                          /* (OTPC_HR) Invalid Status Position */
-#define OTPC_HR_INVLD_Msk                     (_UINT32_(0x3) << OTPC_HR_INVLD_Pos)                 /* (OTPC_HR) Invalid Status Mask */
-#define OTPC_HR_INVLD(value)                  (OTPC_HR_INVLD_Msk & (_UINT32_(value) << OTPC_HR_INVLD_Pos)) /* Assigment of value for INVLD in the OTPC_HR register */
-#define OTPC_HR_SECURE_Pos                    _UINT32_(6)                                          /* (OTPC_HR) Secure Packet Position */
-#define OTPC_HR_SECURE_Msk                    (_UINT32_(0x1) << OTPC_HR_SECURE_Pos)                /* (OTPC_HR) Secure Packet Mask */
-#define OTPC_HR_SECURE(value)                 (OTPC_HR_SECURE_Msk & (_UINT32_(value) << OTPC_HR_SECURE_Pos)) /* Assigment of value for SECURE in the OTPC_HR register */
-#define   OTPC_HR_SECURE_0_Val                _UINT32_(0x0)                                        /* (OTPC_HR) The packet is not part of the secure world.  */
-#define   OTPC_HR_SECURE_1_Val                _UINT32_(0x1)                                        /* (OTPC_HR) The packet is part of the secure world.  */
-#define OTPC_HR_SECURE_0                      (OTPC_HR_SECURE_0_Val << OTPC_HR_SECURE_Pos)         /* (OTPC_HR) The packet is not part of the secure world. Position  */
-#define OTPC_HR_SECURE_1                      (OTPC_HR_SECURE_1_Val << OTPC_HR_SECURE_Pos)         /* (OTPC_HR) The packet is part of the secure world. Position  */
-#define OTPC_HR_ONE_Pos                       _UINT32_(7)                                          /* (OTPC_HR) One Position */
-#define OTPC_HR_ONE_Msk                       (_UINT32_(0x1) << OTPC_HR_ONE_Pos)                   /* (OTPC_HR) One Mask */
-#define OTPC_HR_ONE(value)                    (OTPC_HR_ONE_Msk & (_UINT32_(value) << OTPC_HR_ONE_Pos)) /* Assigment of value for ONE in the OTPC_HR register */
-#define OTPC_HR_SIZE_Pos                      _UINT32_(8)                                          /* (OTPC_HR) Packet Size Position */
-#define OTPC_HR_SIZE_Msk                      (_UINT32_(0xFF) << OTPC_HR_SIZE_Pos)                 /* (OTPC_HR) Packet Size Mask */
-#define OTPC_HR_SIZE(value)                   (OTPC_HR_SIZE_Msk & (_UINT32_(value) << OTPC_HR_SIZE_Pos)) /* Assigment of value for SIZE in the OTPC_HR register */
-#define OTPC_HR_CHECKSUM_Pos                  _UINT32_(16)                                         /* (OTPC_HR) Packet Checksum Position */
-#define OTPC_HR_CHECKSUM_Msk                  (_UINT32_(0xFFFF) << OTPC_HR_CHECKSUM_Pos)           /* (OTPC_HR) Packet Checksum Mask */
-#define OTPC_HR_CHECKSUM(value)               (OTPC_HR_CHECKSUM_Msk & (_UINT32_(value) << OTPC_HR_CHECKSUM_Pos)) /* Assigment of value for CHECKSUM in the OTPC_HR register */
-#define OTPC_HR_Msk                           _UINT32_(0xFFFFFFFF)                                 /* (OTPC_HR) Register Mask  */
+#define OTPC_AR_DADDR_Pos                     _UINT32_(0)                                          /* (OTPC_AR) Data Address Position */
+#define OTPC_AR_DADDR_Msk                     (_UINT32_(0xFF) << OTPC_AR_DADDR_Pos)                /* (OTPC_AR) Data Address Mask */
+#define OTPC_AR_DADDR(value)                  (OTPC_AR_DADDR_Msk & (_UINT32_(value) << OTPC_AR_DADDR_Pos)) /* Assigment of value for DADDR in the OTPC_AR register */
+#define OTPC_AR_INCRT_Pos                     _UINT32_(16)                                         /* (OTPC_AR) Increment Type Position */
+#define OTPC_AR_INCRT_Msk                     (_UINT32_(0x1) << OTPC_AR_INCRT_Pos)                 /* (OTPC_AR) Increment Type Mask */
+#define OTPC_AR_INCRT(value)                  (OTPC_AR_INCRT_Msk & (_UINT32_(value) << OTPC_AR_INCRT_Pos)) /* Assigment of value for INCRT in the OTPC_AR register */
+#define   OTPC_AR_INCRT_AFTER_READ_Val        _UINT32_(0x0)                                        /* (OTPC_AR) Increment DADDR after a read of OTPC_DR.  */
+#define   OTPC_AR_INCRT_AFTER_WRITE_Val       _UINT32_(0x1)                                        /* (OTPC_AR) Increment DADDR after a write of OTPC_DR.  */
+#define OTPC_AR_INCRT_AFTER_READ              (OTPC_AR_INCRT_AFTER_READ_Val << OTPC_AR_INCRT_Pos)  /* (OTPC_AR) Increment DADDR after a read of OTPC_DR. Position  */
+#define OTPC_AR_INCRT_AFTER_WRITE             (OTPC_AR_INCRT_AFTER_WRITE_Val << OTPC_AR_INCRT_Pos) /* (OTPC_AR) Increment DADDR after a write of OTPC_DR. Position  */
+#define OTPC_AR_Msk                           _UINT32_(0x000100FF)                                 /* (OTPC_AR) Register Mask  */
 
 
-/* -------- OTPC_IDR : (OTPC Offset: 0x14) ( /W 32) Interrupt Disable Register -------- */
-#define OTPC_IDR_EOP_Pos                      _UINT32_(0)                                          /* (OTPC_IDR) End Of Programming Interrupt Disable Position */
-#define OTPC_IDR_EOP_Msk                      (_UINT32_(0x1) << OTPC_IDR_EOP_Pos)                  /* (OTPC_IDR) End Of Programming Interrupt Disable Mask */
-#define OTPC_IDR_EOP(value)                   (OTPC_IDR_EOP_Msk & (_UINT32_(value) << OTPC_IDR_EOP_Pos)) /* Assigment of value for EOP in the OTPC_IDR register */
-#define OTPC_IDR_EOL_Pos                      _UINT32_(1)                                          /* (OTPC_IDR) End Of Locking Interrupt Disable Position */
-#define OTPC_IDR_EOL_Msk                      (_UINT32_(0x1) << OTPC_IDR_EOL_Pos)                  /* (OTPC_IDR) End Of Locking Interrupt Disable Mask */
-#define OTPC_IDR_EOL(value)                   (OTPC_IDR_EOL_Msk & (_UINT32_(value) << OTPC_IDR_EOL_Pos)) /* Assigment of value for EOL in the OTPC_IDR register */
-#define OTPC_IDR_EOI_Pos                      _UINT32_(2)                                          /* (OTPC_IDR) End Of Invalidation Interrupt Disable Position */
-#define OTPC_IDR_EOI_Msk                      (_UINT32_(0x1) << OTPC_IDR_EOI_Pos)                  /* (OTPC_IDR) End Of Invalidation Interrupt Disable Mask */
-#define OTPC_IDR_EOI(value)                   (OTPC_IDR_EOI_Msk & (_UINT32_(value) << OTPC_IDR_EOI_Pos)) /* Assigment of value for EOI in the OTPC_IDR register */
-#define OTPC_IDR_EOKT_Pos                     _UINT32_(3)                                          /* (OTPC_IDR) End Of Key Transfer Interrupt Disable Position */
-#define OTPC_IDR_EOKT_Msk                     (_UINT32_(0x1) << OTPC_IDR_EOKT_Pos)                 /* (OTPC_IDR) End Of Key Transfer Interrupt Disable Mask */
-#define OTPC_IDR_EOKT(value)                  (OTPC_IDR_EOKT_Msk & (_UINT32_(value) << OTPC_IDR_EOKT_Pos)) /* Assigment of value for EOKT in the OTPC_IDR register */
-#define OTPC_IDR_PGERR_Pos                    _UINT32_(4)                                          /* (OTPC_IDR) Programming Error Interrupt Disable Position */
-#define OTPC_IDR_PGERR_Msk                    (_UINT32_(0x1) << OTPC_IDR_PGERR_Pos)                /* (OTPC_IDR) Programming Error Interrupt Disable Mask */
-#define OTPC_IDR_PGERR(value)                 (OTPC_IDR_PGERR_Msk & (_UINT32_(value) << OTPC_IDR_PGERR_Pos)) /* Assigment of value for PGERR in the OTPC_IDR register */
-#define OTPC_IDR_LKERR_Pos                    _UINT32_(5)                                          /* (OTPC_IDR) Locking Error Interrupt Disable Position */
-#define OTPC_IDR_LKERR_Msk                    (_UINT32_(0x1) << OTPC_IDR_LKERR_Pos)                /* (OTPC_IDR) Locking Error Interrupt Disable Mask */
-#define OTPC_IDR_LKERR(value)                 (OTPC_IDR_LKERR_Msk & (_UINT32_(value) << OTPC_IDR_LKERR_Pos)) /* Assigment of value for LKERR in the OTPC_IDR register */
-#define OTPC_IDR_IVERR_Pos                    _UINT32_(6)                                          /* (OTPC_IDR) Invalidation Error Interrupt Disable Position */
-#define OTPC_IDR_IVERR_Msk                    (_UINT32_(0x1) << OTPC_IDR_IVERR_Pos)                /* (OTPC_IDR) Invalidation Error Interrupt Disable Mask */
-#define OTPC_IDR_IVERR(value)                 (OTPC_IDR_IVERR_Msk & (_UINT32_(value) << OTPC_IDR_IVERR_Pos)) /* Assigment of value for IVERR in the OTPC_IDR register */
-#define OTPC_IDR_WERR_Pos                     _UINT32_(7)                                          /* (OTPC_IDR) Write Error Interrupt Disable Position */
-#define OTPC_IDR_WERR_Msk                     (_UINT32_(0x1) << OTPC_IDR_WERR_Pos)                 /* (OTPC_IDR) Write Error Interrupt Disable Mask */
-#define OTPC_IDR_WERR(value)                  (OTPC_IDR_WERR_Msk & (_UINT32_(value) << OTPC_IDR_WERR_Pos)) /* Assigment of value for WERR in the OTPC_IDR register */
-#define OTPC_IDR_EOR_Pos                      _UINT32_(8)                                          /* (OTPC_IDR) End Of Read Interrupt Disable Position */
-#define OTPC_IDR_EOR_Msk                      (_UINT32_(0x1) << OTPC_IDR_EOR_Pos)                  /* (OTPC_IDR) End Of Read Interrupt Disable Mask */
-#define OTPC_IDR_EOR(value)                   (OTPC_IDR_EOR_Msk & (_UINT32_(value) << OTPC_IDR_EOR_Pos)) /* Assigment of value for EOR in the OTPC_IDR register */
-#define OTPC_IDR_EOF_Pos                      _UINT32_(9)                                          /* (OTPC_IDR) End Of Flush Interrupt Disable Position */
-#define OTPC_IDR_EOF_Msk                      (_UINT32_(0x1) << OTPC_IDR_EOF_Pos)                  /* (OTPC_IDR) End Of Flush Interrupt Disable Mask */
-#define OTPC_IDR_EOF(value)                   (OTPC_IDR_EOF_Msk & (_UINT32_(value) << OTPC_IDR_EOF_Pos)) /* Assigment of value for EOF in the OTPC_IDR register */
-#define OTPC_IDR_EOH_Pos                      _UINT32_(10)                                         /* (OTPC_IDR) End Of Hide Interrupt Disable Position */
-#define OTPC_IDR_EOH_Msk                      (_UINT32_(0x1) << OTPC_IDR_EOH_Pos)                  /* (OTPC_IDR) End Of Hide Interrupt Disable Mask */
-#define OTPC_IDR_EOH(value)                   (OTPC_IDR_EOH_Msk & (_UINT32_(value) << OTPC_IDR_EOH_Pos)) /* Assigment of value for EOH in the OTPC_IDR register */
-#define OTPC_IDR_EORF_Pos                     _UINT32_(11)                                         /* (OTPC_IDR) End Of Refresh Interrupt Disable Position */
-#define OTPC_IDR_EORF_Msk                     (_UINT32_(0x1) << OTPC_IDR_EORF_Pos)                 /* (OTPC_IDR) End Of Refresh Interrupt Disable Mask */
-#define OTPC_IDR_EORF(value)                  (OTPC_IDR_EORF_Msk & (_UINT32_(value) << OTPC_IDR_EORF_Pos)) /* Assigment of value for EORF in the OTPC_IDR register */
-#define OTPC_IDR_CKERR_Pos                    _UINT32_(12)                                         /* (OTPC_IDR) Checksum Check Error Interrupt Disable Position */
-#define OTPC_IDR_CKERR_Msk                    (_UINT32_(0x1) << OTPC_IDR_CKERR_Pos)                /* (OTPC_IDR) Checksum Check Error Interrupt Disable Mask */
-#define OTPC_IDR_CKERR(value)                 (OTPC_IDR_CKERR_Msk & (_UINT32_(value) << OTPC_IDR_CKERR_Pos)) /* Assigment of value for CKERR in the OTPC_IDR register */
-#define OTPC_IDR_COERR_Pos                    _UINT32_(13)                                         /* (OTPC_IDR) Corruption Error Interrupt Disable Position */
-#define OTPC_IDR_COERR_Msk                    (_UINT32_(0x1) << OTPC_IDR_COERR_Pos)                /* (OTPC_IDR) Corruption Error Interrupt Disable Mask */
-#define OTPC_IDR_COERR(value)                 (OTPC_IDR_COERR_Msk & (_UINT32_(value) << OTPC_IDR_COERR_Pos)) /* Assigment of value for COERR in the OTPC_IDR register */
-#define OTPC_IDR_HDERR_Pos                    _UINT32_(14)                                         /* (OTPC_IDR) Hide Error Interrupt Disable Position */
-#define OTPC_IDR_HDERR_Msk                    (_UINT32_(0x1) << OTPC_IDR_HDERR_Pos)                /* (OTPC_IDR) Hide Error Interrupt Disable Mask */
-#define OTPC_IDR_HDERR(value)                 (OTPC_IDR_HDERR_Msk & (_UINT32_(value) << OTPC_IDR_HDERR_Pos)) /* Assigment of value for HDERR in the OTPC_IDR register */
-#define OTPC_IDR_KBERR_Pos                    _UINT32_(16)                                         /* (OTPC_IDR) Key Bus Error Interrupt Disable Position */
-#define OTPC_IDR_KBERR_Msk                    (_UINT32_(0x1) << OTPC_IDR_KBERR_Pos)                /* (OTPC_IDR) Key Bus Error Interrupt Disable Mask */
-#define OTPC_IDR_KBERR(value)                 (OTPC_IDR_KBERR_Msk & (_UINT32_(value) << OTPC_IDR_KBERR_Pos)) /* Assigment of value for KBERR in the OTPC_IDR register */
-#define OTPC_IDR_SECE_Pos                     _UINT32_(28)                                         /* (OTPC_IDR) Security and/or Safety Event Interrupt Disable Position */
-#define OTPC_IDR_SECE_Msk                     (_UINT32_(0x1) << OTPC_IDR_SECE_Pos)                 /* (OTPC_IDR) Security and/or Safety Event Interrupt Disable Mask */
-#define OTPC_IDR_SECE(value)                  (OTPC_IDR_SECE_Msk & (_UINT32_(value) << OTPC_IDR_SECE_Pos)) /* Assigment of value for SECE in the OTPC_IDR register */
-#define OTPC_IDR_Msk                          _UINT32_(0x10017FFF)                                 /* (OTPC_IDR) Register Mask  */
+/* -------- OTPC_SR : (OTPC Offset: 0x0C) ( R/ 32) Status Register -------- */
+#define OTPC_SR_RESETVALUE                    _UINT32_(0x00)                                       /*  (OTPC_SR) Status Register  Reset Value */
+
+#define OTPC_SR_PGM_Pos                       _UINT32_(0)                                          /* (OTPC_SR) Programming On-Going Position */
+#define OTPC_SR_PGM_Msk                       (_UINT32_(0x1) << OTPC_SR_PGM_Pos)                   /* (OTPC_SR) Programming On-Going Mask */
+#define OTPC_SR_PGM(value)                    (OTPC_SR_PGM_Msk & (_UINT32_(value) << OTPC_SR_PGM_Pos)) /* Assigment of value for PGM in the OTPC_SR register */
+#define   OTPC_SR_PGM_0_Val                   _UINT32_(0x0)                                        /* (OTPC_SR) No packet programming is on-going.  */
+#define   OTPC_SR_PGM_1_Val                   _UINT32_(0x1)                                        /* (OTPC_SR) A packet programming is running.  */
+#define OTPC_SR_PGM_0                         (OTPC_SR_PGM_0_Val << OTPC_SR_PGM_Pos)               /* (OTPC_SR) No packet programming is on-going. Position  */
+#define OTPC_SR_PGM_1                         (OTPC_SR_PGM_1_Val << OTPC_SR_PGM_Pos)               /* (OTPC_SR) A packet programming is running. Position  */
+#define OTPC_SR_LOCK_Pos                      _UINT32_(1)                                          /* (OTPC_SR) Lock On-Going Position */
+#define OTPC_SR_LOCK_Msk                      (_UINT32_(0x1) << OTPC_SR_LOCK_Pos)                  /* (OTPC_SR) Lock On-Going Mask */
+#define OTPC_SR_LOCK(value)                   (OTPC_SR_LOCK_Msk & (_UINT32_(value) << OTPC_SR_LOCK_Pos)) /* Assigment of value for LOCK in the OTPC_SR register */
+#define   OTPC_SR_LOCK_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) No packet locking is on-going.  */
+#define   OTPC_SR_LOCK_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) A packet locking is running.  */
+#define OTPC_SR_LOCK_0                        (OTPC_SR_LOCK_0_Val << OTPC_SR_LOCK_Pos)             /* (OTPC_SR) No packet locking is on-going. Position  */
+#define OTPC_SR_LOCK_1                        (OTPC_SR_LOCK_1_Val << OTPC_SR_LOCK_Pos)             /* (OTPC_SR) A packet locking is running. Position  */
+#define OTPC_SR_INVLD_Pos                     _UINT32_(2)                                          /* (OTPC_SR) Invalidation On-Going Position */
+#define OTPC_SR_INVLD_Msk                     (_UINT32_(0x1) << OTPC_SR_INVLD_Pos)                 /* (OTPC_SR) Invalidation On-Going Mask */
+#define OTPC_SR_INVLD(value)                  (OTPC_SR_INVLD_Msk & (_UINT32_(value) << OTPC_SR_INVLD_Pos)) /* Assigment of value for INVLD in the OTPC_SR register */
+#define   OTPC_SR_INVLD_0_Val                 _UINT32_(0x0)                                        /* (OTPC_SR) No packet invalidation is on-going.  */
+#define   OTPC_SR_INVLD_1_Val                 _UINT32_(0x1)                                        /* (OTPC_SR) A packet invalidation is running.  */
+#define OTPC_SR_INVLD_0                       (OTPC_SR_INVLD_0_Val << OTPC_SR_INVLD_Pos)           /* (OTPC_SR) No packet invalidation is on-going. Position  */
+#define OTPC_SR_INVLD_1                       (OTPC_SR_INVLD_1_Val << OTPC_SR_INVLD_Pos)           /* (OTPC_SR) A packet invalidation is running. Position  */
+#define OTPC_SR_EMUL_Pos                      _UINT32_(3)                                          /* (OTPC_SR) Emulation Enabled Position */
+#define OTPC_SR_EMUL_Msk                      (_UINT32_(0x1) << OTPC_SR_EMUL_Pos)                  /* (OTPC_SR) Emulation Enabled Mask */
+#define OTPC_SR_EMUL(value)                   (OTPC_SR_EMUL_Msk & (_UINT32_(value) << OTPC_SR_EMUL_Pos)) /* Assigment of value for EMUL in the OTPC_SR register */
+#define   OTPC_SR_EMUL_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) The User area Emulation mode is disabled.  */
+#define   OTPC_SR_EMUL_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) The User area Emulation mode is enabled.  */
+#define OTPC_SR_EMUL_0                        (OTPC_SR_EMUL_0_Val << OTPC_SR_EMUL_Pos)             /* (OTPC_SR) The User area Emulation mode is disabled. Position  */
+#define OTPC_SR_EMUL_1                        (OTPC_SR_EMUL_1_Val << OTPC_SR_EMUL_Pos)             /* (OTPC_SR) The User area Emulation mode is enabled. Position  */
+#define OTPC_SR_MKBB_Pos                      _UINT32_(4)                                          /* (OTPC_SR) Master Key Bus Busy Position */
+#define OTPC_SR_MKBB_Msk                      (_UINT32_(0x1) << OTPC_SR_MKBB_Pos)                  /* (OTPC_SR) Master Key Bus Busy Mask */
+#define OTPC_SR_MKBB(value)                   (OTPC_SR_MKBB_Msk & (_UINT32_(value) << OTPC_SR_MKBB_Pos)) /* Assigment of value for MKBB in the OTPC_SR register */
+#define   OTPC_SR_MKBB_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) The Master Key bus is not busy.  */
+#define   OTPC_SR_MKBB_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) The Master Key bus is busy.  */
+#define OTPC_SR_MKBB_0                        (OTPC_SR_MKBB_0_Val << OTPC_SR_MKBB_Pos)             /* (OTPC_SR) The Master Key bus is not busy. Position  */
+#define OTPC_SR_MKBB_1                        (OTPC_SR_MKBB_1_Val << OTPC_SR_MKBB_Pos)             /* (OTPC_SR) The Master Key bus is busy. Position  */
+#define OTPC_SR_SKBB_Pos                      _UINT32_(5)                                          /* (OTPC_SR) Slave Key Bus Busy Position */
+#define OTPC_SR_SKBB_Msk                      (_UINT32_(0x1) << OTPC_SR_SKBB_Pos)                  /* (OTPC_SR) Slave Key Bus Busy Mask */
+#define OTPC_SR_SKBB(value)                   (OTPC_SR_SKBB_Msk & (_UINT32_(value) << OTPC_SR_SKBB_Pos)) /* Assigment of value for SKBB in the OTPC_SR register */
+#define   OTPC_SR_SKBB_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) The Slave Key bus is not busy.  */
+#define   OTPC_SR_SKBB_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) The Slave Key bus is busy.  */
+#define OTPC_SR_SKBB_0                        (OTPC_SR_SKBB_0_Val << OTPC_SR_SKBB_Pos)             /* (OTPC_SR) The Slave Key bus is not busy. Position  */
+#define OTPC_SR_SKBB_1                        (OTPC_SR_SKBB_1_Val << OTPC_SR_SKBB_Pos)             /* (OTPC_SR) The Slave Key bus is busy. Position  */
+#define OTPC_SR_READ_Pos                      _UINT32_(6)                                          /* (OTPC_SR) Read On-Going Position */
+#define OTPC_SR_READ_Msk                      (_UINT32_(0x1) << OTPC_SR_READ_Pos)                  /* (OTPC_SR) Read On-Going Mask */
+#define OTPC_SR_READ(value)                   (OTPC_SR_READ_Msk & (_UINT32_(value) << OTPC_SR_READ_Pos)) /* Assigment of value for READ in the OTPC_SR register */
+#define   OTPC_SR_READ_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) No packet read is on-going.  */
+#define   OTPC_SR_READ_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) A packet read is running.  */
+#define OTPC_SR_READ_0                        (OTPC_SR_READ_0_Val << OTPC_SR_READ_Pos)             /* (OTPC_SR) No packet read is on-going. Position  */
+#define OTPC_SR_READ_1                        (OTPC_SR_READ_1_Val << OTPC_SR_READ_Pos)             /* (OTPC_SR) A packet read is running. Position  */
+#define OTPC_SR_FLUSH_Pos                     _UINT32_(7)                                          /* (OTPC_SR) Flush On-Going Position */
+#define OTPC_SR_FLUSH_Msk                     (_UINT32_(0x1) << OTPC_SR_FLUSH_Pos)                 /* (OTPC_SR) Flush On-Going Mask */
+#define OTPC_SR_FLUSH(value)                  (OTPC_SR_FLUSH_Msk & (_UINT32_(value) << OTPC_SR_FLUSH_Pos)) /* Assigment of value for FLUSH in the OTPC_SR register */
+#define   OTPC_SR_FLUSH_0_Val                 _UINT32_(0x0)                                        /* (OTPC_SR) The temporary registers are not flushed.  */
+#define   OTPC_SR_FLUSH_1_Val                 _UINT32_(0x1)                                        /* (OTPC_SR) The temporary registers are being flushed.  */
+#define OTPC_SR_FLUSH_0                       (OTPC_SR_FLUSH_0_Val << OTPC_SR_FLUSH_Pos)           /* (OTPC_SR) The temporary registers are not flushed. Position  */
+#define OTPC_SR_FLUSH_1                       (OTPC_SR_FLUSH_1_Val << OTPC_SR_FLUSH_Pos)           /* (OTPC_SR) The temporary registers are being flushed. Position  */
+#define OTPC_SR_HIDE_Pos                      _UINT32_(8)                                          /* (OTPC_SR) Hiding On-Going Position */
+#define OTPC_SR_HIDE_Msk                      (_UINT32_(0x1) << OTPC_SR_HIDE_Pos)                  /* (OTPC_SR) Hiding On-Going Mask */
+#define OTPC_SR_HIDE(value)                   (OTPC_SR_HIDE_Msk & (_UINT32_(value) << OTPC_SR_HIDE_Pos)) /* Assigment of value for HIDE in the OTPC_SR register */
+#define   OTPC_SR_HIDE_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) No packet hiding is on-going.  */
+#define   OTPC_SR_HIDE_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) A packet hiding is on-going.  */
+#define OTPC_SR_HIDE_0                        (OTPC_SR_HIDE_0_Val << OTPC_SR_HIDE_Pos)             /* (OTPC_SR) No packet hiding is on-going. Position  */
+#define OTPC_SR_HIDE_1                        (OTPC_SR_HIDE_1_Val << OTPC_SR_HIDE_Pos)             /* (OTPC_SR) A packet hiding is on-going. Position  */
+#define OTPC_SR_ONEF_Pos                      _UINT32_(9)                                          /* (OTPC_SR) One Found Position */
+#define OTPC_SR_ONEF_Msk                      (_UINT32_(0x1) << OTPC_SR_ONEF_Pos)                  /* (OTPC_SR) One Found Mask */
+#define OTPC_SR_ONEF(value)                   (OTPC_SR_ONEF_Msk & (_UINT32_(value) << OTPC_SR_ONEF_Pos)) /* Assigment of value for ONEF in the OTPC_SR register */
+#define   OTPC_SR_ONEF_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) No bit at '1' found during the last packet read.  */
+#define   OTPC_SR_ONEF_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) At least one '1' has been found during the last packet read.  */
+#define OTPC_SR_ONEF_0                        (OTPC_SR_ONEF_0_Val << OTPC_SR_ONEF_Pos)             /* (OTPC_SR) No bit at '1' found during the last packet read. Position  */
+#define OTPC_SR_ONEF_1                        (OTPC_SR_ONEF_1_Val << OTPC_SR_ONEF_Pos)             /* (OTPC_SR) At least one '1' has been found during the last packet read. Position  */
+#define OTPC_SR_Msk                           _UINT32_(0x000003FF)                                 /* (OTPC_SR) Register Mask  */
 
 
 /* -------- OTPC_IER : (OTPC Offset: 0x10) ( /W 32) Interrupt Enable Register -------- */
@@ -299,6 +305,61 @@
 #define OTPC_IER_SECE_Msk                     (_UINT32_(0x1) << OTPC_IER_SECE_Pos)                 /* (OTPC_IER) Security and/or Safety Event Interrupt Enable Mask */
 #define OTPC_IER_SECE(value)                  (OTPC_IER_SECE_Msk & (_UINT32_(value) << OTPC_IER_SECE_Pos)) /* Assigment of value for SECE in the OTPC_IER register */
 #define OTPC_IER_Msk                          _UINT32_(0x10017FFF)                                 /* (OTPC_IER) Register Mask  */
+
+
+/* -------- OTPC_IDR : (OTPC Offset: 0x14) ( /W 32) Interrupt Disable Register -------- */
+#define OTPC_IDR_EOP_Pos                      _UINT32_(0)                                          /* (OTPC_IDR) End Of Programming Interrupt Disable Position */
+#define OTPC_IDR_EOP_Msk                      (_UINT32_(0x1) << OTPC_IDR_EOP_Pos)                  /* (OTPC_IDR) End Of Programming Interrupt Disable Mask */
+#define OTPC_IDR_EOP(value)                   (OTPC_IDR_EOP_Msk & (_UINT32_(value) << OTPC_IDR_EOP_Pos)) /* Assigment of value for EOP in the OTPC_IDR register */
+#define OTPC_IDR_EOL_Pos                      _UINT32_(1)                                          /* (OTPC_IDR) End Of Locking Interrupt Disable Position */
+#define OTPC_IDR_EOL_Msk                      (_UINT32_(0x1) << OTPC_IDR_EOL_Pos)                  /* (OTPC_IDR) End Of Locking Interrupt Disable Mask */
+#define OTPC_IDR_EOL(value)                   (OTPC_IDR_EOL_Msk & (_UINT32_(value) << OTPC_IDR_EOL_Pos)) /* Assigment of value for EOL in the OTPC_IDR register */
+#define OTPC_IDR_EOI_Pos                      _UINT32_(2)                                          /* (OTPC_IDR) End Of Invalidation Interrupt Disable Position */
+#define OTPC_IDR_EOI_Msk                      (_UINT32_(0x1) << OTPC_IDR_EOI_Pos)                  /* (OTPC_IDR) End Of Invalidation Interrupt Disable Mask */
+#define OTPC_IDR_EOI(value)                   (OTPC_IDR_EOI_Msk & (_UINT32_(value) << OTPC_IDR_EOI_Pos)) /* Assigment of value for EOI in the OTPC_IDR register */
+#define OTPC_IDR_EOKT_Pos                     _UINT32_(3)                                          /* (OTPC_IDR) End Of Key Transfer Interrupt Disable Position */
+#define OTPC_IDR_EOKT_Msk                     (_UINT32_(0x1) << OTPC_IDR_EOKT_Pos)                 /* (OTPC_IDR) End Of Key Transfer Interrupt Disable Mask */
+#define OTPC_IDR_EOKT(value)                  (OTPC_IDR_EOKT_Msk & (_UINT32_(value) << OTPC_IDR_EOKT_Pos)) /* Assigment of value for EOKT in the OTPC_IDR register */
+#define OTPC_IDR_PGERR_Pos                    _UINT32_(4)                                          /* (OTPC_IDR) Programming Error Interrupt Disable Position */
+#define OTPC_IDR_PGERR_Msk                    (_UINT32_(0x1) << OTPC_IDR_PGERR_Pos)                /* (OTPC_IDR) Programming Error Interrupt Disable Mask */
+#define OTPC_IDR_PGERR(value)                 (OTPC_IDR_PGERR_Msk & (_UINT32_(value) << OTPC_IDR_PGERR_Pos)) /* Assigment of value for PGERR in the OTPC_IDR register */
+#define OTPC_IDR_LKERR_Pos                    _UINT32_(5)                                          /* (OTPC_IDR) Locking Error Interrupt Disable Position */
+#define OTPC_IDR_LKERR_Msk                    (_UINT32_(0x1) << OTPC_IDR_LKERR_Pos)                /* (OTPC_IDR) Locking Error Interrupt Disable Mask */
+#define OTPC_IDR_LKERR(value)                 (OTPC_IDR_LKERR_Msk & (_UINT32_(value) << OTPC_IDR_LKERR_Pos)) /* Assigment of value for LKERR in the OTPC_IDR register */
+#define OTPC_IDR_IVERR_Pos                    _UINT32_(6)                                          /* (OTPC_IDR) Invalidation Error Interrupt Disable Position */
+#define OTPC_IDR_IVERR_Msk                    (_UINT32_(0x1) << OTPC_IDR_IVERR_Pos)                /* (OTPC_IDR) Invalidation Error Interrupt Disable Mask */
+#define OTPC_IDR_IVERR(value)                 (OTPC_IDR_IVERR_Msk & (_UINT32_(value) << OTPC_IDR_IVERR_Pos)) /* Assigment of value for IVERR in the OTPC_IDR register */
+#define OTPC_IDR_WERR_Pos                     _UINT32_(7)                                          /* (OTPC_IDR) Write Error Interrupt Disable Position */
+#define OTPC_IDR_WERR_Msk                     (_UINT32_(0x1) << OTPC_IDR_WERR_Pos)                 /* (OTPC_IDR) Write Error Interrupt Disable Mask */
+#define OTPC_IDR_WERR(value)                  (OTPC_IDR_WERR_Msk & (_UINT32_(value) << OTPC_IDR_WERR_Pos)) /* Assigment of value for WERR in the OTPC_IDR register */
+#define OTPC_IDR_EOR_Pos                      _UINT32_(8)                                          /* (OTPC_IDR) End Of Read Interrupt Disable Position */
+#define OTPC_IDR_EOR_Msk                      (_UINT32_(0x1) << OTPC_IDR_EOR_Pos)                  /* (OTPC_IDR) End Of Read Interrupt Disable Mask */
+#define OTPC_IDR_EOR(value)                   (OTPC_IDR_EOR_Msk & (_UINT32_(value) << OTPC_IDR_EOR_Pos)) /* Assigment of value for EOR in the OTPC_IDR register */
+#define OTPC_IDR_EOF_Pos                      _UINT32_(9)                                          /* (OTPC_IDR) End Of Flush Interrupt Disable Position */
+#define OTPC_IDR_EOF_Msk                      (_UINT32_(0x1) << OTPC_IDR_EOF_Pos)                  /* (OTPC_IDR) End Of Flush Interrupt Disable Mask */
+#define OTPC_IDR_EOF(value)                   (OTPC_IDR_EOF_Msk & (_UINT32_(value) << OTPC_IDR_EOF_Pos)) /* Assigment of value for EOF in the OTPC_IDR register */
+#define OTPC_IDR_EOH_Pos                      _UINT32_(10)                                         /* (OTPC_IDR) End Of Hide Interrupt Disable Position */
+#define OTPC_IDR_EOH_Msk                      (_UINT32_(0x1) << OTPC_IDR_EOH_Pos)                  /* (OTPC_IDR) End Of Hide Interrupt Disable Mask */
+#define OTPC_IDR_EOH(value)                   (OTPC_IDR_EOH_Msk & (_UINT32_(value) << OTPC_IDR_EOH_Pos)) /* Assigment of value for EOH in the OTPC_IDR register */
+#define OTPC_IDR_EORF_Pos                     _UINT32_(11)                                         /* (OTPC_IDR) End Of Refresh Interrupt Disable Position */
+#define OTPC_IDR_EORF_Msk                     (_UINT32_(0x1) << OTPC_IDR_EORF_Pos)                 /* (OTPC_IDR) End Of Refresh Interrupt Disable Mask */
+#define OTPC_IDR_EORF(value)                  (OTPC_IDR_EORF_Msk & (_UINT32_(value) << OTPC_IDR_EORF_Pos)) /* Assigment of value for EORF in the OTPC_IDR register */
+#define OTPC_IDR_CKERR_Pos                    _UINT32_(12)                                         /* (OTPC_IDR) Checksum Check Error Interrupt Disable Position */
+#define OTPC_IDR_CKERR_Msk                    (_UINT32_(0x1) << OTPC_IDR_CKERR_Pos)                /* (OTPC_IDR) Checksum Check Error Interrupt Disable Mask */
+#define OTPC_IDR_CKERR(value)                 (OTPC_IDR_CKERR_Msk & (_UINT32_(value) << OTPC_IDR_CKERR_Pos)) /* Assigment of value for CKERR in the OTPC_IDR register */
+#define OTPC_IDR_COERR_Pos                    _UINT32_(13)                                         /* (OTPC_IDR) Corruption Error Interrupt Disable Position */
+#define OTPC_IDR_COERR_Msk                    (_UINT32_(0x1) << OTPC_IDR_COERR_Pos)                /* (OTPC_IDR) Corruption Error Interrupt Disable Mask */
+#define OTPC_IDR_COERR(value)                 (OTPC_IDR_COERR_Msk & (_UINT32_(value) << OTPC_IDR_COERR_Pos)) /* Assigment of value for COERR in the OTPC_IDR register */
+#define OTPC_IDR_HDERR_Pos                    _UINT32_(14)                                         /* (OTPC_IDR) Hide Error Interrupt Disable Position */
+#define OTPC_IDR_HDERR_Msk                    (_UINT32_(0x1) << OTPC_IDR_HDERR_Pos)                /* (OTPC_IDR) Hide Error Interrupt Disable Mask */
+#define OTPC_IDR_HDERR(value)                 (OTPC_IDR_HDERR_Msk & (_UINT32_(value) << OTPC_IDR_HDERR_Pos)) /* Assigment of value for HDERR in the OTPC_IDR register */
+#define OTPC_IDR_KBERR_Pos                    _UINT32_(16)                                         /* (OTPC_IDR) Key Bus Error Interrupt Disable Position */
+#define OTPC_IDR_KBERR_Msk                    (_UINT32_(0x1) << OTPC_IDR_KBERR_Pos)                /* (OTPC_IDR) Key Bus Error Interrupt Disable Mask */
+#define OTPC_IDR_KBERR(value)                 (OTPC_IDR_KBERR_Msk & (_UINT32_(value) << OTPC_IDR_KBERR_Pos)) /* Assigment of value for KBERR in the OTPC_IDR register */
+#define OTPC_IDR_SECE_Pos                     _UINT32_(28)                                         /* (OTPC_IDR) Security and/or Safety Event Interrupt Disable Position */
+#define OTPC_IDR_SECE_Msk                     (_UINT32_(0x1) << OTPC_IDR_SECE_Pos)                 /* (OTPC_IDR) Security and/or Safety Event Interrupt Disable Mask */
+#define OTPC_IDR_SECE(value)                  (OTPC_IDR_SECE_Msk & (_UINT32_(value) << OTPC_IDR_SECE_Pos)) /* Assigment of value for SECE in the OTPC_IDR register */
+#define OTPC_IDR_Msk                          _UINT32_(0x10017FFF)                                 /* (OTPC_IDR) Register Mask  */
 
 
 /* -------- OTPC_IMR : (OTPC Offset: 0x18) ( R/ 32) Interrupt Mask Register -------- */
@@ -483,66 +544,81 @@
 #define OTPC_ISR_Msk                          _UINT32_(0x10017FFF)                                 /* (OTPC_ISR) Register Mask  */
 
 
-/* -------- OTPC_MR : (OTPC Offset: 0x04) (R/W 32) Mode Register -------- */
-#define OTPC_MR_RESETVALUE                    _UINT32_(0x00)                                       /*  (OTPC_MR) Mode Register  Reset Value */
+/* -------- OTPC_HR : (OTPC Offset: 0x20) (R/W 32) Header Register -------- */
+#define OTPC_HR_RESETVALUE                    _UINT32_(0x00)                                       /*  (OTPC_HR) Header Register  Reset Value */
 
-#define OTPC_MR_UHCRRDIS_Pos                  _UINT32_(0)                                          /* (OTPC_MR) User Hardware Configuration Register Read Disable Position */
-#define OTPC_MR_UHCRRDIS_Msk                  (_UINT32_(0x1) << OTPC_MR_UHCRRDIS_Pos)              /* (OTPC_MR) User Hardware Configuration Register Read Disable Mask */
-#define OTPC_MR_UHCRRDIS(value)               (OTPC_MR_UHCRRDIS_Msk & (_UINT32_(value) << OTPC_MR_UHCRRDIS_Pos)) /* Assigment of value for UHCRRDIS in the OTPC_MR register */
-#define   OTPC_MR_UHCRRDIS_0_Val              _UINT32_(0x0)                                        /* (OTPC_MR) The User Hardware Configuration register can be read through the User Interface.  */
-#define   OTPC_MR_UHCRRDIS_1_Val              _UINT32_(0x1)                                        /* (OTPC_MR) The User Hardware Configuration register cannot be read through the User Interface.  */
-#define OTPC_MR_UHCRRDIS_0                    (OTPC_MR_UHCRRDIS_0_Val << OTPC_MR_UHCRRDIS_Pos)     /* (OTPC_MR) The User Hardware Configuration register can be read through the User Interface. Position  */
-#define OTPC_MR_UHCRRDIS_1                    (OTPC_MR_UHCRRDIS_1_Val << OTPC_MR_UHCRRDIS_Pos)     /* (OTPC_MR) The User Hardware Configuration register cannot be read through the User Interface. Position  */
-#define OTPC_MR_NPCKT_Pos                     _UINT32_(4)                                          /* (OTPC_MR) New Packet Position */
-#define OTPC_MR_NPCKT_Msk                     (_UINT32_(0x1) << OTPC_MR_NPCKT_Pos)                 /* (OTPC_MR) New Packet Mask */
-#define OTPC_MR_NPCKT(value)                  (OTPC_MR_NPCKT_Msk & (_UINT32_(value) << OTPC_MR_NPCKT_Pos)) /* Assigment of value for NPCKT in the OTPC_MR register */
-#define   OTPC_MR_NPCKT_0_Val                 _UINT32_(0x0)                                        /* (OTPC_MR) Updates the packet defined at the ADDR address.  */
-#define   OTPC_MR_NPCKT_1_Val                 _UINT32_(0x1)                                        /* (OTPC_MR) Creates a new packet.  */
-#define OTPC_MR_NPCKT_0                       (OTPC_MR_NPCKT_0_Val << OTPC_MR_NPCKT_Pos)           /* (OTPC_MR) Updates the packet defined at the ADDR address. Position  */
-#define OTPC_MR_NPCKT_1                       (OTPC_MR_NPCKT_1_Val << OTPC_MR_NPCKT_Pos)           /* (OTPC_MR) Creates a new packet. Position  */
-#define OTPC_MR_EMUL_Pos                      _UINT32_(7)                                          /* (OTPC_MR) Emulation Enable Position */
-#define OTPC_MR_EMUL_Msk                      (_UINT32_(0x1) << OTPC_MR_EMUL_Pos)                  /* (OTPC_MR) Emulation Enable Mask */
-#define OTPC_MR_EMUL(value)                   (OTPC_MR_EMUL_Msk & (_UINT32_(value) << OTPC_MR_EMUL_Pos)) /* Assigment of value for EMUL in the OTPC_MR register */
-#define   OTPC_MR_EMUL_0_Val                  _UINT32_(0x0)                                        /* (OTPC_MR) The Emulation mode of the User area is disabled, all accesses are computed in the OTP memory.  */
-#define   OTPC_MR_EMUL_1_Val                  _UINT32_(0x1)                                        /* (OTPC_MR) The Emulation mode of the User area is enabled, all accesses are computed in the Emulation memory.  */
-#define OTPC_MR_EMUL_0                        (OTPC_MR_EMUL_0_Val << OTPC_MR_EMUL_Pos)             /* (OTPC_MR) The Emulation mode of the User area is disabled, all accesses are computed in the OTP memory. Position  */
-#define OTPC_MR_EMUL_1                        (OTPC_MR_EMUL_1_Val << OTPC_MR_EMUL_Pos)             /* (OTPC_MR) The Emulation mode of the User area is enabled, all accesses are computed in the Emulation memory. Position  */
-#define OTPC_MR_RDDIS_Pos                     _UINT32_(8)                                          /* (OTPC_MR) Read Disable Position */
-#define OTPC_MR_RDDIS_Msk                     (_UINT32_(0x1) << OTPC_MR_RDDIS_Pos)                 /* (OTPC_MR) Read Disable Mask */
-#define OTPC_MR_RDDIS(value)                  (OTPC_MR_RDDIS_Msk & (_UINT32_(value) << OTPC_MR_RDDIS_Pos)) /* Assigment of value for RDDIS in the OTPC_MR register */
-#define   OTPC_MR_RDDIS_0_Val                 _UINT32_(0x0)                                        /* (OTPC_MR) The read capability of the OTPC_HR and OTPC_DR registers are enabled.  */
-#define   OTPC_MR_RDDIS_1_Val                 _UINT32_(0x1)                                        /* (OTPC_MR) The read capability of the OTPC_HR and OTPC_DR registers are disabled. In case of read, the returned value is 0.  */
-#define OTPC_MR_RDDIS_0                       (OTPC_MR_RDDIS_0_Val << OTPC_MR_RDDIS_Pos)           /* (OTPC_MR) The read capability of the OTPC_HR and OTPC_DR registers are enabled. Position  */
-#define OTPC_MR_RDDIS_1                       (OTPC_MR_RDDIS_1_Val << OTPC_MR_RDDIS_Pos)           /* (OTPC_MR) The read capability of the OTPC_HR and OTPC_DR registers are disabled. In case of read, the returned value is 0. Position  */
-#define OTPC_MR_WRDIS_Pos                     _UINT32_(9)                                          /* (OTPC_MR) Write Disable Position */
-#define OTPC_MR_WRDIS_Msk                     (_UINT32_(0x1) << OTPC_MR_WRDIS_Pos)                 /* (OTPC_MR) Write Disable Mask */
-#define OTPC_MR_WRDIS(value)                  (OTPC_MR_WRDIS_Msk & (_UINT32_(value) << OTPC_MR_WRDIS_Pos)) /* Assigment of value for WRDIS in the OTPC_MR register */
-#define   OTPC_MR_WRDIS_0_Val                 _UINT32_(0x0)                                        /* (OTPC_MR) The write capability of the OTPC_DR register is enabled.  */
-#define   OTPC_MR_WRDIS_1_Val                 _UINT32_(0x1)                                        /* (OTPC_MR) The write capability of the OTPC_DR register is disabled.  */
-#define OTPC_MR_WRDIS_0                       (OTPC_MR_WRDIS_0_Val << OTPC_MR_WRDIS_Pos)           /* (OTPC_MR) The write capability of the OTPC_DR register is enabled. Position  */
-#define OTPC_MR_WRDIS_1                       (OTPC_MR_WRDIS_1_Val << OTPC_MR_WRDIS_Pos)           /* (OTPC_MR) The write capability of the OTPC_DR register is disabled. Position  */
-#define OTPC_MR_KBDST_Pos                     _UINT32_(12)                                         /* (OTPC_MR) Key Bus Destination Position */
-#define OTPC_MR_KBDST_Msk                     (_UINT32_(0x3) << OTPC_MR_KBDST_Pos)                 /* (OTPC_MR) Key Bus Destination Mask */
-#define OTPC_MR_KBDST(value)                  (OTPC_MR_KBDST_Msk & (_UINT32_(value) << OTPC_MR_KBDST_Pos)) /* Assigment of value for KBDST in the OTPC_MR register */
-#define   OTPC_MR_KBDST_NONE_Val              _UINT32_(0x0)                                        /* (OTPC_MR) No destination selected (no transfer can occur).  */
-#define   OTPC_MR_KBDST_AES_Val               _UINT32_(0x1)                                        /* (OTPC_MR) The AES is the destination of the key transfer.  */
-#define   OTPC_MR_KBDST_TZAESB_Val            _UINT32_(0x2)                                        /* (OTPC_MR) The TrustZone AES Bridge is the destination of the key transfer.  */
-#define   OTPC_MR_KBDST_TDES_Val              _UINT32_(0x3)                                        /* (OTPC_MR) The TDES is the destination of the key transfer.  */
-#define OTPC_MR_KBDST_NONE                    (OTPC_MR_KBDST_NONE_Val << OTPC_MR_KBDST_Pos)        /* (OTPC_MR) No destination selected (no transfer can occur). Position  */
-#define OTPC_MR_KBDST_AES                     (OTPC_MR_KBDST_AES_Val << OTPC_MR_KBDST_Pos)         /* (OTPC_MR) The AES is the destination of the key transfer. Position  */
-#define OTPC_MR_KBDST_TZAESB                  (OTPC_MR_KBDST_TZAESB_Val << OTPC_MR_KBDST_Pos)      /* (OTPC_MR) The TrustZone AES Bridge is the destination of the key transfer. Position  */
-#define OTPC_MR_KBDST_TDES                    (OTPC_MR_KBDST_TDES_Val << OTPC_MR_KBDST_Pos)        /* (OTPC_MR) The TDES is the destination of the key transfer. Position  */
-#define OTPC_MR_LOCK_Pos                      _UINT32_(15)                                         /* (OTPC_MR) Lock Register Position */
-#define OTPC_MR_LOCK_Msk                      (_UINT32_(0x1) << OTPC_MR_LOCK_Pos)                  /* (OTPC_MR) Lock Register Mask */
-#define OTPC_MR_LOCK(value)                   (OTPC_MR_LOCK_Msk & (_UINT32_(value) << OTPC_MR_LOCK_Pos)) /* Assigment of value for LOCK in the OTPC_MR register */
-#define   OTPC_MR_LOCK_0_Val                  _UINT32_(0x0)                                        /* (OTPC_MR) The OTPC_MR register is unlocked; write access changes its value.  */
-#define   OTPC_MR_LOCK_1_Val                  _UINT32_(0x1)                                        /* (OTPC_MR) The OTPC_MR register is locked; write access does not change its value.  */
-#define OTPC_MR_LOCK_0                        (OTPC_MR_LOCK_0_Val << OTPC_MR_LOCK_Pos)             /* (OTPC_MR) The OTPC_MR register is unlocked; write access changes its value. Position  */
-#define OTPC_MR_LOCK_1                        (OTPC_MR_LOCK_1_Val << OTPC_MR_LOCK_Pos)             /* (OTPC_MR) The OTPC_MR register is locked; write access does not change its value. Position  */
-#define OTPC_MR_ADDR_Pos                      _UINT32_(16)                                         /* (OTPC_MR) Address Position */
-#define OTPC_MR_ADDR_Msk                      (_UINT32_(0xFFFF) << OTPC_MR_ADDR_Pos)               /* (OTPC_MR) Address Mask */
-#define OTPC_MR_ADDR(value)                   (OTPC_MR_ADDR_Msk & (_UINT32_(value) << OTPC_MR_ADDR_Pos)) /* Assigment of value for ADDR in the OTPC_MR register */
-#define OTPC_MR_Msk                           _UINT32_(0xFFFFB391)                                 /* (OTPC_MR) Register Mask  */
+#define OTPC_HR_PACKET_Pos                    _UINT32_(0)                                          /* (OTPC_HR) Packet Type Position */
+#define OTPC_HR_PACKET_Msk                    (_UINT32_(0x7) << OTPC_HR_PACKET_Pos)                /* (OTPC_HR) Packet Type Mask */
+#define OTPC_HR_PACKET(value)                 (OTPC_HR_PACKET_Msk & (_UINT32_(value) << OTPC_HR_PACKET_Pos)) /* Assigment of value for PACKET in the OTPC_HR register */
+#define   OTPC_HR_PACKET_REGULAR_Val          _UINT32_(0x1)                                        /* (OTPC_HR) Regular packet accessible through the User Interface  */
+#define   OTPC_HR_PACKET_KEY_Val              _UINT32_(0x2)                                        /* (OTPC_HR) Key packet accessible only through the Key Buses  */
+#define   OTPC_HR_PACKET_BOOT_CONFIGURATION_Val _UINT32_(0x3)                                        /* (OTPC_HR) Boot Configuration packet  */
+#define   OTPC_HR_PACKET_SECURE_BOOT_CONFIGURATION_Val _UINT32_(0x4)                                        /* (OTPC_HR) Secure Boot Configuration packet  */
+#define   OTPC_HR_PACKET_HARDWARE_CONFIGURATION_Val _UINT32_(0x5)                                        /* (OTPC_HR) Hardware Configuration packet  */
+#define   OTPC_HR_PACKET_CUSTOM_Val           _UINT32_(0x6)                                        /* (OTPC_HR) Custom packet  */
+#define OTPC_HR_PACKET_REGULAR                (OTPC_HR_PACKET_REGULAR_Val << OTPC_HR_PACKET_Pos)   /* (OTPC_HR) Regular packet accessible through the User Interface Position  */
+#define OTPC_HR_PACKET_KEY                    (OTPC_HR_PACKET_KEY_Val << OTPC_HR_PACKET_Pos)       /* (OTPC_HR) Key packet accessible only through the Key Buses Position  */
+#define OTPC_HR_PACKET_BOOT_CONFIGURATION     (OTPC_HR_PACKET_BOOT_CONFIGURATION_Val << OTPC_HR_PACKET_Pos) /* (OTPC_HR) Boot Configuration packet Position  */
+#define OTPC_HR_PACKET_SECURE_BOOT_CONFIGURATION (OTPC_HR_PACKET_SECURE_BOOT_CONFIGURATION_Val << OTPC_HR_PACKET_Pos) /* (OTPC_HR) Secure Boot Configuration packet Position  */
+#define OTPC_HR_PACKET_HARDWARE_CONFIGURATION (OTPC_HR_PACKET_HARDWARE_CONFIGURATION_Val << OTPC_HR_PACKET_Pos) /* (OTPC_HR) Hardware Configuration packet Position  */
+#define OTPC_HR_PACKET_CUSTOM                 (OTPC_HR_PACKET_CUSTOM_Val << OTPC_HR_PACKET_Pos)    /* (OTPC_HR) Custom packet Position  */
+#define OTPC_HR_LOCK_Pos                      _UINT32_(3)                                          /* (OTPC_HR) Lock Status Position */
+#define OTPC_HR_LOCK_Msk                      (_UINT32_(0x1) << OTPC_HR_LOCK_Pos)                  /* (OTPC_HR) Lock Status Mask */
+#define OTPC_HR_LOCK(value)                   (OTPC_HR_LOCK_Msk & (_UINT32_(value) << OTPC_HR_LOCK_Pos)) /* Assigment of value for LOCK in the OTPC_HR register */
+#define   OTPC_HR_LOCK_0_Val                  _UINT32_(0x0)                                        /* (OTPC_HR) The packet is not locked.  */
+#define   OTPC_HR_LOCK_1_Val                  _UINT32_(0x1)                                        /* (OTPC_HR) The packet is locked.  */
+#define OTPC_HR_LOCK_0                        (OTPC_HR_LOCK_0_Val << OTPC_HR_LOCK_Pos)             /* (OTPC_HR) The packet is not locked. Position  */
+#define OTPC_HR_LOCK_1                        (OTPC_HR_LOCK_1_Val << OTPC_HR_LOCK_Pos)             /* (OTPC_HR) The packet is locked. Position  */
+#define OTPC_HR_INVLD_Pos                     _UINT32_(4)                                          /* (OTPC_HR) Invalid Status Position */
+#define OTPC_HR_INVLD_Msk                     (_UINT32_(0x3) << OTPC_HR_INVLD_Pos)                 /* (OTPC_HR) Invalid Status Mask */
+#define OTPC_HR_INVLD(value)                  (OTPC_HR_INVLD_Msk & (_UINT32_(value) << OTPC_HR_INVLD_Pos)) /* Assigment of value for INVLD in the OTPC_HR register */
+#define OTPC_HR_SECURE_Pos                    _UINT32_(6)                                          /* (OTPC_HR) Secure Packet Position */
+#define OTPC_HR_SECURE_Msk                    (_UINT32_(0x1) << OTPC_HR_SECURE_Pos)                /* (OTPC_HR) Secure Packet Mask */
+#define OTPC_HR_SECURE(value)                 (OTPC_HR_SECURE_Msk & (_UINT32_(value) << OTPC_HR_SECURE_Pos)) /* Assigment of value for SECURE in the OTPC_HR register */
+#define   OTPC_HR_SECURE_0_Val                _UINT32_(0x0)                                        /* (OTPC_HR) The packet is not part of the secure world.  */
+#define   OTPC_HR_SECURE_1_Val                _UINT32_(0x1)                                        /* (OTPC_HR) The packet is part of the secure world.  */
+#define OTPC_HR_SECURE_0                      (OTPC_HR_SECURE_0_Val << OTPC_HR_SECURE_Pos)         /* (OTPC_HR) The packet is not part of the secure world. Position  */
+#define OTPC_HR_SECURE_1                      (OTPC_HR_SECURE_1_Val << OTPC_HR_SECURE_Pos)         /* (OTPC_HR) The packet is part of the secure world. Position  */
+#define OTPC_HR_ONE_Pos                       _UINT32_(7)                                          /* (OTPC_HR) One Position */
+#define OTPC_HR_ONE_Msk                       (_UINT32_(0x1) << OTPC_HR_ONE_Pos)                   /* (OTPC_HR) One Mask */
+#define OTPC_HR_ONE(value)                    (OTPC_HR_ONE_Msk & (_UINT32_(value) << OTPC_HR_ONE_Pos)) /* Assigment of value for ONE in the OTPC_HR register */
+#define OTPC_HR_SIZE_Pos                      _UINT32_(8)                                          /* (OTPC_HR) Packet Size Position */
+#define OTPC_HR_SIZE_Msk                      (_UINT32_(0xFF) << OTPC_HR_SIZE_Pos)                 /* (OTPC_HR) Packet Size Mask */
+#define OTPC_HR_SIZE(value)                   (OTPC_HR_SIZE_Msk & (_UINT32_(value) << OTPC_HR_SIZE_Pos)) /* Assigment of value for SIZE in the OTPC_HR register */
+#define OTPC_HR_CHECKSUM_Pos                  _UINT32_(16)                                         /* (OTPC_HR) Packet Checksum Position */
+#define OTPC_HR_CHECKSUM_Msk                  (_UINT32_(0xFFFF) << OTPC_HR_CHECKSUM_Pos)           /* (OTPC_HR) Packet Checksum Mask */
+#define OTPC_HR_CHECKSUM(value)               (OTPC_HR_CHECKSUM_Msk & (_UINT32_(value) << OTPC_HR_CHECKSUM_Pos)) /* Assigment of value for CHECKSUM in the OTPC_HR register */
+#define OTPC_HR_Msk                           _UINT32_(0xFFFFFFFF)                                 /* (OTPC_HR) Register Mask  */
+
+
+/* -------- OTPC_DR : (OTPC Offset: 0x24) (R/W 32) Data Register -------- */
+#define OTPC_DR_RESETVALUE                    _UINT32_(0x00)                                       /*  (OTPC_DR) Data Register  Reset Value */
+
+#define OTPC_DR_DATA_Pos                      _UINT32_(0)                                          /* (OTPC_DR) Packet Data Position */
+#define OTPC_DR_DATA_Msk                      (_UINT32_(0xFFFFFFFF) << OTPC_DR_DATA_Pos)           /* (OTPC_DR) Packet Data Mask */
+#define OTPC_DR_DATA(value)                   (OTPC_DR_DATA_Msk & (_UINT32_(value) << OTPC_DR_DATA_Pos)) /* Assigment of value for DATA in the OTPC_DR register */
+#define OTPC_DR_Msk                           _UINT32_(0xFFFFFFFF)                                 /* (OTPC_DR) Register Mask  */
+
+
+/* -------- OTPC_BAR : (OTPC Offset: 0x30) ( R/ 32) Boot Addresses Register -------- */
+#define OTPC_BAR_RESETVALUE                   _UINT32_(0x00)                                       /*  (OTPC_BAR) Boot Addresses Register  Reset Value */
+
+#define OTPC_BAR_BCADDR_Pos                   _UINT32_(0)                                          /* (OTPC_BAR) Boot Configuration Address Position */
+#define OTPC_BAR_BCADDR_Msk                   (_UINT32_(0xFFFF) << OTPC_BAR_BCADDR_Pos)            /* (OTPC_BAR) Boot Configuration Address Mask */
+#define OTPC_BAR_BCADDR(value)                (OTPC_BAR_BCADDR_Msk & (_UINT32_(value) << OTPC_BAR_BCADDR_Pos)) /* Assigment of value for BCADDR in the OTPC_BAR register */
+#define OTPC_BAR_SBCADDR_Pos                  _UINT32_(16)                                         /* (OTPC_BAR) Secure Boot Configuration Address Position */
+#define OTPC_BAR_SBCADDR_Msk                  (_UINT32_(0xFFFF) << OTPC_BAR_SBCADDR_Pos)           /* (OTPC_BAR) Secure Boot Configuration Address Mask */
+#define OTPC_BAR_SBCADDR(value)               (OTPC_BAR_SBCADDR_Msk & (_UINT32_(value) << OTPC_BAR_SBCADDR_Pos)) /* Assigment of value for SBCADDR in the OTPC_BAR register */
+#define OTPC_BAR_Msk                          _UINT32_(0xFFFFFFFF)                                 /* (OTPC_BAR) Register Mask  */
+
+
+/* -------- OTPC_CAR : (OTPC Offset: 0x34) ( R/ 32) Custom Address Register -------- */
+#define OTPC_CAR_RESETVALUE                   _UINT32_(0x00)                                       /*  (OTPC_CAR) Custom Address Register  Reset Value */
+
+#define OTPC_CAR_CADDR_Pos                    _UINT32_(0)                                          /* (OTPC_CAR) Custom Address Position */
+#define OTPC_CAR_CADDR_Msk                    (_UINT32_(0xFFFF) << OTPC_CAR_CADDR_Pos)             /* (OTPC_CAR) Custom Address Mask */
+#define OTPC_CAR_CADDR(value)                 (OTPC_CAR_CADDR_Msk & (_UINT32_(value) << OTPC_CAR_CADDR_Pos)) /* Assigment of value for CADDR in the OTPC_CAR register */
+#define OTPC_CAR_Msk                          _UINT32_(0x0000FFFF)                                 /* (OTPC_CAR) Register Mask  */
 
 
 /* -------- OTPC_SCAR : (OTPC Offset: 0x38) ( R/ 32) Secure Custom Address Register -------- */
@@ -552,82 +628,6 @@
 #define OTPC_SCAR_SCADDR_Msk                  (_UINT32_(0xFFFF) << OTPC_SCAR_SCADDR_Pos)           /* (OTPC_SCAR) Secure Custom Address Mask */
 #define OTPC_SCAR_SCADDR(value)               (OTPC_SCAR_SCADDR_Msk & (_UINT32_(value) << OTPC_SCAR_SCADDR_Pos)) /* Assigment of value for SCADDR in the OTPC_SCAR register */
 #define OTPC_SCAR_Msk                         _UINT32_(0x0000FFFF)                                 /* (OTPC_SCAR) Register Mask  */
-
-
-/* -------- OTPC_SR : (OTPC Offset: 0x0C) ( R/ 32) Status Register -------- */
-#define OTPC_SR_RESETVALUE                    _UINT32_(0x00)                                       /*  (OTPC_SR) Status Register  Reset Value */
-
-#define OTPC_SR_PGM_Pos                       _UINT32_(0)                                          /* (OTPC_SR) Programming On-Going Position */
-#define OTPC_SR_PGM_Msk                       (_UINT32_(0x1) << OTPC_SR_PGM_Pos)                   /* (OTPC_SR) Programming On-Going Mask */
-#define OTPC_SR_PGM(value)                    (OTPC_SR_PGM_Msk & (_UINT32_(value) << OTPC_SR_PGM_Pos)) /* Assigment of value for PGM in the OTPC_SR register */
-#define   OTPC_SR_PGM_0_Val                   _UINT32_(0x0)                                        /* (OTPC_SR) No packet programming is on-going.  */
-#define   OTPC_SR_PGM_1_Val                   _UINT32_(0x1)                                        /* (OTPC_SR) A packet programming is running.  */
-#define OTPC_SR_PGM_0                         (OTPC_SR_PGM_0_Val << OTPC_SR_PGM_Pos)               /* (OTPC_SR) No packet programming is on-going. Position  */
-#define OTPC_SR_PGM_1                         (OTPC_SR_PGM_1_Val << OTPC_SR_PGM_Pos)               /* (OTPC_SR) A packet programming is running. Position  */
-#define OTPC_SR_LOCK_Pos                      _UINT32_(1)                                          /* (OTPC_SR) Lock On-Going Position */
-#define OTPC_SR_LOCK_Msk                      (_UINT32_(0x1) << OTPC_SR_LOCK_Pos)                  /* (OTPC_SR) Lock On-Going Mask */
-#define OTPC_SR_LOCK(value)                   (OTPC_SR_LOCK_Msk & (_UINT32_(value) << OTPC_SR_LOCK_Pos)) /* Assigment of value for LOCK in the OTPC_SR register */
-#define   OTPC_SR_LOCK_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) No packet locking is on-going.  */
-#define   OTPC_SR_LOCK_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) A packet locking is running.  */
-#define OTPC_SR_LOCK_0                        (OTPC_SR_LOCK_0_Val << OTPC_SR_LOCK_Pos)             /* (OTPC_SR) No packet locking is on-going. Position  */
-#define OTPC_SR_LOCK_1                        (OTPC_SR_LOCK_1_Val << OTPC_SR_LOCK_Pos)             /* (OTPC_SR) A packet locking is running. Position  */
-#define OTPC_SR_INVLD_Pos                     _UINT32_(2)                                          /* (OTPC_SR) Invalidation On-Going Position */
-#define OTPC_SR_INVLD_Msk                     (_UINT32_(0x1) << OTPC_SR_INVLD_Pos)                 /* (OTPC_SR) Invalidation On-Going Mask */
-#define OTPC_SR_INVLD(value)                  (OTPC_SR_INVLD_Msk & (_UINT32_(value) << OTPC_SR_INVLD_Pos)) /* Assigment of value for INVLD in the OTPC_SR register */
-#define   OTPC_SR_INVLD_0_Val                 _UINT32_(0x0)                                        /* (OTPC_SR) No packet invalidation is on-going.  */
-#define   OTPC_SR_INVLD_1_Val                 _UINT32_(0x1)                                        /* (OTPC_SR) A packet invalidation is running.  */
-#define OTPC_SR_INVLD_0                       (OTPC_SR_INVLD_0_Val << OTPC_SR_INVLD_Pos)           /* (OTPC_SR) No packet invalidation is on-going. Position  */
-#define OTPC_SR_INVLD_1                       (OTPC_SR_INVLD_1_Val << OTPC_SR_INVLD_Pos)           /* (OTPC_SR) A packet invalidation is running. Position  */
-#define OTPC_SR_EMUL_Pos                      _UINT32_(3)                                          /* (OTPC_SR) Emulation Enabled Position */
-#define OTPC_SR_EMUL_Msk                      (_UINT32_(0x1) << OTPC_SR_EMUL_Pos)                  /* (OTPC_SR) Emulation Enabled Mask */
-#define OTPC_SR_EMUL(value)                   (OTPC_SR_EMUL_Msk & (_UINT32_(value) << OTPC_SR_EMUL_Pos)) /* Assigment of value for EMUL in the OTPC_SR register */
-#define   OTPC_SR_EMUL_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) The User area Emulation mode is disabled.  */
-#define   OTPC_SR_EMUL_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) The User area Emulation mode is enabled.  */
-#define OTPC_SR_EMUL_0                        (OTPC_SR_EMUL_0_Val << OTPC_SR_EMUL_Pos)             /* (OTPC_SR) The User area Emulation mode is disabled. Position  */
-#define OTPC_SR_EMUL_1                        (OTPC_SR_EMUL_1_Val << OTPC_SR_EMUL_Pos)             /* (OTPC_SR) The User area Emulation mode is enabled. Position  */
-#define OTPC_SR_MKBB_Pos                      _UINT32_(4)                                          /* (OTPC_SR) Master Key Bus Busy Position */
-#define OTPC_SR_MKBB_Msk                      (_UINT32_(0x1) << OTPC_SR_MKBB_Pos)                  /* (OTPC_SR) Master Key Bus Busy Mask */
-#define OTPC_SR_MKBB(value)                   (OTPC_SR_MKBB_Msk & (_UINT32_(value) << OTPC_SR_MKBB_Pos)) /* Assigment of value for MKBB in the OTPC_SR register */
-#define   OTPC_SR_MKBB_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) The Master Key bus is not busy.  */
-#define   OTPC_SR_MKBB_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) The Master Key bus is busy.  */
-#define OTPC_SR_MKBB_0                        (OTPC_SR_MKBB_0_Val << OTPC_SR_MKBB_Pos)             /* (OTPC_SR) The Master Key bus is not busy. Position  */
-#define OTPC_SR_MKBB_1                        (OTPC_SR_MKBB_1_Val << OTPC_SR_MKBB_Pos)             /* (OTPC_SR) The Master Key bus is busy. Position  */
-#define OTPC_SR_SKBB_Pos                      _UINT32_(5)                                          /* (OTPC_SR) Slave Key Bus Busy Position */
-#define OTPC_SR_SKBB_Msk                      (_UINT32_(0x1) << OTPC_SR_SKBB_Pos)                  /* (OTPC_SR) Slave Key Bus Busy Mask */
-#define OTPC_SR_SKBB(value)                   (OTPC_SR_SKBB_Msk & (_UINT32_(value) << OTPC_SR_SKBB_Pos)) /* Assigment of value for SKBB in the OTPC_SR register */
-#define   OTPC_SR_SKBB_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) The Slave Key bus is not busy.  */
-#define   OTPC_SR_SKBB_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) The Slave Key bus is busy.  */
-#define OTPC_SR_SKBB_0                        (OTPC_SR_SKBB_0_Val << OTPC_SR_SKBB_Pos)             /* (OTPC_SR) The Slave Key bus is not busy. Position  */
-#define OTPC_SR_SKBB_1                        (OTPC_SR_SKBB_1_Val << OTPC_SR_SKBB_Pos)             /* (OTPC_SR) The Slave Key bus is busy. Position  */
-#define OTPC_SR_READ_Pos                      _UINT32_(6)                                          /* (OTPC_SR) Read On-Going Position */
-#define OTPC_SR_READ_Msk                      (_UINT32_(0x1) << OTPC_SR_READ_Pos)                  /* (OTPC_SR) Read On-Going Mask */
-#define OTPC_SR_READ(value)                   (OTPC_SR_READ_Msk & (_UINT32_(value) << OTPC_SR_READ_Pos)) /* Assigment of value for READ in the OTPC_SR register */
-#define   OTPC_SR_READ_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) No packet read is on-going.  */
-#define   OTPC_SR_READ_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) A packet read is running.  */
-#define OTPC_SR_READ_0                        (OTPC_SR_READ_0_Val << OTPC_SR_READ_Pos)             /* (OTPC_SR) No packet read is on-going. Position  */
-#define OTPC_SR_READ_1                        (OTPC_SR_READ_1_Val << OTPC_SR_READ_Pos)             /* (OTPC_SR) A packet read is running. Position  */
-#define OTPC_SR_FLUSH_Pos                     _UINT32_(7)                                          /* (OTPC_SR) Flush On-Going Position */
-#define OTPC_SR_FLUSH_Msk                     (_UINT32_(0x1) << OTPC_SR_FLUSH_Pos)                 /* (OTPC_SR) Flush On-Going Mask */
-#define OTPC_SR_FLUSH(value)                  (OTPC_SR_FLUSH_Msk & (_UINT32_(value) << OTPC_SR_FLUSH_Pos)) /* Assigment of value for FLUSH in the OTPC_SR register */
-#define   OTPC_SR_FLUSH_0_Val                 _UINT32_(0x0)                                        /* (OTPC_SR) The temporary registers are not flushed.  */
-#define   OTPC_SR_FLUSH_1_Val                 _UINT32_(0x1)                                        /* (OTPC_SR) The temporary registers are being flushed.  */
-#define OTPC_SR_FLUSH_0                       (OTPC_SR_FLUSH_0_Val << OTPC_SR_FLUSH_Pos)           /* (OTPC_SR) The temporary registers are not flushed. Position  */
-#define OTPC_SR_FLUSH_1                       (OTPC_SR_FLUSH_1_Val << OTPC_SR_FLUSH_Pos)           /* (OTPC_SR) The temporary registers are being flushed. Position  */
-#define OTPC_SR_HIDE_Pos                      _UINT32_(8)                                          /* (OTPC_SR) Hiding On-Going Position */
-#define OTPC_SR_HIDE_Msk                      (_UINT32_(0x1) << OTPC_SR_HIDE_Pos)                  /* (OTPC_SR) Hiding On-Going Mask */
-#define OTPC_SR_HIDE(value)                   (OTPC_SR_HIDE_Msk & (_UINT32_(value) << OTPC_SR_HIDE_Pos)) /* Assigment of value for HIDE in the OTPC_SR register */
-#define   OTPC_SR_HIDE_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) No packet hiding is on-going.  */
-#define   OTPC_SR_HIDE_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) A packet hiding is on-going.  */
-#define OTPC_SR_HIDE_0                        (OTPC_SR_HIDE_0_Val << OTPC_SR_HIDE_Pos)             /* (OTPC_SR) No packet hiding is on-going. Position  */
-#define OTPC_SR_HIDE_1                        (OTPC_SR_HIDE_1_Val << OTPC_SR_HIDE_Pos)             /* (OTPC_SR) A packet hiding is on-going. Position  */
-#define OTPC_SR_ONEF_Pos                      _UINT32_(9)                                          /* (OTPC_SR) One Found Position */
-#define OTPC_SR_ONEF_Msk                      (_UINT32_(0x1) << OTPC_SR_ONEF_Pos)                  /* (OTPC_SR) One Found Mask */
-#define OTPC_SR_ONEF(value)                   (OTPC_SR_ONEF_Msk & (_UINT32_(value) << OTPC_SR_ONEF_Pos)) /* Assigment of value for ONEF in the OTPC_SR register */
-#define   OTPC_SR_ONEF_0_Val                  _UINT32_(0x0)                                        /* (OTPC_SR) No bit at '1' found during the last packet read.  */
-#define   OTPC_SR_ONEF_1_Val                  _UINT32_(0x1)                                        /* (OTPC_SR) At least one '1' has been found during the last packet read.  */
-#define OTPC_SR_ONEF_0                        (OTPC_SR_ONEF_0_Val << OTPC_SR_ONEF_Pos)             /* (OTPC_SR) No bit at '1' found during the last packet read. Position  */
-#define OTPC_SR_ONEF_1                        (OTPC_SR_ONEF_1_Val << OTPC_SR_ONEF_Pos)             /* (OTPC_SR) At least one '1' has been found during the last packet read. Position  */
-#define OTPC_SR_Msk                           _UINT32_(0x000003FF)                                 /* (OTPC_SR) Register Mask  */
 
 
 /* -------- OTPC_UHC0R : (OTPC Offset: 0x50) ( R/ 32) User Hardware Configuration 0 Register -------- */
@@ -903,19 +903,19 @@
 
 
 /** \brief OTPC register offsets definitions */
-#define OTPC_AR_REG_OFST               _UINT32_(0x08)      /* (OTPC_AR) Address Register Offset */
-#define OTPC_BAR_REG_OFST              _UINT32_(0x30)      /* (OTPC_BAR) Boot Addresses Register Offset */
-#define OTPC_CAR_REG_OFST              _UINT32_(0x34)      /* (OTPC_CAR) Custom Address Register Offset */
 #define OTPC_CR_REG_OFST               _UINT32_(0x00)      /* (OTPC_CR) Control Register Offset */
-#define OTPC_DR_REG_OFST               _UINT32_(0x24)      /* (OTPC_DR) Data Register Offset */
-#define OTPC_HR_REG_OFST               _UINT32_(0x20)      /* (OTPC_HR) Header Register Offset */
-#define OTPC_IDR_REG_OFST              _UINT32_(0x14)      /* (OTPC_IDR) Interrupt Disable Register Offset */
+#define OTPC_MR_REG_OFST               _UINT32_(0x04)      /* (OTPC_MR) Mode Register Offset */
+#define OTPC_AR_REG_OFST               _UINT32_(0x08)      /* (OTPC_AR) Address Register Offset */
+#define OTPC_SR_REG_OFST               _UINT32_(0x0C)      /* (OTPC_SR) Status Register Offset */
 #define OTPC_IER_REG_OFST              _UINT32_(0x10)      /* (OTPC_IER) Interrupt Enable Register Offset */
+#define OTPC_IDR_REG_OFST              _UINT32_(0x14)      /* (OTPC_IDR) Interrupt Disable Register Offset */
 #define OTPC_IMR_REG_OFST              _UINT32_(0x18)      /* (OTPC_IMR) Interrupt Mask Register Offset */
 #define OTPC_ISR_REG_OFST              _UINT32_(0x1C)      /* (OTPC_ISR) Interrupt Status Register Offset */
-#define OTPC_MR_REG_OFST               _UINT32_(0x04)      /* (OTPC_MR) Mode Register Offset */
+#define OTPC_HR_REG_OFST               _UINT32_(0x20)      /* (OTPC_HR) Header Register Offset */
+#define OTPC_DR_REG_OFST               _UINT32_(0x24)      /* (OTPC_DR) Data Register Offset */
+#define OTPC_BAR_REG_OFST              _UINT32_(0x30)      /* (OTPC_BAR) Boot Addresses Register Offset */
+#define OTPC_CAR_REG_OFST              _UINT32_(0x34)      /* (OTPC_CAR) Custom Address Register Offset */
 #define OTPC_SCAR_REG_OFST             _UINT32_(0x38)      /* (OTPC_SCAR) Secure Custom Address Register Offset */
-#define OTPC_SR_REG_OFST               _UINT32_(0x0C)      /* (OTPC_SR) Status Register Offset */
 #define OTPC_UHC0R_REG_OFST            _UINT32_(0x50)      /* (OTPC_UHC0R) User Hardware Configuration 0 Register Offset */
 #define OTPC_UHC1R_REG_OFST            _UINT32_(0x54)      /* (OTPC_UHC1R) User Hardware Configuration 1 Register Offset */
 #define OTPC_UID0R_REG_OFST            _UINT32_(0x60)      /* (OTPC_UID0R) Product UID 0 Register Offset */

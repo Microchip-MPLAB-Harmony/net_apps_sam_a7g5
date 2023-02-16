@@ -511,7 +511,6 @@ void SYS_Initialize ( void* data )
 
 
 
-
     FLEXCOM3_USART_Initialize();
 
  

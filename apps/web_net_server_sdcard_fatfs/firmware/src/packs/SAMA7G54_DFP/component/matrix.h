@@ -1,7 +1,7 @@
 /*
  * Component description for MATRIX
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-11-02T14:25:51Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_MATRIX_COMPONENT_H_
 #define _SAMA7G_MATRIX_COMPONENT_H_
 
@@ -225,133 +225,147 @@
 #define MATRIX_MCFG_Msk                       _UINT32_(0x00000007)                                 /* (MATRIX_MCFG) Register Mask  */
 
 
-/* -------- MATRIX_MEAR : (MATRIX Offset: 0x160) ( R/ 32) Master x Error Address Register -------- */
-#define MATRIX_MEAR_RESETVALUE                _UINT32_(0x00)                                       /*  (MATRIX_MEAR) Master x Error Address Register  Reset Value */
+/* -------- MATRIX_SCFG : (MATRIX Offset: 0x40) (R/W 32) Slave Configuration Register x -------- */
+#define MATRIX_SCFG_RESETVALUE                _UINT32_(0x1FF)                                      /*  (MATRIX_SCFG) Slave Configuration Register x  Reset Value */
 
-#define MATRIX_MEAR_ERRADD_Pos                _UINT32_(0)                                          /* (MATRIX_MEAR) Master Error Address Position */
-#define MATRIX_MEAR_ERRADD_Msk                (_UINT32_(0xFFFFFFFF) << MATRIX_MEAR_ERRADD_Pos)     /* (MATRIX_MEAR) Master Error Address Mask */
-#define MATRIX_MEAR_ERRADD(value)             (MATRIX_MEAR_ERRADD_Msk & (_UINT32_(value) << MATRIX_MEAR_ERRADD_Pos)) /* Assigment of value for ERRADD in the MATRIX_MEAR register */
-#define MATRIX_MEAR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (MATRIX_MEAR) Register Mask  */
+#define MATRIX_SCFG_SLOT_CYCLE_Pos            _UINT32_(0)                                          /* (MATRIX_SCFG) Maximum Bus Grant Duration for Masters Position */
+#define MATRIX_SCFG_SLOT_CYCLE_Msk            (_UINT32_(0x1FF) << MATRIX_SCFG_SLOT_CYCLE_Pos)      /* (MATRIX_SCFG) Maximum Bus Grant Duration for Masters Mask */
+#define MATRIX_SCFG_SLOT_CYCLE(value)         (MATRIX_SCFG_SLOT_CYCLE_Msk & (_UINT32_(value) << MATRIX_SCFG_SLOT_CYCLE_Pos)) /* Assigment of value for SLOT_CYCLE in the MATRIX_SCFG register */
+#define MATRIX_SCFG_DEFMSTR_TYPE_Pos          _UINT32_(16)                                         /* (MATRIX_SCFG) Default Master Type Position */
+#define MATRIX_SCFG_DEFMSTR_TYPE_Msk          (_UINT32_(0x3) << MATRIX_SCFG_DEFMSTR_TYPE_Pos)      /* (MATRIX_SCFG) Default Master Type Mask */
+#define MATRIX_SCFG_DEFMSTR_TYPE(value)       (MATRIX_SCFG_DEFMSTR_TYPE_Msk & (_UINT32_(value) << MATRIX_SCFG_DEFMSTR_TYPE_Pos)) /* Assigment of value for DEFMSTR_TYPE in the MATRIX_SCFG register */
+#define   MATRIX_SCFG_DEFMSTR_TYPE_NONE_Val   _UINT32_(0x0)                                        /* (MATRIX_SCFG) No Default Master-At the end of the current slave access, if no other master request is pending, the slave is disconnected from all masters. This results in a one clock cycle latency for the first access of a burst transfer or for a single access.  */
+#define   MATRIX_SCFG_DEFMSTR_TYPE_LAST_Val   _UINT32_(0x1)                                        /* (MATRIX_SCFG) Last Default Master-At the end of the current slave access, if no other master request is pending, the slave stays connected to the last master having accessed it. This results in not having one clock cycle latency when the last master tries to access the slave again.  */
+#define   MATRIX_SCFG_DEFMSTR_TYPE_FIXED_Val  _UINT32_(0x2)                                        /* (MATRIX_SCFG) Fixed Default Master-At the end of the current slave access, if no other master request is pending, the slave connects to the fixed master the number that has been written in the FIXED_DEFMSTR field. This results in not having one clock cycle latency when the fixed master tries to access the slave again.  */
+#define MATRIX_SCFG_DEFMSTR_TYPE_NONE         (MATRIX_SCFG_DEFMSTR_TYPE_NONE_Val << MATRIX_SCFG_DEFMSTR_TYPE_Pos) /* (MATRIX_SCFG) No Default Master-At the end of the current slave access, if no other master request is pending, the slave is disconnected from all masters. This results in a one clock cycle latency for the first access of a burst transfer or for a single access. Position  */
+#define MATRIX_SCFG_DEFMSTR_TYPE_LAST         (MATRIX_SCFG_DEFMSTR_TYPE_LAST_Val << MATRIX_SCFG_DEFMSTR_TYPE_Pos) /* (MATRIX_SCFG) Last Default Master-At the end of the current slave access, if no other master request is pending, the slave stays connected to the last master having accessed it. This results in not having one clock cycle latency when the last master tries to access the slave again. Position  */
+#define MATRIX_SCFG_DEFMSTR_TYPE_FIXED        (MATRIX_SCFG_DEFMSTR_TYPE_FIXED_Val << MATRIX_SCFG_DEFMSTR_TYPE_Pos) /* (MATRIX_SCFG) Fixed Default Master-At the end of the current slave access, if no other master request is pending, the slave connects to the fixed master the number that has been written in the FIXED_DEFMSTR field. This results in not having one clock cycle latency when the fixed master tries to access the slave again. Position  */
+#define MATRIX_SCFG_FIXED_DEFMSTR_Pos         _UINT32_(18)                                         /* (MATRIX_SCFG) Fixed Default Master Position */
+#define MATRIX_SCFG_FIXED_DEFMSTR_Msk         (_UINT32_(0xF) << MATRIX_SCFG_FIXED_DEFMSTR_Pos)     /* (MATRIX_SCFG) Fixed Default Master Mask */
+#define MATRIX_SCFG_FIXED_DEFMSTR(value)      (MATRIX_SCFG_FIXED_DEFMSTR_Msk & (_UINT32_(value) << MATRIX_SCFG_FIXED_DEFMSTR_Pos)) /* Assigment of value for FIXED_DEFMSTR in the MATRIX_SCFG register */
+#define MATRIX_SCFG_Msk                       _UINT32_(0x003F01FF)                                 /* (MATRIX_SCFG) Register Mask  */
 
 
-/* -------- MATRIX_MEIDR : (MATRIX Offset: 0x154) ( /W 32) Master Error Interrupt Disable Register -------- */
-#define MATRIX_MEIDR_MERR0_Pos                _UINT32_(0)                                          /* (MATRIX_MEIDR) Master 0 Access Error Position */
-#define MATRIX_MEIDR_MERR0_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR0_Pos)            /* (MATRIX_MEIDR) Master 0 Access Error Mask */
-#define MATRIX_MEIDR_MERR0(value)             (MATRIX_MEIDR_MERR0_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR0_Pos)) /* Assigment of value for MERR0 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR0_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR0_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR0_0                  (MATRIX_MEIDR_MERR0_0_Val << MATRIX_MEIDR_MERR0_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR0_1                  (MATRIX_MEIDR_MERR0_1_Val << MATRIX_MEIDR_MERR0_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR1_Pos                _UINT32_(1)                                          /* (MATRIX_MEIDR) Master 1 Access Error Position */
-#define MATRIX_MEIDR_MERR1_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR1_Pos)            /* (MATRIX_MEIDR) Master 1 Access Error Mask */
-#define MATRIX_MEIDR_MERR1(value)             (MATRIX_MEIDR_MERR1_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR1_Pos)) /* Assigment of value for MERR1 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR1_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR1_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR1_0                  (MATRIX_MEIDR_MERR1_0_Val << MATRIX_MEIDR_MERR1_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR1_1                  (MATRIX_MEIDR_MERR1_1_Val << MATRIX_MEIDR_MERR1_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR2_Pos                _UINT32_(2)                                          /* (MATRIX_MEIDR) Master 2 Access Error Position */
-#define MATRIX_MEIDR_MERR2_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR2_Pos)            /* (MATRIX_MEIDR) Master 2 Access Error Mask */
-#define MATRIX_MEIDR_MERR2(value)             (MATRIX_MEIDR_MERR2_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR2_Pos)) /* Assigment of value for MERR2 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR2_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR2_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR2_0                  (MATRIX_MEIDR_MERR2_0_Val << MATRIX_MEIDR_MERR2_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR2_1                  (MATRIX_MEIDR_MERR2_1_Val << MATRIX_MEIDR_MERR2_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR3_Pos                _UINT32_(3)                                          /* (MATRIX_MEIDR) Master 3 Access Error Position */
-#define MATRIX_MEIDR_MERR3_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR3_Pos)            /* (MATRIX_MEIDR) Master 3 Access Error Mask */
-#define MATRIX_MEIDR_MERR3(value)             (MATRIX_MEIDR_MERR3_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR3_Pos)) /* Assigment of value for MERR3 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR3_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR3_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR3_0                  (MATRIX_MEIDR_MERR3_0_Val << MATRIX_MEIDR_MERR3_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR3_1                  (MATRIX_MEIDR_MERR3_1_Val << MATRIX_MEIDR_MERR3_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR4_Pos                _UINT32_(4)                                          /* (MATRIX_MEIDR) Master 4 Access Error Position */
-#define MATRIX_MEIDR_MERR4_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR4_Pos)            /* (MATRIX_MEIDR) Master 4 Access Error Mask */
-#define MATRIX_MEIDR_MERR4(value)             (MATRIX_MEIDR_MERR4_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR4_Pos)) /* Assigment of value for MERR4 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR4_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR4_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR4_0                  (MATRIX_MEIDR_MERR4_0_Val << MATRIX_MEIDR_MERR4_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR4_1                  (MATRIX_MEIDR_MERR4_1_Val << MATRIX_MEIDR_MERR4_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR5_Pos                _UINT32_(5)                                          /* (MATRIX_MEIDR) Master 5 Access Error Position */
-#define MATRIX_MEIDR_MERR5_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR5_Pos)            /* (MATRIX_MEIDR) Master 5 Access Error Mask */
-#define MATRIX_MEIDR_MERR5(value)             (MATRIX_MEIDR_MERR5_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR5_Pos)) /* Assigment of value for MERR5 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR5_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR5_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR5_0                  (MATRIX_MEIDR_MERR5_0_Val << MATRIX_MEIDR_MERR5_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR5_1                  (MATRIX_MEIDR_MERR5_1_Val << MATRIX_MEIDR_MERR5_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR6_Pos                _UINT32_(6)                                          /* (MATRIX_MEIDR) Master 6 Access Error Position */
-#define MATRIX_MEIDR_MERR6_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR6_Pos)            /* (MATRIX_MEIDR) Master 6 Access Error Mask */
-#define MATRIX_MEIDR_MERR6(value)             (MATRIX_MEIDR_MERR6_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR6_Pos)) /* Assigment of value for MERR6 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR6_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR6_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR6_0                  (MATRIX_MEIDR_MERR6_0_Val << MATRIX_MEIDR_MERR6_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR6_1                  (MATRIX_MEIDR_MERR6_1_Val << MATRIX_MEIDR_MERR6_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR7_Pos                _UINT32_(7)                                          /* (MATRIX_MEIDR) Master 7 Access Error Position */
-#define MATRIX_MEIDR_MERR7_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR7_Pos)            /* (MATRIX_MEIDR) Master 7 Access Error Mask */
-#define MATRIX_MEIDR_MERR7(value)             (MATRIX_MEIDR_MERR7_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR7_Pos)) /* Assigment of value for MERR7 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR7_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR7_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR7_0                  (MATRIX_MEIDR_MERR7_0_Val << MATRIX_MEIDR_MERR7_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR7_1                  (MATRIX_MEIDR_MERR7_1_Val << MATRIX_MEIDR_MERR7_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR8_Pos                _UINT32_(8)                                          /* (MATRIX_MEIDR) Master 8 Access Error Position */
-#define MATRIX_MEIDR_MERR8_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR8_Pos)            /* (MATRIX_MEIDR) Master 8 Access Error Mask */
-#define MATRIX_MEIDR_MERR8(value)             (MATRIX_MEIDR_MERR8_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR8_Pos)) /* Assigment of value for MERR8 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR8_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR8_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR8_0                  (MATRIX_MEIDR_MERR8_0_Val << MATRIX_MEIDR_MERR8_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR8_1                  (MATRIX_MEIDR_MERR8_1_Val << MATRIX_MEIDR_MERR8_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR9_Pos                _UINT32_(9)                                          /* (MATRIX_MEIDR) Master 9 Access Error Position */
-#define MATRIX_MEIDR_MERR9_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR9_Pos)            /* (MATRIX_MEIDR) Master 9 Access Error Mask */
-#define MATRIX_MEIDR_MERR9(value)             (MATRIX_MEIDR_MERR9_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR9_Pos)) /* Assigment of value for MERR9 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR9_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR9_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR9_0                  (MATRIX_MEIDR_MERR9_0_Val << MATRIX_MEIDR_MERR9_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR9_1                  (MATRIX_MEIDR_MERR9_1_Val << MATRIX_MEIDR_MERR9_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR10_Pos               _UINT32_(10)                                         /* (MATRIX_MEIDR) Master 10 Access Error Position */
-#define MATRIX_MEIDR_MERR10_Msk               (_UINT32_(0x1) << MATRIX_MEIDR_MERR10_Pos)           /* (MATRIX_MEIDR) Master 10 Access Error Mask */
-#define MATRIX_MEIDR_MERR10(value)            (MATRIX_MEIDR_MERR10_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR10_Pos)) /* Assigment of value for MERR10 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR10_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR10_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR10_0                 (MATRIX_MEIDR_MERR10_0_Val << MATRIX_MEIDR_MERR10_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR10_1                 (MATRIX_MEIDR_MERR10_1_Val << MATRIX_MEIDR_MERR10_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR11_Pos               _UINT32_(11)                                         /* (MATRIX_MEIDR) Master 11 Access Error Position */
-#define MATRIX_MEIDR_MERR11_Msk               (_UINT32_(0x1) << MATRIX_MEIDR_MERR11_Pos)           /* (MATRIX_MEIDR) Master 11 Access Error Mask */
-#define MATRIX_MEIDR_MERR11(value)            (MATRIX_MEIDR_MERR11_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR11_Pos)) /* Assigment of value for MERR11 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR11_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR11_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR11_0                 (MATRIX_MEIDR_MERR11_0_Val << MATRIX_MEIDR_MERR11_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR11_1                 (MATRIX_MEIDR_MERR11_1_Val << MATRIX_MEIDR_MERR11_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR12_Pos               _UINT32_(12)                                         /* (MATRIX_MEIDR) Master 12 Access Error Position */
-#define MATRIX_MEIDR_MERR12_Msk               (_UINT32_(0x1) << MATRIX_MEIDR_MERR12_Pos)           /* (MATRIX_MEIDR) Master 12 Access Error Mask */
-#define MATRIX_MEIDR_MERR12(value)            (MATRIX_MEIDR_MERR12_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR12_Pos)) /* Assigment of value for MERR12 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR12_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR12_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR12_0                 (MATRIX_MEIDR_MERR12_0_Val << MATRIX_MEIDR_MERR12_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR12_1                 (MATRIX_MEIDR_MERR12_1_Val << MATRIX_MEIDR_MERR12_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR13_Pos               _UINT32_(13)                                         /* (MATRIX_MEIDR) Master 13 Access Error Position */
-#define MATRIX_MEIDR_MERR13_Msk               (_UINT32_(0x1) << MATRIX_MEIDR_MERR13_Pos)           /* (MATRIX_MEIDR) Master 13 Access Error Mask */
-#define MATRIX_MEIDR_MERR13(value)            (MATRIX_MEIDR_MERR13_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR13_Pos)) /* Assigment of value for MERR13 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR13_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR13_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR13_0                 (MATRIX_MEIDR_MERR13_0_Val << MATRIX_MEIDR_MERR13_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR13_1                 (MATRIX_MEIDR_MERR13_1_Val << MATRIX_MEIDR_MERR13_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR14_Pos               _UINT32_(14)                                         /* (MATRIX_MEIDR) Master 14 Access Error Position */
-#define MATRIX_MEIDR_MERR14_Msk               (_UINT32_(0x1) << MATRIX_MEIDR_MERR14_Pos)           /* (MATRIX_MEIDR) Master 14 Access Error Mask */
-#define MATRIX_MEIDR_MERR14(value)            (MATRIX_MEIDR_MERR14_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR14_Pos)) /* Assigment of value for MERR14 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR14_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR14_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR14_0                 (MATRIX_MEIDR_MERR14_0_Val << MATRIX_MEIDR_MERR14_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR14_1                 (MATRIX_MEIDR_MERR14_1_Val << MATRIX_MEIDR_MERR14_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_MERR15_Pos               _UINT32_(15)                                         /* (MATRIX_MEIDR) Master 15 Access Error Position */
-#define MATRIX_MEIDR_MERR15_Msk               (_UINT32_(0x1) << MATRIX_MEIDR_MERR15_Pos)           /* (MATRIX_MEIDR) Master 15 Access Error Mask */
-#define MATRIX_MEIDR_MERR15(value)            (MATRIX_MEIDR_MERR15_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR15_Pos)) /* Assigment of value for MERR15 in the MATRIX_MEIDR register */
-#define   MATRIX_MEIDR_MERR15_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
-#define   MATRIX_MEIDR_MERR15_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
-#define MATRIX_MEIDR_MERR15_0                 (MATRIX_MEIDR_MERR15_0_Val << MATRIX_MEIDR_MERR15_Pos) /* (MATRIX_MEIDR) No effect. Position  */
-#define MATRIX_MEIDR_MERR15_1                 (MATRIX_MEIDR_MERR15_1_Val << MATRIX_MEIDR_MERR15_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
-#define MATRIX_MEIDR_Msk                      _UINT32_(0x0000FFFF)                                 /* (MATRIX_MEIDR) Register Mask  */
+/* -------- MATRIX_MRCR : (MATRIX Offset: 0x100) (R/W 32) Master Remap Control Register -------- */
+#define MATRIX_MRCR_RESETVALUE                _UINT32_(0x00)                                       /*  (MATRIX_MRCR) Master Remap Control Register  Reset Value */
 
-#define MATRIX_MEIDR_MERR_Pos                 _UINT32_(0)                                          /* (MATRIX_MEIDR Position) Master x5 Access Error */
-#define MATRIX_MEIDR_MERR_Msk                 (_UINT32_(0xFFFF) << MATRIX_MEIDR_MERR_Pos)          /* (MATRIX_MEIDR Mask) MERR */
-#define MATRIX_MEIDR_MERR(value)              (MATRIX_MEIDR_MERR_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR_Pos)) 
+#define MATRIX_MRCR_RCB0_Pos                  _UINT32_(0)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 0 Position */
+#define MATRIX_MRCR_RCB0_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB0_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 0 Mask */
+#define MATRIX_MRCR_RCB0(value)               (MATRIX_MRCR_RCB0_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB0_Pos)) /* Assigment of value for RCB0 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB0_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB0_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB0_0                    (MATRIX_MRCR_RCB0_0_Val << MATRIX_MRCR_RCB0_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB0_1                    (MATRIX_MRCR_RCB0_1_Val << MATRIX_MRCR_RCB0_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB1_Pos                  _UINT32_(1)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 1 Position */
+#define MATRIX_MRCR_RCB1_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB1_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 1 Mask */
+#define MATRIX_MRCR_RCB1(value)               (MATRIX_MRCR_RCB1_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB1_Pos)) /* Assigment of value for RCB1 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB1_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB1_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB1_0                    (MATRIX_MRCR_RCB1_0_Val << MATRIX_MRCR_RCB1_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB1_1                    (MATRIX_MRCR_RCB1_1_Val << MATRIX_MRCR_RCB1_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB2_Pos                  _UINT32_(2)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 2 Position */
+#define MATRIX_MRCR_RCB2_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB2_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 2 Mask */
+#define MATRIX_MRCR_RCB2(value)               (MATRIX_MRCR_RCB2_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB2_Pos)) /* Assigment of value for RCB2 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB2_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB2_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB2_0                    (MATRIX_MRCR_RCB2_0_Val << MATRIX_MRCR_RCB2_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB2_1                    (MATRIX_MRCR_RCB2_1_Val << MATRIX_MRCR_RCB2_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB3_Pos                  _UINT32_(3)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 3 Position */
+#define MATRIX_MRCR_RCB3_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB3_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 3 Mask */
+#define MATRIX_MRCR_RCB3(value)               (MATRIX_MRCR_RCB3_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB3_Pos)) /* Assigment of value for RCB3 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB3_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB3_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB3_0                    (MATRIX_MRCR_RCB3_0_Val << MATRIX_MRCR_RCB3_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB3_1                    (MATRIX_MRCR_RCB3_1_Val << MATRIX_MRCR_RCB3_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB4_Pos                  _UINT32_(4)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 4 Position */
+#define MATRIX_MRCR_RCB4_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB4_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 4 Mask */
+#define MATRIX_MRCR_RCB4(value)               (MATRIX_MRCR_RCB4_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB4_Pos)) /* Assigment of value for RCB4 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB4_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB4_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB4_0                    (MATRIX_MRCR_RCB4_0_Val << MATRIX_MRCR_RCB4_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB4_1                    (MATRIX_MRCR_RCB4_1_Val << MATRIX_MRCR_RCB4_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB5_Pos                  _UINT32_(5)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 5 Position */
+#define MATRIX_MRCR_RCB5_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB5_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 5 Mask */
+#define MATRIX_MRCR_RCB5(value)               (MATRIX_MRCR_RCB5_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB5_Pos)) /* Assigment of value for RCB5 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB5_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB5_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB5_0                    (MATRIX_MRCR_RCB5_0_Val << MATRIX_MRCR_RCB5_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB5_1                    (MATRIX_MRCR_RCB5_1_Val << MATRIX_MRCR_RCB5_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB6_Pos                  _UINT32_(6)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 6 Position */
+#define MATRIX_MRCR_RCB6_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB6_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 6 Mask */
+#define MATRIX_MRCR_RCB6(value)               (MATRIX_MRCR_RCB6_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB6_Pos)) /* Assigment of value for RCB6 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB6_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB6_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB6_0                    (MATRIX_MRCR_RCB6_0_Val << MATRIX_MRCR_RCB6_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB6_1                    (MATRIX_MRCR_RCB6_1_Val << MATRIX_MRCR_RCB6_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB7_Pos                  _UINT32_(7)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 7 Position */
+#define MATRIX_MRCR_RCB7_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB7_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 7 Mask */
+#define MATRIX_MRCR_RCB7(value)               (MATRIX_MRCR_RCB7_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB7_Pos)) /* Assigment of value for RCB7 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB7_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB7_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB7_0                    (MATRIX_MRCR_RCB7_0_Val << MATRIX_MRCR_RCB7_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB7_1                    (MATRIX_MRCR_RCB7_1_Val << MATRIX_MRCR_RCB7_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB8_Pos                  _UINT32_(8)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 8 Position */
+#define MATRIX_MRCR_RCB8_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB8_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 8 Mask */
+#define MATRIX_MRCR_RCB8(value)               (MATRIX_MRCR_RCB8_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB8_Pos)) /* Assigment of value for RCB8 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB8_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB8_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB8_0                    (MATRIX_MRCR_RCB8_0_Val << MATRIX_MRCR_RCB8_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB8_1                    (MATRIX_MRCR_RCB8_1_Val << MATRIX_MRCR_RCB8_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB9_Pos                  _UINT32_(9)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 9 Position */
+#define MATRIX_MRCR_RCB9_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB9_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 9 Mask */
+#define MATRIX_MRCR_RCB9(value)               (MATRIX_MRCR_RCB9_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB9_Pos)) /* Assigment of value for RCB9 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB9_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB9_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB9_0                    (MATRIX_MRCR_RCB9_0_Val << MATRIX_MRCR_RCB9_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB9_1                    (MATRIX_MRCR_RCB9_1_Val << MATRIX_MRCR_RCB9_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB10_Pos                 _UINT32_(10)                                         /* (MATRIX_MRCR) Remap Command Bit for Master 10 Position */
+#define MATRIX_MRCR_RCB10_Msk                 (_UINT32_(0x1) << MATRIX_MRCR_RCB10_Pos)             /* (MATRIX_MRCR) Remap Command Bit for Master 10 Mask */
+#define MATRIX_MRCR_RCB10(value)              (MATRIX_MRCR_RCB10_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB10_Pos)) /* Assigment of value for RCB10 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB10_0_Val             _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB10_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB10_0                   (MATRIX_MRCR_RCB10_0_Val << MATRIX_MRCR_RCB10_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB10_1                   (MATRIX_MRCR_RCB10_1_Val << MATRIX_MRCR_RCB10_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB11_Pos                 _UINT32_(11)                                         /* (MATRIX_MRCR) Remap Command Bit for Master 11 Position */
+#define MATRIX_MRCR_RCB11_Msk                 (_UINT32_(0x1) << MATRIX_MRCR_RCB11_Pos)             /* (MATRIX_MRCR) Remap Command Bit for Master 11 Mask */
+#define MATRIX_MRCR_RCB11(value)              (MATRIX_MRCR_RCB11_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB11_Pos)) /* Assigment of value for RCB11 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB11_0_Val             _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB11_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB11_0                   (MATRIX_MRCR_RCB11_0_Val << MATRIX_MRCR_RCB11_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB11_1                   (MATRIX_MRCR_RCB11_1_Val << MATRIX_MRCR_RCB11_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB12_Pos                 _UINT32_(12)                                         /* (MATRIX_MRCR) Remap Command Bit for Master 12 Position */
+#define MATRIX_MRCR_RCB12_Msk                 (_UINT32_(0x1) << MATRIX_MRCR_RCB12_Pos)             /* (MATRIX_MRCR) Remap Command Bit for Master 12 Mask */
+#define MATRIX_MRCR_RCB12(value)              (MATRIX_MRCR_RCB12_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB12_Pos)) /* Assigment of value for RCB12 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB12_0_Val             _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB12_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB12_0                   (MATRIX_MRCR_RCB12_0_Val << MATRIX_MRCR_RCB12_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB12_1                   (MATRIX_MRCR_RCB12_1_Val << MATRIX_MRCR_RCB12_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB13_Pos                 _UINT32_(13)                                         /* (MATRIX_MRCR) Remap Command Bit for Master 13 Position */
+#define MATRIX_MRCR_RCB13_Msk                 (_UINT32_(0x1) << MATRIX_MRCR_RCB13_Pos)             /* (MATRIX_MRCR) Remap Command Bit for Master 13 Mask */
+#define MATRIX_MRCR_RCB13(value)              (MATRIX_MRCR_RCB13_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB13_Pos)) /* Assigment of value for RCB13 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB13_0_Val             _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB13_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB13_0                   (MATRIX_MRCR_RCB13_0_Val << MATRIX_MRCR_RCB13_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB13_1                   (MATRIX_MRCR_RCB13_1_Val << MATRIX_MRCR_RCB13_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB14_Pos                 _UINT32_(14)                                         /* (MATRIX_MRCR) Remap Command Bit for Master 14 Position */
+#define MATRIX_MRCR_RCB14_Msk                 (_UINT32_(0x1) << MATRIX_MRCR_RCB14_Pos)             /* (MATRIX_MRCR) Remap Command Bit for Master 14 Mask */
+#define MATRIX_MRCR_RCB14(value)              (MATRIX_MRCR_RCB14_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB14_Pos)) /* Assigment of value for RCB14 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB14_0_Val             _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB14_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB14_0                   (MATRIX_MRCR_RCB14_0_Val << MATRIX_MRCR_RCB14_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB14_1                   (MATRIX_MRCR_RCB14_1_Val << MATRIX_MRCR_RCB14_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB15_Pos                 _UINT32_(15)                                         /* (MATRIX_MRCR) Remap Command Bit for Master 15 Position */
+#define MATRIX_MRCR_RCB15_Msk                 (_UINT32_(0x1) << MATRIX_MRCR_RCB15_Pos)             /* (MATRIX_MRCR) Remap Command Bit for Master 15 Mask */
+#define MATRIX_MRCR_RCB15(value)              (MATRIX_MRCR_RCB15_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB15_Pos)) /* Assigment of value for RCB15 in the MATRIX_MRCR register */
+#define   MATRIX_MRCR_RCB15_0_Val             _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
+#define   MATRIX_MRCR_RCB15_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
+#define MATRIX_MRCR_RCB15_0                   (MATRIX_MRCR_RCB15_0_Val << MATRIX_MRCR_RCB15_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_RCB15_1                   (MATRIX_MRCR_RCB15_1_Val << MATRIX_MRCR_RCB15_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
+#define MATRIX_MRCR_Msk                       _UINT32_(0x0000FFFF)                                 /* (MATRIX_MRCR) Register Mask  */
+
+#define MATRIX_MRCR_RCB_Pos                   _UINT32_(0)                                          /* (MATRIX_MRCR Position) Remap Command Bit for Master x5 */
+#define MATRIX_MRCR_RCB_Msk                   (_UINT32_(0xFFFF) << MATRIX_MRCR_RCB_Pos)            /* (MATRIX_MRCR Mask) RCB */
+#define MATRIX_MRCR_RCB(value)                (MATRIX_MRCR_RCB_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB_Pos)) 
 
 /* -------- MATRIX_MEIER : (MATRIX Offset: 0x150) ( /W 32) Master Error Interrupt Enable Register -------- */
 #define MATRIX_MEIER_MERR0_Pos                _UINT32_(0)                                          /* (MATRIX_MEIER) Master 0 Access Error Position */
@@ -471,6 +485,125 @@
 #define MATRIX_MEIER_MERR_Pos                 _UINT32_(0)                                          /* (MATRIX_MEIER Position) Master x5 Access Error */
 #define MATRIX_MEIER_MERR_Msk                 (_UINT32_(0xFFFF) << MATRIX_MEIER_MERR_Pos)          /* (MATRIX_MEIER Mask) MERR */
 #define MATRIX_MEIER_MERR(value)              (MATRIX_MEIER_MERR_Msk & (_UINT32_(value) << MATRIX_MEIER_MERR_Pos)) 
+
+/* -------- MATRIX_MEIDR : (MATRIX Offset: 0x154) ( /W 32) Master Error Interrupt Disable Register -------- */
+#define MATRIX_MEIDR_MERR0_Pos                _UINT32_(0)                                          /* (MATRIX_MEIDR) Master 0 Access Error Position */
+#define MATRIX_MEIDR_MERR0_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR0_Pos)            /* (MATRIX_MEIDR) Master 0 Access Error Mask */
+#define MATRIX_MEIDR_MERR0(value)             (MATRIX_MEIDR_MERR0_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR0_Pos)) /* Assigment of value for MERR0 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR0_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR0_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR0_0                  (MATRIX_MEIDR_MERR0_0_Val << MATRIX_MEIDR_MERR0_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR0_1                  (MATRIX_MEIDR_MERR0_1_Val << MATRIX_MEIDR_MERR0_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR1_Pos                _UINT32_(1)                                          /* (MATRIX_MEIDR) Master 1 Access Error Position */
+#define MATRIX_MEIDR_MERR1_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR1_Pos)            /* (MATRIX_MEIDR) Master 1 Access Error Mask */
+#define MATRIX_MEIDR_MERR1(value)             (MATRIX_MEIDR_MERR1_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR1_Pos)) /* Assigment of value for MERR1 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR1_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR1_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR1_0                  (MATRIX_MEIDR_MERR1_0_Val << MATRIX_MEIDR_MERR1_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR1_1                  (MATRIX_MEIDR_MERR1_1_Val << MATRIX_MEIDR_MERR1_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR2_Pos                _UINT32_(2)                                          /* (MATRIX_MEIDR) Master 2 Access Error Position */
+#define MATRIX_MEIDR_MERR2_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR2_Pos)            /* (MATRIX_MEIDR) Master 2 Access Error Mask */
+#define MATRIX_MEIDR_MERR2(value)             (MATRIX_MEIDR_MERR2_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR2_Pos)) /* Assigment of value for MERR2 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR2_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR2_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR2_0                  (MATRIX_MEIDR_MERR2_0_Val << MATRIX_MEIDR_MERR2_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR2_1                  (MATRIX_MEIDR_MERR2_1_Val << MATRIX_MEIDR_MERR2_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR3_Pos                _UINT32_(3)                                          /* (MATRIX_MEIDR) Master 3 Access Error Position */
+#define MATRIX_MEIDR_MERR3_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR3_Pos)            /* (MATRIX_MEIDR) Master 3 Access Error Mask */
+#define MATRIX_MEIDR_MERR3(value)             (MATRIX_MEIDR_MERR3_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR3_Pos)) /* Assigment of value for MERR3 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR3_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR3_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR3_0                  (MATRIX_MEIDR_MERR3_0_Val << MATRIX_MEIDR_MERR3_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR3_1                  (MATRIX_MEIDR_MERR3_1_Val << MATRIX_MEIDR_MERR3_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR4_Pos                _UINT32_(4)                                          /* (MATRIX_MEIDR) Master 4 Access Error Position */
+#define MATRIX_MEIDR_MERR4_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR4_Pos)            /* (MATRIX_MEIDR) Master 4 Access Error Mask */
+#define MATRIX_MEIDR_MERR4(value)             (MATRIX_MEIDR_MERR4_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR4_Pos)) /* Assigment of value for MERR4 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR4_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR4_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR4_0                  (MATRIX_MEIDR_MERR4_0_Val << MATRIX_MEIDR_MERR4_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR4_1                  (MATRIX_MEIDR_MERR4_1_Val << MATRIX_MEIDR_MERR4_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR5_Pos                _UINT32_(5)                                          /* (MATRIX_MEIDR) Master 5 Access Error Position */
+#define MATRIX_MEIDR_MERR5_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR5_Pos)            /* (MATRIX_MEIDR) Master 5 Access Error Mask */
+#define MATRIX_MEIDR_MERR5(value)             (MATRIX_MEIDR_MERR5_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR5_Pos)) /* Assigment of value for MERR5 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR5_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR5_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR5_0                  (MATRIX_MEIDR_MERR5_0_Val << MATRIX_MEIDR_MERR5_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR5_1                  (MATRIX_MEIDR_MERR5_1_Val << MATRIX_MEIDR_MERR5_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR6_Pos                _UINT32_(6)                                          /* (MATRIX_MEIDR) Master 6 Access Error Position */
+#define MATRIX_MEIDR_MERR6_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR6_Pos)            /* (MATRIX_MEIDR) Master 6 Access Error Mask */
+#define MATRIX_MEIDR_MERR6(value)             (MATRIX_MEIDR_MERR6_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR6_Pos)) /* Assigment of value for MERR6 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR6_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR6_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR6_0                  (MATRIX_MEIDR_MERR6_0_Val << MATRIX_MEIDR_MERR6_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR6_1                  (MATRIX_MEIDR_MERR6_1_Val << MATRIX_MEIDR_MERR6_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR7_Pos                _UINT32_(7)                                          /* (MATRIX_MEIDR) Master 7 Access Error Position */
+#define MATRIX_MEIDR_MERR7_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR7_Pos)            /* (MATRIX_MEIDR) Master 7 Access Error Mask */
+#define MATRIX_MEIDR_MERR7(value)             (MATRIX_MEIDR_MERR7_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR7_Pos)) /* Assigment of value for MERR7 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR7_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR7_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR7_0                  (MATRIX_MEIDR_MERR7_0_Val << MATRIX_MEIDR_MERR7_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR7_1                  (MATRIX_MEIDR_MERR7_1_Val << MATRIX_MEIDR_MERR7_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR8_Pos                _UINT32_(8)                                          /* (MATRIX_MEIDR) Master 8 Access Error Position */
+#define MATRIX_MEIDR_MERR8_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR8_Pos)            /* (MATRIX_MEIDR) Master 8 Access Error Mask */
+#define MATRIX_MEIDR_MERR8(value)             (MATRIX_MEIDR_MERR8_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR8_Pos)) /* Assigment of value for MERR8 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR8_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR8_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR8_0                  (MATRIX_MEIDR_MERR8_0_Val << MATRIX_MEIDR_MERR8_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR8_1                  (MATRIX_MEIDR_MERR8_1_Val << MATRIX_MEIDR_MERR8_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR9_Pos                _UINT32_(9)                                          /* (MATRIX_MEIDR) Master 9 Access Error Position */
+#define MATRIX_MEIDR_MERR9_Msk                (_UINT32_(0x1) << MATRIX_MEIDR_MERR9_Pos)            /* (MATRIX_MEIDR) Master 9 Access Error Mask */
+#define MATRIX_MEIDR_MERR9(value)             (MATRIX_MEIDR_MERR9_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR9_Pos)) /* Assigment of value for MERR9 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR9_0_Val            _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR9_1_Val            _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR9_0                  (MATRIX_MEIDR_MERR9_0_Val << MATRIX_MEIDR_MERR9_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR9_1                  (MATRIX_MEIDR_MERR9_1_Val << MATRIX_MEIDR_MERR9_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR10_Pos               _UINT32_(10)                                         /* (MATRIX_MEIDR) Master 10 Access Error Position */
+#define MATRIX_MEIDR_MERR10_Msk               (_UINT32_(0x1) << MATRIX_MEIDR_MERR10_Pos)           /* (MATRIX_MEIDR) Master 10 Access Error Mask */
+#define MATRIX_MEIDR_MERR10(value)            (MATRIX_MEIDR_MERR10_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR10_Pos)) /* Assigment of value for MERR10 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR10_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR10_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR10_0                 (MATRIX_MEIDR_MERR10_0_Val << MATRIX_MEIDR_MERR10_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR10_1                 (MATRIX_MEIDR_MERR10_1_Val << MATRIX_MEIDR_MERR10_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR11_Pos               _UINT32_(11)                                         /* (MATRIX_MEIDR) Master 11 Access Error Position */
+#define MATRIX_MEIDR_MERR11_Msk               (_UINT32_(0x1) << MATRIX_MEIDR_MERR11_Pos)           /* (MATRIX_MEIDR) Master 11 Access Error Mask */
+#define MATRIX_MEIDR_MERR11(value)            (MATRIX_MEIDR_MERR11_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR11_Pos)) /* Assigment of value for MERR11 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR11_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR11_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR11_0                 (MATRIX_MEIDR_MERR11_0_Val << MATRIX_MEIDR_MERR11_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR11_1                 (MATRIX_MEIDR_MERR11_1_Val << MATRIX_MEIDR_MERR11_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR12_Pos               _UINT32_(12)                                         /* (MATRIX_MEIDR) Master 12 Access Error Position */
+#define MATRIX_MEIDR_MERR12_Msk               (_UINT32_(0x1) << MATRIX_MEIDR_MERR12_Pos)           /* (MATRIX_MEIDR) Master 12 Access Error Mask */
+#define MATRIX_MEIDR_MERR12(value)            (MATRIX_MEIDR_MERR12_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR12_Pos)) /* Assigment of value for MERR12 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR12_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR12_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR12_0                 (MATRIX_MEIDR_MERR12_0_Val << MATRIX_MEIDR_MERR12_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR12_1                 (MATRIX_MEIDR_MERR12_1_Val << MATRIX_MEIDR_MERR12_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR13_Pos               _UINT32_(13)                                         /* (MATRIX_MEIDR) Master 13 Access Error Position */
+#define MATRIX_MEIDR_MERR13_Msk               (_UINT32_(0x1) << MATRIX_MEIDR_MERR13_Pos)           /* (MATRIX_MEIDR) Master 13 Access Error Mask */
+#define MATRIX_MEIDR_MERR13(value)            (MATRIX_MEIDR_MERR13_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR13_Pos)) /* Assigment of value for MERR13 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR13_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR13_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR13_0                 (MATRIX_MEIDR_MERR13_0_Val << MATRIX_MEIDR_MERR13_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR13_1                 (MATRIX_MEIDR_MERR13_1_Val << MATRIX_MEIDR_MERR13_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR14_Pos               _UINT32_(14)                                         /* (MATRIX_MEIDR) Master 14 Access Error Position */
+#define MATRIX_MEIDR_MERR14_Msk               (_UINT32_(0x1) << MATRIX_MEIDR_MERR14_Pos)           /* (MATRIX_MEIDR) Master 14 Access Error Mask */
+#define MATRIX_MEIDR_MERR14(value)            (MATRIX_MEIDR_MERR14_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR14_Pos)) /* Assigment of value for MERR14 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR14_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR14_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR14_0                 (MATRIX_MEIDR_MERR14_0_Val << MATRIX_MEIDR_MERR14_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR14_1                 (MATRIX_MEIDR_MERR14_1_Val << MATRIX_MEIDR_MERR14_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_MERR15_Pos               _UINT32_(15)                                         /* (MATRIX_MEIDR) Master 15 Access Error Position */
+#define MATRIX_MEIDR_MERR15_Msk               (_UINT32_(0x1) << MATRIX_MEIDR_MERR15_Pos)           /* (MATRIX_MEIDR) Master 15 Access Error Mask */
+#define MATRIX_MEIDR_MERR15(value)            (MATRIX_MEIDR_MERR15_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR15_Pos)) /* Assigment of value for MERR15 in the MATRIX_MEIDR register */
+#define   MATRIX_MEIDR_MERR15_0_Val           _UINT32_(0x0)                                        /* (MATRIX_MEIDR) No effect.  */
+#define   MATRIX_MEIDR_MERR15_1_Val           _UINT32_(0x1)                                        /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source.  */
+#define MATRIX_MEIDR_MERR15_0                 (MATRIX_MEIDR_MERR15_0_Val << MATRIX_MEIDR_MERR15_Pos) /* (MATRIX_MEIDR) No effect. Position  */
+#define MATRIX_MEIDR_MERR15_1                 (MATRIX_MEIDR_MERR15_1_Val << MATRIX_MEIDR_MERR15_Pos) /* (MATRIX_MEIDR) Disables Master x Access Error interrupt source. Position  */
+#define MATRIX_MEIDR_Msk                      _UINT32_(0x0000FFFF)                                 /* (MATRIX_MEIDR) Register Mask  */
+
+#define MATRIX_MEIDR_MERR_Pos                 _UINT32_(0)                                          /* (MATRIX_MEIDR Position) Master x5 Access Error */
+#define MATRIX_MEIDR_MERR_Msk                 (_UINT32_(0xFFFF) << MATRIX_MEIDR_MERR_Pos)          /* (MATRIX_MEIDR Mask) MERR */
+#define MATRIX_MEIDR_MERR(value)              (MATRIX_MEIDR_MERR_Msk & (_UINT32_(value) << MATRIX_MEIDR_MERR_Pos)) 
 
 /* -------- MATRIX_MEIMR : (MATRIX Offset: 0x158) ( R/ 32) Master Error Interrupt Mask Register -------- */
 #define MATRIX_MEIMR_RESETVALUE               _UINT32_(0x00)                                       /*  (MATRIX_MEIMR) Master Error Interrupt Mask Register  Reset Value */
@@ -714,437 +847,54 @@
 #define MATRIX_MESR_MERR_Msk                  (_UINT32_(0xFFFF) << MATRIX_MESR_MERR_Pos)           /* (MATRIX_MESR Mask) MERR */
 #define MATRIX_MESR_MERR(value)               (MATRIX_MESR_MERR_Msk & (_UINT32_(value) << MATRIX_MESR_MERR_Pos)) 
 
-/* -------- MATRIX_MRCR : (MATRIX Offset: 0x100) (R/W 32) Master Remap Control Register -------- */
-#define MATRIX_MRCR_RESETVALUE                _UINT32_(0x00)                                       /*  (MATRIX_MRCR) Master Remap Control Register  Reset Value */
+/* -------- MATRIX_MEAR : (MATRIX Offset: 0x160) ( R/ 32) Master x Error Address Register -------- */
+#define MATRIX_MEAR_RESETVALUE                _UINT32_(0x00)                                       /*  (MATRIX_MEAR) Master x Error Address Register  Reset Value */
 
-#define MATRIX_MRCR_RCB0_Pos                  _UINT32_(0)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 0 Position */
-#define MATRIX_MRCR_RCB0_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB0_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 0 Mask */
-#define MATRIX_MRCR_RCB0(value)               (MATRIX_MRCR_RCB0_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB0_Pos)) /* Assigment of value for RCB0 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB0_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB0_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB0_0                    (MATRIX_MRCR_RCB0_0_Val << MATRIX_MRCR_RCB0_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB0_1                    (MATRIX_MRCR_RCB0_1_Val << MATRIX_MRCR_RCB0_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB1_Pos                  _UINT32_(1)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 1 Position */
-#define MATRIX_MRCR_RCB1_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB1_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 1 Mask */
-#define MATRIX_MRCR_RCB1(value)               (MATRIX_MRCR_RCB1_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB1_Pos)) /* Assigment of value for RCB1 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB1_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB1_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB1_0                    (MATRIX_MRCR_RCB1_0_Val << MATRIX_MRCR_RCB1_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB1_1                    (MATRIX_MRCR_RCB1_1_Val << MATRIX_MRCR_RCB1_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB2_Pos                  _UINT32_(2)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 2 Position */
-#define MATRIX_MRCR_RCB2_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB2_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 2 Mask */
-#define MATRIX_MRCR_RCB2(value)               (MATRIX_MRCR_RCB2_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB2_Pos)) /* Assigment of value for RCB2 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB2_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB2_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB2_0                    (MATRIX_MRCR_RCB2_0_Val << MATRIX_MRCR_RCB2_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB2_1                    (MATRIX_MRCR_RCB2_1_Val << MATRIX_MRCR_RCB2_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB3_Pos                  _UINT32_(3)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 3 Position */
-#define MATRIX_MRCR_RCB3_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB3_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 3 Mask */
-#define MATRIX_MRCR_RCB3(value)               (MATRIX_MRCR_RCB3_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB3_Pos)) /* Assigment of value for RCB3 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB3_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB3_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB3_0                    (MATRIX_MRCR_RCB3_0_Val << MATRIX_MRCR_RCB3_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB3_1                    (MATRIX_MRCR_RCB3_1_Val << MATRIX_MRCR_RCB3_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB4_Pos                  _UINT32_(4)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 4 Position */
-#define MATRIX_MRCR_RCB4_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB4_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 4 Mask */
-#define MATRIX_MRCR_RCB4(value)               (MATRIX_MRCR_RCB4_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB4_Pos)) /* Assigment of value for RCB4 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB4_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB4_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB4_0                    (MATRIX_MRCR_RCB4_0_Val << MATRIX_MRCR_RCB4_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB4_1                    (MATRIX_MRCR_RCB4_1_Val << MATRIX_MRCR_RCB4_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB5_Pos                  _UINT32_(5)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 5 Position */
-#define MATRIX_MRCR_RCB5_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB5_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 5 Mask */
-#define MATRIX_MRCR_RCB5(value)               (MATRIX_MRCR_RCB5_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB5_Pos)) /* Assigment of value for RCB5 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB5_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB5_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB5_0                    (MATRIX_MRCR_RCB5_0_Val << MATRIX_MRCR_RCB5_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB5_1                    (MATRIX_MRCR_RCB5_1_Val << MATRIX_MRCR_RCB5_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB6_Pos                  _UINT32_(6)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 6 Position */
-#define MATRIX_MRCR_RCB6_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB6_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 6 Mask */
-#define MATRIX_MRCR_RCB6(value)               (MATRIX_MRCR_RCB6_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB6_Pos)) /* Assigment of value for RCB6 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB6_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB6_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB6_0                    (MATRIX_MRCR_RCB6_0_Val << MATRIX_MRCR_RCB6_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB6_1                    (MATRIX_MRCR_RCB6_1_Val << MATRIX_MRCR_RCB6_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB7_Pos                  _UINT32_(7)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 7 Position */
-#define MATRIX_MRCR_RCB7_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB7_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 7 Mask */
-#define MATRIX_MRCR_RCB7(value)               (MATRIX_MRCR_RCB7_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB7_Pos)) /* Assigment of value for RCB7 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB7_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB7_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB7_0                    (MATRIX_MRCR_RCB7_0_Val << MATRIX_MRCR_RCB7_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB7_1                    (MATRIX_MRCR_RCB7_1_Val << MATRIX_MRCR_RCB7_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB8_Pos                  _UINT32_(8)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 8 Position */
-#define MATRIX_MRCR_RCB8_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB8_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 8 Mask */
-#define MATRIX_MRCR_RCB8(value)               (MATRIX_MRCR_RCB8_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB8_Pos)) /* Assigment of value for RCB8 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB8_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB8_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB8_0                    (MATRIX_MRCR_RCB8_0_Val << MATRIX_MRCR_RCB8_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB8_1                    (MATRIX_MRCR_RCB8_1_Val << MATRIX_MRCR_RCB8_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB9_Pos                  _UINT32_(9)                                          /* (MATRIX_MRCR) Remap Command Bit for Master 9 Position */
-#define MATRIX_MRCR_RCB9_Msk                  (_UINT32_(0x1) << MATRIX_MRCR_RCB9_Pos)              /* (MATRIX_MRCR) Remap Command Bit for Master 9 Mask */
-#define MATRIX_MRCR_RCB9(value)               (MATRIX_MRCR_RCB9_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB9_Pos)) /* Assigment of value for RCB9 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB9_0_Val              _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB9_1_Val              _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB9_0                    (MATRIX_MRCR_RCB9_0_Val << MATRIX_MRCR_RCB9_Pos)     /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB9_1                    (MATRIX_MRCR_RCB9_1_Val << MATRIX_MRCR_RCB9_Pos)     /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB10_Pos                 _UINT32_(10)                                         /* (MATRIX_MRCR) Remap Command Bit for Master 10 Position */
-#define MATRIX_MRCR_RCB10_Msk                 (_UINT32_(0x1) << MATRIX_MRCR_RCB10_Pos)             /* (MATRIX_MRCR) Remap Command Bit for Master 10 Mask */
-#define MATRIX_MRCR_RCB10(value)              (MATRIX_MRCR_RCB10_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB10_Pos)) /* Assigment of value for RCB10 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB10_0_Val             _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB10_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB10_0                   (MATRIX_MRCR_RCB10_0_Val << MATRIX_MRCR_RCB10_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB10_1                   (MATRIX_MRCR_RCB10_1_Val << MATRIX_MRCR_RCB10_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB11_Pos                 _UINT32_(11)                                         /* (MATRIX_MRCR) Remap Command Bit for Master 11 Position */
-#define MATRIX_MRCR_RCB11_Msk                 (_UINT32_(0x1) << MATRIX_MRCR_RCB11_Pos)             /* (MATRIX_MRCR) Remap Command Bit for Master 11 Mask */
-#define MATRIX_MRCR_RCB11(value)              (MATRIX_MRCR_RCB11_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB11_Pos)) /* Assigment of value for RCB11 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB11_0_Val             _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB11_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB11_0                   (MATRIX_MRCR_RCB11_0_Val << MATRIX_MRCR_RCB11_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB11_1                   (MATRIX_MRCR_RCB11_1_Val << MATRIX_MRCR_RCB11_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB12_Pos                 _UINT32_(12)                                         /* (MATRIX_MRCR) Remap Command Bit for Master 12 Position */
-#define MATRIX_MRCR_RCB12_Msk                 (_UINT32_(0x1) << MATRIX_MRCR_RCB12_Pos)             /* (MATRIX_MRCR) Remap Command Bit for Master 12 Mask */
-#define MATRIX_MRCR_RCB12(value)              (MATRIX_MRCR_RCB12_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB12_Pos)) /* Assigment of value for RCB12 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB12_0_Val             _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB12_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB12_0                   (MATRIX_MRCR_RCB12_0_Val << MATRIX_MRCR_RCB12_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB12_1                   (MATRIX_MRCR_RCB12_1_Val << MATRIX_MRCR_RCB12_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB13_Pos                 _UINT32_(13)                                         /* (MATRIX_MRCR) Remap Command Bit for Master 13 Position */
-#define MATRIX_MRCR_RCB13_Msk                 (_UINT32_(0x1) << MATRIX_MRCR_RCB13_Pos)             /* (MATRIX_MRCR) Remap Command Bit for Master 13 Mask */
-#define MATRIX_MRCR_RCB13(value)              (MATRIX_MRCR_RCB13_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB13_Pos)) /* Assigment of value for RCB13 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB13_0_Val             _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB13_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB13_0                   (MATRIX_MRCR_RCB13_0_Val << MATRIX_MRCR_RCB13_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB13_1                   (MATRIX_MRCR_RCB13_1_Val << MATRIX_MRCR_RCB13_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB14_Pos                 _UINT32_(14)                                         /* (MATRIX_MRCR) Remap Command Bit for Master 14 Position */
-#define MATRIX_MRCR_RCB14_Msk                 (_UINT32_(0x1) << MATRIX_MRCR_RCB14_Pos)             /* (MATRIX_MRCR) Remap Command Bit for Master 14 Mask */
-#define MATRIX_MRCR_RCB14(value)              (MATRIX_MRCR_RCB14_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB14_Pos)) /* Assigment of value for RCB14 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB14_0_Val             _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB14_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB14_0                   (MATRIX_MRCR_RCB14_0_Val << MATRIX_MRCR_RCB14_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB14_1                   (MATRIX_MRCR_RCB14_1_Val << MATRIX_MRCR_RCB14_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB15_Pos                 _UINT32_(15)                                         /* (MATRIX_MRCR) Remap Command Bit for Master 15 Position */
-#define MATRIX_MRCR_RCB15_Msk                 (_UINT32_(0x1) << MATRIX_MRCR_RCB15_Pos)             /* (MATRIX_MRCR) Remap Command Bit for Master 15 Mask */
-#define MATRIX_MRCR_RCB15(value)              (MATRIX_MRCR_RCB15_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB15_Pos)) /* Assigment of value for RCB15 in the MATRIX_MRCR register */
-#define   MATRIX_MRCR_RCB15_0_Val             _UINT32_(0x0)                                        /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master.  */
-#define   MATRIX_MRCR_RCB15_1_Val             _UINT32_(0x1)                                        /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master.  */
-#define MATRIX_MRCR_RCB15_0                   (MATRIX_MRCR_RCB15_0_Val << MATRIX_MRCR_RCB15_Pos)   /* (MATRIX_MRCR) Disables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_RCB15_1                   (MATRIX_MRCR_RCB15_1_Val << MATRIX_MRCR_RCB15_Pos)   /* (MATRIX_MRCR) Enables remapped address decoding for the selected Master. Position  */
-#define MATRIX_MRCR_Msk                       _UINT32_(0x0000FFFF)                                 /* (MATRIX_MRCR) Register Mask  */
-
-#define MATRIX_MRCR_RCB_Pos                   _UINT32_(0)                                          /* (MATRIX_MRCR Position) Remap Command Bit for Master x5 */
-#define MATRIX_MRCR_RCB_Msk                   (_UINT32_(0xFFFF) << MATRIX_MRCR_RCB_Pos)            /* (MATRIX_MRCR Mask) RCB */
-#define MATRIX_MRCR_RCB(value)                (MATRIX_MRCR_RCB_Msk & (_UINT32_(value) << MATRIX_MRCR_RCB_Pos)) 
-
-/* -------- MATRIX_SASSR : (MATRIX Offset: 0x240) (R/W 32) Security Areas Split Slave x Register -------- */
-#define MATRIX_SASSR_RESETVALUE               _UINT32_(0x00)                                       /*  (MATRIX_SASSR) Security Areas Split Slave x Register  Reset Value */
-
-#define MATRIX_SASSR_SASPLIT0_Pos             _UINT32_(0)                                          /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
-#define MATRIX_SASSR_SASPLIT0_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT0_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
-#define MATRIX_SASSR_SASPLIT0(value)          (MATRIX_SASSR_SASPLIT0_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT0_Pos)) /* Assigment of value for SASPLIT0 in the MATRIX_SASSR register */
-#define MATRIX_SASSR_SASPLIT1_Pos             _UINT32_(4)                                          /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
-#define MATRIX_SASSR_SASPLIT1_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT1_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
-#define MATRIX_SASSR_SASPLIT1(value)          (MATRIX_SASSR_SASPLIT1_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT1_Pos)) /* Assigment of value for SASPLIT1 in the MATRIX_SASSR register */
-#define MATRIX_SASSR_SASPLIT2_Pos             _UINT32_(8)                                          /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
-#define MATRIX_SASSR_SASPLIT2_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT2_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
-#define MATRIX_SASSR_SASPLIT2(value)          (MATRIX_SASSR_SASPLIT2_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT2_Pos)) /* Assigment of value for SASPLIT2 in the MATRIX_SASSR register */
-#define MATRIX_SASSR_SASPLIT3_Pos             _UINT32_(12)                                         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
-#define MATRIX_SASSR_SASPLIT3_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT3_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
-#define MATRIX_SASSR_SASPLIT3(value)          (MATRIX_SASSR_SASPLIT3_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT3_Pos)) /* Assigment of value for SASPLIT3 in the MATRIX_SASSR register */
-#define MATRIX_SASSR_SASPLIT4_Pos             _UINT32_(16)                                         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
-#define MATRIX_SASSR_SASPLIT4_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT4_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
-#define MATRIX_SASSR_SASPLIT4(value)          (MATRIX_SASSR_SASPLIT4_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT4_Pos)) /* Assigment of value for SASPLIT4 in the MATRIX_SASSR register */
-#define MATRIX_SASSR_SASPLIT5_Pos             _UINT32_(20)                                         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
-#define MATRIX_SASSR_SASPLIT5_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT5_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
-#define MATRIX_SASSR_SASPLIT5(value)          (MATRIX_SASSR_SASPLIT5_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT5_Pos)) /* Assigment of value for SASPLIT5 in the MATRIX_SASSR register */
-#define MATRIX_SASSR_SASPLIT6_Pos             _UINT32_(24)                                         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
-#define MATRIX_SASSR_SASPLIT6_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT6_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
-#define MATRIX_SASSR_SASPLIT6(value)          (MATRIX_SASSR_SASPLIT6_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT6_Pos)) /* Assigment of value for SASPLIT6 in the MATRIX_SASSR register */
-#define MATRIX_SASSR_SASPLIT7_Pos             _UINT32_(28)                                         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
-#define MATRIX_SASSR_SASPLIT7_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT7_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
-#define MATRIX_SASSR_SASPLIT7(value)          (MATRIX_SASSR_SASPLIT7_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT7_Pos)) /* Assigment of value for SASPLIT7 in the MATRIX_SASSR register */
-#define MATRIX_SASSR_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (MATRIX_SASSR) Register Mask  */
+#define MATRIX_MEAR_ERRADD_Pos                _UINT32_(0)                                          /* (MATRIX_MEAR) Master Error Address Position */
+#define MATRIX_MEAR_ERRADD_Msk                (_UINT32_(0xFFFFFFFF) << MATRIX_MEAR_ERRADD_Pos)     /* (MATRIX_MEAR) Master Error Address Mask */
+#define MATRIX_MEAR_ERRADD(value)             (MATRIX_MEAR_ERRADD_Msk & (_UINT32_(value) << MATRIX_MEAR_ERRADD_Pos)) /* Assigment of value for ERRADD in the MATRIX_MEAR register */
+#define MATRIX_MEAR_Msk                       _UINT32_(0xFFFFFFFF)                                 /* (MATRIX_MEAR) Register Mask  */
 
 
-/* -------- MATRIX_SCFG : (MATRIX Offset: 0x40) (R/W 32) Slave Configuration Register x -------- */
-#define MATRIX_SCFG_RESETVALUE                _UINT32_(0x1FF)                                      /*  (MATRIX_SCFG) Slave Configuration Register x  Reset Value */
+/* -------- MATRIX_WPMR : (MATRIX Offset: 0x1E4) (R/W 32) Write Protect Mode Register -------- */
+#define MATRIX_WPMR_RESETVALUE                _UINT32_(0x00)                                       /*  (MATRIX_WPMR) Write Protect Mode Register  Reset Value */
 
-#define MATRIX_SCFG_SLOT_CYCLE_Pos            _UINT32_(0)                                          /* (MATRIX_SCFG) Maximum Bus Grant Duration for Masters Position */
-#define MATRIX_SCFG_SLOT_CYCLE_Msk            (_UINT32_(0x1FF) << MATRIX_SCFG_SLOT_CYCLE_Pos)      /* (MATRIX_SCFG) Maximum Bus Grant Duration for Masters Mask */
-#define MATRIX_SCFG_SLOT_CYCLE(value)         (MATRIX_SCFG_SLOT_CYCLE_Msk & (_UINT32_(value) << MATRIX_SCFG_SLOT_CYCLE_Pos)) /* Assigment of value for SLOT_CYCLE in the MATRIX_SCFG register */
-#define MATRIX_SCFG_DEFMSTR_TYPE_Pos          _UINT32_(16)                                         /* (MATRIX_SCFG) Default Master Type Position */
-#define MATRIX_SCFG_DEFMSTR_TYPE_Msk          (_UINT32_(0x3) << MATRIX_SCFG_DEFMSTR_TYPE_Pos)      /* (MATRIX_SCFG) Default Master Type Mask */
-#define MATRIX_SCFG_DEFMSTR_TYPE(value)       (MATRIX_SCFG_DEFMSTR_TYPE_Msk & (_UINT32_(value) << MATRIX_SCFG_DEFMSTR_TYPE_Pos)) /* Assigment of value for DEFMSTR_TYPE in the MATRIX_SCFG register */
-#define   MATRIX_SCFG_DEFMSTR_TYPE_NONE_Val   _UINT32_(0x0)                                        /* (MATRIX_SCFG) No Default Master-At the end of the current slave access, if no other master request is pending, the slave is disconnected from all masters. This results in a one clock cycle latency for the first access of a burst transfer or for a single access.  */
-#define   MATRIX_SCFG_DEFMSTR_TYPE_LAST_Val   _UINT32_(0x1)                                        /* (MATRIX_SCFG) Last Default Master-At the end of the current slave access, if no other master request is pending, the slave stays connected to the last master having accessed it. This results in not having one clock cycle latency when the last master tries to access the slave again.  */
-#define   MATRIX_SCFG_DEFMSTR_TYPE_FIXED_Val  _UINT32_(0x2)                                        /* (MATRIX_SCFG) Fixed Default Master-At the end of the current slave access, if no other master request is pending, the slave connects to the fixed master the number that has been written in the FIXED_DEFMSTR field. This results in not having one clock cycle latency when the fixed master tries to access the slave again.  */
-#define MATRIX_SCFG_DEFMSTR_TYPE_NONE         (MATRIX_SCFG_DEFMSTR_TYPE_NONE_Val << MATRIX_SCFG_DEFMSTR_TYPE_Pos) /* (MATRIX_SCFG) No Default Master-At the end of the current slave access, if no other master request is pending, the slave is disconnected from all masters. This results in a one clock cycle latency for the first access of a burst transfer or for a single access. Position  */
-#define MATRIX_SCFG_DEFMSTR_TYPE_LAST         (MATRIX_SCFG_DEFMSTR_TYPE_LAST_Val << MATRIX_SCFG_DEFMSTR_TYPE_Pos) /* (MATRIX_SCFG) Last Default Master-At the end of the current slave access, if no other master request is pending, the slave stays connected to the last master having accessed it. This results in not having one clock cycle latency when the last master tries to access the slave again. Position  */
-#define MATRIX_SCFG_DEFMSTR_TYPE_FIXED        (MATRIX_SCFG_DEFMSTR_TYPE_FIXED_Val << MATRIX_SCFG_DEFMSTR_TYPE_Pos) /* (MATRIX_SCFG) Fixed Default Master-At the end of the current slave access, if no other master request is pending, the slave connects to the fixed master the number that has been written in the FIXED_DEFMSTR field. This results in not having one clock cycle latency when the fixed master tries to access the slave again. Position  */
-#define MATRIX_SCFG_FIXED_DEFMSTR_Pos         _UINT32_(18)                                         /* (MATRIX_SCFG) Fixed Default Master Position */
-#define MATRIX_SCFG_FIXED_DEFMSTR_Msk         (_UINT32_(0xF) << MATRIX_SCFG_FIXED_DEFMSTR_Pos)     /* (MATRIX_SCFG) Fixed Default Master Mask */
-#define MATRIX_SCFG_FIXED_DEFMSTR(value)      (MATRIX_SCFG_FIXED_DEFMSTR_Msk & (_UINT32_(value) << MATRIX_SCFG_FIXED_DEFMSTR_Pos)) /* Assigment of value for FIXED_DEFMSTR in the MATRIX_SCFG register */
-#define MATRIX_SCFG_Msk                       _UINT32_(0x003F01FF)                                 /* (MATRIX_SCFG) Register Mask  */
+#define MATRIX_WPMR_WPEN_Pos                  _UINT32_(0)                                          /* (MATRIX_WPMR) Write Protection Enable Position */
+#define MATRIX_WPMR_WPEN_Msk                  (_UINT32_(0x1) << MATRIX_WPMR_WPEN_Pos)              /* (MATRIX_WPMR) Write Protection Enable Mask */
+#define MATRIX_WPMR_WPEN(value)               (MATRIX_WPMR_WPEN_Msk & (_UINT32_(value) << MATRIX_WPMR_WPEN_Pos)) /* Assigment of value for WPEN in the MATRIX_WPMR register */
+#define   MATRIX_WPMR_WPEN_0_Val              _UINT32_(0x0)                                        /* (MATRIX_WPMR) Disables the write protection if WPKEY corresponds to 0x4D4154 ("MAT" in ASCII).  */
+#define   MATRIX_WPMR_WPEN_1_Val              _UINT32_(0x1)                                        /* (MATRIX_WPMR) Enables the write protection if WPKEY corresponds to 0x4D4154 ("MAT" in ASCII).  */
+#define MATRIX_WPMR_WPEN_0                    (MATRIX_WPMR_WPEN_0_Val << MATRIX_WPMR_WPEN_Pos)     /* (MATRIX_WPMR) Disables the write protection if WPKEY corresponds to 0x4D4154 ("MAT" in ASCII). Position  */
+#define MATRIX_WPMR_WPEN_1                    (MATRIX_WPMR_WPEN_1_Val << MATRIX_WPMR_WPEN_Pos)     /* (MATRIX_WPMR) Enables the write protection if WPKEY corresponds to 0x4D4154 ("MAT" in ASCII). Position  */
+#define MATRIX_WPMR_CFGFRZ_Pos                _UINT32_(7)                                          /* (MATRIX_WPMR) Configuration Freeze Position */
+#define MATRIX_WPMR_CFGFRZ_Msk                (_UINT32_(0x1) << MATRIX_WPMR_CFGFRZ_Pos)            /* (MATRIX_WPMR) Configuration Freeze Mask */
+#define MATRIX_WPMR_CFGFRZ(value)             (MATRIX_WPMR_CFGFRZ_Msk & (_UINT32_(value) << MATRIX_WPMR_CFGFRZ_Pos)) /* Assigment of value for CFGFRZ in the MATRIX_WPMR register */
+#define   MATRIX_WPMR_CFGFRZ_0_Val            _UINT32_(0x0)                                        /* (MATRIX_WPMR) The MATRIX configuration is not frozen.  */
+#define   MATRIX_WPMR_CFGFRZ_1_Val            _UINT32_(0x1)                                        /* (MATRIX_WPMR) Freezes the MATRIX configuration until hardware reset. The registers that can be protected by the WPEN bit and the Write Protection Mode Register are no longer modifiable.  */
+#define MATRIX_WPMR_CFGFRZ_0                  (MATRIX_WPMR_CFGFRZ_0_Val << MATRIX_WPMR_CFGFRZ_Pos) /* (MATRIX_WPMR) The MATRIX configuration is not frozen. Position  */
+#define MATRIX_WPMR_CFGFRZ_1                  (MATRIX_WPMR_CFGFRZ_1_Val << MATRIX_WPMR_CFGFRZ_Pos) /* (MATRIX_WPMR) Freezes the MATRIX configuration until hardware reset. The registers that can be protected by the WPEN bit and the Write Protection Mode Register are no longer modifiable. Position  */
+#define MATRIX_WPMR_WPKEY_Pos                 _UINT32_(8)                                          /* (MATRIX_WPMR) Write Protection Key Position */
+#define MATRIX_WPMR_WPKEY_Msk                 (_UINT32_(0xFFFFFF) << MATRIX_WPMR_WPKEY_Pos)        /* (MATRIX_WPMR) Write Protection Key Mask */
+#define MATRIX_WPMR_WPKEY(value)              (MATRIX_WPMR_WPKEY_Msk & (_UINT32_(value) << MATRIX_WPMR_WPKEY_Pos)) /* Assigment of value for WPKEY in the MATRIX_WPMR register */
+#define   MATRIX_WPMR_WPKEY_PASSWD_Val        _UINT32_(0x4D4154)                                   /* (MATRIX_WPMR) Writing any other value in this field aborts the write operation of the WPEN and CFGFRZ bits. Always reads as 0.  */
+#define MATRIX_WPMR_WPKEY_PASSWD              (MATRIX_WPMR_WPKEY_PASSWD_Val << MATRIX_WPMR_WPKEY_Pos) /* (MATRIX_WPMR) Writing any other value in this field aborts the write operation of the WPEN and CFGFRZ bits. Always reads as 0. Position  */
+#define MATRIX_WPMR_Msk                       _UINT32_(0xFFFFFF81)                                 /* (MATRIX_WPMR) Register Mask  */
 
 
-/* -------- MATRIX_SPSELR : (MATRIX Offset: 0x2C0) (R/W 32) Security Peripheral Select 1 Register -------- */
-#define MATRIX_SPSELR_NSECP0_Pos              _UINT32_(0)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP0_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP0_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP0(value)           (MATRIX_SPSELR_NSECP0_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP0_Pos)) /* Assigment of value for NSECP0 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP0_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP0_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP0_0                (MATRIX_SPSELR_NSECP0_0_Val << MATRIX_SPSELR_NSECP0_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP0_1                (MATRIX_SPSELR_NSECP0_1_Val << MATRIX_SPSELR_NSECP0_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP1_Pos              _UINT32_(1)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP1_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP1_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP1(value)           (MATRIX_SPSELR_NSECP1_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP1_Pos)) /* Assigment of value for NSECP1 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP1_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP1_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP1_0                (MATRIX_SPSELR_NSECP1_0_Val << MATRIX_SPSELR_NSECP1_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP1_1                (MATRIX_SPSELR_NSECP1_1_Val << MATRIX_SPSELR_NSECP1_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP2_Pos              _UINT32_(2)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP2_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP2_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP2(value)           (MATRIX_SPSELR_NSECP2_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP2_Pos)) /* Assigment of value for NSECP2 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP2_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP2_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP2_0                (MATRIX_SPSELR_NSECP2_0_Val << MATRIX_SPSELR_NSECP2_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP2_1                (MATRIX_SPSELR_NSECP2_1_Val << MATRIX_SPSELR_NSECP2_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP3_Pos              _UINT32_(3)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP3_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP3_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP3(value)           (MATRIX_SPSELR_NSECP3_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP3_Pos)) /* Assigment of value for NSECP3 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP3_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP3_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP3_0                (MATRIX_SPSELR_NSECP3_0_Val << MATRIX_SPSELR_NSECP3_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP3_1                (MATRIX_SPSELR_NSECP3_1_Val << MATRIX_SPSELR_NSECP3_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP4_Pos              _UINT32_(4)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP4_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP4_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP4(value)           (MATRIX_SPSELR_NSECP4_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP4_Pos)) /* Assigment of value for NSECP4 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP4_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP4_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP4_0                (MATRIX_SPSELR_NSECP4_0_Val << MATRIX_SPSELR_NSECP4_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP4_1                (MATRIX_SPSELR_NSECP4_1_Val << MATRIX_SPSELR_NSECP4_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP5_Pos              _UINT32_(5)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP5_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP5_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP5(value)           (MATRIX_SPSELR_NSECP5_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP5_Pos)) /* Assigment of value for NSECP5 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP5_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP5_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP5_0                (MATRIX_SPSELR_NSECP5_0_Val << MATRIX_SPSELR_NSECP5_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP5_1                (MATRIX_SPSELR_NSECP5_1_Val << MATRIX_SPSELR_NSECP5_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP6_Pos              _UINT32_(6)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP6_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP6_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP6(value)           (MATRIX_SPSELR_NSECP6_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP6_Pos)) /* Assigment of value for NSECP6 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP6_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP6_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP6_0                (MATRIX_SPSELR_NSECP6_0_Val << MATRIX_SPSELR_NSECP6_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP6_1                (MATRIX_SPSELR_NSECP6_1_Val << MATRIX_SPSELR_NSECP6_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP7_Pos              _UINT32_(7)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP7_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP7_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP7(value)           (MATRIX_SPSELR_NSECP7_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP7_Pos)) /* Assigment of value for NSECP7 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP7_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP7_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP7_0                (MATRIX_SPSELR_NSECP7_0_Val << MATRIX_SPSELR_NSECP7_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP7_1                (MATRIX_SPSELR_NSECP7_1_Val << MATRIX_SPSELR_NSECP7_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP8_Pos              _UINT32_(8)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP8_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP8_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP8(value)           (MATRIX_SPSELR_NSECP8_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP8_Pos)) /* Assigment of value for NSECP8 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP8_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP8_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP8_0                (MATRIX_SPSELR_NSECP8_0_Val << MATRIX_SPSELR_NSECP8_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP8_1                (MATRIX_SPSELR_NSECP8_1_Val << MATRIX_SPSELR_NSECP8_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP9_Pos              _UINT32_(9)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP9_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP9_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP9(value)           (MATRIX_SPSELR_NSECP9_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP9_Pos)) /* Assigment of value for NSECP9 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP9_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP9_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP9_0                (MATRIX_SPSELR_NSECP9_0_Val << MATRIX_SPSELR_NSECP9_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP9_1                (MATRIX_SPSELR_NSECP9_1_Val << MATRIX_SPSELR_NSECP9_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP10_Pos             _UINT32_(10)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP10_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP10_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP10(value)          (MATRIX_SPSELR_NSECP10_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP10_Pos)) /* Assigment of value for NSECP10 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP10_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP10_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP10_0               (MATRIX_SPSELR_NSECP10_0_Val << MATRIX_SPSELR_NSECP10_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP10_1               (MATRIX_SPSELR_NSECP10_1_Val << MATRIX_SPSELR_NSECP10_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP11_Pos             _UINT32_(11)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP11_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP11_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP11(value)          (MATRIX_SPSELR_NSECP11_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP11_Pos)) /* Assigment of value for NSECP11 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP11_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP11_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP11_0               (MATRIX_SPSELR_NSECP11_0_Val << MATRIX_SPSELR_NSECP11_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP11_1               (MATRIX_SPSELR_NSECP11_1_Val << MATRIX_SPSELR_NSECP11_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP12_Pos             _UINT32_(12)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP12_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP12_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP12(value)          (MATRIX_SPSELR_NSECP12_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP12_Pos)) /* Assigment of value for NSECP12 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP12_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP12_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP12_0               (MATRIX_SPSELR_NSECP12_0_Val << MATRIX_SPSELR_NSECP12_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP12_1               (MATRIX_SPSELR_NSECP12_1_Val << MATRIX_SPSELR_NSECP12_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP13_Pos             _UINT32_(13)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP13_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP13_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP13(value)          (MATRIX_SPSELR_NSECP13_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP13_Pos)) /* Assigment of value for NSECP13 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP13_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP13_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP13_0               (MATRIX_SPSELR_NSECP13_0_Val << MATRIX_SPSELR_NSECP13_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP13_1               (MATRIX_SPSELR_NSECP13_1_Val << MATRIX_SPSELR_NSECP13_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP14_Pos             _UINT32_(14)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP14_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP14_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP14(value)          (MATRIX_SPSELR_NSECP14_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP14_Pos)) /* Assigment of value for NSECP14 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP14_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP14_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP14_0               (MATRIX_SPSELR_NSECP14_0_Val << MATRIX_SPSELR_NSECP14_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP14_1               (MATRIX_SPSELR_NSECP14_1_Val << MATRIX_SPSELR_NSECP14_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP15_Pos             _UINT32_(15)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP15_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP15_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP15(value)          (MATRIX_SPSELR_NSECP15_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP15_Pos)) /* Assigment of value for NSECP15 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP15_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP15_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP15_0               (MATRIX_SPSELR_NSECP15_0_Val << MATRIX_SPSELR_NSECP15_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP15_1               (MATRIX_SPSELR_NSECP15_1_Val << MATRIX_SPSELR_NSECP15_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP16_Pos             _UINT32_(16)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP16_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP16_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP16(value)          (MATRIX_SPSELR_NSECP16_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP16_Pos)) /* Assigment of value for NSECP16 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP16_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP16_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP16_0               (MATRIX_SPSELR_NSECP16_0_Val << MATRIX_SPSELR_NSECP16_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP16_1               (MATRIX_SPSELR_NSECP16_1_Val << MATRIX_SPSELR_NSECP16_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP17_Pos             _UINT32_(17)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP17_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP17_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP17(value)          (MATRIX_SPSELR_NSECP17_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP17_Pos)) /* Assigment of value for NSECP17 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP17_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP17_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP17_0               (MATRIX_SPSELR_NSECP17_0_Val << MATRIX_SPSELR_NSECP17_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP17_1               (MATRIX_SPSELR_NSECP17_1_Val << MATRIX_SPSELR_NSECP17_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP18_Pos             _UINT32_(18)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP18_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP18_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP18(value)          (MATRIX_SPSELR_NSECP18_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP18_Pos)) /* Assigment of value for NSECP18 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP18_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP18_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP18_0               (MATRIX_SPSELR_NSECP18_0_Val << MATRIX_SPSELR_NSECP18_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP18_1               (MATRIX_SPSELR_NSECP18_1_Val << MATRIX_SPSELR_NSECP18_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP19_Pos             _UINT32_(19)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP19_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP19_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP19(value)          (MATRIX_SPSELR_NSECP19_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP19_Pos)) /* Assigment of value for NSECP19 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP19_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP19_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP19_0               (MATRIX_SPSELR_NSECP19_0_Val << MATRIX_SPSELR_NSECP19_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP19_1               (MATRIX_SPSELR_NSECP19_1_Val << MATRIX_SPSELR_NSECP19_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP20_Pos             _UINT32_(20)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP20_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP20_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP20(value)          (MATRIX_SPSELR_NSECP20_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP20_Pos)) /* Assigment of value for NSECP20 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP20_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP20_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP20_0               (MATRIX_SPSELR_NSECP20_0_Val << MATRIX_SPSELR_NSECP20_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP20_1               (MATRIX_SPSELR_NSECP20_1_Val << MATRIX_SPSELR_NSECP20_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP21_Pos             _UINT32_(21)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP21_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP21_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP21(value)          (MATRIX_SPSELR_NSECP21_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP21_Pos)) /* Assigment of value for NSECP21 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP21_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP21_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP21_0               (MATRIX_SPSELR_NSECP21_0_Val << MATRIX_SPSELR_NSECP21_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP21_1               (MATRIX_SPSELR_NSECP21_1_Val << MATRIX_SPSELR_NSECP21_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP22_Pos             _UINT32_(22)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP22_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP22_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP22(value)          (MATRIX_SPSELR_NSECP22_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP22_Pos)) /* Assigment of value for NSECP22 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP22_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP22_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP22_0               (MATRIX_SPSELR_NSECP22_0_Val << MATRIX_SPSELR_NSECP22_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP22_1               (MATRIX_SPSELR_NSECP22_1_Val << MATRIX_SPSELR_NSECP22_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP23_Pos             _UINT32_(23)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP23_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP23_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP23(value)          (MATRIX_SPSELR_NSECP23_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP23_Pos)) /* Assigment of value for NSECP23 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP23_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP23_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP23_0               (MATRIX_SPSELR_NSECP23_0_Val << MATRIX_SPSELR_NSECP23_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP23_1               (MATRIX_SPSELR_NSECP23_1_Val << MATRIX_SPSELR_NSECP23_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP24_Pos             _UINT32_(24)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP24_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP24_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP24(value)          (MATRIX_SPSELR_NSECP24_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP24_Pos)) /* Assigment of value for NSECP24 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP24_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP24_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP24_0               (MATRIX_SPSELR_NSECP24_0_Val << MATRIX_SPSELR_NSECP24_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP24_1               (MATRIX_SPSELR_NSECP24_1_Val << MATRIX_SPSELR_NSECP24_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP25_Pos             _UINT32_(25)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP25_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP25_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP25(value)          (MATRIX_SPSELR_NSECP25_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP25_Pos)) /* Assigment of value for NSECP25 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP25_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP25_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP25_0               (MATRIX_SPSELR_NSECP25_0_Val << MATRIX_SPSELR_NSECP25_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP25_1               (MATRIX_SPSELR_NSECP25_1_Val << MATRIX_SPSELR_NSECP25_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP26_Pos             _UINT32_(26)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP26_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP26_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP26(value)          (MATRIX_SPSELR_NSECP26_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP26_Pos)) /* Assigment of value for NSECP26 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP26_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP26_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP26_0               (MATRIX_SPSELR_NSECP26_0_Val << MATRIX_SPSELR_NSECP26_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP26_1               (MATRIX_SPSELR_NSECP26_1_Val << MATRIX_SPSELR_NSECP26_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP27_Pos             _UINT32_(27)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP27_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP27_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP27(value)          (MATRIX_SPSELR_NSECP27_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP27_Pos)) /* Assigment of value for NSECP27 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP27_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP27_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP27_0               (MATRIX_SPSELR_NSECP27_0_Val << MATRIX_SPSELR_NSECP27_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP27_1               (MATRIX_SPSELR_NSECP27_1_Val << MATRIX_SPSELR_NSECP27_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP28_Pos             _UINT32_(28)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP28_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP28_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP28(value)          (MATRIX_SPSELR_NSECP28_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP28_Pos)) /* Assigment of value for NSECP28 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP28_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP28_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP28_0               (MATRIX_SPSELR_NSECP28_0_Val << MATRIX_SPSELR_NSECP28_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP28_1               (MATRIX_SPSELR_NSECP28_1_Val << MATRIX_SPSELR_NSECP28_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP29_Pos             _UINT32_(29)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP29_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP29_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP29(value)          (MATRIX_SPSELR_NSECP29_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP29_Pos)) /* Assigment of value for NSECP29 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP29_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP29_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP29_0               (MATRIX_SPSELR_NSECP29_0_Val << MATRIX_SPSELR_NSECP29_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP29_1               (MATRIX_SPSELR_NSECP29_1_Val << MATRIX_SPSELR_NSECP29_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP30_Pos             _UINT32_(30)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP30_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP30_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP30(value)          (MATRIX_SPSELR_NSECP30_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP30_Pos)) /* Assigment of value for NSECP30 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP30_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP30_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP30_0               (MATRIX_SPSELR_NSECP30_0_Val << MATRIX_SPSELR_NSECP30_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP30_1               (MATRIX_SPSELR_NSECP30_1_Val << MATRIX_SPSELR_NSECP30_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_NSECP31_Pos             _UINT32_(31)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
-#define MATRIX_SPSELR_NSECP31_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP31_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
-#define MATRIX_SPSELR_NSECP31(value)          (MATRIX_SPSELR_NSECP31_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP31_Pos)) /* Assigment of value for NSECP31 in the MATRIX_SPSELR register */
-#define   MATRIX_SPSELR_NSECP31_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
-#define   MATRIX_SPSELR_NSECP31_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
-#define MATRIX_SPSELR_NSECP31_0               (MATRIX_SPSELR_NSECP31_0_Val << MATRIX_SPSELR_NSECP31_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
-#define MATRIX_SPSELR_NSECP31_1               (MATRIX_SPSELR_NSECP31_1_Val << MATRIX_SPSELR_NSECP31_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
-#define MATRIX_SPSELR_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (MATRIX_SPSELR) Register Mask  */
+/* -------- MATRIX_WPSR : (MATRIX Offset: 0x1E8) ( R/ 32) Write Protect Status Register -------- */
+#define MATRIX_WPSR_RESETVALUE                _UINT32_(0x00)                                       /*  (MATRIX_WPSR) Write Protect Status Register  Reset Value */
 
-#define MATRIX_SPSELR_NSECP_Pos               _UINT32_(0)                                          /* (MATRIX_SPSELR Position) Not Secured Peripheral */
-#define MATRIX_SPSELR_NSECP_Msk               (_UINT32_(0xFFFFFFFF) << MATRIX_SPSELR_NSECP_Pos)    /* (MATRIX_SPSELR Mask) NSECP */
-#define MATRIX_SPSELR_NSECP(value)            (MATRIX_SPSELR_NSECP_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP_Pos)) 
-
-/* -------- MATRIX_SRTSR : (MATRIX Offset: 0x280) (R/W 32) Security Region Top Slave x Register -------- */
-#define MATRIX_SRTSR_RESETVALUE               _UINT32_(0x00)                                       /*  (MATRIX_SRTSR) Security Region Top Slave x Register  Reset Value */
-
-#define MATRIX_SRTSR_SRTOP0_Pos               _UINT32_(0)                                          /* (MATRIX_SRTSR) HSELx Security Region Top Position */
-#define MATRIX_SRTSR_SRTOP0_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP0_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
-#define MATRIX_SRTSR_SRTOP0(value)            (MATRIX_SRTSR_SRTOP0_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP0_Pos)) /* Assigment of value for SRTOP0 in the MATRIX_SRTSR register */
-#define MATRIX_SRTSR_SRTOP1_Pos               _UINT32_(4)                                          /* (MATRIX_SRTSR) HSELx Security Region Top Position */
-#define MATRIX_SRTSR_SRTOP1_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP1_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
-#define MATRIX_SRTSR_SRTOP1(value)            (MATRIX_SRTSR_SRTOP1_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP1_Pos)) /* Assigment of value for SRTOP1 in the MATRIX_SRTSR register */
-#define MATRIX_SRTSR_SRTOP2_Pos               _UINT32_(8)                                          /* (MATRIX_SRTSR) HSELx Security Region Top Position */
-#define MATRIX_SRTSR_SRTOP2_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP2_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
-#define MATRIX_SRTSR_SRTOP2(value)            (MATRIX_SRTSR_SRTOP2_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP2_Pos)) /* Assigment of value for SRTOP2 in the MATRIX_SRTSR register */
-#define MATRIX_SRTSR_SRTOP3_Pos               _UINT32_(12)                                         /* (MATRIX_SRTSR) HSELx Security Region Top Position */
-#define MATRIX_SRTSR_SRTOP3_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP3_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
-#define MATRIX_SRTSR_SRTOP3(value)            (MATRIX_SRTSR_SRTOP3_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP3_Pos)) /* Assigment of value for SRTOP3 in the MATRIX_SRTSR register */
-#define MATRIX_SRTSR_SRTOP4_Pos               _UINT32_(16)                                         /* (MATRIX_SRTSR) HSELx Security Region Top Position */
-#define MATRIX_SRTSR_SRTOP4_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP4_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
-#define MATRIX_SRTSR_SRTOP4(value)            (MATRIX_SRTSR_SRTOP4_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP4_Pos)) /* Assigment of value for SRTOP4 in the MATRIX_SRTSR register */
-#define MATRIX_SRTSR_SRTOP5_Pos               _UINT32_(20)                                         /* (MATRIX_SRTSR) HSELx Security Region Top Position */
-#define MATRIX_SRTSR_SRTOP5_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP5_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
-#define MATRIX_SRTSR_SRTOP5(value)            (MATRIX_SRTSR_SRTOP5_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP5_Pos)) /* Assigment of value for SRTOP5 in the MATRIX_SRTSR register */
-#define MATRIX_SRTSR_SRTOP6_Pos               _UINT32_(24)                                         /* (MATRIX_SRTSR) HSELx Security Region Top Position */
-#define MATRIX_SRTSR_SRTOP6_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP6_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
-#define MATRIX_SRTSR_SRTOP6(value)            (MATRIX_SRTSR_SRTOP6_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP6_Pos)) /* Assigment of value for SRTOP6 in the MATRIX_SRTSR register */
-#define MATRIX_SRTSR_SRTOP7_Pos               _UINT32_(28)                                         /* (MATRIX_SRTSR) HSELx Security Region Top Position */
-#define MATRIX_SRTSR_SRTOP7_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP7_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
-#define MATRIX_SRTSR_SRTOP7(value)            (MATRIX_SRTSR_SRTOP7_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP7_Pos)) /* Assigment of value for SRTOP7 in the MATRIX_SRTSR register */
-#define MATRIX_SRTSR_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (MATRIX_SRTSR) Register Mask  */
+#define MATRIX_WPSR_WPVS_Pos                  _UINT32_(0)                                          /* (MATRIX_WPSR) Write Protection Violation Status Position */
+#define MATRIX_WPSR_WPVS_Msk                  (_UINT32_(0x1) << MATRIX_WPSR_WPVS_Pos)              /* (MATRIX_WPSR) Write Protection Violation Status Mask */
+#define MATRIX_WPSR_WPVS(value)               (MATRIX_WPSR_WPVS_Msk & (_UINT32_(value) << MATRIX_WPSR_WPVS_Pos)) /* Assigment of value for WPVS in the MATRIX_WPSR register */
+#define   MATRIX_WPSR_WPVS_0_Val              _UINT32_(0x0)                                        /* (MATRIX_WPSR) No write protection violation has occurred since the last write of the MATRIX_WPMR.  */
+#define   MATRIX_WPSR_WPVS_1_Val              _UINT32_(0x1)                                        /* (MATRIX_WPSR) A write protection violation has occurred since the last write of the MATRIX_WPMR. If this violation is an unauthorized attempt to write a protected register, the associated violation is reported into field WPVSRC.  */
+#define MATRIX_WPSR_WPVS_0                    (MATRIX_WPSR_WPVS_0_Val << MATRIX_WPSR_WPVS_Pos)     /* (MATRIX_WPSR) No write protection violation has occurred since the last write of the MATRIX_WPMR. Position  */
+#define MATRIX_WPSR_WPVS_1                    (MATRIX_WPSR_WPVS_1_Val << MATRIX_WPSR_WPVS_Pos)     /* (MATRIX_WPSR) A write protection violation has occurred since the last write of the MATRIX_WPMR. If this violation is an unauthorized attempt to write a protected register, the associated violation is reported into field WPVSRC. Position  */
+#define MATRIX_WPSR_WPVSRC_Pos                _UINT32_(8)                                          /* (MATRIX_WPSR) Write Protection Violation Source Position */
+#define MATRIX_WPSR_WPVSRC_Msk                (_UINT32_(0xFFFF) << MATRIX_WPSR_WPVSRC_Pos)         /* (MATRIX_WPSR) Write Protection Violation Source Mask */
+#define MATRIX_WPSR_WPVSRC(value)             (MATRIX_WPSR_WPVSRC_Msk & (_UINT32_(value) << MATRIX_WPSR_WPVSRC_Pos)) /* Assigment of value for WPVSRC in the MATRIX_WPSR register */
+#define MATRIX_WPSR_Msk                       _UINT32_(0x00FFFF01)                                 /* (MATRIX_WPSR) Register Mask  */
 
 
 /* -------- MATRIX_SSR : (MATRIX Offset: 0x200) (R/W 32) Security Slave x Register -------- */
@@ -1389,46 +1139,296 @@
 #define MATRIX_SSR_DSSOA_Msk                  (_UINT32_(0xFF) << MATRIX_SSR_DSSOA_Pos)             /* (MATRIX_SSR Mask) DSSOA */
 #define MATRIX_SSR_DSSOA(value)               (MATRIX_SSR_DSSOA_Msk & (_UINT32_(value) << MATRIX_SSR_DSSOA_Pos)) 
 
-/* -------- MATRIX_WPMR : (MATRIX Offset: 0x1E4) (R/W 32) Write Protect Mode Register -------- */
-#define MATRIX_WPMR_RESETVALUE                _UINT32_(0x00)                                       /*  (MATRIX_WPMR) Write Protect Mode Register  Reset Value */
+/* -------- MATRIX_SASSR : (MATRIX Offset: 0x240) (R/W 32) Security Areas Split Slave x Register -------- */
+#define MATRIX_SASSR_RESETVALUE               _UINT32_(0x00)                                       /*  (MATRIX_SASSR) Security Areas Split Slave x Register  Reset Value */
 
-#define MATRIX_WPMR_WPEN_Pos                  _UINT32_(0)                                          /* (MATRIX_WPMR) Write Protection Enable Position */
-#define MATRIX_WPMR_WPEN_Msk                  (_UINT32_(0x1) << MATRIX_WPMR_WPEN_Pos)              /* (MATRIX_WPMR) Write Protection Enable Mask */
-#define MATRIX_WPMR_WPEN(value)               (MATRIX_WPMR_WPEN_Msk & (_UINT32_(value) << MATRIX_WPMR_WPEN_Pos)) /* Assigment of value for WPEN in the MATRIX_WPMR register */
-#define   MATRIX_WPMR_WPEN_0_Val              _UINT32_(0x0)                                        /* (MATRIX_WPMR) Disables the write protection if WPKEY corresponds to 0x4D4154 ("MAT" in ASCII).  */
-#define   MATRIX_WPMR_WPEN_1_Val              _UINT32_(0x1)                                        /* (MATRIX_WPMR) Enables the write protection if WPKEY corresponds to 0x4D4154 ("MAT" in ASCII).  */
-#define MATRIX_WPMR_WPEN_0                    (MATRIX_WPMR_WPEN_0_Val << MATRIX_WPMR_WPEN_Pos)     /* (MATRIX_WPMR) Disables the write protection if WPKEY corresponds to 0x4D4154 ("MAT" in ASCII). Position  */
-#define MATRIX_WPMR_WPEN_1                    (MATRIX_WPMR_WPEN_1_Val << MATRIX_WPMR_WPEN_Pos)     /* (MATRIX_WPMR) Enables the write protection if WPKEY corresponds to 0x4D4154 ("MAT" in ASCII). Position  */
-#define MATRIX_WPMR_CFGFRZ_Pos                _UINT32_(7)                                          /* (MATRIX_WPMR) Configuration Freeze Position */
-#define MATRIX_WPMR_CFGFRZ_Msk                (_UINT32_(0x1) << MATRIX_WPMR_CFGFRZ_Pos)            /* (MATRIX_WPMR) Configuration Freeze Mask */
-#define MATRIX_WPMR_CFGFRZ(value)             (MATRIX_WPMR_CFGFRZ_Msk & (_UINT32_(value) << MATRIX_WPMR_CFGFRZ_Pos)) /* Assigment of value for CFGFRZ in the MATRIX_WPMR register */
-#define   MATRIX_WPMR_CFGFRZ_0_Val            _UINT32_(0x0)                                        /* (MATRIX_WPMR) The MATRIX configuration is not frozen.  */
-#define   MATRIX_WPMR_CFGFRZ_1_Val            _UINT32_(0x1)                                        /* (MATRIX_WPMR) Freezes the MATRIX configuration until hardware reset. The registers that can be protected by the WPEN bit and the Write Protection Mode Register are no longer modifiable.  */
-#define MATRIX_WPMR_CFGFRZ_0                  (MATRIX_WPMR_CFGFRZ_0_Val << MATRIX_WPMR_CFGFRZ_Pos) /* (MATRIX_WPMR) The MATRIX configuration is not frozen. Position  */
-#define MATRIX_WPMR_CFGFRZ_1                  (MATRIX_WPMR_CFGFRZ_1_Val << MATRIX_WPMR_CFGFRZ_Pos) /* (MATRIX_WPMR) Freezes the MATRIX configuration until hardware reset. The registers that can be protected by the WPEN bit and the Write Protection Mode Register are no longer modifiable. Position  */
-#define MATRIX_WPMR_WPKEY_Pos                 _UINT32_(8)                                          /* (MATRIX_WPMR) Write Protection Key Position */
-#define MATRIX_WPMR_WPKEY_Msk                 (_UINT32_(0xFFFFFF) << MATRIX_WPMR_WPKEY_Pos)        /* (MATRIX_WPMR) Write Protection Key Mask */
-#define MATRIX_WPMR_WPKEY(value)              (MATRIX_WPMR_WPKEY_Msk & (_UINT32_(value) << MATRIX_WPMR_WPKEY_Pos)) /* Assigment of value for WPKEY in the MATRIX_WPMR register */
-#define   MATRIX_WPMR_WPKEY_PASSWD_Val        _UINT32_(0x4D4154)                                   /* (MATRIX_WPMR) Writing any other value in this field aborts the write operation of the WPEN and CFGFRZ bits. Always reads as 0.  */
-#define MATRIX_WPMR_WPKEY_PASSWD              (MATRIX_WPMR_WPKEY_PASSWD_Val << MATRIX_WPMR_WPKEY_Pos) /* (MATRIX_WPMR) Writing any other value in this field aborts the write operation of the WPEN and CFGFRZ bits. Always reads as 0. Position  */
-#define MATRIX_WPMR_Msk                       _UINT32_(0xFFFFFF81)                                 /* (MATRIX_WPMR) Register Mask  */
+#define MATRIX_SASSR_SASPLIT0_Pos             _UINT32_(0)                                          /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
+#define MATRIX_SASSR_SASPLIT0_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT0_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
+#define MATRIX_SASSR_SASPLIT0(value)          (MATRIX_SASSR_SASPLIT0_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT0_Pos)) /* Assigment of value for SASPLIT0 in the MATRIX_SASSR register */
+#define MATRIX_SASSR_SASPLIT1_Pos             _UINT32_(4)                                          /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
+#define MATRIX_SASSR_SASPLIT1_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT1_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
+#define MATRIX_SASSR_SASPLIT1(value)          (MATRIX_SASSR_SASPLIT1_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT1_Pos)) /* Assigment of value for SASPLIT1 in the MATRIX_SASSR register */
+#define MATRIX_SASSR_SASPLIT2_Pos             _UINT32_(8)                                          /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
+#define MATRIX_SASSR_SASPLIT2_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT2_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
+#define MATRIX_SASSR_SASPLIT2(value)          (MATRIX_SASSR_SASPLIT2_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT2_Pos)) /* Assigment of value for SASPLIT2 in the MATRIX_SASSR register */
+#define MATRIX_SASSR_SASPLIT3_Pos             _UINT32_(12)                                         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
+#define MATRIX_SASSR_SASPLIT3_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT3_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
+#define MATRIX_SASSR_SASPLIT3(value)          (MATRIX_SASSR_SASPLIT3_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT3_Pos)) /* Assigment of value for SASPLIT3 in the MATRIX_SASSR register */
+#define MATRIX_SASSR_SASPLIT4_Pos             _UINT32_(16)                                         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
+#define MATRIX_SASSR_SASPLIT4_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT4_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
+#define MATRIX_SASSR_SASPLIT4(value)          (MATRIX_SASSR_SASPLIT4_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT4_Pos)) /* Assigment of value for SASPLIT4 in the MATRIX_SASSR register */
+#define MATRIX_SASSR_SASPLIT5_Pos             _UINT32_(20)                                         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
+#define MATRIX_SASSR_SASPLIT5_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT5_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
+#define MATRIX_SASSR_SASPLIT5(value)          (MATRIX_SASSR_SASPLIT5_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT5_Pos)) /* Assigment of value for SASPLIT5 in the MATRIX_SASSR register */
+#define MATRIX_SASSR_SASPLIT6_Pos             _UINT32_(24)                                         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
+#define MATRIX_SASSR_SASPLIT6_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT6_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
+#define MATRIX_SASSR_SASPLIT6(value)          (MATRIX_SASSR_SASPLIT6_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT6_Pos)) /* Assigment of value for SASPLIT6 in the MATRIX_SASSR register */
+#define MATRIX_SASSR_SASPLIT7_Pos             _UINT32_(28)                                         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Position */
+#define MATRIX_SASSR_SASPLIT7_Msk             (_UINT32_(0xF) << MATRIX_SASSR_SASPLIT7_Pos)         /* (MATRIX_SASSR) Security Areas Split for HSELx Security Region Mask */
+#define MATRIX_SASSR_SASPLIT7(value)          (MATRIX_SASSR_SASPLIT7_Msk & (_UINT32_(value) << MATRIX_SASSR_SASPLIT7_Pos)) /* Assigment of value for SASPLIT7 in the MATRIX_SASSR register */
+#define MATRIX_SASSR_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (MATRIX_SASSR) Register Mask  */
 
 
-/* -------- MATRIX_WPSR : (MATRIX Offset: 0x1E8) ( R/ 32) Write Protect Status Register -------- */
-#define MATRIX_WPSR_RESETVALUE                _UINT32_(0x00)                                       /*  (MATRIX_WPSR) Write Protect Status Register  Reset Value */
+/* -------- MATRIX_SRTSR : (MATRIX Offset: 0x280) (R/W 32) Security Region Top Slave x Register -------- */
+#define MATRIX_SRTSR_RESETVALUE               _UINT32_(0x00)                                       /*  (MATRIX_SRTSR) Security Region Top Slave x Register  Reset Value */
 
-#define MATRIX_WPSR_WPVS_Pos                  _UINT32_(0)                                          /* (MATRIX_WPSR) Write Protection Violation Status Position */
-#define MATRIX_WPSR_WPVS_Msk                  (_UINT32_(0x1) << MATRIX_WPSR_WPVS_Pos)              /* (MATRIX_WPSR) Write Protection Violation Status Mask */
-#define MATRIX_WPSR_WPVS(value)               (MATRIX_WPSR_WPVS_Msk & (_UINT32_(value) << MATRIX_WPSR_WPVS_Pos)) /* Assigment of value for WPVS in the MATRIX_WPSR register */
-#define   MATRIX_WPSR_WPVS_0_Val              _UINT32_(0x0)                                        /* (MATRIX_WPSR) No write protection violation has occurred since the last write of the MATRIX_WPMR.  */
-#define   MATRIX_WPSR_WPVS_1_Val              _UINT32_(0x1)                                        /* (MATRIX_WPSR) A write protection violation has occurred since the last write of the MATRIX_WPMR. If this violation is an unauthorized attempt to write a protected register, the associated violation is reported into field WPVSRC.  */
-#define MATRIX_WPSR_WPVS_0                    (MATRIX_WPSR_WPVS_0_Val << MATRIX_WPSR_WPVS_Pos)     /* (MATRIX_WPSR) No write protection violation has occurred since the last write of the MATRIX_WPMR. Position  */
-#define MATRIX_WPSR_WPVS_1                    (MATRIX_WPSR_WPVS_1_Val << MATRIX_WPSR_WPVS_Pos)     /* (MATRIX_WPSR) A write protection violation has occurred since the last write of the MATRIX_WPMR. If this violation is an unauthorized attempt to write a protected register, the associated violation is reported into field WPVSRC. Position  */
-#define MATRIX_WPSR_WPVSRC_Pos                _UINT32_(8)                                          /* (MATRIX_WPSR) Write Protection Violation Source Position */
-#define MATRIX_WPSR_WPVSRC_Msk                (_UINT32_(0xFFFF) << MATRIX_WPSR_WPVSRC_Pos)         /* (MATRIX_WPSR) Write Protection Violation Source Mask */
-#define MATRIX_WPSR_WPVSRC(value)             (MATRIX_WPSR_WPVSRC_Msk & (_UINT32_(value) << MATRIX_WPSR_WPVSRC_Pos)) /* Assigment of value for WPVSRC in the MATRIX_WPSR register */
-#define MATRIX_WPSR_Msk                       _UINT32_(0x00FFFF01)                                 /* (MATRIX_WPSR) Register Mask  */
+#define MATRIX_SRTSR_SRTOP0_Pos               _UINT32_(0)                                          /* (MATRIX_SRTSR) HSELx Security Region Top Position */
+#define MATRIX_SRTSR_SRTOP0_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP0_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
+#define MATRIX_SRTSR_SRTOP0(value)            (MATRIX_SRTSR_SRTOP0_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP0_Pos)) /* Assigment of value for SRTOP0 in the MATRIX_SRTSR register */
+#define MATRIX_SRTSR_SRTOP1_Pos               _UINT32_(4)                                          /* (MATRIX_SRTSR) HSELx Security Region Top Position */
+#define MATRIX_SRTSR_SRTOP1_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP1_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
+#define MATRIX_SRTSR_SRTOP1(value)            (MATRIX_SRTSR_SRTOP1_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP1_Pos)) /* Assigment of value for SRTOP1 in the MATRIX_SRTSR register */
+#define MATRIX_SRTSR_SRTOP2_Pos               _UINT32_(8)                                          /* (MATRIX_SRTSR) HSELx Security Region Top Position */
+#define MATRIX_SRTSR_SRTOP2_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP2_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
+#define MATRIX_SRTSR_SRTOP2(value)            (MATRIX_SRTSR_SRTOP2_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP2_Pos)) /* Assigment of value for SRTOP2 in the MATRIX_SRTSR register */
+#define MATRIX_SRTSR_SRTOP3_Pos               _UINT32_(12)                                         /* (MATRIX_SRTSR) HSELx Security Region Top Position */
+#define MATRIX_SRTSR_SRTOP3_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP3_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
+#define MATRIX_SRTSR_SRTOP3(value)            (MATRIX_SRTSR_SRTOP3_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP3_Pos)) /* Assigment of value for SRTOP3 in the MATRIX_SRTSR register */
+#define MATRIX_SRTSR_SRTOP4_Pos               _UINT32_(16)                                         /* (MATRIX_SRTSR) HSELx Security Region Top Position */
+#define MATRIX_SRTSR_SRTOP4_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP4_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
+#define MATRIX_SRTSR_SRTOP4(value)            (MATRIX_SRTSR_SRTOP4_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP4_Pos)) /* Assigment of value for SRTOP4 in the MATRIX_SRTSR register */
+#define MATRIX_SRTSR_SRTOP5_Pos               _UINT32_(20)                                         /* (MATRIX_SRTSR) HSELx Security Region Top Position */
+#define MATRIX_SRTSR_SRTOP5_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP5_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
+#define MATRIX_SRTSR_SRTOP5(value)            (MATRIX_SRTSR_SRTOP5_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP5_Pos)) /* Assigment of value for SRTOP5 in the MATRIX_SRTSR register */
+#define MATRIX_SRTSR_SRTOP6_Pos               _UINT32_(24)                                         /* (MATRIX_SRTSR) HSELx Security Region Top Position */
+#define MATRIX_SRTSR_SRTOP6_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP6_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
+#define MATRIX_SRTSR_SRTOP6(value)            (MATRIX_SRTSR_SRTOP6_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP6_Pos)) /* Assigment of value for SRTOP6 in the MATRIX_SRTSR register */
+#define MATRIX_SRTSR_SRTOP7_Pos               _UINT32_(28)                                         /* (MATRIX_SRTSR) HSELx Security Region Top Position */
+#define MATRIX_SRTSR_SRTOP7_Msk               (_UINT32_(0xF) << MATRIX_SRTSR_SRTOP7_Pos)           /* (MATRIX_SRTSR) HSELx Security Region Top Mask */
+#define MATRIX_SRTSR_SRTOP7(value)            (MATRIX_SRTSR_SRTOP7_Msk & (_UINT32_(value) << MATRIX_SRTSR_SRTOP7_Pos)) /* Assigment of value for SRTOP7 in the MATRIX_SRTSR register */
+#define MATRIX_SRTSR_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (MATRIX_SRTSR) Register Mask  */
 
+
+/* -------- MATRIX_SPSELR : (MATRIX Offset: 0x2C0) (R/W 32) Security Peripheral Select 1 Register -------- */
+#define MATRIX_SPSELR_NSECP0_Pos              _UINT32_(0)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP0_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP0_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP0(value)           (MATRIX_SPSELR_NSECP0_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP0_Pos)) /* Assigment of value for NSECP0 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP0_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP0_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP0_0                (MATRIX_SPSELR_NSECP0_0_Val << MATRIX_SPSELR_NSECP0_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP0_1                (MATRIX_SPSELR_NSECP0_1_Val << MATRIX_SPSELR_NSECP0_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP1_Pos              _UINT32_(1)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP1_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP1_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP1(value)           (MATRIX_SPSELR_NSECP1_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP1_Pos)) /* Assigment of value for NSECP1 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP1_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP1_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP1_0                (MATRIX_SPSELR_NSECP1_0_Val << MATRIX_SPSELR_NSECP1_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP1_1                (MATRIX_SPSELR_NSECP1_1_Val << MATRIX_SPSELR_NSECP1_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP2_Pos              _UINT32_(2)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP2_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP2_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP2(value)           (MATRIX_SPSELR_NSECP2_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP2_Pos)) /* Assigment of value for NSECP2 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP2_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP2_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP2_0                (MATRIX_SPSELR_NSECP2_0_Val << MATRIX_SPSELR_NSECP2_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP2_1                (MATRIX_SPSELR_NSECP2_1_Val << MATRIX_SPSELR_NSECP2_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP3_Pos              _UINT32_(3)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP3_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP3_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP3(value)           (MATRIX_SPSELR_NSECP3_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP3_Pos)) /* Assigment of value for NSECP3 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP3_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP3_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP3_0                (MATRIX_SPSELR_NSECP3_0_Val << MATRIX_SPSELR_NSECP3_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP3_1                (MATRIX_SPSELR_NSECP3_1_Val << MATRIX_SPSELR_NSECP3_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP4_Pos              _UINT32_(4)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP4_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP4_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP4(value)           (MATRIX_SPSELR_NSECP4_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP4_Pos)) /* Assigment of value for NSECP4 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP4_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP4_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP4_0                (MATRIX_SPSELR_NSECP4_0_Val << MATRIX_SPSELR_NSECP4_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP4_1                (MATRIX_SPSELR_NSECP4_1_Val << MATRIX_SPSELR_NSECP4_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP5_Pos              _UINT32_(5)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP5_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP5_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP5(value)           (MATRIX_SPSELR_NSECP5_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP5_Pos)) /* Assigment of value for NSECP5 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP5_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP5_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP5_0                (MATRIX_SPSELR_NSECP5_0_Val << MATRIX_SPSELR_NSECP5_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP5_1                (MATRIX_SPSELR_NSECP5_1_Val << MATRIX_SPSELR_NSECP5_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP6_Pos              _UINT32_(6)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP6_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP6_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP6(value)           (MATRIX_SPSELR_NSECP6_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP6_Pos)) /* Assigment of value for NSECP6 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP6_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP6_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP6_0                (MATRIX_SPSELR_NSECP6_0_Val << MATRIX_SPSELR_NSECP6_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP6_1                (MATRIX_SPSELR_NSECP6_1_Val << MATRIX_SPSELR_NSECP6_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP7_Pos              _UINT32_(7)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP7_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP7_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP7(value)           (MATRIX_SPSELR_NSECP7_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP7_Pos)) /* Assigment of value for NSECP7 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP7_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP7_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP7_0                (MATRIX_SPSELR_NSECP7_0_Val << MATRIX_SPSELR_NSECP7_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP7_1                (MATRIX_SPSELR_NSECP7_1_Val << MATRIX_SPSELR_NSECP7_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP8_Pos              _UINT32_(8)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP8_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP8_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP8(value)           (MATRIX_SPSELR_NSECP8_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP8_Pos)) /* Assigment of value for NSECP8 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP8_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP8_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP8_0                (MATRIX_SPSELR_NSECP8_0_Val << MATRIX_SPSELR_NSECP8_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP8_1                (MATRIX_SPSELR_NSECP8_1_Val << MATRIX_SPSELR_NSECP8_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP9_Pos              _UINT32_(9)                                          /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP9_Msk              (_UINT32_(0x1) << MATRIX_SPSELR_NSECP9_Pos)          /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP9(value)           (MATRIX_SPSELR_NSECP9_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP9_Pos)) /* Assigment of value for NSECP9 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP9_0_Val          _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP9_1_Val          _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP9_0                (MATRIX_SPSELR_NSECP9_0_Val << MATRIX_SPSELR_NSECP9_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP9_1                (MATRIX_SPSELR_NSECP9_1_Val << MATRIX_SPSELR_NSECP9_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP10_Pos             _UINT32_(10)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP10_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP10_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP10(value)          (MATRIX_SPSELR_NSECP10_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP10_Pos)) /* Assigment of value for NSECP10 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP10_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP10_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP10_0               (MATRIX_SPSELR_NSECP10_0_Val << MATRIX_SPSELR_NSECP10_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP10_1               (MATRIX_SPSELR_NSECP10_1_Val << MATRIX_SPSELR_NSECP10_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP11_Pos             _UINT32_(11)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP11_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP11_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP11(value)          (MATRIX_SPSELR_NSECP11_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP11_Pos)) /* Assigment of value for NSECP11 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP11_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP11_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP11_0               (MATRIX_SPSELR_NSECP11_0_Val << MATRIX_SPSELR_NSECP11_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP11_1               (MATRIX_SPSELR_NSECP11_1_Val << MATRIX_SPSELR_NSECP11_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP12_Pos             _UINT32_(12)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP12_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP12_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP12(value)          (MATRIX_SPSELR_NSECP12_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP12_Pos)) /* Assigment of value for NSECP12 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP12_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP12_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP12_0               (MATRIX_SPSELR_NSECP12_0_Val << MATRIX_SPSELR_NSECP12_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP12_1               (MATRIX_SPSELR_NSECP12_1_Val << MATRIX_SPSELR_NSECP12_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP13_Pos             _UINT32_(13)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP13_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP13_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP13(value)          (MATRIX_SPSELR_NSECP13_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP13_Pos)) /* Assigment of value for NSECP13 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP13_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP13_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP13_0               (MATRIX_SPSELR_NSECP13_0_Val << MATRIX_SPSELR_NSECP13_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP13_1               (MATRIX_SPSELR_NSECP13_1_Val << MATRIX_SPSELR_NSECP13_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP14_Pos             _UINT32_(14)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP14_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP14_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP14(value)          (MATRIX_SPSELR_NSECP14_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP14_Pos)) /* Assigment of value for NSECP14 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP14_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP14_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP14_0               (MATRIX_SPSELR_NSECP14_0_Val << MATRIX_SPSELR_NSECP14_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP14_1               (MATRIX_SPSELR_NSECP14_1_Val << MATRIX_SPSELR_NSECP14_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP15_Pos             _UINT32_(15)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP15_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP15_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP15(value)          (MATRIX_SPSELR_NSECP15_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP15_Pos)) /* Assigment of value for NSECP15 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP15_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP15_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP15_0               (MATRIX_SPSELR_NSECP15_0_Val << MATRIX_SPSELR_NSECP15_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP15_1               (MATRIX_SPSELR_NSECP15_1_Val << MATRIX_SPSELR_NSECP15_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP16_Pos             _UINT32_(16)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP16_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP16_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP16(value)          (MATRIX_SPSELR_NSECP16_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP16_Pos)) /* Assigment of value for NSECP16 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP16_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP16_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP16_0               (MATRIX_SPSELR_NSECP16_0_Val << MATRIX_SPSELR_NSECP16_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP16_1               (MATRIX_SPSELR_NSECP16_1_Val << MATRIX_SPSELR_NSECP16_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP17_Pos             _UINT32_(17)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP17_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP17_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP17(value)          (MATRIX_SPSELR_NSECP17_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP17_Pos)) /* Assigment of value for NSECP17 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP17_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP17_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP17_0               (MATRIX_SPSELR_NSECP17_0_Val << MATRIX_SPSELR_NSECP17_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP17_1               (MATRIX_SPSELR_NSECP17_1_Val << MATRIX_SPSELR_NSECP17_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP18_Pos             _UINT32_(18)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP18_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP18_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP18(value)          (MATRIX_SPSELR_NSECP18_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP18_Pos)) /* Assigment of value for NSECP18 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP18_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP18_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP18_0               (MATRIX_SPSELR_NSECP18_0_Val << MATRIX_SPSELR_NSECP18_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP18_1               (MATRIX_SPSELR_NSECP18_1_Val << MATRIX_SPSELR_NSECP18_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP19_Pos             _UINT32_(19)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP19_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP19_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP19(value)          (MATRIX_SPSELR_NSECP19_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP19_Pos)) /* Assigment of value for NSECP19 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP19_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP19_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP19_0               (MATRIX_SPSELR_NSECP19_0_Val << MATRIX_SPSELR_NSECP19_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP19_1               (MATRIX_SPSELR_NSECP19_1_Val << MATRIX_SPSELR_NSECP19_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP20_Pos             _UINT32_(20)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP20_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP20_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP20(value)          (MATRIX_SPSELR_NSECP20_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP20_Pos)) /* Assigment of value for NSECP20 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP20_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP20_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP20_0               (MATRIX_SPSELR_NSECP20_0_Val << MATRIX_SPSELR_NSECP20_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP20_1               (MATRIX_SPSELR_NSECP20_1_Val << MATRIX_SPSELR_NSECP20_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP21_Pos             _UINT32_(21)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP21_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP21_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP21(value)          (MATRIX_SPSELR_NSECP21_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP21_Pos)) /* Assigment of value for NSECP21 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP21_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP21_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP21_0               (MATRIX_SPSELR_NSECP21_0_Val << MATRIX_SPSELR_NSECP21_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP21_1               (MATRIX_SPSELR_NSECP21_1_Val << MATRIX_SPSELR_NSECP21_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP22_Pos             _UINT32_(22)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP22_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP22_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP22(value)          (MATRIX_SPSELR_NSECP22_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP22_Pos)) /* Assigment of value for NSECP22 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP22_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP22_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP22_0               (MATRIX_SPSELR_NSECP22_0_Val << MATRIX_SPSELR_NSECP22_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP22_1               (MATRIX_SPSELR_NSECP22_1_Val << MATRIX_SPSELR_NSECP22_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP23_Pos             _UINT32_(23)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP23_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP23_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP23(value)          (MATRIX_SPSELR_NSECP23_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP23_Pos)) /* Assigment of value for NSECP23 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP23_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP23_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP23_0               (MATRIX_SPSELR_NSECP23_0_Val << MATRIX_SPSELR_NSECP23_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP23_1               (MATRIX_SPSELR_NSECP23_1_Val << MATRIX_SPSELR_NSECP23_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP24_Pos             _UINT32_(24)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP24_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP24_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP24(value)          (MATRIX_SPSELR_NSECP24_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP24_Pos)) /* Assigment of value for NSECP24 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP24_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP24_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP24_0               (MATRIX_SPSELR_NSECP24_0_Val << MATRIX_SPSELR_NSECP24_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP24_1               (MATRIX_SPSELR_NSECP24_1_Val << MATRIX_SPSELR_NSECP24_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP25_Pos             _UINT32_(25)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP25_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP25_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP25(value)          (MATRIX_SPSELR_NSECP25_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP25_Pos)) /* Assigment of value for NSECP25 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP25_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP25_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP25_0               (MATRIX_SPSELR_NSECP25_0_Val << MATRIX_SPSELR_NSECP25_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP25_1               (MATRIX_SPSELR_NSECP25_1_Val << MATRIX_SPSELR_NSECP25_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP26_Pos             _UINT32_(26)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP26_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP26_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP26(value)          (MATRIX_SPSELR_NSECP26_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP26_Pos)) /* Assigment of value for NSECP26 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP26_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP26_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP26_0               (MATRIX_SPSELR_NSECP26_0_Val << MATRIX_SPSELR_NSECP26_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP26_1               (MATRIX_SPSELR_NSECP26_1_Val << MATRIX_SPSELR_NSECP26_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP27_Pos             _UINT32_(27)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP27_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP27_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP27(value)          (MATRIX_SPSELR_NSECP27_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP27_Pos)) /* Assigment of value for NSECP27 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP27_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP27_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP27_0               (MATRIX_SPSELR_NSECP27_0_Val << MATRIX_SPSELR_NSECP27_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP27_1               (MATRIX_SPSELR_NSECP27_1_Val << MATRIX_SPSELR_NSECP27_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP28_Pos             _UINT32_(28)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP28_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP28_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP28(value)          (MATRIX_SPSELR_NSECP28_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP28_Pos)) /* Assigment of value for NSECP28 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP28_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP28_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP28_0               (MATRIX_SPSELR_NSECP28_0_Val << MATRIX_SPSELR_NSECP28_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP28_1               (MATRIX_SPSELR_NSECP28_1_Val << MATRIX_SPSELR_NSECP28_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP29_Pos             _UINT32_(29)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP29_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP29_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP29(value)          (MATRIX_SPSELR_NSECP29_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP29_Pos)) /* Assigment of value for NSECP29 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP29_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP29_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP29_0               (MATRIX_SPSELR_NSECP29_0_Val << MATRIX_SPSELR_NSECP29_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP29_1               (MATRIX_SPSELR_NSECP29_1_Val << MATRIX_SPSELR_NSECP29_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP30_Pos             _UINT32_(30)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP30_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP30_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP30(value)          (MATRIX_SPSELR_NSECP30_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP30_Pos)) /* Assigment of value for NSECP30 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP30_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP30_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP30_0               (MATRIX_SPSELR_NSECP30_0_Val << MATRIX_SPSELR_NSECP30_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP30_1               (MATRIX_SPSELR_NSECP30_1_Val << MATRIX_SPSELR_NSECP30_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_NSECP31_Pos             _UINT32_(31)                                         /* (MATRIX_SPSELR) Not Secured Peripheral Position */
+#define MATRIX_SPSELR_NSECP31_Msk             (_UINT32_(0x1) << MATRIX_SPSELR_NSECP31_Pos)         /* (MATRIX_SPSELR) Not Secured Peripheral Mask */
+#define MATRIX_SPSELR_NSECP31(value)          (MATRIX_SPSELR_NSECP31_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP31_Pos)) /* Assigment of value for NSECP31 in the MATRIX_SPSELR register */
+#define   MATRIX_SPSELR_NSECP31_0_Val         _UINT32_(0x0)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured").  */
+#define   MATRIX_SPSELR_NSECP31_1_Val         _UINT32_(0x1)                                        /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured").  */
+#define MATRIX_SPSELR_NSECP31_0               (MATRIX_SPSELR_NSECP31_0_Val << MATRIX_SPSELR_NSECP31_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Secured" access (value of '0' has no effect if the peripheral security type is "Not Secured"). Position  */
+#define MATRIX_SPSELR_NSECP31_1               (MATRIX_SPSELR_NSECP31_1_Val << MATRIX_SPSELR_NSECP31_Pos) /* (MATRIX_SPSELR) The selected peripheral address space is configured as "Not Secured" access (value of '1' has no effect if the peripheral security type is "Always Secured"). Position  */
+#define MATRIX_SPSELR_Msk                     _UINT32_(0xFFFFFFFF)                                 /* (MATRIX_SPSELR) Register Mask  */
+
+#define MATRIX_SPSELR_NSECP_Pos               _UINT32_(0)                                          /* (MATRIX_SPSELR Position) Not Secured Peripheral */
+#define MATRIX_SPSELR_NSECP_Msk               (_UINT32_(0xFFFFFFFF) << MATRIX_SPSELR_NSECP_Pos)    /* (MATRIX_SPSELR Mask) NSECP */
+#define MATRIX_SPSELR_NSECP(value)            (MATRIX_SPSELR_NSECP_Msk & (_UINT32_(value) << MATRIX_SPSELR_NSECP_Pos)) 
 
 /** \brief MATRIX register offsets definitions */
 #define MATRIX_PRAS_REG_OFST           _UINT32_(0x00)      /* (MATRIX_PRAS) Priority Register A for Slave x Offset */
@@ -1450,45 +1450,6 @@
 #define MATRIX_MCFG13_REG_OFST         _UINT32_(0x34)      /* (MATRIX_MCFG13) Master Configuration Register x Offset */
 #define MATRIX_MCFG14_REG_OFST         _UINT32_(0x38)      /* (MATRIX_MCFG14) Master Configuration Register x Offset */
 #define MATRIX_MCFG15_REG_OFST         _UINT32_(0x3C)      /* (MATRIX_MCFG15) Master Configuration Register x Offset */
-#define MATRIX_MEAR_REG_OFST           _UINT32_(0x160)     /* (MATRIX_MEAR) Master x Error Address Register Offset */
-#define MATRIX_MEAR0_REG_OFST          _UINT32_(0x160)     /* (MATRIX_MEAR0) Master x Error Address Register Offset */
-#define MATRIX_MEAR1_REG_OFST          _UINT32_(0x164)     /* (MATRIX_MEAR1) Master x Error Address Register Offset */
-#define MATRIX_MEAR2_REG_OFST          _UINT32_(0x168)     /* (MATRIX_MEAR2) Master x Error Address Register Offset */
-#define MATRIX_MEAR3_REG_OFST          _UINT32_(0x16C)     /* (MATRIX_MEAR3) Master x Error Address Register Offset */
-#define MATRIX_MEAR4_REG_OFST          _UINT32_(0x170)     /* (MATRIX_MEAR4) Master x Error Address Register Offset */
-#define MATRIX_MEAR5_REG_OFST          _UINT32_(0x174)     /* (MATRIX_MEAR5) Master x Error Address Register Offset */
-#define MATRIX_MEAR6_REG_OFST          _UINT32_(0x178)     /* (MATRIX_MEAR6) Master x Error Address Register Offset */
-#define MATRIX_MEAR7_REG_OFST          _UINT32_(0x17C)     /* (MATRIX_MEAR7) Master x Error Address Register Offset */
-#define MATRIX_MEAR8_REG_OFST          _UINT32_(0x180)     /* (MATRIX_MEAR8) Master x Error Address Register Offset */
-#define MATRIX_MEAR9_REG_OFST          _UINT32_(0x184)     /* (MATRIX_MEAR9) Master x Error Address Register Offset */
-#define MATRIX_MEAR10_REG_OFST         _UINT32_(0x188)     /* (MATRIX_MEAR10) Master x Error Address Register Offset */
-#define MATRIX_MEAR11_REG_OFST         _UINT32_(0x18C)     /* (MATRIX_MEAR11) Master x Error Address Register Offset */
-#define MATRIX_MEAR12_REG_OFST         _UINT32_(0x190)     /* (MATRIX_MEAR12) Master x Error Address Register Offset */
-#define MATRIX_MEAR13_REG_OFST         _UINT32_(0x194)     /* (MATRIX_MEAR13) Master x Error Address Register Offset */
-#define MATRIX_MEAR14_REG_OFST         _UINT32_(0x198)     /* (MATRIX_MEAR14) Master x Error Address Register Offset */
-#define MATRIX_MEAR15_REG_OFST         _UINT32_(0x19C)     /* (MATRIX_MEAR15) Master x Error Address Register Offset */
-#define MATRIX_MEIDR_REG_OFST          _UINT32_(0x154)     /* (MATRIX_MEIDR) Master Error Interrupt Disable Register Offset */
-#define MATRIX_MEIER_REG_OFST          _UINT32_(0x150)     /* (MATRIX_MEIER) Master Error Interrupt Enable Register Offset */
-#define MATRIX_MEIMR_REG_OFST          _UINT32_(0x158)     /* (MATRIX_MEIMR) Master Error Interrupt Mask Register Offset */
-#define MATRIX_MESR_REG_OFST           _UINT32_(0x15C)     /* (MATRIX_MESR) Master Error Status Register Offset */
-#define MATRIX_MRCR_REG_OFST           _UINT32_(0x100)     /* (MATRIX_MRCR) Master Remap Control Register Offset */
-#define MATRIX_SASSR_REG_OFST          _UINT32_(0x240)     /* (MATRIX_SASSR) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR0_REG_OFST         _UINT32_(0x240)     /* (MATRIX_SASSR0) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR1_REG_OFST         _UINT32_(0x244)     /* (MATRIX_SASSR1) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR2_REG_OFST         _UINT32_(0x248)     /* (MATRIX_SASSR2) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR3_REG_OFST         _UINT32_(0x24C)     /* (MATRIX_SASSR3) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR4_REG_OFST         _UINT32_(0x250)     /* (MATRIX_SASSR4) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR5_REG_OFST         _UINT32_(0x254)     /* (MATRIX_SASSR5) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR6_REG_OFST         _UINT32_(0x258)     /* (MATRIX_SASSR6) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR7_REG_OFST         _UINT32_(0x25C)     /* (MATRIX_SASSR7) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR8_REG_OFST         _UINT32_(0x260)     /* (MATRIX_SASSR8) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR9_REG_OFST         _UINT32_(0x264)     /* (MATRIX_SASSR9) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR10_REG_OFST        _UINT32_(0x268)     /* (MATRIX_SASSR10) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR11_REG_OFST        _UINT32_(0x26C)     /* (MATRIX_SASSR11) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR12_REG_OFST        _UINT32_(0x270)     /* (MATRIX_SASSR12) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR13_REG_OFST        _UINT32_(0x274)     /* (MATRIX_SASSR13) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR14_REG_OFST        _UINT32_(0x278)     /* (MATRIX_SASSR14) Security Areas Split Slave x Register Offset */
-#define MATRIX_SASSR15_REG_OFST        _UINT32_(0x27C)     /* (MATRIX_SASSR15) Security Areas Split Slave x Register Offset */
 #define MATRIX_SCFG_REG_OFST           _UINT32_(0x40)      /* (MATRIX_SCFG) Slave Configuration Register x Offset */
 #define MATRIX_SCFG0_REG_OFST          _UINT32_(0x40)      /* (MATRIX_SCFG0) Slave Configuration Register x Offset */
 #define MATRIX_SCFG1_REG_OFST          _UINT32_(0x44)      /* (MATRIX_SCFG1) Slave Configuration Register x Offset */
@@ -1506,27 +1467,30 @@
 #define MATRIX_SCFG13_REG_OFST         _UINT32_(0x74)      /* (MATRIX_SCFG13) Slave Configuration Register x Offset */
 #define MATRIX_SCFG14_REG_OFST         _UINT32_(0x78)      /* (MATRIX_SCFG14) Slave Configuration Register x Offset */
 #define MATRIX_SCFG15_REG_OFST         _UINT32_(0x7C)      /* (MATRIX_SCFG15) Slave Configuration Register x Offset */
-#define MATRIX_SPSELR_REG_OFST         _UINT32_(0x2C0)     /* (MATRIX_SPSELR) Security Peripheral Select 1 Register Offset */
-#define MATRIX_SPSELR0_REG_OFST        _UINT32_(0x2C0)     /* (MATRIX_SPSELR0) Security Peripheral Select 1 Register Offset */
-#define MATRIX_SPSELR1_REG_OFST        _UINT32_(0x2C4)     /* (MATRIX_SPSELR1) Security Peripheral Select 1 Register Offset */
-#define MATRIX_SPSELR2_REG_OFST        _UINT32_(0x2C8)     /* (MATRIX_SPSELR2) Security Peripheral Select 1 Register Offset */
-#define MATRIX_SRTSR_REG_OFST          _UINT32_(0x280)     /* (MATRIX_SRTSR) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR0_REG_OFST         _UINT32_(0x280)     /* (MATRIX_SRTSR0) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR1_REG_OFST         _UINT32_(0x284)     /* (MATRIX_SRTSR1) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR2_REG_OFST         _UINT32_(0x288)     /* (MATRIX_SRTSR2) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR3_REG_OFST         _UINT32_(0x28C)     /* (MATRIX_SRTSR3) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR4_REG_OFST         _UINT32_(0x290)     /* (MATRIX_SRTSR4) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR5_REG_OFST         _UINT32_(0x294)     /* (MATRIX_SRTSR5) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR6_REG_OFST         _UINT32_(0x298)     /* (MATRIX_SRTSR6) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR7_REG_OFST         _UINT32_(0x29C)     /* (MATRIX_SRTSR7) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR8_REG_OFST         _UINT32_(0x2A0)     /* (MATRIX_SRTSR8) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR9_REG_OFST         _UINT32_(0x2A4)     /* (MATRIX_SRTSR9) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR10_REG_OFST        _UINT32_(0x2A8)     /* (MATRIX_SRTSR10) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR11_REG_OFST        _UINT32_(0x2AC)     /* (MATRIX_SRTSR11) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR12_REG_OFST        _UINT32_(0x2B0)     /* (MATRIX_SRTSR12) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR13_REG_OFST        _UINT32_(0x2B4)     /* (MATRIX_SRTSR13) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR14_REG_OFST        _UINT32_(0x2B8)     /* (MATRIX_SRTSR14) Security Region Top Slave x Register Offset */
-#define MATRIX_SRTSR15_REG_OFST        _UINT32_(0x2BC)     /* (MATRIX_SRTSR15) Security Region Top Slave x Register Offset */
+#define MATRIX_MRCR_REG_OFST           _UINT32_(0x100)     /* (MATRIX_MRCR) Master Remap Control Register Offset */
+#define MATRIX_MEIER_REG_OFST          _UINT32_(0x150)     /* (MATRIX_MEIER) Master Error Interrupt Enable Register Offset */
+#define MATRIX_MEIDR_REG_OFST          _UINT32_(0x154)     /* (MATRIX_MEIDR) Master Error Interrupt Disable Register Offset */
+#define MATRIX_MEIMR_REG_OFST          _UINT32_(0x158)     /* (MATRIX_MEIMR) Master Error Interrupt Mask Register Offset */
+#define MATRIX_MESR_REG_OFST           _UINT32_(0x15C)     /* (MATRIX_MESR) Master Error Status Register Offset */
+#define MATRIX_MEAR_REG_OFST           _UINT32_(0x160)     /* (MATRIX_MEAR) Master x Error Address Register Offset */
+#define MATRIX_MEAR0_REG_OFST          _UINT32_(0x160)     /* (MATRIX_MEAR0) Master x Error Address Register Offset */
+#define MATRIX_MEAR1_REG_OFST          _UINT32_(0x164)     /* (MATRIX_MEAR1) Master x Error Address Register Offset */
+#define MATRIX_MEAR2_REG_OFST          _UINT32_(0x168)     /* (MATRIX_MEAR2) Master x Error Address Register Offset */
+#define MATRIX_MEAR3_REG_OFST          _UINT32_(0x16C)     /* (MATRIX_MEAR3) Master x Error Address Register Offset */
+#define MATRIX_MEAR4_REG_OFST          _UINT32_(0x170)     /* (MATRIX_MEAR4) Master x Error Address Register Offset */
+#define MATRIX_MEAR5_REG_OFST          _UINT32_(0x174)     /* (MATRIX_MEAR5) Master x Error Address Register Offset */
+#define MATRIX_MEAR6_REG_OFST          _UINT32_(0x178)     /* (MATRIX_MEAR6) Master x Error Address Register Offset */
+#define MATRIX_MEAR7_REG_OFST          _UINT32_(0x17C)     /* (MATRIX_MEAR7) Master x Error Address Register Offset */
+#define MATRIX_MEAR8_REG_OFST          _UINT32_(0x180)     /* (MATRIX_MEAR8) Master x Error Address Register Offset */
+#define MATRIX_MEAR9_REG_OFST          _UINT32_(0x184)     /* (MATRIX_MEAR9) Master x Error Address Register Offset */
+#define MATRIX_MEAR10_REG_OFST         _UINT32_(0x188)     /* (MATRIX_MEAR10) Master x Error Address Register Offset */
+#define MATRIX_MEAR11_REG_OFST         _UINT32_(0x18C)     /* (MATRIX_MEAR11) Master x Error Address Register Offset */
+#define MATRIX_MEAR12_REG_OFST         _UINT32_(0x190)     /* (MATRIX_MEAR12) Master x Error Address Register Offset */
+#define MATRIX_MEAR13_REG_OFST         _UINT32_(0x194)     /* (MATRIX_MEAR13) Master x Error Address Register Offset */
+#define MATRIX_MEAR14_REG_OFST         _UINT32_(0x198)     /* (MATRIX_MEAR14) Master x Error Address Register Offset */
+#define MATRIX_MEAR15_REG_OFST         _UINT32_(0x19C)     /* (MATRIX_MEAR15) Master x Error Address Register Offset */
+#define MATRIX_WPMR_REG_OFST           _UINT32_(0x1E4)     /* (MATRIX_WPMR) Write Protect Mode Register Offset */
+#define MATRIX_WPSR_REG_OFST           _UINT32_(0x1E8)     /* (MATRIX_WPSR) Write Protect Status Register Offset */
 #define MATRIX_SSR_REG_OFST            _UINT32_(0x200)     /* (MATRIX_SSR) Security Slave x Register Offset */
 #define MATRIX_SSR0_REG_OFST           _UINT32_(0x200)     /* (MATRIX_SSR0) Security Slave x Register Offset */
 #define MATRIX_SSR1_REG_OFST           _UINT32_(0x204)     /* (MATRIX_SSR1) Security Slave x Register Offset */
@@ -1544,8 +1508,44 @@
 #define MATRIX_SSR13_REG_OFST          _UINT32_(0x234)     /* (MATRIX_SSR13) Security Slave x Register Offset */
 #define MATRIX_SSR14_REG_OFST          _UINT32_(0x238)     /* (MATRIX_SSR14) Security Slave x Register Offset */
 #define MATRIX_SSR15_REG_OFST          _UINT32_(0x23C)     /* (MATRIX_SSR15) Security Slave x Register Offset */
-#define MATRIX_WPMR_REG_OFST           _UINT32_(0x1E4)     /* (MATRIX_WPMR) Write Protect Mode Register Offset */
-#define MATRIX_WPSR_REG_OFST           _UINT32_(0x1E8)     /* (MATRIX_WPSR) Write Protect Status Register Offset */
+#define MATRIX_SASSR_REG_OFST          _UINT32_(0x240)     /* (MATRIX_SASSR) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR0_REG_OFST         _UINT32_(0x240)     /* (MATRIX_SASSR0) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR1_REG_OFST         _UINT32_(0x244)     /* (MATRIX_SASSR1) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR2_REG_OFST         _UINT32_(0x248)     /* (MATRIX_SASSR2) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR3_REG_OFST         _UINT32_(0x24C)     /* (MATRIX_SASSR3) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR4_REG_OFST         _UINT32_(0x250)     /* (MATRIX_SASSR4) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR5_REG_OFST         _UINT32_(0x254)     /* (MATRIX_SASSR5) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR6_REG_OFST         _UINT32_(0x258)     /* (MATRIX_SASSR6) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR7_REG_OFST         _UINT32_(0x25C)     /* (MATRIX_SASSR7) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR8_REG_OFST         _UINT32_(0x260)     /* (MATRIX_SASSR8) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR9_REG_OFST         _UINT32_(0x264)     /* (MATRIX_SASSR9) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR10_REG_OFST        _UINT32_(0x268)     /* (MATRIX_SASSR10) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR11_REG_OFST        _UINT32_(0x26C)     /* (MATRIX_SASSR11) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR12_REG_OFST        _UINT32_(0x270)     /* (MATRIX_SASSR12) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR13_REG_OFST        _UINT32_(0x274)     /* (MATRIX_SASSR13) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR14_REG_OFST        _UINT32_(0x278)     /* (MATRIX_SASSR14) Security Areas Split Slave x Register Offset */
+#define MATRIX_SASSR15_REG_OFST        _UINT32_(0x27C)     /* (MATRIX_SASSR15) Security Areas Split Slave x Register Offset */
+#define MATRIX_SRTSR_REG_OFST          _UINT32_(0x280)     /* (MATRIX_SRTSR) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR0_REG_OFST         _UINT32_(0x280)     /* (MATRIX_SRTSR0) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR1_REG_OFST         _UINT32_(0x284)     /* (MATRIX_SRTSR1) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR2_REG_OFST         _UINT32_(0x288)     /* (MATRIX_SRTSR2) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR3_REG_OFST         _UINT32_(0x28C)     /* (MATRIX_SRTSR3) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR4_REG_OFST         _UINT32_(0x290)     /* (MATRIX_SRTSR4) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR5_REG_OFST         _UINT32_(0x294)     /* (MATRIX_SRTSR5) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR6_REG_OFST         _UINT32_(0x298)     /* (MATRIX_SRTSR6) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR7_REG_OFST         _UINT32_(0x29C)     /* (MATRIX_SRTSR7) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR8_REG_OFST         _UINT32_(0x2A0)     /* (MATRIX_SRTSR8) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR9_REG_OFST         _UINT32_(0x2A4)     /* (MATRIX_SRTSR9) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR10_REG_OFST        _UINT32_(0x2A8)     /* (MATRIX_SRTSR10) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR11_REG_OFST        _UINT32_(0x2AC)     /* (MATRIX_SRTSR11) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR12_REG_OFST        _UINT32_(0x2B0)     /* (MATRIX_SRTSR12) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR13_REG_OFST        _UINT32_(0x2B4)     /* (MATRIX_SRTSR13) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR14_REG_OFST        _UINT32_(0x2B8)     /* (MATRIX_SRTSR14) Security Region Top Slave x Register Offset */
+#define MATRIX_SRTSR15_REG_OFST        _UINT32_(0x2BC)     /* (MATRIX_SRTSR15) Security Region Top Slave x Register Offset */
+#define MATRIX_SPSELR_REG_OFST         _UINT32_(0x2C0)     /* (MATRIX_SPSELR) Security Peripheral Select 1 Register Offset */
+#define MATRIX_SPSELR0_REG_OFST        _UINT32_(0x2C0)     /* (MATRIX_SPSELR0) Security Peripheral Select 1 Register Offset */
+#define MATRIX_SPSELR1_REG_OFST        _UINT32_(0x2C4)     /* (MATRIX_SPSELR1) Security Peripheral Select 1 Register Offset */
+#define MATRIX_SPSELR2_REG_OFST        _UINT32_(0x2C8)     /* (MATRIX_SPSELR2) Security Peripheral Select 1 Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief MATRIX_PR register API structure */

@@ -1,7 +1,7 @@
 /*
  * Component description for RSTC
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-11-02T14:25:51Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_RSTC_COMPONENT_H_
 #define _SAMA7G_RSTC_COMPONENT_H_
 
@@ -51,49 +51,45 @@
 #define RSTC_CR_Msk                           _UINT32_(0xFF000009)                                 /* (RSTC_CR) Register Mask  */
 
 
-/* -------- RSTC_GRSTR : (RSTC Offset: 0xE4) (R/W 32) Generic Reset Register -------- */
-#define RSTC_GRSTR_RESETVALUE                 _UINT32_(0x70)                                       /*  (RSTC_GRSTR) Generic Reset Register  Reset Value */
+/* -------- RSTC_SR : (RSTC Offset: 0x04) ( R/ 32) Status Register -------- */
+#define RSTC_SR_RESETVALUE                    _UINT32_(0x00)                                       /*  (RSTC_SR) Status Register  Reset Value */
 
-#define RSTC_GRSTR_DDR_RST_Pos                _UINT32_(0)                                          /* (RSTC_GRSTR) DDR Reset Position */
-#define RSTC_GRSTR_DDR_RST_Msk                (_UINT32_(0x1) << RSTC_GRSTR_DDR_RST_Pos)            /* (RSTC_GRSTR) DDR Reset Mask */
-#define RSTC_GRSTR_DDR_RST(value)             (RSTC_GRSTR_DDR_RST_Msk & (_UINT32_(value) << RSTC_GRSTR_DDR_RST_Pos)) /* Assigment of value for DDR_RST in the RSTC_GRSTR register */
-#define   RSTC_GRSTR_DDR_RST_0_Val            _UINT32_(0x0)                                        /* (RSTC_GRSTR) DDR Controller reset is asserted.  */
-#define   RSTC_GRSTR_DDR_RST_1_Val            _UINT32_(0x1)                                        /* (RSTC_GRSTR) DDR Controller reset is de-asserted.  */
-#define RSTC_GRSTR_DDR_RST_0                  (RSTC_GRSTR_DDR_RST_0_Val << RSTC_GRSTR_DDR_RST_Pos) /* (RSTC_GRSTR) DDR Controller reset is asserted. Position  */
-#define RSTC_GRSTR_DDR_RST_1                  (RSTC_GRSTR_DDR_RST_1_Val << RSTC_GRSTR_DDR_RST_Pos) /* (RSTC_GRSTR) DDR Controller reset is de-asserted. Position  */
-#define RSTC_GRSTR_DDR_PHY_RST_Pos            _UINT32_(2)                                          /* (RSTC_GRSTR) DDR PHY Reset Position */
-#define RSTC_GRSTR_DDR_PHY_RST_Msk            (_UINT32_(0x1) << RSTC_GRSTR_DDR_PHY_RST_Pos)        /* (RSTC_GRSTR) DDR PHY Reset Mask */
-#define RSTC_GRSTR_DDR_PHY_RST(value)         (RSTC_GRSTR_DDR_PHY_RST_Msk & (_UINT32_(value) << RSTC_GRSTR_DDR_PHY_RST_Pos)) /* Assigment of value for DDR_PHY_RST in the RSTC_GRSTR register */
-#define   RSTC_GRSTR_DDR_PHY_RST_0_Val        _UINT32_(0x0)                                        /* (RSTC_GRSTR) DDR PHY reset is asserted.  */
-#define   RSTC_GRSTR_DDR_PHY_RST_1_Val        _UINT32_(0x1)                                        /* (RSTC_GRSTR) DDR PHY reset is de-asserted.  */
-#define RSTC_GRSTR_DDR_PHY_RST_0              (RSTC_GRSTR_DDR_PHY_RST_0_Val << RSTC_GRSTR_DDR_PHY_RST_Pos) /* (RSTC_GRSTR) DDR PHY reset is asserted. Position  */
-#define RSTC_GRSTR_DDR_PHY_RST_1              (RSTC_GRSTR_DDR_PHY_RST_1_Val << RSTC_GRSTR_DDR_PHY_RST_Pos) /* (RSTC_GRSTR) DDR PHY reset is de-asserted. Position  */
-#define RSTC_GRSTR_USB_RST1_Pos               _UINT32_(4)                                          /* (RSTC_GRSTR) USB Reset Position */
-#define RSTC_GRSTR_USB_RST1_Msk               (_UINT32_(0x1) << RSTC_GRSTR_USB_RST1_Pos)           /* (RSTC_GRSTR) USB Reset Mask */
-#define RSTC_GRSTR_USB_RST1(value)            (RSTC_GRSTR_USB_RST1_Msk & (_UINT32_(value) << RSTC_GRSTR_USB_RST1_Pos)) /* Assigment of value for USB_RST1 in the RSTC_GRSTR register */
-#define   RSTC_GRSTR_USB_RST1_POR_DISABLED_Val _UINT32_(0x0)                                        /* (RSTC_GRSTR) POR is disabled.  */
-#define   RSTC_GRSTR_USB_RST1_POR_ENABLED_Val _UINT32_(0x1)                                        /* (RSTC_GRSTR) POR is enabled.  */
-#define RSTC_GRSTR_USB_RST1_POR_DISABLED      (RSTC_GRSTR_USB_RST1_POR_DISABLED_Val << RSTC_GRSTR_USB_RST1_Pos) /* (RSTC_GRSTR) POR is disabled. Position  */
-#define RSTC_GRSTR_USB_RST1_POR_ENABLED       (RSTC_GRSTR_USB_RST1_POR_ENABLED_Val << RSTC_GRSTR_USB_RST1_Pos) /* (RSTC_GRSTR) POR is enabled. Position  */
-#define RSTC_GRSTR_USB_RST2_Pos               _UINT32_(5)                                          /* (RSTC_GRSTR) USB Reset Position */
-#define RSTC_GRSTR_USB_RST2_Msk               (_UINT32_(0x1) << RSTC_GRSTR_USB_RST2_Pos)           /* (RSTC_GRSTR) USB Reset Mask */
-#define RSTC_GRSTR_USB_RST2(value)            (RSTC_GRSTR_USB_RST2_Msk & (_UINT32_(value) << RSTC_GRSTR_USB_RST2_Pos)) /* Assigment of value for USB_RST2 in the RSTC_GRSTR register */
-#define   RSTC_GRSTR_USB_RST2_POR_DISABLED_Val _UINT32_(0x0)                                        /* (RSTC_GRSTR) POR is disabled.  */
-#define   RSTC_GRSTR_USB_RST2_POR_ENABLED_Val _UINT32_(0x1)                                        /* (RSTC_GRSTR) POR is enabled.  */
-#define RSTC_GRSTR_USB_RST2_POR_DISABLED      (RSTC_GRSTR_USB_RST2_POR_DISABLED_Val << RSTC_GRSTR_USB_RST2_Pos) /* (RSTC_GRSTR) POR is disabled. Position  */
-#define RSTC_GRSTR_USB_RST2_POR_ENABLED       (RSTC_GRSTR_USB_RST2_POR_ENABLED_Val << RSTC_GRSTR_USB_RST2_Pos) /* (RSTC_GRSTR) POR is enabled. Position  */
-#define RSTC_GRSTR_USB_RST3_Pos               _UINT32_(6)                                          /* (RSTC_GRSTR) USB Reset Position */
-#define RSTC_GRSTR_USB_RST3_Msk               (_UINT32_(0x1) << RSTC_GRSTR_USB_RST3_Pos)           /* (RSTC_GRSTR) USB Reset Mask */
-#define RSTC_GRSTR_USB_RST3(value)            (RSTC_GRSTR_USB_RST3_Msk & (_UINT32_(value) << RSTC_GRSTR_USB_RST3_Pos)) /* Assigment of value for USB_RST3 in the RSTC_GRSTR register */
-#define   RSTC_GRSTR_USB_RST3_POR_DISABLED_Val _UINT32_(0x0)                                        /* (RSTC_GRSTR) POR is disabled.  */
-#define   RSTC_GRSTR_USB_RST3_POR_ENABLED_Val _UINT32_(0x1)                                        /* (RSTC_GRSTR) POR is enabled.  */
-#define RSTC_GRSTR_USB_RST3_POR_DISABLED      (RSTC_GRSTR_USB_RST3_POR_DISABLED_Val << RSTC_GRSTR_USB_RST3_Pos) /* (RSTC_GRSTR) POR is disabled. Position  */
-#define RSTC_GRSTR_USB_RST3_POR_ENABLED       (RSTC_GRSTR_USB_RST3_POR_ENABLED_Val << RSTC_GRSTR_USB_RST3_Pos) /* (RSTC_GRSTR) POR is enabled. Position  */
-#define RSTC_GRSTR_Msk                        _UINT32_(0x00000075)                                 /* (RSTC_GRSTR) Register Mask  */
+#define RSTC_SR_URSTS_Pos                     _UINT32_(0)                                          /* (RSTC_SR) User Reset Status Position */
+#define RSTC_SR_URSTS_Msk                     (_UINT32_(0x1) << RSTC_SR_URSTS_Pos)                 /* (RSTC_SR) User Reset Status Mask */
+#define RSTC_SR_URSTS(value)                  (RSTC_SR_URSTS_Msk & (_UINT32_(value) << RSTC_SR_URSTS_Pos)) /* Assigment of value for URSTS in the RSTC_SR register */
+#define   RSTC_SR_URSTS_0_Val                 _UINT32_(0x0)                                        /* (RSTC_SR) No high-to-low edge on NRST happened since the last read of RSTC_SR.  */
+#define   RSTC_SR_URSTS_1_Val                 _UINT32_(0x1)                                        /* (RSTC_SR) At least one high-to-low transition of NRST has been detected since the last read of RSTC_SR.  */
+#define RSTC_SR_URSTS_0                       (RSTC_SR_URSTS_0_Val << RSTC_SR_URSTS_Pos)           /* (RSTC_SR) No high-to-low edge on NRST happened since the last read of RSTC_SR. Position  */
+#define RSTC_SR_URSTS_1                       (RSTC_SR_URSTS_1_Val << RSTC_SR_URSTS_Pos)           /* (RSTC_SR) At least one high-to-low transition of NRST has been detected since the last read of RSTC_SR. Position  */
+#define RSTC_SR_RSTTYP_Pos                    _UINT32_(8)                                          /* (RSTC_SR) Reset Type Position */
+#define RSTC_SR_RSTTYP_Msk                    (_UINT32_(0xF) << RSTC_SR_RSTTYP_Pos)                /* (RSTC_SR) Reset Type Mask */
+#define RSTC_SR_RSTTYP(value)                 (RSTC_SR_RSTTYP_Msk & (_UINT32_(value) << RSTC_SR_RSTTYP_Pos)) /* Assigment of value for RSTTYP in the RSTC_SR register */
+#define   RSTC_SR_RSTTYP_GENERAL_RST_Val      _UINT32_(0x0)                                        /* (RSTC_SR) First powerup reset  */
+#define   RSTC_SR_RSTTYP_BACKUP_RST_Val       _UINT32_(0x1)                                        /* (RSTC_SR) Return from Backup mode  */
+#define   RSTC_SR_RSTTYP_WDT_RST_Val          _UINT32_(0x2)                                        /* (RSTC_SR) Watchdog fault occurred  */
+#define   RSTC_SR_RSTTYP_SOFT_RST_Val         _UINT32_(0x3)                                        /* (RSTC_SR) Processor reset required by the software  */
+#define   RSTC_SR_RSTTYP_USER_RST_Val         _UINT32_(0x4)                                        /* (RSTC_SR) NRST pin detected low  */
+#define   RSTC_SR_RSTTYP_SLCK_XTAL_RST_Val    _UINT32_(0x7)                                        /* (RSTC_SR) 32.768 kHz crystal failure detection fault occurred  */
+#define   RSTC_SR_RSTTYP_ULP2_RST_Val         _UINT32_(0x8)                                        /* (RSTC_SR) ULP Mode 2 reset  */
+#define RSTC_SR_RSTTYP_GENERAL_RST            (RSTC_SR_RSTTYP_GENERAL_RST_Val << RSTC_SR_RSTTYP_Pos) /* (RSTC_SR) First powerup reset Position  */
+#define RSTC_SR_RSTTYP_BACKUP_RST             (RSTC_SR_RSTTYP_BACKUP_RST_Val << RSTC_SR_RSTTYP_Pos) /* (RSTC_SR) Return from Backup mode Position  */
+#define RSTC_SR_RSTTYP_WDT_RST                (RSTC_SR_RSTTYP_WDT_RST_Val << RSTC_SR_RSTTYP_Pos)   /* (RSTC_SR) Watchdog fault occurred Position  */
+#define RSTC_SR_RSTTYP_SOFT_RST               (RSTC_SR_RSTTYP_SOFT_RST_Val << RSTC_SR_RSTTYP_Pos)  /* (RSTC_SR) Processor reset required by the software Position  */
+#define RSTC_SR_RSTTYP_USER_RST               (RSTC_SR_RSTTYP_USER_RST_Val << RSTC_SR_RSTTYP_Pos)  /* (RSTC_SR) NRST pin detected low Position  */
+#define RSTC_SR_RSTTYP_SLCK_XTAL_RST          (RSTC_SR_RSTTYP_SLCK_XTAL_RST_Val << RSTC_SR_RSTTYP_Pos) /* (RSTC_SR) 32.768 kHz crystal failure detection fault occurred Position  */
+#define RSTC_SR_RSTTYP_ULP2_RST               (RSTC_SR_RSTTYP_ULP2_RST_Val << RSTC_SR_RSTTYP_Pos)  /* (RSTC_SR) ULP Mode 2 reset Position  */
+#define RSTC_SR_NRSTL_Pos                     _UINT32_(16)                                         /* (RSTC_SR) NRST Pin Level Position */
+#define RSTC_SR_NRSTL_Msk                     (_UINT32_(0x1) << RSTC_SR_NRSTL_Pos)                 /* (RSTC_SR) NRST Pin Level Mask */
+#define RSTC_SR_NRSTL(value)                  (RSTC_SR_NRSTL_Msk & (_UINT32_(value) << RSTC_SR_NRSTL_Pos)) /* Assigment of value for NRSTL in the RSTC_SR register */
+#define RSTC_SR_SRCMP_Pos                     _UINT32_(17)                                         /* (RSTC_SR) Software Reset Command in Progress Position */
+#define RSTC_SR_SRCMP_Msk                     (_UINT32_(0x1) << RSTC_SR_SRCMP_Pos)                 /* (RSTC_SR) Software Reset Command in Progress Mask */
+#define RSTC_SR_SRCMP(value)                  (RSTC_SR_SRCMP_Msk & (_UINT32_(value) << RSTC_SR_SRCMP_Pos)) /* Assigment of value for SRCMP in the RSTC_SR register */
+#define   RSTC_SR_SRCMP_0_Val                 _UINT32_(0x0)                                        /* (RSTC_SR) No software command is being performed by the RSTC. The RSTC is ready for a software command.  */
+#define   RSTC_SR_SRCMP_1_Val                 _UINT32_(0x1)                                        /* (RSTC_SR) A Software reset command is being performed by the RSTC. The RSTC is busy.  */
+#define RSTC_SR_SRCMP_0                       (RSTC_SR_SRCMP_0_Val << RSTC_SR_SRCMP_Pos)           /* (RSTC_SR) No software command is being performed by the RSTC. The RSTC is ready for a software command. Position  */
+#define RSTC_SR_SRCMP_1                       (RSTC_SR_SRCMP_1_Val << RSTC_SR_SRCMP_Pos)           /* (RSTC_SR) A Software reset command is being performed by the RSTC. The RSTC is busy. Position  */
+#define RSTC_SR_Msk                           _UINT32_(0x00030F01)                                 /* (RSTC_SR) Register Mask  */
 
-#define RSTC_GRSTR_USB_RST_Pos                _UINT32_(4)                                          /* (RSTC_GRSTR Position) USB Reset */
-#define RSTC_GRSTR_USB_RST_Msk                (_UINT32_(0x7) << RSTC_GRSTR_USB_RST_Pos)            /* (RSTC_GRSTR Mask) USB_RST */
-#define RSTC_GRSTR_USB_RST(value)             (RSTC_GRSTR_USB_RST_Msk & (_UINT32_(value) << RSTC_GRSTR_USB_RST_Pos)) 
 
 /* -------- RSTC_MR : (RSTC Offset: 0x08) (R/W 32) Mode Register -------- */
 #define RSTC_MR_RESETVALUE                    _UINT32_(0x01)                                       /*  (RSTC_MR) Mode Register  Reset Value */
@@ -144,51 +140,55 @@
 #define RSTC_MR_Msk                           _UINT32_(0xFF100F17)                                 /* (RSTC_MR) Register Mask  */
 
 
-/* -------- RSTC_SR : (RSTC Offset: 0x04) ( R/ 32) Status Register -------- */
-#define RSTC_SR_RESETVALUE                    _UINT32_(0x00)                                       /*  (RSTC_SR) Status Register  Reset Value */
+/* -------- RSTC_GRSTR : (RSTC Offset: 0xE4) (R/W 32) Generic Reset Register -------- */
+#define RSTC_GRSTR_RESETVALUE                 _UINT32_(0x70)                                       /*  (RSTC_GRSTR) Generic Reset Register  Reset Value */
 
-#define RSTC_SR_URSTS_Pos                     _UINT32_(0)                                          /* (RSTC_SR) User Reset Status Position */
-#define RSTC_SR_URSTS_Msk                     (_UINT32_(0x1) << RSTC_SR_URSTS_Pos)                 /* (RSTC_SR) User Reset Status Mask */
-#define RSTC_SR_URSTS(value)                  (RSTC_SR_URSTS_Msk & (_UINT32_(value) << RSTC_SR_URSTS_Pos)) /* Assigment of value for URSTS in the RSTC_SR register */
-#define   RSTC_SR_URSTS_0_Val                 _UINT32_(0x0)                                        /* (RSTC_SR) No high-to-low edge on NRST happened since the last read of RSTC_SR.  */
-#define   RSTC_SR_URSTS_1_Val                 _UINT32_(0x1)                                        /* (RSTC_SR) At least one high-to-low transition of NRST has been detected since the last read of RSTC_SR.  */
-#define RSTC_SR_URSTS_0                       (RSTC_SR_URSTS_0_Val << RSTC_SR_URSTS_Pos)           /* (RSTC_SR) No high-to-low edge on NRST happened since the last read of RSTC_SR. Position  */
-#define RSTC_SR_URSTS_1                       (RSTC_SR_URSTS_1_Val << RSTC_SR_URSTS_Pos)           /* (RSTC_SR) At least one high-to-low transition of NRST has been detected since the last read of RSTC_SR. Position  */
-#define RSTC_SR_RSTTYP_Pos                    _UINT32_(8)                                          /* (RSTC_SR) Reset Type Position */
-#define RSTC_SR_RSTTYP_Msk                    (_UINT32_(0xF) << RSTC_SR_RSTTYP_Pos)                /* (RSTC_SR) Reset Type Mask */
-#define RSTC_SR_RSTTYP(value)                 (RSTC_SR_RSTTYP_Msk & (_UINT32_(value) << RSTC_SR_RSTTYP_Pos)) /* Assigment of value for RSTTYP in the RSTC_SR register */
-#define   RSTC_SR_RSTTYP_GENERAL_RST_Val      _UINT32_(0x0)                                        /* (RSTC_SR) First powerup reset  */
-#define   RSTC_SR_RSTTYP_BACKUP_RST_Val       _UINT32_(0x1)                                        /* (RSTC_SR) Return from Backup mode  */
-#define   RSTC_SR_RSTTYP_WDT_RST_Val          _UINT32_(0x2)                                        /* (RSTC_SR) Watchdog fault occurred  */
-#define   RSTC_SR_RSTTYP_SOFT_RST_Val         _UINT32_(0x3)                                        /* (RSTC_SR) Processor reset required by the software  */
-#define   RSTC_SR_RSTTYP_USER_RST_Val         _UINT32_(0x4)                                        /* (RSTC_SR) NRST pin detected low  */
-#define   RSTC_SR_RSTTYP_SLCK_XTAL_RST_Val    _UINT32_(0x7)                                        /* (RSTC_SR) 32.768 kHz crystal failure detection fault occurred  */
-#define   RSTC_SR_RSTTYP_ULP2_RST_Val         _UINT32_(0x8)                                        /* (RSTC_SR) ULP Mode 2 reset  */
-#define RSTC_SR_RSTTYP_GENERAL_RST            (RSTC_SR_RSTTYP_GENERAL_RST_Val << RSTC_SR_RSTTYP_Pos) /* (RSTC_SR) First powerup reset Position  */
-#define RSTC_SR_RSTTYP_BACKUP_RST             (RSTC_SR_RSTTYP_BACKUP_RST_Val << RSTC_SR_RSTTYP_Pos) /* (RSTC_SR) Return from Backup mode Position  */
-#define RSTC_SR_RSTTYP_WDT_RST                (RSTC_SR_RSTTYP_WDT_RST_Val << RSTC_SR_RSTTYP_Pos)   /* (RSTC_SR) Watchdog fault occurred Position  */
-#define RSTC_SR_RSTTYP_SOFT_RST               (RSTC_SR_RSTTYP_SOFT_RST_Val << RSTC_SR_RSTTYP_Pos)  /* (RSTC_SR) Processor reset required by the software Position  */
-#define RSTC_SR_RSTTYP_USER_RST               (RSTC_SR_RSTTYP_USER_RST_Val << RSTC_SR_RSTTYP_Pos)  /* (RSTC_SR) NRST pin detected low Position  */
-#define RSTC_SR_RSTTYP_SLCK_XTAL_RST          (RSTC_SR_RSTTYP_SLCK_XTAL_RST_Val << RSTC_SR_RSTTYP_Pos) /* (RSTC_SR) 32.768 kHz crystal failure detection fault occurred Position  */
-#define RSTC_SR_RSTTYP_ULP2_RST               (RSTC_SR_RSTTYP_ULP2_RST_Val << RSTC_SR_RSTTYP_Pos)  /* (RSTC_SR) ULP Mode 2 reset Position  */
-#define RSTC_SR_NRSTL_Pos                     _UINT32_(16)                                         /* (RSTC_SR) NRST Pin Level Position */
-#define RSTC_SR_NRSTL_Msk                     (_UINT32_(0x1) << RSTC_SR_NRSTL_Pos)                 /* (RSTC_SR) NRST Pin Level Mask */
-#define RSTC_SR_NRSTL(value)                  (RSTC_SR_NRSTL_Msk & (_UINT32_(value) << RSTC_SR_NRSTL_Pos)) /* Assigment of value for NRSTL in the RSTC_SR register */
-#define RSTC_SR_SRCMP_Pos                     _UINT32_(17)                                         /* (RSTC_SR) Software Reset Command in Progress Position */
-#define RSTC_SR_SRCMP_Msk                     (_UINT32_(0x1) << RSTC_SR_SRCMP_Pos)                 /* (RSTC_SR) Software Reset Command in Progress Mask */
-#define RSTC_SR_SRCMP(value)                  (RSTC_SR_SRCMP_Msk & (_UINT32_(value) << RSTC_SR_SRCMP_Pos)) /* Assigment of value for SRCMP in the RSTC_SR register */
-#define   RSTC_SR_SRCMP_0_Val                 _UINT32_(0x0)                                        /* (RSTC_SR) No software command is being performed by the RSTC. The RSTC is ready for a software command.  */
-#define   RSTC_SR_SRCMP_1_Val                 _UINT32_(0x1)                                        /* (RSTC_SR) A Software reset command is being performed by the RSTC. The RSTC is busy.  */
-#define RSTC_SR_SRCMP_0                       (RSTC_SR_SRCMP_0_Val << RSTC_SR_SRCMP_Pos)           /* (RSTC_SR) No software command is being performed by the RSTC. The RSTC is ready for a software command. Position  */
-#define RSTC_SR_SRCMP_1                       (RSTC_SR_SRCMP_1_Val << RSTC_SR_SRCMP_Pos)           /* (RSTC_SR) A Software reset command is being performed by the RSTC. The RSTC is busy. Position  */
-#define RSTC_SR_Msk                           _UINT32_(0x00030F01)                                 /* (RSTC_SR) Register Mask  */
+#define RSTC_GRSTR_DDR_RST_Pos                _UINT32_(0)                                          /* (RSTC_GRSTR) DDR Reset Position */
+#define RSTC_GRSTR_DDR_RST_Msk                (_UINT32_(0x1) << RSTC_GRSTR_DDR_RST_Pos)            /* (RSTC_GRSTR) DDR Reset Mask */
+#define RSTC_GRSTR_DDR_RST(value)             (RSTC_GRSTR_DDR_RST_Msk & (_UINT32_(value) << RSTC_GRSTR_DDR_RST_Pos)) /* Assigment of value for DDR_RST in the RSTC_GRSTR register */
+#define   RSTC_GRSTR_DDR_RST_0_Val            _UINT32_(0x0)                                        /* (RSTC_GRSTR) DDR Controller reset is asserted.  */
+#define   RSTC_GRSTR_DDR_RST_1_Val            _UINT32_(0x1)                                        /* (RSTC_GRSTR) DDR Controller reset is de-asserted.  */
+#define RSTC_GRSTR_DDR_RST_0                  (RSTC_GRSTR_DDR_RST_0_Val << RSTC_GRSTR_DDR_RST_Pos) /* (RSTC_GRSTR) DDR Controller reset is asserted. Position  */
+#define RSTC_GRSTR_DDR_RST_1                  (RSTC_GRSTR_DDR_RST_1_Val << RSTC_GRSTR_DDR_RST_Pos) /* (RSTC_GRSTR) DDR Controller reset is de-asserted. Position  */
+#define RSTC_GRSTR_DDR_PHY_RST_Pos            _UINT32_(2)                                          /* (RSTC_GRSTR) DDR PHY Reset Position */
+#define RSTC_GRSTR_DDR_PHY_RST_Msk            (_UINT32_(0x1) << RSTC_GRSTR_DDR_PHY_RST_Pos)        /* (RSTC_GRSTR) DDR PHY Reset Mask */
+#define RSTC_GRSTR_DDR_PHY_RST(value)         (RSTC_GRSTR_DDR_PHY_RST_Msk & (_UINT32_(value) << RSTC_GRSTR_DDR_PHY_RST_Pos)) /* Assigment of value for DDR_PHY_RST in the RSTC_GRSTR register */
+#define   RSTC_GRSTR_DDR_PHY_RST_0_Val        _UINT32_(0x0)                                        /* (RSTC_GRSTR) DDR PHY reset is asserted.  */
+#define   RSTC_GRSTR_DDR_PHY_RST_1_Val        _UINT32_(0x1)                                        /* (RSTC_GRSTR) DDR PHY reset is de-asserted.  */
+#define RSTC_GRSTR_DDR_PHY_RST_0              (RSTC_GRSTR_DDR_PHY_RST_0_Val << RSTC_GRSTR_DDR_PHY_RST_Pos) /* (RSTC_GRSTR) DDR PHY reset is asserted. Position  */
+#define RSTC_GRSTR_DDR_PHY_RST_1              (RSTC_GRSTR_DDR_PHY_RST_1_Val << RSTC_GRSTR_DDR_PHY_RST_Pos) /* (RSTC_GRSTR) DDR PHY reset is de-asserted. Position  */
+#define RSTC_GRSTR_USB_RST1_Pos               _UINT32_(4)                                          /* (RSTC_GRSTR) USB Reset Position */
+#define RSTC_GRSTR_USB_RST1_Msk               (_UINT32_(0x1) << RSTC_GRSTR_USB_RST1_Pos)           /* (RSTC_GRSTR) USB Reset Mask */
+#define RSTC_GRSTR_USB_RST1(value)            (RSTC_GRSTR_USB_RST1_Msk & (_UINT32_(value) << RSTC_GRSTR_USB_RST1_Pos)) /* Assigment of value for USB_RST1 in the RSTC_GRSTR register */
+#define   RSTC_GRSTR_USB_RST1_POR_DISABLED_Val _UINT32_(0x0)                                        /* (RSTC_GRSTR) POR is disabled.  */
+#define   RSTC_GRSTR_USB_RST1_POR_ENABLED_Val _UINT32_(0x1)                                        /* (RSTC_GRSTR) POR is enabled.  */
+#define RSTC_GRSTR_USB_RST1_POR_DISABLED      (RSTC_GRSTR_USB_RST1_POR_DISABLED_Val << RSTC_GRSTR_USB_RST1_Pos) /* (RSTC_GRSTR) POR is disabled. Position  */
+#define RSTC_GRSTR_USB_RST1_POR_ENABLED       (RSTC_GRSTR_USB_RST1_POR_ENABLED_Val << RSTC_GRSTR_USB_RST1_Pos) /* (RSTC_GRSTR) POR is enabled. Position  */
+#define RSTC_GRSTR_USB_RST2_Pos               _UINT32_(5)                                          /* (RSTC_GRSTR) USB Reset Position */
+#define RSTC_GRSTR_USB_RST2_Msk               (_UINT32_(0x1) << RSTC_GRSTR_USB_RST2_Pos)           /* (RSTC_GRSTR) USB Reset Mask */
+#define RSTC_GRSTR_USB_RST2(value)            (RSTC_GRSTR_USB_RST2_Msk & (_UINT32_(value) << RSTC_GRSTR_USB_RST2_Pos)) /* Assigment of value for USB_RST2 in the RSTC_GRSTR register */
+#define   RSTC_GRSTR_USB_RST2_POR_DISABLED_Val _UINT32_(0x0)                                        /* (RSTC_GRSTR) POR is disabled.  */
+#define   RSTC_GRSTR_USB_RST2_POR_ENABLED_Val _UINT32_(0x1)                                        /* (RSTC_GRSTR) POR is enabled.  */
+#define RSTC_GRSTR_USB_RST2_POR_DISABLED      (RSTC_GRSTR_USB_RST2_POR_DISABLED_Val << RSTC_GRSTR_USB_RST2_Pos) /* (RSTC_GRSTR) POR is disabled. Position  */
+#define RSTC_GRSTR_USB_RST2_POR_ENABLED       (RSTC_GRSTR_USB_RST2_POR_ENABLED_Val << RSTC_GRSTR_USB_RST2_Pos) /* (RSTC_GRSTR) POR is enabled. Position  */
+#define RSTC_GRSTR_USB_RST3_Pos               _UINT32_(6)                                          /* (RSTC_GRSTR) USB Reset Position */
+#define RSTC_GRSTR_USB_RST3_Msk               (_UINT32_(0x1) << RSTC_GRSTR_USB_RST3_Pos)           /* (RSTC_GRSTR) USB Reset Mask */
+#define RSTC_GRSTR_USB_RST3(value)            (RSTC_GRSTR_USB_RST3_Msk & (_UINT32_(value) << RSTC_GRSTR_USB_RST3_Pos)) /* Assigment of value for USB_RST3 in the RSTC_GRSTR register */
+#define   RSTC_GRSTR_USB_RST3_POR_DISABLED_Val _UINT32_(0x0)                                        /* (RSTC_GRSTR) POR is disabled.  */
+#define   RSTC_GRSTR_USB_RST3_POR_ENABLED_Val _UINT32_(0x1)                                        /* (RSTC_GRSTR) POR is enabled.  */
+#define RSTC_GRSTR_USB_RST3_POR_DISABLED      (RSTC_GRSTR_USB_RST3_POR_DISABLED_Val << RSTC_GRSTR_USB_RST3_Pos) /* (RSTC_GRSTR) POR is disabled. Position  */
+#define RSTC_GRSTR_USB_RST3_POR_ENABLED       (RSTC_GRSTR_USB_RST3_POR_ENABLED_Val << RSTC_GRSTR_USB_RST3_Pos) /* (RSTC_GRSTR) POR is enabled. Position  */
+#define RSTC_GRSTR_Msk                        _UINT32_(0x00000075)                                 /* (RSTC_GRSTR) Register Mask  */
 
+#define RSTC_GRSTR_USB_RST_Pos                _UINT32_(4)                                          /* (RSTC_GRSTR Position) USB Reset */
+#define RSTC_GRSTR_USB_RST_Msk                (_UINT32_(0x7) << RSTC_GRSTR_USB_RST_Pos)            /* (RSTC_GRSTR Mask) USB_RST */
+#define RSTC_GRSTR_USB_RST(value)             (RSTC_GRSTR_USB_RST_Msk & (_UINT32_(value) << RSTC_GRSTR_USB_RST_Pos)) 
 
 /** \brief RSTC register offsets definitions */
 #define RSTC_CR_REG_OFST               _UINT32_(0x00)      /* (RSTC_CR) Control Register Offset */
-#define RSTC_GRSTR_REG_OFST            _UINT32_(0xE4)      /* (RSTC_GRSTR) Generic Reset Register Offset */
-#define RSTC_MR_REG_OFST               _UINT32_(0x08)      /* (RSTC_MR) Mode Register Offset */
 #define RSTC_SR_REG_OFST               _UINT32_(0x04)      /* (RSTC_SR) Status Register Offset */
+#define RSTC_MR_REG_OFST               _UINT32_(0x08)      /* (RSTC_MR) Mode Register Offset */
+#define RSTC_GRSTR_REG_OFST            _UINT32_(0xE4)      /* (RSTC_GRSTR) Generic Reset Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief RSTC register API structure */

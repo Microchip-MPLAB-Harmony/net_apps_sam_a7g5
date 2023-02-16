@@ -137,7 +137,7 @@ extern "C" {
 
 
 #define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			1
-#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			1
+#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			2
 #define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		0
 #define SYS_CONSOLE_PRINT_BUFFER_SIZE        		200
 
@@ -230,8 +230,8 @@ extern "C" {
 #define TCPIP_HTTP_NET_USE_COOKIES
 #define TCPIP_HTTP_NET_USE_AUTHENTICATION
 #define TCPIP_HTTP_NET_MAX_DATA_LEN		        		100
-#define TCPIP_HTTP_NET_SKT_TX_BUFF_SIZE		    		2048
-#define TCPIP_HTTP_NET_SKT_RX_BUFF_SIZE		    		2048
+#define TCPIP_HTTP_NET_SKT_TX_BUFF_SIZE		    		1024
+#define TCPIP_HTTP_NET_SKT_RX_BUFF_SIZE		    		1024
 #define TCPIP_HTTP_NET_LISTEN_PORT		    		    443
 #define TCPIP_HTTP_NET_CONFIG_FLAGS                       \
                                                         TCPIP_HTTP_NET_MODULE_FLAG_SECURE_DEFAULT |\
@@ -257,7 +257,7 @@ extern "C" {
 #define TCPIP_HTTP_NET_SSI_CMD_MAX_LEN                  100
 #define TCPIP_HTTP_NET_SSI_VARIABLES_NUMBER             13
 #define TCPIP_HTTP_NET_SSI_VARIABLE_NAME_MAX_LENGTH     10
-#define TCPIP_HTTP_NET_SSI_VARIABLE_STRING_MAX_LENGTH   20
+#define TCPIP_HTTP_NET_SSI_VARIABLE_STRING_MAX_LENGTH   10
 #define TCPIP_HTTP_NET_SSI_ECHO_NOT_FOUND_MESSAGE       "SSI Echo - Not Found: "
 #define TCPIP_HTTP_NET_CONNECTION_TIMEOUT          	0
 #define TCPIP_HTTP_NET_MALLOC_FUNC                  pvPortMalloc
@@ -598,12 +598,6 @@ extern "C" {
 #define DRV_ETHPHY_KSZ8081_RESET_CLR_TMO           500
 
 
-#define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
-
-
-
-
-
 /*** GMAC1 Configuration ***/
 #define DRV_GMAC1
 #define TCPIP_GMAC1_TX_DESCRIPTORS_COUNT_DUMMY    1
@@ -659,6 +653,12 @@ extern "C" {
 #define TCPIP_GMAC1_RX_PRIO_COUNT                1
 #define DRV_GMAC1_NUMBER_OF_QUEUES               2
 #define DRV_GMAC1_RMII_MODE                      0
+
+
+
+#define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
+
+
 
 
 

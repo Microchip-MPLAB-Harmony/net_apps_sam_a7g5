@@ -1,7 +1,7 @@
 /*
  * Component description for DWDT
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-11-02T14:25:51Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_DWDT_COMPONENT_H_
 #define _SAMA7G_DWDT_COMPONENT_H_
 
@@ -49,131 +49,6 @@
 #define   DWDT_NS_WDT_CR_KEY_PASSWD_Val       _UINT32_(0xA5)                                       /* (DWDT_NS_WDT_CR) Writing any other value in this field aborts the write operation.  */
 #define DWDT_NS_WDT_CR_KEY_PASSWD             (DWDT_NS_WDT_CR_KEY_PASSWD_Val << DWDT_NS_WDT_CR_KEY_Pos) /* (DWDT_NS_WDT_CR) Writing any other value in this field aborts the write operation. Position  */
 #define DWDT_NS_WDT_CR_Msk                    _UINT32_(0xFF000011)                                 /* (DWDT_NS_WDT_CR) Register Mask  */
-
-
-/* -------- DWDT_NS_WDT_IDR : (DWDT Offset: 0x18) ( /W 32) Never Secure Interrupt Disable Register -------- */
-#define DWDT_NS_WDT_IDR_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_NS_WDT_IDR) Period Interrupt Disable Position */
-#define DWDT_NS_WDT_IDR_PERINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_IDR_PERINT_Pos)        /* (DWDT_NS_WDT_IDR) Period Interrupt Disable Mask */
-#define DWDT_NS_WDT_IDR_PERINT(value)         (DWDT_NS_WDT_IDR_PERINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IDR_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_NS_WDT_IDR register */
-#define   DWDT_NS_WDT_IDR_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IDR) No effect.  */
-#define   DWDT_NS_WDT_IDR_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IDR) The never secure period failure interrupt is disabled.  */
-#define DWDT_NS_WDT_IDR_PERINT_0              (DWDT_NS_WDT_IDR_PERINT_0_Val << DWDT_NS_WDT_IDR_PERINT_Pos) /* (DWDT_NS_WDT_IDR) No effect. Position  */
-#define DWDT_NS_WDT_IDR_PERINT_1              (DWDT_NS_WDT_IDR_PERINT_1_Val << DWDT_NS_WDT_IDR_PERINT_Pos) /* (DWDT_NS_WDT_IDR) The never secure period failure interrupt is disabled. Position  */
-#define DWDT_NS_WDT_IDR_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_NS_WDT_IDR) Repeat Threshold Interrupt Disable Position */
-#define DWDT_NS_WDT_IDR_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_NS_WDT_IDR_RPTHINT_Pos)       /* (DWDT_NS_WDT_IDR) Repeat Threshold Interrupt Disable Mask */
-#define DWDT_NS_WDT_IDR_RPTHINT(value)        (DWDT_NS_WDT_IDR_RPTHINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IDR_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_NS_WDT_IDR register */
-#define   DWDT_NS_WDT_IDR_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IDR) No effect.  */
-#define   DWDT_NS_WDT_IDR_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IDR) The never secure repeat threshold failure interrupt is disabled.  */
-#define DWDT_NS_WDT_IDR_RPTHINT_0             (DWDT_NS_WDT_IDR_RPTHINT_0_Val << DWDT_NS_WDT_IDR_RPTHINT_Pos) /* (DWDT_NS_WDT_IDR) No effect. Position  */
-#define DWDT_NS_WDT_IDR_RPTHINT_1             (DWDT_NS_WDT_IDR_RPTHINT_1_Val << DWDT_NS_WDT_IDR_RPTHINT_Pos) /* (DWDT_NS_WDT_IDR) The never secure repeat threshold failure interrupt is disabled. Position  */
-#define DWDT_NS_WDT_IDR_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_NS_WDT_IDR) Interrupt Level Threshold Interrupt Disable Position */
-#define DWDT_NS_WDT_IDR_LVLINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_IDR_LVLINT_Pos)        /* (DWDT_NS_WDT_IDR) Interrupt Level Threshold Interrupt Disable Mask */
-#define DWDT_NS_WDT_IDR_LVLINT(value)         (DWDT_NS_WDT_IDR_LVLINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IDR_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_NS_WDT_IDR register */
-#define   DWDT_NS_WDT_IDR_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IDR) No effect.  */
-#define   DWDT_NS_WDT_IDR_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IDR) The never secure interrupt threshold failure interrupt is disabled.  */
-#define DWDT_NS_WDT_IDR_LVLINT_0              (DWDT_NS_WDT_IDR_LVLINT_0_Val << DWDT_NS_WDT_IDR_LVLINT_Pos) /* (DWDT_NS_WDT_IDR) No effect. Position  */
-#define DWDT_NS_WDT_IDR_LVLINT_1              (DWDT_NS_WDT_IDR_LVLINT_1_Val << DWDT_NS_WDT_IDR_LVLINT_Pos) /* (DWDT_NS_WDT_IDR) The never secure interrupt threshold failure interrupt is disabled. Position  */
-#define DWDT_NS_WDT_IDR_Msk                   _UINT32_(0x00000007)                                 /* (DWDT_NS_WDT_IDR) Register Mask  */
-
-
-/* -------- DWDT_NS_WDT_IER : (DWDT Offset: 0x14) ( /W 32) Never Secure Interrupt Enable Register -------- */
-#define DWDT_NS_WDT_IER_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_NS_WDT_IER) Period Interrupt Enable Position */
-#define DWDT_NS_WDT_IER_PERINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_IER_PERINT_Pos)        /* (DWDT_NS_WDT_IER) Period Interrupt Enable Mask */
-#define DWDT_NS_WDT_IER_PERINT(value)         (DWDT_NS_WDT_IER_PERINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IER_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_NS_WDT_IER register */
-#define   DWDT_NS_WDT_IER_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IER) No effect.  */
-#define   DWDT_NS_WDT_IER_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IER) The never secure period failure interrupt is enabled.  */
-#define DWDT_NS_WDT_IER_PERINT_0              (DWDT_NS_WDT_IER_PERINT_0_Val << DWDT_NS_WDT_IER_PERINT_Pos) /* (DWDT_NS_WDT_IER) No effect. Position  */
-#define DWDT_NS_WDT_IER_PERINT_1              (DWDT_NS_WDT_IER_PERINT_1_Val << DWDT_NS_WDT_IER_PERINT_Pos) /* (DWDT_NS_WDT_IER) The never secure period failure interrupt is enabled. Position  */
-#define DWDT_NS_WDT_IER_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_NS_WDT_IER) Repeat Threshold Interrupt Enable Position */
-#define DWDT_NS_WDT_IER_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_NS_WDT_IER_RPTHINT_Pos)       /* (DWDT_NS_WDT_IER) Repeat Threshold Interrupt Enable Mask */
-#define DWDT_NS_WDT_IER_RPTHINT(value)        (DWDT_NS_WDT_IER_RPTHINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IER_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_NS_WDT_IER register */
-#define   DWDT_NS_WDT_IER_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IER) No effect.  */
-#define   DWDT_NS_WDT_IER_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IER) The never secure repeat threshold failure interrupt is enabled.  */
-#define DWDT_NS_WDT_IER_RPTHINT_0             (DWDT_NS_WDT_IER_RPTHINT_0_Val << DWDT_NS_WDT_IER_RPTHINT_Pos) /* (DWDT_NS_WDT_IER) No effect. Position  */
-#define DWDT_NS_WDT_IER_RPTHINT_1             (DWDT_NS_WDT_IER_RPTHINT_1_Val << DWDT_NS_WDT_IER_RPTHINT_Pos) /* (DWDT_NS_WDT_IER) The never secure repeat threshold failure interrupt is enabled. Position  */
-#define DWDT_NS_WDT_IER_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_NS_WDT_IER) Interrupt Level Threshold Interrupt Enable Position */
-#define DWDT_NS_WDT_IER_LVLINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_IER_LVLINT_Pos)        /* (DWDT_NS_WDT_IER) Interrupt Level Threshold Interrupt Enable Mask */
-#define DWDT_NS_WDT_IER_LVLINT(value)         (DWDT_NS_WDT_IER_LVLINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IER_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_NS_WDT_IER register */
-#define   DWDT_NS_WDT_IER_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IER) No effect.  */
-#define   DWDT_NS_WDT_IER_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IER) The never secure interrupt threshold failure interrupt is enabled.  */
-#define DWDT_NS_WDT_IER_LVLINT_0              (DWDT_NS_WDT_IER_LVLINT_0_Val << DWDT_NS_WDT_IER_LVLINT_Pos) /* (DWDT_NS_WDT_IER) No effect. Position  */
-#define DWDT_NS_WDT_IER_LVLINT_1              (DWDT_NS_WDT_IER_LVLINT_1_Val << DWDT_NS_WDT_IER_LVLINT_Pos) /* (DWDT_NS_WDT_IER) The never secure interrupt threshold failure interrupt is enabled. Position  */
-#define DWDT_NS_WDT_IER_Msk                   _UINT32_(0x00000007)                                 /* (DWDT_NS_WDT_IER) Register Mask  */
-
-
-/* -------- DWDT_NS_WDT_IL : (DWDT Offset: 0x10) (R/W 32) Never Secure Interrupt Level Register -------- */
-#define DWDT_NS_WDT_IL_RESETVALUE             _UINT32_(0xFFF)                                      /*  (DWDT_NS_WDT_IL) Never Secure Interrupt Level Register  Reset Value */
-
-#define DWDT_NS_WDT_IL_LVLTH_Pos              _UINT32_(0)                                          /* (DWDT_NS_WDT_IL) Level Threshold Position */
-#define DWDT_NS_WDT_IL_LVLTH_Msk              (_UINT32_(0xFFF) << DWDT_NS_WDT_IL_LVLTH_Pos)        /* (DWDT_NS_WDT_IL) Level Threshold Mask */
-#define DWDT_NS_WDT_IL_LVLTH(value)           (DWDT_NS_WDT_IL_LVLTH_Msk & (_UINT32_(value) << DWDT_NS_WDT_IL_LVLTH_Pos)) /* Assigment of value for LVLTH in the DWDT_NS_WDT_IL register */
-#define DWDT_NS_WDT_IL_Msk                    _UINT32_(0x00000FFF)                                 /* (DWDT_NS_WDT_IL) Register Mask  */
-
-
-/* -------- DWDT_NS_WDT_IMR : (DWDT Offset: 0x20) ( R/ 32) Never Secure Interrupt Mask Register -------- */
-#define DWDT_NS_WDT_IMR_RESETVALUE            _UINT32_(0x00)                                       /*  (DWDT_NS_WDT_IMR) Never Secure Interrupt Mask Register  Reset Value */
-
-#define DWDT_NS_WDT_IMR_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_NS_WDT_IMR) Period Interrupt Mask Position */
-#define DWDT_NS_WDT_IMR_PERINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_IMR_PERINT_Pos)        /* (DWDT_NS_WDT_IMR) Period Interrupt Mask Mask */
-#define DWDT_NS_WDT_IMR_PERINT(value)         (DWDT_NS_WDT_IMR_PERINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IMR_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_NS_WDT_IMR register */
-#define   DWDT_NS_WDT_IMR_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IMR) Interrupt on PERINT is disabled.  */
-#define   DWDT_NS_WDT_IMR_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IMR) Interrupt on PERINT is enabled.  */
-#define DWDT_NS_WDT_IMR_PERINT_0              (DWDT_NS_WDT_IMR_PERINT_0_Val << DWDT_NS_WDT_IMR_PERINT_Pos) /* (DWDT_NS_WDT_IMR) Interrupt on PERINT is disabled. Position  */
-#define DWDT_NS_WDT_IMR_PERINT_1              (DWDT_NS_WDT_IMR_PERINT_1_Val << DWDT_NS_WDT_IMR_PERINT_Pos) /* (DWDT_NS_WDT_IMR) Interrupt on PERINT is enabled. Position  */
-#define DWDT_NS_WDT_IMR_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_NS_WDT_IMR) Repeat Threshold Interrupt Mask Position */
-#define DWDT_NS_WDT_IMR_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_NS_WDT_IMR_RPTHINT_Pos)       /* (DWDT_NS_WDT_IMR) Repeat Threshold Interrupt Mask Mask */
-#define DWDT_NS_WDT_IMR_RPTHINT(value)        (DWDT_NS_WDT_IMR_RPTHINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IMR_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_NS_WDT_IMR register */
-#define   DWDT_NS_WDT_IMR_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IMR) Interrupt on RPTHINT is disabled.  */
-#define   DWDT_NS_WDT_IMR_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IMR) Interrupt on RPTHINT is enabled.  */
-#define DWDT_NS_WDT_IMR_RPTHINT_0             (DWDT_NS_WDT_IMR_RPTHINT_0_Val << DWDT_NS_WDT_IMR_RPTHINT_Pos) /* (DWDT_NS_WDT_IMR) Interrupt on RPTHINT is disabled. Position  */
-#define DWDT_NS_WDT_IMR_RPTHINT_1             (DWDT_NS_WDT_IMR_RPTHINT_1_Val << DWDT_NS_WDT_IMR_RPTHINT_Pos) /* (DWDT_NS_WDT_IMR) Interrupt on RPTHINT is enabled. Position  */
-#define DWDT_NS_WDT_IMR_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_NS_WDT_IMR) Interrupt Level Threshold Interrupt Mask Position */
-#define DWDT_NS_WDT_IMR_LVLINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_IMR_LVLINT_Pos)        /* (DWDT_NS_WDT_IMR) Interrupt Level Threshold Interrupt Mask Mask */
-#define DWDT_NS_WDT_IMR_LVLINT(value)         (DWDT_NS_WDT_IMR_LVLINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IMR_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_NS_WDT_IMR register */
-#define   DWDT_NS_WDT_IMR_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IMR) Interrupt on LVLINT is disabled.  */
-#define   DWDT_NS_WDT_IMR_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IMR) Interrupt on LVLINT is enabled.  */
-#define DWDT_NS_WDT_IMR_LVLINT_0              (DWDT_NS_WDT_IMR_LVLINT_0_Val << DWDT_NS_WDT_IMR_LVLINT_Pos) /* (DWDT_NS_WDT_IMR) Interrupt on LVLINT is disabled. Position  */
-#define DWDT_NS_WDT_IMR_LVLINT_1              (DWDT_NS_WDT_IMR_LVLINT_1_Val << DWDT_NS_WDT_IMR_LVLINT_Pos) /* (DWDT_NS_WDT_IMR) Interrupt on LVLINT is enabled. Position  */
-#define DWDT_NS_WDT_IMR_Msk                   _UINT32_(0x00000007)                                 /* (DWDT_NS_WDT_IMR) Register Mask  */
-
-
-/* -------- DWDT_NS_WDT_ISR : (DWDT Offset: 0x1C) ( R/ 32) Never Secure Interrupt Status Register -------- */
-#define DWDT_NS_WDT_ISR_RESETVALUE            _UINT32_(0x00)                                       /*  (DWDT_NS_WDT_ISR) Never Secure Interrupt Status Register  Reset Value */
-
-#define DWDT_NS_WDT_ISR_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_NS_WDT_ISR) Period Interrupt Status Position */
-#define DWDT_NS_WDT_ISR_PERINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_ISR_PERINT_Pos)        /* (DWDT_NS_WDT_ISR) Period Interrupt Status Mask */
-#define DWDT_NS_WDT_ISR_PERINT(value)         (DWDT_NS_WDT_ISR_PERINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_ISR_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_NS_WDT_ISR register */
-#define   DWDT_NS_WDT_ISR_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_ISR) No period failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR.  */
-#define   DWDT_NS_WDT_ISR_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_ISR) At least one period failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR.  */
-#define DWDT_NS_WDT_ISR_PERINT_0              (DWDT_NS_WDT_ISR_PERINT_0_Val << DWDT_NS_WDT_ISR_PERINT_Pos) /* (DWDT_NS_WDT_ISR) No period failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR. Position  */
-#define DWDT_NS_WDT_ISR_PERINT_1              (DWDT_NS_WDT_ISR_PERINT_1_Val << DWDT_NS_WDT_ISR_PERINT_Pos) /* (DWDT_NS_WDT_ISR) At least one period failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR. Position  */
-#define DWDT_NS_WDT_ISR_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_NS_WDT_ISR) Repeat Threshold Interrupt Enable Position */
-#define DWDT_NS_WDT_ISR_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_NS_WDT_ISR_RPTHINT_Pos)       /* (DWDT_NS_WDT_ISR) Repeat Threshold Interrupt Enable Mask */
-#define DWDT_NS_WDT_ISR_RPTHINT(value)        (DWDT_NS_WDT_ISR_RPTHINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_ISR_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_NS_WDT_ISR register */
-#define   DWDT_NS_WDT_ISR_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_NS_WDT_ISR) No repeat threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR.  */
-#define   DWDT_NS_WDT_ISR_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_NS_WDT_ISR) At least one repeat threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR.  */
-#define DWDT_NS_WDT_ISR_RPTHINT_0             (DWDT_NS_WDT_ISR_RPTHINT_0_Val << DWDT_NS_WDT_ISR_RPTHINT_Pos) /* (DWDT_NS_WDT_ISR) No repeat threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR. Position  */
-#define DWDT_NS_WDT_ISR_RPTHINT_1             (DWDT_NS_WDT_ISR_RPTHINT_1_Val << DWDT_NS_WDT_ISR_RPTHINT_Pos) /* (DWDT_NS_WDT_ISR) At least one repeat threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR. Position  */
-#define DWDT_NS_WDT_ISR_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_NS_WDT_ISR) Interrupt Level Threshold Interrupt Enable Position */
-#define DWDT_NS_WDT_ISR_LVLINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_ISR_LVLINT_Pos)        /* (DWDT_NS_WDT_ISR) Interrupt Level Threshold Interrupt Enable Mask */
-#define DWDT_NS_WDT_ISR_LVLINT(value)         (DWDT_NS_WDT_ISR_LVLINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_ISR_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_NS_WDT_ISR register */
-#define   DWDT_NS_WDT_ISR_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_ISR) No level threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR.  */
-#define   DWDT_NS_WDT_ISR_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_ISR) At least one level threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR.  */
-#define DWDT_NS_WDT_ISR_LVLINT_0              (DWDT_NS_WDT_ISR_LVLINT_0_Val << DWDT_NS_WDT_ISR_LVLINT_Pos) /* (DWDT_NS_WDT_ISR) No level threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR. Position  */
-#define DWDT_NS_WDT_ISR_LVLINT_1              (DWDT_NS_WDT_ISR_LVLINT_1_Val << DWDT_NS_WDT_ISR_LVLINT_Pos) /* (DWDT_NS_WDT_ISR) At least one level threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR. Position  */
-#define DWDT_NS_WDT_ISR_Msk                   _UINT32_(0x00000007)                                 /* (DWDT_NS_WDT_ISR) Register Mask  */
-
-
-/* -------- DWDT_NS_WDT_LVLLIM : (DWDT Offset: 0x11A4) (R/W 32) Never Secure Level Limits Register -------- */
-#define DWDT_NS_WDT_LVLLIM_RESETVALUE         _UINT32_(0xFFF0000)                                  /*  (DWDT_NS_WDT_LVLLIM) Never Secure Level Limits Register  Reset Value */
-
-#define DWDT_NS_WDT_LVLLIM_LVLMIN_Pos         _UINT32_(0)                                          /* (DWDT_NS_WDT_LVLLIM) Level Minimum Position */
-#define DWDT_NS_WDT_LVLLIM_LVLMIN_Msk         (_UINT32_(0xFFF) << DWDT_NS_WDT_LVLLIM_LVLMIN_Pos)   /* (DWDT_NS_WDT_LVLLIM) Level Minimum Mask */
-#define DWDT_NS_WDT_LVLLIM_LVLMIN(value)      (DWDT_NS_WDT_LVLLIM_LVLMIN_Msk & (_UINT32_(value) << DWDT_NS_WDT_LVLLIM_LVLMIN_Pos)) /* Assigment of value for LVLMIN in the DWDT_NS_WDT_LVLLIM register */
-#define DWDT_NS_WDT_LVLLIM_LVLMAX_Pos         _UINT32_(16)                                         /* (DWDT_NS_WDT_LVLLIM) Level Maximum Position */
-#define DWDT_NS_WDT_LVLLIM_LVLMAX_Msk         (_UINT32_(0xFFF) << DWDT_NS_WDT_LVLLIM_LVLMAX_Pos)   /* (DWDT_NS_WDT_LVLLIM) Level Maximum Mask */
-#define DWDT_NS_WDT_LVLLIM_LVLMAX(value)      (DWDT_NS_WDT_LVLLIM_LVLMAX_Msk & (_UINT32_(value) << DWDT_NS_WDT_LVLLIM_LVLMAX_Pos)) /* Assigment of value for LVLMAX in the DWDT_NS_WDT_LVLLIM register */
-#define DWDT_NS_WDT_LVLLIM_Msk                _UINT32_(0x0FFF0FFF)                                 /* (DWDT_NS_WDT_LVLLIM) Register Mask  */
 
 
 /* -------- DWDT_NS_WDT_MR : (DWDT Offset: 0x04) (R/W 32) Never Secure Mode Register -------- */
@@ -210,30 +85,6 @@
 #define DWDT_NS_WDT_MR_Msk                    _UINT32_(0x30001020)                                 /* (DWDT_NS_WDT_MR) Register Mask  */
 
 
-/* -------- DWDT_NS_WDT_PLIM : (DWDT Offset: 0x11AC) (R/W 32) Never Secure Period Limits Register -------- */
-#define DWDT_NS_WDT_PLIM_RESETVALUE           _UINT32_(0xFFF0000)                                  /*  (DWDT_NS_WDT_PLIM) Never Secure Period Limits Register  Reset Value */
-
-#define DWDT_NS_WDT_PLIM_PERMIN_Pos           _UINT32_(0)                                          /* (DWDT_NS_WDT_PLIM) Period Minimum Position */
-#define DWDT_NS_WDT_PLIM_PERMIN_Msk           (_UINT32_(0xFFF) << DWDT_NS_WDT_PLIM_PERMIN_Pos)     /* (DWDT_NS_WDT_PLIM) Period Minimum Mask */
-#define DWDT_NS_WDT_PLIM_PERMIN(value)        (DWDT_NS_WDT_PLIM_PERMIN_Msk & (_UINT32_(value) << DWDT_NS_WDT_PLIM_PERMIN_Pos)) /* Assigment of value for PERMIN in the DWDT_NS_WDT_PLIM register */
-#define DWDT_NS_WDT_PLIM_PERMAX_Pos           _UINT32_(16)                                         /* (DWDT_NS_WDT_PLIM) Period Maximum Position */
-#define DWDT_NS_WDT_PLIM_PERMAX_Msk           (_UINT32_(0xFFF) << DWDT_NS_WDT_PLIM_PERMAX_Pos)     /* (DWDT_NS_WDT_PLIM) Period Maximum Mask */
-#define DWDT_NS_WDT_PLIM_PERMAX(value)        (DWDT_NS_WDT_PLIM_PERMAX_Msk & (_UINT32_(value) << DWDT_NS_WDT_PLIM_PERMAX_Pos)) /* Assigment of value for PERMAX in the DWDT_NS_WDT_PLIM register */
-#define DWDT_NS_WDT_PLIM_Msk                  _UINT32_(0x0FFF0FFF)                                 /* (DWDT_NS_WDT_PLIM) Register Mask  */
-
-
-/* -------- DWDT_NS_WDT_RLIM : (DWDT Offset: 0x11A8) (R/W 32) Never Secure Repeat Limits Register -------- */
-#define DWDT_NS_WDT_RLIM_RESETVALUE           _UINT32_(0xFFF0000)                                  /*  (DWDT_NS_WDT_RLIM) Never Secure Repeat Limits Register  Reset Value */
-
-#define DWDT_NS_WDT_RLIM_RPTHMIN_Pos          _UINT32_(0)                                          /* (DWDT_NS_WDT_RLIM) Repeat Threshold Minimum Position */
-#define DWDT_NS_WDT_RLIM_RPTHMIN_Msk          (_UINT32_(0xFFF) << DWDT_NS_WDT_RLIM_RPTHMIN_Pos)    /* (DWDT_NS_WDT_RLIM) Repeat Threshold Minimum Mask */
-#define DWDT_NS_WDT_RLIM_RPTHMIN(value)       (DWDT_NS_WDT_RLIM_RPTHMIN_Msk & (_UINT32_(value) << DWDT_NS_WDT_RLIM_RPTHMIN_Pos)) /* Assigment of value for RPTHMIN in the DWDT_NS_WDT_RLIM register */
-#define DWDT_NS_WDT_RLIM_RPTHMAX_Pos          _UINT32_(16)                                         /* (DWDT_NS_WDT_RLIM) Repeat Threshold Maximum Position */
-#define DWDT_NS_WDT_RLIM_RPTHMAX_Msk          (_UINT32_(0xFFF) << DWDT_NS_WDT_RLIM_RPTHMAX_Pos)    /* (DWDT_NS_WDT_RLIM) Repeat Threshold Maximum Mask */
-#define DWDT_NS_WDT_RLIM_RPTHMAX(value)       (DWDT_NS_WDT_RLIM_RPTHMAX_Msk & (_UINT32_(value) << DWDT_NS_WDT_RLIM_RPTHMAX_Pos)) /* Assigment of value for RPTHMAX in the DWDT_NS_WDT_RLIM register */
-#define DWDT_NS_WDT_RLIM_Msk                  _UINT32_(0x0FFF0FFF)                                 /* (DWDT_NS_WDT_RLIM) Register Mask  */
-
-
 /* -------- DWDT_NS_WDT_VR : (DWDT Offset: 0x08) ( R/ 32) Never Secure Value Register -------- */
 #define DWDT_NS_WDT_VR_RESETVALUE             _UINT32_(0xFFF)                                      /*  (DWDT_NS_WDT_VR) Never Secure Value Register  Reset Value */
 
@@ -253,6 +104,119 @@
 #define DWDT_NS_WDT_WL_RPTH_Msk               (_UINT32_(0xFFF) << DWDT_NS_WDT_WL_RPTH_Pos)         /* (DWDT_NS_WDT_WL) Repeat Threshold Mask */
 #define DWDT_NS_WDT_WL_RPTH(value)            (DWDT_NS_WDT_WL_RPTH_Msk & (_UINT32_(value) << DWDT_NS_WDT_WL_RPTH_Pos)) /* Assigment of value for RPTH in the DWDT_NS_WDT_WL register */
 #define DWDT_NS_WDT_WL_Msk                    _UINT32_(0x0FFF0FFF)                                 /* (DWDT_NS_WDT_WL) Register Mask  */
+
+
+/* -------- DWDT_NS_WDT_IL : (DWDT Offset: 0x10) (R/W 32) Never Secure Interrupt Level Register -------- */
+#define DWDT_NS_WDT_IL_RESETVALUE             _UINT32_(0xFFF)                                      /*  (DWDT_NS_WDT_IL) Never Secure Interrupt Level Register  Reset Value */
+
+#define DWDT_NS_WDT_IL_LVLTH_Pos              _UINT32_(0)                                          /* (DWDT_NS_WDT_IL) Level Threshold Position */
+#define DWDT_NS_WDT_IL_LVLTH_Msk              (_UINT32_(0xFFF) << DWDT_NS_WDT_IL_LVLTH_Pos)        /* (DWDT_NS_WDT_IL) Level Threshold Mask */
+#define DWDT_NS_WDT_IL_LVLTH(value)           (DWDT_NS_WDT_IL_LVLTH_Msk & (_UINT32_(value) << DWDT_NS_WDT_IL_LVLTH_Pos)) /* Assigment of value for LVLTH in the DWDT_NS_WDT_IL register */
+#define DWDT_NS_WDT_IL_Msk                    _UINT32_(0x00000FFF)                                 /* (DWDT_NS_WDT_IL) Register Mask  */
+
+
+/* -------- DWDT_NS_WDT_IER : (DWDT Offset: 0x14) ( /W 32) Never Secure Interrupt Enable Register -------- */
+#define DWDT_NS_WDT_IER_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_NS_WDT_IER) Period Interrupt Enable Position */
+#define DWDT_NS_WDT_IER_PERINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_IER_PERINT_Pos)        /* (DWDT_NS_WDT_IER) Period Interrupt Enable Mask */
+#define DWDT_NS_WDT_IER_PERINT(value)         (DWDT_NS_WDT_IER_PERINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IER_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_NS_WDT_IER register */
+#define   DWDT_NS_WDT_IER_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IER) No effect.  */
+#define   DWDT_NS_WDT_IER_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IER) The never secure period failure interrupt is enabled.  */
+#define DWDT_NS_WDT_IER_PERINT_0              (DWDT_NS_WDT_IER_PERINT_0_Val << DWDT_NS_WDT_IER_PERINT_Pos) /* (DWDT_NS_WDT_IER) No effect. Position  */
+#define DWDT_NS_WDT_IER_PERINT_1              (DWDT_NS_WDT_IER_PERINT_1_Val << DWDT_NS_WDT_IER_PERINT_Pos) /* (DWDT_NS_WDT_IER) The never secure period failure interrupt is enabled. Position  */
+#define DWDT_NS_WDT_IER_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_NS_WDT_IER) Repeat Threshold Interrupt Enable Position */
+#define DWDT_NS_WDT_IER_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_NS_WDT_IER_RPTHINT_Pos)       /* (DWDT_NS_WDT_IER) Repeat Threshold Interrupt Enable Mask */
+#define DWDT_NS_WDT_IER_RPTHINT(value)        (DWDT_NS_WDT_IER_RPTHINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IER_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_NS_WDT_IER register */
+#define   DWDT_NS_WDT_IER_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IER) No effect.  */
+#define   DWDT_NS_WDT_IER_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IER) The never secure repeat threshold failure interrupt is enabled.  */
+#define DWDT_NS_WDT_IER_RPTHINT_0             (DWDT_NS_WDT_IER_RPTHINT_0_Val << DWDT_NS_WDT_IER_RPTHINT_Pos) /* (DWDT_NS_WDT_IER) No effect. Position  */
+#define DWDT_NS_WDT_IER_RPTHINT_1             (DWDT_NS_WDT_IER_RPTHINT_1_Val << DWDT_NS_WDT_IER_RPTHINT_Pos) /* (DWDT_NS_WDT_IER) The never secure repeat threshold failure interrupt is enabled. Position  */
+#define DWDT_NS_WDT_IER_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_NS_WDT_IER) Interrupt Level Threshold Interrupt Enable Position */
+#define DWDT_NS_WDT_IER_LVLINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_IER_LVLINT_Pos)        /* (DWDT_NS_WDT_IER) Interrupt Level Threshold Interrupt Enable Mask */
+#define DWDT_NS_WDT_IER_LVLINT(value)         (DWDT_NS_WDT_IER_LVLINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IER_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_NS_WDT_IER register */
+#define   DWDT_NS_WDT_IER_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IER) No effect.  */
+#define   DWDT_NS_WDT_IER_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IER) The never secure interrupt threshold failure interrupt is enabled.  */
+#define DWDT_NS_WDT_IER_LVLINT_0              (DWDT_NS_WDT_IER_LVLINT_0_Val << DWDT_NS_WDT_IER_LVLINT_Pos) /* (DWDT_NS_WDT_IER) No effect. Position  */
+#define DWDT_NS_WDT_IER_LVLINT_1              (DWDT_NS_WDT_IER_LVLINT_1_Val << DWDT_NS_WDT_IER_LVLINT_Pos) /* (DWDT_NS_WDT_IER) The never secure interrupt threshold failure interrupt is enabled. Position  */
+#define DWDT_NS_WDT_IER_Msk                   _UINT32_(0x00000007)                                 /* (DWDT_NS_WDT_IER) Register Mask  */
+
+
+/* -------- DWDT_NS_WDT_IDR : (DWDT Offset: 0x18) ( /W 32) Never Secure Interrupt Disable Register -------- */
+#define DWDT_NS_WDT_IDR_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_NS_WDT_IDR) Period Interrupt Disable Position */
+#define DWDT_NS_WDT_IDR_PERINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_IDR_PERINT_Pos)        /* (DWDT_NS_WDT_IDR) Period Interrupt Disable Mask */
+#define DWDT_NS_WDT_IDR_PERINT(value)         (DWDT_NS_WDT_IDR_PERINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IDR_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_NS_WDT_IDR register */
+#define   DWDT_NS_WDT_IDR_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IDR) No effect.  */
+#define   DWDT_NS_WDT_IDR_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IDR) The never secure period failure interrupt is disabled.  */
+#define DWDT_NS_WDT_IDR_PERINT_0              (DWDT_NS_WDT_IDR_PERINT_0_Val << DWDT_NS_WDT_IDR_PERINT_Pos) /* (DWDT_NS_WDT_IDR) No effect. Position  */
+#define DWDT_NS_WDT_IDR_PERINT_1              (DWDT_NS_WDT_IDR_PERINT_1_Val << DWDT_NS_WDT_IDR_PERINT_Pos) /* (DWDT_NS_WDT_IDR) The never secure period failure interrupt is disabled. Position  */
+#define DWDT_NS_WDT_IDR_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_NS_WDT_IDR) Repeat Threshold Interrupt Disable Position */
+#define DWDT_NS_WDT_IDR_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_NS_WDT_IDR_RPTHINT_Pos)       /* (DWDT_NS_WDT_IDR) Repeat Threshold Interrupt Disable Mask */
+#define DWDT_NS_WDT_IDR_RPTHINT(value)        (DWDT_NS_WDT_IDR_RPTHINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IDR_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_NS_WDT_IDR register */
+#define   DWDT_NS_WDT_IDR_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IDR) No effect.  */
+#define   DWDT_NS_WDT_IDR_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IDR) The never secure repeat threshold failure interrupt is disabled.  */
+#define DWDT_NS_WDT_IDR_RPTHINT_0             (DWDT_NS_WDT_IDR_RPTHINT_0_Val << DWDT_NS_WDT_IDR_RPTHINT_Pos) /* (DWDT_NS_WDT_IDR) No effect. Position  */
+#define DWDT_NS_WDT_IDR_RPTHINT_1             (DWDT_NS_WDT_IDR_RPTHINT_1_Val << DWDT_NS_WDT_IDR_RPTHINT_Pos) /* (DWDT_NS_WDT_IDR) The never secure repeat threshold failure interrupt is disabled. Position  */
+#define DWDT_NS_WDT_IDR_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_NS_WDT_IDR) Interrupt Level Threshold Interrupt Disable Position */
+#define DWDT_NS_WDT_IDR_LVLINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_IDR_LVLINT_Pos)        /* (DWDT_NS_WDT_IDR) Interrupt Level Threshold Interrupt Disable Mask */
+#define DWDT_NS_WDT_IDR_LVLINT(value)         (DWDT_NS_WDT_IDR_LVLINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IDR_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_NS_WDT_IDR register */
+#define   DWDT_NS_WDT_IDR_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IDR) No effect.  */
+#define   DWDT_NS_WDT_IDR_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IDR) The never secure interrupt threshold failure interrupt is disabled.  */
+#define DWDT_NS_WDT_IDR_LVLINT_0              (DWDT_NS_WDT_IDR_LVLINT_0_Val << DWDT_NS_WDT_IDR_LVLINT_Pos) /* (DWDT_NS_WDT_IDR) No effect. Position  */
+#define DWDT_NS_WDT_IDR_LVLINT_1              (DWDT_NS_WDT_IDR_LVLINT_1_Val << DWDT_NS_WDT_IDR_LVLINT_Pos) /* (DWDT_NS_WDT_IDR) The never secure interrupt threshold failure interrupt is disabled. Position  */
+#define DWDT_NS_WDT_IDR_Msk                   _UINT32_(0x00000007)                                 /* (DWDT_NS_WDT_IDR) Register Mask  */
+
+
+/* -------- DWDT_NS_WDT_ISR : (DWDT Offset: 0x1C) ( R/ 32) Never Secure Interrupt Status Register -------- */
+#define DWDT_NS_WDT_ISR_RESETVALUE            _UINT32_(0x00)                                       /*  (DWDT_NS_WDT_ISR) Never Secure Interrupt Status Register  Reset Value */
+
+#define DWDT_NS_WDT_ISR_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_NS_WDT_ISR) Period Interrupt Status Position */
+#define DWDT_NS_WDT_ISR_PERINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_ISR_PERINT_Pos)        /* (DWDT_NS_WDT_ISR) Period Interrupt Status Mask */
+#define DWDT_NS_WDT_ISR_PERINT(value)         (DWDT_NS_WDT_ISR_PERINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_ISR_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_NS_WDT_ISR register */
+#define   DWDT_NS_WDT_ISR_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_ISR) No period failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR.  */
+#define   DWDT_NS_WDT_ISR_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_ISR) At least one period failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR.  */
+#define DWDT_NS_WDT_ISR_PERINT_0              (DWDT_NS_WDT_ISR_PERINT_0_Val << DWDT_NS_WDT_ISR_PERINT_Pos) /* (DWDT_NS_WDT_ISR) No period failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR. Position  */
+#define DWDT_NS_WDT_ISR_PERINT_1              (DWDT_NS_WDT_ISR_PERINT_1_Val << DWDT_NS_WDT_ISR_PERINT_Pos) /* (DWDT_NS_WDT_ISR) At least one period failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR. Position  */
+#define DWDT_NS_WDT_ISR_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_NS_WDT_ISR) Repeat Threshold Interrupt Enable Position */
+#define DWDT_NS_WDT_ISR_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_NS_WDT_ISR_RPTHINT_Pos)       /* (DWDT_NS_WDT_ISR) Repeat Threshold Interrupt Enable Mask */
+#define DWDT_NS_WDT_ISR_RPTHINT(value)        (DWDT_NS_WDT_ISR_RPTHINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_ISR_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_NS_WDT_ISR register */
+#define   DWDT_NS_WDT_ISR_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_NS_WDT_ISR) No repeat threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR.  */
+#define   DWDT_NS_WDT_ISR_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_NS_WDT_ISR) At least one repeat threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR.  */
+#define DWDT_NS_WDT_ISR_RPTHINT_0             (DWDT_NS_WDT_ISR_RPTHINT_0_Val << DWDT_NS_WDT_ISR_RPTHINT_Pos) /* (DWDT_NS_WDT_ISR) No repeat threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR. Position  */
+#define DWDT_NS_WDT_ISR_RPTHINT_1             (DWDT_NS_WDT_ISR_RPTHINT_1_Val << DWDT_NS_WDT_ISR_RPTHINT_Pos) /* (DWDT_NS_WDT_ISR) At least one repeat threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR. Position  */
+#define DWDT_NS_WDT_ISR_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_NS_WDT_ISR) Interrupt Level Threshold Interrupt Enable Position */
+#define DWDT_NS_WDT_ISR_LVLINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_ISR_LVLINT_Pos)        /* (DWDT_NS_WDT_ISR) Interrupt Level Threshold Interrupt Enable Mask */
+#define DWDT_NS_WDT_ISR_LVLINT(value)         (DWDT_NS_WDT_ISR_LVLINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_ISR_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_NS_WDT_ISR register */
+#define   DWDT_NS_WDT_ISR_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_ISR) No level threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR.  */
+#define   DWDT_NS_WDT_ISR_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_ISR) At least one level threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR.  */
+#define DWDT_NS_WDT_ISR_LVLINT_0              (DWDT_NS_WDT_ISR_LVLINT_0_Val << DWDT_NS_WDT_ISR_LVLINT_Pos) /* (DWDT_NS_WDT_ISR) No level threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR. Position  */
+#define DWDT_NS_WDT_ISR_LVLINT_1              (DWDT_NS_WDT_ISR_LVLINT_1_Val << DWDT_NS_WDT_ISR_LVLINT_Pos) /* (DWDT_NS_WDT_ISR) At least one level threshold failure has occurred in the never secure watchdog since the last read of NS_WDT_ISR. Position  */
+#define DWDT_NS_WDT_ISR_Msk                   _UINT32_(0x00000007)                                 /* (DWDT_NS_WDT_ISR) Register Mask  */
+
+
+/* -------- DWDT_NS_WDT_IMR : (DWDT Offset: 0x20) ( R/ 32) Never Secure Interrupt Mask Register -------- */
+#define DWDT_NS_WDT_IMR_RESETVALUE            _UINT32_(0x00)                                       /*  (DWDT_NS_WDT_IMR) Never Secure Interrupt Mask Register  Reset Value */
+
+#define DWDT_NS_WDT_IMR_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_NS_WDT_IMR) Period Interrupt Mask Position */
+#define DWDT_NS_WDT_IMR_PERINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_IMR_PERINT_Pos)        /* (DWDT_NS_WDT_IMR) Period Interrupt Mask Mask */
+#define DWDT_NS_WDT_IMR_PERINT(value)         (DWDT_NS_WDT_IMR_PERINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IMR_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_NS_WDT_IMR register */
+#define   DWDT_NS_WDT_IMR_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IMR) Interrupt on PERINT is disabled.  */
+#define   DWDT_NS_WDT_IMR_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IMR) Interrupt on PERINT is enabled.  */
+#define DWDT_NS_WDT_IMR_PERINT_0              (DWDT_NS_WDT_IMR_PERINT_0_Val << DWDT_NS_WDT_IMR_PERINT_Pos) /* (DWDT_NS_WDT_IMR) Interrupt on PERINT is disabled. Position  */
+#define DWDT_NS_WDT_IMR_PERINT_1              (DWDT_NS_WDT_IMR_PERINT_1_Val << DWDT_NS_WDT_IMR_PERINT_Pos) /* (DWDT_NS_WDT_IMR) Interrupt on PERINT is enabled. Position  */
+#define DWDT_NS_WDT_IMR_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_NS_WDT_IMR) Repeat Threshold Interrupt Mask Position */
+#define DWDT_NS_WDT_IMR_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_NS_WDT_IMR_RPTHINT_Pos)       /* (DWDT_NS_WDT_IMR) Repeat Threshold Interrupt Mask Mask */
+#define DWDT_NS_WDT_IMR_RPTHINT(value)        (DWDT_NS_WDT_IMR_RPTHINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IMR_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_NS_WDT_IMR register */
+#define   DWDT_NS_WDT_IMR_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IMR) Interrupt on RPTHINT is disabled.  */
+#define   DWDT_NS_WDT_IMR_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IMR) Interrupt on RPTHINT is enabled.  */
+#define DWDT_NS_WDT_IMR_RPTHINT_0             (DWDT_NS_WDT_IMR_RPTHINT_0_Val << DWDT_NS_WDT_IMR_RPTHINT_Pos) /* (DWDT_NS_WDT_IMR) Interrupt on RPTHINT is disabled. Position  */
+#define DWDT_NS_WDT_IMR_RPTHINT_1             (DWDT_NS_WDT_IMR_RPTHINT_1_Val << DWDT_NS_WDT_IMR_RPTHINT_Pos) /* (DWDT_NS_WDT_IMR) Interrupt on RPTHINT is enabled. Position  */
+#define DWDT_NS_WDT_IMR_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_NS_WDT_IMR) Interrupt Level Threshold Interrupt Mask Position */
+#define DWDT_NS_WDT_IMR_LVLINT_Msk            (_UINT32_(0x1) << DWDT_NS_WDT_IMR_LVLINT_Pos)        /* (DWDT_NS_WDT_IMR) Interrupt Level Threshold Interrupt Mask Mask */
+#define DWDT_NS_WDT_IMR_LVLINT(value)         (DWDT_NS_WDT_IMR_LVLINT_Msk & (_UINT32_(value) << DWDT_NS_WDT_IMR_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_NS_WDT_IMR register */
+#define   DWDT_NS_WDT_IMR_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_NS_WDT_IMR) Interrupt on LVLINT is disabled.  */
+#define   DWDT_NS_WDT_IMR_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_NS_WDT_IMR) Interrupt on LVLINT is enabled.  */
+#define DWDT_NS_WDT_IMR_LVLINT_0              (DWDT_NS_WDT_IMR_LVLINT_0_Val << DWDT_NS_WDT_IMR_LVLINT_Pos) /* (DWDT_NS_WDT_IMR) Interrupt on LVLINT is disabled. Position  */
+#define DWDT_NS_WDT_IMR_LVLINT_1              (DWDT_NS_WDT_IMR_LVLINT_1_Val << DWDT_NS_WDT_IMR_LVLINT_Pos) /* (DWDT_NS_WDT_IMR) Interrupt on LVLINT is enabled. Position  */
+#define DWDT_NS_WDT_IMR_Msk                   _UINT32_(0x00000007)                                 /* (DWDT_NS_WDT_IMR) Register Mask  */
 
 
 /* -------- DWDT_PS_WDT_CR : (DWDT Offset: 0x1180) ( /W 32) Programmable Secure Control Register -------- */
@@ -276,175 +240,6 @@
 #define   DWDT_PS_WDT_CR_KEY_PASSWD_Val       _UINT32_(0xA5)                                       /* (DWDT_PS_WDT_CR) Writing any other value in this field aborts the write operation.  */
 #define DWDT_PS_WDT_CR_KEY_PASSWD             (DWDT_PS_WDT_CR_KEY_PASSWD_Val << DWDT_PS_WDT_CR_KEY_Pos) /* (DWDT_PS_WDT_CR) Writing any other value in this field aborts the write operation. Position  */
 #define DWDT_PS_WDT_CR_Msk                    _UINT32_(0xFF000011)                                 /* (DWDT_PS_WDT_CR) Register Mask  */
-
-
-/* -------- DWDT_PS_WDT_IDR : (DWDT Offset: 0x1198) ( /W 32) Programmable Secure Interrupt Disable Register -------- */
-#define DWDT_PS_WDT_IDR_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_PS_WDT_IDR) Period Interrupt Disable Position */
-#define DWDT_PS_WDT_IDR_PERINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_IDR_PERINT_Pos)        /* (DWDT_PS_WDT_IDR) Period Interrupt Disable Mask */
-#define DWDT_PS_WDT_IDR_PERINT(value)         (DWDT_PS_WDT_IDR_PERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IDR_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_PS_WDT_IDR register */
-#define   DWDT_PS_WDT_IDR_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IDR) No effect.  */
-#define   DWDT_PS_WDT_IDR_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IDR) The Programmable secure period failure interrupt is disabled.  */
-#define DWDT_PS_WDT_IDR_PERINT_0              (DWDT_PS_WDT_IDR_PERINT_0_Val << DWDT_PS_WDT_IDR_PERINT_Pos) /* (DWDT_PS_WDT_IDR) No effect. Position  */
-#define DWDT_PS_WDT_IDR_PERINT_1              (DWDT_PS_WDT_IDR_PERINT_1_Val << DWDT_PS_WDT_IDR_PERINT_Pos) /* (DWDT_PS_WDT_IDR) The Programmable secure period failure interrupt is disabled. Position  */
-#define DWDT_PS_WDT_IDR_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_PS_WDT_IDR) Repeat Threshold Interrupt Disable Position */
-#define DWDT_PS_WDT_IDR_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_PS_WDT_IDR_RPTHINT_Pos)       /* (DWDT_PS_WDT_IDR) Repeat Threshold Interrupt Disable Mask */
-#define DWDT_PS_WDT_IDR_RPTHINT(value)        (DWDT_PS_WDT_IDR_RPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IDR_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_PS_WDT_IDR register */
-#define   DWDT_PS_WDT_IDR_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IDR) No effect.  */
-#define   DWDT_PS_WDT_IDR_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IDR) The Programmable secure repeat threshold failure interrupt is disabled.  */
-#define DWDT_PS_WDT_IDR_RPTHINT_0             (DWDT_PS_WDT_IDR_RPTHINT_0_Val << DWDT_PS_WDT_IDR_RPTHINT_Pos) /* (DWDT_PS_WDT_IDR) No effect. Position  */
-#define DWDT_PS_WDT_IDR_RPTHINT_1             (DWDT_PS_WDT_IDR_RPTHINT_1_Val << DWDT_PS_WDT_IDR_RPTHINT_Pos) /* (DWDT_PS_WDT_IDR) The Programmable secure repeat threshold failure interrupt is disabled. Position  */
-#define DWDT_PS_WDT_IDR_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_PS_WDT_IDR) Interrupt Level Threshold Interrupt Disable Position */
-#define DWDT_PS_WDT_IDR_LVLINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_IDR_LVLINT_Pos)        /* (DWDT_PS_WDT_IDR) Interrupt Level Threshold Interrupt Disable Mask */
-#define DWDT_PS_WDT_IDR_LVLINT(value)         (DWDT_PS_WDT_IDR_LVLINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IDR_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_PS_WDT_IDR register */
-#define   DWDT_PS_WDT_IDR_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IDR) No effect.  */
-#define   DWDT_PS_WDT_IDR_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IDR) The Programmable secure interrupt threshold failure interrupt is disabled.  */
-#define DWDT_PS_WDT_IDR_LVLINT_0              (DWDT_PS_WDT_IDR_LVLINT_0_Val << DWDT_PS_WDT_IDR_LVLINT_Pos) /* (DWDT_PS_WDT_IDR) No effect. Position  */
-#define DWDT_PS_WDT_IDR_LVLINT_1              (DWDT_PS_WDT_IDR_LVLINT_1_Val << DWDT_PS_WDT_IDR_LVLINT_Pos) /* (DWDT_PS_WDT_IDR) The Programmable secure interrupt threshold failure interrupt is disabled. Position  */
-#define DWDT_PS_WDT_IDR_NSPERINT_Pos          _UINT32_(3)                                          /* (DWDT_PS_WDT_IDR) Never Secure Period Interrupt Disable Position */
-#define DWDT_PS_WDT_IDR_NSPERINT_Msk          (_UINT32_(0x1) << DWDT_PS_WDT_IDR_NSPERINT_Pos)      /* (DWDT_PS_WDT_IDR) Never Secure Period Interrupt Disable Mask */
-#define DWDT_PS_WDT_IDR_NSPERINT(value)       (DWDT_PS_WDT_IDR_NSPERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IDR_NSPERINT_Pos)) /* Assigment of value for NSPERINT in the DWDT_PS_WDT_IDR register */
-#define   DWDT_PS_WDT_IDR_NSPERINT_0_Val      _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IDR) No effect.  */
-#define   DWDT_PS_WDT_IDR_NSPERINT_1_Val      _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IDR) A never secure period failure does not generate an interrupt in the programmable secure area.  */
-#define DWDT_PS_WDT_IDR_NSPERINT_0            (DWDT_PS_WDT_IDR_NSPERINT_0_Val << DWDT_PS_WDT_IDR_NSPERINT_Pos) /* (DWDT_PS_WDT_IDR) No effect. Position  */
-#define DWDT_PS_WDT_IDR_NSPERINT_1            (DWDT_PS_WDT_IDR_NSPERINT_1_Val << DWDT_PS_WDT_IDR_NSPERINT_Pos) /* (DWDT_PS_WDT_IDR) A never secure period failure does not generate an interrupt in the programmable secure area. Position  */
-#define DWDT_PS_WDT_IDR_NSRPTHINT_Pos         _UINT32_(4)                                          /* (DWDT_PS_WDT_IDR) Never Secure Repeat Threshold Interrupt Disable Position */
-#define DWDT_PS_WDT_IDR_NSRPTHINT_Msk         (_UINT32_(0x1) << DWDT_PS_WDT_IDR_NSRPTHINT_Pos)     /* (DWDT_PS_WDT_IDR) Never Secure Repeat Threshold Interrupt Disable Mask */
-#define DWDT_PS_WDT_IDR_NSRPTHINT(value)      (DWDT_PS_WDT_IDR_NSRPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IDR_NSRPTHINT_Pos)) /* Assigment of value for NSRPTHINT in the DWDT_PS_WDT_IDR register */
-#define   DWDT_PS_WDT_IDR_NSRPTHINT_0_Val     _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IDR) No effect.  */
-#define   DWDT_PS_WDT_IDR_NSRPTHINT_1_Val     _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IDR) A never secure repeat threshold failure does not generate an interrupt in the programmable secure area.  */
-#define DWDT_PS_WDT_IDR_NSRPTHINT_0           (DWDT_PS_WDT_IDR_NSRPTHINT_0_Val << DWDT_PS_WDT_IDR_NSRPTHINT_Pos) /* (DWDT_PS_WDT_IDR) No effect. Position  */
-#define DWDT_PS_WDT_IDR_NSRPTHINT_1           (DWDT_PS_WDT_IDR_NSRPTHINT_1_Val << DWDT_PS_WDT_IDR_NSRPTHINT_Pos) /* (DWDT_PS_WDT_IDR) A never secure repeat threshold failure does not generate an interrupt in the programmable secure area. Position  */
-#define DWDT_PS_WDT_IDR_Msk                   _UINT32_(0x0000001F)                                 /* (DWDT_PS_WDT_IDR) Register Mask  */
-
-
-/* -------- DWDT_PS_WDT_IER : (DWDT Offset: 0x1194) ( /W 32) Programmable Secure Interrupt Enable Register -------- */
-#define DWDT_PS_WDT_IER_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_PS_WDT_IER) Period Interrupt Enable Position */
-#define DWDT_PS_WDT_IER_PERINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_IER_PERINT_Pos)        /* (DWDT_PS_WDT_IER) Period Interrupt Enable Mask */
-#define DWDT_PS_WDT_IER_PERINT(value)         (DWDT_PS_WDT_IER_PERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IER_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_PS_WDT_IER register */
-#define   DWDT_PS_WDT_IER_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IER) No effect.  */
-#define   DWDT_PS_WDT_IER_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IER) The programmable secure period failure interrupt is enabled.  */
-#define DWDT_PS_WDT_IER_PERINT_0              (DWDT_PS_WDT_IER_PERINT_0_Val << DWDT_PS_WDT_IER_PERINT_Pos) /* (DWDT_PS_WDT_IER) No effect. Position  */
-#define DWDT_PS_WDT_IER_PERINT_1              (DWDT_PS_WDT_IER_PERINT_1_Val << DWDT_PS_WDT_IER_PERINT_Pos) /* (DWDT_PS_WDT_IER) The programmable secure period failure interrupt is enabled. Position  */
-#define DWDT_PS_WDT_IER_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_PS_WDT_IER) Repeat Threshold Interrupt Enable Position */
-#define DWDT_PS_WDT_IER_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_PS_WDT_IER_RPTHINT_Pos)       /* (DWDT_PS_WDT_IER) Repeat Threshold Interrupt Enable Mask */
-#define DWDT_PS_WDT_IER_RPTHINT(value)        (DWDT_PS_WDT_IER_RPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IER_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_PS_WDT_IER register */
-#define   DWDT_PS_WDT_IER_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IER) No effect.  */
-#define   DWDT_PS_WDT_IER_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IER) The programmable secure repeat threshold failure interrupt is enabled.  */
-#define DWDT_PS_WDT_IER_RPTHINT_0             (DWDT_PS_WDT_IER_RPTHINT_0_Val << DWDT_PS_WDT_IER_RPTHINT_Pos) /* (DWDT_PS_WDT_IER) No effect. Position  */
-#define DWDT_PS_WDT_IER_RPTHINT_1             (DWDT_PS_WDT_IER_RPTHINT_1_Val << DWDT_PS_WDT_IER_RPTHINT_Pos) /* (DWDT_PS_WDT_IER) The programmable secure repeat threshold failure interrupt is enabled. Position  */
-#define DWDT_PS_WDT_IER_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_PS_WDT_IER) Interrupt Level Threshold Interrupt Enable Position */
-#define DWDT_PS_WDT_IER_LVLINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_IER_LVLINT_Pos)        /* (DWDT_PS_WDT_IER) Interrupt Level Threshold Interrupt Enable Mask */
-#define DWDT_PS_WDT_IER_LVLINT(value)         (DWDT_PS_WDT_IER_LVLINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IER_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_PS_WDT_IER register */
-#define   DWDT_PS_WDT_IER_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IER) No effect.  */
-#define   DWDT_PS_WDT_IER_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IER) The programmable secure interrupt threshold failure interrupt is enabled.  */
-#define DWDT_PS_WDT_IER_LVLINT_0              (DWDT_PS_WDT_IER_LVLINT_0_Val << DWDT_PS_WDT_IER_LVLINT_Pos) /* (DWDT_PS_WDT_IER) No effect. Position  */
-#define DWDT_PS_WDT_IER_LVLINT_1              (DWDT_PS_WDT_IER_LVLINT_1_Val << DWDT_PS_WDT_IER_LVLINT_Pos) /* (DWDT_PS_WDT_IER) The programmable secure interrupt threshold failure interrupt is enabled. Position  */
-#define DWDT_PS_WDT_IER_NSPERINT_Pos          _UINT32_(3)                                          /* (DWDT_PS_WDT_IER) Never Secure Period Interrupt Enable Position */
-#define DWDT_PS_WDT_IER_NSPERINT_Msk          (_UINT32_(0x1) << DWDT_PS_WDT_IER_NSPERINT_Pos)      /* (DWDT_PS_WDT_IER) Never Secure Period Interrupt Enable Mask */
-#define DWDT_PS_WDT_IER_NSPERINT(value)       (DWDT_PS_WDT_IER_NSPERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IER_NSPERINT_Pos)) /* Assigment of value for NSPERINT in the DWDT_PS_WDT_IER register */
-#define   DWDT_PS_WDT_IER_NSPERINT_0_Val      _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IER) No effect.  */
-#define   DWDT_PS_WDT_IER_NSPERINT_1_Val      _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IER) A never secure period failure generates an interrupt in the programmable secure area.  */
-#define DWDT_PS_WDT_IER_NSPERINT_0            (DWDT_PS_WDT_IER_NSPERINT_0_Val << DWDT_PS_WDT_IER_NSPERINT_Pos) /* (DWDT_PS_WDT_IER) No effect. Position  */
-#define DWDT_PS_WDT_IER_NSPERINT_1            (DWDT_PS_WDT_IER_NSPERINT_1_Val << DWDT_PS_WDT_IER_NSPERINT_Pos) /* (DWDT_PS_WDT_IER) A never secure period failure generates an interrupt in the programmable secure area. Position  */
-#define DWDT_PS_WDT_IER_NSRPTHINT_Pos         _UINT32_(4)                                          /* (DWDT_PS_WDT_IER) Never Secure Repeat Threshold Interrupt Enable Position */
-#define DWDT_PS_WDT_IER_NSRPTHINT_Msk         (_UINT32_(0x1) << DWDT_PS_WDT_IER_NSRPTHINT_Pos)     /* (DWDT_PS_WDT_IER) Never Secure Repeat Threshold Interrupt Enable Mask */
-#define DWDT_PS_WDT_IER_NSRPTHINT(value)      (DWDT_PS_WDT_IER_NSRPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IER_NSRPTHINT_Pos)) /* Assigment of value for NSRPTHINT in the DWDT_PS_WDT_IER register */
-#define   DWDT_PS_WDT_IER_NSRPTHINT_0_Val     _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IER) No effect.  */
-#define   DWDT_PS_WDT_IER_NSRPTHINT_1_Val     _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IER) A never secure repeat threshold failure generates an interrupt in the programmable secure area.  */
-#define DWDT_PS_WDT_IER_NSRPTHINT_0           (DWDT_PS_WDT_IER_NSRPTHINT_0_Val << DWDT_PS_WDT_IER_NSRPTHINT_Pos) /* (DWDT_PS_WDT_IER) No effect. Position  */
-#define DWDT_PS_WDT_IER_NSRPTHINT_1           (DWDT_PS_WDT_IER_NSRPTHINT_1_Val << DWDT_PS_WDT_IER_NSRPTHINT_Pos) /* (DWDT_PS_WDT_IER) A never secure repeat threshold failure generates an interrupt in the programmable secure area. Position  */
-#define DWDT_PS_WDT_IER_Msk                   _UINT32_(0x0000001F)                                 /* (DWDT_PS_WDT_IER) Register Mask  */
-
-
-/* -------- DWDT_PS_WDT_IL : (DWDT Offset: 0x1190) (R/W 32) Programmable Secure Interrupt Level -------- */
-#define DWDT_PS_WDT_IL_RESETVALUE             _UINT32_(0xFFF)                                      /*  (DWDT_PS_WDT_IL) Programmable Secure Interrupt Level  Reset Value */
-
-#define DWDT_PS_WDT_IL_LVLTH_Pos              _UINT32_(0)                                          /* (DWDT_PS_WDT_IL) Level Threshold Position */
-#define DWDT_PS_WDT_IL_LVLTH_Msk              (_UINT32_(0xFFF) << DWDT_PS_WDT_IL_LVLTH_Pos)        /* (DWDT_PS_WDT_IL) Level Threshold Mask */
-#define DWDT_PS_WDT_IL_LVLTH(value)           (DWDT_PS_WDT_IL_LVLTH_Msk & (_UINT32_(value) << DWDT_PS_WDT_IL_LVLTH_Pos)) /* Assigment of value for LVLTH in the DWDT_PS_WDT_IL register */
-#define DWDT_PS_WDT_IL_Msk                    _UINT32_(0x00000FFF)                                 /* (DWDT_PS_WDT_IL) Register Mask  */
-
-
-/* -------- DWDT_PS_WDT_IMR : (DWDT Offset: 0x11A0) ( R/ 32) Programmable Secure Interrupt Mask Register -------- */
-#define DWDT_PS_WDT_IMR_RESETVALUE            _UINT32_(0x00)                                       /*  (DWDT_PS_WDT_IMR) Programmable Secure Interrupt Mask Register  Reset Value */
-
-#define DWDT_PS_WDT_IMR_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_PS_WDT_IMR) Period Interrupt Mask Position */
-#define DWDT_PS_WDT_IMR_PERINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_IMR_PERINT_Pos)        /* (DWDT_PS_WDT_IMR) Period Interrupt Mask Mask */
-#define DWDT_PS_WDT_IMR_PERINT(value)         (DWDT_PS_WDT_IMR_PERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IMR_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_PS_WDT_IMR register */
-#define   DWDT_PS_WDT_IMR_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IMR) Interrupt on PERINT is disabled.  */
-#define   DWDT_PS_WDT_IMR_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IMR) Interrupt on PERINT is enabled.  */
-#define DWDT_PS_WDT_IMR_PERINT_0              (DWDT_PS_WDT_IMR_PERINT_0_Val << DWDT_PS_WDT_IMR_PERINT_Pos) /* (DWDT_PS_WDT_IMR) Interrupt on PERINT is disabled. Position  */
-#define DWDT_PS_WDT_IMR_PERINT_1              (DWDT_PS_WDT_IMR_PERINT_1_Val << DWDT_PS_WDT_IMR_PERINT_Pos) /* (DWDT_PS_WDT_IMR) Interrupt on PERINT is enabled. Position  */
-#define DWDT_PS_WDT_IMR_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_PS_WDT_IMR) Repeat Threshold Interrupt Mask Position */
-#define DWDT_PS_WDT_IMR_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_PS_WDT_IMR_RPTHINT_Pos)       /* (DWDT_PS_WDT_IMR) Repeat Threshold Interrupt Mask Mask */
-#define DWDT_PS_WDT_IMR_RPTHINT(value)        (DWDT_PS_WDT_IMR_RPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IMR_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_PS_WDT_IMR register */
-#define   DWDT_PS_WDT_IMR_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IMR) Interrupt on RPTHINT is disabled.  */
-#define   DWDT_PS_WDT_IMR_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IMR) Interrupt on RPTHINT is enabled.  */
-#define DWDT_PS_WDT_IMR_RPTHINT_0             (DWDT_PS_WDT_IMR_RPTHINT_0_Val << DWDT_PS_WDT_IMR_RPTHINT_Pos) /* (DWDT_PS_WDT_IMR) Interrupt on RPTHINT is disabled. Position  */
-#define DWDT_PS_WDT_IMR_RPTHINT_1             (DWDT_PS_WDT_IMR_RPTHINT_1_Val << DWDT_PS_WDT_IMR_RPTHINT_Pos) /* (DWDT_PS_WDT_IMR) Interrupt on RPTHINT is enabled. Position  */
-#define DWDT_PS_WDT_IMR_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_PS_WDT_IMR) Interrupt Level Threshold Interrupt Mask Position */
-#define DWDT_PS_WDT_IMR_LVLINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_IMR_LVLINT_Pos)        /* (DWDT_PS_WDT_IMR) Interrupt Level Threshold Interrupt Mask Mask */
-#define DWDT_PS_WDT_IMR_LVLINT(value)         (DWDT_PS_WDT_IMR_LVLINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IMR_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_PS_WDT_IMR register */
-#define   DWDT_PS_WDT_IMR_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IMR) Interrupt on LVLINT is disabled.  */
-#define   DWDT_PS_WDT_IMR_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IMR) Interrupt on LVLINT is enabled.  */
-#define DWDT_PS_WDT_IMR_LVLINT_0              (DWDT_PS_WDT_IMR_LVLINT_0_Val << DWDT_PS_WDT_IMR_LVLINT_Pos) /* (DWDT_PS_WDT_IMR) Interrupt on LVLINT is disabled. Position  */
-#define DWDT_PS_WDT_IMR_LVLINT_1              (DWDT_PS_WDT_IMR_LVLINT_1_Val << DWDT_PS_WDT_IMR_LVLINT_Pos) /* (DWDT_PS_WDT_IMR) Interrupt on LVLINT is enabled. Position  */
-#define DWDT_PS_WDT_IMR_NSPERINT_Pos          _UINT32_(3)                                          /* (DWDT_PS_WDT_IMR) Never Secure Period Interrupt Mask Position */
-#define DWDT_PS_WDT_IMR_NSPERINT_Msk          (_UINT32_(0x1) << DWDT_PS_WDT_IMR_NSPERINT_Pos)      /* (DWDT_PS_WDT_IMR) Never Secure Period Interrupt Mask Mask */
-#define DWDT_PS_WDT_IMR_NSPERINT(value)       (DWDT_PS_WDT_IMR_NSPERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IMR_NSPERINT_Pos)) /* Assigment of value for NSPERINT in the DWDT_PS_WDT_IMR register */
-#define   DWDT_PS_WDT_IMR_NSPERINT_0_Val      _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure PERINT interrupt is disabled.  */
-#define   DWDT_PS_WDT_IMR_NSPERINT_1_Val      _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure PERINT interrupt is enabled.  */
-#define DWDT_PS_WDT_IMR_NSPERINT_0            (DWDT_PS_WDT_IMR_NSPERINT_0_Val << DWDT_PS_WDT_IMR_NSPERINT_Pos) /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure PERINT interrupt is disabled. Position  */
-#define DWDT_PS_WDT_IMR_NSPERINT_1            (DWDT_PS_WDT_IMR_NSPERINT_1_Val << DWDT_PS_WDT_IMR_NSPERINT_Pos) /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure PERINT interrupt is enabled. Position  */
-#define DWDT_PS_WDT_IMR_NSRPTHINT_Pos         _UINT32_(4)                                          /* (DWDT_PS_WDT_IMR) Never Secure Repeat Threshold Interrupt Mask Position */
-#define DWDT_PS_WDT_IMR_NSRPTHINT_Msk         (_UINT32_(0x1) << DWDT_PS_WDT_IMR_NSRPTHINT_Pos)     /* (DWDT_PS_WDT_IMR) Never Secure Repeat Threshold Interrupt Mask Mask */
-#define DWDT_PS_WDT_IMR_NSRPTHINT(value)      (DWDT_PS_WDT_IMR_NSRPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IMR_NSRPTHINT_Pos)) /* Assigment of value for NSRPTHINT in the DWDT_PS_WDT_IMR register */
-#define   DWDT_PS_WDT_IMR_NSRPTHINT_0_Val     _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure RPTHINT interrupt is disabled.  */
-#define   DWDT_PS_WDT_IMR_NSRPTHINT_1_Val     _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure RPTHINT interrupt is enabled.  */
-#define DWDT_PS_WDT_IMR_NSRPTHINT_0           (DWDT_PS_WDT_IMR_NSRPTHINT_0_Val << DWDT_PS_WDT_IMR_NSRPTHINT_Pos) /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure RPTHINT interrupt is disabled. Position  */
-#define DWDT_PS_WDT_IMR_NSRPTHINT_1           (DWDT_PS_WDT_IMR_NSRPTHINT_1_Val << DWDT_PS_WDT_IMR_NSRPTHINT_Pos) /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure RPTHINT interrupt is enabled. Position  */
-#define DWDT_PS_WDT_IMR_Msk                   _UINT32_(0x0000001F)                                 /* (DWDT_PS_WDT_IMR) Register Mask  */
-
-
-/* -------- DWDT_PS_WDT_ISR : (DWDT Offset: 0x119C) ( R/ 32) Programmable Secure Interrupt Status Register -------- */
-#define DWDT_PS_WDT_ISR_RESETVALUE            _UINT32_(0x00)                                       /*  (DWDT_PS_WDT_ISR) Programmable Secure Interrupt Status Register  Reset Value */
-
-#define DWDT_PS_WDT_ISR_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_PS_WDT_ISR) Period Interrupt Status Position */
-#define DWDT_PS_WDT_ISR_PERINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_ISR_PERINT_Pos)        /* (DWDT_PS_WDT_ISR) Period Interrupt Status Mask */
-#define DWDT_PS_WDT_ISR_PERINT(value)         (DWDT_PS_WDT_ISR_PERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_ISR_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_PS_WDT_ISR register */
-#define   DWDT_PS_WDT_ISR_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_ISR) No period failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR.  */
-#define   DWDT_PS_WDT_ISR_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_ISR) At least one period failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR.  */
-#define DWDT_PS_WDT_ISR_PERINT_0              (DWDT_PS_WDT_ISR_PERINT_0_Val << DWDT_PS_WDT_ISR_PERINT_Pos) /* (DWDT_PS_WDT_ISR) No period failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
-#define DWDT_PS_WDT_ISR_PERINT_1              (DWDT_PS_WDT_ISR_PERINT_1_Val << DWDT_PS_WDT_ISR_PERINT_Pos) /* (DWDT_PS_WDT_ISR) At least one period failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
-#define DWDT_PS_WDT_ISR_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_PS_WDT_ISR) Repeat Threshold Interrupt Status Position */
-#define DWDT_PS_WDT_ISR_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_PS_WDT_ISR_RPTHINT_Pos)       /* (DWDT_PS_WDT_ISR) Repeat Threshold Interrupt Status Mask */
-#define DWDT_PS_WDT_ISR_RPTHINT(value)        (DWDT_PS_WDT_ISR_RPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_ISR_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_PS_WDT_ISR register */
-#define   DWDT_PS_WDT_ISR_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_PS_WDT_ISR) No repeat threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR.  */
-#define   DWDT_PS_WDT_ISR_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_PS_WDT_ISR) At least one repeat threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR.  */
-#define DWDT_PS_WDT_ISR_RPTHINT_0             (DWDT_PS_WDT_ISR_RPTHINT_0_Val << DWDT_PS_WDT_ISR_RPTHINT_Pos) /* (DWDT_PS_WDT_ISR) No repeat threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
-#define DWDT_PS_WDT_ISR_RPTHINT_1             (DWDT_PS_WDT_ISR_RPTHINT_1_Val << DWDT_PS_WDT_ISR_RPTHINT_Pos) /* (DWDT_PS_WDT_ISR) At least one repeat threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
-#define DWDT_PS_WDT_ISR_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_PS_WDT_ISR) Interrupt Level Threshold Interrupt Status Position */
-#define DWDT_PS_WDT_ISR_LVLINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_ISR_LVLINT_Pos)        /* (DWDT_PS_WDT_ISR) Interrupt Level Threshold Interrupt Status Mask */
-#define DWDT_PS_WDT_ISR_LVLINT(value)         (DWDT_PS_WDT_ISR_LVLINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_ISR_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_PS_WDT_ISR register */
-#define   DWDT_PS_WDT_ISR_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_ISR) No level threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR.  */
-#define   DWDT_PS_WDT_ISR_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_ISR) At least one level threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR.  */
-#define DWDT_PS_WDT_ISR_LVLINT_0              (DWDT_PS_WDT_ISR_LVLINT_0_Val << DWDT_PS_WDT_ISR_LVLINT_Pos) /* (DWDT_PS_WDT_ISR) No level threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
-#define DWDT_PS_WDT_ISR_LVLINT_1              (DWDT_PS_WDT_ISR_LVLINT_1_Val << DWDT_PS_WDT_ISR_LVLINT_Pos) /* (DWDT_PS_WDT_ISR) At least one level threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
-#define DWDT_PS_WDT_ISR_NSPERINT_Pos          _UINT32_(3)                                          /* (DWDT_PS_WDT_ISR) Never Secure Period Interrupt Status Position */
-#define DWDT_PS_WDT_ISR_NSPERINT_Msk          (_UINT32_(0x1) << DWDT_PS_WDT_ISR_NSPERINT_Pos)      /* (DWDT_PS_WDT_ISR) Never Secure Period Interrupt Status Mask */
-#define DWDT_PS_WDT_ISR_NSPERINT(value)       (DWDT_PS_WDT_ISR_NSPERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_ISR_NSPERINT_Pos)) /* Assigment of value for NSPERINT in the DWDT_PS_WDT_ISR register */
-#define   DWDT_PS_WDT_ISR_NSPERINT_0_Val      _UINT32_(0x0)                                        /* (DWDT_PS_WDT_ISR) No never secure period failure has occurred in the programmable secure watchdog since the last read of PS_WDT_ISR.  */
-#define   DWDT_PS_WDT_ISR_NSPERINT_1_Val      _UINT32_(0x1)                                        /* (DWDT_PS_WDT_ISR) At least one never secure period failure occurred in the programmable secure watchdog since the last read of PS_WDT_ISR.  */
-#define DWDT_PS_WDT_ISR_NSPERINT_0            (DWDT_PS_WDT_ISR_NSPERINT_0_Val << DWDT_PS_WDT_ISR_NSPERINT_Pos) /* (DWDT_PS_WDT_ISR) No never secure period failure has occurred in the programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
-#define DWDT_PS_WDT_ISR_NSPERINT_1            (DWDT_PS_WDT_ISR_NSPERINT_1_Val << DWDT_PS_WDT_ISR_NSPERINT_Pos) /* (DWDT_PS_WDT_ISR) At least one never secure period failure occurred in the programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
-#define DWDT_PS_WDT_ISR_NSRPTHINT_Pos         _UINT32_(4)                                          /* (DWDT_PS_WDT_ISR) Never Secure Repeat Threshold Interrupt Status Position */
-#define DWDT_PS_WDT_ISR_NSRPTHINT_Msk         (_UINT32_(0x1) << DWDT_PS_WDT_ISR_NSRPTHINT_Pos)     /* (DWDT_PS_WDT_ISR) Never Secure Repeat Threshold Interrupt Status Mask */
-#define DWDT_PS_WDT_ISR_NSRPTHINT(value)      (DWDT_PS_WDT_ISR_NSRPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_ISR_NSRPTHINT_Pos)) /* Assigment of value for NSRPTHINT in the DWDT_PS_WDT_ISR register */
-#define   DWDT_PS_WDT_ISR_NSRPTHINT_0_Val     _UINT32_(0x0)                                        /* (DWDT_PS_WDT_ISR) No never secure repeat threshold failure has occurred in the programmable secure watchdog since the last read of PS_WDT_ISR.  */
-#define   DWDT_PS_WDT_ISR_NSRPTHINT_1_Val     _UINT32_(0x1)                                        /* (DWDT_PS_WDT_ISR) At least one never secure repeat threshold failure occurred in the programmable secure watchdog since the last read of PS_WDT_ISR.  */
-#define DWDT_PS_WDT_ISR_NSRPTHINT_0           (DWDT_PS_WDT_ISR_NSRPTHINT_0_Val << DWDT_PS_WDT_ISR_NSRPTHINT_Pos) /* (DWDT_PS_WDT_ISR) No never secure repeat threshold failure has occurred in the programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
-#define DWDT_PS_WDT_ISR_NSRPTHINT_1           (DWDT_PS_WDT_ISR_NSRPTHINT_1_Val << DWDT_PS_WDT_ISR_NSRPTHINT_Pos) /* (DWDT_PS_WDT_ISR) At least one never secure repeat threshold failure occurred in the programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
-#define DWDT_PS_WDT_ISR_Msk                   _UINT32_(0x0000001F)                                 /* (DWDT_PS_WDT_ISR) Register Mask  */
 
 
 /* -------- DWDT_PS_WDT_MR : (DWDT Offset: 0x1184) (R/W 32) Programmable Secure Mode Register -------- */
@@ -509,28 +304,233 @@
 #define DWDT_PS_WDT_WL_Msk                    _UINT32_(0x0FFF0FFF)                                 /* (DWDT_PS_WDT_WL) Register Mask  */
 
 
+/* -------- DWDT_PS_WDT_IL : (DWDT Offset: 0x1190) (R/W 32) Programmable Secure Interrupt Level -------- */
+#define DWDT_PS_WDT_IL_RESETVALUE             _UINT32_(0xFFF)                                      /*  (DWDT_PS_WDT_IL) Programmable Secure Interrupt Level  Reset Value */
+
+#define DWDT_PS_WDT_IL_LVLTH_Pos              _UINT32_(0)                                          /* (DWDT_PS_WDT_IL) Level Threshold Position */
+#define DWDT_PS_WDT_IL_LVLTH_Msk              (_UINT32_(0xFFF) << DWDT_PS_WDT_IL_LVLTH_Pos)        /* (DWDT_PS_WDT_IL) Level Threshold Mask */
+#define DWDT_PS_WDT_IL_LVLTH(value)           (DWDT_PS_WDT_IL_LVLTH_Msk & (_UINT32_(value) << DWDT_PS_WDT_IL_LVLTH_Pos)) /* Assigment of value for LVLTH in the DWDT_PS_WDT_IL register */
+#define DWDT_PS_WDT_IL_Msk                    _UINT32_(0x00000FFF)                                 /* (DWDT_PS_WDT_IL) Register Mask  */
+
+
+/* -------- DWDT_PS_WDT_IER : (DWDT Offset: 0x1194) ( /W 32) Programmable Secure Interrupt Enable Register -------- */
+#define DWDT_PS_WDT_IER_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_PS_WDT_IER) Period Interrupt Enable Position */
+#define DWDT_PS_WDT_IER_PERINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_IER_PERINT_Pos)        /* (DWDT_PS_WDT_IER) Period Interrupt Enable Mask */
+#define DWDT_PS_WDT_IER_PERINT(value)         (DWDT_PS_WDT_IER_PERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IER_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_PS_WDT_IER register */
+#define   DWDT_PS_WDT_IER_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IER) No effect.  */
+#define   DWDT_PS_WDT_IER_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IER) The programmable secure period failure interrupt is enabled.  */
+#define DWDT_PS_WDT_IER_PERINT_0              (DWDT_PS_WDT_IER_PERINT_0_Val << DWDT_PS_WDT_IER_PERINT_Pos) /* (DWDT_PS_WDT_IER) No effect. Position  */
+#define DWDT_PS_WDT_IER_PERINT_1              (DWDT_PS_WDT_IER_PERINT_1_Val << DWDT_PS_WDT_IER_PERINT_Pos) /* (DWDT_PS_WDT_IER) The programmable secure period failure interrupt is enabled. Position  */
+#define DWDT_PS_WDT_IER_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_PS_WDT_IER) Repeat Threshold Interrupt Enable Position */
+#define DWDT_PS_WDT_IER_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_PS_WDT_IER_RPTHINT_Pos)       /* (DWDT_PS_WDT_IER) Repeat Threshold Interrupt Enable Mask */
+#define DWDT_PS_WDT_IER_RPTHINT(value)        (DWDT_PS_WDT_IER_RPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IER_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_PS_WDT_IER register */
+#define   DWDT_PS_WDT_IER_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IER) No effect.  */
+#define   DWDT_PS_WDT_IER_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IER) The programmable secure repeat threshold failure interrupt is enabled.  */
+#define DWDT_PS_WDT_IER_RPTHINT_0             (DWDT_PS_WDT_IER_RPTHINT_0_Val << DWDT_PS_WDT_IER_RPTHINT_Pos) /* (DWDT_PS_WDT_IER) No effect. Position  */
+#define DWDT_PS_WDT_IER_RPTHINT_1             (DWDT_PS_WDT_IER_RPTHINT_1_Val << DWDT_PS_WDT_IER_RPTHINT_Pos) /* (DWDT_PS_WDT_IER) The programmable secure repeat threshold failure interrupt is enabled. Position  */
+#define DWDT_PS_WDT_IER_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_PS_WDT_IER) Interrupt Level Threshold Interrupt Enable Position */
+#define DWDT_PS_WDT_IER_LVLINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_IER_LVLINT_Pos)        /* (DWDT_PS_WDT_IER) Interrupt Level Threshold Interrupt Enable Mask */
+#define DWDT_PS_WDT_IER_LVLINT(value)         (DWDT_PS_WDT_IER_LVLINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IER_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_PS_WDT_IER register */
+#define   DWDT_PS_WDT_IER_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IER) No effect.  */
+#define   DWDT_PS_WDT_IER_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IER) The programmable secure interrupt threshold failure interrupt is enabled.  */
+#define DWDT_PS_WDT_IER_LVLINT_0              (DWDT_PS_WDT_IER_LVLINT_0_Val << DWDT_PS_WDT_IER_LVLINT_Pos) /* (DWDT_PS_WDT_IER) No effect. Position  */
+#define DWDT_PS_WDT_IER_LVLINT_1              (DWDT_PS_WDT_IER_LVLINT_1_Val << DWDT_PS_WDT_IER_LVLINT_Pos) /* (DWDT_PS_WDT_IER) The programmable secure interrupt threshold failure interrupt is enabled. Position  */
+#define DWDT_PS_WDT_IER_NSPERINT_Pos          _UINT32_(3)                                          /* (DWDT_PS_WDT_IER) Never Secure Period Interrupt Enable Position */
+#define DWDT_PS_WDT_IER_NSPERINT_Msk          (_UINT32_(0x1) << DWDT_PS_WDT_IER_NSPERINT_Pos)      /* (DWDT_PS_WDT_IER) Never Secure Period Interrupt Enable Mask */
+#define DWDT_PS_WDT_IER_NSPERINT(value)       (DWDT_PS_WDT_IER_NSPERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IER_NSPERINT_Pos)) /* Assigment of value for NSPERINT in the DWDT_PS_WDT_IER register */
+#define   DWDT_PS_WDT_IER_NSPERINT_0_Val      _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IER) No effect.  */
+#define   DWDT_PS_WDT_IER_NSPERINT_1_Val      _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IER) A never secure period failure generates an interrupt in the programmable secure area.  */
+#define DWDT_PS_WDT_IER_NSPERINT_0            (DWDT_PS_WDT_IER_NSPERINT_0_Val << DWDT_PS_WDT_IER_NSPERINT_Pos) /* (DWDT_PS_WDT_IER) No effect. Position  */
+#define DWDT_PS_WDT_IER_NSPERINT_1            (DWDT_PS_WDT_IER_NSPERINT_1_Val << DWDT_PS_WDT_IER_NSPERINT_Pos) /* (DWDT_PS_WDT_IER) A never secure period failure generates an interrupt in the programmable secure area. Position  */
+#define DWDT_PS_WDT_IER_NSRPTHINT_Pos         _UINT32_(4)                                          /* (DWDT_PS_WDT_IER) Never Secure Repeat Threshold Interrupt Enable Position */
+#define DWDT_PS_WDT_IER_NSRPTHINT_Msk         (_UINT32_(0x1) << DWDT_PS_WDT_IER_NSRPTHINT_Pos)     /* (DWDT_PS_WDT_IER) Never Secure Repeat Threshold Interrupt Enable Mask */
+#define DWDT_PS_WDT_IER_NSRPTHINT(value)      (DWDT_PS_WDT_IER_NSRPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IER_NSRPTHINT_Pos)) /* Assigment of value for NSRPTHINT in the DWDT_PS_WDT_IER register */
+#define   DWDT_PS_WDT_IER_NSRPTHINT_0_Val     _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IER) No effect.  */
+#define   DWDT_PS_WDT_IER_NSRPTHINT_1_Val     _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IER) A never secure repeat threshold failure generates an interrupt in the programmable secure area.  */
+#define DWDT_PS_WDT_IER_NSRPTHINT_0           (DWDT_PS_WDT_IER_NSRPTHINT_0_Val << DWDT_PS_WDT_IER_NSRPTHINT_Pos) /* (DWDT_PS_WDT_IER) No effect. Position  */
+#define DWDT_PS_WDT_IER_NSRPTHINT_1           (DWDT_PS_WDT_IER_NSRPTHINT_1_Val << DWDT_PS_WDT_IER_NSRPTHINT_Pos) /* (DWDT_PS_WDT_IER) A never secure repeat threshold failure generates an interrupt in the programmable secure area. Position  */
+#define DWDT_PS_WDT_IER_Msk                   _UINT32_(0x0000001F)                                 /* (DWDT_PS_WDT_IER) Register Mask  */
+
+
+/* -------- DWDT_PS_WDT_IDR : (DWDT Offset: 0x1198) ( /W 32) Programmable Secure Interrupt Disable Register -------- */
+#define DWDT_PS_WDT_IDR_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_PS_WDT_IDR) Period Interrupt Disable Position */
+#define DWDT_PS_WDT_IDR_PERINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_IDR_PERINT_Pos)        /* (DWDT_PS_WDT_IDR) Period Interrupt Disable Mask */
+#define DWDT_PS_WDT_IDR_PERINT(value)         (DWDT_PS_WDT_IDR_PERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IDR_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_PS_WDT_IDR register */
+#define   DWDT_PS_WDT_IDR_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IDR) No effect.  */
+#define   DWDT_PS_WDT_IDR_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IDR) The Programmable secure period failure interrupt is disabled.  */
+#define DWDT_PS_WDT_IDR_PERINT_0              (DWDT_PS_WDT_IDR_PERINT_0_Val << DWDT_PS_WDT_IDR_PERINT_Pos) /* (DWDT_PS_WDT_IDR) No effect. Position  */
+#define DWDT_PS_WDT_IDR_PERINT_1              (DWDT_PS_WDT_IDR_PERINT_1_Val << DWDT_PS_WDT_IDR_PERINT_Pos) /* (DWDT_PS_WDT_IDR) The Programmable secure period failure interrupt is disabled. Position  */
+#define DWDT_PS_WDT_IDR_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_PS_WDT_IDR) Repeat Threshold Interrupt Disable Position */
+#define DWDT_PS_WDT_IDR_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_PS_WDT_IDR_RPTHINT_Pos)       /* (DWDT_PS_WDT_IDR) Repeat Threshold Interrupt Disable Mask */
+#define DWDT_PS_WDT_IDR_RPTHINT(value)        (DWDT_PS_WDT_IDR_RPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IDR_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_PS_WDT_IDR register */
+#define   DWDT_PS_WDT_IDR_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IDR) No effect.  */
+#define   DWDT_PS_WDT_IDR_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IDR) The Programmable secure repeat threshold failure interrupt is disabled.  */
+#define DWDT_PS_WDT_IDR_RPTHINT_0             (DWDT_PS_WDT_IDR_RPTHINT_0_Val << DWDT_PS_WDT_IDR_RPTHINT_Pos) /* (DWDT_PS_WDT_IDR) No effect. Position  */
+#define DWDT_PS_WDT_IDR_RPTHINT_1             (DWDT_PS_WDT_IDR_RPTHINT_1_Val << DWDT_PS_WDT_IDR_RPTHINT_Pos) /* (DWDT_PS_WDT_IDR) The Programmable secure repeat threshold failure interrupt is disabled. Position  */
+#define DWDT_PS_WDT_IDR_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_PS_WDT_IDR) Interrupt Level Threshold Interrupt Disable Position */
+#define DWDT_PS_WDT_IDR_LVLINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_IDR_LVLINT_Pos)        /* (DWDT_PS_WDT_IDR) Interrupt Level Threshold Interrupt Disable Mask */
+#define DWDT_PS_WDT_IDR_LVLINT(value)         (DWDT_PS_WDT_IDR_LVLINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IDR_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_PS_WDT_IDR register */
+#define   DWDT_PS_WDT_IDR_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IDR) No effect.  */
+#define   DWDT_PS_WDT_IDR_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IDR) The Programmable secure interrupt threshold failure interrupt is disabled.  */
+#define DWDT_PS_WDT_IDR_LVLINT_0              (DWDT_PS_WDT_IDR_LVLINT_0_Val << DWDT_PS_WDT_IDR_LVLINT_Pos) /* (DWDT_PS_WDT_IDR) No effect. Position  */
+#define DWDT_PS_WDT_IDR_LVLINT_1              (DWDT_PS_WDT_IDR_LVLINT_1_Val << DWDT_PS_WDT_IDR_LVLINT_Pos) /* (DWDT_PS_WDT_IDR) The Programmable secure interrupt threshold failure interrupt is disabled. Position  */
+#define DWDT_PS_WDT_IDR_NSPERINT_Pos          _UINT32_(3)                                          /* (DWDT_PS_WDT_IDR) Never Secure Period Interrupt Disable Position */
+#define DWDT_PS_WDT_IDR_NSPERINT_Msk          (_UINT32_(0x1) << DWDT_PS_WDT_IDR_NSPERINT_Pos)      /* (DWDT_PS_WDT_IDR) Never Secure Period Interrupt Disable Mask */
+#define DWDT_PS_WDT_IDR_NSPERINT(value)       (DWDT_PS_WDT_IDR_NSPERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IDR_NSPERINT_Pos)) /* Assigment of value for NSPERINT in the DWDT_PS_WDT_IDR register */
+#define   DWDT_PS_WDT_IDR_NSPERINT_0_Val      _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IDR) No effect.  */
+#define   DWDT_PS_WDT_IDR_NSPERINT_1_Val      _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IDR) A never secure period failure does not generate an interrupt in the programmable secure area.  */
+#define DWDT_PS_WDT_IDR_NSPERINT_0            (DWDT_PS_WDT_IDR_NSPERINT_0_Val << DWDT_PS_WDT_IDR_NSPERINT_Pos) /* (DWDT_PS_WDT_IDR) No effect. Position  */
+#define DWDT_PS_WDT_IDR_NSPERINT_1            (DWDT_PS_WDT_IDR_NSPERINT_1_Val << DWDT_PS_WDT_IDR_NSPERINT_Pos) /* (DWDT_PS_WDT_IDR) A never secure period failure does not generate an interrupt in the programmable secure area. Position  */
+#define DWDT_PS_WDT_IDR_NSRPTHINT_Pos         _UINT32_(4)                                          /* (DWDT_PS_WDT_IDR) Never Secure Repeat Threshold Interrupt Disable Position */
+#define DWDT_PS_WDT_IDR_NSRPTHINT_Msk         (_UINT32_(0x1) << DWDT_PS_WDT_IDR_NSRPTHINT_Pos)     /* (DWDT_PS_WDT_IDR) Never Secure Repeat Threshold Interrupt Disable Mask */
+#define DWDT_PS_WDT_IDR_NSRPTHINT(value)      (DWDT_PS_WDT_IDR_NSRPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IDR_NSRPTHINT_Pos)) /* Assigment of value for NSRPTHINT in the DWDT_PS_WDT_IDR register */
+#define   DWDT_PS_WDT_IDR_NSRPTHINT_0_Val     _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IDR) No effect.  */
+#define   DWDT_PS_WDT_IDR_NSRPTHINT_1_Val     _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IDR) A never secure repeat threshold failure does not generate an interrupt in the programmable secure area.  */
+#define DWDT_PS_WDT_IDR_NSRPTHINT_0           (DWDT_PS_WDT_IDR_NSRPTHINT_0_Val << DWDT_PS_WDT_IDR_NSRPTHINT_Pos) /* (DWDT_PS_WDT_IDR) No effect. Position  */
+#define DWDT_PS_WDT_IDR_NSRPTHINT_1           (DWDT_PS_WDT_IDR_NSRPTHINT_1_Val << DWDT_PS_WDT_IDR_NSRPTHINT_Pos) /* (DWDT_PS_WDT_IDR) A never secure repeat threshold failure does not generate an interrupt in the programmable secure area. Position  */
+#define DWDT_PS_WDT_IDR_Msk                   _UINT32_(0x0000001F)                                 /* (DWDT_PS_WDT_IDR) Register Mask  */
+
+
+/* -------- DWDT_PS_WDT_ISR : (DWDT Offset: 0x119C) ( R/ 32) Programmable Secure Interrupt Status Register -------- */
+#define DWDT_PS_WDT_ISR_RESETVALUE            _UINT32_(0x00)                                       /*  (DWDT_PS_WDT_ISR) Programmable Secure Interrupt Status Register  Reset Value */
+
+#define DWDT_PS_WDT_ISR_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_PS_WDT_ISR) Period Interrupt Status Position */
+#define DWDT_PS_WDT_ISR_PERINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_ISR_PERINT_Pos)        /* (DWDT_PS_WDT_ISR) Period Interrupt Status Mask */
+#define DWDT_PS_WDT_ISR_PERINT(value)         (DWDT_PS_WDT_ISR_PERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_ISR_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_PS_WDT_ISR register */
+#define   DWDT_PS_WDT_ISR_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_ISR) No period failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR.  */
+#define   DWDT_PS_WDT_ISR_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_ISR) At least one period failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR.  */
+#define DWDT_PS_WDT_ISR_PERINT_0              (DWDT_PS_WDT_ISR_PERINT_0_Val << DWDT_PS_WDT_ISR_PERINT_Pos) /* (DWDT_PS_WDT_ISR) No period failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
+#define DWDT_PS_WDT_ISR_PERINT_1              (DWDT_PS_WDT_ISR_PERINT_1_Val << DWDT_PS_WDT_ISR_PERINT_Pos) /* (DWDT_PS_WDT_ISR) At least one period failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
+#define DWDT_PS_WDT_ISR_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_PS_WDT_ISR) Repeat Threshold Interrupt Status Position */
+#define DWDT_PS_WDT_ISR_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_PS_WDT_ISR_RPTHINT_Pos)       /* (DWDT_PS_WDT_ISR) Repeat Threshold Interrupt Status Mask */
+#define DWDT_PS_WDT_ISR_RPTHINT(value)        (DWDT_PS_WDT_ISR_RPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_ISR_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_PS_WDT_ISR register */
+#define   DWDT_PS_WDT_ISR_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_PS_WDT_ISR) No repeat threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR.  */
+#define   DWDT_PS_WDT_ISR_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_PS_WDT_ISR) At least one repeat threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR.  */
+#define DWDT_PS_WDT_ISR_RPTHINT_0             (DWDT_PS_WDT_ISR_RPTHINT_0_Val << DWDT_PS_WDT_ISR_RPTHINT_Pos) /* (DWDT_PS_WDT_ISR) No repeat threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
+#define DWDT_PS_WDT_ISR_RPTHINT_1             (DWDT_PS_WDT_ISR_RPTHINT_1_Val << DWDT_PS_WDT_ISR_RPTHINT_Pos) /* (DWDT_PS_WDT_ISR) At least one repeat threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
+#define DWDT_PS_WDT_ISR_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_PS_WDT_ISR) Interrupt Level Threshold Interrupt Status Position */
+#define DWDT_PS_WDT_ISR_LVLINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_ISR_LVLINT_Pos)        /* (DWDT_PS_WDT_ISR) Interrupt Level Threshold Interrupt Status Mask */
+#define DWDT_PS_WDT_ISR_LVLINT(value)         (DWDT_PS_WDT_ISR_LVLINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_ISR_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_PS_WDT_ISR register */
+#define   DWDT_PS_WDT_ISR_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_ISR) No level threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR.  */
+#define   DWDT_PS_WDT_ISR_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_ISR) At least one level threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR.  */
+#define DWDT_PS_WDT_ISR_LVLINT_0              (DWDT_PS_WDT_ISR_LVLINT_0_Val << DWDT_PS_WDT_ISR_LVLINT_Pos) /* (DWDT_PS_WDT_ISR) No level threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
+#define DWDT_PS_WDT_ISR_LVLINT_1              (DWDT_PS_WDT_ISR_LVLINT_1_Val << DWDT_PS_WDT_ISR_LVLINT_Pos) /* (DWDT_PS_WDT_ISR) At least one level threshold failure has occurred in the Programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
+#define DWDT_PS_WDT_ISR_NSPERINT_Pos          _UINT32_(3)                                          /* (DWDT_PS_WDT_ISR) Never Secure Period Interrupt Status Position */
+#define DWDT_PS_WDT_ISR_NSPERINT_Msk          (_UINT32_(0x1) << DWDT_PS_WDT_ISR_NSPERINT_Pos)      /* (DWDT_PS_WDT_ISR) Never Secure Period Interrupt Status Mask */
+#define DWDT_PS_WDT_ISR_NSPERINT(value)       (DWDT_PS_WDT_ISR_NSPERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_ISR_NSPERINT_Pos)) /* Assigment of value for NSPERINT in the DWDT_PS_WDT_ISR register */
+#define   DWDT_PS_WDT_ISR_NSPERINT_0_Val      _UINT32_(0x0)                                        /* (DWDT_PS_WDT_ISR) No never secure period failure has occurred in the programmable secure watchdog since the last read of PS_WDT_ISR.  */
+#define   DWDT_PS_WDT_ISR_NSPERINT_1_Val      _UINT32_(0x1)                                        /* (DWDT_PS_WDT_ISR) At least one never secure period failure occurred in the programmable secure watchdog since the last read of PS_WDT_ISR.  */
+#define DWDT_PS_WDT_ISR_NSPERINT_0            (DWDT_PS_WDT_ISR_NSPERINT_0_Val << DWDT_PS_WDT_ISR_NSPERINT_Pos) /* (DWDT_PS_WDT_ISR) No never secure period failure has occurred in the programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
+#define DWDT_PS_WDT_ISR_NSPERINT_1            (DWDT_PS_WDT_ISR_NSPERINT_1_Val << DWDT_PS_WDT_ISR_NSPERINT_Pos) /* (DWDT_PS_WDT_ISR) At least one never secure period failure occurred in the programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
+#define DWDT_PS_WDT_ISR_NSRPTHINT_Pos         _UINT32_(4)                                          /* (DWDT_PS_WDT_ISR) Never Secure Repeat Threshold Interrupt Status Position */
+#define DWDT_PS_WDT_ISR_NSRPTHINT_Msk         (_UINT32_(0x1) << DWDT_PS_WDT_ISR_NSRPTHINT_Pos)     /* (DWDT_PS_WDT_ISR) Never Secure Repeat Threshold Interrupt Status Mask */
+#define DWDT_PS_WDT_ISR_NSRPTHINT(value)      (DWDT_PS_WDT_ISR_NSRPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_ISR_NSRPTHINT_Pos)) /* Assigment of value for NSRPTHINT in the DWDT_PS_WDT_ISR register */
+#define   DWDT_PS_WDT_ISR_NSRPTHINT_0_Val     _UINT32_(0x0)                                        /* (DWDT_PS_WDT_ISR) No never secure repeat threshold failure has occurred in the programmable secure watchdog since the last read of PS_WDT_ISR.  */
+#define   DWDT_PS_WDT_ISR_NSRPTHINT_1_Val     _UINT32_(0x1)                                        /* (DWDT_PS_WDT_ISR) At least one never secure repeat threshold failure occurred in the programmable secure watchdog since the last read of PS_WDT_ISR.  */
+#define DWDT_PS_WDT_ISR_NSRPTHINT_0           (DWDT_PS_WDT_ISR_NSRPTHINT_0_Val << DWDT_PS_WDT_ISR_NSRPTHINT_Pos) /* (DWDT_PS_WDT_ISR) No never secure repeat threshold failure has occurred in the programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
+#define DWDT_PS_WDT_ISR_NSRPTHINT_1           (DWDT_PS_WDT_ISR_NSRPTHINT_1_Val << DWDT_PS_WDT_ISR_NSRPTHINT_Pos) /* (DWDT_PS_WDT_ISR) At least one never secure repeat threshold failure occurred in the programmable secure watchdog since the last read of PS_WDT_ISR. Position  */
+#define DWDT_PS_WDT_ISR_Msk                   _UINT32_(0x0000001F)                                 /* (DWDT_PS_WDT_ISR) Register Mask  */
+
+
+/* -------- DWDT_PS_WDT_IMR : (DWDT Offset: 0x11A0) ( R/ 32) Programmable Secure Interrupt Mask Register -------- */
+#define DWDT_PS_WDT_IMR_RESETVALUE            _UINT32_(0x00)                                       /*  (DWDT_PS_WDT_IMR) Programmable Secure Interrupt Mask Register  Reset Value */
+
+#define DWDT_PS_WDT_IMR_PERINT_Pos            _UINT32_(0)                                          /* (DWDT_PS_WDT_IMR) Period Interrupt Mask Position */
+#define DWDT_PS_WDT_IMR_PERINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_IMR_PERINT_Pos)        /* (DWDT_PS_WDT_IMR) Period Interrupt Mask Mask */
+#define DWDT_PS_WDT_IMR_PERINT(value)         (DWDT_PS_WDT_IMR_PERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IMR_PERINT_Pos)) /* Assigment of value for PERINT in the DWDT_PS_WDT_IMR register */
+#define   DWDT_PS_WDT_IMR_PERINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IMR) Interrupt on PERINT is disabled.  */
+#define   DWDT_PS_WDT_IMR_PERINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IMR) Interrupt on PERINT is enabled.  */
+#define DWDT_PS_WDT_IMR_PERINT_0              (DWDT_PS_WDT_IMR_PERINT_0_Val << DWDT_PS_WDT_IMR_PERINT_Pos) /* (DWDT_PS_WDT_IMR) Interrupt on PERINT is disabled. Position  */
+#define DWDT_PS_WDT_IMR_PERINT_1              (DWDT_PS_WDT_IMR_PERINT_1_Val << DWDT_PS_WDT_IMR_PERINT_Pos) /* (DWDT_PS_WDT_IMR) Interrupt on PERINT is enabled. Position  */
+#define DWDT_PS_WDT_IMR_RPTHINT_Pos           _UINT32_(1)                                          /* (DWDT_PS_WDT_IMR) Repeat Threshold Interrupt Mask Position */
+#define DWDT_PS_WDT_IMR_RPTHINT_Msk           (_UINT32_(0x1) << DWDT_PS_WDT_IMR_RPTHINT_Pos)       /* (DWDT_PS_WDT_IMR) Repeat Threshold Interrupt Mask Mask */
+#define DWDT_PS_WDT_IMR_RPTHINT(value)        (DWDT_PS_WDT_IMR_RPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IMR_RPTHINT_Pos)) /* Assigment of value for RPTHINT in the DWDT_PS_WDT_IMR register */
+#define   DWDT_PS_WDT_IMR_RPTHINT_0_Val       _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IMR) Interrupt on RPTHINT is disabled.  */
+#define   DWDT_PS_WDT_IMR_RPTHINT_1_Val       _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IMR) Interrupt on RPTHINT is enabled.  */
+#define DWDT_PS_WDT_IMR_RPTHINT_0             (DWDT_PS_WDT_IMR_RPTHINT_0_Val << DWDT_PS_WDT_IMR_RPTHINT_Pos) /* (DWDT_PS_WDT_IMR) Interrupt on RPTHINT is disabled. Position  */
+#define DWDT_PS_WDT_IMR_RPTHINT_1             (DWDT_PS_WDT_IMR_RPTHINT_1_Val << DWDT_PS_WDT_IMR_RPTHINT_Pos) /* (DWDT_PS_WDT_IMR) Interrupt on RPTHINT is enabled. Position  */
+#define DWDT_PS_WDT_IMR_LVLINT_Pos            _UINT32_(2)                                          /* (DWDT_PS_WDT_IMR) Interrupt Level Threshold Interrupt Mask Position */
+#define DWDT_PS_WDT_IMR_LVLINT_Msk            (_UINT32_(0x1) << DWDT_PS_WDT_IMR_LVLINT_Pos)        /* (DWDT_PS_WDT_IMR) Interrupt Level Threshold Interrupt Mask Mask */
+#define DWDT_PS_WDT_IMR_LVLINT(value)         (DWDT_PS_WDT_IMR_LVLINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IMR_LVLINT_Pos)) /* Assigment of value for LVLINT in the DWDT_PS_WDT_IMR register */
+#define   DWDT_PS_WDT_IMR_LVLINT_0_Val        _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IMR) Interrupt on LVLINT is disabled.  */
+#define   DWDT_PS_WDT_IMR_LVLINT_1_Val        _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IMR) Interrupt on LVLINT is enabled.  */
+#define DWDT_PS_WDT_IMR_LVLINT_0              (DWDT_PS_WDT_IMR_LVLINT_0_Val << DWDT_PS_WDT_IMR_LVLINT_Pos) /* (DWDT_PS_WDT_IMR) Interrupt on LVLINT is disabled. Position  */
+#define DWDT_PS_WDT_IMR_LVLINT_1              (DWDT_PS_WDT_IMR_LVLINT_1_Val << DWDT_PS_WDT_IMR_LVLINT_Pos) /* (DWDT_PS_WDT_IMR) Interrupt on LVLINT is enabled. Position  */
+#define DWDT_PS_WDT_IMR_NSPERINT_Pos          _UINT32_(3)                                          /* (DWDT_PS_WDT_IMR) Never Secure Period Interrupt Mask Position */
+#define DWDT_PS_WDT_IMR_NSPERINT_Msk          (_UINT32_(0x1) << DWDT_PS_WDT_IMR_NSPERINT_Pos)      /* (DWDT_PS_WDT_IMR) Never Secure Period Interrupt Mask Mask */
+#define DWDT_PS_WDT_IMR_NSPERINT(value)       (DWDT_PS_WDT_IMR_NSPERINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IMR_NSPERINT_Pos)) /* Assigment of value for NSPERINT in the DWDT_PS_WDT_IMR register */
+#define   DWDT_PS_WDT_IMR_NSPERINT_0_Val      _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure PERINT interrupt is disabled.  */
+#define   DWDT_PS_WDT_IMR_NSPERINT_1_Val      _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure PERINT interrupt is enabled.  */
+#define DWDT_PS_WDT_IMR_NSPERINT_0            (DWDT_PS_WDT_IMR_NSPERINT_0_Val << DWDT_PS_WDT_IMR_NSPERINT_Pos) /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure PERINT interrupt is disabled. Position  */
+#define DWDT_PS_WDT_IMR_NSPERINT_1            (DWDT_PS_WDT_IMR_NSPERINT_1_Val << DWDT_PS_WDT_IMR_NSPERINT_Pos) /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure PERINT interrupt is enabled. Position  */
+#define DWDT_PS_WDT_IMR_NSRPTHINT_Pos         _UINT32_(4)                                          /* (DWDT_PS_WDT_IMR) Never Secure Repeat Threshold Interrupt Mask Position */
+#define DWDT_PS_WDT_IMR_NSRPTHINT_Msk         (_UINT32_(0x1) << DWDT_PS_WDT_IMR_NSRPTHINT_Pos)     /* (DWDT_PS_WDT_IMR) Never Secure Repeat Threshold Interrupt Mask Mask */
+#define DWDT_PS_WDT_IMR_NSRPTHINT(value)      (DWDT_PS_WDT_IMR_NSRPTHINT_Msk & (_UINT32_(value) << DWDT_PS_WDT_IMR_NSRPTHINT_Pos)) /* Assigment of value for NSRPTHINT in the DWDT_PS_WDT_IMR register */
+#define   DWDT_PS_WDT_IMR_NSRPTHINT_0_Val     _UINT32_(0x0)                                        /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure RPTHINT interrupt is disabled.  */
+#define   DWDT_PS_WDT_IMR_NSRPTHINT_1_Val     _UINT32_(0x1)                                        /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure RPTHINT interrupt is enabled.  */
+#define DWDT_PS_WDT_IMR_NSRPTHINT_0           (DWDT_PS_WDT_IMR_NSRPTHINT_0_Val << DWDT_PS_WDT_IMR_NSRPTHINT_Pos) /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure RPTHINT interrupt is disabled. Position  */
+#define DWDT_PS_WDT_IMR_NSRPTHINT_1           (DWDT_PS_WDT_IMR_NSRPTHINT_1_Val << DWDT_PS_WDT_IMR_NSRPTHINT_Pos) /* (DWDT_PS_WDT_IMR) Programmable secure interrupt on never secure RPTHINT interrupt is enabled. Position  */
+#define DWDT_PS_WDT_IMR_Msk                   _UINT32_(0x0000001F)                                 /* (DWDT_PS_WDT_IMR) Register Mask  */
+
+
+/* -------- DWDT_NS_WDT_LVLLIM : (DWDT Offset: 0x11A4) (R/W 32) Never Secure Level Limits Register -------- */
+#define DWDT_NS_WDT_LVLLIM_RESETVALUE         _UINT32_(0xFFF0000)                                  /*  (DWDT_NS_WDT_LVLLIM) Never Secure Level Limits Register  Reset Value */
+
+#define DWDT_NS_WDT_LVLLIM_LVLMIN_Pos         _UINT32_(0)                                          /* (DWDT_NS_WDT_LVLLIM) Level Minimum Position */
+#define DWDT_NS_WDT_LVLLIM_LVLMIN_Msk         (_UINT32_(0xFFF) << DWDT_NS_WDT_LVLLIM_LVLMIN_Pos)   /* (DWDT_NS_WDT_LVLLIM) Level Minimum Mask */
+#define DWDT_NS_WDT_LVLLIM_LVLMIN(value)      (DWDT_NS_WDT_LVLLIM_LVLMIN_Msk & (_UINT32_(value) << DWDT_NS_WDT_LVLLIM_LVLMIN_Pos)) /* Assigment of value for LVLMIN in the DWDT_NS_WDT_LVLLIM register */
+#define DWDT_NS_WDT_LVLLIM_LVLMAX_Pos         _UINT32_(16)                                         /* (DWDT_NS_WDT_LVLLIM) Level Maximum Position */
+#define DWDT_NS_WDT_LVLLIM_LVLMAX_Msk         (_UINT32_(0xFFF) << DWDT_NS_WDT_LVLLIM_LVLMAX_Pos)   /* (DWDT_NS_WDT_LVLLIM) Level Maximum Mask */
+#define DWDT_NS_WDT_LVLLIM_LVLMAX(value)      (DWDT_NS_WDT_LVLLIM_LVLMAX_Msk & (_UINT32_(value) << DWDT_NS_WDT_LVLLIM_LVLMAX_Pos)) /* Assigment of value for LVLMAX in the DWDT_NS_WDT_LVLLIM register */
+#define DWDT_NS_WDT_LVLLIM_Msk                _UINT32_(0x0FFF0FFF)                                 /* (DWDT_NS_WDT_LVLLIM) Register Mask  */
+
+
+/* -------- DWDT_NS_WDT_RLIM : (DWDT Offset: 0x11A8) (R/W 32) Never Secure Repeat Limits Register -------- */
+#define DWDT_NS_WDT_RLIM_RESETVALUE           _UINT32_(0xFFF0000)                                  /*  (DWDT_NS_WDT_RLIM) Never Secure Repeat Limits Register  Reset Value */
+
+#define DWDT_NS_WDT_RLIM_RPTHMIN_Pos          _UINT32_(0)                                          /* (DWDT_NS_WDT_RLIM) Repeat Threshold Minimum Position */
+#define DWDT_NS_WDT_RLIM_RPTHMIN_Msk          (_UINT32_(0xFFF) << DWDT_NS_WDT_RLIM_RPTHMIN_Pos)    /* (DWDT_NS_WDT_RLIM) Repeat Threshold Minimum Mask */
+#define DWDT_NS_WDT_RLIM_RPTHMIN(value)       (DWDT_NS_WDT_RLIM_RPTHMIN_Msk & (_UINT32_(value) << DWDT_NS_WDT_RLIM_RPTHMIN_Pos)) /* Assigment of value for RPTHMIN in the DWDT_NS_WDT_RLIM register */
+#define DWDT_NS_WDT_RLIM_RPTHMAX_Pos          _UINT32_(16)                                         /* (DWDT_NS_WDT_RLIM) Repeat Threshold Maximum Position */
+#define DWDT_NS_WDT_RLIM_RPTHMAX_Msk          (_UINT32_(0xFFF) << DWDT_NS_WDT_RLIM_RPTHMAX_Pos)    /* (DWDT_NS_WDT_RLIM) Repeat Threshold Maximum Mask */
+#define DWDT_NS_WDT_RLIM_RPTHMAX(value)       (DWDT_NS_WDT_RLIM_RPTHMAX_Msk & (_UINT32_(value) << DWDT_NS_WDT_RLIM_RPTHMAX_Pos)) /* Assigment of value for RPTHMAX in the DWDT_NS_WDT_RLIM register */
+#define DWDT_NS_WDT_RLIM_Msk                  _UINT32_(0x0FFF0FFF)                                 /* (DWDT_NS_WDT_RLIM) Register Mask  */
+
+
+/* -------- DWDT_NS_WDT_PLIM : (DWDT Offset: 0x11AC) (R/W 32) Never Secure Period Limits Register -------- */
+#define DWDT_NS_WDT_PLIM_RESETVALUE           _UINT32_(0xFFF0000)                                  /*  (DWDT_NS_WDT_PLIM) Never Secure Period Limits Register  Reset Value */
+
+#define DWDT_NS_WDT_PLIM_PERMIN_Pos           _UINT32_(0)                                          /* (DWDT_NS_WDT_PLIM) Period Minimum Position */
+#define DWDT_NS_WDT_PLIM_PERMIN_Msk           (_UINT32_(0xFFF) << DWDT_NS_WDT_PLIM_PERMIN_Pos)     /* (DWDT_NS_WDT_PLIM) Period Minimum Mask */
+#define DWDT_NS_WDT_PLIM_PERMIN(value)        (DWDT_NS_WDT_PLIM_PERMIN_Msk & (_UINT32_(value) << DWDT_NS_WDT_PLIM_PERMIN_Pos)) /* Assigment of value for PERMIN in the DWDT_NS_WDT_PLIM register */
+#define DWDT_NS_WDT_PLIM_PERMAX_Pos           _UINT32_(16)                                         /* (DWDT_NS_WDT_PLIM) Period Maximum Position */
+#define DWDT_NS_WDT_PLIM_PERMAX_Msk           (_UINT32_(0xFFF) << DWDT_NS_WDT_PLIM_PERMAX_Pos)     /* (DWDT_NS_WDT_PLIM) Period Maximum Mask */
+#define DWDT_NS_WDT_PLIM_PERMAX(value)        (DWDT_NS_WDT_PLIM_PERMAX_Msk & (_UINT32_(value) << DWDT_NS_WDT_PLIM_PERMAX_Pos)) /* Assigment of value for PERMAX in the DWDT_NS_WDT_PLIM register */
+#define DWDT_NS_WDT_PLIM_Msk                  _UINT32_(0x0FFF0FFF)                                 /* (DWDT_NS_WDT_PLIM) Register Mask  */
+
+
 /** \brief DWDT register offsets definitions */
 #define DWDT_NS_WDT_CR_REG_OFST        _UINT32_(0x00)      /* (DWDT_NS_WDT_CR) Never Secure Control Register Offset */
-#define DWDT_NS_WDT_IDR_REG_OFST       _UINT32_(0x18)      /* (DWDT_NS_WDT_IDR) Never Secure Interrupt Disable Register Offset */
-#define DWDT_NS_WDT_IER_REG_OFST       _UINT32_(0x14)      /* (DWDT_NS_WDT_IER) Never Secure Interrupt Enable Register Offset */
-#define DWDT_NS_WDT_IL_REG_OFST        _UINT32_(0x10)      /* (DWDT_NS_WDT_IL) Never Secure Interrupt Level Register Offset */
-#define DWDT_NS_WDT_IMR_REG_OFST       _UINT32_(0x20)      /* (DWDT_NS_WDT_IMR) Never Secure Interrupt Mask Register Offset */
-#define DWDT_NS_WDT_ISR_REG_OFST       _UINT32_(0x1C)      /* (DWDT_NS_WDT_ISR) Never Secure Interrupt Status Register Offset */
-#define DWDT_NS_WDT_LVLLIM_REG_OFST    _UINT32_(0x11A4)    /* (DWDT_NS_WDT_LVLLIM) Never Secure Level Limits Register Offset */
 #define DWDT_NS_WDT_MR_REG_OFST        _UINT32_(0x04)      /* (DWDT_NS_WDT_MR) Never Secure Mode Register Offset */
-#define DWDT_NS_WDT_PLIM_REG_OFST      _UINT32_(0x11AC)    /* (DWDT_NS_WDT_PLIM) Never Secure Period Limits Register Offset */
-#define DWDT_NS_WDT_RLIM_REG_OFST      _UINT32_(0x11A8)    /* (DWDT_NS_WDT_RLIM) Never Secure Repeat Limits Register Offset */
 #define DWDT_NS_WDT_VR_REG_OFST        _UINT32_(0x08)      /* (DWDT_NS_WDT_VR) Never Secure Value Register Offset */
 #define DWDT_NS_WDT_WL_REG_OFST        _UINT32_(0x0C)      /* (DWDT_NS_WDT_WL) Never Secure Window Level Register Offset */
+#define DWDT_NS_WDT_IL_REG_OFST        _UINT32_(0x10)      /* (DWDT_NS_WDT_IL) Never Secure Interrupt Level Register Offset */
+#define DWDT_NS_WDT_IER_REG_OFST       _UINT32_(0x14)      /* (DWDT_NS_WDT_IER) Never Secure Interrupt Enable Register Offset */
+#define DWDT_NS_WDT_IDR_REG_OFST       _UINT32_(0x18)      /* (DWDT_NS_WDT_IDR) Never Secure Interrupt Disable Register Offset */
+#define DWDT_NS_WDT_ISR_REG_OFST       _UINT32_(0x1C)      /* (DWDT_NS_WDT_ISR) Never Secure Interrupt Status Register Offset */
+#define DWDT_NS_WDT_IMR_REG_OFST       _UINT32_(0x20)      /* (DWDT_NS_WDT_IMR) Never Secure Interrupt Mask Register Offset */
 #define DWDT_PS_WDT_CR_REG_OFST        _UINT32_(0x1180)    /* (DWDT_PS_WDT_CR) Programmable Secure Control Register Offset */
-#define DWDT_PS_WDT_IDR_REG_OFST       _UINT32_(0x1198)    /* (DWDT_PS_WDT_IDR) Programmable Secure Interrupt Disable Register Offset */
-#define DWDT_PS_WDT_IER_REG_OFST       _UINT32_(0x1194)    /* (DWDT_PS_WDT_IER) Programmable Secure Interrupt Enable Register Offset */
-#define DWDT_PS_WDT_IL_REG_OFST        _UINT32_(0x1190)    /* (DWDT_PS_WDT_IL) Programmable Secure Interrupt Level Offset */
-#define DWDT_PS_WDT_IMR_REG_OFST       _UINT32_(0x11A0)    /* (DWDT_PS_WDT_IMR) Programmable Secure Interrupt Mask Register Offset */
-#define DWDT_PS_WDT_ISR_REG_OFST       _UINT32_(0x119C)    /* (DWDT_PS_WDT_ISR) Programmable Secure Interrupt Status Register Offset */
 #define DWDT_PS_WDT_MR_REG_OFST        _UINT32_(0x1184)    /* (DWDT_PS_WDT_MR) Programmable Secure Mode Register Offset */
 #define DWDT_PS_WDT_VR_REG_OFST        _UINT32_(0x1188)    /* (DWDT_PS_WDT_VR) Programmable Secure Value Register Offset */
 #define DWDT_PS_WDT_WL_REG_OFST        _UINT32_(0x118C)    /* (DWDT_PS_WDT_WL) Programmable Secure Window Level Offset */
+#define DWDT_PS_WDT_IL_REG_OFST        _UINT32_(0x1190)    /* (DWDT_PS_WDT_IL) Programmable Secure Interrupt Level Offset */
+#define DWDT_PS_WDT_IER_REG_OFST       _UINT32_(0x1194)    /* (DWDT_PS_WDT_IER) Programmable Secure Interrupt Enable Register Offset */
+#define DWDT_PS_WDT_IDR_REG_OFST       _UINT32_(0x1198)    /* (DWDT_PS_WDT_IDR) Programmable Secure Interrupt Disable Register Offset */
+#define DWDT_PS_WDT_ISR_REG_OFST       _UINT32_(0x119C)    /* (DWDT_PS_WDT_ISR) Programmable Secure Interrupt Status Register Offset */
+#define DWDT_PS_WDT_IMR_REG_OFST       _UINT32_(0x11A0)    /* (DWDT_PS_WDT_IMR) Programmable Secure Interrupt Mask Register Offset */
+#define DWDT_NS_WDT_LVLLIM_REG_OFST    _UINT32_(0x11A4)    /* (DWDT_NS_WDT_LVLLIM) Never Secure Level Limits Register Offset */
+#define DWDT_NS_WDT_RLIM_REG_OFST      _UINT32_(0x11A8)    /* (DWDT_NS_WDT_RLIM) Never Secure Repeat Limits Register Offset */
+#define DWDT_NS_WDT_PLIM_REG_OFST      _UINT32_(0x11AC)    /* (DWDT_NS_WDT_PLIM) Never Secure Period Limits Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief DWDT register API structure */

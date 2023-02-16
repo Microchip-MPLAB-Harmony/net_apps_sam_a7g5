@@ -6,7 +6,7 @@
             <name>web_net_server_sdcard_fatfs_GMAC1_freertos</name>
             <creation-uuid>91a59a87-d359-417f-8ee1-dc3cc962d769</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions>c,S</c-extensions>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
             <header-extensions>h</header-extensions>
             <asminc-extensions/>

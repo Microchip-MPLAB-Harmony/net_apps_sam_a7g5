@@ -1,7 +1,7 @@
 /*
  * Component description for TCPC
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,13 +20,67 @@
  *
  */
 
-/* file generated from device description version 2022-11-02T14:25:51Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_TCPC_COMPONENT_H_
 #define _SAMA7G_TCPC_COMPONENT_H_
 
 /* ************************************************************************** */
 /*   SOFTWARE API DEFINITION FOR TCPC                                         */
 /* ************************************************************************** */
+
+/* -------- TCPC_VID : (TCPC Offset: 0x00) ( R/ 16) Vendor ID Register -------- */
+#define TCPC_VID_RESETVALUE                   _UINT16_(0x00)                                       /*  (TCPC_VID) Vendor ID Register  Reset Value */
+
+#define TCPC_VID_VID_Pos                      _UINT16_(0)                                          /* (TCPC_VID) Vendor ID Position */
+#define TCPC_VID_VID_Msk                      (_UINT16_(0xFFFF) << TCPC_VID_VID_Pos)               /* (TCPC_VID) Vendor ID Mask */
+#define TCPC_VID_VID(value)                   (TCPC_VID_VID_Msk & (_UINT16_(value) << TCPC_VID_VID_Pos)) /* Assigment of value for VID in the TCPC_VID register */
+#define TCPC_VID_Msk                          _UINT16_(0xFFFF)                                     /* (TCPC_VID) Register Mask  */
+
+
+/* -------- TCPC_PID : (TCPC Offset: 0x02) ( R/ 16) Product ID Register -------- */
+#define TCPC_PID_RESETVALUE                   _UINT16_(0x00)                                       /*  (TCPC_PID) Product ID Register  Reset Value */
+
+#define TCPC_PID_PID_Pos                      _UINT16_(0)                                          /* (TCPC_PID) Product ID Position */
+#define TCPC_PID_PID_Msk                      (_UINT16_(0xFFFF) << TCPC_PID_PID_Pos)               /* (TCPC_PID) Product ID Mask */
+#define TCPC_PID_PID(value)                   (TCPC_PID_PID_Msk & (_UINT16_(value) << TCPC_PID_PID_Pos)) /* Assigment of value for PID in the TCPC_PID register */
+#define TCPC_PID_Msk                          _UINT16_(0xFFFF)                                     /* (TCPC_PID) Register Mask  */
+
+
+/* -------- TCPC_DID : (TCPC Offset: 0x04) ( R/ 16) Device ID Register -------- */
+#define TCPC_DID_RESETVALUE                   _UINT16_(0x00)                                       /*  (TCPC_DID) Device ID Register  Reset Value */
+
+#define TCPC_DID_DID_Pos                      _UINT16_(0)                                          /* (TCPC_DID) Device ID Position */
+#define TCPC_DID_DID_Msk                      (_UINT16_(0xFFFF) << TCPC_DID_DID_Pos)               /* (TCPC_DID) Device ID Mask */
+#define TCPC_DID_DID(value)                   (TCPC_DID_DID_Msk & (_UINT16_(value) << TCPC_DID_DID_Pos)) /* Assigment of value for DID in the TCPC_DID register */
+#define TCPC_DID_Msk                          _UINT16_(0xFFFF)                                     /* (TCPC_DID) Register Mask  */
+
+
+/* -------- TCPC_UTCR : (TCPC Offset: 0x06) ( R/ 16) USB Type-C Rev Register -------- */
+#define TCPC_UTCR_RESETVALUE                  _UINT16_(0x00)                                       /*  (TCPC_UTCR) USB Type-C Rev Register  Reset Value */
+
+#define TCPC_UTCR_UTCR_Pos                    _UINT16_(0)                                          /* (TCPC_UTCR) USB Type-C Revision Position */
+#define TCPC_UTCR_UTCR_Msk                    (_UINT16_(0xFFFF) << TCPC_UTCR_UTCR_Pos)             /* (TCPC_UTCR) USB Type-C Revision Mask */
+#define TCPC_UTCR_UTCR(value)                 (TCPC_UTCR_UTCR_Msk & (_UINT16_(value) << TCPC_UTCR_UTCR_Pos)) /* Assigment of value for UTCR in the TCPC_UTCR register */
+#define TCPC_UTCR_Msk                         _UINT16_(0xFFFF)                                     /* (TCPC_UTCR) Register Mask  */
+
+
+/* -------- TCPC_UPDR : (TCPC Offset: 0x08) ( R/ 16) USB PD Rev Ver Register -------- */
+#define TCPC_UPDR_RESETVALUE                  _UINT16_(0x00)                                       /*  (TCPC_UPDR) USB PD Rev Ver Register  Reset Value */
+
+#define TCPC_UPDR_UPDR_Pos                    _UINT16_(0)                                          /* (TCPC_UPDR) USB-PD Specification Revision and Version Position */
+#define TCPC_UPDR_UPDR_Msk                    (_UINT16_(0xFFFF) << TCPC_UPDR_UPDR_Pos)             /* (TCPC_UPDR) USB-PD Specification Revision and Version Mask */
+#define TCPC_UPDR_UPDR(value)                 (TCPC_UPDR_UPDR_Msk & (_UINT16_(value) << TCPC_UPDR_UPDR_Pos)) /* Assigment of value for UPDR in the TCPC_UPDR register */
+#define TCPC_UPDR_Msk                         _UINT16_(0xFFFF)                                     /* (TCPC_UPDR) Register Mask  */
+
+
+/* -------- TCPC_PDIR : (TCPC Offset: 0x0A) ( R/ 16) PD Interface Rev Register -------- */
+#define TCPC_PDIR_RESETVALUE                  _UINT16_(0x00)                                       /*  (TCPC_PDIR) PD Interface Rev Register  Reset Value */
+
+#define TCPC_PDIR_PDIR_Pos                    _UINT16_(0)                                          /* (TCPC_PDIR) USB-Port Controller Interface Specification Revision Position */
+#define TCPC_PDIR_PDIR_Msk                    (_UINT16_(0xFFFF) << TCPC_PDIR_PDIR_Pos)             /* (TCPC_PDIR) USB-Port Controller Interface Specification Revision Mask */
+#define TCPC_PDIR_PDIR(value)                 (TCPC_PDIR_PDIR_Msk & (_UINT16_(value) << TCPC_PDIR_PDIR_Pos)) /* Assigment of value for PDIR in the TCPC_PDIR register */
+#define TCPC_PDIR_Msk                         _UINT16_(0xFFFF)                                     /* (TCPC_PDIR) Register Mask  */
+
 
 /* -------- TCPC_AL : (TCPC Offset: 0x10) (R/W 16) Alert Register -------- */
 #define TCPC_AL_RESETVALUE                    _UINT16_(0x00)                                       /*  (TCPC_AL) Alert Register  Reset Value */
@@ -110,6 +164,142 @@
 #define TCPC_ALM_Msk                          _UINT16_(0x8B83)                                     /* (TCPC_ALM) Register Mask  */
 
 
+/* -------- TCPC_PSM : (TCPC Offset: 0x14) (R/W 8) Power Status Mask Register -------- */
+#define TCPC_PSM_RESETVALUE                   _UINT8_(0xFF)                                        /*  (TCPC_PSM) Power Status Mask Register  Reset Value */
+
+#define TCPC_PSM_SNKVBUS_Pos                  _UINT8_(0)                                           /* (TCPC_PSM) Sinking VBUS Interrupt Mask Position */
+#define TCPC_PSM_SNKVBUS_Msk                  (_UINT8_(0x1) << TCPC_PSM_SNKVBUS_Pos)               /* (TCPC_PSM) Sinking VBUS Interrupt Mask Mask */
+#define TCPC_PSM_SNKVBUS(value)               (TCPC_PSM_SNKVBUS_Msk & (_UINT8_(value) << TCPC_PSM_SNKVBUS_Pos)) /* Assigment of value for SNKVBUS in the TCPC_PSM register */
+#define TCPC_PSM_VBUS_Pos                     _UINT8_(2)                                           /* (TCPC_PSM) VBUS Present Interrupt Mask Position */
+#define TCPC_PSM_VBUS_Msk                     (_UINT8_(0x1) << TCPC_PSM_VBUS_Pos)                  /* (TCPC_PSM) VBUS Present Interrupt Mask Mask */
+#define TCPC_PSM_VBUS(value)                  (TCPC_PSM_VBUS_Msk & (_UINT8_(value) << TCPC_PSM_VBUS_Pos)) /* Assigment of value for VBUS in the TCPC_PSM register */
+#define TCPC_PSM_VBUSDETE_Pos                 _UINT8_(3)                                           /* (TCPC_PSM) VBUS Present Detection Interrupt Mask Position */
+#define TCPC_PSM_VBUSDETE_Msk                 (_UINT8_(0x1) << TCPC_PSM_VBUSDETE_Pos)              /* (TCPC_PSM) VBUS Present Detection Interrupt Mask Mask */
+#define TCPC_PSM_VBUSDETE(value)              (TCPC_PSM_VBUSDETE_Msk & (_UINT8_(value) << TCPC_PSM_VBUSDETE_Pos)) /* Assigment of value for VBUSDETE in the TCPC_PSM register */
+#define TCPC_PSM_SRCVBUS_Pos                  _UINT8_(4)                                           /* (TCPC_PSM) Sourcing VBUS Interrupt Mask Position */
+#define TCPC_PSM_SRCVBUS_Msk                  (_UINT8_(0x1) << TCPC_PSM_SRCVBUS_Pos)               /* (TCPC_PSM) Sourcing VBUS Interrupt Mask Mask */
+#define TCPC_PSM_SRCVBUS(value)               (TCPC_PSM_SRCVBUS_Msk & (_UINT8_(value) << TCPC_PSM_SRCVBUS_Pos)) /* Assigment of value for SRCVBUS in the TCPC_PSM register */
+#define TCPC_PSM_INIT_Pos                     _UINT8_(6)                                           /* (TCPC_PSM) TCPC Initialization Interrupt Mask Position */
+#define TCPC_PSM_INIT_Msk                     (_UINT8_(0x1) << TCPC_PSM_INIT_Pos)                  /* (TCPC_PSM) TCPC Initialization Interrupt Mask Mask */
+#define TCPC_PSM_INIT(value)                  (TCPC_PSM_INIT_Msk & (_UINT8_(value) << TCPC_PSM_INIT_Pos)) /* Assigment of value for INIT in the TCPC_PSM register */
+#define TCPC_PSM_Msk                          _UINT8_(0x5D)                                        /* (TCPC_PSM) Register Mask  */
+
+
+/* -------- TCPC_FSM : (TCPC Offset: 0x15) (R/W 8) Fault Status Mask Register -------- */
+#define TCPC_FSM_RESETVALUE                   _UINT8_(0xFF)                                        /*  (TCPC_FSM) Fault Status Mask Register  Reset Value */
+
+#define TCPC_FSM_VBUSOVPF_Pos                 _UINT8_(2)                                           /* (TCPC_FSM) Internal or External OVP VBUS Over Voltage Protection Fault Interrupt Mask Position */
+#define TCPC_FSM_VBUSOVPF_Msk                 (_UINT8_(0x1) << TCPC_FSM_VBUSOVPF_Pos)              /* (TCPC_FSM) Internal or External OVP VBUS Over Voltage Protection Fault Interrupt Mask Mask */
+#define TCPC_FSM_VBUSOVPF(value)              (TCPC_FSM_VBUSOVPF_Msk & (_UINT8_(value) << TCPC_FSM_VBUSOVPF_Pos)) /* Assigment of value for VBUSOVPF in the TCPC_FSM register */
+#define TCPC_FSM_VBUSOCPF_Pos                 _UINT8_(3)                                           /* (TCPC_FSM) Internal or External OCP VBUS Over Current Protection Fault Interrupt Mask Position */
+#define TCPC_FSM_VBUSOCPF_Msk                 (_UINT8_(0x1) << TCPC_FSM_VBUSOCPF_Pos)              /* (TCPC_FSM) Internal or External OCP VBUS Over Current Protection Fault Interrupt Mask Mask */
+#define TCPC_FSM_VBUSOCPF(value)              (TCPC_FSM_VBUSOCPF_Msk & (_UINT8_(value) << TCPC_FSM_VBUSOCPF_Pos)) /* Assigment of value for VBUSOCPF in the TCPC_FSM register */
+#define TCPC_FSM_FRCDCHF_Pos                  _UINT8_(4)                                           /* (TCPC_FSM) Force Discharge Failed Interrupt Mask Position */
+#define TCPC_FSM_FRCDCHF_Msk                  (_UINT8_(0x1) << TCPC_FSM_FRCDCHF_Pos)               /* (TCPC_FSM) Force Discharge Failed Interrupt Mask Mask */
+#define TCPC_FSM_FRCDCHF(value)               (TCPC_FSM_FRCDCHF_Msk & (_UINT8_(value) << TCPC_FSM_FRCDCHF_Pos)) /* Assigment of value for FRCDCHF in the TCPC_FSM register */
+#define TCPC_FSM_AUTDCHF_Pos                  _UINT8_(5)                                           /* (TCPC_FSM) Auto Discharge Failed Interrupt Mask Position */
+#define TCPC_FSM_AUTDCHF_Msk                  (_UINT8_(0x1) << TCPC_FSM_AUTDCHF_Pos)               /* (TCPC_FSM) Auto Discharge Failed Interrupt Mask Mask */
+#define TCPC_FSM_AUTDCHF(value)               (TCPC_FSM_AUTDCHF_Msk & (_UINT8_(value) << TCPC_FSM_AUTDCHF_Pos)) /* Assigment of value for AUTDCHF in the TCPC_FSM register */
+#define TCPC_FSM_FRCOFVBUS_Pos                _UINT8_(6)                                           /* (TCPC_FSM) Force Off VBUS Interrupt Mask Position */
+#define TCPC_FSM_FRCOFVBUS_Msk                (_UINT8_(0x1) << TCPC_FSM_FRCOFVBUS_Pos)             /* (TCPC_FSM) Force Off VBUS Interrupt Mask Mask */
+#define TCPC_FSM_FRCOFVBUS(value)             (TCPC_FSM_FRCOFVBUS_Msk & (_UINT8_(value) << TCPC_FSM_FRCOFVBUS_Pos)) /* Assigment of value for FRCOFVBUS in the TCPC_FSM register */
+#define TCPC_FSM_ALLREGRES_Pos                _UINT8_(7)                                           /* (TCPC_FSM) All Registers Reset To Default Interrupt Mask Position */
+#define TCPC_FSM_ALLREGRES_Msk                (_UINT8_(0x1) << TCPC_FSM_ALLREGRES_Pos)             /* (TCPC_FSM) All Registers Reset To Default Interrupt Mask Mask */
+#define TCPC_FSM_ALLREGRES(value)             (TCPC_FSM_ALLREGRES_Msk & (_UINT8_(value) << TCPC_FSM_ALLREGRES_Pos)) /* Assigment of value for ALLREGRES in the TCPC_FSM register */
+#define TCPC_FSM_Msk                          _UINT8_(0xFC)                                        /* (TCPC_FSM) Register Mask  */
+
+
+/* -------- TCPC_CSO : (TCPC Offset: 0x18) (R/W 8) Config Standard Output Register -------- */
+#define TCPC_CSO_RESETVALUE                   _UINT8_(0x60)                                        /*  (TCPC_CSO) Config Standard Output Register  Reset Value */
+
+#define TCPC_CSO_COR_Pos                      _UINT8_(0)                                           /* (TCPC_CSO) Connector Orientation Position */
+#define TCPC_CSO_COR_Msk                      (_UINT8_(0x1) << TCPC_CSO_COR_Pos)                   /* (TCPC_CSO) Connector Orientation Mask */
+#define TCPC_CSO_COR(value)                   (TCPC_CSO_COR_Msk & (_UINT8_(value) << TCPC_CSO_COR_Pos)) /* Assigment of value for COR in the TCPC_CSO register */
+#define   TCPC_CSO_COR_0_Val                  _UINT8_(0x0)                                         /* (TCPC_CSO) Normal (CC1=A5, CC2=B5, TX1=A2/A3, RX1=B10/B11) default.  */
+#define   TCPC_CSO_COR_1_Val                  _UINT8_(0x1)                                         /* (TCPC_CSO) Flipped (CC2=A5, CC1=B5, TX1=B2/B3, RX1=A10/A11).  */
+#define TCPC_CSO_COR_0                        (TCPC_CSO_COR_0_Val << TCPC_CSO_COR_Pos)             /* (TCPC_CSO) Normal (CC1=A5, CC2=B5, TX1=A2/A3, RX1=B10/B11) default. Position  */
+#define TCPC_CSO_COR_1                        (TCPC_CSO_COR_1_Val << TCPC_CSO_COR_Pos)             /* (TCPC_CSO) Flipped (CC2=A5, CC1=B5, TX1=B2/B3, RX1=A10/A11). Position  */
+#define TCPC_CSO_CNX_Pos                      _UINT8_(1)                                           /* (TCPC_CSO) Connection Present Position */
+#define TCPC_CSO_CNX_Msk                      (_UINT8_(0x1) << TCPC_CSO_CNX_Pos)                   /* (TCPC_CSO) Connection Present Mask */
+#define TCPC_CSO_CNX(value)                   (TCPC_CSO_CNX_Msk & (_UINT8_(value) << TCPC_CSO_CNX_Pos)) /* Assigment of value for CNX in the TCPC_CSO register */
+#define   TCPC_CSO_CNX_0_Val                  _UINT8_(0x0)                                         /* (TCPC_CSO) No connection (default).  */
+#define   TCPC_CSO_CNX_1_Val                  _UINT8_(0x1)                                         /* (TCPC_CSO) Connection.  */
+#define TCPC_CSO_CNX_0                        (TCPC_CSO_CNX_0_Val << TCPC_CSO_CNX_Pos)             /* (TCPC_CSO) No connection (default). Position  */
+#define TCPC_CSO_CNX_1                        (TCPC_CSO_CNX_1_Val << TCPC_CSO_CNX_Pos)             /* (TCPC_CSO) Connection. Position  */
+#define TCPC_CSO_Msk                          _UINT8_(0x03)                                        /* (TCPC_CSO) Register Mask  */
+
+
+/* -------- TCPC_RCTL : (TCPC Offset: 0x1A) (R/W 8) Role Control Register -------- */
+#define TCPC_RCTL_RESETVALUE                  _UINT8_(0x0F)                                        /*  (TCPC_RCTL) Role Control Register  Reset Value */
+
+#define TCPC_RCTL_CC1_Pos                     _UINT8_(0)                                           /* (TCPC_RCTL) Configuration Channel 1 Position */
+#define TCPC_RCTL_CC1_Msk                     (_UINT8_(0x3) << TCPC_RCTL_CC1_Pos)                  /* (TCPC_RCTL) Configuration Channel 1 Mask */
+#define TCPC_RCTL_CC1(value)                  (TCPC_RCTL_CC1_Msk & (_UINT8_(value) << TCPC_RCTL_CC1_Pos)) /* Assigment of value for CC1 in the TCPC_RCTL register */
+#define   TCPC_RCTL_CC1_CC1_RA_Val            _UINT8_(0x0)                                         /* (TCPC_RCTL) Ra  */
+#define   TCPC_RCTL_CC1_CC1_RP_Val            _UINT8_(0x1)                                         /* (TCPC_RCTL) Rp defined as in RP field  */
+#define   TCPC_RCTL_CC1_CC1_RD_Val            _UINT8_(0x2)                                         /* (TCPC_RCTL) Rd  */
+#define   TCPC_RCTL_CC1_CC1_OPEN_Val          _UINT8_(0x3)                                         /* (TCPC_RCTL) Open (Disconnect or don't care)  */
+#define TCPC_RCTL_CC1_CC1_RA                  (TCPC_RCTL_CC1_CC1_RA_Val << TCPC_RCTL_CC1_Pos)      /* (TCPC_RCTL) Ra Position  */
+#define TCPC_RCTL_CC1_CC1_RP                  (TCPC_RCTL_CC1_CC1_RP_Val << TCPC_RCTL_CC1_Pos)      /* (TCPC_RCTL) Rp defined as in RP field Position  */
+#define TCPC_RCTL_CC1_CC1_RD                  (TCPC_RCTL_CC1_CC1_RD_Val << TCPC_RCTL_CC1_Pos)      /* (TCPC_RCTL) Rd Position  */
+#define TCPC_RCTL_CC1_CC1_OPEN                (TCPC_RCTL_CC1_CC1_OPEN_Val << TCPC_RCTL_CC1_Pos)    /* (TCPC_RCTL) Open (Disconnect or don't care) Position  */
+#define TCPC_RCTL_CC2_Pos                     _UINT8_(2)                                           /* (TCPC_RCTL) Configuration Channel 2 Position */
+#define TCPC_RCTL_CC2_Msk                     (_UINT8_(0x3) << TCPC_RCTL_CC2_Pos)                  /* (TCPC_RCTL) Configuration Channel 2 Mask */
+#define TCPC_RCTL_CC2(value)                  (TCPC_RCTL_CC2_Msk & (_UINT8_(value) << TCPC_RCTL_CC2_Pos)) /* Assigment of value for CC2 in the TCPC_RCTL register */
+#define   TCPC_RCTL_CC2_CC2_RA_Val            _UINT8_(0x0)                                         /* (TCPC_RCTL) Ra  */
+#define   TCPC_RCTL_CC2_CC2_RP_Val            _UINT8_(0x1)                                         /* (TCPC_RCTL) Rp defined as in RP field  */
+#define   TCPC_RCTL_CC2_CC2_RD_Val            _UINT8_(0x2)                                         /* (TCPC_RCTL) Rd  */
+#define   TCPC_RCTL_CC2_CC2_OPEN_Val          _UINT8_(0x3)                                         /* (TCPC_RCTL) Open (Disconnect or don't care)  */
+#define TCPC_RCTL_CC2_CC2_RA                  (TCPC_RCTL_CC2_CC2_RA_Val << TCPC_RCTL_CC2_Pos)      /* (TCPC_RCTL) Ra Position  */
+#define TCPC_RCTL_CC2_CC2_RP                  (TCPC_RCTL_CC2_CC2_RP_Val << TCPC_RCTL_CC2_Pos)      /* (TCPC_RCTL) Rp defined as in RP field Position  */
+#define TCPC_RCTL_CC2_CC2_RD                  (TCPC_RCTL_CC2_CC2_RD_Val << TCPC_RCTL_CC2_Pos)      /* (TCPC_RCTL) Rd Position  */
+#define TCPC_RCTL_CC2_CC2_OPEN                (TCPC_RCTL_CC2_CC2_OPEN_Val << TCPC_RCTL_CC2_Pos)    /* (TCPC_RCTL) Open (Disconnect or don't care) Position  */
+#define TCPC_RCTL_RP_Pos                      _UINT8_(4)                                           /* (TCPC_RCTL) Resistor for Power Advertising Position */
+#define TCPC_RCTL_RP_Msk                      (_UINT8_(0x3) << TCPC_RCTL_RP_Pos)                   /* (TCPC_RCTL) Resistor for Power Advertising Mask */
+#define TCPC_RCTL_RP(value)                   (TCPC_RCTL_RP_Msk & (_UINT8_(value) << TCPC_RCTL_RP_Pos)) /* Assigment of value for RP in the TCPC_RCTL register */
+#define   TCPC_RCTL_RP_RP_DEFAULT_Val         _UINT8_(0x0)                                         /* (TCPC_RCTL) Rp default  */
+#define   TCPC_RCTL_RP_RP_1P5A_Val            _UINT8_(0x1)                                         /* (TCPC_RCTL) Rp 1.5A  */
+#define   TCPC_RCTL_RP_RP_3A_Val              _UINT8_(0x2)                                         /* (TCPC_RCTL) Rp 3.0A  */
+#define TCPC_RCTL_RP_RP_DEFAULT               (TCPC_RCTL_RP_RP_DEFAULT_Val << TCPC_RCTL_RP_Pos)    /* (TCPC_RCTL) Rp default Position  */
+#define TCPC_RCTL_RP_RP_1P5A                  (TCPC_RCTL_RP_RP_1P5A_Val << TCPC_RCTL_RP_Pos)       /* (TCPC_RCTL) Rp 1.5A Position  */
+#define TCPC_RCTL_RP_RP_3A                    (TCPC_RCTL_RP_RP_3A_Val << TCPC_RCTL_RP_Pos)         /* (TCPC_RCTL) Rp 3.0A Position  */
+#define TCPC_RCTL_DRP_Pos                     _UINT8_(6)                                           /* (TCPC_RCTL) Dual Role Play Position */
+#define TCPC_RCTL_DRP_Msk                     (_UINT8_(0x1) << TCPC_RCTL_DRP_Pos)                  /* (TCPC_RCTL) Dual Role Play Mask */
+#define TCPC_RCTL_DRP(value)                  (TCPC_RCTL_DRP_Msk & (_UINT8_(value) << TCPC_RCTL_DRP_Pos)) /* Assigment of value for DRP in the TCPC_RCTL register */
+#define   TCPC_RCTL_DRP_0_Val                 _UINT8_(0x0)                                         /* (TCPC_RCTL) No DRP. CC1, CC2 fields determine Rp/Rd/Ra or open settings.  */
+#define   TCPC_RCTL_DRP_1_Val                 _UINT8_(0x1)                                         /* (TCPC_RCTL) DRP.  */
+#define TCPC_RCTL_DRP_0                       (TCPC_RCTL_DRP_0_Val << TCPC_RCTL_DRP_Pos)           /* (TCPC_RCTL) No DRP. CC1, CC2 fields determine Rp/Rd/Ra or open settings. Position  */
+#define TCPC_RCTL_DRP_1                       (TCPC_RCTL_DRP_1_Val << TCPC_RCTL_DRP_Pos)           /* (TCPC_RCTL) DRP. Position  */
+#define TCPC_RCTL_Msk                         _UINT8_(0x7F)                                        /* (TCPC_RCTL) Register Mask  */
+
+
+/* -------- TCPC_FCTL : (TCPC Offset: 0x1B) (R/W 8) Fault Control Register -------- */
+#define TCPC_FCTL_RESETVALUE                  _UINT8_(0x00)                                        /*  (TCPC_FCTL) Fault Control Register  Reset Value */
+
+#define TCPC_FCTL_VBUSOVPF_Pos                _UINT8_(1)                                           /* (TCPC_FCTL) Internal or External OVP VBUS Over Voltage Protection Fault Position */
+#define TCPC_FCTL_VBUSOVPF_Msk                (_UINT8_(0x1) << TCPC_FCTL_VBUSOVPF_Pos)             /* (TCPC_FCTL) Internal or External OVP VBUS Over Voltage Protection Fault Mask */
+#define TCPC_FCTL_VBUSOVPF(value)             (TCPC_FCTL_VBUSOVPF_Msk & (_UINT8_(value) << TCPC_FCTL_VBUSOVPF_Pos)) /* Assigment of value for VBUSOVPF in the TCPC_FCTL register */
+#define   TCPC_FCTL_VBUSOVPF_0_Val            _UINT8_(0x0)                                         /* (TCPC_FCTL) Internal and external OVP circuit enabled.  */
+#define   TCPC_FCTL_VBUSOVPF_1_Val            _UINT8_(0x1)                                         /* (TCPC_FCTL) Internal and external OVP circuit disabled.  */
+#define TCPC_FCTL_VBUSOVPF_0                  (TCPC_FCTL_VBUSOVPF_0_Val << TCPC_FCTL_VBUSOVPF_Pos) /* (TCPC_FCTL) Internal and external OVP circuit enabled. Position  */
+#define TCPC_FCTL_VBUSOVPF_1                  (TCPC_FCTL_VBUSOVPF_1_Val << TCPC_FCTL_VBUSOVPF_Pos) /* (TCPC_FCTL) Internal and external OVP circuit disabled. Position  */
+#define TCPC_FCTL_VBUSOCPF_Pos                _UINT8_(2)                                           /* (TCPC_FCTL) Internal or External OCP VBUS Over Current Protection Fault Position */
+#define TCPC_FCTL_VBUSOCPF_Msk                (_UINT8_(0x1) << TCPC_FCTL_VBUSOCPF_Pos)             /* (TCPC_FCTL) Internal or External OCP VBUS Over Current Protection Fault Mask */
+#define TCPC_FCTL_VBUSOCPF(value)             (TCPC_FCTL_VBUSOCPF_Msk & (_UINT8_(value) << TCPC_FCTL_VBUSOCPF_Pos)) /* Assigment of value for VBUSOCPF in the TCPC_FCTL register */
+#define   TCPC_FCTL_VBUSOCPF_0_Val            _UINT8_(0x0)                                         /* (TCPC_FCTL) Internal and external OCP circuit enabled.  */
+#define   TCPC_FCTL_VBUSOCPF_1_Val            _UINT8_(0x1)                                         /* (TCPC_FCTL) Internal and external OCP circuit disabled.  */
+#define TCPC_FCTL_VBUSOCPF_0                  (TCPC_FCTL_VBUSOCPF_0_Val << TCPC_FCTL_VBUSOCPF_Pos) /* (TCPC_FCTL) Internal and external OCP circuit enabled. Position  */
+#define TCPC_FCTL_VBUSOCPF_1                  (TCPC_FCTL_VBUSOCPF_1_Val << TCPC_FCTL_VBUSOCPF_Pos) /* (TCPC_FCTL) Internal and external OCP circuit disabled. Position  */
+#define TCPC_FCTL_FRCOFVBUS_Pos               _UINT8_(4)                                           /* (TCPC_FCTL) Force Off VBUS (Source or Sink) Position */
+#define TCPC_FCTL_FRCOFVBUS_Msk               (_UINT8_(0x1) << TCPC_FCTL_FRCOFVBUS_Pos)            /* (TCPC_FCTL) Force Off VBUS (Source or Sink) Mask */
+#define TCPC_FCTL_FRCOFVBUS(value)            (TCPC_FCTL_FRCOFVBUS_Msk & (_UINT8_(value) << TCPC_FCTL_FRCOFVBUS_Pos)) /* Assigment of value for FRCOFVBUS in the TCPC_FCTL register */
+#define   TCPC_FCTL_FRCOFVBUS_0_Val           _UINT8_(0x0)                                         /* (TCPC_FCTL) Allows standard input signal Force Off VBUS control (default).  */
+#define   TCPC_FCTL_FRCOFVBUS_1_Val           _UINT8_(0x1)                                         /* (TCPC_FCTL) Blocks standard input signal Force Off VBUS control.  */
+#define TCPC_FCTL_FRCOFVBUS_0                 (TCPC_FCTL_FRCOFVBUS_0_Val << TCPC_FCTL_FRCOFVBUS_Pos) /* (TCPC_FCTL) Allows standard input signal Force Off VBUS control (default). Position  */
+#define TCPC_FCTL_FRCOFVBUS_1                 (TCPC_FCTL_FRCOFVBUS_1_Val << TCPC_FCTL_FRCOFVBUS_Pos) /* (TCPC_FCTL) Blocks standard input signal Force Off VBUS control. Position  */
+#define TCPC_FCTL_Msk                         _UINT8_(0x16)                                        /* (TCPC_FCTL) Register Mask  */
+
+
 /* -------- TCPC_CCS : (TCPC Offset: 0x1D) ( R/ 8) CC Status Register -------- */
 #define TCPC_CCS_RESETVALUE                   _UINT8_(0x00)                                        /*  (TCPC_CCS) CC Status Register  Reset Value */
 
@@ -164,6 +354,96 @@
 #define TCPC_CCS_Msk                          _UINT8_(0x3F)                                        /* (TCPC_CCS) Register Mask  */
 
 
+/* -------- TCPC_PS : (TCPC Offset: 0x1E) ( R/ 8) Power Status Register -------- */
+#define TCPC_PS_RESETVALUE                    _UINT8_(0x00)                                        /*  (TCPC_PS) Power Status Register  Reset Value */
+
+#define TCPC_PS_SNKVBUS_Pos                   _UINT8_(0)                                           /* (TCPC_PS) Sinking VBUS Position */
+#define TCPC_PS_SNKVBUS_Msk                   (_UINT8_(0x1) << TCPC_PS_SNKVBUS_Pos)                /* (TCPC_PS) Sinking VBUS Mask */
+#define TCPC_PS_SNKVBUS(value)                (TCPC_PS_SNKVBUS_Msk & (_UINT8_(value) << TCPC_PS_SNKVBUS_Pos)) /* Assigment of value for SNKVBUS in the TCPC_PS register */
+#define   TCPC_PS_SNKVBUS_0_Val               _UINT8_(0x0)                                         /* (TCPC_PS) Sink is disconnected. (Default and if not supported)  */
+#define   TCPC_PS_SNKVBUS_1_Val               _UINT8_(0x1)                                         /* (TCPC_PS) TCPC is sinking VBUS to the system load.  */
+#define TCPC_PS_SNKVBUS_0                     (TCPC_PS_SNKVBUS_0_Val << TCPC_PS_SNKVBUS_Pos)       /* (TCPC_PS) Sink is disconnected. (Default and if not supported) Position  */
+#define TCPC_PS_SNKVBUS_1                     (TCPC_PS_SNKVBUS_1_Val << TCPC_PS_SNKVBUS_Pos)       /* (TCPC_PS) TCPC is sinking VBUS to the system load. Position  */
+#define TCPC_PS_VCONN_Pos                     _UINT8_(1)                                           /* (TCPC_PS) VCONN Present Position */
+#define TCPC_PS_VCONN_Msk                     (_UINT8_(0x1) << TCPC_PS_VCONN_Pos)                  /* (TCPC_PS) VCONN Present Mask */
+#define TCPC_PS_VCONN(value)                  (TCPC_PS_VCONN_Msk & (_UINT8_(value) << TCPC_PS_VCONN_Pos)) /* Assigment of value for VCONN in the TCPC_PS register */
+#define   TCPC_PS_VCONN_0_Val                 _UINT8_(0x0)                                         /* (TCPC_PS) VCONN is not present.  */
+#define TCPC_PS_VCONN_0                       (TCPC_PS_VCONN_0_Val << TCPC_PS_VCONN_Pos)           /* (TCPC_PS) VCONN is not present. Position  */
+#define TCPC_PS_VBUS_Pos                      _UINT8_(2)                                           /* (TCPC_PS) VBUS Present Position */
+#define TCPC_PS_VBUS_Msk                      (_UINT8_(0x1) << TCPC_PS_VBUS_Pos)                   /* (TCPC_PS) VBUS Present Mask */
+#define TCPC_PS_VBUS(value)                   (TCPC_PS_VBUS_Msk & (_UINT8_(value) << TCPC_PS_VBUS_Pos)) /* Assigment of value for VBUS in the TCPC_PS register */
+#define   TCPC_PS_VBUS_0_Val                  _UINT8_(0x0)                                         /* (TCPC_PS) VBUS disconnected.  */
+#define   TCPC_PS_VBUS_1_Val                  _UINT8_(0x1)                                         /* (TCPC_PS) VBUS connected.  */
+#define TCPC_PS_VBUS_0                        (TCPC_PS_VBUS_0_Val << TCPC_PS_VBUS_Pos)             /* (TCPC_PS) VBUS disconnected. Position  */
+#define TCPC_PS_VBUS_1                        (TCPC_PS_VBUS_1_Val << TCPC_PS_VBUS_Pos)             /* (TCPC_PS) VBUS connected. Position  */
+#define TCPC_PS_VBUSDETE_Pos                  _UINT8_(3)                                           /* (TCPC_PS) VBUS Present Detection Enabled Position */
+#define TCPC_PS_VBUSDETE_Msk                  (_UINT8_(0x1) << TCPC_PS_VBUSDETE_Pos)               /* (TCPC_PS) VBUS Present Detection Enabled Mask */
+#define TCPC_PS_VBUSDETE(value)               (TCPC_PS_VBUSDETE_Msk & (_UINT8_(value) << TCPC_PS_VBUSDETE_Pos)) /* Assigment of value for VBUSDETE in the TCPC_PS register */
+#define   TCPC_PS_VBUSDETE_0_Val              _UINT8_(0x0)                                         /* (TCPC_PS) VBUS present detection disabled.  */
+#define   TCPC_PS_VBUSDETE_1_Val              _UINT8_(0x1)                                         /* (TCPC_PS) VBUS present detection enabled (default).  */
+#define TCPC_PS_VBUSDETE_0                    (TCPC_PS_VBUSDETE_0_Val << TCPC_PS_VBUSDETE_Pos)     /* (TCPC_PS) VBUS present detection disabled. Position  */
+#define TCPC_PS_VBUSDETE_1                    (TCPC_PS_VBUSDETE_1_Val << TCPC_PS_VBUSDETE_Pos)     /* (TCPC_PS) VBUS present detection enabled (default). Position  */
+#define TCPC_PS_SRCVBUS_Pos                   _UINT8_(4)                                           /* (TCPC_PS) Sourcing VBUS Position */
+#define TCPC_PS_SRCVBUS_Msk                   (_UINT8_(0x1) << TCPC_PS_SRCVBUS_Pos)                /* (TCPC_PS) Sourcing VBUS Mask */
+#define TCPC_PS_SRCVBUS(value)                (TCPC_PS_SRCVBUS_Msk & (_UINT8_(value) << TCPC_PS_SRCVBUS_Pos)) /* Assigment of value for SRCVBUS in the TCPC_PS register */
+#define   TCPC_PS_SRCVBUS_0_Val               _UINT8_(0x0)                                         /* (TCPC_PS) Sourcing VBUS is disabled.  */
+#define   TCPC_PS_SRCVBUS_1_Val               _UINT8_(0x1)                                         /* (TCPC_PS) Sourcing VBUS is enabled.  */
+#define TCPC_PS_SRCVBUS_0                     (TCPC_PS_SRCVBUS_0_Val << TCPC_PS_SRCVBUS_Pos)       /* (TCPC_PS) Sourcing VBUS is disabled. Position  */
+#define TCPC_PS_SRCVBUS_1                     (TCPC_PS_SRCVBUS_1_Val << TCPC_PS_SRCVBUS_Pos)       /* (TCPC_PS) Sourcing VBUS is enabled. Position  */
+#define TCPC_PS_SRCHIV_Pos                    _UINT8_(5)                                           /* (TCPC_PS) Sourcing High Voltage Position */
+#define TCPC_PS_SRCHIV_Msk                    (_UINT8_(0x1) << TCPC_PS_SRCHIV_Pos)                 /* (TCPC_PS) Sourcing High Voltage Mask */
+#define TCPC_PS_SRCHIV(value)                 (TCPC_PS_SRCHIV_Msk & (_UINT8_(value) << TCPC_PS_SRCHIV_Pos)) /* Assigment of value for SRCHIV in the TCPC_PS register */
+#define   TCPC_PS_SRCHIV_0_Val                _UINT8_(0x0)                                         /* (TCPC_PS) VSafe5V.  */
+#define TCPC_PS_SRCHIV_0                      (TCPC_PS_SRCHIV_0_Val << TCPC_PS_SRCHIV_Pos)         /* (TCPC_PS) VSafe5V. Position  */
+#define TCPC_PS_INIT_Pos                      _UINT8_(6)                                           /* (TCPC_PS) TCPC Initialization Position */
+#define TCPC_PS_INIT_Msk                      (_UINT8_(0x1) << TCPC_PS_INIT_Pos)                   /* (TCPC_PS) TCPC Initialization Mask */
+#define TCPC_PS_INIT(value)                   (TCPC_PS_INIT_Msk & (_UINT8_(value) << TCPC_PS_INIT_Pos)) /* Assigment of value for INIT in the TCPC_PS register */
+#define   TCPC_PS_INIT_0_Val                  _UINT8_(0x0)                                         /* (TCPC_PS) TCPC has completed initialization and all registers are valid.  */
+#define   TCPC_PS_INIT_1_Val                  _UINT8_(0x1)                                         /* (TCPC_PS) TCPC is still performing internal initialization and the only registers that are guaranteed to return the correct values are 00h..0Fh  */
+#define TCPC_PS_INIT_0                        (TCPC_PS_INIT_0_Val << TCPC_PS_INIT_Pos)             /* (TCPC_PS) TCPC has completed initialization and all registers are valid. Position  */
+#define TCPC_PS_INIT_1                        (TCPC_PS_INIT_1_Val << TCPC_PS_INIT_Pos)             /* (TCPC_PS) TCPC is still performing internal initialization and the only registers that are guaranteed to return the correct values are 00h..0Fh Position  */
+#define TCPC_PS_DBG_Pos                       _UINT8_(7)                                           /* (TCPC_PS) Debug Accessory Connected Position */
+#define TCPC_PS_DBG_Msk                       (_UINT8_(0x1) << TCPC_PS_DBG_Pos)                    /* (TCPC_PS) Debug Accessory Connected Mask */
+#define TCPC_PS_DBG(value)                    (TCPC_PS_DBG_Msk & (_UINT8_(value) << TCPC_PS_DBG_Pos)) /* Assigment of value for DBG in the TCPC_PS register */
+#define   TCPC_PS_DBG_0_Val                   _UINT8_(0x0)                                         /* (TCPC_PS) No debug accessory connected (default).  */
+#define TCPC_PS_DBG_0                         (TCPC_PS_DBG_0_Val << TCPC_PS_DBG_Pos)               /* (TCPC_PS) No debug accessory connected (default). Position  */
+#define TCPC_PS_Msk                           _UINT8_(0xFF)                                        /* (TCPC_PS) Register Mask  */
+
+
+/* -------- TCPC_FS : (TCPC Offset: 0x1F) (R/W 8) Fault Status Register -------- */
+#define TCPC_FS_RESETVALUE                    _UINT8_(0x80)                                        /*  (TCPC_FS) Fault Status Register  Reset Value */
+
+#define TCPC_FS_VBUSOVPF_Pos                  _UINT8_(2)                                           /* (TCPC_FS) Internal or External OVP VBUS Over-Voltage Protection Fault Position */
+#define TCPC_FS_VBUSOVPF_Msk                  (_UINT8_(0x1) << TCPC_FS_VBUSOVPF_Pos)               /* (TCPC_FS) Internal or External OVP VBUS Over-Voltage Protection Fault Mask */
+#define TCPC_FS_VBUSOVPF(value)               (TCPC_FS_VBUSOVPF_Msk & (_UINT8_(value) << TCPC_FS_VBUSOVPF_Pos)) /* Assigment of value for VBUSOVPF in the TCPC_FS register */
+#define   TCPC_FS_VBUSOVPF_0_Val              _UINT8_(0x0)                                         /* (TCPC_FS) Not in an over-voltage protection state.  */
+#define   TCPC_FS_VBUSOVPF_1_Val              _UINT8_(0x1)                                         /* (TCPC_FS) Over-voltage fault latched.  */
+#define TCPC_FS_VBUSOVPF_0                    (TCPC_FS_VBUSOVPF_0_Val << TCPC_FS_VBUSOVPF_Pos)     /* (TCPC_FS) Not in an over-voltage protection state. Position  */
+#define TCPC_FS_VBUSOVPF_1                    (TCPC_FS_VBUSOVPF_1_Val << TCPC_FS_VBUSOVPF_Pos)     /* (TCPC_FS) Over-voltage fault latched. Position  */
+#define TCPC_FS_VBUSOCPF_Pos                  _UINT8_(3)                                           /* (TCPC_FS) Internal or External OCP VBUS Over-Current Protection Fault Position */
+#define TCPC_FS_VBUSOCPF_Msk                  (_UINT8_(0x1) << TCPC_FS_VBUSOCPF_Pos)               /* (TCPC_FS) Internal or External OCP VBUS Over-Current Protection Fault Mask */
+#define TCPC_FS_VBUSOCPF(value)               (TCPC_FS_VBUSOCPF_Msk & (_UINT8_(value) << TCPC_FS_VBUSOCPF_Pos)) /* Assigment of value for VBUSOCPF in the TCPC_FS register */
+#define   TCPC_FS_VBUSOCPF_0_Val              _UINT8_(0x0)                                         /* (TCPC_FS) Not in an over-current protection state.  */
+#define   TCPC_FS_VBUSOCPF_1_Val              _UINT8_(0x1)                                         /* (TCPC_FS) Over-current fault latched.  */
+#define TCPC_FS_VBUSOCPF_0                    (TCPC_FS_VBUSOCPF_0_Val << TCPC_FS_VBUSOCPF_Pos)     /* (TCPC_FS) Not in an over-current protection state. Position  */
+#define TCPC_FS_VBUSOCPF_1                    (TCPC_FS_VBUSOCPF_1_Val << TCPC_FS_VBUSOCPF_Pos)     /* (TCPC_FS) Over-current fault latched. Position  */
+#define TCPC_FS_FRCOFVBUS_Pos                 _UINT8_(6)                                           /* (TCPC_FS) Force Off VBUS Position */
+#define TCPC_FS_FRCOFVBUS_Msk                 (_UINT8_(0x1) << TCPC_FS_FRCOFVBUS_Pos)              /* (TCPC_FS) Force Off VBUS Mask */
+#define TCPC_FS_FRCOFVBUS(value)              (TCPC_FS_FRCOFVBUS_Msk & (_UINT8_(value) << TCPC_FS_FRCOFVBUS_Pos)) /* Assigment of value for FRCOFVBUS in the TCPC_FS register */
+#define   TCPC_FS_FRCOFVBUS_0_Val             _UINT8_(0x0)                                         /* (TCPC_FS) No fault detected, no action (default and not supported).  */
+#define   TCPC_FS_FRCOFVBUS_1_Val             _UINT8_(0x1)                                         /* (TCPC_FS) VBUS source/sink has been forced off due to external fault.  */
+#define TCPC_FS_FRCOFVBUS_0                   (TCPC_FS_FRCOFVBUS_0_Val << TCPC_FS_FRCOFVBUS_Pos)   /* (TCPC_FS) No fault detected, no action (default and not supported). Position  */
+#define TCPC_FS_FRCOFVBUS_1                   (TCPC_FS_FRCOFVBUS_1_Val << TCPC_FS_FRCOFVBUS_Pos)   /* (TCPC_FS) VBUS source/sink has been forced off due to external fault. Position  */
+#define TCPC_FS_ALLREGRES_Pos                 _UINT8_(7)                                           /* (TCPC_FS) All Registers Reset To Default Position */
+#define TCPC_FS_ALLREGRES_Msk                 (_UINT8_(0x1) << TCPC_FS_ALLREGRES_Pos)              /* (TCPC_FS) All Registers Reset To Default Mask */
+#define TCPC_FS_ALLREGRES(value)              (TCPC_FS_ALLREGRES_Msk & (_UINT8_(value) << TCPC_FS_ALLREGRES_Pos)) /* Assigment of value for ALLREGRES in the TCPC_FS register */
+#define   TCPC_FS_ALLREGRES_0_Val             _UINT8_(0x0)                                         /* (TCPC_FS) The registers have not been reset since the last clear of this bit.  */
+#define   TCPC_FS_ALLREGRES_1_Val             _UINT8_(0x1)                                         /* (TCPC_FS) The TCPC has reset all registers to their default value. This happens at initial powerup or if an unexpected power reset occurs.  */
+#define TCPC_FS_ALLREGRES_0                   (TCPC_FS_ALLREGRES_0_Val << TCPC_FS_ALLREGRES_Pos)   /* (TCPC_FS) The registers have not been reset since the last clear of this bit. Position  */
+#define TCPC_FS_ALLREGRES_1                   (TCPC_FS_ALLREGRES_1_Val << TCPC_FS_ALLREGRES_Pos)   /* (TCPC_FS) The TCPC has reset all registers to their default value. This happens at initial powerup or if an unexpected power reset occurs. Position  */
+#define TCPC_FS_Msk                           _UINT8_(0xCC)                                        /* (TCPC_FS) Register Mask  */
+
+
 /* -------- TCPC_CMD : (TCPC Offset: 0x23) (R/W 8) Command Register -------- */
 #define TCPC_CMD_RESETVALUE                   _UINT8_(0x00)                                        /*  (TCPC_CMD) Command Register  Reset Value */
 
@@ -185,60 +465,6 @@
 #define TCPC_CMD_COMMAND_SOURCEVBUSDEFAULTVOLTAGE (TCPC_CMD_COMMAND_SOURCEVBUSDEFAULTVOLTAGE_Val << TCPC_CMD_COMMAND_Pos) /* (TCPC_CMD) Enables sourcing vSafe5V over VBUS and enable VBUS present detection. Source must transition to vSafe5V if at a high voltage. Position  */
 #define TCPC_CMD_COMMAND_LOOK4CONNECTION      (TCPC_CMD_COMMAND_LOOK4CONNECTION_Val << TCPC_CMD_COMMAND_Pos) /* (TCPC_CMD) Starts DRP toggling if TCPC_RCTL.DRP=1b. If TCPC_RCTL.CC1/CC2= 01b start with Rp, if TCPC_RCTL.CC1/CC2 =10b start with Rd. If TCPC_RCTL.CC1/CC2 are not both 01b or 10b, then do not start toggling. The TCPM must issue TCPC_CMD.Look4Connection to enable the TCPC to restart connection detection in cases where TCPC_RCTL contents will not change. An example of this is when a potential connection as a source occurred but was further debounced by the TCPM to find the sink disconnected. In this case, a source only or DRP should go back to its Unattached.Src state. This would result in TCPC_RCTL staying the same. Position  */
 #define TCPC_CMD_Msk                          _UINT8_(0xFF)                                        /* (TCPC_CMD) Register Mask  */
-
-
-/* -------- TCPC_CR : (TCPC Offset: 0x80) ( /W 32) Control Register -------- */
-#define TCPC_CR_SWRST_Pos                     _UINT32_(0)                                          /* (TCPC_CR) Software Reset Position */
-#define TCPC_CR_SWRST_Msk                     (_UINT32_(0x1) << TCPC_CR_SWRST_Pos)                 /* (TCPC_CR) Software Reset Mask */
-#define TCPC_CR_SWRST(value)                  (TCPC_CR_SWRST_Msk & (_UINT32_(value) << TCPC_CR_SWRST_Pos)) /* Assigment of value for SWRST in the TCPC_CR register */
-#define   TCPC_CR_SWRST_0_Val                 _UINT32_(0x0)                                        /* (TCPC_CR) No effect.  */
-#define   TCPC_CR_SWRST_1_Val                 _UINT32_(0x1)                                        /* (TCPC_CR) Resets the TCPC. A software-triggered hardware reset of the TCPC interface is performed.  */
-#define TCPC_CR_SWRST_0                       (TCPC_CR_SWRST_0_Val << TCPC_CR_SWRST_Pos)           /* (TCPC_CR) No effect. Position  */
-#define TCPC_CR_SWRST_1                       (TCPC_CR_SWRST_1_Val << TCPC_CR_SWRST_Pos)           /* (TCPC_CR) Resets the TCPC. A software-triggered hardware reset of the TCPC interface is performed. Position  */
-#define TCPC_CR_WAKEY_Pos                     _UINT32_(8)                                          /* (TCPC_CR) Register Write Access Key Position */
-#define TCPC_CR_WAKEY_Msk                     (_UINT32_(0xFFFFFF) << TCPC_CR_WAKEY_Pos)            /* (TCPC_CR) Register Write Access Key Mask */
-#define TCPC_CR_WAKEY(value)                  (TCPC_CR_WAKEY_Msk & (_UINT32_(value) << TCPC_CR_WAKEY_Pos)) /* Assigment of value for WAKEY in the TCPC_CR register */
-#define   TCPC_CR_WAKEY_PASSWD_Val            _UINT32_(0x544343)                                   /* (TCPC_CR) Writing any other value in this field aborts the write operation.  */
-#define TCPC_CR_WAKEY_PASSWD                  (TCPC_CR_WAKEY_PASSWD_Val << TCPC_CR_WAKEY_Pos)      /* (TCPC_CR) Writing any other value in this field aborts the write operation. Position  */
-#define TCPC_CR_Msk                           _UINT32_(0xFFFFFF01)                                 /* (TCPC_CR) Register Mask  */
-
-
-/* -------- TCPC_CSO : (TCPC Offset: 0x18) (R/W 8) Config Standard Output Register -------- */
-#define TCPC_CSO_RESETVALUE                   _UINT8_(0x60)                                        /*  (TCPC_CSO) Config Standard Output Register  Reset Value */
-
-#define TCPC_CSO_COR_Pos                      _UINT8_(0)                                           /* (TCPC_CSO) Connector Orientation Position */
-#define TCPC_CSO_COR_Msk                      (_UINT8_(0x1) << TCPC_CSO_COR_Pos)                   /* (TCPC_CSO) Connector Orientation Mask */
-#define TCPC_CSO_COR(value)                   (TCPC_CSO_COR_Msk & (_UINT8_(value) << TCPC_CSO_COR_Pos)) /* Assigment of value for COR in the TCPC_CSO register */
-#define   TCPC_CSO_COR_0_Val                  _UINT8_(0x0)                                         /* (TCPC_CSO) Normal (CC1=A5, CC2=B5, TX1=A2/A3, RX1=B10/B11) default.  */
-#define   TCPC_CSO_COR_1_Val                  _UINT8_(0x1)                                         /* (TCPC_CSO) Flipped (CC2=A5, CC1=B5, TX1=B2/B3, RX1=A10/A11).  */
-#define TCPC_CSO_COR_0                        (TCPC_CSO_COR_0_Val << TCPC_CSO_COR_Pos)             /* (TCPC_CSO) Normal (CC1=A5, CC2=B5, TX1=A2/A3, RX1=B10/B11) default. Position  */
-#define TCPC_CSO_COR_1                        (TCPC_CSO_COR_1_Val << TCPC_CSO_COR_Pos)             /* (TCPC_CSO) Flipped (CC2=A5, CC1=B5, TX1=B2/B3, RX1=A10/A11). Position  */
-#define TCPC_CSO_CNX_Pos                      _UINT8_(1)                                           /* (TCPC_CSO) Connection Present Position */
-#define TCPC_CSO_CNX_Msk                      (_UINT8_(0x1) << TCPC_CSO_CNX_Pos)                   /* (TCPC_CSO) Connection Present Mask */
-#define TCPC_CSO_CNX(value)                   (TCPC_CSO_CNX_Msk & (_UINT8_(value) << TCPC_CSO_CNX_Pos)) /* Assigment of value for CNX in the TCPC_CSO register */
-#define   TCPC_CSO_CNX_0_Val                  _UINT8_(0x0)                                         /* (TCPC_CSO) No connection (default).  */
-#define   TCPC_CSO_CNX_1_Val                  _UINT8_(0x1)                                         /* (TCPC_CSO) Connection.  */
-#define TCPC_CSO_CNX_0                        (TCPC_CSO_CNX_0_Val << TCPC_CSO_CNX_Pos)             /* (TCPC_CSO) No connection (default). Position  */
-#define TCPC_CSO_CNX_1                        (TCPC_CSO_CNX_1_Val << TCPC_CSO_CNX_Pos)             /* (TCPC_CSO) Connection. Position  */
-#define TCPC_CSO_Msk                          _UINT8_(0x03)                                        /* (TCPC_CSO) Register Mask  */
-
-
-/* -------- TCPC_CSR : (TCPC Offset: 0x88) ( /W 32) Clear Status Register -------- */
-#define TCPC_CSR_CC_STATUS_Pos                _UINT32_(8)                                          /* (TCPC_CSR) CC Status Register Clear Position */
-#define TCPC_CSR_CC_STATUS_Msk                (_UINT32_(0xFF) << TCPC_CSR_CC_STATUS_Pos)           /* (TCPC_CSR) CC Status Register Clear Mask */
-#define TCPC_CSR_CC_STATUS(value)             (TCPC_CSR_CC_STATUS_Msk & (_UINT32_(value) << TCPC_CSR_CC_STATUS_Pos)) /* Assigment of value for CC_STATUS in the TCPC_CSR register */
-#define   TCPC_CSR_CC_STATUS_0_Val            _UINT32_(0x0)                                        /* (TCPC_CSR) No effect.  */
-#define   TCPC_CSR_CC_STATUS_1_Val            _UINT32_(0x1)                                        /* (TCPC_CSR) Clears the corresponding bit in TCPC_CCS.  */
-#define TCPC_CSR_CC_STATUS_0                  (TCPC_CSR_CC_STATUS_0_Val << TCPC_CSR_CC_STATUS_Pos) /* (TCPC_CSR) No effect. Position  */
-#define TCPC_CSR_CC_STATUS_1                  (TCPC_CSR_CC_STATUS_1_Val << TCPC_CSR_CC_STATUS_Pos) /* (TCPC_CSR) Clears the corresponding bit in TCPC_CCS. Position  */
-#define TCPC_CSR_POWER_STATUS_Pos             _UINT32_(16)                                         /* (TCPC_CSR) Power Status Register Clear Position */
-#define TCPC_CSR_POWER_STATUS_Msk             (_UINT32_(0xFF) << TCPC_CSR_POWER_STATUS_Pos)        /* (TCPC_CSR) Power Status Register Clear Mask */
-#define TCPC_CSR_POWER_STATUS(value)          (TCPC_CSR_POWER_STATUS_Msk & (_UINT32_(value) << TCPC_CSR_POWER_STATUS_Pos)) /* Assigment of value for POWER_STATUS in the TCPC_CSR register */
-#define   TCPC_CSR_POWER_STATUS_0_Val         _UINT32_(0x0)                                        /* (TCPC_CSR) No effect.  */
-#define   TCPC_CSR_POWER_STATUS_1_Val         _UINT32_(0x1)                                        /* (TCPC_CSR) Clears the corresponding bit in TCPC_PS.  */
-#define TCPC_CSR_POWER_STATUS_0               (TCPC_CSR_POWER_STATUS_0_Val << TCPC_CSR_POWER_STATUS_Pos) /* (TCPC_CSR) No effect. Position  */
-#define TCPC_CSR_POWER_STATUS_1               (TCPC_CSR_POWER_STATUS_1_Val << TCPC_CSR_POWER_STATUS_Pos) /* (TCPC_CSR) Clears the corresponding bit in TCPC_PS. Position  */
-#define TCPC_CSR_Msk                          _UINT32_(0x00FFFF00)                                 /* (TCPC_CSR) Register Mask  */
 
 
 /* -------- TCPC_DCP1 : (TCPC Offset: 0x24) (R/W 16) Device Capabilities 1 Register -------- */
@@ -373,250 +599,6 @@
 #define TCPC_DCP2_Msk                         _UINT16_(0x01FF)                                     /* (TCPC_DCP2) Register Mask  */
 
 
-/* -------- TCPC_DID : (TCPC Offset: 0x04) ( R/ 16) Device ID Register -------- */
-#define TCPC_DID_RESETVALUE                   _UINT16_(0x00)                                       /*  (TCPC_DID) Device ID Register  Reset Value */
-
-#define TCPC_DID_DID_Pos                      _UINT16_(0)                                          /* (TCPC_DID) Device ID Position */
-#define TCPC_DID_DID_Msk                      (_UINT16_(0xFFFF) << TCPC_DID_DID_Pos)               /* (TCPC_DID) Device ID Mask */
-#define TCPC_DID_DID(value)                   (TCPC_DID_DID_Msk & (_UINT16_(value) << TCPC_DID_DID_Pos)) /* Assigment of value for DID in the TCPC_DID register */
-#define TCPC_DID_Msk                          _UINT16_(0xFFFF)                                     /* (TCPC_DID) Register Mask  */
-
-
-/* -------- TCPC_FCTL : (TCPC Offset: 0x1B) (R/W 8) Fault Control Register -------- */
-#define TCPC_FCTL_RESETVALUE                  _UINT8_(0x00)                                        /*  (TCPC_FCTL) Fault Control Register  Reset Value */
-
-#define TCPC_FCTL_VBUSOVPF_Pos                _UINT8_(1)                                           /* (TCPC_FCTL) Internal or External OVP VBUS Over Voltage Protection Fault Position */
-#define TCPC_FCTL_VBUSOVPF_Msk                (_UINT8_(0x1) << TCPC_FCTL_VBUSOVPF_Pos)             /* (TCPC_FCTL) Internal or External OVP VBUS Over Voltage Protection Fault Mask */
-#define TCPC_FCTL_VBUSOVPF(value)             (TCPC_FCTL_VBUSOVPF_Msk & (_UINT8_(value) << TCPC_FCTL_VBUSOVPF_Pos)) /* Assigment of value for VBUSOVPF in the TCPC_FCTL register */
-#define   TCPC_FCTL_VBUSOVPF_0_Val            _UINT8_(0x0)                                         /* (TCPC_FCTL) Internal and external OVP circuit enabled.  */
-#define   TCPC_FCTL_VBUSOVPF_1_Val            _UINT8_(0x1)                                         /* (TCPC_FCTL) Internal and external OVP circuit disabled.  */
-#define TCPC_FCTL_VBUSOVPF_0                  (TCPC_FCTL_VBUSOVPF_0_Val << TCPC_FCTL_VBUSOVPF_Pos) /* (TCPC_FCTL) Internal and external OVP circuit enabled. Position  */
-#define TCPC_FCTL_VBUSOVPF_1                  (TCPC_FCTL_VBUSOVPF_1_Val << TCPC_FCTL_VBUSOVPF_Pos) /* (TCPC_FCTL) Internal and external OVP circuit disabled. Position  */
-#define TCPC_FCTL_VBUSOCPF_Pos                _UINT8_(2)                                           /* (TCPC_FCTL) Internal or External OCP VBUS Over Current Protection Fault Position */
-#define TCPC_FCTL_VBUSOCPF_Msk                (_UINT8_(0x1) << TCPC_FCTL_VBUSOCPF_Pos)             /* (TCPC_FCTL) Internal or External OCP VBUS Over Current Protection Fault Mask */
-#define TCPC_FCTL_VBUSOCPF(value)             (TCPC_FCTL_VBUSOCPF_Msk & (_UINT8_(value) << TCPC_FCTL_VBUSOCPF_Pos)) /* Assigment of value for VBUSOCPF in the TCPC_FCTL register */
-#define   TCPC_FCTL_VBUSOCPF_0_Val            _UINT8_(0x0)                                         /* (TCPC_FCTL) Internal and external OCP circuit enabled.  */
-#define   TCPC_FCTL_VBUSOCPF_1_Val            _UINT8_(0x1)                                         /* (TCPC_FCTL) Internal and external OCP circuit disabled.  */
-#define TCPC_FCTL_VBUSOCPF_0                  (TCPC_FCTL_VBUSOCPF_0_Val << TCPC_FCTL_VBUSOCPF_Pos) /* (TCPC_FCTL) Internal and external OCP circuit enabled. Position  */
-#define TCPC_FCTL_VBUSOCPF_1                  (TCPC_FCTL_VBUSOCPF_1_Val << TCPC_FCTL_VBUSOCPF_Pos) /* (TCPC_FCTL) Internal and external OCP circuit disabled. Position  */
-#define TCPC_FCTL_FRCOFVBUS_Pos               _UINT8_(4)                                           /* (TCPC_FCTL) Force Off VBUS (Source or Sink) Position */
-#define TCPC_FCTL_FRCOFVBUS_Msk               (_UINT8_(0x1) << TCPC_FCTL_FRCOFVBUS_Pos)            /* (TCPC_FCTL) Force Off VBUS (Source or Sink) Mask */
-#define TCPC_FCTL_FRCOFVBUS(value)            (TCPC_FCTL_FRCOFVBUS_Msk & (_UINT8_(value) << TCPC_FCTL_FRCOFVBUS_Pos)) /* Assigment of value for FRCOFVBUS in the TCPC_FCTL register */
-#define   TCPC_FCTL_FRCOFVBUS_0_Val           _UINT8_(0x0)                                         /* (TCPC_FCTL) Allows standard input signal Force Off VBUS control (default).  */
-#define   TCPC_FCTL_FRCOFVBUS_1_Val           _UINT8_(0x1)                                         /* (TCPC_FCTL) Blocks standard input signal Force Off VBUS control.  */
-#define TCPC_FCTL_FRCOFVBUS_0                 (TCPC_FCTL_FRCOFVBUS_0_Val << TCPC_FCTL_FRCOFVBUS_Pos) /* (TCPC_FCTL) Allows standard input signal Force Off VBUS control (default). Position  */
-#define TCPC_FCTL_FRCOFVBUS_1                 (TCPC_FCTL_FRCOFVBUS_1_Val << TCPC_FCTL_FRCOFVBUS_Pos) /* (TCPC_FCTL) Blocks standard input signal Force Off VBUS control. Position  */
-#define TCPC_FCTL_Msk                         _UINT8_(0x16)                                        /* (TCPC_FCTL) Register Mask  */
-
-
-/* -------- TCPC_FS : (TCPC Offset: 0x1F) (R/W 8) Fault Status Register -------- */
-#define TCPC_FS_RESETVALUE                    _UINT8_(0x80)                                        /*  (TCPC_FS) Fault Status Register  Reset Value */
-
-#define TCPC_FS_VBUSOVPF_Pos                  _UINT8_(2)                                           /* (TCPC_FS) Internal or External OVP VBUS Over-Voltage Protection Fault Position */
-#define TCPC_FS_VBUSOVPF_Msk                  (_UINT8_(0x1) << TCPC_FS_VBUSOVPF_Pos)               /* (TCPC_FS) Internal or External OVP VBUS Over-Voltage Protection Fault Mask */
-#define TCPC_FS_VBUSOVPF(value)               (TCPC_FS_VBUSOVPF_Msk & (_UINT8_(value) << TCPC_FS_VBUSOVPF_Pos)) /* Assigment of value for VBUSOVPF in the TCPC_FS register */
-#define   TCPC_FS_VBUSOVPF_0_Val              _UINT8_(0x0)                                         /* (TCPC_FS) Not in an over-voltage protection state.  */
-#define   TCPC_FS_VBUSOVPF_1_Val              _UINT8_(0x1)                                         /* (TCPC_FS) Over-voltage fault latched.  */
-#define TCPC_FS_VBUSOVPF_0                    (TCPC_FS_VBUSOVPF_0_Val << TCPC_FS_VBUSOVPF_Pos)     /* (TCPC_FS) Not in an over-voltage protection state. Position  */
-#define TCPC_FS_VBUSOVPF_1                    (TCPC_FS_VBUSOVPF_1_Val << TCPC_FS_VBUSOVPF_Pos)     /* (TCPC_FS) Over-voltage fault latched. Position  */
-#define TCPC_FS_VBUSOCPF_Pos                  _UINT8_(3)                                           /* (TCPC_FS) Internal or External OCP VBUS Over-Current Protection Fault Position */
-#define TCPC_FS_VBUSOCPF_Msk                  (_UINT8_(0x1) << TCPC_FS_VBUSOCPF_Pos)               /* (TCPC_FS) Internal or External OCP VBUS Over-Current Protection Fault Mask */
-#define TCPC_FS_VBUSOCPF(value)               (TCPC_FS_VBUSOCPF_Msk & (_UINT8_(value) << TCPC_FS_VBUSOCPF_Pos)) /* Assigment of value for VBUSOCPF in the TCPC_FS register */
-#define   TCPC_FS_VBUSOCPF_0_Val              _UINT8_(0x0)                                         /* (TCPC_FS) Not in an over-current protection state.  */
-#define   TCPC_FS_VBUSOCPF_1_Val              _UINT8_(0x1)                                         /* (TCPC_FS) Over-current fault latched.  */
-#define TCPC_FS_VBUSOCPF_0                    (TCPC_FS_VBUSOCPF_0_Val << TCPC_FS_VBUSOCPF_Pos)     /* (TCPC_FS) Not in an over-current protection state. Position  */
-#define TCPC_FS_VBUSOCPF_1                    (TCPC_FS_VBUSOCPF_1_Val << TCPC_FS_VBUSOCPF_Pos)     /* (TCPC_FS) Over-current fault latched. Position  */
-#define TCPC_FS_FRCOFVBUS_Pos                 _UINT8_(6)                                           /* (TCPC_FS) Force Off VBUS Position */
-#define TCPC_FS_FRCOFVBUS_Msk                 (_UINT8_(0x1) << TCPC_FS_FRCOFVBUS_Pos)              /* (TCPC_FS) Force Off VBUS Mask */
-#define TCPC_FS_FRCOFVBUS(value)              (TCPC_FS_FRCOFVBUS_Msk & (_UINT8_(value) << TCPC_FS_FRCOFVBUS_Pos)) /* Assigment of value for FRCOFVBUS in the TCPC_FS register */
-#define   TCPC_FS_FRCOFVBUS_0_Val             _UINT8_(0x0)                                         /* (TCPC_FS) No fault detected, no action (default and not supported).  */
-#define   TCPC_FS_FRCOFVBUS_1_Val             _UINT8_(0x1)                                         /* (TCPC_FS) VBUS source/sink has been forced off due to external fault.  */
-#define TCPC_FS_FRCOFVBUS_0                   (TCPC_FS_FRCOFVBUS_0_Val << TCPC_FS_FRCOFVBUS_Pos)   /* (TCPC_FS) No fault detected, no action (default and not supported). Position  */
-#define TCPC_FS_FRCOFVBUS_1                   (TCPC_FS_FRCOFVBUS_1_Val << TCPC_FS_FRCOFVBUS_Pos)   /* (TCPC_FS) VBUS source/sink has been forced off due to external fault. Position  */
-#define TCPC_FS_ALLREGRES_Pos                 _UINT8_(7)                                           /* (TCPC_FS) All Registers Reset To Default Position */
-#define TCPC_FS_ALLREGRES_Msk                 (_UINT8_(0x1) << TCPC_FS_ALLREGRES_Pos)              /* (TCPC_FS) All Registers Reset To Default Mask */
-#define TCPC_FS_ALLREGRES(value)              (TCPC_FS_ALLREGRES_Msk & (_UINT8_(value) << TCPC_FS_ALLREGRES_Pos)) /* Assigment of value for ALLREGRES in the TCPC_FS register */
-#define   TCPC_FS_ALLREGRES_0_Val             _UINT8_(0x0)                                         /* (TCPC_FS) The registers have not been reset since the last clear of this bit.  */
-#define   TCPC_FS_ALLREGRES_1_Val             _UINT8_(0x1)                                         /* (TCPC_FS) The TCPC has reset all registers to their default value. This happens at initial powerup or if an unexpected power reset occurs.  */
-#define TCPC_FS_ALLREGRES_0                   (TCPC_FS_ALLREGRES_0_Val << TCPC_FS_ALLREGRES_Pos)   /* (TCPC_FS) The registers have not been reset since the last clear of this bit. Position  */
-#define TCPC_FS_ALLREGRES_1                   (TCPC_FS_ALLREGRES_1_Val << TCPC_FS_ALLREGRES_Pos)   /* (TCPC_FS) The TCPC has reset all registers to their default value. This happens at initial powerup or if an unexpected power reset occurs. Position  */
-#define TCPC_FS_Msk                           _UINT8_(0xCC)                                        /* (TCPC_FS) Register Mask  */
-
-
-/* -------- TCPC_FSM : (TCPC Offset: 0x15) (R/W 8) Fault Status Mask Register -------- */
-#define TCPC_FSM_RESETVALUE                   _UINT8_(0xFF)                                        /*  (TCPC_FSM) Fault Status Mask Register  Reset Value */
-
-#define TCPC_FSM_VBUSOVPF_Pos                 _UINT8_(2)                                           /* (TCPC_FSM) Internal or External OVP VBUS Over Voltage Protection Fault Interrupt Mask Position */
-#define TCPC_FSM_VBUSOVPF_Msk                 (_UINT8_(0x1) << TCPC_FSM_VBUSOVPF_Pos)              /* (TCPC_FSM) Internal or External OVP VBUS Over Voltage Protection Fault Interrupt Mask Mask */
-#define TCPC_FSM_VBUSOVPF(value)              (TCPC_FSM_VBUSOVPF_Msk & (_UINT8_(value) << TCPC_FSM_VBUSOVPF_Pos)) /* Assigment of value for VBUSOVPF in the TCPC_FSM register */
-#define TCPC_FSM_VBUSOCPF_Pos                 _UINT8_(3)                                           /* (TCPC_FSM) Internal or External OCP VBUS Over Current Protection Fault Interrupt Mask Position */
-#define TCPC_FSM_VBUSOCPF_Msk                 (_UINT8_(0x1) << TCPC_FSM_VBUSOCPF_Pos)              /* (TCPC_FSM) Internal or External OCP VBUS Over Current Protection Fault Interrupt Mask Mask */
-#define TCPC_FSM_VBUSOCPF(value)              (TCPC_FSM_VBUSOCPF_Msk & (_UINT8_(value) << TCPC_FSM_VBUSOCPF_Pos)) /* Assigment of value for VBUSOCPF in the TCPC_FSM register */
-#define TCPC_FSM_FRCDCHF_Pos                  _UINT8_(4)                                           /* (TCPC_FSM) Force Discharge Failed Interrupt Mask Position */
-#define TCPC_FSM_FRCDCHF_Msk                  (_UINT8_(0x1) << TCPC_FSM_FRCDCHF_Pos)               /* (TCPC_FSM) Force Discharge Failed Interrupt Mask Mask */
-#define TCPC_FSM_FRCDCHF(value)               (TCPC_FSM_FRCDCHF_Msk & (_UINT8_(value) << TCPC_FSM_FRCDCHF_Pos)) /* Assigment of value for FRCDCHF in the TCPC_FSM register */
-#define TCPC_FSM_AUTDCHF_Pos                  _UINT8_(5)                                           /* (TCPC_FSM) Auto Discharge Failed Interrupt Mask Position */
-#define TCPC_FSM_AUTDCHF_Msk                  (_UINT8_(0x1) << TCPC_FSM_AUTDCHF_Pos)               /* (TCPC_FSM) Auto Discharge Failed Interrupt Mask Mask */
-#define TCPC_FSM_AUTDCHF(value)               (TCPC_FSM_AUTDCHF_Msk & (_UINT8_(value) << TCPC_FSM_AUTDCHF_Pos)) /* Assigment of value for AUTDCHF in the TCPC_FSM register */
-#define TCPC_FSM_FRCOFVBUS_Pos                _UINT8_(6)                                           /* (TCPC_FSM) Force Off VBUS Interrupt Mask Position */
-#define TCPC_FSM_FRCOFVBUS_Msk                (_UINT8_(0x1) << TCPC_FSM_FRCOFVBUS_Pos)             /* (TCPC_FSM) Force Off VBUS Interrupt Mask Mask */
-#define TCPC_FSM_FRCOFVBUS(value)             (TCPC_FSM_FRCOFVBUS_Msk & (_UINT8_(value) << TCPC_FSM_FRCOFVBUS_Pos)) /* Assigment of value for FRCOFVBUS in the TCPC_FSM register */
-#define TCPC_FSM_ALLREGRES_Pos                _UINT8_(7)                                           /* (TCPC_FSM) All Registers Reset To Default Interrupt Mask Position */
-#define TCPC_FSM_ALLREGRES_Msk                (_UINT8_(0x1) << TCPC_FSM_ALLREGRES_Pos)             /* (TCPC_FSM) All Registers Reset To Default Interrupt Mask Mask */
-#define TCPC_FSM_ALLREGRES(value)             (TCPC_FSM_ALLREGRES_Msk & (_UINT8_(value) << TCPC_FSM_ALLREGRES_Pos)) /* Assigment of value for ALLREGRES in the TCPC_FSM register */
-#define TCPC_FSM_Msk                          _UINT8_(0xFC)                                        /* (TCPC_FSM) Register Mask  */
-
-
-/* -------- TCPC_PDIR : (TCPC Offset: 0x0A) ( R/ 16) PD Interface Rev Register -------- */
-#define TCPC_PDIR_RESETVALUE                  _UINT16_(0x00)                                       /*  (TCPC_PDIR) PD Interface Rev Register  Reset Value */
-
-#define TCPC_PDIR_PDIR_Pos                    _UINT16_(0)                                          /* (TCPC_PDIR) USB-Port Controller Interface Specification Revision Position */
-#define TCPC_PDIR_PDIR_Msk                    (_UINT16_(0xFFFF) << TCPC_PDIR_PDIR_Pos)             /* (TCPC_PDIR) USB-Port Controller Interface Specification Revision Mask */
-#define TCPC_PDIR_PDIR(value)                 (TCPC_PDIR_PDIR_Msk & (_UINT16_(value) << TCPC_PDIR_PDIR_Pos)) /* Assigment of value for PDIR in the TCPC_PDIR register */
-#define TCPC_PDIR_Msk                         _UINT16_(0xFFFF)                                     /* (TCPC_PDIR) Register Mask  */
-
-
-/* -------- TCPC_PID : (TCPC Offset: 0x02) ( R/ 16) Product ID Register -------- */
-#define TCPC_PID_RESETVALUE                   _UINT16_(0x00)                                       /*  (TCPC_PID) Product ID Register  Reset Value */
-
-#define TCPC_PID_PID_Pos                      _UINT16_(0)                                          /* (TCPC_PID) Product ID Position */
-#define TCPC_PID_PID_Msk                      (_UINT16_(0xFFFF) << TCPC_PID_PID_Pos)               /* (TCPC_PID) Product ID Mask */
-#define TCPC_PID_PID(value)                   (TCPC_PID_PID_Msk & (_UINT16_(value) << TCPC_PID_PID_Pos)) /* Assigment of value for PID in the TCPC_PID register */
-#define TCPC_PID_Msk                          _UINT16_(0xFFFF)                                     /* (TCPC_PID) Register Mask  */
-
-
-/* -------- TCPC_PS : (TCPC Offset: 0x1E) ( R/ 8) Power Status Register -------- */
-#define TCPC_PS_RESETVALUE                    _UINT8_(0x00)                                        /*  (TCPC_PS) Power Status Register  Reset Value */
-
-#define TCPC_PS_SNKVBUS_Pos                   _UINT8_(0)                                           /* (TCPC_PS) Sinking VBUS Position */
-#define TCPC_PS_SNKVBUS_Msk                   (_UINT8_(0x1) << TCPC_PS_SNKVBUS_Pos)                /* (TCPC_PS) Sinking VBUS Mask */
-#define TCPC_PS_SNKVBUS(value)                (TCPC_PS_SNKVBUS_Msk & (_UINT8_(value) << TCPC_PS_SNKVBUS_Pos)) /* Assigment of value for SNKVBUS in the TCPC_PS register */
-#define   TCPC_PS_SNKVBUS_0_Val               _UINT8_(0x0)                                         /* (TCPC_PS) Sink is disconnected. (Default and if not supported)  */
-#define   TCPC_PS_SNKVBUS_1_Val               _UINT8_(0x1)                                         /* (TCPC_PS) TCPC is sinking VBUS to the system load.  */
-#define TCPC_PS_SNKVBUS_0                     (TCPC_PS_SNKVBUS_0_Val << TCPC_PS_SNKVBUS_Pos)       /* (TCPC_PS) Sink is disconnected. (Default and if not supported) Position  */
-#define TCPC_PS_SNKVBUS_1                     (TCPC_PS_SNKVBUS_1_Val << TCPC_PS_SNKVBUS_Pos)       /* (TCPC_PS) TCPC is sinking VBUS to the system load. Position  */
-#define TCPC_PS_VCONN_Pos                     _UINT8_(1)                                           /* (TCPC_PS) VCONN Present Position */
-#define TCPC_PS_VCONN_Msk                     (_UINT8_(0x1) << TCPC_PS_VCONN_Pos)                  /* (TCPC_PS) VCONN Present Mask */
-#define TCPC_PS_VCONN(value)                  (TCPC_PS_VCONN_Msk & (_UINT8_(value) << TCPC_PS_VCONN_Pos)) /* Assigment of value for VCONN in the TCPC_PS register */
-#define   TCPC_PS_VCONN_0_Val                 _UINT8_(0x0)                                         /* (TCPC_PS) VCONN is not present.  */
-#define TCPC_PS_VCONN_0                       (TCPC_PS_VCONN_0_Val << TCPC_PS_VCONN_Pos)           /* (TCPC_PS) VCONN is not present. Position  */
-#define TCPC_PS_VBUS_Pos                      _UINT8_(2)                                           /* (TCPC_PS) VBUS Present Position */
-#define TCPC_PS_VBUS_Msk                      (_UINT8_(0x1) << TCPC_PS_VBUS_Pos)                   /* (TCPC_PS) VBUS Present Mask */
-#define TCPC_PS_VBUS(value)                   (TCPC_PS_VBUS_Msk & (_UINT8_(value) << TCPC_PS_VBUS_Pos)) /* Assigment of value for VBUS in the TCPC_PS register */
-#define   TCPC_PS_VBUS_0_Val                  _UINT8_(0x0)                                         /* (TCPC_PS) VBUS disconnected.  */
-#define   TCPC_PS_VBUS_1_Val                  _UINT8_(0x1)                                         /* (TCPC_PS) VBUS connected.  */
-#define TCPC_PS_VBUS_0                        (TCPC_PS_VBUS_0_Val << TCPC_PS_VBUS_Pos)             /* (TCPC_PS) VBUS disconnected. Position  */
-#define TCPC_PS_VBUS_1                        (TCPC_PS_VBUS_1_Val << TCPC_PS_VBUS_Pos)             /* (TCPC_PS) VBUS connected. Position  */
-#define TCPC_PS_VBUSDETE_Pos                  _UINT8_(3)                                           /* (TCPC_PS) VBUS Present Detection Enabled Position */
-#define TCPC_PS_VBUSDETE_Msk                  (_UINT8_(0x1) << TCPC_PS_VBUSDETE_Pos)               /* (TCPC_PS) VBUS Present Detection Enabled Mask */
-#define TCPC_PS_VBUSDETE(value)               (TCPC_PS_VBUSDETE_Msk & (_UINT8_(value) << TCPC_PS_VBUSDETE_Pos)) /* Assigment of value for VBUSDETE in the TCPC_PS register */
-#define   TCPC_PS_VBUSDETE_0_Val              _UINT8_(0x0)                                         /* (TCPC_PS) VBUS present detection disabled.  */
-#define   TCPC_PS_VBUSDETE_1_Val              _UINT8_(0x1)                                         /* (TCPC_PS) VBUS present detection enabled (default).  */
-#define TCPC_PS_VBUSDETE_0                    (TCPC_PS_VBUSDETE_0_Val << TCPC_PS_VBUSDETE_Pos)     /* (TCPC_PS) VBUS present detection disabled. Position  */
-#define TCPC_PS_VBUSDETE_1                    (TCPC_PS_VBUSDETE_1_Val << TCPC_PS_VBUSDETE_Pos)     /* (TCPC_PS) VBUS present detection enabled (default). Position  */
-#define TCPC_PS_SRCVBUS_Pos                   _UINT8_(4)                                           /* (TCPC_PS) Sourcing VBUS Position */
-#define TCPC_PS_SRCVBUS_Msk                   (_UINT8_(0x1) << TCPC_PS_SRCVBUS_Pos)                /* (TCPC_PS) Sourcing VBUS Mask */
-#define TCPC_PS_SRCVBUS(value)                (TCPC_PS_SRCVBUS_Msk & (_UINT8_(value) << TCPC_PS_SRCVBUS_Pos)) /* Assigment of value for SRCVBUS in the TCPC_PS register */
-#define   TCPC_PS_SRCVBUS_0_Val               _UINT8_(0x0)                                         /* (TCPC_PS) Sourcing VBUS is disabled.  */
-#define   TCPC_PS_SRCVBUS_1_Val               _UINT8_(0x1)                                         /* (TCPC_PS) Sourcing VBUS is enabled.  */
-#define TCPC_PS_SRCVBUS_0                     (TCPC_PS_SRCVBUS_0_Val << TCPC_PS_SRCVBUS_Pos)       /* (TCPC_PS) Sourcing VBUS is disabled. Position  */
-#define TCPC_PS_SRCVBUS_1                     (TCPC_PS_SRCVBUS_1_Val << TCPC_PS_SRCVBUS_Pos)       /* (TCPC_PS) Sourcing VBUS is enabled. Position  */
-#define TCPC_PS_SRCHIV_Pos                    _UINT8_(5)                                           /* (TCPC_PS) Sourcing High Voltage Position */
-#define TCPC_PS_SRCHIV_Msk                    (_UINT8_(0x1) << TCPC_PS_SRCHIV_Pos)                 /* (TCPC_PS) Sourcing High Voltage Mask */
-#define TCPC_PS_SRCHIV(value)                 (TCPC_PS_SRCHIV_Msk & (_UINT8_(value) << TCPC_PS_SRCHIV_Pos)) /* Assigment of value for SRCHIV in the TCPC_PS register */
-#define   TCPC_PS_SRCHIV_0_Val                _UINT8_(0x0)                                         /* (TCPC_PS) VSafe5V.  */
-#define TCPC_PS_SRCHIV_0                      (TCPC_PS_SRCHIV_0_Val << TCPC_PS_SRCHIV_Pos)         /* (TCPC_PS) VSafe5V. Position  */
-#define TCPC_PS_INIT_Pos                      _UINT8_(6)                                           /* (TCPC_PS) TCPC Initialization Position */
-#define TCPC_PS_INIT_Msk                      (_UINT8_(0x1) << TCPC_PS_INIT_Pos)                   /* (TCPC_PS) TCPC Initialization Mask */
-#define TCPC_PS_INIT(value)                   (TCPC_PS_INIT_Msk & (_UINT8_(value) << TCPC_PS_INIT_Pos)) /* Assigment of value for INIT in the TCPC_PS register */
-#define   TCPC_PS_INIT_0_Val                  _UINT8_(0x0)                                         /* (TCPC_PS) TCPC has completed initialization and all registers are valid.  */
-#define   TCPC_PS_INIT_1_Val                  _UINT8_(0x1)                                         /* (TCPC_PS) TCPC is still performing internal initialization and the only registers that are guaranteed to return the correct values are 00h..0Fh  */
-#define TCPC_PS_INIT_0                        (TCPC_PS_INIT_0_Val << TCPC_PS_INIT_Pos)             /* (TCPC_PS) TCPC has completed initialization and all registers are valid. Position  */
-#define TCPC_PS_INIT_1                        (TCPC_PS_INIT_1_Val << TCPC_PS_INIT_Pos)             /* (TCPC_PS) TCPC is still performing internal initialization and the only registers that are guaranteed to return the correct values are 00h..0Fh Position  */
-#define TCPC_PS_DBG_Pos                       _UINT8_(7)                                           /* (TCPC_PS) Debug Accessory Connected Position */
-#define TCPC_PS_DBG_Msk                       (_UINT8_(0x1) << TCPC_PS_DBG_Pos)                    /* (TCPC_PS) Debug Accessory Connected Mask */
-#define TCPC_PS_DBG(value)                    (TCPC_PS_DBG_Msk & (_UINT8_(value) << TCPC_PS_DBG_Pos)) /* Assigment of value for DBG in the TCPC_PS register */
-#define   TCPC_PS_DBG_0_Val                   _UINT8_(0x0)                                         /* (TCPC_PS) No debug accessory connected (default).  */
-#define TCPC_PS_DBG_0                         (TCPC_PS_DBG_0_Val << TCPC_PS_DBG_Pos)               /* (TCPC_PS) No debug accessory connected (default). Position  */
-#define TCPC_PS_Msk                           _UINT8_(0xFF)                                        /* (TCPC_PS) Register Mask  */
-
-
-/* -------- TCPC_PSM : (TCPC Offset: 0x14) (R/W 8) Power Status Mask Register -------- */
-#define TCPC_PSM_RESETVALUE                   _UINT8_(0xFF)                                        /*  (TCPC_PSM) Power Status Mask Register  Reset Value */
-
-#define TCPC_PSM_SNKVBUS_Pos                  _UINT8_(0)                                           /* (TCPC_PSM) Sinking VBUS Interrupt Mask Position */
-#define TCPC_PSM_SNKVBUS_Msk                  (_UINT8_(0x1) << TCPC_PSM_SNKVBUS_Pos)               /* (TCPC_PSM) Sinking VBUS Interrupt Mask Mask */
-#define TCPC_PSM_SNKVBUS(value)               (TCPC_PSM_SNKVBUS_Msk & (_UINT8_(value) << TCPC_PSM_SNKVBUS_Pos)) /* Assigment of value for SNKVBUS in the TCPC_PSM register */
-#define TCPC_PSM_VBUS_Pos                     _UINT8_(2)                                           /* (TCPC_PSM) VBUS Present Interrupt Mask Position */
-#define TCPC_PSM_VBUS_Msk                     (_UINT8_(0x1) << TCPC_PSM_VBUS_Pos)                  /* (TCPC_PSM) VBUS Present Interrupt Mask Mask */
-#define TCPC_PSM_VBUS(value)                  (TCPC_PSM_VBUS_Msk & (_UINT8_(value) << TCPC_PSM_VBUS_Pos)) /* Assigment of value for VBUS in the TCPC_PSM register */
-#define TCPC_PSM_VBUSDETE_Pos                 _UINT8_(3)                                           /* (TCPC_PSM) VBUS Present Detection Interrupt Mask Position */
-#define TCPC_PSM_VBUSDETE_Msk                 (_UINT8_(0x1) << TCPC_PSM_VBUSDETE_Pos)              /* (TCPC_PSM) VBUS Present Detection Interrupt Mask Mask */
-#define TCPC_PSM_VBUSDETE(value)              (TCPC_PSM_VBUSDETE_Msk & (_UINT8_(value) << TCPC_PSM_VBUSDETE_Pos)) /* Assigment of value for VBUSDETE in the TCPC_PSM register */
-#define TCPC_PSM_SRCVBUS_Pos                  _UINT8_(4)                                           /* (TCPC_PSM) Sourcing VBUS Interrupt Mask Position */
-#define TCPC_PSM_SRCVBUS_Msk                  (_UINT8_(0x1) << TCPC_PSM_SRCVBUS_Pos)               /* (TCPC_PSM) Sourcing VBUS Interrupt Mask Mask */
-#define TCPC_PSM_SRCVBUS(value)               (TCPC_PSM_SRCVBUS_Msk & (_UINT8_(value) << TCPC_PSM_SRCVBUS_Pos)) /* Assigment of value for SRCVBUS in the TCPC_PSM register */
-#define TCPC_PSM_INIT_Pos                     _UINT8_(6)                                           /* (TCPC_PSM) TCPC Initialization Interrupt Mask Position */
-#define TCPC_PSM_INIT_Msk                     (_UINT8_(0x1) << TCPC_PSM_INIT_Pos)                  /* (TCPC_PSM) TCPC Initialization Interrupt Mask Mask */
-#define TCPC_PSM_INIT(value)                  (TCPC_PSM_INIT_Msk & (_UINT8_(value) << TCPC_PSM_INIT_Pos)) /* Assigment of value for INIT in the TCPC_PSM register */
-#define TCPC_PSM_Msk                          _UINT8_(0x5D)                                        /* (TCPC_PSM) Register Mask  */
-
-
-/* -------- TCPC_RCTL : (TCPC Offset: 0x1A) (R/W 8) Role Control Register -------- */
-#define TCPC_RCTL_RESETVALUE                  _UINT8_(0x0F)                                        /*  (TCPC_RCTL) Role Control Register  Reset Value */
-
-#define TCPC_RCTL_CC1_Pos                     _UINT8_(0)                                           /* (TCPC_RCTL) Configuration Channel 1 Position */
-#define TCPC_RCTL_CC1_Msk                     (_UINT8_(0x3) << TCPC_RCTL_CC1_Pos)                  /* (TCPC_RCTL) Configuration Channel 1 Mask */
-#define TCPC_RCTL_CC1(value)                  (TCPC_RCTL_CC1_Msk & (_UINT8_(value) << TCPC_RCTL_CC1_Pos)) /* Assigment of value for CC1 in the TCPC_RCTL register */
-#define   TCPC_RCTL_CC1_CC1_RA_Val            _UINT8_(0x0)                                         /* (TCPC_RCTL) Ra  */
-#define   TCPC_RCTL_CC1_CC1_RP_Val            _UINT8_(0x1)                                         /* (TCPC_RCTL) Rp defined as in RP field  */
-#define   TCPC_RCTL_CC1_CC1_RD_Val            _UINT8_(0x2)                                         /* (TCPC_RCTL) Rd  */
-#define   TCPC_RCTL_CC1_CC1_OPEN_Val          _UINT8_(0x3)                                         /* (TCPC_RCTL) Open (Disconnect or don't care)  */
-#define TCPC_RCTL_CC1_CC1_RA                  (TCPC_RCTL_CC1_CC1_RA_Val << TCPC_RCTL_CC1_Pos)      /* (TCPC_RCTL) Ra Position  */
-#define TCPC_RCTL_CC1_CC1_RP                  (TCPC_RCTL_CC1_CC1_RP_Val << TCPC_RCTL_CC1_Pos)      /* (TCPC_RCTL) Rp defined as in RP field Position  */
-#define TCPC_RCTL_CC1_CC1_RD                  (TCPC_RCTL_CC1_CC1_RD_Val << TCPC_RCTL_CC1_Pos)      /* (TCPC_RCTL) Rd Position  */
-#define TCPC_RCTL_CC1_CC1_OPEN                (TCPC_RCTL_CC1_CC1_OPEN_Val << TCPC_RCTL_CC1_Pos)    /* (TCPC_RCTL) Open (Disconnect or don't care) Position  */
-#define TCPC_RCTL_CC2_Pos                     _UINT8_(2)                                           /* (TCPC_RCTL) Configuration Channel 2 Position */
-#define TCPC_RCTL_CC2_Msk                     (_UINT8_(0x3) << TCPC_RCTL_CC2_Pos)                  /* (TCPC_RCTL) Configuration Channel 2 Mask */
-#define TCPC_RCTL_CC2(value)                  (TCPC_RCTL_CC2_Msk & (_UINT8_(value) << TCPC_RCTL_CC2_Pos)) /* Assigment of value for CC2 in the TCPC_RCTL register */
-#define   TCPC_RCTL_CC2_CC2_RA_Val            _UINT8_(0x0)                                         /* (TCPC_RCTL) Ra  */
-#define   TCPC_RCTL_CC2_CC2_RP_Val            _UINT8_(0x1)                                         /* (TCPC_RCTL) Rp defined as in RP field  */
-#define   TCPC_RCTL_CC2_CC2_RD_Val            _UINT8_(0x2)                                         /* (TCPC_RCTL) Rd  */
-#define   TCPC_RCTL_CC2_CC2_OPEN_Val          _UINT8_(0x3)                                         /* (TCPC_RCTL) Open (Disconnect or don't care)  */
-#define TCPC_RCTL_CC2_CC2_RA                  (TCPC_RCTL_CC2_CC2_RA_Val << TCPC_RCTL_CC2_Pos)      /* (TCPC_RCTL) Ra Position  */
-#define TCPC_RCTL_CC2_CC2_RP                  (TCPC_RCTL_CC2_CC2_RP_Val << TCPC_RCTL_CC2_Pos)      /* (TCPC_RCTL) Rp defined as in RP field Position  */
-#define TCPC_RCTL_CC2_CC2_RD                  (TCPC_RCTL_CC2_CC2_RD_Val << TCPC_RCTL_CC2_Pos)      /* (TCPC_RCTL) Rd Position  */
-#define TCPC_RCTL_CC2_CC2_OPEN                (TCPC_RCTL_CC2_CC2_OPEN_Val << TCPC_RCTL_CC2_Pos)    /* (TCPC_RCTL) Open (Disconnect or don't care) Position  */
-#define TCPC_RCTL_RP_Pos                      _UINT8_(4)                                           /* (TCPC_RCTL) Resistor for Power Advertising Position */
-#define TCPC_RCTL_RP_Msk                      (_UINT8_(0x3) << TCPC_RCTL_RP_Pos)                   /* (TCPC_RCTL) Resistor for Power Advertising Mask */
-#define TCPC_RCTL_RP(value)                   (TCPC_RCTL_RP_Msk & (_UINT8_(value) << TCPC_RCTL_RP_Pos)) /* Assigment of value for RP in the TCPC_RCTL register */
-#define   TCPC_RCTL_RP_RP_DEFAULT_Val         _UINT8_(0x0)                                         /* (TCPC_RCTL) Rp default  */
-#define   TCPC_RCTL_RP_RP_1P5A_Val            _UINT8_(0x1)                                         /* (TCPC_RCTL) Rp 1.5A  */
-#define   TCPC_RCTL_RP_RP_3A_Val              _UINT8_(0x2)                                         /* (TCPC_RCTL) Rp 3.0A  */
-#define TCPC_RCTL_RP_RP_DEFAULT               (TCPC_RCTL_RP_RP_DEFAULT_Val << TCPC_RCTL_RP_Pos)    /* (TCPC_RCTL) Rp default Position  */
-#define TCPC_RCTL_RP_RP_1P5A                  (TCPC_RCTL_RP_RP_1P5A_Val << TCPC_RCTL_RP_Pos)       /* (TCPC_RCTL) Rp 1.5A Position  */
-#define TCPC_RCTL_RP_RP_3A                    (TCPC_RCTL_RP_RP_3A_Val << TCPC_RCTL_RP_Pos)         /* (TCPC_RCTL) Rp 3.0A Position  */
-#define TCPC_RCTL_DRP_Pos                     _UINT8_(6)                                           /* (TCPC_RCTL) Dual Role Play Position */
-#define TCPC_RCTL_DRP_Msk                     (_UINT8_(0x1) << TCPC_RCTL_DRP_Pos)                  /* (TCPC_RCTL) Dual Role Play Mask */
-#define TCPC_RCTL_DRP(value)                  (TCPC_RCTL_DRP_Msk & (_UINT8_(value) << TCPC_RCTL_DRP_Pos)) /* Assigment of value for DRP in the TCPC_RCTL register */
-#define   TCPC_RCTL_DRP_0_Val                 _UINT8_(0x0)                                         /* (TCPC_RCTL) No DRP. CC1, CC2 fields determine Rp/Rd/Ra or open settings.  */
-#define   TCPC_RCTL_DRP_1_Val                 _UINT8_(0x1)                                         /* (TCPC_RCTL) DRP.  */
-#define TCPC_RCTL_DRP_0                       (TCPC_RCTL_DRP_0_Val << TCPC_RCTL_DRP_Pos)           /* (TCPC_RCTL) No DRP. CC1, CC2 fields determine Rp/Rd/Ra or open settings. Position  */
-#define TCPC_RCTL_DRP_1                       (TCPC_RCTL_DRP_1_Val << TCPC_RCTL_DRP_Pos)           /* (TCPC_RCTL) DRP. Position  */
-#define TCPC_RCTL_Msk                         _UINT8_(0x7F)                                        /* (TCPC_RCTL) Register Mask  */
-
-
-/* -------- TCPC_SAR : (TCPC Offset: 0x8C) ( /W 32) Set Alert Register -------- */
-#define TCPC_SAR_ALERT_Pos                    _UINT32_(0)                                          /* (TCPC_SAR) Alert Register Set Position */
-#define TCPC_SAR_ALERT_Msk                    (_UINT32_(0xFFFF) << TCPC_SAR_ALERT_Pos)             /* (TCPC_SAR) Alert Register Set Mask */
-#define TCPC_SAR_ALERT(value)                 (TCPC_SAR_ALERT_Msk & (_UINT32_(value) << TCPC_SAR_ALERT_Pos)) /* Assigment of value for ALERT in the TCPC_SAR register */
-#define   TCPC_SAR_ALERT_0_Val                _UINT32_(0x0)                                        /* (TCPC_SAR) No effect.  */
-#define   TCPC_SAR_ALERT_1_Val                _UINT32_(0x1)                                        /* (TCPC_SAR) Sets the corresponding bit in TCPC_AL.  */
-#define TCPC_SAR_ALERT_0                      (TCPC_SAR_ALERT_0_Val << TCPC_SAR_ALERT_Pos)         /* (TCPC_SAR) No effect. Position  */
-#define TCPC_SAR_ALERT_1                      (TCPC_SAR_ALERT_1_Val << TCPC_SAR_ALERT_Pos)         /* (TCPC_SAR) Sets the corresponding bit in TCPC_AL. Position  */
-#define TCPC_SAR_Msk                          _UINT32_(0x0000FFFF)                                 /* (TCPC_SAR) Register Mask  */
-
-
 /* -------- TCPC_SIC : (TCPC Offset: 0x28) (R/W 8) Standard Input Capabilities Register -------- */
 #define TCPC_SIC_RESETVALUE                   _UINT8_(0x00)                                        /*  (TCPC_SIC) Standard Input Capabilities Register  Reset Value */
 
@@ -699,6 +681,22 @@
 #define TCPC_SOC_Msk                          _UINT8_(0x7F)                                        /* (TCPC_SOC) Register Mask  */
 
 
+/* -------- TCPC_CR : (TCPC Offset: 0x80) ( /W 32) Control Register -------- */
+#define TCPC_CR_SWRST_Pos                     _UINT32_(0)                                          /* (TCPC_CR) Software Reset Position */
+#define TCPC_CR_SWRST_Msk                     (_UINT32_(0x1) << TCPC_CR_SWRST_Pos)                 /* (TCPC_CR) Software Reset Mask */
+#define TCPC_CR_SWRST(value)                  (TCPC_CR_SWRST_Msk & (_UINT32_(value) << TCPC_CR_SWRST_Pos)) /* Assigment of value for SWRST in the TCPC_CR register */
+#define   TCPC_CR_SWRST_0_Val                 _UINT32_(0x0)                                        /* (TCPC_CR) No effect.  */
+#define   TCPC_CR_SWRST_1_Val                 _UINT32_(0x1)                                        /* (TCPC_CR) Resets the TCPC. A software-triggered hardware reset of the TCPC interface is performed.  */
+#define TCPC_CR_SWRST_0                       (TCPC_CR_SWRST_0_Val << TCPC_CR_SWRST_Pos)           /* (TCPC_CR) No effect. Position  */
+#define TCPC_CR_SWRST_1                       (TCPC_CR_SWRST_1_Val << TCPC_CR_SWRST_Pos)           /* (TCPC_CR) Resets the TCPC. A software-triggered hardware reset of the TCPC interface is performed. Position  */
+#define TCPC_CR_WAKEY_Pos                     _UINT32_(8)                                          /* (TCPC_CR) Register Write Access Key Position */
+#define TCPC_CR_WAKEY_Msk                     (_UINT32_(0xFFFFFF) << TCPC_CR_WAKEY_Pos)            /* (TCPC_CR) Register Write Access Key Mask */
+#define TCPC_CR_WAKEY(value)                  (TCPC_CR_WAKEY_Msk & (_UINT32_(value) << TCPC_CR_WAKEY_Pos)) /* Assigment of value for WAKEY in the TCPC_CR register */
+#define   TCPC_CR_WAKEY_PASSWD_Val            _UINT32_(0x544343)                                   /* (TCPC_CR) Writing any other value in this field aborts the write operation.  */
+#define TCPC_CR_WAKEY_PASSWD                  (TCPC_CR_WAKEY_PASSWD_Val << TCPC_CR_WAKEY_Pos)      /* (TCPC_CR) Writing any other value in this field aborts the write operation. Position  */
+#define TCPC_CR_Msk                           _UINT32_(0xFFFFFF01)                                 /* (TCPC_CR) Register Mask  */
+
+
 /* -------- TCPC_SSR : (TCPC Offset: 0x84) ( /W 32) Set Status Register -------- */
 #define TCPC_SSR_CC_STATUS_Pos                _UINT32_(8)                                          /* (TCPC_SSR) CC Status Register Set Position */
 #define TCPC_SSR_CC_STATUS_Msk                (_UINT32_(0xFF) << TCPC_SSR_CC_STATUS_Pos)           /* (TCPC_SSR) CC Status Register Set Mask */
@@ -722,6 +720,35 @@
 #define TCPC_SSR_FAULT_STATUS_0               (TCPC_SSR_FAULT_STATUS_0_Val << TCPC_SSR_FAULT_STATUS_Pos) /* (TCPC_SSR) No effect. Position  */
 #define TCPC_SSR_FAULT_STATUS_1               (TCPC_SSR_FAULT_STATUS_1_Val << TCPC_SSR_FAULT_STATUS_Pos) /* (TCPC_SSR) Sets the corresponding bit in TCPC_FS and the FLT_ST bit in TCPC_AL. Position  */
 #define TCPC_SSR_Msk                          _UINT32_(0xFFFFFF00)                                 /* (TCPC_SSR) Register Mask  */
+
+
+/* -------- TCPC_CSR : (TCPC Offset: 0x88) ( /W 32) Clear Status Register -------- */
+#define TCPC_CSR_CC_STATUS_Pos                _UINT32_(8)                                          /* (TCPC_CSR) CC Status Register Clear Position */
+#define TCPC_CSR_CC_STATUS_Msk                (_UINT32_(0xFF) << TCPC_CSR_CC_STATUS_Pos)           /* (TCPC_CSR) CC Status Register Clear Mask */
+#define TCPC_CSR_CC_STATUS(value)             (TCPC_CSR_CC_STATUS_Msk & (_UINT32_(value) << TCPC_CSR_CC_STATUS_Pos)) /* Assigment of value for CC_STATUS in the TCPC_CSR register */
+#define   TCPC_CSR_CC_STATUS_0_Val            _UINT32_(0x0)                                        /* (TCPC_CSR) No effect.  */
+#define   TCPC_CSR_CC_STATUS_1_Val            _UINT32_(0x1)                                        /* (TCPC_CSR) Clears the corresponding bit in TCPC_CCS.  */
+#define TCPC_CSR_CC_STATUS_0                  (TCPC_CSR_CC_STATUS_0_Val << TCPC_CSR_CC_STATUS_Pos) /* (TCPC_CSR) No effect. Position  */
+#define TCPC_CSR_CC_STATUS_1                  (TCPC_CSR_CC_STATUS_1_Val << TCPC_CSR_CC_STATUS_Pos) /* (TCPC_CSR) Clears the corresponding bit in TCPC_CCS. Position  */
+#define TCPC_CSR_POWER_STATUS_Pos             _UINT32_(16)                                         /* (TCPC_CSR) Power Status Register Clear Position */
+#define TCPC_CSR_POWER_STATUS_Msk             (_UINT32_(0xFF) << TCPC_CSR_POWER_STATUS_Pos)        /* (TCPC_CSR) Power Status Register Clear Mask */
+#define TCPC_CSR_POWER_STATUS(value)          (TCPC_CSR_POWER_STATUS_Msk & (_UINT32_(value) << TCPC_CSR_POWER_STATUS_Pos)) /* Assigment of value for POWER_STATUS in the TCPC_CSR register */
+#define   TCPC_CSR_POWER_STATUS_0_Val         _UINT32_(0x0)                                        /* (TCPC_CSR) No effect.  */
+#define   TCPC_CSR_POWER_STATUS_1_Val         _UINT32_(0x1)                                        /* (TCPC_CSR) Clears the corresponding bit in TCPC_PS.  */
+#define TCPC_CSR_POWER_STATUS_0               (TCPC_CSR_POWER_STATUS_0_Val << TCPC_CSR_POWER_STATUS_Pos) /* (TCPC_CSR) No effect. Position  */
+#define TCPC_CSR_POWER_STATUS_1               (TCPC_CSR_POWER_STATUS_1_Val << TCPC_CSR_POWER_STATUS_Pos) /* (TCPC_CSR) Clears the corresponding bit in TCPC_PS. Position  */
+#define TCPC_CSR_Msk                          _UINT32_(0x00FFFF00)                                 /* (TCPC_CSR) Register Mask  */
+
+
+/* -------- TCPC_SAR : (TCPC Offset: 0x8C) ( /W 32) Set Alert Register -------- */
+#define TCPC_SAR_ALERT_Pos                    _UINT32_(0)                                          /* (TCPC_SAR) Alert Register Set Position */
+#define TCPC_SAR_ALERT_Msk                    (_UINT32_(0xFFFF) << TCPC_SAR_ALERT_Pos)             /* (TCPC_SAR) Alert Register Set Mask */
+#define TCPC_SAR_ALERT(value)                 (TCPC_SAR_ALERT_Msk & (_UINT32_(value) << TCPC_SAR_ALERT_Pos)) /* Assigment of value for ALERT in the TCPC_SAR register */
+#define   TCPC_SAR_ALERT_0_Val                _UINT32_(0x0)                                        /* (TCPC_SAR) No effect.  */
+#define   TCPC_SAR_ALERT_1_Val                _UINT32_(0x1)                                        /* (TCPC_SAR) Sets the corresponding bit in TCPC_AL.  */
+#define TCPC_SAR_ALERT_0                      (TCPC_SAR_ALERT_0_Val << TCPC_SAR_ALERT_Pos)         /* (TCPC_SAR) No effect. Position  */
+#define TCPC_SAR_ALERT_1                      (TCPC_SAR_ALERT_1_Val << TCPC_SAR_ALERT_Pos)         /* (TCPC_SAR) Sets the corresponding bit in TCPC_AL. Position  */
+#define TCPC_SAR_Msk                          _UINT32_(0x0000FFFF)                                 /* (TCPC_SAR) Register Mask  */
 
 
 /* -------- TCPC_UPC : (TCPC Offset: 0xA0) (R/W 32) USB Phy Control Register -------- */
@@ -790,15 +817,6 @@
 #define TCPC_UPC_Msk                          _UINT32_(0x3F003700)                                 /* (TCPC_UPC) Register Mask  */
 
 
-/* -------- TCPC_UPDR : (TCPC Offset: 0x08) ( R/ 16) USB PD Rev Ver Register -------- */
-#define TCPC_UPDR_RESETVALUE                  _UINT16_(0x00)                                       /*  (TCPC_UPDR) USB PD Rev Ver Register  Reset Value */
-
-#define TCPC_UPDR_UPDR_Pos                    _UINT16_(0)                                          /* (TCPC_UPDR) USB-PD Specification Revision and Version Position */
-#define TCPC_UPDR_UPDR_Msk                    (_UINT16_(0xFFFF) << TCPC_UPDR_UPDR_Pos)             /* (TCPC_UPDR) USB-PD Specification Revision and Version Mask */
-#define TCPC_UPDR_UPDR(value)                 (TCPC_UPDR_UPDR_Msk & (_UINT16_(value) << TCPC_UPDR_UPDR_Pos)) /* Assigment of value for UPDR in the TCPC_UPDR register */
-#define TCPC_UPDR_Msk                         _UINT16_(0xFFFF)                                     /* (TCPC_UPDR) Register Mask  */
-
-
 /* -------- TCPC_UPS : (TCPC Offset: 0xA4) ( R/ 32) USB Phy Status Register -------- */
 #define TCPC_UPS_RESETVALUE                   _UINT32_(0x00)                                       /*  (TCPC_UPS) USB Phy Status Register  Reset Value */
 
@@ -840,52 +858,34 @@
 #define TCPC_UPS_Msk                          _UINT32_(0x0000001F)                                 /* (TCPC_UPS) Register Mask  */
 
 
-/* -------- TCPC_UTCR : (TCPC Offset: 0x06) ( R/ 16) USB Type-C Rev Register -------- */
-#define TCPC_UTCR_RESETVALUE                  _UINT16_(0x00)                                       /*  (TCPC_UTCR) USB Type-C Rev Register  Reset Value */
-
-#define TCPC_UTCR_UTCR_Pos                    _UINT16_(0)                                          /* (TCPC_UTCR) USB Type-C Revision Position */
-#define TCPC_UTCR_UTCR_Msk                    (_UINT16_(0xFFFF) << TCPC_UTCR_UTCR_Pos)             /* (TCPC_UTCR) USB Type-C Revision Mask */
-#define TCPC_UTCR_UTCR(value)                 (TCPC_UTCR_UTCR_Msk & (_UINT16_(value) << TCPC_UTCR_UTCR_Pos)) /* Assigment of value for UTCR in the TCPC_UTCR register */
-#define TCPC_UTCR_Msk                         _UINT16_(0xFFFF)                                     /* (TCPC_UTCR) Register Mask  */
-
-
-/* -------- TCPC_VID : (TCPC Offset: 0x00) ( R/ 16) Vendor ID Register -------- */
-#define TCPC_VID_RESETVALUE                   _UINT16_(0x00)                                       /*  (TCPC_VID) Vendor ID Register  Reset Value */
-
-#define TCPC_VID_VID_Pos                      _UINT16_(0)                                          /* (TCPC_VID) Vendor ID Position */
-#define TCPC_VID_VID_Msk                      (_UINT16_(0xFFFF) << TCPC_VID_VID_Pos)               /* (TCPC_VID) Vendor ID Mask */
-#define TCPC_VID_VID(value)                   (TCPC_VID_VID_Msk & (_UINT16_(value) << TCPC_VID_VID_Pos)) /* Assigment of value for VID in the TCPC_VID register */
-#define TCPC_VID_Msk                          _UINT16_(0xFFFF)                                     /* (TCPC_VID) Register Mask  */
-
-
 /** \brief TCPC register offsets definitions */
+#define TCPC_VID_REG_OFST              _UINT32_(0x00)      /* (TCPC_VID) Vendor ID Register Offset */
+#define TCPC_PID_REG_OFST              _UINT32_(0x02)      /* (TCPC_PID) Product ID Register Offset */
+#define TCPC_DID_REG_OFST              _UINT32_(0x04)      /* (TCPC_DID) Device ID Register Offset */
+#define TCPC_UTCR_REG_OFST             _UINT32_(0x06)      /* (TCPC_UTCR) USB Type-C Rev Register Offset */
+#define TCPC_UPDR_REG_OFST             _UINT32_(0x08)      /* (TCPC_UPDR) USB PD Rev Ver Register Offset */
+#define TCPC_PDIR_REG_OFST             _UINT32_(0x0A)      /* (TCPC_PDIR) PD Interface Rev Register Offset */
 #define TCPC_AL_REG_OFST               _UINT32_(0x10)      /* (TCPC_AL) Alert Register Offset */
 #define TCPC_ALM_REG_OFST              _UINT32_(0x12)      /* (TCPC_ALM) Alert Mask Register Offset */
-#define TCPC_CCS_REG_OFST              _UINT32_(0x1D)      /* (TCPC_CCS) CC Status Register Offset */
-#define TCPC_CMD_REG_OFST              _UINT32_(0x23)      /* (TCPC_CMD) Command Register Offset */
-#define TCPC_CR_REG_OFST               _UINT32_(0x80)      /* (TCPC_CR) Control Register Offset */
+#define TCPC_PSM_REG_OFST              _UINT32_(0x14)      /* (TCPC_PSM) Power Status Mask Register Offset */
+#define TCPC_FSM_REG_OFST              _UINT32_(0x15)      /* (TCPC_FSM) Fault Status Mask Register Offset */
 #define TCPC_CSO_REG_OFST              _UINT32_(0x18)      /* (TCPC_CSO) Config Standard Output Register Offset */
-#define TCPC_CSR_REG_OFST              _UINT32_(0x88)      /* (TCPC_CSR) Clear Status Register Offset */
+#define TCPC_RCTL_REG_OFST             _UINT32_(0x1A)      /* (TCPC_RCTL) Role Control Register Offset */
+#define TCPC_FCTL_REG_OFST             _UINT32_(0x1B)      /* (TCPC_FCTL) Fault Control Register Offset */
+#define TCPC_CCS_REG_OFST              _UINT32_(0x1D)      /* (TCPC_CCS) CC Status Register Offset */
+#define TCPC_PS_REG_OFST               _UINT32_(0x1E)      /* (TCPC_PS) Power Status Register Offset */
+#define TCPC_FS_REG_OFST               _UINT32_(0x1F)      /* (TCPC_FS) Fault Status Register Offset */
+#define TCPC_CMD_REG_OFST              _UINT32_(0x23)      /* (TCPC_CMD) Command Register Offset */
 #define TCPC_DCP1_REG_OFST             _UINT32_(0x24)      /* (TCPC_DCP1) Device Capabilities 1 Register Offset */
 #define TCPC_DCP2_REG_OFST             _UINT32_(0x26)      /* (TCPC_DCP2) Device Capabilities 2 Register Offset */
-#define TCPC_DID_REG_OFST              _UINT32_(0x04)      /* (TCPC_DID) Device ID Register Offset */
-#define TCPC_FCTL_REG_OFST             _UINT32_(0x1B)      /* (TCPC_FCTL) Fault Control Register Offset */
-#define TCPC_FS_REG_OFST               _UINT32_(0x1F)      /* (TCPC_FS) Fault Status Register Offset */
-#define TCPC_FSM_REG_OFST              _UINT32_(0x15)      /* (TCPC_FSM) Fault Status Mask Register Offset */
-#define TCPC_PDIR_REG_OFST             _UINT32_(0x0A)      /* (TCPC_PDIR) PD Interface Rev Register Offset */
-#define TCPC_PID_REG_OFST              _UINT32_(0x02)      /* (TCPC_PID) Product ID Register Offset */
-#define TCPC_PS_REG_OFST               _UINT32_(0x1E)      /* (TCPC_PS) Power Status Register Offset */
-#define TCPC_PSM_REG_OFST              _UINT32_(0x14)      /* (TCPC_PSM) Power Status Mask Register Offset */
-#define TCPC_RCTL_REG_OFST             _UINT32_(0x1A)      /* (TCPC_RCTL) Role Control Register Offset */
-#define TCPC_SAR_REG_OFST              _UINT32_(0x8C)      /* (TCPC_SAR) Set Alert Register Offset */
 #define TCPC_SIC_REG_OFST              _UINT32_(0x28)      /* (TCPC_SIC) Standard Input Capabilities Register Offset */
 #define TCPC_SOC_REG_OFST              _UINT32_(0x29)      /* (TCPC_SOC) Standard Output Capabilities Register Offset */
+#define TCPC_CR_REG_OFST               _UINT32_(0x80)      /* (TCPC_CR) Control Register Offset */
 #define TCPC_SSR_REG_OFST              _UINT32_(0x84)      /* (TCPC_SSR) Set Status Register Offset */
+#define TCPC_CSR_REG_OFST              _UINT32_(0x88)      /* (TCPC_CSR) Clear Status Register Offset */
+#define TCPC_SAR_REG_OFST              _UINT32_(0x8C)      /* (TCPC_SAR) Set Alert Register Offset */
 #define TCPC_UPC_REG_OFST              _UINT32_(0xA0)      /* (TCPC_UPC) USB Phy Control Register Offset */
-#define TCPC_UPDR_REG_OFST             _UINT32_(0x08)      /* (TCPC_UPDR) USB PD Rev Ver Register Offset */
 #define TCPC_UPS_REG_OFST              _UINT32_(0xA4)      /* (TCPC_UPS) USB Phy Status Register Offset */
-#define TCPC_UTCR_REG_OFST             _UINT32_(0x06)      /* (TCPC_UTCR) USB Type-C Rev Register Offset */
-#define TCPC_VID_REG_OFST              _UINT32_(0x00)      /* (TCPC_VID) Vendor ID Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief TCPC register API structure */

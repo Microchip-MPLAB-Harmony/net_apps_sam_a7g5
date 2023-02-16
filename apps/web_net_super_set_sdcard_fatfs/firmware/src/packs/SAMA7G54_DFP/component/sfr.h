@@ -1,7 +1,7 @@
 /*
  * Component description for SFR
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,89 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-11-02T14:25:51Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_SFR_COMPONENT_H_
 #define _SAMA7G_SFR_COMPONENT_H_
 
 /* ************************************************************************** */
 /*   SOFTWARE API DEFINITION FOR SFR                                          */
 /* ************************************************************************** */
-
-/* -------- SFR_CAN_SRAM_SEL : (SFR Offset: 0x2030) (R/W 32) SFR CAN SRAM Selection Register -------- */
-#define SFR_CAN_SRAM_SEL_RESETVALUE           _UINT32_(0x00)                                       /*  (SFR_CAN_SRAM_SEL) SFR CAN SRAM Selection Register  Reset Value */
-
-#define SFR_CAN_SRAM_SEL_UPPER_CAN0_Pos       _UINT32_(0)                                          /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Position */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN0_Msk       (_UINT32_(0x1) << SFR_CAN_SRAM_SEL_UPPER_CAN0_Pos)   /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Mask */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN0(value)    (SFR_CAN_SRAM_SEL_UPPER_CAN0_Msk & (_UINT32_(value) << SFR_CAN_SRAM_SEL_UPPER_CAN0_Pos)) /* Assigment of value for UPPER_CAN0 in the SFR_CAN_SRAM_SEL register */
-#define   SFR_CAN_SRAM_SEL_UPPER_CAN0_0_Val   _UINT32_(0x0)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM.  */
-#define   SFR_CAN_SRAM_SEL_UPPER_CAN0_1_Val   _UINT32_(0x1)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM.  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN0_0         (SFR_CAN_SRAM_SEL_UPPER_CAN0_0_Val << SFR_CAN_SRAM_SEL_UPPER_CAN0_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM. Position  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN0_1         (SFR_CAN_SRAM_SEL_UPPER_CAN0_1_Val << SFR_CAN_SRAM_SEL_UPPER_CAN0_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM. Position  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN1_Pos       _UINT32_(1)                                          /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Position */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN1_Msk       (_UINT32_(0x1) << SFR_CAN_SRAM_SEL_UPPER_CAN1_Pos)   /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Mask */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN1(value)    (SFR_CAN_SRAM_SEL_UPPER_CAN1_Msk & (_UINT32_(value) << SFR_CAN_SRAM_SEL_UPPER_CAN1_Pos)) /* Assigment of value for UPPER_CAN1 in the SFR_CAN_SRAM_SEL register */
-#define   SFR_CAN_SRAM_SEL_UPPER_CAN1_0_Val   _UINT32_(0x0)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM.  */
-#define   SFR_CAN_SRAM_SEL_UPPER_CAN1_1_Val   _UINT32_(0x1)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM.  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN1_0         (SFR_CAN_SRAM_SEL_UPPER_CAN1_0_Val << SFR_CAN_SRAM_SEL_UPPER_CAN1_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM. Position  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN1_1         (SFR_CAN_SRAM_SEL_UPPER_CAN1_1_Val << SFR_CAN_SRAM_SEL_UPPER_CAN1_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM. Position  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN2_Pos       _UINT32_(2)                                          /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Position */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN2_Msk       (_UINT32_(0x1) << SFR_CAN_SRAM_SEL_UPPER_CAN2_Pos)   /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Mask */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN2(value)    (SFR_CAN_SRAM_SEL_UPPER_CAN2_Msk & (_UINT32_(value) << SFR_CAN_SRAM_SEL_UPPER_CAN2_Pos)) /* Assigment of value for UPPER_CAN2 in the SFR_CAN_SRAM_SEL register */
-#define   SFR_CAN_SRAM_SEL_UPPER_CAN2_0_Val   _UINT32_(0x0)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM.  */
-#define   SFR_CAN_SRAM_SEL_UPPER_CAN2_1_Val   _UINT32_(0x1)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM.  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN2_0         (SFR_CAN_SRAM_SEL_UPPER_CAN2_0_Val << SFR_CAN_SRAM_SEL_UPPER_CAN2_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM. Position  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN2_1         (SFR_CAN_SRAM_SEL_UPPER_CAN2_1_Val << SFR_CAN_SRAM_SEL_UPPER_CAN2_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM. Position  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN3_Pos       _UINT32_(3)                                          /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Position */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN3_Msk       (_UINT32_(0x1) << SFR_CAN_SRAM_SEL_UPPER_CAN3_Pos)   /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Mask */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN3(value)    (SFR_CAN_SRAM_SEL_UPPER_CAN3_Msk & (_UINT32_(value) << SFR_CAN_SRAM_SEL_UPPER_CAN3_Pos)) /* Assigment of value for UPPER_CAN3 in the SFR_CAN_SRAM_SEL register */
-#define   SFR_CAN_SRAM_SEL_UPPER_CAN3_0_Val   _UINT32_(0x0)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM.  */
-#define   SFR_CAN_SRAM_SEL_UPPER_CAN3_1_Val   _UINT32_(0x1)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM.  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN3_0         (SFR_CAN_SRAM_SEL_UPPER_CAN3_0_Val << SFR_CAN_SRAM_SEL_UPPER_CAN3_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM. Position  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN3_1         (SFR_CAN_SRAM_SEL_UPPER_CAN3_1_Val << SFR_CAN_SRAM_SEL_UPPER_CAN3_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM. Position  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN4_Pos       _UINT32_(4)                                          /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Position */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN4_Msk       (_UINT32_(0x1) << SFR_CAN_SRAM_SEL_UPPER_CAN4_Pos)   /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Mask */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN4(value)    (SFR_CAN_SRAM_SEL_UPPER_CAN4_Msk & (_UINT32_(value) << SFR_CAN_SRAM_SEL_UPPER_CAN4_Pos)) /* Assigment of value for UPPER_CAN4 in the SFR_CAN_SRAM_SEL register */
-#define   SFR_CAN_SRAM_SEL_UPPER_CAN4_0_Val   _UINT32_(0x0)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM.  */
-#define   SFR_CAN_SRAM_SEL_UPPER_CAN4_1_Val   _UINT32_(0x1)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM.  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN4_0         (SFR_CAN_SRAM_SEL_UPPER_CAN4_0_Val << SFR_CAN_SRAM_SEL_UPPER_CAN4_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM. Position  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN4_1         (SFR_CAN_SRAM_SEL_UPPER_CAN4_1_Val << SFR_CAN_SRAM_SEL_UPPER_CAN4_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM. Position  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN5_Pos       _UINT32_(5)                                          /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Position */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN5_Msk       (_UINT32_(0x1) << SFR_CAN_SRAM_SEL_UPPER_CAN5_Pos)   /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Mask */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN5(value)    (SFR_CAN_SRAM_SEL_UPPER_CAN5_Msk & (_UINT32_(value) << SFR_CAN_SRAM_SEL_UPPER_CAN5_Pos)) /* Assigment of value for UPPER_CAN5 in the SFR_CAN_SRAM_SEL register */
-#define   SFR_CAN_SRAM_SEL_UPPER_CAN5_0_Val   _UINT32_(0x0)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM.  */
-#define   SFR_CAN_SRAM_SEL_UPPER_CAN5_1_Val   _UINT32_(0x1)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM.  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN5_0         (SFR_CAN_SRAM_SEL_UPPER_CAN5_0_Val << SFR_CAN_SRAM_SEL_UPPER_CAN5_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM. Position  */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN5_1         (SFR_CAN_SRAM_SEL_UPPER_CAN5_1_Val << SFR_CAN_SRAM_SEL_UPPER_CAN5_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM. Position  */
-#define SFR_CAN_SRAM_SEL_Msk                  _UINT32_(0x0000003F)                                 /* (SFR_CAN_SRAM_SEL) Register Mask  */
-
-#define SFR_CAN_SRAM_SEL_UPPER_CAN_Pos        _UINT32_(0)                                          /* (SFR_CAN_SRAM_SEL Position) CANx Upper 64K SRAM Selection */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN_Msk        (_UINT32_(0x3F) << SFR_CAN_SRAM_SEL_UPPER_CAN_Pos)   /* (SFR_CAN_SRAM_SEL Mask) UPPER_CAN */
-#define SFR_CAN_SRAM_SEL_UPPER_CAN(value)     (SFR_CAN_SRAM_SEL_UPPER_CAN_Msk & (_UINT32_(value) << SFR_CAN_SRAM_SEL_UPPER_CAN_Pos)) 
-
-/* -------- SFR_DEBUG : (SFR Offset: 0x200C) (R/W 32) Debug Register -------- */
-#define SFR_DEBUG_RESETVALUE                  _UINT32_(0x00)                                       /*  (SFR_DEBUG) Debug Register  Reset Value */
-
-#define SFR_DEBUG_PROT_Pos                    _UINT32_(0)                                          /* (SFR_DEBUG) Protection Debug Position */
-#define SFR_DEBUG_PROT_Msk                    (_UINT32_(0x1) << SFR_DEBUG_PROT_Pos)                /* (SFR_DEBUG) Protection Debug Mask */
-#define SFR_DEBUG_PROT(value)                 (SFR_DEBUG_PROT_Msk & (_UINT32_(value) << SFR_DEBUG_PROT_Pos)) /* Assigment of value for PROT in the SFR_DEBUG register */
-#define   SFR_DEBUG_PROT_0_Val                _UINT32_(0x0)                                        /* (SFR_DEBUG) Protection debug is disabled.  */
-#define   SFR_DEBUG_PROT_1_Val                _UINT32_(0x1)                                        /* (SFR_DEBUG) Protection debug is enabled.  */
-#define SFR_DEBUG_PROT_0                      (SFR_DEBUG_PROT_0_Val << SFR_DEBUG_PROT_Pos)         /* (SFR_DEBUG) Protection debug is disabled. Position  */
-#define SFR_DEBUG_PROT_1                      (SFR_DEBUG_PROT_1_Val << SFR_DEBUG_PROT_Pos)         /* (SFR_DEBUG) Protection debug is enabled. Position  */
-#define SFR_DEBUG_Msk                         _UINT32_(0x00000001)                                 /* (SFR_DEBUG) Register Mask  */
-
-
-/* -------- SFR_HSS_AXIQOS : (SFR Offset: 0x2028) (R/W 32) HSS AXI QOS Register -------- */
-#define SFR_HSS_AXIQOS_RESETVALUE             _UINT32_(0x00)                                       /*  (SFR_HSS_AXIQOS) HSS AXI QOS Register  Reset Value */
-
-#define SFR_HSS_AXIQOS_READ_Pos               _UINT32_(0)                                          /* (SFR_HSS_AXIQOS) QOS value for read transfer from HSS to the DDR controller Position */
-#define SFR_HSS_AXIQOS_READ_Msk               (_UINT32_(0xF) << SFR_HSS_AXIQOS_READ_Pos)           /* (SFR_HSS_AXIQOS) QOS value for read transfer from HSS to the DDR controller Mask */
-#define SFR_HSS_AXIQOS_READ(value)            (SFR_HSS_AXIQOS_READ_Msk & (_UINT32_(value) << SFR_HSS_AXIQOS_READ_Pos)) /* Assigment of value for READ in the SFR_HSS_AXIQOS register */
-#define SFR_HSS_AXIQOS_WRITE_Pos              _UINT32_(8)                                          /* (SFR_HSS_AXIQOS) QOS value for write transfer from HSS to the DDR controller Position */
-#define SFR_HSS_AXIQOS_WRITE_Msk              (_UINT32_(0xF) << SFR_HSS_AXIQOS_WRITE_Pos)          /* (SFR_HSS_AXIQOS) QOS value for write transfer from HSS to the DDR controller Mask */
-#define SFR_HSS_AXIQOS_WRITE(value)           (SFR_HSS_AXIQOS_WRITE_Msk & (_UINT32_(value) << SFR_HSS_AXIQOS_WRITE_Pos)) /* Assigment of value for WRITE in the SFR_HSS_AXIQOS register */
-#define SFR_HSS_AXIQOS_Msk                    _UINT32_(0x00000F0F)                                 /* (SFR_HSS_AXIQOS) Register Mask  */
-
 
 /* -------- SFR_OHCIICR : (SFR Offset: 0x00) (R/W 32) OHCI Interrupt Configuration Register -------- */
 #define SFR_OHCIICR_RESETVALUE                _UINT32_(0x00)                                       /*  (SFR_OHCIICR) OHCI Interrupt Configuration Register  Reset Value */
@@ -174,19 +98,6 @@
 #define SFR_OHCIISR_RIS_Msk                   (_UINT32_(0x7) << SFR_OHCIISR_RIS_Pos)               /* (SFR_OHCIISR Mask) RIS */
 #define SFR_OHCIISR_RIS(value)                (SFR_OHCIISR_RIS_Msk & (_UINT32_(value) << SFR_OHCIISR_RIS_Pos)) 
 
-/* -------- SFR_UDDRC : (SFR Offset: 0x202C) (R/W 32) UDDRC Register -------- */
-#define SFR_UDDRC_RESETVALUE                  _UINT32_(0x00)                                       /*  (SFR_UDDRC) UDDRC Register  Reset Value */
-
-#define SFR_UDDRC_DIS_DECERR_Pos              _UINT32_(0)                                          /* (SFR_UDDRC) Disable Decode Error Position */
-#define SFR_UDDRC_DIS_DECERR_Msk              (_UINT32_(0x1) << SFR_UDDRC_DIS_DECERR_Pos)          /* (SFR_UDDRC) Disable Decode Error Mask */
-#define SFR_UDDRC_DIS_DECERR(value)           (SFR_UDDRC_DIS_DECERR_Msk & (_UINT32_(value) << SFR_UDDRC_DIS_DECERR_Pos)) /* Assigment of value for DIS_DECERR in the SFR_UDDRC register */
-#define   SFR_UDDRC_DIS_DECERR_0_Val          _UINT32_(0x0)                                        /* (SFR_UDDRC) Enables decode error when reading a non-existing register in the DDR controller Configuration Address Space.  */
-#define   SFR_UDDRC_DIS_DECERR_1_Val          _UINT32_(0x1)                                        /* (SFR_UDDRC) Disables decode error when reading a non-existing register in the DDR controller Configuration Address Space.  */
-#define SFR_UDDRC_DIS_DECERR_0                (SFR_UDDRC_DIS_DECERR_0_Val << SFR_UDDRC_DIS_DECERR_Pos) /* (SFR_UDDRC) Enables decode error when reading a non-existing register in the DDR controller Configuration Address Space. Position  */
-#define SFR_UDDRC_DIS_DECERR_1                (SFR_UDDRC_DIS_DECERR_1_Val << SFR_UDDRC_DIS_DECERR_Pos) /* (SFR_UDDRC) Disables decode error when reading a non-existing register in the DDR controller Configuration Address Space. Position  */
-#define SFR_UDDRC_Msk                         _UINT32_(0x00000001)                                 /* (SFR_UDDRC) Register Mask  */
-
-
 /* -------- SFR_WPMR : (SFR Offset: 0xE4) (R/W 32) Write Protection Mode Register -------- */
 #define SFR_WPMR_RESETVALUE                   _UINT32_(0x00)                                       /*  (SFR_WPMR) Write Protection Mode Register  Reset Value */
 
@@ -221,15 +132,104 @@
 #define SFR_WPSR_Msk                          _UINT32_(0x00FFFF01)                                 /* (SFR_WPSR) Register Mask  */
 
 
+/* -------- SFR_DEBUG : (SFR Offset: 0x200C) (R/W 32) Debug Register -------- */
+#define SFR_DEBUG_RESETVALUE                  _UINT32_(0x00)                                       /*  (SFR_DEBUG) Debug Register  Reset Value */
+
+#define SFR_DEBUG_PROT_Pos                    _UINT32_(0)                                          /* (SFR_DEBUG) Protection Debug Position */
+#define SFR_DEBUG_PROT_Msk                    (_UINT32_(0x1) << SFR_DEBUG_PROT_Pos)                /* (SFR_DEBUG) Protection Debug Mask */
+#define SFR_DEBUG_PROT(value)                 (SFR_DEBUG_PROT_Msk & (_UINT32_(value) << SFR_DEBUG_PROT_Pos)) /* Assigment of value for PROT in the SFR_DEBUG register */
+#define   SFR_DEBUG_PROT_0_Val                _UINT32_(0x0)                                        /* (SFR_DEBUG) Protection debug is disabled.  */
+#define   SFR_DEBUG_PROT_1_Val                _UINT32_(0x1)                                        /* (SFR_DEBUG) Protection debug is enabled.  */
+#define SFR_DEBUG_PROT_0                      (SFR_DEBUG_PROT_0_Val << SFR_DEBUG_PROT_Pos)         /* (SFR_DEBUG) Protection debug is disabled. Position  */
+#define SFR_DEBUG_PROT_1                      (SFR_DEBUG_PROT_1_Val << SFR_DEBUG_PROT_Pos)         /* (SFR_DEBUG) Protection debug is enabled. Position  */
+#define SFR_DEBUG_Msk                         _UINT32_(0x00000001)                                 /* (SFR_DEBUG) Register Mask  */
+
+
+/* -------- SFR_HSS_AXIQOS : (SFR Offset: 0x2028) (R/W 32) HSS AXI QOS Register -------- */
+#define SFR_HSS_AXIQOS_RESETVALUE             _UINT32_(0x00)                                       /*  (SFR_HSS_AXIQOS) HSS AXI QOS Register  Reset Value */
+
+#define SFR_HSS_AXIQOS_READ_Pos               _UINT32_(0)                                          /* (SFR_HSS_AXIQOS) QOS value for read transfer from HSS to the DDR controller Position */
+#define SFR_HSS_AXIQOS_READ_Msk               (_UINT32_(0xF) << SFR_HSS_AXIQOS_READ_Pos)           /* (SFR_HSS_AXIQOS) QOS value for read transfer from HSS to the DDR controller Mask */
+#define SFR_HSS_AXIQOS_READ(value)            (SFR_HSS_AXIQOS_READ_Msk & (_UINT32_(value) << SFR_HSS_AXIQOS_READ_Pos)) /* Assigment of value for READ in the SFR_HSS_AXIQOS register */
+#define SFR_HSS_AXIQOS_WRITE_Pos              _UINT32_(8)                                          /* (SFR_HSS_AXIQOS) QOS value for write transfer from HSS to the DDR controller Position */
+#define SFR_HSS_AXIQOS_WRITE_Msk              (_UINT32_(0xF) << SFR_HSS_AXIQOS_WRITE_Pos)          /* (SFR_HSS_AXIQOS) QOS value for write transfer from HSS to the DDR controller Mask */
+#define SFR_HSS_AXIQOS_WRITE(value)           (SFR_HSS_AXIQOS_WRITE_Msk & (_UINT32_(value) << SFR_HSS_AXIQOS_WRITE_Pos)) /* Assigment of value for WRITE in the SFR_HSS_AXIQOS register */
+#define SFR_HSS_AXIQOS_Msk                    _UINT32_(0x00000F0F)                                 /* (SFR_HSS_AXIQOS) Register Mask  */
+
+
+/* -------- SFR_UDDRC : (SFR Offset: 0x202C) (R/W 32) UDDRC Register -------- */
+#define SFR_UDDRC_RESETVALUE                  _UINT32_(0x00)                                       /*  (SFR_UDDRC) UDDRC Register  Reset Value */
+
+#define SFR_UDDRC_DIS_DECERR_Pos              _UINT32_(0)                                          /* (SFR_UDDRC) Disable Decode Error Position */
+#define SFR_UDDRC_DIS_DECERR_Msk              (_UINT32_(0x1) << SFR_UDDRC_DIS_DECERR_Pos)          /* (SFR_UDDRC) Disable Decode Error Mask */
+#define SFR_UDDRC_DIS_DECERR(value)           (SFR_UDDRC_DIS_DECERR_Msk & (_UINT32_(value) << SFR_UDDRC_DIS_DECERR_Pos)) /* Assigment of value for DIS_DECERR in the SFR_UDDRC register */
+#define   SFR_UDDRC_DIS_DECERR_0_Val          _UINT32_(0x0)                                        /* (SFR_UDDRC) Enables decode error when reading a non-existing register in the DDR controller Configuration Address Space.  */
+#define   SFR_UDDRC_DIS_DECERR_1_Val          _UINT32_(0x1)                                        /* (SFR_UDDRC) Disables decode error when reading a non-existing register in the DDR controller Configuration Address Space.  */
+#define SFR_UDDRC_DIS_DECERR_0                (SFR_UDDRC_DIS_DECERR_0_Val << SFR_UDDRC_DIS_DECERR_Pos) /* (SFR_UDDRC) Enables decode error when reading a non-existing register in the DDR controller Configuration Address Space. Position  */
+#define SFR_UDDRC_DIS_DECERR_1                (SFR_UDDRC_DIS_DECERR_1_Val << SFR_UDDRC_DIS_DECERR_Pos) /* (SFR_UDDRC) Disables decode error when reading a non-existing register in the DDR controller Configuration Address Space. Position  */
+#define SFR_UDDRC_Msk                         _UINT32_(0x00000001)                                 /* (SFR_UDDRC) Register Mask  */
+
+
+/* -------- SFR_CAN_SRAM_SEL : (SFR Offset: 0x2030) (R/W 32) SFR CAN SRAM Selection Register -------- */
+#define SFR_CAN_SRAM_SEL_RESETVALUE           _UINT32_(0x00)                                       /*  (SFR_CAN_SRAM_SEL) SFR CAN SRAM Selection Register  Reset Value */
+
+#define SFR_CAN_SRAM_SEL_UPPER_CAN0_Pos       _UINT32_(0)                                          /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Position */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN0_Msk       (_UINT32_(0x1) << SFR_CAN_SRAM_SEL_UPPER_CAN0_Pos)   /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Mask */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN0(value)    (SFR_CAN_SRAM_SEL_UPPER_CAN0_Msk & (_UINT32_(value) << SFR_CAN_SRAM_SEL_UPPER_CAN0_Pos)) /* Assigment of value for UPPER_CAN0 in the SFR_CAN_SRAM_SEL register */
+#define   SFR_CAN_SRAM_SEL_UPPER_CAN0_0_Val   _UINT32_(0x0)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM.  */
+#define   SFR_CAN_SRAM_SEL_UPPER_CAN0_1_Val   _UINT32_(0x1)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM.  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN0_0         (SFR_CAN_SRAM_SEL_UPPER_CAN0_0_Val << SFR_CAN_SRAM_SEL_UPPER_CAN0_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM. Position  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN0_1         (SFR_CAN_SRAM_SEL_UPPER_CAN0_1_Val << SFR_CAN_SRAM_SEL_UPPER_CAN0_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM. Position  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN1_Pos       _UINT32_(1)                                          /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Position */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN1_Msk       (_UINT32_(0x1) << SFR_CAN_SRAM_SEL_UPPER_CAN1_Pos)   /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Mask */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN1(value)    (SFR_CAN_SRAM_SEL_UPPER_CAN1_Msk & (_UINT32_(value) << SFR_CAN_SRAM_SEL_UPPER_CAN1_Pos)) /* Assigment of value for UPPER_CAN1 in the SFR_CAN_SRAM_SEL register */
+#define   SFR_CAN_SRAM_SEL_UPPER_CAN1_0_Val   _UINT32_(0x0)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM.  */
+#define   SFR_CAN_SRAM_SEL_UPPER_CAN1_1_Val   _UINT32_(0x1)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM.  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN1_0         (SFR_CAN_SRAM_SEL_UPPER_CAN1_0_Val << SFR_CAN_SRAM_SEL_UPPER_CAN1_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM. Position  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN1_1         (SFR_CAN_SRAM_SEL_UPPER_CAN1_1_Val << SFR_CAN_SRAM_SEL_UPPER_CAN1_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM. Position  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN2_Pos       _UINT32_(2)                                          /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Position */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN2_Msk       (_UINT32_(0x1) << SFR_CAN_SRAM_SEL_UPPER_CAN2_Pos)   /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Mask */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN2(value)    (SFR_CAN_SRAM_SEL_UPPER_CAN2_Msk & (_UINT32_(value) << SFR_CAN_SRAM_SEL_UPPER_CAN2_Pos)) /* Assigment of value for UPPER_CAN2 in the SFR_CAN_SRAM_SEL register */
+#define   SFR_CAN_SRAM_SEL_UPPER_CAN2_0_Val   _UINT32_(0x0)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM.  */
+#define   SFR_CAN_SRAM_SEL_UPPER_CAN2_1_Val   _UINT32_(0x1)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM.  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN2_0         (SFR_CAN_SRAM_SEL_UPPER_CAN2_0_Val << SFR_CAN_SRAM_SEL_UPPER_CAN2_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM. Position  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN2_1         (SFR_CAN_SRAM_SEL_UPPER_CAN2_1_Val << SFR_CAN_SRAM_SEL_UPPER_CAN2_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM. Position  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN3_Pos       _UINT32_(3)                                          /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Position */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN3_Msk       (_UINT32_(0x1) << SFR_CAN_SRAM_SEL_UPPER_CAN3_Pos)   /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Mask */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN3(value)    (SFR_CAN_SRAM_SEL_UPPER_CAN3_Msk & (_UINT32_(value) << SFR_CAN_SRAM_SEL_UPPER_CAN3_Pos)) /* Assigment of value for UPPER_CAN3 in the SFR_CAN_SRAM_SEL register */
+#define   SFR_CAN_SRAM_SEL_UPPER_CAN3_0_Val   _UINT32_(0x0)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM.  */
+#define   SFR_CAN_SRAM_SEL_UPPER_CAN3_1_Val   _UINT32_(0x1)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM.  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN3_0         (SFR_CAN_SRAM_SEL_UPPER_CAN3_0_Val << SFR_CAN_SRAM_SEL_UPPER_CAN3_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM. Position  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN3_1         (SFR_CAN_SRAM_SEL_UPPER_CAN3_1_Val << SFR_CAN_SRAM_SEL_UPPER_CAN3_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM. Position  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN4_Pos       _UINT32_(4)                                          /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Position */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN4_Msk       (_UINT32_(0x1) << SFR_CAN_SRAM_SEL_UPPER_CAN4_Pos)   /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Mask */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN4(value)    (SFR_CAN_SRAM_SEL_UPPER_CAN4_Msk & (_UINT32_(value) << SFR_CAN_SRAM_SEL_UPPER_CAN4_Pos)) /* Assigment of value for UPPER_CAN4 in the SFR_CAN_SRAM_SEL register */
+#define   SFR_CAN_SRAM_SEL_UPPER_CAN4_0_Val   _UINT32_(0x0)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM.  */
+#define   SFR_CAN_SRAM_SEL_UPPER_CAN4_1_Val   _UINT32_(0x1)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM.  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN4_0         (SFR_CAN_SRAM_SEL_UPPER_CAN4_0_Val << SFR_CAN_SRAM_SEL_UPPER_CAN4_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM. Position  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN4_1         (SFR_CAN_SRAM_SEL_UPPER_CAN4_1_Val << SFR_CAN_SRAM_SEL_UPPER_CAN4_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM. Position  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN5_Pos       _UINT32_(5)                                          /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Position */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN5_Msk       (_UINT32_(0x1) << SFR_CAN_SRAM_SEL_UPPER_CAN5_Pos)   /* (SFR_CAN_SRAM_SEL) CANx Upper 64K SRAM Selection Mask */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN5(value)    (SFR_CAN_SRAM_SEL_UPPER_CAN5_Msk & (_UINT32_(value) << SFR_CAN_SRAM_SEL_UPPER_CAN5_Pos)) /* Assigment of value for UPPER_CAN5 in the SFR_CAN_SRAM_SEL register */
+#define   SFR_CAN_SRAM_SEL_UPPER_CAN5_0_Val   _UINT32_(0x0)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM.  */
+#define   SFR_CAN_SRAM_SEL_UPPER_CAN5_1_Val   _UINT32_(0x1)                                        /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM.  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN5_0         (SFR_CAN_SRAM_SEL_UPPER_CAN5_0_Val << SFR_CAN_SRAM_SEL_UPPER_CAN5_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the lower 64K SRAM. Position  */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN5_1         (SFR_CAN_SRAM_SEL_UPPER_CAN5_1_Val << SFR_CAN_SRAM_SEL_UPPER_CAN5_Pos) /* (SFR_CAN_SRAM_SEL) CANx accesses the upper 64K SRAM. Position  */
+#define SFR_CAN_SRAM_SEL_Msk                  _UINT32_(0x0000003F)                                 /* (SFR_CAN_SRAM_SEL) Register Mask  */
+
+#define SFR_CAN_SRAM_SEL_UPPER_CAN_Pos        _UINT32_(0)                                          /* (SFR_CAN_SRAM_SEL Position) CANx Upper 64K SRAM Selection */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN_Msk        (_UINT32_(0x3F) << SFR_CAN_SRAM_SEL_UPPER_CAN_Pos)   /* (SFR_CAN_SRAM_SEL Mask) UPPER_CAN */
+#define SFR_CAN_SRAM_SEL_UPPER_CAN(value)     (SFR_CAN_SRAM_SEL_UPPER_CAN_Msk & (_UINT32_(value) << SFR_CAN_SRAM_SEL_UPPER_CAN_Pos)) 
+
 /** \brief SFR register offsets definitions */
-#define SFR_CAN_SRAM_SEL_REG_OFST      _UINT32_(0x2030)    /* (SFR_CAN_SRAM_SEL) SFR CAN SRAM Selection Register Offset */
-#define SFR_DEBUG_REG_OFST             _UINT32_(0x200C)    /* (SFR_DEBUG) Debug Register Offset */
-#define SFR_HSS_AXIQOS_REG_OFST        _UINT32_(0x2028)    /* (SFR_HSS_AXIQOS) HSS AXI QOS Register Offset */
 #define SFR_OHCIICR_REG_OFST           _UINT32_(0x00)      /* (SFR_OHCIICR) OHCI Interrupt Configuration Register Offset */
 #define SFR_OHCIISR_REG_OFST           _UINT32_(0x04)      /* (SFR_OHCIISR) OHCI Interrupt Status Register Offset */
-#define SFR_UDDRC_REG_OFST             _UINT32_(0x202C)    /* (SFR_UDDRC) UDDRC Register Offset */
 #define SFR_WPMR_REG_OFST              _UINT32_(0xE4)      /* (SFR_WPMR) Write Protection Mode Register Offset */
 #define SFR_WPSR_REG_OFST              _UINT32_(0xE8)      /* (SFR_WPSR) Write Protection Status Register Offset */
+#define SFR_DEBUG_REG_OFST             _UINT32_(0x200C)    /* (SFR_DEBUG) Debug Register Offset */
+#define SFR_HSS_AXIQOS_REG_OFST        _UINT32_(0x2028)    /* (SFR_HSS_AXIQOS) HSS AXI QOS Register Offset */
+#define SFR_UDDRC_REG_OFST             _UINT32_(0x202C)    /* (SFR_UDDRC) UDDRC Register Offset */
+#define SFR_CAN_SRAM_SEL_REG_OFST      _UINT32_(0x2030)    /* (SFR_CAN_SRAM_SEL) SFR CAN SRAM Selection Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SFR register API structure */

@@ -1,7 +1,7 @@
 /*
  * Component description for PIT64B
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-11-02T14:25:51Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_PIT64B_COMPONENT_H_
 #define _SAMA7G_PIT64B_COMPONENT_H_
 
@@ -46,17 +46,54 @@
 #define PIT64B_CR_Msk                         _UINT32_(0x00000101)                                 /* (PIT64B_CR) Register Mask  */
 
 
-/* -------- PIT64B_IDR : (PIT64B Offset: 0x14) ( /W 32) Interrupt Disable Register -------- */
-#define PIT64B_IDR_PERIOD_Pos                 _UINT32_(0)                                          /* (PIT64B_IDR) Elapsed Timer Period Interrupt Disable Position */
-#define PIT64B_IDR_PERIOD_Msk                 (_UINT32_(0x1) << PIT64B_IDR_PERIOD_Pos)             /* (PIT64B_IDR) Elapsed Timer Period Interrupt Disable Mask */
-#define PIT64B_IDR_PERIOD(value)              (PIT64B_IDR_PERIOD_Msk & (_UINT32_(value) << PIT64B_IDR_PERIOD_Pos)) /* Assigment of value for PERIOD in the PIT64B_IDR register */
-#define PIT64B_IDR_OVRE_Pos                   _UINT32_(1)                                          /* (PIT64B_IDR) Overrun Error Interrupt Disable Position */
-#define PIT64B_IDR_OVRE_Msk                   (_UINT32_(0x1) << PIT64B_IDR_OVRE_Pos)               /* (PIT64B_IDR) Overrun Error Interrupt Disable Mask */
-#define PIT64B_IDR_OVRE(value)                (PIT64B_IDR_OVRE_Msk & (_UINT32_(value) << PIT64B_IDR_OVRE_Pos)) /* Assigment of value for OVRE in the PIT64B_IDR register */
-#define PIT64B_IDR_SECE_Pos                   _UINT32_(4)                                          /* (PIT64B_IDR) Safety and/or Security Report Interrupt Disable Position */
-#define PIT64B_IDR_SECE_Msk                   (_UINT32_(0x1) << PIT64B_IDR_SECE_Pos)               /* (PIT64B_IDR) Safety and/or Security Report Interrupt Disable Mask */
-#define PIT64B_IDR_SECE(value)                (PIT64B_IDR_SECE_Msk & (_UINT32_(value) << PIT64B_IDR_SECE_Pos)) /* Assigment of value for SECE in the PIT64B_IDR register */
-#define PIT64B_IDR_Msk                        _UINT32_(0x00000013)                                 /* (PIT64B_IDR) Register Mask  */
+/* -------- PIT64B_MR : (PIT64B Offset: 0x04) (R/W 32) Mode Register -------- */
+#define PIT64B_MR_RESETVALUE                  _UINT32_(0x00)                                       /*  (PIT64B_MR) Mode Register  Reset Value */
+
+#define PIT64B_MR_CONT_Pos                    _UINT32_(0)                                          /* (PIT64B_MR) Continuous Mode Position */
+#define PIT64B_MR_CONT_Msk                    (_UINT32_(0x1) << PIT64B_MR_CONT_Pos)                /* (PIT64B_MR) Continuous Mode Mask */
+#define PIT64B_MR_CONT(value)                 (PIT64B_MR_CONT_Msk & (_UINT32_(value) << PIT64B_MR_CONT_Pos)) /* Assigment of value for CONT in the PIT64B_MR register */
+#define   PIT64B_MR_CONT_0_Val                _UINT32_(0x0)                                        /* (PIT64B_MR) A single period interrupt is generated from a START command.  */
+#define   PIT64B_MR_CONT_1_Val                _UINT32_(0x1)                                        /* (PIT64B_MR) Continuous periodic interrupts are generated after a single START command.  */
+#define PIT64B_MR_CONT_0                      (PIT64B_MR_CONT_0_Val << PIT64B_MR_CONT_Pos)         /* (PIT64B_MR) A single period interrupt is generated from a START command. Position  */
+#define PIT64B_MR_CONT_1                      (PIT64B_MR_CONT_1_Val << PIT64B_MR_CONT_Pos)         /* (PIT64B_MR) Continuous periodic interrupts are generated after a single START command. Position  */
+#define PIT64B_MR_SGCLK_Pos                   _UINT32_(3)                                          /* (PIT64B_MR) Generic Clock Selection Enable Position */
+#define PIT64B_MR_SGCLK_Msk                   (_UINT32_(0x1) << PIT64B_MR_SGCLK_Pos)               /* (PIT64B_MR) Generic Clock Selection Enable Mask */
+#define PIT64B_MR_SGCLK(value)                (PIT64B_MR_SGCLK_Msk & (_UINT32_(value) << PIT64B_MR_SGCLK_Pos)) /* Assigment of value for SGCLK in the PIT64B_MR register */
+#define   PIT64B_MR_SGCLK_0_Val               _UINT32_(0x0)                                        /* (PIT64B_MR) The prescaler is triggered at each rising edge of "Peripheral clock" and the timer is triggered.  */
+#define   PIT64B_MR_SGCLK_1_Val               _UINT32_(0x1)                                        /* (PIT64B_MR) GCLK clock is selected as clock source of the 8-bit prescaler.  */
+#define PIT64B_MR_SGCLK_0                     (PIT64B_MR_SGCLK_0_Val << PIT64B_MR_SGCLK_Pos)       /* (PIT64B_MR) The prescaler is triggered at each rising edge of "Peripheral clock" and the timer is triggered. Position  */
+#define PIT64B_MR_SGCLK_1                     (PIT64B_MR_SGCLK_1_Val << PIT64B_MR_SGCLK_Pos)       /* (PIT64B_MR) GCLK clock is selected as clock source of the 8-bit prescaler. Position  */
+#define PIT64B_MR_SMOD_Pos                    _UINT32_(4)                                          /* (PIT64B_MR) Start Mode Position */
+#define PIT64B_MR_SMOD_Msk                    (_UINT32_(0x1) << PIT64B_MR_SMOD_Pos)                /* (PIT64B_MR) Start Mode Mask */
+#define PIT64B_MR_SMOD(value)                 (PIT64B_MR_SMOD_Msk & (_UINT32_(value) << PIT64B_MR_SMOD_Pos)) /* Assigment of value for SMOD in the PIT64B_MR register */
+#define   PIT64B_MR_SMOD_0_Val                _UINT32_(0x0)                                        /* (PIT64B_MR) Writing PIT64B_LSBPR does not start the timer period.  */
+#define   PIT64B_MR_SMOD_1_Val                _UINT32_(0x1)                                        /* (PIT64B_MR) Writing PIT64B_LSBPR starts the timer period.  */
+#define PIT64B_MR_SMOD_0                      (PIT64B_MR_SMOD_0_Val << PIT64B_MR_SMOD_Pos)         /* (PIT64B_MR) Writing PIT64B_LSBPR does not start the timer period. Position  */
+#define PIT64B_MR_SMOD_1                      (PIT64B_MR_SMOD_1_Val << PIT64B_MR_SMOD_Pos)         /* (PIT64B_MR) Writing PIT64B_LSBPR starts the timer period. Position  */
+#define PIT64B_MR_PRESCALER_Pos               _UINT32_(8)                                          /* (PIT64B_MR) Prescaler Period Position */
+#define PIT64B_MR_PRESCALER_Msk               (_UINT32_(0xF) << PIT64B_MR_PRESCALER_Pos)           /* (PIT64B_MR) Prescaler Period Mask */
+#define PIT64B_MR_PRESCALER(value)            (PIT64B_MR_PRESCALER_Msk & (_UINT32_(value) << PIT64B_MR_PRESCALER_Pos)) /* Assigment of value for PRESCALER in the PIT64B_MR register */
+#define   PIT64B_MR_PRESCALER_0_Val           _UINT32_(0x0)                                        /* (PIT64B_MR) A prescaler divider of 1 is used.  */
+#define PIT64B_MR_PRESCALER_0                 (PIT64B_MR_PRESCALER_0_Val << PIT64B_MR_PRESCALER_Pos) /* (PIT64B_MR) A prescaler divider of 1 is used. Position  */
+#define PIT64B_MR_Msk                         _UINT32_(0x00000F19)                                 /* (PIT64B_MR) Register Mask  */
+
+
+/* -------- PIT64B_LSBPR : (PIT64B Offset: 0x08) (R/W 32) LSB Period Register -------- */
+#define PIT64B_LSBPR_RESETVALUE               _UINT32_(0x00)                                       /*  (PIT64B_LSBPR) LSB Period Register  Reset Value */
+
+#define PIT64B_LSBPR_LSBPERIOD_Pos            _UINT32_(0)                                          /* (PIT64B_LSBPR) 32 LSB of the Timer Period Position */
+#define PIT64B_LSBPR_LSBPERIOD_Msk            (_UINT32_(0xFFFFFFFF) << PIT64B_LSBPR_LSBPERIOD_Pos) /* (PIT64B_LSBPR) 32 LSB of the Timer Period Mask */
+#define PIT64B_LSBPR_LSBPERIOD(value)         (PIT64B_LSBPR_LSBPERIOD_Msk & (_UINT32_(value) << PIT64B_LSBPR_LSBPERIOD_Pos)) /* Assigment of value for LSBPERIOD in the PIT64B_LSBPR register */
+#define PIT64B_LSBPR_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (PIT64B_LSBPR) Register Mask  */
+
+
+/* -------- PIT64B_MSBPR : (PIT64B Offset: 0x0C) (R/W 32) MSB Period Register -------- */
+#define PIT64B_MSBPR_RESETVALUE               _UINT32_(0x00)                                       /*  (PIT64B_MSBPR) MSB Period Register  Reset Value */
+
+#define PIT64B_MSBPR_MSBPERIOD_Pos            _UINT32_(0)                                          /* (PIT64B_MSBPR) 32 MSB of the Timer Period Position */
+#define PIT64B_MSBPR_MSBPERIOD_Msk            (_UINT32_(0xFFFFFFFF) << PIT64B_MSBPR_MSBPERIOD_Pos) /* (PIT64B_MSBPR) 32 MSB of the Timer Period Mask */
+#define PIT64B_MSBPR_MSBPERIOD(value)         (PIT64B_MSBPR_MSBPERIOD_Msk & (_UINT32_(value) << PIT64B_MSBPR_MSBPERIOD_Pos)) /* Assigment of value for MSBPERIOD in the PIT64B_MSBPR register */
+#define PIT64B_MSBPR_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (PIT64B_MSBPR) Register Mask  */
 
 
 /* -------- PIT64B_IER : (PIT64B Offset: 0x10) ( /W 32) Interrupt Enable Register -------- */
@@ -70,6 +107,19 @@
 #define PIT64B_IER_SECE_Msk                   (_UINT32_(0x1) << PIT64B_IER_SECE_Pos)               /* (PIT64B_IER) Safety and/or Security Report Interrupt Enable Mask */
 #define PIT64B_IER_SECE(value)                (PIT64B_IER_SECE_Msk & (_UINT32_(value) << PIT64B_IER_SECE_Pos)) /* Assigment of value for SECE in the PIT64B_IER register */
 #define PIT64B_IER_Msk                        _UINT32_(0x00000013)                                 /* (PIT64B_IER) Register Mask  */
+
+
+/* -------- PIT64B_IDR : (PIT64B Offset: 0x14) ( /W 32) Interrupt Disable Register -------- */
+#define PIT64B_IDR_PERIOD_Pos                 _UINT32_(0)                                          /* (PIT64B_IDR) Elapsed Timer Period Interrupt Disable Position */
+#define PIT64B_IDR_PERIOD_Msk                 (_UINT32_(0x1) << PIT64B_IDR_PERIOD_Pos)             /* (PIT64B_IDR) Elapsed Timer Period Interrupt Disable Mask */
+#define PIT64B_IDR_PERIOD(value)              (PIT64B_IDR_PERIOD_Msk & (_UINT32_(value) << PIT64B_IDR_PERIOD_Pos)) /* Assigment of value for PERIOD in the PIT64B_IDR register */
+#define PIT64B_IDR_OVRE_Pos                   _UINT32_(1)                                          /* (PIT64B_IDR) Overrun Error Interrupt Disable Position */
+#define PIT64B_IDR_OVRE_Msk                   (_UINT32_(0x1) << PIT64B_IDR_OVRE_Pos)               /* (PIT64B_IDR) Overrun Error Interrupt Disable Mask */
+#define PIT64B_IDR_OVRE(value)                (PIT64B_IDR_OVRE_Msk & (_UINT32_(value) << PIT64B_IDR_OVRE_Pos)) /* Assigment of value for OVRE in the PIT64B_IDR register */
+#define PIT64B_IDR_SECE_Pos                   _UINT32_(4)                                          /* (PIT64B_IDR) Safety and/or Security Report Interrupt Disable Position */
+#define PIT64B_IDR_SECE_Msk                   (_UINT32_(0x1) << PIT64B_IDR_SECE_Pos)               /* (PIT64B_IDR) Safety and/or Security Report Interrupt Disable Mask */
+#define PIT64B_IDR_SECE(value)                (PIT64B_IDR_SECE_Msk & (_UINT32_(value) << PIT64B_IDR_SECE_Pos)) /* Assigment of value for SECE in the PIT64B_IDR register */
+#define PIT64B_IDR_Msk                        _UINT32_(0x00000013)                                 /* (PIT64B_IDR) Register Mask  */
 
 
 /* -------- PIT64B_IMR : (PIT64B Offset: 0x18) ( R/ 32) Interrupt Mask Register -------- */
@@ -112,56 +162,6 @@
 #define PIT64B_ISR_SECE_0                     (PIT64B_ISR_SECE_0_Val << PIT64B_ISR_SECE_Pos)       /* (PIT64B_ISR) There is no security report in PIT64B_WPSR since the last read of PIT64B_ISR. Position  */
 #define PIT64B_ISR_SECE_1                     (PIT64B_ISR_SECE_1_Val << PIT64B_ISR_SECE_Pos)       /* (PIT64B_ISR) One security flag is set in PIT64B_WPSR since the last read of PIT64B_ISR. Position  */
 #define PIT64B_ISR_Msk                        _UINT32_(0x00000013)                                 /* (PIT64B_ISR) Register Mask  */
-
-
-/* -------- PIT64B_LSBPR : (PIT64B Offset: 0x08) (R/W 32) LSB Period Register -------- */
-#define PIT64B_LSBPR_RESETVALUE               _UINT32_(0x00)                                       /*  (PIT64B_LSBPR) LSB Period Register  Reset Value */
-
-#define PIT64B_LSBPR_LSBPERIOD_Pos            _UINT32_(0)                                          /* (PIT64B_LSBPR) 32 LSB of the Timer Period Position */
-#define PIT64B_LSBPR_LSBPERIOD_Msk            (_UINT32_(0xFFFFFFFF) << PIT64B_LSBPR_LSBPERIOD_Pos) /* (PIT64B_LSBPR) 32 LSB of the Timer Period Mask */
-#define PIT64B_LSBPR_LSBPERIOD(value)         (PIT64B_LSBPR_LSBPERIOD_Msk & (_UINT32_(value) << PIT64B_LSBPR_LSBPERIOD_Pos)) /* Assigment of value for LSBPERIOD in the PIT64B_LSBPR register */
-#define PIT64B_LSBPR_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (PIT64B_LSBPR) Register Mask  */
-
-
-/* -------- PIT64B_MR : (PIT64B Offset: 0x04) (R/W 32) Mode Register -------- */
-#define PIT64B_MR_RESETVALUE                  _UINT32_(0x00)                                       /*  (PIT64B_MR) Mode Register  Reset Value */
-
-#define PIT64B_MR_CONT_Pos                    _UINT32_(0)                                          /* (PIT64B_MR) Continuous Mode Position */
-#define PIT64B_MR_CONT_Msk                    (_UINT32_(0x1) << PIT64B_MR_CONT_Pos)                /* (PIT64B_MR) Continuous Mode Mask */
-#define PIT64B_MR_CONT(value)                 (PIT64B_MR_CONT_Msk & (_UINT32_(value) << PIT64B_MR_CONT_Pos)) /* Assigment of value for CONT in the PIT64B_MR register */
-#define   PIT64B_MR_CONT_0_Val                _UINT32_(0x0)                                        /* (PIT64B_MR) A single period interrupt is generated from a START command.  */
-#define   PIT64B_MR_CONT_1_Val                _UINT32_(0x1)                                        /* (PIT64B_MR) Continuous periodic interrupts are generated after a single START command.  */
-#define PIT64B_MR_CONT_0                      (PIT64B_MR_CONT_0_Val << PIT64B_MR_CONT_Pos)         /* (PIT64B_MR) A single period interrupt is generated from a START command. Position  */
-#define PIT64B_MR_CONT_1                      (PIT64B_MR_CONT_1_Val << PIT64B_MR_CONT_Pos)         /* (PIT64B_MR) Continuous periodic interrupts are generated after a single START command. Position  */
-#define PIT64B_MR_SGCLK_Pos                   _UINT32_(3)                                          /* (PIT64B_MR) Generic Clock Selection Enable Position */
-#define PIT64B_MR_SGCLK_Msk                   (_UINT32_(0x1) << PIT64B_MR_SGCLK_Pos)               /* (PIT64B_MR) Generic Clock Selection Enable Mask */
-#define PIT64B_MR_SGCLK(value)                (PIT64B_MR_SGCLK_Msk & (_UINT32_(value) << PIT64B_MR_SGCLK_Pos)) /* Assigment of value for SGCLK in the PIT64B_MR register */
-#define   PIT64B_MR_SGCLK_0_Val               _UINT32_(0x0)                                        /* (PIT64B_MR) The prescaler is triggered at each rising edge of "Peripheral clock" and the timer is triggered.  */
-#define   PIT64B_MR_SGCLK_1_Val               _UINT32_(0x1)                                        /* (PIT64B_MR) GCLK clock is selected as clock source of the 8-bit prescaler.  */
-#define PIT64B_MR_SGCLK_0                     (PIT64B_MR_SGCLK_0_Val << PIT64B_MR_SGCLK_Pos)       /* (PIT64B_MR) The prescaler is triggered at each rising edge of "Peripheral clock" and the timer is triggered. Position  */
-#define PIT64B_MR_SGCLK_1                     (PIT64B_MR_SGCLK_1_Val << PIT64B_MR_SGCLK_Pos)       /* (PIT64B_MR) GCLK clock is selected as clock source of the 8-bit prescaler. Position  */
-#define PIT64B_MR_SMOD_Pos                    _UINT32_(4)                                          /* (PIT64B_MR) Start Mode Position */
-#define PIT64B_MR_SMOD_Msk                    (_UINT32_(0x1) << PIT64B_MR_SMOD_Pos)                /* (PIT64B_MR) Start Mode Mask */
-#define PIT64B_MR_SMOD(value)                 (PIT64B_MR_SMOD_Msk & (_UINT32_(value) << PIT64B_MR_SMOD_Pos)) /* Assigment of value for SMOD in the PIT64B_MR register */
-#define   PIT64B_MR_SMOD_0_Val                _UINT32_(0x0)                                        /* (PIT64B_MR) Writing PIT64B_LSBPR does not start the timer period.  */
-#define   PIT64B_MR_SMOD_1_Val                _UINT32_(0x1)                                        /* (PIT64B_MR) Writing PIT64B_LSBPR starts the timer period.  */
-#define PIT64B_MR_SMOD_0                      (PIT64B_MR_SMOD_0_Val << PIT64B_MR_SMOD_Pos)         /* (PIT64B_MR) Writing PIT64B_LSBPR does not start the timer period. Position  */
-#define PIT64B_MR_SMOD_1                      (PIT64B_MR_SMOD_1_Val << PIT64B_MR_SMOD_Pos)         /* (PIT64B_MR) Writing PIT64B_LSBPR starts the timer period. Position  */
-#define PIT64B_MR_PRESCALER_Pos               _UINT32_(8)                                          /* (PIT64B_MR) Prescaler Period Position */
-#define PIT64B_MR_PRESCALER_Msk               (_UINT32_(0xF) << PIT64B_MR_PRESCALER_Pos)           /* (PIT64B_MR) Prescaler Period Mask */
-#define PIT64B_MR_PRESCALER(value)            (PIT64B_MR_PRESCALER_Msk & (_UINT32_(value) << PIT64B_MR_PRESCALER_Pos)) /* Assigment of value for PRESCALER in the PIT64B_MR register */
-#define   PIT64B_MR_PRESCALER_0_Val           _UINT32_(0x0)                                        /* (PIT64B_MR) A prescaler divider of 1 is used.  */
-#define PIT64B_MR_PRESCALER_0                 (PIT64B_MR_PRESCALER_0_Val << PIT64B_MR_PRESCALER_Pos) /* (PIT64B_MR) A prescaler divider of 1 is used. Position  */
-#define PIT64B_MR_Msk                         _UINT32_(0x00000F19)                                 /* (PIT64B_MR) Register Mask  */
-
-
-/* -------- PIT64B_MSBPR : (PIT64B Offset: 0x0C) (R/W 32) MSB Period Register -------- */
-#define PIT64B_MSBPR_RESETVALUE               _UINT32_(0x00)                                       /*  (PIT64B_MSBPR) MSB Period Register  Reset Value */
-
-#define PIT64B_MSBPR_MSBPERIOD_Pos            _UINT32_(0)                                          /* (PIT64B_MSBPR) 32 MSB of the Timer Period Position */
-#define PIT64B_MSBPR_MSBPERIOD_Msk            (_UINT32_(0xFFFFFFFF) << PIT64B_MSBPR_MSBPERIOD_Pos) /* (PIT64B_MSBPR) 32 MSB of the Timer Period Mask */
-#define PIT64B_MSBPR_MSBPERIOD(value)         (PIT64B_MSBPR_MSBPERIOD_Msk & (_UINT32_(value) << PIT64B_MSBPR_MSBPERIOD_Pos)) /* Assigment of value for MSBPERIOD in the PIT64B_MSBPR register */
-#define PIT64B_MSBPR_Msk                      _UINT32_(0xFFFFFFFF)                                 /* (PIT64B_MSBPR) Register Mask  */
 
 
 /* -------- PIT64B_TLSBR : (PIT64B Offset: 0x20) ( R/ 32) Timer LSB Current Value Register -------- */
@@ -278,13 +278,13 @@
 
 /** \brief PIT64B register offsets definitions */
 #define PIT64B_CR_REG_OFST             _UINT32_(0x00)      /* (PIT64B_CR) Control Register Offset */
-#define PIT64B_IDR_REG_OFST            _UINT32_(0x14)      /* (PIT64B_IDR) Interrupt Disable Register Offset */
+#define PIT64B_MR_REG_OFST             _UINT32_(0x04)      /* (PIT64B_MR) Mode Register Offset */
+#define PIT64B_LSBPR_REG_OFST          _UINT32_(0x08)      /* (PIT64B_LSBPR) LSB Period Register Offset */
+#define PIT64B_MSBPR_REG_OFST          _UINT32_(0x0C)      /* (PIT64B_MSBPR) MSB Period Register Offset */
 #define PIT64B_IER_REG_OFST            _UINT32_(0x10)      /* (PIT64B_IER) Interrupt Enable Register Offset */
+#define PIT64B_IDR_REG_OFST            _UINT32_(0x14)      /* (PIT64B_IDR) Interrupt Disable Register Offset */
 #define PIT64B_IMR_REG_OFST            _UINT32_(0x18)      /* (PIT64B_IMR) Interrupt Mask Register Offset */
 #define PIT64B_ISR_REG_OFST            _UINT32_(0x1C)      /* (PIT64B_ISR) Interrupt Status Register Offset */
-#define PIT64B_LSBPR_REG_OFST          _UINT32_(0x08)      /* (PIT64B_LSBPR) LSB Period Register Offset */
-#define PIT64B_MR_REG_OFST             _UINT32_(0x04)      /* (PIT64B_MR) Mode Register Offset */
-#define PIT64B_MSBPR_REG_OFST          _UINT32_(0x0C)      /* (PIT64B_MSBPR) MSB Period Register Offset */
 #define PIT64B_TLSBR_REG_OFST          _UINT32_(0x20)      /* (PIT64B_TLSBR) Timer LSB Current Value Register Offset */
 #define PIT64B_TMSBR_REG_OFST          _UINT32_(0x24)      /* (PIT64B_TMSBR) Timer MSB Current Value Register Offset */
 #define PIT64B_WPMR_REG_OFST           _UINT32_(0xE4)      /* (PIT64B_WPMR) Write Protection Mode Register Offset */

@@ -1,7 +1,7 @@
 /*
  * Component description for UHPFS
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-11-02T14:25:51Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_UHPFS_COMPONENT_H_
 #define _SAMA7G_UHPFS_COMPONENT_H_
 
@@ -28,47 +28,15 @@
 /*   SOFTWARE API DEFINITION FOR UHPFS                                        */
 /* ************************************************************************** */
 
-/* -------- UHPFS_HcBulkCurrentED : (UHPFS Offset: 0x2C) (R/W 32) HC Current Bulk Register -------- */
-#define UHPFS_HcBulkCurrentED_RESETVALUE      _UINT32_(0x00)                                       /*  (UHPFS_HcBulkCurrentED) HC Current Bulk Register  Reset Value */
+/* -------- UHPFS_HcRevision : (UHPFS Offset: 0x00) ( R/ 32) OHCI Revision Number Register -------- */
+#define UHPFS_HcRevision_RESETVALUE           _UINT32_(0x10)                                       /*  (UHPFS_HcRevision) OHCI Revision Number Register  Reset Value */
 
-#define UHPFS_HcBulkCurrentED_BCED_Pos        _UINT32_(4)                                          /* (UHPFS_HcBulkCurrentED) Physical Address of the Current ED on the Bulk ED List Position */
-#define UHPFS_HcBulkCurrentED_BCED_Msk        (_UINT32_(0xFFFFFFF) << UHPFS_HcBulkCurrentED_BCED_Pos) /* (UHPFS_HcBulkCurrentED) Physical Address of the Current ED on the Bulk ED List Mask */
-#define UHPFS_HcBulkCurrentED_BCED(value)     (UHPFS_HcBulkCurrentED_BCED_Msk & (_UINT32_(value) << UHPFS_HcBulkCurrentED_BCED_Pos)) /* Assigment of value for BCED in the UHPFS_HcBulkCurrentED register */
-#define UHPFS_HcBulkCurrentED_Msk             _UINT32_(0xFFFFFFF0)                                 /* (UHPFS_HcBulkCurrentED) Register Mask  */
-
-
-/* -------- UHPFS_HcBulkHeadED : (UHPFS Offset: 0x28) (R/W 32) HC Head Bulk Register -------- */
-#define UHPFS_HcBulkHeadED_RESETVALUE         _UINT32_(0x00)                                       /*  (UHPFS_HcBulkHeadED) HC Head Bulk Register  Reset Value */
-
-#define UHPFS_HcBulkHeadED_BHED_Pos           _UINT32_(4)                                          /* (UHPFS_HcBulkHeadED) Physical Address of the Head ED on the Bulk ED List Position */
-#define UHPFS_HcBulkHeadED_BHED_Msk           (_UINT32_(0xFFFFFFF) << UHPFS_HcBulkHeadED_BHED_Pos) /* (UHPFS_HcBulkHeadED) Physical Address of the Head ED on the Bulk ED List Mask */
-#define UHPFS_HcBulkHeadED_BHED(value)        (UHPFS_HcBulkHeadED_BHED_Msk & (_UINT32_(value) << UHPFS_HcBulkHeadED_BHED_Pos)) /* Assigment of value for BHED in the UHPFS_HcBulkHeadED register */
-#define UHPFS_HcBulkHeadED_Msk                _UINT32_(0xFFFFFFF0)                                 /* (UHPFS_HcBulkHeadED) Register Mask  */
-
-
-/* -------- UHPFS_HcCommandStatus : (UHPFS Offset: 0x08) (R/W 32) HC Command and Status Register -------- */
-#define UHPFS_HcCommandStatus_RESETVALUE      _UINT32_(0x00)                                       /*  (UHPFS_HcCommandStatus) HC Command and Status Register  Reset Value */
-
-#define UHPFS_HcCommandStatus_HCR_Pos         _UINT32_(0)                                          /* (UHPFS_HcCommandStatus) Host Controller Reset (read/write) Position */
-#define UHPFS_HcCommandStatus_HCR_Msk         (_UINT32_(0x1) << UHPFS_HcCommandStatus_HCR_Pos)     /* (UHPFS_HcCommandStatus) Host Controller Reset (read/write) Mask */
-#define UHPFS_HcCommandStatus_HCR(value)      (UHPFS_HcCommandStatus_HCR_Msk & (_UINT32_(value) << UHPFS_HcCommandStatus_HCR_Pos)) /* Assigment of value for HCR in the UHPFS_HcCommandStatus register */
-#define   UHPFS_HcCommandStatus_HCR_0_Val     _UINT32_(0x0)                                        /* (UHPFS_HcCommandStatus) No effect.  */
-#define   UHPFS_HcCommandStatus_HCR_1_Val     _UINT32_(0x1)                                        /* (UHPFS_HcCommandStatus) Initiates a software reset of the USB1.1 host controller. This transitions the USB1.1 host controller to the USB suspend state. This resets most USB1.1 host controller OHCI registers. OHCI register accesses must not be attempted until a read of this bit returns a 0. A write of 1 to this bit does not reset the root hub and does not signal USB reset to downstream USB functions.  */
-#define UHPFS_HcCommandStatus_HCR_0           (UHPFS_HcCommandStatus_HCR_0_Val << UHPFS_HcCommandStatus_HCR_Pos) /* (UHPFS_HcCommandStatus) No effect. Position  */
-#define UHPFS_HcCommandStatus_HCR_1           (UHPFS_HcCommandStatus_HCR_1_Val << UHPFS_HcCommandStatus_HCR_Pos) /* (UHPFS_HcCommandStatus) Initiates a software reset of the USB1.1 host controller. This transitions the USB1.1 host controller to the USB suspend state. This resets most USB1.1 host controller OHCI registers. OHCI register accesses must not be attempted until a read of this bit returns a 0. A write of 1 to this bit does not reset the root hub and does not signal USB reset to downstream USB functions. Position  */
-#define UHPFS_HcCommandStatus_CLF_Pos         _UINT32_(1)                                          /* (UHPFS_HcCommandStatus) Control List Filled (read/write) Position */
-#define UHPFS_HcCommandStatus_CLF_Msk         (_UINT32_(0x1) << UHPFS_HcCommandStatus_CLF_Pos)     /* (UHPFS_HcCommandStatus) Control List Filled (read/write) Mask */
-#define UHPFS_HcCommandStatus_CLF(value)      (UHPFS_HcCommandStatus_CLF_Msk & (_UINT32_(value) << UHPFS_HcCommandStatus_CLF_Pos)) /* Assigment of value for CLF in the UHPFS_HcCommandStatus register */
-#define UHPFS_HcCommandStatus_BLF_Pos         _UINT32_(2)                                          /* (UHPFS_HcCommandStatus) Bulk List Filled (read/write) Position */
-#define UHPFS_HcCommandStatus_BLF_Msk         (_UINT32_(0x1) << UHPFS_HcCommandStatus_BLF_Pos)     /* (UHPFS_HcCommandStatus) Bulk List Filled (read/write) Mask */
-#define UHPFS_HcCommandStatus_BLF(value)      (UHPFS_HcCommandStatus_BLF_Msk & (_UINT32_(value) << UHPFS_HcCommandStatus_BLF_Pos)) /* Assigment of value for BLF in the UHPFS_HcCommandStatus register */
-#define UHPFS_HcCommandStatus_OCR_Pos         _UINT32_(3)                                          /* (UHPFS_HcCommandStatus) Ownership Change Request (read/write) Position */
-#define UHPFS_HcCommandStatus_OCR_Msk         (_UINT32_(0x1) << UHPFS_HcCommandStatus_OCR_Pos)     /* (UHPFS_HcCommandStatus) Ownership Change Request (read/write) Mask */
-#define UHPFS_HcCommandStatus_OCR(value)      (UHPFS_HcCommandStatus_OCR_Msk & (_UINT32_(value) << UHPFS_HcCommandStatus_OCR_Pos)) /* Assigment of value for OCR in the UHPFS_HcCommandStatus register */
-#define UHPFS_HcCommandStatus_SOC_Pos         _UINT32_(16)                                         /* (UHPFS_HcCommandStatus) Scheduling Overrun Count (read-only) Position */
-#define UHPFS_HcCommandStatus_SOC_Msk         (_UINT32_(0x3) << UHPFS_HcCommandStatus_SOC_Pos)     /* (UHPFS_HcCommandStatus) Scheduling Overrun Count (read-only) Mask */
-#define UHPFS_HcCommandStatus_SOC(value)      (UHPFS_HcCommandStatus_SOC_Msk & (_UINT32_(value) << UHPFS_HcCommandStatus_SOC_Pos)) /* Assigment of value for SOC in the UHPFS_HcCommandStatus register */
-#define UHPFS_HcCommandStatus_Msk             _UINT32_(0x0003000F)                                 /* (UHPFS_HcCommandStatus) Register Mask  */
+#define UHPFS_HcRevision_REV_Pos              _UINT32_(0)                                          /* (UHPFS_HcRevision) OHCI Revision Number Position */
+#define UHPFS_HcRevision_REV_Msk              (_UINT32_(0xFF) << UHPFS_HcRevision_REV_Pos)         /* (UHPFS_HcRevision) OHCI Revision Number Mask */
+#define UHPFS_HcRevision_REV(value)           (UHPFS_HcRevision_REV_Msk & (_UINT32_(value) << UHPFS_HcRevision_REV_Pos)) /* Assigment of value for REV in the UHPFS_HcRevision register */
+#define   UHPFS_HcRevision_REV_0x10_Val       _UINT32_(0x10)                                       /* (UHPFS_HcRevision) This read-only field contains the BCD representation of the version of the HCI specification that is implemented by this HC. For example, a value of 11h corresponds to version 1.1. All of the HC implementations that are compliant with this specification will have a value of 10h.  */
+#define UHPFS_HcRevision_REV_0x10             (UHPFS_HcRevision_REV_0x10_Val << UHPFS_HcRevision_REV_Pos) /* (UHPFS_HcRevision) This read-only field contains the BCD representation of the version of the HCI specification that is implemented by this HC. For example, a value of 11h corresponds to version 1.1. All of the HC implementations that are compliant with this specification will have a value of 10h. Position  */
+#define UHPFS_HcRevision_Msk                  _UINT32_(0x000000FF)                                 /* (UHPFS_HcRevision) Register Mask  */
 
 
 /* -------- UHPFS_HcControl : (UHPFS Offset: 0x04) (R/W 32) HC Operating Mode Register -------- */
@@ -138,145 +106,87 @@
 #define UHPFS_HcControl_Msk                   _UINT32_(0x000007FF)                                 /* (UHPFS_HcControl) Register Mask  */
 
 
-/* -------- UHPFS_HcControlCurrentED : (UHPFS Offset: 0x24) (R/W 32) HC Current Control Register -------- */
-#define UHPFS_HcControlCurrentED_RESETVALUE   _UINT32_(0x00)                                       /*  (UHPFS_HcControlCurrentED) HC Current Control Register  Reset Value */
+/* -------- UHPFS_HcCommandStatus : (UHPFS Offset: 0x08) (R/W 32) HC Command and Status Register -------- */
+#define UHPFS_HcCommandStatus_RESETVALUE      _UINT32_(0x00)                                       /*  (UHPFS_HcCommandStatus) HC Command and Status Register  Reset Value */
 
-#define UHPFS_HcControlCurrentED_CCED_Pos     _UINT32_(4)                                          /* (UHPFS_HcControlCurrentED) Physical Address of the Current ED on the Control ED List Position */
-#define UHPFS_HcControlCurrentED_CCED_Msk     (_UINT32_(0xFFFFFFF) << UHPFS_HcControlCurrentED_CCED_Pos) /* (UHPFS_HcControlCurrentED) Physical Address of the Current ED on the Control ED List Mask */
-#define UHPFS_HcControlCurrentED_CCED(value)  (UHPFS_HcControlCurrentED_CCED_Msk & (_UINT32_(value) << UHPFS_HcControlCurrentED_CCED_Pos)) /* Assigment of value for CCED in the UHPFS_HcControlCurrentED register */
-#define UHPFS_HcControlCurrentED_Msk          _UINT32_(0xFFFFFFF0)                                 /* (UHPFS_HcControlCurrentED) Register Mask  */
-
-
-/* -------- UHPFS_HcControlHeadED : (UHPFS Offset: 0x20) (R/W 32) HC Head Control Register -------- */
-#define UHPFS_HcControlHeadED_RESETVALUE      _UINT32_(0x00)                                       /*  (UHPFS_HcControlHeadED) HC Head Control Register  Reset Value */
-
-#define UHPFS_HcControlHeadED_CHED_Pos        _UINT32_(4)                                          /* (UHPFS_HcControlHeadED) Physical Address of the Head ED on the Control ED list Position */
-#define UHPFS_HcControlHeadED_CHED_Msk        (_UINT32_(0xFFFFFFF) << UHPFS_HcControlHeadED_CHED_Pos) /* (UHPFS_HcControlHeadED) Physical Address of the Head ED on the Control ED list Mask */
-#define UHPFS_HcControlHeadED_CHED(value)     (UHPFS_HcControlHeadED_CHED_Msk & (_UINT32_(value) << UHPFS_HcControlHeadED_CHED_Pos)) /* Assigment of value for CHED in the UHPFS_HcControlHeadED register */
-#define UHPFS_HcControlHeadED_Msk             _UINT32_(0xFFFFFFF0)                                 /* (UHPFS_HcControlHeadED) Register Mask  */
-
-
-/* -------- UHPFS_HcDoneHead : (UHPFS Offset: 0x30) (R/W 32) HC Head Done Register -------- */
-#define UHPFS_HcDoneHead_RESETVALUE           _UINT32_(0x00)                                       /*  (UHPFS_HcDoneHead) HC Head Done Register  Reset Value */
-
-#define UHPFS_HcDoneHead_DH_Pos               _UINT32_(4)                                          /* (UHPFS_HcDoneHead) Physical Address of the Last TD that has added to the done queue Position */
-#define UHPFS_HcDoneHead_DH_Msk               (_UINT32_(0xFFFFFFF) << UHPFS_HcDoneHead_DH_Pos)     /* (UHPFS_HcDoneHead) Physical Address of the Last TD that has added to the done queue Mask */
-#define UHPFS_HcDoneHead_DH(value)            (UHPFS_HcDoneHead_DH_Msk & (_UINT32_(value) << UHPFS_HcDoneHead_DH_Pos)) /* Assigment of value for DH in the UHPFS_HcDoneHead register */
-#define UHPFS_HcDoneHead_Msk                  _UINT32_(0xFFFFFFF0)                                 /* (UHPFS_HcDoneHead) Register Mask  */
+#define UHPFS_HcCommandStatus_HCR_Pos         _UINT32_(0)                                          /* (UHPFS_HcCommandStatus) Host Controller Reset (read/write) Position */
+#define UHPFS_HcCommandStatus_HCR_Msk         (_UINT32_(0x1) << UHPFS_HcCommandStatus_HCR_Pos)     /* (UHPFS_HcCommandStatus) Host Controller Reset (read/write) Mask */
+#define UHPFS_HcCommandStatus_HCR(value)      (UHPFS_HcCommandStatus_HCR_Msk & (_UINT32_(value) << UHPFS_HcCommandStatus_HCR_Pos)) /* Assigment of value for HCR in the UHPFS_HcCommandStatus register */
+#define   UHPFS_HcCommandStatus_HCR_0_Val     _UINT32_(0x0)                                        /* (UHPFS_HcCommandStatus) No effect.  */
+#define   UHPFS_HcCommandStatus_HCR_1_Val     _UINT32_(0x1)                                        /* (UHPFS_HcCommandStatus) Initiates a software reset of the USB1.1 host controller. This transitions the USB1.1 host controller to the USB suspend state. This resets most USB1.1 host controller OHCI registers. OHCI register accesses must not be attempted until a read of this bit returns a 0. A write of 1 to this bit does not reset the root hub and does not signal USB reset to downstream USB functions.  */
+#define UHPFS_HcCommandStatus_HCR_0           (UHPFS_HcCommandStatus_HCR_0_Val << UHPFS_HcCommandStatus_HCR_Pos) /* (UHPFS_HcCommandStatus) No effect. Position  */
+#define UHPFS_HcCommandStatus_HCR_1           (UHPFS_HcCommandStatus_HCR_1_Val << UHPFS_HcCommandStatus_HCR_Pos) /* (UHPFS_HcCommandStatus) Initiates a software reset of the USB1.1 host controller. This transitions the USB1.1 host controller to the USB suspend state. This resets most USB1.1 host controller OHCI registers. OHCI register accesses must not be attempted until a read of this bit returns a 0. A write of 1 to this bit does not reset the root hub and does not signal USB reset to downstream USB functions. Position  */
+#define UHPFS_HcCommandStatus_CLF_Pos         _UINT32_(1)                                          /* (UHPFS_HcCommandStatus) Control List Filled (read/write) Position */
+#define UHPFS_HcCommandStatus_CLF_Msk         (_UINT32_(0x1) << UHPFS_HcCommandStatus_CLF_Pos)     /* (UHPFS_HcCommandStatus) Control List Filled (read/write) Mask */
+#define UHPFS_HcCommandStatus_CLF(value)      (UHPFS_HcCommandStatus_CLF_Msk & (_UINT32_(value) << UHPFS_HcCommandStatus_CLF_Pos)) /* Assigment of value for CLF in the UHPFS_HcCommandStatus register */
+#define UHPFS_HcCommandStatus_BLF_Pos         _UINT32_(2)                                          /* (UHPFS_HcCommandStatus) Bulk List Filled (read/write) Position */
+#define UHPFS_HcCommandStatus_BLF_Msk         (_UINT32_(0x1) << UHPFS_HcCommandStatus_BLF_Pos)     /* (UHPFS_HcCommandStatus) Bulk List Filled (read/write) Mask */
+#define UHPFS_HcCommandStatus_BLF(value)      (UHPFS_HcCommandStatus_BLF_Msk & (_UINT32_(value) << UHPFS_HcCommandStatus_BLF_Pos)) /* Assigment of value for BLF in the UHPFS_HcCommandStatus register */
+#define UHPFS_HcCommandStatus_OCR_Pos         _UINT32_(3)                                          /* (UHPFS_HcCommandStatus) Ownership Change Request (read/write) Position */
+#define UHPFS_HcCommandStatus_OCR_Msk         (_UINT32_(0x1) << UHPFS_HcCommandStatus_OCR_Pos)     /* (UHPFS_HcCommandStatus) Ownership Change Request (read/write) Mask */
+#define UHPFS_HcCommandStatus_OCR(value)      (UHPFS_HcCommandStatus_OCR_Msk & (_UINT32_(value) << UHPFS_HcCommandStatus_OCR_Pos)) /* Assigment of value for OCR in the UHPFS_HcCommandStatus register */
+#define UHPFS_HcCommandStatus_SOC_Pos         _UINT32_(16)                                         /* (UHPFS_HcCommandStatus) Scheduling Overrun Count (read-only) Position */
+#define UHPFS_HcCommandStatus_SOC_Msk         (_UINT32_(0x3) << UHPFS_HcCommandStatus_SOC_Pos)     /* (UHPFS_HcCommandStatus) Scheduling Overrun Count (read-only) Mask */
+#define UHPFS_HcCommandStatus_SOC(value)      (UHPFS_HcCommandStatus_SOC_Msk & (_UINT32_(value) << UHPFS_HcCommandStatus_SOC_Pos)) /* Assigment of value for SOC in the UHPFS_HcCommandStatus register */
+#define UHPFS_HcCommandStatus_Msk             _UINT32_(0x0003000F)                                 /* (UHPFS_HcCommandStatus) Register Mask  */
 
 
-/* -------- UHPFS_HcFmInterval : (UHPFS Offset: 0x34) (R/W 32) HC Frame Interval Register -------- */
-#define UHPFS_HcFmInterval_RESETVALUE         _UINT32_(0x2EDF)                                     /*  (UHPFS_HcFmInterval) HC Frame Interval Register  Reset Value */
+/* -------- UHPFS_HcInterruptStatus : (UHPFS Offset: 0x0C) (R/W 32) HC Interrupt and Status Register -------- */
+#define UHPFS_HcInterruptStatus_RESETVALUE    _UINT32_(0x00)                                       /*  (UHPFS_HcInterruptStatus) HC Interrupt and Status Register  Reset Value */
 
-#define UHPFS_HcFmInterval_FRAMEINTERVAL_Pos  _UINT32_(0)                                          /* (UHPFS_HcFmInterval) Frame Interval Position */
-#define UHPFS_HcFmInterval_FRAMEINTERVAL_Msk  (_UINT32_(0x3FFF) << UHPFS_HcFmInterval_FRAMEINTERVAL_Pos) /* (UHPFS_HcFmInterval) Frame Interval Mask */
-#define UHPFS_HcFmInterval_FRAMEINTERVAL(value) (UHPFS_HcFmInterval_FRAMEINTERVAL_Msk & (_UINT32_(value) << UHPFS_HcFmInterval_FRAMEINTERVAL_Pos)) /* Assigment of value for FRAMEINTERVAL in the UHPFS_HcFmInterval register */
-#define UHPFS_HcFmInterval_FSMPS_Pos          _UINT32_(16)                                         /* (UHPFS_HcFmInterval) Largest Data Packet Position */
-#define UHPFS_HcFmInterval_FSMPS_Msk          (_UINT32_(0x7FFF) << UHPFS_HcFmInterval_FSMPS_Pos)   /* (UHPFS_HcFmInterval) Largest Data Packet Mask */
-#define UHPFS_HcFmInterval_FSMPS(value)       (UHPFS_HcFmInterval_FSMPS_Msk & (_UINT32_(value) << UHPFS_HcFmInterval_FSMPS_Pos)) /* Assigment of value for FSMPS in the UHPFS_HcFmInterval register */
-#define UHPFS_HcFmInterval_FIT_Pos            _UINT32_(31)                                         /* (UHPFS_HcFmInterval) Frame Interval Toggle Position */
-#define UHPFS_HcFmInterval_FIT_Msk            (_UINT32_(0x1) << UHPFS_HcFmInterval_FIT_Pos)        /* (UHPFS_HcFmInterval) Frame Interval Toggle Mask */
-#define UHPFS_HcFmInterval_FIT(value)         (UHPFS_HcFmInterval_FIT_Msk & (_UINT32_(value) << UHPFS_HcFmInterval_FIT_Pos)) /* Assigment of value for FIT in the UHPFS_HcFmInterval register */
-#define UHPFS_HcFmInterval_Msk                _UINT32_(0xFFFF3FFF)                                 /* (UHPFS_HcFmInterval) Register Mask  */
-
-
-/* -------- UHPFS_HcFmNumber : (UHPFS Offset: 0x3C) (R/W 32) HC Frame Number Register -------- */
-#define UHPFS_HcFmNumber_RESETVALUE           _UINT32_(0x00)                                       /*  (UHPFS_HcFmNumber) HC Frame Number Register  Reset Value */
-
-#define UHPFS_HcFmNumber_FN_Pos               _UINT32_(0)                                          /* (UHPFS_HcFmNumber) Frame Number Position */
-#define UHPFS_HcFmNumber_FN_Msk               (_UINT32_(0xFFFF) << UHPFS_HcFmNumber_FN_Pos)        /* (UHPFS_HcFmNumber) Frame Number Mask */
-#define UHPFS_HcFmNumber_FN(value)            (UHPFS_HcFmNumber_FN_Msk & (_UINT32_(value) << UHPFS_HcFmNumber_FN_Pos)) /* Assigment of value for FN in the UHPFS_HcFmNumber register */
-#define UHPFS_HcFmNumber_Msk                  _UINT32_(0x0000FFFF)                                 /* (UHPFS_HcFmNumber) Register Mask  */
-
-
-/* -------- UHPFS_HcFmRemaining : (UHPFS Offset: 0x38) (R/W 32) HC Frame Remaining Register -------- */
-#define UHPFS_HcFmRemaining_RESETVALUE        _UINT32_(0x00)                                       /*  (UHPFS_HcFmRemaining) HC Frame Remaining Register  Reset Value */
-
-#define UHPFS_HcFmRemaining_FR_Pos            _UINT32_(0)                                          /* (UHPFS_HcFmRemaining) Frame Remaining Position */
-#define UHPFS_HcFmRemaining_FR_Msk            (_UINT32_(0x3FFF) << UHPFS_HcFmRemaining_FR_Pos)     /* (UHPFS_HcFmRemaining) Frame Remaining Mask */
-#define UHPFS_HcFmRemaining_FR(value)         (UHPFS_HcFmRemaining_FR_Msk & (_UINT32_(value) << UHPFS_HcFmRemaining_FR_Pos)) /* Assigment of value for FR in the UHPFS_HcFmRemaining register */
-#define UHPFS_HcFmRemaining_FRT_Pos           _UINT32_(31)                                         /* (UHPFS_HcFmRemaining) Frame Remaining Toggle Position */
-#define UHPFS_HcFmRemaining_FRT_Msk           (_UINT32_(0x1) << UHPFS_HcFmRemaining_FRT_Pos)       /* (UHPFS_HcFmRemaining) Frame Remaining Toggle Mask */
-#define UHPFS_HcFmRemaining_FRT(value)        (UHPFS_HcFmRemaining_FRT_Msk & (_UINT32_(value) << UHPFS_HcFmRemaining_FRT_Pos)) /* Assigment of value for FRT in the UHPFS_HcFmRemaining register */
-#define UHPFS_HcFmRemaining_Msk               _UINT32_(0x80003FFF)                                 /* (UHPFS_HcFmRemaining) Register Mask  */
-
-
-/* -------- UHPFS_HcHCCA : (UHPFS Offset: 0x18) (R/W 32) HC HCCA Address Register -------- */
-#define UHPFS_HcHCCA_RESETVALUE               _UINT32_(0x00)                                       /*  (UHPFS_HcHCCA) HC HCCA Address Register  Reset Value */
-
-#define UHPFS_HcHCCA_HCCA_Pos                 _UINT32_(8)                                          /* (UHPFS_HcHCCA) Physical Address of the Beginning of the HCCA Position */
-#define UHPFS_HcHCCA_HCCA_Msk                 (_UINT32_(0xFFFFFF) << UHPFS_HcHCCA_HCCA_Pos)        /* (UHPFS_HcHCCA) Physical Address of the Beginning of the HCCA Mask */
-#define UHPFS_HcHCCA_HCCA(value)              (UHPFS_HcHCCA_HCCA_Msk & (_UINT32_(value) << UHPFS_HcHCCA_HCCA_Pos)) /* Assigment of value for HCCA in the UHPFS_HcHCCA register */
-#define UHPFS_HcHCCA_Msk                      _UINT32_(0xFFFFFF00)                                 /* (UHPFS_HcHCCA) Register Mask  */
-
-
-/* -------- UHPFS_HcInterruptDisable : (UHPFS Offset: 0x14) (R/W 32) HC Interrupt Disable Register -------- */
-#define UHPFS_HcInterruptDisable_RESETVALUE   _UINT32_(0x00)                                       /*  (UHPFS_HcInterruptDisable) HC Interrupt Disable Register  Reset Value */
-
-#define UHPFS_HcInterruptDisable_SO_Pos       _UINT32_(0)                                          /* (UHPFS_HcInterruptDisable) Scheduling Overrun (read/write) Position */
-#define UHPFS_HcInterruptDisable_SO_Msk       (_UINT32_(0x1) << UHPFS_HcInterruptDisable_SO_Pos)   /* (UHPFS_HcInterruptDisable) Scheduling Overrun (read/write) Mask */
-#define UHPFS_HcInterruptDisable_SO(value)    (UHPFS_HcInterruptDisable_SO_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_SO_Pos)) /* Assigment of value for SO in the UHPFS_HcInterruptDisable register */
-#define   UHPFS_HcInterruptDisable_SO_0_Val   _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
-#define   UHPFS_HcInterruptDisable_SO_1_Val   _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the SO bit in the UHPFS_HcInterruptEnable register.  */
-#define UHPFS_HcInterruptDisable_SO_0         (UHPFS_HcInterruptDisable_SO_0_Val << UHPFS_HcInterruptDisable_SO_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
-#define UHPFS_HcInterruptDisable_SO_1         (UHPFS_HcInterruptDisable_SO_1_Val << UHPFS_HcInterruptDisable_SO_Pos) /* (UHPFS_HcInterruptDisable) Clears the SO bit in the UHPFS_HcInterruptEnable register. Position  */
-#define UHPFS_HcInterruptDisable_WDH_Pos      _UINT32_(1)                                          /* (UHPFS_HcInterruptDisable) Write Done Head (read/write) Position */
-#define UHPFS_HcInterruptDisable_WDH_Msk      (_UINT32_(0x1) << UHPFS_HcInterruptDisable_WDH_Pos)  /* (UHPFS_HcInterruptDisable) Write Done Head (read/write) Mask */
-#define UHPFS_HcInterruptDisable_WDH(value)   (UHPFS_HcInterruptDisable_WDH_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_WDH_Pos)) /* Assigment of value for WDH in the UHPFS_HcInterruptDisable register */
-#define   UHPFS_HcInterruptDisable_WDH_0_Val  _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
-#define   UHPFS_HcInterruptDisable_WDH_1_Val  _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the WDH bit in the UHPFS_HcInterruptEnable register.  */
-#define UHPFS_HcInterruptDisable_WDH_0        (UHPFS_HcInterruptDisable_WDH_0_Val << UHPFS_HcInterruptDisable_WDH_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
-#define UHPFS_HcInterruptDisable_WDH_1        (UHPFS_HcInterruptDisable_WDH_1_Val << UHPFS_HcInterruptDisable_WDH_Pos) /* (UHPFS_HcInterruptDisable) Clears the WDH bit in the UHPFS_HcInterruptEnable register. Position  */
-#define UHPFS_HcInterruptDisable_SF_Pos       _UINT32_(2)                                          /* (UHPFS_HcInterruptDisable) Start of Frame (read/write) Position */
-#define UHPFS_HcInterruptDisable_SF_Msk       (_UINT32_(0x1) << UHPFS_HcInterruptDisable_SF_Pos)   /* (UHPFS_HcInterruptDisable) Start of Frame (read/write) Mask */
-#define UHPFS_HcInterruptDisable_SF(value)    (UHPFS_HcInterruptDisable_SF_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_SF_Pos)) /* Assigment of value for SF in the UHPFS_HcInterruptDisable register */
-#define   UHPFS_HcInterruptDisable_SF_0_Val   _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
-#define   UHPFS_HcInterruptDisable_SF_1_Val   _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the SF bit in the UHPFS_HcInterruptEnable register.  */
-#define UHPFS_HcInterruptDisable_SF_0         (UHPFS_HcInterruptDisable_SF_0_Val << UHPFS_HcInterruptDisable_SF_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
-#define UHPFS_HcInterruptDisable_SF_1         (UHPFS_HcInterruptDisable_SF_1_Val << UHPFS_HcInterruptDisable_SF_Pos) /* (UHPFS_HcInterruptDisable) Clears the SF bit in the UHPFS_HcInterruptEnable register. Position  */
-#define UHPFS_HcInterruptDisable_RD_Pos       _UINT32_(3)                                          /* (UHPFS_HcInterruptDisable) Resume Detected (read/write) Position */
-#define UHPFS_HcInterruptDisable_RD_Msk       (_UINT32_(0x1) << UHPFS_HcInterruptDisable_RD_Pos)   /* (UHPFS_HcInterruptDisable) Resume Detected (read/write) Mask */
-#define UHPFS_HcInterruptDisable_RD(value)    (UHPFS_HcInterruptDisable_RD_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_RD_Pos)) /* Assigment of value for RD in the UHPFS_HcInterruptDisable register */
-#define   UHPFS_HcInterruptDisable_RD_0_Val   _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
-#define   UHPFS_HcInterruptDisable_RD_1_Val   _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the RD bit in the UHPFS_HcInterruptEnable register.  */
-#define UHPFS_HcInterruptDisable_RD_0         (UHPFS_HcInterruptDisable_RD_0_Val << UHPFS_HcInterruptDisable_RD_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
-#define UHPFS_HcInterruptDisable_RD_1         (UHPFS_HcInterruptDisable_RD_1_Val << UHPFS_HcInterruptDisable_RD_Pos) /* (UHPFS_HcInterruptDisable) Clears the RD bit in the UHPFS_HcInterruptEnable register. Position  */
-#define UHPFS_HcInterruptDisable_UE_Pos       _UINT32_(4)                                          /* (UHPFS_HcInterruptDisable) Unrecoverable Error (read/write) Position */
-#define UHPFS_HcInterruptDisable_UE_Msk       (_UINT32_(0x1) << UHPFS_HcInterruptDisable_UE_Pos)   /* (UHPFS_HcInterruptDisable) Unrecoverable Error (read/write) Mask */
-#define UHPFS_HcInterruptDisable_UE(value)    (UHPFS_HcInterruptDisable_UE_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_UE_Pos)) /* Assigment of value for UE in the UHPFS_HcInterruptDisable register */
-#define   UHPFS_HcInterruptDisable_UE_0_Val   _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
-#define   UHPFS_HcInterruptDisable_UE_1_Val   _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the UE bit in the UHPFS_HcInterruptEnable register.  */
-#define UHPFS_HcInterruptDisable_UE_0         (UHPFS_HcInterruptDisable_UE_0_Val << UHPFS_HcInterruptDisable_UE_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
-#define UHPFS_HcInterruptDisable_UE_1         (UHPFS_HcInterruptDisable_UE_1_Val << UHPFS_HcInterruptDisable_UE_Pos) /* (UHPFS_HcInterruptDisable) Clears the UE bit in the UHPFS_HcInterruptEnable register. Position  */
-#define UHPFS_HcInterruptDisable_FNO_Pos      _UINT32_(5)                                          /* (UHPFS_HcInterruptDisable) Frame Number Overflow (read/write) Position */
-#define UHPFS_HcInterruptDisable_FNO_Msk      (_UINT32_(0x1) << UHPFS_HcInterruptDisable_FNO_Pos)  /* (UHPFS_HcInterruptDisable) Frame Number Overflow (read/write) Mask */
-#define UHPFS_HcInterruptDisable_FNO(value)   (UHPFS_HcInterruptDisable_FNO_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_FNO_Pos)) /* Assigment of value for FNO in the UHPFS_HcInterruptDisable register */
-#define   UHPFS_HcInterruptDisable_FNO_0_Val  _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
-#define   UHPFS_HcInterruptDisable_FNO_1_Val  _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the FNO bit in the UHPFS_HcInterruptEnable register.  */
-#define UHPFS_HcInterruptDisable_FNO_0        (UHPFS_HcInterruptDisable_FNO_0_Val << UHPFS_HcInterruptDisable_FNO_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
-#define UHPFS_HcInterruptDisable_FNO_1        (UHPFS_HcInterruptDisable_FNO_1_Val << UHPFS_HcInterruptDisable_FNO_Pos) /* (UHPFS_HcInterruptDisable) Clears the FNO bit in the UHPFS_HcInterruptEnable register. Position  */
-#define UHPFS_HcInterruptDisable_RHSC_Pos     _UINT32_(6)                                          /* (UHPFS_HcInterruptDisable) Root Hub Status Change (read/write) Position */
-#define UHPFS_HcInterruptDisable_RHSC_Msk     (_UINT32_(0x1) << UHPFS_HcInterruptDisable_RHSC_Pos) /* (UHPFS_HcInterruptDisable) Root Hub Status Change (read/write) Mask */
-#define UHPFS_HcInterruptDisable_RHSC(value)  (UHPFS_HcInterruptDisable_RHSC_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_RHSC_Pos)) /* Assigment of value for RHSC in the UHPFS_HcInterruptDisable register */
-#define   UHPFS_HcInterruptDisable_RHSC_0_Val _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
-#define   UHPFS_HcInterruptDisable_RHSC_1_Val _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the RHSC bit in the UHPFS_HcInterruptEnable register.  */
-#define UHPFS_HcInterruptDisable_RHSC_0       (UHPFS_HcInterruptDisable_RHSC_0_Val << UHPFS_HcInterruptDisable_RHSC_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
-#define UHPFS_HcInterruptDisable_RHSC_1       (UHPFS_HcInterruptDisable_RHSC_1_Val << UHPFS_HcInterruptDisable_RHSC_Pos) /* (UHPFS_HcInterruptDisable) Clears the RHSC bit in the UHPFS_HcInterruptEnable register. Position  */
-#define UHPFS_HcInterruptDisable_OC_Pos       _UINT32_(30)                                         /* (UHPFS_HcInterruptDisable) Ownership Change (read-only) Position */
-#define UHPFS_HcInterruptDisable_OC_Msk       (_UINT32_(0x1) << UHPFS_HcInterruptDisable_OC_Pos)   /* (UHPFS_HcInterruptDisable) Ownership Change (read-only) Mask */
-#define UHPFS_HcInterruptDisable_OC(value)    (UHPFS_HcInterruptDisable_OC_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_OC_Pos)) /* Assigment of value for OC in the UHPFS_HcInterruptDisable register */
-#define   UHPFS_HcInterruptDisable_OC_0_Val   _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) Ignore.  */
-#define   UHPFS_HcInterruptDisable_OC_1_Val   _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Disable interrupt generation due to Ownership Change.  */
-#define UHPFS_HcInterruptDisable_OC_0         (UHPFS_HcInterruptDisable_OC_0_Val << UHPFS_HcInterruptDisable_OC_Pos) /* (UHPFS_HcInterruptDisable) Ignore. Position  */
-#define UHPFS_HcInterruptDisable_OC_1         (UHPFS_HcInterruptDisable_OC_1_Val << UHPFS_HcInterruptDisable_OC_Pos) /* (UHPFS_HcInterruptDisable) Disable interrupt generation due to Ownership Change. Position  */
-#define UHPFS_HcInterruptDisable_MIE_Pos      _UINT32_(31)                                         /* (UHPFS_HcInterruptDisable) Master Interrupt Enable (read/write) Position */
-#define UHPFS_HcInterruptDisable_MIE_Msk      (_UINT32_(0x1) << UHPFS_HcInterruptDisable_MIE_Pos)  /* (UHPFS_HcInterruptDisable) Master Interrupt Enable (read/write) Mask */
-#define UHPFS_HcInterruptDisable_MIE(value)   (UHPFS_HcInterruptDisable_MIE_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_MIE_Pos)) /* Assigment of value for MIE in the UHPFS_HcInterruptDisable register */
-#define   UHPFS_HcInterruptDisable_MIE_0_Val  _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
-#define   UHPFS_HcInterruptDisable_MIE_1_Val  _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the MIE bit in the UHPFS_HcInterruptEnable register.  */
-#define UHPFS_HcInterruptDisable_MIE_0        (UHPFS_HcInterruptDisable_MIE_0_Val << UHPFS_HcInterruptDisable_MIE_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
-#define UHPFS_HcInterruptDisable_MIE_1        (UHPFS_HcInterruptDisable_MIE_1_Val << UHPFS_HcInterruptDisable_MIE_Pos) /* (UHPFS_HcInterruptDisable) Clears the MIE bit in the UHPFS_HcInterruptEnable register. Position  */
-#define UHPFS_HcInterruptDisable_Msk          _UINT32_(0xC000007F)                                 /* (UHPFS_HcInterruptDisable) Register Mask  */
+#define UHPFS_HcInterruptStatus_SO_Pos        _UINT32_(0)                                          /* (UHPFS_HcInterruptStatus) Scheduling Overrun (read/write, write '1' to clear) Position */
+#define UHPFS_HcInterruptStatus_SO_Msk        (_UINT32_(0x1) << UHPFS_HcInterruptStatus_SO_Pos)    /* (UHPFS_HcInterruptStatus) Scheduling Overrun (read/write, write '1' to clear) Mask */
+#define UHPFS_HcInterruptStatus_SO(value)     (UHPFS_HcInterruptStatus_SO_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_SO_Pos)) /* Assigment of value for SO in the UHPFS_HcInterruptStatus register */
+#define   UHPFS_HcInterruptStatus_SO_0_Val    _UINT32_(0x0)                                        /* (UHPFS_HcInterruptStatus) A scheduling overrun has not occurred.  */
+#define   UHPFS_HcInterruptStatus_SO_1_Val    _UINT32_(0x1)                                        /* (UHPFS_HcInterruptStatus) A scheduling overrun has occurred.  */
+#define UHPFS_HcInterruptStatus_SO_0          (UHPFS_HcInterruptStatus_SO_0_Val << UHPFS_HcInterruptStatus_SO_Pos) /* (UHPFS_HcInterruptStatus) A scheduling overrun has not occurred. Position  */
+#define UHPFS_HcInterruptStatus_SO_1          (UHPFS_HcInterruptStatus_SO_1_Val << UHPFS_HcInterruptStatus_SO_Pos) /* (UHPFS_HcInterruptStatus) A scheduling overrun has occurred. Position  */
+#define UHPFS_HcInterruptStatus_WDH_Pos       _UINT32_(1)                                          /* (UHPFS_HcInterruptStatus) Write Done Head (read/write, write '1' to clear) Position */
+#define UHPFS_HcInterruptStatus_WDH_Msk       (_UINT32_(0x1) << UHPFS_HcInterruptStatus_WDH_Pos)   /* (UHPFS_HcInterruptStatus) Write Done Head (read/write, write '1' to clear) Mask */
+#define UHPFS_HcInterruptStatus_WDH(value)    (UHPFS_HcInterruptStatus_WDH_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_WDH_Pos)) /* Assigment of value for WDH in the UHPFS_HcInterruptStatus register */
+#define   UHPFS_HcInterruptStatus_WDH_0_Val   _UINT32_(0x0)                                        /* (UHPFS_HcInterruptStatus) USB1.1 host controller has not updated the UHPFS_HcDoneHead register.  */
+#define   UHPFS_HcInterruptStatus_WDH_1_Val   _UINT32_(0x1)                                        /* (UHPFS_HcInterruptStatus) USB1.1 host controller has updated the UHPFS_HcDoneHead register.  */
+#define UHPFS_HcInterruptStatus_WDH_0         (UHPFS_HcInterruptStatus_WDH_0_Val << UHPFS_HcInterruptStatus_WDH_Pos) /* (UHPFS_HcInterruptStatus) USB1.1 host controller has not updated the UHPFS_HcDoneHead register. Position  */
+#define UHPFS_HcInterruptStatus_WDH_1         (UHPFS_HcInterruptStatus_WDH_1_Val << UHPFS_HcInterruptStatus_WDH_Pos) /* (UHPFS_HcInterruptStatus) USB1.1 host controller has updated the UHPFS_HcDoneHead register. Position  */
+#define UHPFS_HcInterruptStatus_SF_Pos        _UINT32_(2)                                          /* (UHPFS_HcInterruptStatus) Start of Frame (read/write, write '1' to clear) Position */
+#define UHPFS_HcInterruptStatus_SF_Msk        (_UINT32_(0x1) << UHPFS_HcInterruptStatus_SF_Pos)    /* (UHPFS_HcInterruptStatus) Start of Frame (read/write, write '1' to clear) Mask */
+#define UHPFS_HcInterruptStatus_SF(value)     (UHPFS_HcInterruptStatus_SF_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_SF_Pos)) /* Assigment of value for SF in the UHPFS_HcInterruptStatus register */
+#define   UHPFS_HcInterruptStatus_SF_0_Val    _UINT32_(0x0)                                        /* (UHPFS_HcInterruptStatus) A SOF has not been issued.  */
+#define   UHPFS_HcInterruptStatus_SF_1_Val    _UINT32_(0x1)                                        /* (UHPFS_HcInterruptStatus) A SOF has been issued.  */
+#define UHPFS_HcInterruptStatus_SF_0          (UHPFS_HcInterruptStatus_SF_0_Val << UHPFS_HcInterruptStatus_SF_Pos) /* (UHPFS_HcInterruptStatus) A SOF has not been issued. Position  */
+#define UHPFS_HcInterruptStatus_SF_1          (UHPFS_HcInterruptStatus_SF_1_Val << UHPFS_HcInterruptStatus_SF_Pos) /* (UHPFS_HcInterruptStatus) A SOF has been issued. Position  */
+#define UHPFS_HcInterruptStatus_RD_Pos        _UINT32_(3)                                          /* (UHPFS_HcInterruptStatus) Resume Detected (read/write, write '1' to clear) Position */
+#define UHPFS_HcInterruptStatus_RD_Msk        (_UINT32_(0x1) << UHPFS_HcInterruptStatus_RD_Pos)    /* (UHPFS_HcInterruptStatus) Resume Detected (read/write, write '1' to clear) Mask */
+#define UHPFS_HcInterruptStatus_RD(value)     (UHPFS_HcInterruptStatus_RD_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_RD_Pos)) /* Assigment of value for RD in the UHPFS_HcInterruptStatus register */
+#define   UHPFS_HcInterruptStatus_RD_0_Val    _UINT32_(0x0)                                        /* (UHPFS_HcInterruptStatus) A downstream device has not issued a resume request.  */
+#define   UHPFS_HcInterruptStatus_RD_1_Val    _UINT32_(0x1)                                        /* (UHPFS_HcInterruptStatus) A downstream device has issued a resume request.  */
+#define UHPFS_HcInterruptStatus_RD_0          (UHPFS_HcInterruptStatus_RD_0_Val << UHPFS_HcInterruptStatus_RD_Pos) /* (UHPFS_HcInterruptStatus) A downstream device has not issued a resume request. Position  */
+#define UHPFS_HcInterruptStatus_RD_1          (UHPFS_HcInterruptStatus_RD_1_Val << UHPFS_HcInterruptStatus_RD_Pos) /* (UHPFS_HcInterruptStatus) A downstream device has issued a resume request. Position  */
+#define UHPFS_HcInterruptStatus_UE_Pos        _UINT32_(4)                                          /* (UHPFS_HcInterruptStatus) Unrecoverable Error (read/write, write '1' to clear) Position */
+#define UHPFS_HcInterruptStatus_UE_Msk        (_UINT32_(0x1) << UHPFS_HcInterruptStatus_UE_Pos)    /* (UHPFS_HcInterruptStatus) Unrecoverable Error (read/write, write '1' to clear) Mask */
+#define UHPFS_HcInterruptStatus_UE(value)     (UHPFS_HcInterruptStatus_UE_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_UE_Pos)) /* Assigment of value for UE in the UHPFS_HcInterruptStatus register */
+#define   UHPFS_HcInterruptStatus_UE_0_Val    _UINT32_(0x0)                                        /* (UHPFS_HcInterruptStatus) An unrecoverable error has not occurred.  */
+#define   UHPFS_HcInterruptStatus_UE_1_Val    _UINT32_(0x1)                                        /* (UHPFS_HcInterruptStatus) An unrecoverable error has occurred on the OCPI bus, or that an isochronous TD PSW field condition code was not set to Not Accessed when the USB1.1 host controller attempted to perform a transfer using that PSW/offset pair.  */
+#define UHPFS_HcInterruptStatus_UE_0          (UHPFS_HcInterruptStatus_UE_0_Val << UHPFS_HcInterruptStatus_UE_Pos) /* (UHPFS_HcInterruptStatus) An unrecoverable error has not occurred. Position  */
+#define UHPFS_HcInterruptStatus_UE_1          (UHPFS_HcInterruptStatus_UE_1_Val << UHPFS_HcInterruptStatus_UE_Pos) /* (UHPFS_HcInterruptStatus) An unrecoverable error has occurred on the OCPI bus, or that an isochronous TD PSW field condition code was not set to Not Accessed when the USB1.1 host controller attempted to perform a transfer using that PSW/offset pair. Position  */
+#define UHPFS_HcInterruptStatus_FNO_Pos       _UINT32_(5)                                          /* (UHPFS_HcInterruptStatus) Frame Number Overflow (read/write, write '1' to clear) Position */
+#define UHPFS_HcInterruptStatus_FNO_Msk       (_UINT32_(0x1) << UHPFS_HcInterruptStatus_FNO_Pos)   /* (UHPFS_HcInterruptStatus) Frame Number Overflow (read/write, write '1' to clear) Mask */
+#define UHPFS_HcInterruptStatus_FNO(value)    (UHPFS_HcInterruptStatus_FNO_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_FNO_Pos)) /* Assigment of value for FNO in the UHPFS_HcInterruptStatus register */
+#define   UHPFS_HcInterruptStatus_FNO_0_Val   _UINT32_(0x0)                                        /* (UHPFS_HcInterruptStatus) A frame number overflow has not occurred.  */
+#define   UHPFS_HcInterruptStatus_FNO_1_Val   _UINT32_(0x1)                                        /* (UHPFS_HcInterruptStatus) A frame number overflow has occurred.  */
+#define UHPFS_HcInterruptStatus_FNO_0         (UHPFS_HcInterruptStatus_FNO_0_Val << UHPFS_HcInterruptStatus_FNO_Pos) /* (UHPFS_HcInterruptStatus) A frame number overflow has not occurred. Position  */
+#define UHPFS_HcInterruptStatus_FNO_1         (UHPFS_HcInterruptStatus_FNO_1_Val << UHPFS_HcInterruptStatus_FNO_Pos) /* (UHPFS_HcInterruptStatus) A frame number overflow has occurred. Position  */
+#define UHPFS_HcInterruptStatus_RHSC_Pos      _UINT32_(6)                                          /* (UHPFS_HcInterruptStatus) Root Hub Status Change (read/write, write '1' to clear) Position */
+#define UHPFS_HcInterruptStatus_RHSC_Msk      (_UINT32_(0x1) << UHPFS_HcInterruptStatus_RHSC_Pos)  /* (UHPFS_HcInterruptStatus) Root Hub Status Change (read/write, write '1' to clear) Mask */
+#define UHPFS_HcInterruptStatus_RHSC(value)   (UHPFS_HcInterruptStatus_RHSC_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_RHSC_Pos)) /* Assigment of value for RHSC in the UHPFS_HcInterruptStatus register */
+#define   UHPFS_HcInterruptStatus_RHSC_0_Val  _UINT32_(0x0)                                        /* (UHPFS_HcInterruptStatus) A root hub status change has not occurred.  */
+#define   UHPFS_HcInterruptStatus_RHSC_1_Val  _UINT32_(0x1)                                        /* (UHPFS_HcInterruptStatus) A root hub status change has occurred.  */
+#define UHPFS_HcInterruptStatus_RHSC_0        (UHPFS_HcInterruptStatus_RHSC_0_Val << UHPFS_HcInterruptStatus_RHSC_Pos) /* (UHPFS_HcInterruptStatus) A root hub status change has not occurred. Position  */
+#define UHPFS_HcInterruptStatus_RHSC_1        (UHPFS_HcInterruptStatus_RHSC_1_Val << UHPFS_HcInterruptStatus_RHSC_Pos) /* (UHPFS_HcInterruptStatus) A root hub status change has occurred. Position  */
+#define UHPFS_HcInterruptStatus_OC_Pos        _UINT32_(30)                                         /* (UHPFS_HcInterruptStatus) Ownership Change (read-only) Position */
+#define UHPFS_HcInterruptStatus_OC_Msk        (_UINT32_(0x1) << UHPFS_HcInterruptStatus_OC_Pos)    /* (UHPFS_HcInterruptStatus) Ownership Change (read-only) Mask */
+#define UHPFS_HcInterruptStatus_OC(value)     (UHPFS_HcInterruptStatus_OC_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_OC_Pos)) /* Assigment of value for OC in the UHPFS_HcInterruptStatus register */
+#define UHPFS_HcInterruptStatus_Msk           _UINT32_(0x4000007F)                                 /* (UHPFS_HcInterruptStatus) Register Mask  */
 
 
 /* -------- UHPFS_HcInterruptEnable : (UHPFS Offset: 0x10) (R/W 32) HC Interrupt Enable Register -------- */
@@ -348,71 +258,82 @@
 #define UHPFS_HcInterruptEnable_Msk           _UINT32_(0xC000007F)                                 /* (UHPFS_HcInterruptEnable) Register Mask  */
 
 
-/* -------- UHPFS_HcInterruptStatus : (UHPFS Offset: 0x0C) (R/W 32) HC Interrupt and Status Register -------- */
-#define UHPFS_HcInterruptStatus_RESETVALUE    _UINT32_(0x00)                                       /*  (UHPFS_HcInterruptStatus) HC Interrupt and Status Register  Reset Value */
+/* -------- UHPFS_HcInterruptDisable : (UHPFS Offset: 0x14) (R/W 32) HC Interrupt Disable Register -------- */
+#define UHPFS_HcInterruptDisable_RESETVALUE   _UINT32_(0x00)                                       /*  (UHPFS_HcInterruptDisable) HC Interrupt Disable Register  Reset Value */
 
-#define UHPFS_HcInterruptStatus_SO_Pos        _UINT32_(0)                                          /* (UHPFS_HcInterruptStatus) Scheduling Overrun (read/write, write '1' to clear) Position */
-#define UHPFS_HcInterruptStatus_SO_Msk        (_UINT32_(0x1) << UHPFS_HcInterruptStatus_SO_Pos)    /* (UHPFS_HcInterruptStatus) Scheduling Overrun (read/write, write '1' to clear) Mask */
-#define UHPFS_HcInterruptStatus_SO(value)     (UHPFS_HcInterruptStatus_SO_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_SO_Pos)) /* Assigment of value for SO in the UHPFS_HcInterruptStatus register */
-#define   UHPFS_HcInterruptStatus_SO_0_Val    _UINT32_(0x0)                                        /* (UHPFS_HcInterruptStatus) A scheduling overrun has not occurred.  */
-#define   UHPFS_HcInterruptStatus_SO_1_Val    _UINT32_(0x1)                                        /* (UHPFS_HcInterruptStatus) A scheduling overrun has occurred.  */
-#define UHPFS_HcInterruptStatus_SO_0          (UHPFS_HcInterruptStatus_SO_0_Val << UHPFS_HcInterruptStatus_SO_Pos) /* (UHPFS_HcInterruptStatus) A scheduling overrun has not occurred. Position  */
-#define UHPFS_HcInterruptStatus_SO_1          (UHPFS_HcInterruptStatus_SO_1_Val << UHPFS_HcInterruptStatus_SO_Pos) /* (UHPFS_HcInterruptStatus) A scheduling overrun has occurred. Position  */
-#define UHPFS_HcInterruptStatus_WDH_Pos       _UINT32_(1)                                          /* (UHPFS_HcInterruptStatus) Write Done Head (read/write, write '1' to clear) Position */
-#define UHPFS_HcInterruptStatus_WDH_Msk       (_UINT32_(0x1) << UHPFS_HcInterruptStatus_WDH_Pos)   /* (UHPFS_HcInterruptStatus) Write Done Head (read/write, write '1' to clear) Mask */
-#define UHPFS_HcInterruptStatus_WDH(value)    (UHPFS_HcInterruptStatus_WDH_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_WDH_Pos)) /* Assigment of value for WDH in the UHPFS_HcInterruptStatus register */
-#define   UHPFS_HcInterruptStatus_WDH_0_Val   _UINT32_(0x0)                                        /* (UHPFS_HcInterruptStatus) USB1.1 host controller has not updated the UHPFS_HcDoneHead register.  */
-#define   UHPFS_HcInterruptStatus_WDH_1_Val   _UINT32_(0x1)                                        /* (UHPFS_HcInterruptStatus) USB1.1 host controller has updated the UHPFS_HcDoneHead register.  */
-#define UHPFS_HcInterruptStatus_WDH_0         (UHPFS_HcInterruptStatus_WDH_0_Val << UHPFS_HcInterruptStatus_WDH_Pos) /* (UHPFS_HcInterruptStatus) USB1.1 host controller has not updated the UHPFS_HcDoneHead register. Position  */
-#define UHPFS_HcInterruptStatus_WDH_1         (UHPFS_HcInterruptStatus_WDH_1_Val << UHPFS_HcInterruptStatus_WDH_Pos) /* (UHPFS_HcInterruptStatus) USB1.1 host controller has updated the UHPFS_HcDoneHead register. Position  */
-#define UHPFS_HcInterruptStatus_SF_Pos        _UINT32_(2)                                          /* (UHPFS_HcInterruptStatus) Start of Frame (read/write, write '1' to clear) Position */
-#define UHPFS_HcInterruptStatus_SF_Msk        (_UINT32_(0x1) << UHPFS_HcInterruptStatus_SF_Pos)    /* (UHPFS_HcInterruptStatus) Start of Frame (read/write, write '1' to clear) Mask */
-#define UHPFS_HcInterruptStatus_SF(value)     (UHPFS_HcInterruptStatus_SF_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_SF_Pos)) /* Assigment of value for SF in the UHPFS_HcInterruptStatus register */
-#define   UHPFS_HcInterruptStatus_SF_0_Val    _UINT32_(0x0)                                        /* (UHPFS_HcInterruptStatus) A SOF has not been issued.  */
-#define   UHPFS_HcInterruptStatus_SF_1_Val    _UINT32_(0x1)                                        /* (UHPFS_HcInterruptStatus) A SOF has been issued.  */
-#define UHPFS_HcInterruptStatus_SF_0          (UHPFS_HcInterruptStatus_SF_0_Val << UHPFS_HcInterruptStatus_SF_Pos) /* (UHPFS_HcInterruptStatus) A SOF has not been issued. Position  */
-#define UHPFS_HcInterruptStatus_SF_1          (UHPFS_HcInterruptStatus_SF_1_Val << UHPFS_HcInterruptStatus_SF_Pos) /* (UHPFS_HcInterruptStatus) A SOF has been issued. Position  */
-#define UHPFS_HcInterruptStatus_RD_Pos        _UINT32_(3)                                          /* (UHPFS_HcInterruptStatus) Resume Detected (read/write, write '1' to clear) Position */
-#define UHPFS_HcInterruptStatus_RD_Msk        (_UINT32_(0x1) << UHPFS_HcInterruptStatus_RD_Pos)    /* (UHPFS_HcInterruptStatus) Resume Detected (read/write, write '1' to clear) Mask */
-#define UHPFS_HcInterruptStatus_RD(value)     (UHPFS_HcInterruptStatus_RD_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_RD_Pos)) /* Assigment of value for RD in the UHPFS_HcInterruptStatus register */
-#define   UHPFS_HcInterruptStatus_RD_0_Val    _UINT32_(0x0)                                        /* (UHPFS_HcInterruptStatus) A downstream device has not issued a resume request.  */
-#define   UHPFS_HcInterruptStatus_RD_1_Val    _UINT32_(0x1)                                        /* (UHPFS_HcInterruptStatus) A downstream device has issued a resume request.  */
-#define UHPFS_HcInterruptStatus_RD_0          (UHPFS_HcInterruptStatus_RD_0_Val << UHPFS_HcInterruptStatus_RD_Pos) /* (UHPFS_HcInterruptStatus) A downstream device has not issued a resume request. Position  */
-#define UHPFS_HcInterruptStatus_RD_1          (UHPFS_HcInterruptStatus_RD_1_Val << UHPFS_HcInterruptStatus_RD_Pos) /* (UHPFS_HcInterruptStatus) A downstream device has issued a resume request. Position  */
-#define UHPFS_HcInterruptStatus_UE_Pos        _UINT32_(4)                                          /* (UHPFS_HcInterruptStatus) Unrecoverable Error (read/write, write '1' to clear) Position */
-#define UHPFS_HcInterruptStatus_UE_Msk        (_UINT32_(0x1) << UHPFS_HcInterruptStatus_UE_Pos)    /* (UHPFS_HcInterruptStatus) Unrecoverable Error (read/write, write '1' to clear) Mask */
-#define UHPFS_HcInterruptStatus_UE(value)     (UHPFS_HcInterruptStatus_UE_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_UE_Pos)) /* Assigment of value for UE in the UHPFS_HcInterruptStatus register */
-#define   UHPFS_HcInterruptStatus_UE_0_Val    _UINT32_(0x0)                                        /* (UHPFS_HcInterruptStatus) An unrecoverable error has not occurred.  */
-#define   UHPFS_HcInterruptStatus_UE_1_Val    _UINT32_(0x1)                                        /* (UHPFS_HcInterruptStatus) An unrecoverable error has occurred on the OCPI bus, or that an isochronous TD PSW field condition code was not set to Not Accessed when the USB1.1 host controller attempted to perform a transfer using that PSW/offset pair.  */
-#define UHPFS_HcInterruptStatus_UE_0          (UHPFS_HcInterruptStatus_UE_0_Val << UHPFS_HcInterruptStatus_UE_Pos) /* (UHPFS_HcInterruptStatus) An unrecoverable error has not occurred. Position  */
-#define UHPFS_HcInterruptStatus_UE_1          (UHPFS_HcInterruptStatus_UE_1_Val << UHPFS_HcInterruptStatus_UE_Pos) /* (UHPFS_HcInterruptStatus) An unrecoverable error has occurred on the OCPI bus, or that an isochronous TD PSW field condition code was not set to Not Accessed when the USB1.1 host controller attempted to perform a transfer using that PSW/offset pair. Position  */
-#define UHPFS_HcInterruptStatus_FNO_Pos       _UINT32_(5)                                          /* (UHPFS_HcInterruptStatus) Frame Number Overflow (read/write, write '1' to clear) Position */
-#define UHPFS_HcInterruptStatus_FNO_Msk       (_UINT32_(0x1) << UHPFS_HcInterruptStatus_FNO_Pos)   /* (UHPFS_HcInterruptStatus) Frame Number Overflow (read/write, write '1' to clear) Mask */
-#define UHPFS_HcInterruptStatus_FNO(value)    (UHPFS_HcInterruptStatus_FNO_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_FNO_Pos)) /* Assigment of value for FNO in the UHPFS_HcInterruptStatus register */
-#define   UHPFS_HcInterruptStatus_FNO_0_Val   _UINT32_(0x0)                                        /* (UHPFS_HcInterruptStatus) A frame number overflow has not occurred.  */
-#define   UHPFS_HcInterruptStatus_FNO_1_Val   _UINT32_(0x1)                                        /* (UHPFS_HcInterruptStatus) A frame number overflow has occurred.  */
-#define UHPFS_HcInterruptStatus_FNO_0         (UHPFS_HcInterruptStatus_FNO_0_Val << UHPFS_HcInterruptStatus_FNO_Pos) /* (UHPFS_HcInterruptStatus) A frame number overflow has not occurred. Position  */
-#define UHPFS_HcInterruptStatus_FNO_1         (UHPFS_HcInterruptStatus_FNO_1_Val << UHPFS_HcInterruptStatus_FNO_Pos) /* (UHPFS_HcInterruptStatus) A frame number overflow has occurred. Position  */
-#define UHPFS_HcInterruptStatus_RHSC_Pos      _UINT32_(6)                                          /* (UHPFS_HcInterruptStatus) Root Hub Status Change (read/write, write '1' to clear) Position */
-#define UHPFS_HcInterruptStatus_RHSC_Msk      (_UINT32_(0x1) << UHPFS_HcInterruptStatus_RHSC_Pos)  /* (UHPFS_HcInterruptStatus) Root Hub Status Change (read/write, write '1' to clear) Mask */
-#define UHPFS_HcInterruptStatus_RHSC(value)   (UHPFS_HcInterruptStatus_RHSC_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_RHSC_Pos)) /* Assigment of value for RHSC in the UHPFS_HcInterruptStatus register */
-#define   UHPFS_HcInterruptStatus_RHSC_0_Val  _UINT32_(0x0)                                        /* (UHPFS_HcInterruptStatus) A root hub status change has not occurred.  */
-#define   UHPFS_HcInterruptStatus_RHSC_1_Val  _UINT32_(0x1)                                        /* (UHPFS_HcInterruptStatus) A root hub status change has occurred.  */
-#define UHPFS_HcInterruptStatus_RHSC_0        (UHPFS_HcInterruptStatus_RHSC_0_Val << UHPFS_HcInterruptStatus_RHSC_Pos) /* (UHPFS_HcInterruptStatus) A root hub status change has not occurred. Position  */
-#define UHPFS_HcInterruptStatus_RHSC_1        (UHPFS_HcInterruptStatus_RHSC_1_Val << UHPFS_HcInterruptStatus_RHSC_Pos) /* (UHPFS_HcInterruptStatus) A root hub status change has occurred. Position  */
-#define UHPFS_HcInterruptStatus_OC_Pos        _UINT32_(30)                                         /* (UHPFS_HcInterruptStatus) Ownership Change (read-only) Position */
-#define UHPFS_HcInterruptStatus_OC_Msk        (_UINT32_(0x1) << UHPFS_HcInterruptStatus_OC_Pos)    /* (UHPFS_HcInterruptStatus) Ownership Change (read-only) Mask */
-#define UHPFS_HcInterruptStatus_OC(value)     (UHPFS_HcInterruptStatus_OC_Msk & (_UINT32_(value) << UHPFS_HcInterruptStatus_OC_Pos)) /* Assigment of value for OC in the UHPFS_HcInterruptStatus register */
-#define UHPFS_HcInterruptStatus_Msk           _UINT32_(0x4000007F)                                 /* (UHPFS_HcInterruptStatus) Register Mask  */
+#define UHPFS_HcInterruptDisable_SO_Pos       _UINT32_(0)                                          /* (UHPFS_HcInterruptDisable) Scheduling Overrun (read/write) Position */
+#define UHPFS_HcInterruptDisable_SO_Msk       (_UINT32_(0x1) << UHPFS_HcInterruptDisable_SO_Pos)   /* (UHPFS_HcInterruptDisable) Scheduling Overrun (read/write) Mask */
+#define UHPFS_HcInterruptDisable_SO(value)    (UHPFS_HcInterruptDisable_SO_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_SO_Pos)) /* Assigment of value for SO in the UHPFS_HcInterruptDisable register */
+#define   UHPFS_HcInterruptDisable_SO_0_Val   _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
+#define   UHPFS_HcInterruptDisable_SO_1_Val   _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the SO bit in the UHPFS_HcInterruptEnable register.  */
+#define UHPFS_HcInterruptDisable_SO_0         (UHPFS_HcInterruptDisable_SO_0_Val << UHPFS_HcInterruptDisable_SO_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
+#define UHPFS_HcInterruptDisable_SO_1         (UHPFS_HcInterruptDisable_SO_1_Val << UHPFS_HcInterruptDisable_SO_Pos) /* (UHPFS_HcInterruptDisable) Clears the SO bit in the UHPFS_HcInterruptEnable register. Position  */
+#define UHPFS_HcInterruptDisable_WDH_Pos      _UINT32_(1)                                          /* (UHPFS_HcInterruptDisable) Write Done Head (read/write) Position */
+#define UHPFS_HcInterruptDisable_WDH_Msk      (_UINT32_(0x1) << UHPFS_HcInterruptDisable_WDH_Pos)  /* (UHPFS_HcInterruptDisable) Write Done Head (read/write) Mask */
+#define UHPFS_HcInterruptDisable_WDH(value)   (UHPFS_HcInterruptDisable_WDH_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_WDH_Pos)) /* Assigment of value for WDH in the UHPFS_HcInterruptDisable register */
+#define   UHPFS_HcInterruptDisable_WDH_0_Val  _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
+#define   UHPFS_HcInterruptDisable_WDH_1_Val  _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the WDH bit in the UHPFS_HcInterruptEnable register.  */
+#define UHPFS_HcInterruptDisable_WDH_0        (UHPFS_HcInterruptDisable_WDH_0_Val << UHPFS_HcInterruptDisable_WDH_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
+#define UHPFS_HcInterruptDisable_WDH_1        (UHPFS_HcInterruptDisable_WDH_1_Val << UHPFS_HcInterruptDisable_WDH_Pos) /* (UHPFS_HcInterruptDisable) Clears the WDH bit in the UHPFS_HcInterruptEnable register. Position  */
+#define UHPFS_HcInterruptDisable_SF_Pos       _UINT32_(2)                                          /* (UHPFS_HcInterruptDisable) Start of Frame (read/write) Position */
+#define UHPFS_HcInterruptDisable_SF_Msk       (_UINT32_(0x1) << UHPFS_HcInterruptDisable_SF_Pos)   /* (UHPFS_HcInterruptDisable) Start of Frame (read/write) Mask */
+#define UHPFS_HcInterruptDisable_SF(value)    (UHPFS_HcInterruptDisable_SF_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_SF_Pos)) /* Assigment of value for SF in the UHPFS_HcInterruptDisable register */
+#define   UHPFS_HcInterruptDisable_SF_0_Val   _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
+#define   UHPFS_HcInterruptDisable_SF_1_Val   _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the SF bit in the UHPFS_HcInterruptEnable register.  */
+#define UHPFS_HcInterruptDisable_SF_0         (UHPFS_HcInterruptDisable_SF_0_Val << UHPFS_HcInterruptDisable_SF_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
+#define UHPFS_HcInterruptDisable_SF_1         (UHPFS_HcInterruptDisable_SF_1_Val << UHPFS_HcInterruptDisable_SF_Pos) /* (UHPFS_HcInterruptDisable) Clears the SF bit in the UHPFS_HcInterruptEnable register. Position  */
+#define UHPFS_HcInterruptDisable_RD_Pos       _UINT32_(3)                                          /* (UHPFS_HcInterruptDisable) Resume Detected (read/write) Position */
+#define UHPFS_HcInterruptDisable_RD_Msk       (_UINT32_(0x1) << UHPFS_HcInterruptDisable_RD_Pos)   /* (UHPFS_HcInterruptDisable) Resume Detected (read/write) Mask */
+#define UHPFS_HcInterruptDisable_RD(value)    (UHPFS_HcInterruptDisable_RD_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_RD_Pos)) /* Assigment of value for RD in the UHPFS_HcInterruptDisable register */
+#define   UHPFS_HcInterruptDisable_RD_0_Val   _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
+#define   UHPFS_HcInterruptDisable_RD_1_Val   _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the RD bit in the UHPFS_HcInterruptEnable register.  */
+#define UHPFS_HcInterruptDisable_RD_0         (UHPFS_HcInterruptDisable_RD_0_Val << UHPFS_HcInterruptDisable_RD_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
+#define UHPFS_HcInterruptDisable_RD_1         (UHPFS_HcInterruptDisable_RD_1_Val << UHPFS_HcInterruptDisable_RD_Pos) /* (UHPFS_HcInterruptDisable) Clears the RD bit in the UHPFS_HcInterruptEnable register. Position  */
+#define UHPFS_HcInterruptDisable_UE_Pos       _UINT32_(4)                                          /* (UHPFS_HcInterruptDisable) Unrecoverable Error (read/write) Position */
+#define UHPFS_HcInterruptDisable_UE_Msk       (_UINT32_(0x1) << UHPFS_HcInterruptDisable_UE_Pos)   /* (UHPFS_HcInterruptDisable) Unrecoverable Error (read/write) Mask */
+#define UHPFS_HcInterruptDisable_UE(value)    (UHPFS_HcInterruptDisable_UE_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_UE_Pos)) /* Assigment of value for UE in the UHPFS_HcInterruptDisable register */
+#define   UHPFS_HcInterruptDisable_UE_0_Val   _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
+#define   UHPFS_HcInterruptDisable_UE_1_Val   _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the UE bit in the UHPFS_HcInterruptEnable register.  */
+#define UHPFS_HcInterruptDisable_UE_0         (UHPFS_HcInterruptDisable_UE_0_Val << UHPFS_HcInterruptDisable_UE_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
+#define UHPFS_HcInterruptDisable_UE_1         (UHPFS_HcInterruptDisable_UE_1_Val << UHPFS_HcInterruptDisable_UE_Pos) /* (UHPFS_HcInterruptDisable) Clears the UE bit in the UHPFS_HcInterruptEnable register. Position  */
+#define UHPFS_HcInterruptDisable_FNO_Pos      _UINT32_(5)                                          /* (UHPFS_HcInterruptDisable) Frame Number Overflow (read/write) Position */
+#define UHPFS_HcInterruptDisable_FNO_Msk      (_UINT32_(0x1) << UHPFS_HcInterruptDisable_FNO_Pos)  /* (UHPFS_HcInterruptDisable) Frame Number Overflow (read/write) Mask */
+#define UHPFS_HcInterruptDisable_FNO(value)   (UHPFS_HcInterruptDisable_FNO_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_FNO_Pos)) /* Assigment of value for FNO in the UHPFS_HcInterruptDisable register */
+#define   UHPFS_HcInterruptDisable_FNO_0_Val  _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
+#define   UHPFS_HcInterruptDisable_FNO_1_Val  _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the FNO bit in the UHPFS_HcInterruptEnable register.  */
+#define UHPFS_HcInterruptDisable_FNO_0        (UHPFS_HcInterruptDisable_FNO_0_Val << UHPFS_HcInterruptDisable_FNO_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
+#define UHPFS_HcInterruptDisable_FNO_1        (UHPFS_HcInterruptDisable_FNO_1_Val << UHPFS_HcInterruptDisable_FNO_Pos) /* (UHPFS_HcInterruptDisable) Clears the FNO bit in the UHPFS_HcInterruptEnable register. Position  */
+#define UHPFS_HcInterruptDisable_RHSC_Pos     _UINT32_(6)                                          /* (UHPFS_HcInterruptDisable) Root Hub Status Change (read/write) Position */
+#define UHPFS_HcInterruptDisable_RHSC_Msk     (_UINT32_(0x1) << UHPFS_HcInterruptDisable_RHSC_Pos) /* (UHPFS_HcInterruptDisable) Root Hub Status Change (read/write) Mask */
+#define UHPFS_HcInterruptDisable_RHSC(value)  (UHPFS_HcInterruptDisable_RHSC_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_RHSC_Pos)) /* Assigment of value for RHSC in the UHPFS_HcInterruptDisable register */
+#define   UHPFS_HcInterruptDisable_RHSC_0_Val _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
+#define   UHPFS_HcInterruptDisable_RHSC_1_Val _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the RHSC bit in the UHPFS_HcInterruptEnable register.  */
+#define UHPFS_HcInterruptDisable_RHSC_0       (UHPFS_HcInterruptDisable_RHSC_0_Val << UHPFS_HcInterruptDisable_RHSC_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
+#define UHPFS_HcInterruptDisable_RHSC_1       (UHPFS_HcInterruptDisable_RHSC_1_Val << UHPFS_HcInterruptDisable_RHSC_Pos) /* (UHPFS_HcInterruptDisable) Clears the RHSC bit in the UHPFS_HcInterruptEnable register. Position  */
+#define UHPFS_HcInterruptDisable_OC_Pos       _UINT32_(30)                                         /* (UHPFS_HcInterruptDisable) Ownership Change (read-only) Position */
+#define UHPFS_HcInterruptDisable_OC_Msk       (_UINT32_(0x1) << UHPFS_HcInterruptDisable_OC_Pos)   /* (UHPFS_HcInterruptDisable) Ownership Change (read-only) Mask */
+#define UHPFS_HcInterruptDisable_OC(value)    (UHPFS_HcInterruptDisable_OC_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_OC_Pos)) /* Assigment of value for OC in the UHPFS_HcInterruptDisable register */
+#define   UHPFS_HcInterruptDisable_OC_0_Val   _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) Ignore.  */
+#define   UHPFS_HcInterruptDisable_OC_1_Val   _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Disable interrupt generation due to Ownership Change.  */
+#define UHPFS_HcInterruptDisable_OC_0         (UHPFS_HcInterruptDisable_OC_0_Val << UHPFS_HcInterruptDisable_OC_Pos) /* (UHPFS_HcInterruptDisable) Ignore. Position  */
+#define UHPFS_HcInterruptDisable_OC_1         (UHPFS_HcInterruptDisable_OC_1_Val << UHPFS_HcInterruptDisable_OC_Pos) /* (UHPFS_HcInterruptDisable) Disable interrupt generation due to Ownership Change. Position  */
+#define UHPFS_HcInterruptDisable_MIE_Pos      _UINT32_(31)                                         /* (UHPFS_HcInterruptDisable) Master Interrupt Enable (read/write) Position */
+#define UHPFS_HcInterruptDisable_MIE_Msk      (_UINT32_(0x1) << UHPFS_HcInterruptDisable_MIE_Pos)  /* (UHPFS_HcInterruptDisable) Master Interrupt Enable (read/write) Mask */
+#define UHPFS_HcInterruptDisable_MIE(value)   (UHPFS_HcInterruptDisable_MIE_Msk & (_UINT32_(value) << UHPFS_HcInterruptDisable_MIE_Pos)) /* Assigment of value for MIE in the UHPFS_HcInterruptDisable register */
+#define   UHPFS_HcInterruptDisable_MIE_0_Val  _UINT32_(0x0)                                        /* (UHPFS_HcInterruptDisable) No effect.  */
+#define   UHPFS_HcInterruptDisable_MIE_1_Val  _UINT32_(0x1)                                        /* (UHPFS_HcInterruptDisable) Clears the MIE bit in the UHPFS_HcInterruptEnable register.  */
+#define UHPFS_HcInterruptDisable_MIE_0        (UHPFS_HcInterruptDisable_MIE_0_Val << UHPFS_HcInterruptDisable_MIE_Pos) /* (UHPFS_HcInterruptDisable) No effect. Position  */
+#define UHPFS_HcInterruptDisable_MIE_1        (UHPFS_HcInterruptDisable_MIE_1_Val << UHPFS_HcInterruptDisable_MIE_Pos) /* (UHPFS_HcInterruptDisable) Clears the MIE bit in the UHPFS_HcInterruptEnable register. Position  */
+#define UHPFS_HcInterruptDisable_Msk          _UINT32_(0xC000007F)                                 /* (UHPFS_HcInterruptDisable) Register Mask  */
 
 
-/* -------- UHPFS_HcLSThreshold : (UHPFS Offset: 0x44) (R/W 32) HC Low-Speed Threshold Register -------- */
-#define UHPFS_HcLSThreshold_RESETVALUE        _UINT32_(0x628)                                      /*  (UHPFS_HcLSThreshold) HC Low-Speed Threshold Register  Reset Value */
+/* -------- UHPFS_HcHCCA : (UHPFS Offset: 0x18) (R/W 32) HC HCCA Address Register -------- */
+#define UHPFS_HcHCCA_RESETVALUE               _UINT32_(0x00)                                       /*  (UHPFS_HcHCCA) HC HCCA Address Register  Reset Value */
 
-#define UHPFS_HcLSThreshold_LST_Pos           _UINT32_(0)                                          /* (UHPFS_HcLSThreshold) Low-Speed Threshold Position */
-#define UHPFS_HcLSThreshold_LST_Msk           (_UINT32_(0x3FFF) << UHPFS_HcLSThreshold_LST_Pos)    /* (UHPFS_HcLSThreshold) Low-Speed Threshold Mask */
-#define UHPFS_HcLSThreshold_LST(value)        (UHPFS_HcLSThreshold_LST_Msk & (_UINT32_(value) << UHPFS_HcLSThreshold_LST_Pos)) /* Assigment of value for LST in the UHPFS_HcLSThreshold register */
-#define UHPFS_HcLSThreshold_Msk               _UINT32_(0x00003FFF)                                 /* (UHPFS_HcLSThreshold) Register Mask  */
+#define UHPFS_HcHCCA_HCCA_Pos                 _UINT32_(8)                                          /* (UHPFS_HcHCCA) Physical Address of the Beginning of the HCCA Position */
+#define UHPFS_HcHCCA_HCCA_Msk                 (_UINT32_(0xFFFFFF) << UHPFS_HcHCCA_HCCA_Pos)        /* (UHPFS_HcHCCA) Physical Address of the Beginning of the HCCA Mask */
+#define UHPFS_HcHCCA_HCCA(value)              (UHPFS_HcHCCA_HCCA_Msk & (_UINT32_(value) << UHPFS_HcHCCA_HCCA_Pos)) /* Assigment of value for HCCA in the UHPFS_HcHCCA register */
+#define UHPFS_HcHCCA_Msk                      _UINT32_(0xFFFFFF00)                                 /* (UHPFS_HcHCCA) Register Mask  */
 
 
 /* -------- UHPFS_HcPeriodCurrentED : (UHPFS Offset: 0x1C) (R/W 32) HC Current Periodic Register -------- */
@@ -424,6 +345,87 @@
 #define UHPFS_HcPeriodCurrentED_Msk           _UINT32_(0xFFFFFFF0)                                 /* (UHPFS_HcPeriodCurrentED) Register Mask  */
 
 
+/* -------- UHPFS_HcControlHeadED : (UHPFS Offset: 0x20) (R/W 32) HC Head Control Register -------- */
+#define UHPFS_HcControlHeadED_RESETVALUE      _UINT32_(0x00)                                       /*  (UHPFS_HcControlHeadED) HC Head Control Register  Reset Value */
+
+#define UHPFS_HcControlHeadED_CHED_Pos        _UINT32_(4)                                          /* (UHPFS_HcControlHeadED) Physical Address of the Head ED on the Control ED list Position */
+#define UHPFS_HcControlHeadED_CHED_Msk        (_UINT32_(0xFFFFFFF) << UHPFS_HcControlHeadED_CHED_Pos) /* (UHPFS_HcControlHeadED) Physical Address of the Head ED on the Control ED list Mask */
+#define UHPFS_HcControlHeadED_CHED(value)     (UHPFS_HcControlHeadED_CHED_Msk & (_UINT32_(value) << UHPFS_HcControlHeadED_CHED_Pos)) /* Assigment of value for CHED in the UHPFS_HcControlHeadED register */
+#define UHPFS_HcControlHeadED_Msk             _UINT32_(0xFFFFFFF0)                                 /* (UHPFS_HcControlHeadED) Register Mask  */
+
+
+/* -------- UHPFS_HcControlCurrentED : (UHPFS Offset: 0x24) (R/W 32) HC Current Control Register -------- */
+#define UHPFS_HcControlCurrentED_RESETVALUE   _UINT32_(0x00)                                       /*  (UHPFS_HcControlCurrentED) HC Current Control Register  Reset Value */
+
+#define UHPFS_HcControlCurrentED_CCED_Pos     _UINT32_(4)                                          /* (UHPFS_HcControlCurrentED) Physical Address of the Current ED on the Control ED List Position */
+#define UHPFS_HcControlCurrentED_CCED_Msk     (_UINT32_(0xFFFFFFF) << UHPFS_HcControlCurrentED_CCED_Pos) /* (UHPFS_HcControlCurrentED) Physical Address of the Current ED on the Control ED List Mask */
+#define UHPFS_HcControlCurrentED_CCED(value)  (UHPFS_HcControlCurrentED_CCED_Msk & (_UINT32_(value) << UHPFS_HcControlCurrentED_CCED_Pos)) /* Assigment of value for CCED in the UHPFS_HcControlCurrentED register */
+#define UHPFS_HcControlCurrentED_Msk          _UINT32_(0xFFFFFFF0)                                 /* (UHPFS_HcControlCurrentED) Register Mask  */
+
+
+/* -------- UHPFS_HcBulkHeadED : (UHPFS Offset: 0x28) (R/W 32) HC Head Bulk Register -------- */
+#define UHPFS_HcBulkHeadED_RESETVALUE         _UINT32_(0x00)                                       /*  (UHPFS_HcBulkHeadED) HC Head Bulk Register  Reset Value */
+
+#define UHPFS_HcBulkHeadED_BHED_Pos           _UINT32_(4)                                          /* (UHPFS_HcBulkHeadED) Physical Address of the Head ED on the Bulk ED List Position */
+#define UHPFS_HcBulkHeadED_BHED_Msk           (_UINT32_(0xFFFFFFF) << UHPFS_HcBulkHeadED_BHED_Pos) /* (UHPFS_HcBulkHeadED) Physical Address of the Head ED on the Bulk ED List Mask */
+#define UHPFS_HcBulkHeadED_BHED(value)        (UHPFS_HcBulkHeadED_BHED_Msk & (_UINT32_(value) << UHPFS_HcBulkHeadED_BHED_Pos)) /* Assigment of value for BHED in the UHPFS_HcBulkHeadED register */
+#define UHPFS_HcBulkHeadED_Msk                _UINT32_(0xFFFFFFF0)                                 /* (UHPFS_HcBulkHeadED) Register Mask  */
+
+
+/* -------- UHPFS_HcBulkCurrentED : (UHPFS Offset: 0x2C) (R/W 32) HC Current Bulk Register -------- */
+#define UHPFS_HcBulkCurrentED_RESETVALUE      _UINT32_(0x00)                                       /*  (UHPFS_HcBulkCurrentED) HC Current Bulk Register  Reset Value */
+
+#define UHPFS_HcBulkCurrentED_BCED_Pos        _UINT32_(4)                                          /* (UHPFS_HcBulkCurrentED) Physical Address of the Current ED on the Bulk ED List Position */
+#define UHPFS_HcBulkCurrentED_BCED_Msk        (_UINT32_(0xFFFFFFF) << UHPFS_HcBulkCurrentED_BCED_Pos) /* (UHPFS_HcBulkCurrentED) Physical Address of the Current ED on the Bulk ED List Mask */
+#define UHPFS_HcBulkCurrentED_BCED(value)     (UHPFS_HcBulkCurrentED_BCED_Msk & (_UINT32_(value) << UHPFS_HcBulkCurrentED_BCED_Pos)) /* Assigment of value for BCED in the UHPFS_HcBulkCurrentED register */
+#define UHPFS_HcBulkCurrentED_Msk             _UINT32_(0xFFFFFFF0)                                 /* (UHPFS_HcBulkCurrentED) Register Mask  */
+
+
+/* -------- UHPFS_HcDoneHead : (UHPFS Offset: 0x30) (R/W 32) HC Head Done Register -------- */
+#define UHPFS_HcDoneHead_RESETVALUE           _UINT32_(0x00)                                       /*  (UHPFS_HcDoneHead) HC Head Done Register  Reset Value */
+
+#define UHPFS_HcDoneHead_DH_Pos               _UINT32_(4)                                          /* (UHPFS_HcDoneHead) Physical Address of the Last TD that has added to the done queue Position */
+#define UHPFS_HcDoneHead_DH_Msk               (_UINT32_(0xFFFFFFF) << UHPFS_HcDoneHead_DH_Pos)     /* (UHPFS_HcDoneHead) Physical Address of the Last TD that has added to the done queue Mask */
+#define UHPFS_HcDoneHead_DH(value)            (UHPFS_HcDoneHead_DH_Msk & (_UINT32_(value) << UHPFS_HcDoneHead_DH_Pos)) /* Assigment of value for DH in the UHPFS_HcDoneHead register */
+#define UHPFS_HcDoneHead_Msk                  _UINT32_(0xFFFFFFF0)                                 /* (UHPFS_HcDoneHead) Register Mask  */
+
+
+/* -------- UHPFS_HcFmInterval : (UHPFS Offset: 0x34) (R/W 32) HC Frame Interval Register -------- */
+#define UHPFS_HcFmInterval_RESETVALUE         _UINT32_(0x2EDF)                                     /*  (UHPFS_HcFmInterval) HC Frame Interval Register  Reset Value */
+
+#define UHPFS_HcFmInterval_FRAMEINTERVAL_Pos  _UINT32_(0)                                          /* (UHPFS_HcFmInterval) Frame Interval Position */
+#define UHPFS_HcFmInterval_FRAMEINTERVAL_Msk  (_UINT32_(0x3FFF) << UHPFS_HcFmInterval_FRAMEINTERVAL_Pos) /* (UHPFS_HcFmInterval) Frame Interval Mask */
+#define UHPFS_HcFmInterval_FRAMEINTERVAL(value) (UHPFS_HcFmInterval_FRAMEINTERVAL_Msk & (_UINT32_(value) << UHPFS_HcFmInterval_FRAMEINTERVAL_Pos)) /* Assigment of value for FRAMEINTERVAL in the UHPFS_HcFmInterval register */
+#define UHPFS_HcFmInterval_FSMPS_Pos          _UINT32_(16)                                         /* (UHPFS_HcFmInterval) Largest Data Packet Position */
+#define UHPFS_HcFmInterval_FSMPS_Msk          (_UINT32_(0x7FFF) << UHPFS_HcFmInterval_FSMPS_Pos)   /* (UHPFS_HcFmInterval) Largest Data Packet Mask */
+#define UHPFS_HcFmInterval_FSMPS(value)       (UHPFS_HcFmInterval_FSMPS_Msk & (_UINT32_(value) << UHPFS_HcFmInterval_FSMPS_Pos)) /* Assigment of value for FSMPS in the UHPFS_HcFmInterval register */
+#define UHPFS_HcFmInterval_FIT_Pos            _UINT32_(31)                                         /* (UHPFS_HcFmInterval) Frame Interval Toggle Position */
+#define UHPFS_HcFmInterval_FIT_Msk            (_UINT32_(0x1) << UHPFS_HcFmInterval_FIT_Pos)        /* (UHPFS_HcFmInterval) Frame Interval Toggle Mask */
+#define UHPFS_HcFmInterval_FIT(value)         (UHPFS_HcFmInterval_FIT_Msk & (_UINT32_(value) << UHPFS_HcFmInterval_FIT_Pos)) /* Assigment of value for FIT in the UHPFS_HcFmInterval register */
+#define UHPFS_HcFmInterval_Msk                _UINT32_(0xFFFF3FFF)                                 /* (UHPFS_HcFmInterval) Register Mask  */
+
+
+/* -------- UHPFS_HcFmRemaining : (UHPFS Offset: 0x38) (R/W 32) HC Frame Remaining Register -------- */
+#define UHPFS_HcFmRemaining_RESETVALUE        _UINT32_(0x00)                                       /*  (UHPFS_HcFmRemaining) HC Frame Remaining Register  Reset Value */
+
+#define UHPFS_HcFmRemaining_FR_Pos            _UINT32_(0)                                          /* (UHPFS_HcFmRemaining) Frame Remaining Position */
+#define UHPFS_HcFmRemaining_FR_Msk            (_UINT32_(0x3FFF) << UHPFS_HcFmRemaining_FR_Pos)     /* (UHPFS_HcFmRemaining) Frame Remaining Mask */
+#define UHPFS_HcFmRemaining_FR(value)         (UHPFS_HcFmRemaining_FR_Msk & (_UINT32_(value) << UHPFS_HcFmRemaining_FR_Pos)) /* Assigment of value for FR in the UHPFS_HcFmRemaining register */
+#define UHPFS_HcFmRemaining_FRT_Pos           _UINT32_(31)                                         /* (UHPFS_HcFmRemaining) Frame Remaining Toggle Position */
+#define UHPFS_HcFmRemaining_FRT_Msk           (_UINT32_(0x1) << UHPFS_HcFmRemaining_FRT_Pos)       /* (UHPFS_HcFmRemaining) Frame Remaining Toggle Mask */
+#define UHPFS_HcFmRemaining_FRT(value)        (UHPFS_HcFmRemaining_FRT_Msk & (_UINT32_(value) << UHPFS_HcFmRemaining_FRT_Pos)) /* Assigment of value for FRT in the UHPFS_HcFmRemaining register */
+#define UHPFS_HcFmRemaining_Msk               _UINT32_(0x80003FFF)                                 /* (UHPFS_HcFmRemaining) Register Mask  */
+
+
+/* -------- UHPFS_HcFmNumber : (UHPFS Offset: 0x3C) (R/W 32) HC Frame Number Register -------- */
+#define UHPFS_HcFmNumber_RESETVALUE           _UINT32_(0x00)                                       /*  (UHPFS_HcFmNumber) HC Frame Number Register  Reset Value */
+
+#define UHPFS_HcFmNumber_FN_Pos               _UINT32_(0)                                          /* (UHPFS_HcFmNumber) Frame Number Position */
+#define UHPFS_HcFmNumber_FN_Msk               (_UINT32_(0xFFFF) << UHPFS_HcFmNumber_FN_Pos)        /* (UHPFS_HcFmNumber) Frame Number Mask */
+#define UHPFS_HcFmNumber_FN(value)            (UHPFS_HcFmNumber_FN_Msk & (_UINT32_(value) << UHPFS_HcFmNumber_FN_Pos)) /* Assigment of value for FN in the UHPFS_HcFmNumber register */
+#define UHPFS_HcFmNumber_Msk                  _UINT32_(0x0000FFFF)                                 /* (UHPFS_HcFmNumber) Register Mask  */
+
+
 /* -------- UHPFS_HcPeriodicStart : (UHPFS Offset: 0x40) (R/W 32) HC Periodic Start Register -------- */
 #define UHPFS_HcPeriodicStart_RESETVALUE      _UINT32_(0x00)                                       /*  (UHPFS_HcPeriodicStart) HC Periodic Start Register  Reset Value */
 
@@ -433,15 +435,13 @@
 #define UHPFS_HcPeriodicStart_Msk             _UINT32_(0x00003FFF)                                 /* (UHPFS_HcPeriodicStart) Register Mask  */
 
 
-/* -------- UHPFS_HcRevision : (UHPFS Offset: 0x00) ( R/ 32) OHCI Revision Number Register -------- */
-#define UHPFS_HcRevision_RESETVALUE           _UINT32_(0x10)                                       /*  (UHPFS_HcRevision) OHCI Revision Number Register  Reset Value */
+/* -------- UHPFS_HcLSThreshold : (UHPFS Offset: 0x44) (R/W 32) HC Low-Speed Threshold Register -------- */
+#define UHPFS_HcLSThreshold_RESETVALUE        _UINT32_(0x628)                                      /*  (UHPFS_HcLSThreshold) HC Low-Speed Threshold Register  Reset Value */
 
-#define UHPFS_HcRevision_REV_Pos              _UINT32_(0)                                          /* (UHPFS_HcRevision) OHCI Revision Number Position */
-#define UHPFS_HcRevision_REV_Msk              (_UINT32_(0xFF) << UHPFS_HcRevision_REV_Pos)         /* (UHPFS_HcRevision) OHCI Revision Number Mask */
-#define UHPFS_HcRevision_REV(value)           (UHPFS_HcRevision_REV_Msk & (_UINT32_(value) << UHPFS_HcRevision_REV_Pos)) /* Assigment of value for REV in the UHPFS_HcRevision register */
-#define   UHPFS_HcRevision_REV_0x10_Val       _UINT32_(0x10)                                       /* (UHPFS_HcRevision) This read-only field contains the BCD representation of the version of the HCI specification that is implemented by this HC. For example, a value of 11h corresponds to version 1.1. All of the HC implementations that are compliant with this specification will have a value of 10h.  */
-#define UHPFS_HcRevision_REV_0x10             (UHPFS_HcRevision_REV_0x10_Val << UHPFS_HcRevision_REV_Pos) /* (UHPFS_HcRevision) This read-only field contains the BCD representation of the version of the HCI specification that is implemented by this HC. For example, a value of 11h corresponds to version 1.1. All of the HC implementations that are compliant with this specification will have a value of 10h. Position  */
-#define UHPFS_HcRevision_Msk                  _UINT32_(0x000000FF)                                 /* (UHPFS_HcRevision) Register Mask  */
+#define UHPFS_HcLSThreshold_LST_Pos           _UINT32_(0)                                          /* (UHPFS_HcLSThreshold) Low-Speed Threshold Position */
+#define UHPFS_HcLSThreshold_LST_Msk           (_UINT32_(0x3FFF) << UHPFS_HcLSThreshold_LST_Pos)    /* (UHPFS_HcLSThreshold) Low-Speed Threshold Mask */
+#define UHPFS_HcLSThreshold_LST(value)        (UHPFS_HcLSThreshold_LST_Msk & (_UINT32_(value) << UHPFS_HcLSThreshold_LST_Pos)) /* Assigment of value for LST in the UHPFS_HcLSThreshold register */
+#define UHPFS_HcLSThreshold_Msk               _UINT32_(0x00003FFF)                                 /* (UHPFS_HcLSThreshold) Register Mask  */
 
 
 /* -------- UHPFS_HcRhDescriptorA : (UHPFS Offset: 0x48) (R/W 32) HC Root Hub A Register -------- */
@@ -613,6 +613,48 @@
 #define UHPFS_HcRhDescriptorB_PPCM_Msk        (_UINT32_(0xFFFF) << UHPFS_HcRhDescriptorB_PPCM_Pos) /* (UHPFS_HcRhDescriptorB Mask) PPCM */
 #define UHPFS_HcRhDescriptorB_PPCM(value)     (UHPFS_HcRhDescriptorB_PPCM_Msk & (_UINT32_(value) << UHPFS_HcRhDescriptorB_PPCM_Pos)) 
 
+/* -------- UHPFS_HcRhStatus : (UHPFS Offset: 0x50) (R/W 32) HC Root Hub Status Register -------- */
+#define UHPFS_HcRhStatus_RESETVALUE           _UINT32_(0x00)                                       /*  (UHPFS_HcRhStatus) HC Root Hub Status Register  Reset Value */
+
+#define UHPFS_HcRhStatus_LPS_Pos              _UINT32_(0)                                          /* (UHPFS_HcRhStatus) Local Power Status (read/write) Position */
+#define UHPFS_HcRhStatus_LPS_Msk              (_UINT32_(0x1) << UHPFS_HcRhStatus_LPS_Pos)          /* (UHPFS_HcRhStatus) Local Power Status (read/write) Mask */
+#define UHPFS_HcRhStatus_LPS(value)           (UHPFS_HcRhStatus_LPS_Msk & (_UINT32_(value) << UHPFS_HcRhStatus_LPS_Pos)) /* Assigment of value for LPS in the UHPFS_HcRhStatus register */
+#define   UHPFS_HcRhStatus_LPS_0_Val          _UINT32_(0x0)                                        /* (UHPFS_HcRhStatus) Because the root hub does not support the local power status feature, this bit defaults to 0 and has no effect. This bit has no relationship to the OTG controller register bits that relate to VBUS. System software can update this register to simplify host controller driver and/or OTG driver coding.  */
+#define UHPFS_HcRhStatus_LPS_0                (UHPFS_HcRhStatus_LPS_0_Val << UHPFS_HcRhStatus_LPS_Pos) /* (UHPFS_HcRhStatus) Because the root hub does not support the local power status feature, this bit defaults to 0 and has no effect. This bit has no relationship to the OTG controller register bits that relate to VBUS. System software can update this register to simplify host controller driver and/or OTG driver coding. Position  */
+#define UHPFS_HcRhStatus_OCI_Pos              _UINT32_(1)                                          /* (UHPFS_HcRhStatus) Overcurrent Indicator (read-only) Position */
+#define UHPFS_HcRhStatus_OCI_Msk              (_UINT32_(0x1) << UHPFS_HcRhStatus_OCI_Pos)          /* (UHPFS_HcRhStatus) Overcurrent Indicator (read-only) Mask */
+#define UHPFS_HcRhStatus_OCI(value)           (UHPFS_HcRhStatus_OCI_Msk & (_UINT32_(value) << UHPFS_HcRhStatus_OCI_Pos)) /* Assigment of value for OCI in the UHPFS_HcRhStatus register */
+#define   UHPFS_HcRhStatus_OCI_0_Val          _UINT32_(0x0)                                        /* (UHPFS_HcRhStatus) Because the device does not provide signals for external hardware to report overcurrent status to the USB1.1 host controller, this bit is always 0. This bit has no relationship to the OTG controller register bits that relate to VBUS.  */
+#define UHPFS_HcRhStatus_OCI_0                (UHPFS_HcRhStatus_OCI_0_Val << UHPFS_HcRhStatus_OCI_Pos) /* (UHPFS_HcRhStatus) Because the device does not provide signals for external hardware to report overcurrent status to the USB1.1 host controller, this bit is always 0. This bit has no relationship to the OTG controller register bits that relate to VBUS. Position  */
+#define UHPFS_HcRhStatus_DRWE_Pos             _UINT32_(15)                                         /* (UHPFS_HcRhStatus) Device Remote Wakeup Enable (read/write) Position */
+#define UHPFS_HcRhStatus_DRWE_Msk             (_UINT32_(0x1) << UHPFS_HcRhStatus_DRWE_Pos)         /* (UHPFS_HcRhStatus) Device Remote Wakeup Enable (read/write) Mask */
+#define UHPFS_HcRhStatus_DRWE(value)          (UHPFS_HcRhStatus_DRWE_Msk & (_UINT32_(value) << UHPFS_HcRhStatus_DRWE_Pos)) /* Assigment of value for DRWE in the UHPFS_HcRhStatus register */
+#define   UHPFS_HcRhStatus_DRWE_0_Val         _UINT32_(0x0)                                        /* (UHPFS_HcRhStatus) A write of 0 has no effect. Connect status change events do not cause a transition from USB suspend to USB resume state and the resume detected interrupt is not changed.  */
+#define   UHPFS_HcRhStatus_DRWE_1_Val         _UINT32_(0x1)                                        /* (UHPFS_HcRhStatus) A write of 1 sets the device remote wakeup enable bit. This bit enables a connect status change event to be treated as a resume event, which causes a transition from USB suspend to USB resume state and sets the resume detected interrupt status bit.  */
+#define UHPFS_HcRhStatus_DRWE_0               (UHPFS_HcRhStatus_DRWE_0_Val << UHPFS_HcRhStatus_DRWE_Pos) /* (UHPFS_HcRhStatus) A write of 0 has no effect. Connect status change events do not cause a transition from USB suspend to USB resume state and the resume detected interrupt is not changed. Position  */
+#define UHPFS_HcRhStatus_DRWE_1               (UHPFS_HcRhStatus_DRWE_1_Val << UHPFS_HcRhStatus_DRWE_Pos) /* (UHPFS_HcRhStatus) A write of 1 sets the device remote wakeup enable bit. This bit enables a connect status change event to be treated as a resume event, which causes a transition from USB suspend to USB resume state and sets the resume detected interrupt status bit. Position  */
+#define UHPFS_HcRhStatus_LPSC_Pos             _UINT32_(16)                                         /* (UHPFS_HcRhStatus) Local Power Status Change (read/write) Position */
+#define UHPFS_HcRhStatus_LPSC_Msk             (_UINT32_(0x1) << UHPFS_HcRhStatus_LPSC_Pos)         /* (UHPFS_HcRhStatus) Local Power Status Change (read/write) Mask */
+#define UHPFS_HcRhStatus_LPSC(value)          (UHPFS_HcRhStatus_LPSC_Msk & (_UINT32_(value) << UHPFS_HcRhStatus_LPSC_Pos)) /* Assigment of value for LPSC in the UHPFS_HcRhStatus register */
+#define   UHPFS_HcRhStatus_LPSC_0_Val         _UINT32_(0x0)                                        /* (UHPFS_HcRhStatus) Because the root hub does not support the local power status feature, this bit defaults to 0 and has no effect. This bit has no relationship to the OTG controller register bits that relate to VBUS. System software can update this register to simplify host controller driver and/or OTG driver coding.  */
+#define UHPFS_HcRhStatus_LPSC_0               (UHPFS_HcRhStatus_LPSC_0_Val << UHPFS_HcRhStatus_LPSC_Pos) /* (UHPFS_HcRhStatus) Because the root hub does not support the local power status feature, this bit defaults to 0 and has no effect. This bit has no relationship to the OTG controller register bits that relate to VBUS. System software can update this register to simplify host controller driver and/or OTG driver coding. Position  */
+#define UHPFS_HcRhStatus_OCIC_Pos             _UINT32_(17)                                         /* (UHPFS_HcRhStatus) Overcurrent Indication Change (read/write) Position */
+#define UHPFS_HcRhStatus_OCIC_Msk             (_UINT32_(0x1) << UHPFS_HcRhStatus_OCIC_Pos)         /* (UHPFS_HcRhStatus) Overcurrent Indication Change (read/write) Mask */
+#define UHPFS_HcRhStatus_OCIC(value)          (UHPFS_HcRhStatus_OCIC_Msk & (_UINT32_(value) << UHPFS_HcRhStatus_OCIC_Pos)) /* Assigment of value for OCIC in the UHPFS_HcRhStatus register */
+#define   UHPFS_HcRhStatus_OCIC_0_Val         _UINT32_(0x0)                                        /* (UHPFS_HcRhStatus) No effect.  */
+#define   UHPFS_HcRhStatus_OCIC_1_Val         _UINT32_(0x1)                                        /* (UHPFS_HcRhStatus) Clears this bit.  */
+#define UHPFS_HcRhStatus_OCIC_0               (UHPFS_HcRhStatus_OCIC_0_Val << UHPFS_HcRhStatus_OCIC_Pos) /* (UHPFS_HcRhStatus) No effect. Position  */
+#define UHPFS_HcRhStatus_OCIC_1               (UHPFS_HcRhStatus_OCIC_1_Val << UHPFS_HcRhStatus_OCIC_Pos) /* (UHPFS_HcRhStatus) Clears this bit. Position  */
+#define UHPFS_HcRhStatus_CRWE_Pos             _UINT32_(31)                                         /* (UHPFS_HcRhStatus) Clear Remote Wakeup Enable (read/write) Position */
+#define UHPFS_HcRhStatus_CRWE_Msk             (_UINT32_(0x1) << UHPFS_HcRhStatus_CRWE_Pos)         /* (UHPFS_HcRhStatus) Clear Remote Wakeup Enable (read/write) Mask */
+#define UHPFS_HcRhStatus_CRWE(value)          (UHPFS_HcRhStatus_CRWE_Msk & (_UINT32_(value) << UHPFS_HcRhStatus_CRWE_Pos)) /* Assigment of value for CRWE in the UHPFS_HcRhStatus register */
+#define   UHPFS_HcRhStatus_CRWE_0_Val         _UINT32_(0x0)                                        /* (UHPFS_HcRhStatus) No effect.  */
+#define   UHPFS_HcRhStatus_CRWE_1_Val         _UINT32_(0x1)                                        /* (UHPFS_HcRhStatus) Clears the device remote wakeup enable bit.  */
+#define UHPFS_HcRhStatus_CRWE_0               (UHPFS_HcRhStatus_CRWE_0_Val << UHPFS_HcRhStatus_CRWE_Pos) /* (UHPFS_HcRhStatus) No effect. Position  */
+#define UHPFS_HcRhStatus_CRWE_1               (UHPFS_HcRhStatus_CRWE_1_Val << UHPFS_HcRhStatus_CRWE_Pos) /* (UHPFS_HcRhStatus) Clears the device remote wakeup enable bit. Position  */
+#define UHPFS_HcRhStatus_Msk                  _UINT32_(0x80038003)                                 /* (UHPFS_HcRhStatus) Register Mask  */
+
+
 /* -------- UHPFS_HcRhPortStatus : (UHPFS Offset: 0x54) (R/W 32) HC Port Status and Control Register (ndp = 0) -------- */
 #define UHPFS_HcRhPortStatus_RESETVALUE       _UINT32_(0x100)                                      /*  (UHPFS_HcRhPortStatus) HC Port Status and Control Register (ndp = 0)  Reset Value */
 
@@ -750,74 +792,32 @@
 #define UHPFS_HcRhPortStatus_Msk              _UINT32_(0x001F031F)                                 /* (UHPFS_HcRhPortStatus) Register Mask  */
 
 
-/* -------- UHPFS_HcRhStatus : (UHPFS Offset: 0x50) (R/W 32) HC Root Hub Status Register -------- */
-#define UHPFS_HcRhStatus_RESETVALUE           _UINT32_(0x00)                                       /*  (UHPFS_HcRhStatus) HC Root Hub Status Register  Reset Value */
-
-#define UHPFS_HcRhStatus_LPS_Pos              _UINT32_(0)                                          /* (UHPFS_HcRhStatus) Local Power Status (read/write) Position */
-#define UHPFS_HcRhStatus_LPS_Msk              (_UINT32_(0x1) << UHPFS_HcRhStatus_LPS_Pos)          /* (UHPFS_HcRhStatus) Local Power Status (read/write) Mask */
-#define UHPFS_HcRhStatus_LPS(value)           (UHPFS_HcRhStatus_LPS_Msk & (_UINT32_(value) << UHPFS_HcRhStatus_LPS_Pos)) /* Assigment of value for LPS in the UHPFS_HcRhStatus register */
-#define   UHPFS_HcRhStatus_LPS_0_Val          _UINT32_(0x0)                                        /* (UHPFS_HcRhStatus) Because the root hub does not support the local power status feature, this bit defaults to 0 and has no effect. This bit has no relationship to the OTG controller register bits that relate to VBUS. System software can update this register to simplify host controller driver and/or OTG driver coding.  */
-#define UHPFS_HcRhStatus_LPS_0                (UHPFS_HcRhStatus_LPS_0_Val << UHPFS_HcRhStatus_LPS_Pos) /* (UHPFS_HcRhStatus) Because the root hub does not support the local power status feature, this bit defaults to 0 and has no effect. This bit has no relationship to the OTG controller register bits that relate to VBUS. System software can update this register to simplify host controller driver and/or OTG driver coding. Position  */
-#define UHPFS_HcRhStatus_OCI_Pos              _UINT32_(1)                                          /* (UHPFS_HcRhStatus) Overcurrent Indicator (read-only) Position */
-#define UHPFS_HcRhStatus_OCI_Msk              (_UINT32_(0x1) << UHPFS_HcRhStatus_OCI_Pos)          /* (UHPFS_HcRhStatus) Overcurrent Indicator (read-only) Mask */
-#define UHPFS_HcRhStatus_OCI(value)           (UHPFS_HcRhStatus_OCI_Msk & (_UINT32_(value) << UHPFS_HcRhStatus_OCI_Pos)) /* Assigment of value for OCI in the UHPFS_HcRhStatus register */
-#define   UHPFS_HcRhStatus_OCI_0_Val          _UINT32_(0x0)                                        /* (UHPFS_HcRhStatus) Because the device does not provide signals for external hardware to report overcurrent status to the USB1.1 host controller, this bit is always 0. This bit has no relationship to the OTG controller register bits that relate to VBUS.  */
-#define UHPFS_HcRhStatus_OCI_0                (UHPFS_HcRhStatus_OCI_0_Val << UHPFS_HcRhStatus_OCI_Pos) /* (UHPFS_HcRhStatus) Because the device does not provide signals for external hardware to report overcurrent status to the USB1.1 host controller, this bit is always 0. This bit has no relationship to the OTG controller register bits that relate to VBUS. Position  */
-#define UHPFS_HcRhStatus_DRWE_Pos             _UINT32_(15)                                         /* (UHPFS_HcRhStatus) Device Remote Wakeup Enable (read/write) Position */
-#define UHPFS_HcRhStatus_DRWE_Msk             (_UINT32_(0x1) << UHPFS_HcRhStatus_DRWE_Pos)         /* (UHPFS_HcRhStatus) Device Remote Wakeup Enable (read/write) Mask */
-#define UHPFS_HcRhStatus_DRWE(value)          (UHPFS_HcRhStatus_DRWE_Msk & (_UINT32_(value) << UHPFS_HcRhStatus_DRWE_Pos)) /* Assigment of value for DRWE in the UHPFS_HcRhStatus register */
-#define   UHPFS_HcRhStatus_DRWE_0_Val         _UINT32_(0x0)                                        /* (UHPFS_HcRhStatus) A write of 0 has no effect. Connect status change events do not cause a transition from USB suspend to USB resume state and the resume detected interrupt is not changed.  */
-#define   UHPFS_HcRhStatus_DRWE_1_Val         _UINT32_(0x1)                                        /* (UHPFS_HcRhStatus) A write of 1 sets the device remote wakeup enable bit. This bit enables a connect status change event to be treated as a resume event, which causes a transition from USB suspend to USB resume state and sets the resume detected interrupt status bit.  */
-#define UHPFS_HcRhStatus_DRWE_0               (UHPFS_HcRhStatus_DRWE_0_Val << UHPFS_HcRhStatus_DRWE_Pos) /* (UHPFS_HcRhStatus) A write of 0 has no effect. Connect status change events do not cause a transition from USB suspend to USB resume state and the resume detected interrupt is not changed. Position  */
-#define UHPFS_HcRhStatus_DRWE_1               (UHPFS_HcRhStatus_DRWE_1_Val << UHPFS_HcRhStatus_DRWE_Pos) /* (UHPFS_HcRhStatus) A write of 1 sets the device remote wakeup enable bit. This bit enables a connect status change event to be treated as a resume event, which causes a transition from USB suspend to USB resume state and sets the resume detected interrupt status bit. Position  */
-#define UHPFS_HcRhStatus_LPSC_Pos             _UINT32_(16)                                         /* (UHPFS_HcRhStatus) Local Power Status Change (read/write) Position */
-#define UHPFS_HcRhStatus_LPSC_Msk             (_UINT32_(0x1) << UHPFS_HcRhStatus_LPSC_Pos)         /* (UHPFS_HcRhStatus) Local Power Status Change (read/write) Mask */
-#define UHPFS_HcRhStatus_LPSC(value)          (UHPFS_HcRhStatus_LPSC_Msk & (_UINT32_(value) << UHPFS_HcRhStatus_LPSC_Pos)) /* Assigment of value for LPSC in the UHPFS_HcRhStatus register */
-#define   UHPFS_HcRhStatus_LPSC_0_Val         _UINT32_(0x0)                                        /* (UHPFS_HcRhStatus) Because the root hub does not support the local power status feature, this bit defaults to 0 and has no effect. This bit has no relationship to the OTG controller register bits that relate to VBUS. System software can update this register to simplify host controller driver and/or OTG driver coding.  */
-#define UHPFS_HcRhStatus_LPSC_0               (UHPFS_HcRhStatus_LPSC_0_Val << UHPFS_HcRhStatus_LPSC_Pos) /* (UHPFS_HcRhStatus) Because the root hub does not support the local power status feature, this bit defaults to 0 and has no effect. This bit has no relationship to the OTG controller register bits that relate to VBUS. System software can update this register to simplify host controller driver and/or OTG driver coding. Position  */
-#define UHPFS_HcRhStatus_OCIC_Pos             _UINT32_(17)                                         /* (UHPFS_HcRhStatus) Overcurrent Indication Change (read/write) Position */
-#define UHPFS_HcRhStatus_OCIC_Msk             (_UINT32_(0x1) << UHPFS_HcRhStatus_OCIC_Pos)         /* (UHPFS_HcRhStatus) Overcurrent Indication Change (read/write) Mask */
-#define UHPFS_HcRhStatus_OCIC(value)          (UHPFS_HcRhStatus_OCIC_Msk & (_UINT32_(value) << UHPFS_HcRhStatus_OCIC_Pos)) /* Assigment of value for OCIC in the UHPFS_HcRhStatus register */
-#define   UHPFS_HcRhStatus_OCIC_0_Val         _UINT32_(0x0)                                        /* (UHPFS_HcRhStatus) No effect.  */
-#define   UHPFS_HcRhStatus_OCIC_1_Val         _UINT32_(0x1)                                        /* (UHPFS_HcRhStatus) Clears this bit.  */
-#define UHPFS_HcRhStatus_OCIC_0               (UHPFS_HcRhStatus_OCIC_0_Val << UHPFS_HcRhStatus_OCIC_Pos) /* (UHPFS_HcRhStatus) No effect. Position  */
-#define UHPFS_HcRhStatus_OCIC_1               (UHPFS_HcRhStatus_OCIC_1_Val << UHPFS_HcRhStatus_OCIC_Pos) /* (UHPFS_HcRhStatus) Clears this bit. Position  */
-#define UHPFS_HcRhStatus_CRWE_Pos             _UINT32_(31)                                         /* (UHPFS_HcRhStatus) Clear Remote Wakeup Enable (read/write) Position */
-#define UHPFS_HcRhStatus_CRWE_Msk             (_UINT32_(0x1) << UHPFS_HcRhStatus_CRWE_Pos)         /* (UHPFS_HcRhStatus) Clear Remote Wakeup Enable (read/write) Mask */
-#define UHPFS_HcRhStatus_CRWE(value)          (UHPFS_HcRhStatus_CRWE_Msk & (_UINT32_(value) << UHPFS_HcRhStatus_CRWE_Pos)) /* Assigment of value for CRWE in the UHPFS_HcRhStatus register */
-#define   UHPFS_HcRhStatus_CRWE_0_Val         _UINT32_(0x0)                                        /* (UHPFS_HcRhStatus) No effect.  */
-#define   UHPFS_HcRhStatus_CRWE_1_Val         _UINT32_(0x1)                                        /* (UHPFS_HcRhStatus) Clears the device remote wakeup enable bit.  */
-#define UHPFS_HcRhStatus_CRWE_0               (UHPFS_HcRhStatus_CRWE_0_Val << UHPFS_HcRhStatus_CRWE_Pos) /* (UHPFS_HcRhStatus) No effect. Position  */
-#define UHPFS_HcRhStatus_CRWE_1               (UHPFS_HcRhStatus_CRWE_1_Val << UHPFS_HcRhStatus_CRWE_Pos) /* (UHPFS_HcRhStatus) Clears the device remote wakeup enable bit. Position  */
-#define UHPFS_HcRhStatus_Msk                  _UINT32_(0x80038003)                                 /* (UHPFS_HcRhStatus) Register Mask  */
-
-
 /** \brief UHPFS register offsets definitions */
-#define UHPFS_HcBulkCurrentED_REG_OFST _UINT32_(0x2C)      /* (UHPFS_HcBulkCurrentED) HC Current Bulk Register Offset */
-#define UHPFS_HcBulkHeadED_REG_OFST    _UINT32_(0x28)      /* (UHPFS_HcBulkHeadED) HC Head Bulk Register Offset */
-#define UHPFS_HcCommandStatus_REG_OFST _UINT32_(0x08)      /* (UHPFS_HcCommandStatus) HC Command and Status Register Offset */
+#define UHPFS_HcRevision_REG_OFST      _UINT32_(0x00)      /* (UHPFS_HcRevision) OHCI Revision Number Register Offset */
 #define UHPFS_HcControl_REG_OFST       _UINT32_(0x04)      /* (UHPFS_HcControl) HC Operating Mode Register Offset */
-#define UHPFS_HcControlCurrentED_REG_OFST _UINT32_(0x24)      /* (UHPFS_HcControlCurrentED) HC Current Control Register Offset */
+#define UHPFS_HcCommandStatus_REG_OFST _UINT32_(0x08)      /* (UHPFS_HcCommandStatus) HC Command and Status Register Offset */
+#define UHPFS_HcInterruptStatus_REG_OFST _UINT32_(0x0C)      /* (UHPFS_HcInterruptStatus) HC Interrupt and Status Register Offset */
+#define UHPFS_HcInterruptEnable_REG_OFST _UINT32_(0x10)      /* (UHPFS_HcInterruptEnable) HC Interrupt Enable Register Offset */
+#define UHPFS_HcInterruptDisable_REG_OFST _UINT32_(0x14)      /* (UHPFS_HcInterruptDisable) HC Interrupt Disable Register Offset */
+#define UHPFS_HcHCCA_REG_OFST          _UINT32_(0x18)      /* (UHPFS_HcHCCA) HC HCCA Address Register Offset */
+#define UHPFS_HcPeriodCurrentED_REG_OFST _UINT32_(0x1C)      /* (UHPFS_HcPeriodCurrentED) HC Current Periodic Register Offset */
 #define UHPFS_HcControlHeadED_REG_OFST _UINT32_(0x20)      /* (UHPFS_HcControlHeadED) HC Head Control Register Offset */
+#define UHPFS_HcControlCurrentED_REG_OFST _UINT32_(0x24)      /* (UHPFS_HcControlCurrentED) HC Current Control Register Offset */
+#define UHPFS_HcBulkHeadED_REG_OFST    _UINT32_(0x28)      /* (UHPFS_HcBulkHeadED) HC Head Bulk Register Offset */
+#define UHPFS_HcBulkCurrentED_REG_OFST _UINT32_(0x2C)      /* (UHPFS_HcBulkCurrentED) HC Current Bulk Register Offset */
 #define UHPFS_HcDoneHead_REG_OFST      _UINT32_(0x30)      /* (UHPFS_HcDoneHead) HC Head Done Register Offset */
 #define UHPFS_HcFmInterval_REG_OFST    _UINT32_(0x34)      /* (UHPFS_HcFmInterval) HC Frame Interval Register Offset */
-#define UHPFS_HcFmNumber_REG_OFST      _UINT32_(0x3C)      /* (UHPFS_HcFmNumber) HC Frame Number Register Offset */
 #define UHPFS_HcFmRemaining_REG_OFST   _UINT32_(0x38)      /* (UHPFS_HcFmRemaining) HC Frame Remaining Register Offset */
-#define UHPFS_HcHCCA_REG_OFST          _UINT32_(0x18)      /* (UHPFS_HcHCCA) HC HCCA Address Register Offset */
-#define UHPFS_HcInterruptDisable_REG_OFST _UINT32_(0x14)      /* (UHPFS_HcInterruptDisable) HC Interrupt Disable Register Offset */
-#define UHPFS_HcInterruptEnable_REG_OFST _UINT32_(0x10)      /* (UHPFS_HcInterruptEnable) HC Interrupt Enable Register Offset */
-#define UHPFS_HcInterruptStatus_REG_OFST _UINT32_(0x0C)      /* (UHPFS_HcInterruptStatus) HC Interrupt and Status Register Offset */
-#define UHPFS_HcLSThreshold_REG_OFST   _UINT32_(0x44)      /* (UHPFS_HcLSThreshold) HC Low-Speed Threshold Register Offset */
-#define UHPFS_HcPeriodCurrentED_REG_OFST _UINT32_(0x1C)      /* (UHPFS_HcPeriodCurrentED) HC Current Periodic Register Offset */
+#define UHPFS_HcFmNumber_REG_OFST      _UINT32_(0x3C)      /* (UHPFS_HcFmNumber) HC Frame Number Register Offset */
 #define UHPFS_HcPeriodicStart_REG_OFST _UINT32_(0x40)      /* (UHPFS_HcPeriodicStart) HC Periodic Start Register Offset */
-#define UHPFS_HcRevision_REG_OFST      _UINT32_(0x00)      /* (UHPFS_HcRevision) OHCI Revision Number Register Offset */
+#define UHPFS_HcLSThreshold_REG_OFST   _UINT32_(0x44)      /* (UHPFS_HcLSThreshold) HC Low-Speed Threshold Register Offset */
 #define UHPFS_HcRhDescriptorA_REG_OFST _UINT32_(0x48)      /* (UHPFS_HcRhDescriptorA) HC Root Hub A Register Offset */
 #define UHPFS_HcRhDescriptorB_REG_OFST _UINT32_(0x4C)      /* (UHPFS_HcRhDescriptorB) HC Root Hub B Register Offset */
+#define UHPFS_HcRhStatus_REG_OFST      _UINT32_(0x50)      /* (UHPFS_HcRhStatus) HC Root Hub Status Register Offset */
 #define UHPFS_HcRhPortStatus_REG_OFST  _UINT32_(0x54)      /* (UHPFS_HcRhPortStatus) HC Port Status and Control Register (ndp = 0) Offset */
 #define UHPFS_HcRhPortStatus0_REG_OFST _UINT32_(0x54)      /* (UHPFS_HcRhPortStatus0) HC Port Status and Control Register (ndp = 0) Offset */
 #define UHPFS_HcRhPortStatus1_REG_OFST _UINT32_(0x58)      /* (UHPFS_HcRhPortStatus1) HC Port Status and Control Register (ndp = 0) Offset */
 #define UHPFS_HcRhPortStatus2_REG_OFST _UINT32_(0x5C)      /* (UHPFS_HcRhPortStatus2) HC Port Status and Control Register (ndp = 0) Offset */
-#define UHPFS_HcRhStatus_REG_OFST      _UINT32_(0x50)      /* (UHPFS_HcRhStatus) HC Root Hub Status Register Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief UHPFS register API structure */

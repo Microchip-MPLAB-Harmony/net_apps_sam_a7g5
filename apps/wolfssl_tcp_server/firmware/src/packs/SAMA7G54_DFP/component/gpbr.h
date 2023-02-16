@@ -1,7 +1,7 @@
 /*
  * Component description for GPBR
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,26 +20,13 @@
  *
  */
 
-/* file generated from device description version 2022-11-02T14:25:51Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_GPBR_COMPONENT_H_
 #define _SAMA7G_GPBR_COMPONENT_H_
 
 /* ************************************************************************** */
 /*   SOFTWARE API DEFINITION FOR GPBR                                         */
 /* ************************************************************************** */
-
-/* -------- GPBR_FCLR : (GPBR Offset: 0x04) (R/W 32) GPBR Full Clear Register -------- */
-#define GPBR_FCLR_RESETVALUE                  _UINT32_(0x00)                                       /*  (GPBR_FCLR) GPBR Full Clear Register  Reset Value */
-
-#define GPBR_FCLR_FCLR_Pos                    _UINT32_(0)                                          /* (GPBR_FCLR) Full Clear Enable Position */
-#define GPBR_FCLR_FCLR_Msk                    (_UINT32_(0x1) << GPBR_FCLR_FCLR_Pos)                /* (GPBR_FCLR) Full Clear Enable Mask */
-#define GPBR_FCLR_FCLR(value)                 (GPBR_FCLR_FCLR_Msk & (_UINT32_(value) << GPBR_FCLR_FCLR_Pos)) /* Assigment of value for FCLR in the GPBR_FCLR register */
-#define   GPBR_FCLR_FCLR_0_Val                _UINT32_(0x0)                                        /* (GPBR_FCLR) SYS_GPBR0 to SYS_GPBR1 are immediately cleared in case of fast wakeup pin tamper event.  */
-#define   GPBR_FCLR_FCLR_1_Val                _UINT32_(0x1)                                        /* (GPBR_FCLR) All SYS_GPBRx are immediately cleared in case of fast wakeup pin tamper event.  */
-#define GPBR_FCLR_FCLR_0                      (GPBR_FCLR_FCLR_0_Val << GPBR_FCLR_FCLR_Pos)         /* (GPBR_FCLR) SYS_GPBR0 to SYS_GPBR1 are immediately cleared in case of fast wakeup pin tamper event. Position  */
-#define GPBR_FCLR_FCLR_1                      (GPBR_FCLR_FCLR_1_Val << GPBR_FCLR_FCLR_Pos)         /* (GPBR_FCLR) All SYS_GPBRx are immediately cleared in case of fast wakeup pin tamper event. Position  */
-#define GPBR_FCLR_Msk                         _UINT32_(0x00000001)                                 /* (GPBR_FCLR) Register Mask  */
-
 
 /* -------- GPBR_MR : (GPBR Offset: 0x00) (R/W 32) GPBR Mode Register -------- */
 #define GPBR_MR_RESETVALUE                    _UINT32_(0x00)                                       /*  (GPBR_MR) GPBR Mode Register  Reset Value */
@@ -81,6 +68,19 @@
 #define GPBR_MR_GPBRRP_Msk                    (_UINT32_(0x3) << GPBR_MR_GPBRRP_Pos)                /* (GPBR_MR Mask) GPBRRP */
 #define GPBR_MR_GPBRRP(value)                 (GPBR_MR_GPBRRP_Msk & (_UINT32_(value) << GPBR_MR_GPBRRP_Pos)) 
 
+/* -------- GPBR_FCLR : (GPBR Offset: 0x04) (R/W 32) GPBR Full Clear Register -------- */
+#define GPBR_FCLR_RESETVALUE                  _UINT32_(0x00)                                       /*  (GPBR_FCLR) GPBR Full Clear Register  Reset Value */
+
+#define GPBR_FCLR_FCLR_Pos                    _UINT32_(0)                                          /* (GPBR_FCLR) Full Clear Enable Position */
+#define GPBR_FCLR_FCLR_Msk                    (_UINT32_(0x1) << GPBR_FCLR_FCLR_Pos)                /* (GPBR_FCLR) Full Clear Enable Mask */
+#define GPBR_FCLR_FCLR(value)                 (GPBR_FCLR_FCLR_Msk & (_UINT32_(value) << GPBR_FCLR_FCLR_Pos)) /* Assigment of value for FCLR in the GPBR_FCLR register */
+#define   GPBR_FCLR_FCLR_0_Val                _UINT32_(0x0)                                        /* (GPBR_FCLR) SYS_GPBR0 to SYS_GPBR1 are immediately cleared in case of fast wakeup pin tamper event.  */
+#define   GPBR_FCLR_FCLR_1_Val                _UINT32_(0x1)                                        /* (GPBR_FCLR) All SYS_GPBRx are immediately cleared in case of fast wakeup pin tamper event.  */
+#define GPBR_FCLR_FCLR_0                      (GPBR_FCLR_FCLR_0_Val << GPBR_FCLR_FCLR_Pos)         /* (GPBR_FCLR) SYS_GPBR0 to SYS_GPBR1 are immediately cleared in case of fast wakeup pin tamper event. Position  */
+#define GPBR_FCLR_FCLR_1                      (GPBR_FCLR_FCLR_1_Val << GPBR_FCLR_FCLR_Pos)         /* (GPBR_FCLR) All SYS_GPBRx are immediately cleared in case of fast wakeup pin tamper event. Position  */
+#define GPBR_FCLR_Msk                         _UINT32_(0x00000001)                                 /* (GPBR_FCLR) Register Mask  */
+
+
 /* -------- SYS_GPBR : (GPBR Offset: 0x08) (R/W 32) General Purpose Backup Register x -------- */
 #define SYS_GPBR_RESETVALUE                   _UINT32_(0x00)                                       /*  (SYS_GPBR) General Purpose Backup Register x  Reset Value */
 
@@ -91,8 +91,8 @@
 
 
 /** \brief GPBR register offsets definitions */
-#define GPBR_FCLR_REG_OFST             _UINT32_(0x04)      /* (GPBR_FCLR) GPBR Full Clear Register Offset */
 #define GPBR_MR_REG_OFST               _UINT32_(0x00)      /* (GPBR_MR) GPBR Mode Register Offset */
+#define GPBR_FCLR_REG_OFST             _UINT32_(0x04)      /* (GPBR_FCLR) GPBR Full Clear Register Offset */
 #define SYS_GPBR_REG_OFST              _UINT32_(0x08)      /* (SYS_GPBR) General Purpose Backup Register x Offset */
 #define SYS_GPBR0_REG_OFST             _UINT32_(0x08)      /* (SYS_GPBR0) General Purpose Backup Register x Offset */
 #define SYS_GPBR1_REG_OFST             _UINT32_(0x0C)      /* (SYS_GPBR1) General Purpose Backup Register x Offset */

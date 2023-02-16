@@ -1,7 +1,7 @@
 /*
  * Component description for SFRBU
  *
- * Copyright (c) 2022 Microchip Technology Inc. and its subsidiaries.
+ * Copyright (c) 2023 Microchip Technology Inc. and its subsidiaries.
  *
  * Subject to your compliance with these terms, you may use Microchip software and any derivatives
  * exclusively with Microchip products. It is your responsibility to comply with third party license
@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2022-11-02T14:25:51Z */
+/* file generated from device description version 2023-01-20T08:56:57Z */
 #ifndef _SAMA7G_SFRBU_COMPONENT_H_
 #define _SAMA7G_SFRBU_COMPONENT_H_
 
@@ -28,17 +28,36 @@
 /*   SOFTWARE API DEFINITION FOR SFRBU                                        */
 /* ************************************************************************** */
 
-/* -------- SFRBU_DDRPWR : (SFRBU Offset: 0x10) (R/W 32) DDR Power Control -------- */
-#define SFRBU_DDRPWR_RESETVALUE               _UINT32_(0x00)                                       /*  (SFRBU_DDRPWR) DDR Power Control  Reset Value */
+/* -------- SFRBU_PSWBU : (SFRBU Offset: 0x00) (R/W 32) Power Switch BU Control -------- */
+#define SFRBU_PSWBU_RESETVALUE                _UINT32_(0x01)                                       /*  (SFRBU_PSWBU) Power Switch BU Control  Reset Value */
 
-#define SFRBU_DDRPWR_STATE_Pos                _UINT32_(0)                                          /* (SFRBU_DDRPWR) DDR Power Mode State Position */
-#define SFRBU_DDRPWR_STATE_Msk                (_UINT32_(0x1) << SFRBU_DDRPWR_STATE_Pos)            /* (SFRBU_DDRPWR) DDR Power Mode State Mask */
-#define SFRBU_DDRPWR_STATE(value)             (SFRBU_DDRPWR_STATE_Msk & (_UINT32_(value) << SFRBU_DDRPWR_STATE_Pos)) /* Assigment of value for STATE in the SFRBU_DDRPWR register */
-#define   SFRBU_DDRPWR_STATE_ON_Val           _UINT32_(0x0)                                        /* (SFRBU_DDRPWR) DDR Power mode is on.  */
-#define   SFRBU_DDRPWR_STATE_OFF_Val          _UINT32_(0x1)                                        /* (SFRBU_DDRPWR) DDR Power mode is off.  */
-#define SFRBU_DDRPWR_STATE_ON                 (SFRBU_DDRPWR_STATE_ON_Val << SFRBU_DDRPWR_STATE_Pos) /* (SFRBU_DDRPWR) DDR Power mode is on. Position  */
-#define SFRBU_DDRPWR_STATE_OFF                (SFRBU_DDRPWR_STATE_OFF_Val << SFRBU_DDRPWR_STATE_Pos) /* (SFRBU_DDRPWR) DDR Power mode is off. Position  */
-#define SFRBU_DDRPWR_Msk                      _UINT32_(0x00000001)                                 /* (SFRBU_DDRPWR) Register Mask  */
+#define SFRBU_PSWBU_CTRL_Pos                  _UINT32_(0)                                          /* (SFRBU_PSWBU) Power Switch BU Control Position */
+#define SFRBU_PSWBU_CTRL_Msk                  (_UINT32_(0x1) << SFRBU_PSWBU_CTRL_Pos)              /* (SFRBU_PSWBU) Power Switch BU Control Mask */
+#define SFRBU_PSWBU_CTRL(value)               (SFRBU_PSWBU_CTRL_Msk & (_UINT32_(value) << SFRBU_PSWBU_CTRL_Pos)) /* Assigment of value for CTRL in the SFRBU_PSWBU register */
+#define   SFRBU_PSWBU_CTRL_HARD_Val           _UINT32_(0x0)                                        /* (SFRBU_PSWBU) Power Switch BU is controlled by hardware (SOFTSWITCH bit has no action).  */
+#define   SFRBU_PSWBU_CTRL_SOFT_Val           _UINT32_(0x1)                                        /* (SFRBU_PSWBU) Power Switch BU is controlled by software (SOFTSWITCH bit has an action).  */
+#define SFRBU_PSWBU_CTRL_HARD                 (SFRBU_PSWBU_CTRL_HARD_Val << SFRBU_PSWBU_CTRL_Pos)  /* (SFRBU_PSWBU) Power Switch BU is controlled by hardware (SOFTSWITCH bit has no action). Position  */
+#define SFRBU_PSWBU_CTRL_SOFT                 (SFRBU_PSWBU_CTRL_SOFT_Val << SFRBU_PSWBU_CTRL_Pos)  /* (SFRBU_PSWBU) Power Switch BU is controlled by software (SOFTSWITCH bit has an action). Position  */
+#define SFRBU_PSWBU_SOFTSWITCH_Pos            _UINT32_(1)                                          /* (SFRBU_PSWBU) Power Switch BU Source Selection Position */
+#define SFRBU_PSWBU_SOFTSWITCH_Msk            (_UINT32_(0x1) << SFRBU_PSWBU_SOFTSWITCH_Pos)        /* (SFRBU_PSWBU) Power Switch BU Source Selection Mask */
+#define SFRBU_PSWBU_SOFTSWITCH(value)         (SFRBU_PSWBU_SOFTSWITCH_Msk & (_UINT32_(value) << SFRBU_PSWBU_SOFTSWITCH_Pos)) /* Assigment of value for SOFTSWITCH in the SFRBU_PSWBU register */
+#define   SFRBU_PSWBU_SOFTSWITCH_VBAT_Val     _UINT32_(0x0)                                        /* (SFRBU_PSWBU) LDO Supply source is VBAT.  */
+#define   SFRBU_PSWBU_SOFTSWITCH_VDDIN33_Val  _UINT32_(0x1)                                        /* (SFRBU_PSWBU) LDO Supply source is VDDIN33.  */
+#define SFRBU_PSWBU_SOFTSWITCH_VBAT           (SFRBU_PSWBU_SOFTSWITCH_VBAT_Val << SFRBU_PSWBU_SOFTSWITCH_Pos) /* (SFRBU_PSWBU) LDO Supply source is VBAT. Position  */
+#define SFRBU_PSWBU_SOFTSWITCH_VDDIN33        (SFRBU_PSWBU_SOFTSWITCH_VDDIN33_Val << SFRBU_PSWBU_SOFTSWITCH_Pos) /* (SFRBU_PSWBU) LDO Supply source is VDDIN33. Position  */
+#define SFRBU_PSWBU_STATE_Pos                 _UINT32_(2)                                          /* (SFRBU_PSWBU) Power Switch BU State (Read-only) Position */
+#define SFRBU_PSWBU_STATE_Msk                 (_UINT32_(0x1) << SFRBU_PSWBU_STATE_Pos)             /* (SFRBU_PSWBU) Power Switch BU State (Read-only) Mask */
+#define SFRBU_PSWBU_STATE(value)              (SFRBU_PSWBU_STATE_Msk & (_UINT32_(value) << SFRBU_PSWBU_STATE_Pos)) /* Assigment of value for STATE in the SFRBU_PSWBU register */
+#define   SFRBU_PSWBU_STATE_VBAT_Val          _UINT32_(0x0)                                        /* (SFRBU_PSWBU) LDO BU Supply source is VBAT.  */
+#define   SFRBU_PSWBU_STATE_VDDIN33_Val       _UINT32_(0x1)                                        /* (SFRBU_PSWBU) LDO BU Supply source is VDDIN33.  */
+#define SFRBU_PSWBU_STATE_VBAT                (SFRBU_PSWBU_STATE_VBAT_Val << SFRBU_PSWBU_STATE_Pos) /* (SFRBU_PSWBU) LDO BU Supply source is VBAT. Position  */
+#define SFRBU_PSWBU_STATE_VDDIN33             (SFRBU_PSWBU_STATE_VDDIN33_Val << SFRBU_PSWBU_STATE_Pos) /* (SFRBU_PSWBU) LDO BU Supply source is VDDIN33. Position  */
+#define SFRBU_PSWBU_PSWKEY_Pos                _UINT32_(8)                                          /* (SFRBU_PSWBU) Specific Value Mandatory to Allow Writing of Other Register Bits (Write-only) Position */
+#define SFRBU_PSWBU_PSWKEY_Msk                (_UINT32_(0xFFFFFF) << SFRBU_PSWBU_PSWKEY_Pos)       /* (SFRBU_PSWBU) Specific Value Mandatory to Allow Writing of Other Register Bits (Write-only) Mask */
+#define SFRBU_PSWBU_PSWKEY(value)             (SFRBU_PSWBU_PSWKEY_Msk & (_UINT32_(value) << SFRBU_PSWBU_PSWKEY_Pos)) /* Assigment of value for PSWKEY in the SFRBU_PSWBU register */
+#define   SFRBU_PSWBU_PSWKEY_PASSWD_Val       _UINT32_(0x4BD20C)                                   /* (SFRBU_PSWBU) Writing any other value in this field aborts the write operation in the SFRBU_PSWBU register. Always reads as 0.  */
+#define SFRBU_PSWBU_PSWKEY_PASSWD             (SFRBU_PSWBU_PSWKEY_PASSWD_Val << SFRBU_PSWBU_PSWKEY_Pos) /* (SFRBU_PSWBU) Writing any other value in this field aborts the write operation in the SFRBU_PSWBU register. Always reads as 0. Position  */
+#define SFRBU_PSWBU_Msk                       _UINT32_(0xFFFFFF07)                                 /* (SFRBU_PSWBU) Register Mask  */
 
 
 /* -------- SFRBU_LDO25CR : (SFRBU Offset: 0x0C) (R/W 32) VDDANAout LDO Pulldown Value -------- */
@@ -77,42 +96,23 @@
 #define SFRBU_LDO25CR_Msk                     _UINT32_(0xFFFFFF0F)                                 /* (SFRBU_LDO25CR) Register Mask  */
 
 
-/* -------- SFRBU_PSWBU : (SFRBU Offset: 0x00) (R/W 32) Power Switch BU Control -------- */
-#define SFRBU_PSWBU_RESETVALUE                _UINT32_(0x01)                                       /*  (SFRBU_PSWBU) Power Switch BU Control  Reset Value */
+/* -------- SFRBU_DDRPWR : (SFRBU Offset: 0x10) (R/W 32) DDR Power Control -------- */
+#define SFRBU_DDRPWR_RESETVALUE               _UINT32_(0x00)                                       /*  (SFRBU_DDRPWR) DDR Power Control  Reset Value */
 
-#define SFRBU_PSWBU_CTRL_Pos                  _UINT32_(0)                                          /* (SFRBU_PSWBU) Power Switch BU Control Position */
-#define SFRBU_PSWBU_CTRL_Msk                  (_UINT32_(0x1) << SFRBU_PSWBU_CTRL_Pos)              /* (SFRBU_PSWBU) Power Switch BU Control Mask */
-#define SFRBU_PSWBU_CTRL(value)               (SFRBU_PSWBU_CTRL_Msk & (_UINT32_(value) << SFRBU_PSWBU_CTRL_Pos)) /* Assigment of value for CTRL in the SFRBU_PSWBU register */
-#define   SFRBU_PSWBU_CTRL_HARD_Val           _UINT32_(0x0)                                        /* (SFRBU_PSWBU) Power Switch BU is controlled by hardware (SOFTSWITCH bit has no action).  */
-#define   SFRBU_PSWBU_CTRL_SOFT_Val           _UINT32_(0x1)                                        /* (SFRBU_PSWBU) Power Switch BU is controlled by software (SOFTSWITCH bit has an action).  */
-#define SFRBU_PSWBU_CTRL_HARD                 (SFRBU_PSWBU_CTRL_HARD_Val << SFRBU_PSWBU_CTRL_Pos)  /* (SFRBU_PSWBU) Power Switch BU is controlled by hardware (SOFTSWITCH bit has no action). Position  */
-#define SFRBU_PSWBU_CTRL_SOFT                 (SFRBU_PSWBU_CTRL_SOFT_Val << SFRBU_PSWBU_CTRL_Pos)  /* (SFRBU_PSWBU) Power Switch BU is controlled by software (SOFTSWITCH bit has an action). Position  */
-#define SFRBU_PSWBU_SOFTSWITCH_Pos            _UINT32_(1)                                          /* (SFRBU_PSWBU) Power Switch BU Source Selection Position */
-#define SFRBU_PSWBU_SOFTSWITCH_Msk            (_UINT32_(0x1) << SFRBU_PSWBU_SOFTSWITCH_Pos)        /* (SFRBU_PSWBU) Power Switch BU Source Selection Mask */
-#define SFRBU_PSWBU_SOFTSWITCH(value)         (SFRBU_PSWBU_SOFTSWITCH_Msk & (_UINT32_(value) << SFRBU_PSWBU_SOFTSWITCH_Pos)) /* Assigment of value for SOFTSWITCH in the SFRBU_PSWBU register */
-#define   SFRBU_PSWBU_SOFTSWITCH_VBAT_Val     _UINT32_(0x0)                                        /* (SFRBU_PSWBU) LDO Supply source is VBAT.  */
-#define   SFRBU_PSWBU_SOFTSWITCH_VDDIN33_Val  _UINT32_(0x1)                                        /* (SFRBU_PSWBU) LDO Supply source is VDDIN33.  */
-#define SFRBU_PSWBU_SOFTSWITCH_VBAT           (SFRBU_PSWBU_SOFTSWITCH_VBAT_Val << SFRBU_PSWBU_SOFTSWITCH_Pos) /* (SFRBU_PSWBU) LDO Supply source is VBAT. Position  */
-#define SFRBU_PSWBU_SOFTSWITCH_VDDIN33        (SFRBU_PSWBU_SOFTSWITCH_VDDIN33_Val << SFRBU_PSWBU_SOFTSWITCH_Pos) /* (SFRBU_PSWBU) LDO Supply source is VDDIN33. Position  */
-#define SFRBU_PSWBU_STATE_Pos                 _UINT32_(2)                                          /* (SFRBU_PSWBU) Power Switch BU State (Read-only) Position */
-#define SFRBU_PSWBU_STATE_Msk                 (_UINT32_(0x1) << SFRBU_PSWBU_STATE_Pos)             /* (SFRBU_PSWBU) Power Switch BU State (Read-only) Mask */
-#define SFRBU_PSWBU_STATE(value)              (SFRBU_PSWBU_STATE_Msk & (_UINT32_(value) << SFRBU_PSWBU_STATE_Pos)) /* Assigment of value for STATE in the SFRBU_PSWBU register */
-#define   SFRBU_PSWBU_STATE_VBAT_Val          _UINT32_(0x0)                                        /* (SFRBU_PSWBU) LDO BU Supply source is VBAT.  */
-#define   SFRBU_PSWBU_STATE_VDDIN33_Val       _UINT32_(0x1)                                        /* (SFRBU_PSWBU) LDO BU Supply source is VDDIN33.  */
-#define SFRBU_PSWBU_STATE_VBAT                (SFRBU_PSWBU_STATE_VBAT_Val << SFRBU_PSWBU_STATE_Pos) /* (SFRBU_PSWBU) LDO BU Supply source is VBAT. Position  */
-#define SFRBU_PSWBU_STATE_VDDIN33             (SFRBU_PSWBU_STATE_VDDIN33_Val << SFRBU_PSWBU_STATE_Pos) /* (SFRBU_PSWBU) LDO BU Supply source is VDDIN33. Position  */
-#define SFRBU_PSWBU_PSWKEY_Pos                _UINT32_(8)                                          /* (SFRBU_PSWBU) Specific Value Mandatory to Allow Writing of Other Register Bits (Write-only) Position */
-#define SFRBU_PSWBU_PSWKEY_Msk                (_UINT32_(0xFFFFFF) << SFRBU_PSWBU_PSWKEY_Pos)       /* (SFRBU_PSWBU) Specific Value Mandatory to Allow Writing of Other Register Bits (Write-only) Mask */
-#define SFRBU_PSWBU_PSWKEY(value)             (SFRBU_PSWBU_PSWKEY_Msk & (_UINT32_(value) << SFRBU_PSWBU_PSWKEY_Pos)) /* Assigment of value for PSWKEY in the SFRBU_PSWBU register */
-#define   SFRBU_PSWBU_PSWKEY_PASSWD_Val       _UINT32_(0x4BD20C)                                   /* (SFRBU_PSWBU) Writing any other value in this field aborts the write operation in the SFRBU_PSWBU register. Always reads as 0.  */
-#define SFRBU_PSWBU_PSWKEY_PASSWD             (SFRBU_PSWBU_PSWKEY_PASSWD_Val << SFRBU_PSWBU_PSWKEY_Pos) /* (SFRBU_PSWBU) Writing any other value in this field aborts the write operation in the SFRBU_PSWBU register. Always reads as 0. Position  */
-#define SFRBU_PSWBU_Msk                       _UINT32_(0xFFFFFF07)                                 /* (SFRBU_PSWBU) Register Mask  */
+#define SFRBU_DDRPWR_STATE_Pos                _UINT32_(0)                                          /* (SFRBU_DDRPWR) DDR Power Mode State Position */
+#define SFRBU_DDRPWR_STATE_Msk                (_UINT32_(0x1) << SFRBU_DDRPWR_STATE_Pos)            /* (SFRBU_DDRPWR) DDR Power Mode State Mask */
+#define SFRBU_DDRPWR_STATE(value)             (SFRBU_DDRPWR_STATE_Msk & (_UINT32_(value) << SFRBU_DDRPWR_STATE_Pos)) /* Assigment of value for STATE in the SFRBU_DDRPWR register */
+#define   SFRBU_DDRPWR_STATE_ON_Val           _UINT32_(0x0)                                        /* (SFRBU_DDRPWR) DDR Power mode is on.  */
+#define   SFRBU_DDRPWR_STATE_OFF_Val          _UINT32_(0x1)                                        /* (SFRBU_DDRPWR) DDR Power mode is off.  */
+#define SFRBU_DDRPWR_STATE_ON                 (SFRBU_DDRPWR_STATE_ON_Val << SFRBU_DDRPWR_STATE_Pos) /* (SFRBU_DDRPWR) DDR Power mode is on. Position  */
+#define SFRBU_DDRPWR_STATE_OFF                (SFRBU_DDRPWR_STATE_OFF_Val << SFRBU_DDRPWR_STATE_Pos) /* (SFRBU_DDRPWR) DDR Power mode is off. Position  */
+#define SFRBU_DDRPWR_Msk                      _UINT32_(0x00000001)                                 /* (SFRBU_DDRPWR) Register Mask  */
 
 
 /** \brief SFRBU register offsets definitions */
-#define SFRBU_DDRPWR_REG_OFST          _UINT32_(0x10)      /* (SFRBU_DDRPWR) DDR Power Control Offset */
-#define SFRBU_LDO25CR_REG_OFST         _UINT32_(0x0C)      /* (SFRBU_LDO25CR) VDDANAout LDO Pulldown Value Offset */
 #define SFRBU_PSWBU_REG_OFST           _UINT32_(0x00)      /* (SFRBU_PSWBU) Power Switch BU Control Offset */
+#define SFRBU_LDO25CR_REG_OFST         _UINT32_(0x0C)      /* (SFRBU_LDO25CR) VDDANAout LDO Pulldown Value Offset */
+#define SFRBU_DDRPWR_REG_OFST          _UINT32_(0x10)      /* (SFRBU_DDRPWR) DDR Power Control Offset */
 
 #if !(defined(__ASSEMBLER__) || defined(__IAR_SYSTEMS_ASM__))
 /** \brief SFRBU register API structure */
