@@ -16,5 +16,5 @@ modules:
     - {name: "csp", version: "v3.15.0"}
     - {name: "core", version: "v3.12.0-E1"}
     - {name: "dev_packs", version: "v3.15.1"}
-    - {name: "net", version: "unknown"}
+    - {name: "net", version: "v3.9.1"}
 
