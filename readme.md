@@ -14,7 +14,7 @@ MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded
 This repository contains the MPLAB® Harmony 3 Net library application examples for SAM A7G5 family
 
 - [Release Notes](./release_notes.md)
-- [MPLAB® Harmony License](mplab_harmony_license.md)
+- [Microchip Software License Agreement](Microchip_SLA001.md)
 
 # Contents Summary
 
@@ -44,7 +44,7 @@ The following applications are provided to demonstrate the typical or interestin
 ____
 
 
-[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/net_apps_sam_a7g5/blob/master/mplab_harmony_license.md)
+[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/net_apps_sam_a7g5/blob/master/Microchip_SLA001.md)
 [![Latest release](https://img.shields.io/github/release/Microchip-MPLAB-Harmony/net_apps_sam_a7g5.svg)](https://github.com/Microchip-MPLAB-Harmony/net_apps_sam_a7g5/releases/latest)
 [![Latest release date](https://img.shields.io/github/release-date/Microchip-MPLAB-Harmony/net_apps_sam_a7g5.svg)](https://github.com/Microchip-MPLAB-Harmony/net_apps_sam_a7g5/releases/latest)
 [![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/net_apps_sam_a7g5.svg)](https://github.com/Microchip-MPLAB-Harmony/net_apps_sam_a7g5/graphs/commit-activity)
