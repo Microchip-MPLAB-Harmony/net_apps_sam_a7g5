@@ -14,7 +14,7 @@ package:
       version: "v3.15.0"
     - name: "bsp"
       type: "package"
-      version: "v3.15.1"
+      version: "v3.15.0"
     - name: "dev_packs"
       type: "package"
       version: "v3.15.1"
