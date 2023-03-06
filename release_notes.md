@@ -3,7 +3,7 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
-## Harmony 3 Network application examples for SAM A7G5 family  v3.0.0
+## Harmony 3 Network Application Examples for SAM A7G5 Family  v3.0.0
 The applications demonstrate the typical usage of Harmony 3 TCP/IP Stack on a hardware board with SAMA7G54 device.
 - All applications use MCC for configuration
 - All applications created with TCP/IP Configurator Plugin (beta)
@@ -12,7 +12,8 @@ The applications demonstrate the typical usage of Harmony 3 TCP/IP Stack on a ha
 - None
 
 ### Known Issues
-- None
+- TCP/IP Configurator plugin fails to open when TCP/IP heap type is selected as 'TCPIP_STACK_HEAP_TYPE_EXTERNAL_HEAP'.
+- "JLink failed to write" error when programming SAMA7G54_EK with MPLAB X IDE v6.05. We do not see this issue when programming the board with MPLAB X IDE v6.00
 
 ### Development Tools
 
@@ -25,11 +26,11 @@ The applications demonstrate the typical usage of Harmony 3 TCP/IP Stack on a ha
 
 ### Development Kit Support
 
-This release supports applications for the following development kits
+This release supports applications for the following development kit.
 
 | Development Kits |
 | --- |
-| SAMA7G54-EK |
+| [SAMA7G54-EK](https://www.microchip.com/en-us/development-tool/EV21H18A) |
 
 
 ## Net release notes
