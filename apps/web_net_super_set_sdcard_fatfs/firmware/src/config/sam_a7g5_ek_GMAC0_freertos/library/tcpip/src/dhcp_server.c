@@ -812,7 +812,7 @@ static TCPIP_DHCPS_RES _DHCPS_ParseConfigOptions(TCPIP_DHCPS_CLIENT_OPTIONS* pCl
 // if pCliOpt != 0, it actually stores the data; otherwise just parse
 static TCPIP_DHCPS_RES _DHCPS_ParseConfigSglOption(TCPIP_DHCPS_CLIENT_OPTIONS* pCliOpt, const TCPIP_DHCPS_CLIENT_OPTION_CONFIG* pOptConfig)
 {
-    int nSets;
+    int nSets = 0;
 
     TCPIP_DHCPS_RES res = TCPIP_DHCPS_RES_OK;
 
@@ -938,7 +938,7 @@ static void _DHCPS_NotifyClients(TCPIP_NET_IF* pktIf, TCPIP_DHCPS_EVENT_TYPE evT
 
    _DhcpsAssert(evType != 0, __func__, __LINE__);
 
-    bool doNotify;
+    bool doNotify = false;
 
 #if (TCPIP_DHCPS_REPORT_ERROR_EVENT != 0)
     if(evType < 0)
@@ -1282,8 +1282,8 @@ static void _DHCPS_ProcessSkt(UDP_SOCKET skt, uint16_t avlblBytes)
     UDP_SOCKET_INFO     udpSockInfo;
     uint32_t            dhcpCookie;
     int                 ifIx;       // DHCPs interface index
-    BOOTP_HEADER*       pHeader;
     uint8_t*            rxPtr;
+    BOOTP_HEADER*       pHeader = 0;
     TCPIP_DHCPS_EVENT_TYPE evType = TCPIP_DHCPS_EVENT_NONE;
     bool processPkt = false;
     bool accessLocked = false;
@@ -1680,7 +1680,7 @@ static void _DHCPS_SaveClientState(DHCPS_HASH_ENTRY* he, BOOTP_HEADER* pHeader, 
 //       physical subnet.
 // 
 //    2. Each server may respond with a DHCPOFFER message that includes an
-//       available network address in the ?yiaddr? field (and other
+//       available network address in the ’yiaddr’ field (and other
 //       configuration parameters in DHCP options).  Servers need not
 //       reserve the offered network address, although the protocol will
 //       work more efficiently if the server avoids allocating the offered
@@ -1698,25 +1698,25 @@ static void _DHCPS_SaveClientState(DHCPS_HASH_ENTRY* he, BOOTP_HEADER* pHeader, 
     
    If an address is available, the new address SHOULD be chosen as follows:
 
-      o The client?s current address as recorded in the client?s current
+      o The client’s current address as recorded in the client’s current
         binding, ELSE
 
-      o The client?s previous address as recorded in the client?s (now
-        expired or released) binding, if that address is in the server?s
+      o The client’s previous address as recorded in the client’s (now
+        expired or released) binding, if that address is in the server’s
         pool of available addresses and not already allocated, ELSE
 
-      o The address requested in the ?Requested IP Address? option, if that
+      o The address requested in the ’Requested IP Address’ option, if that
         address is valid and not already allocated, ELSE
 
-      o A new address allocated from the server?s pool of available
+      o A new address allocated from the server’s pool of available
         addresses; the address is selected based on the subnet from which
-        the message was received (if ?giaddr? is 0) or on the address of
-        the relay agent that forwarded the message (?giaddr? when not 0).
+        the message was received (if ’giaddr’ is 0) or on the address of
+        the relay agent that forwarded the message (’giaddr’ when not 0).
 
 
         While not required for correct operation of DHCP,
         the server SHOULD NOT reuse the selected network address before the client responds to
-        the server?s DHCPOFFER message.
+        the server’s DHCPOFFER message.
         The server may choose to record the address as offered to the client.
 */
 
@@ -1744,7 +1744,7 @@ static TCPIP_DHCPS_LEASE_STATE _DHCPS_ReplyToDiscovery(TCPIP_DHCPS_INTERFACE_DCP
         if(reqIndex < 0)
         {   // last choice, allocate a new address from the pool
             // Use of giaddr: RFC 2131 pg 27/46:
-            //      Thus, DHCP does not require that the client be assigned as address from the subnet in ?giaddr?
+            //      Thus, DHCP does not require that the client be assigned as address from the subnet in ’giaddr’
             // Currently we do not support multiple pools
             reqIndex = IpIndexFindFree(pIDcpt, true);
             if(reqIndex < 0)
@@ -1857,8 +1857,8 @@ static TCPIP_DHCPS_LEASE_STATE _DHCPS_ReplyToDiscovery(TCPIP_DHCPS_INTERFACE_DCP
 //     DHCPINFORM message construct a DHCPACK message with any local
 //     configuration parameters appropriate for the client without:
 //     allocating a new address, checking for an existing binding, filling
-//     in ?yiaddr? or including lease time parameters.  The servers SHOULD
-//     unicast the DHCPACK reply to the address given in the ?ciaddr? field
+//     in ’yiaddr’ or including lease time parameters.  The servers SHOULD
+//     unicast the DHCPACK reply to the address given in the ’ciaddr’ field
 //     of the DHCPINFORM message.
 //     The server SHOULD check the network address in a DHCPINFORM message
 //     for consistency, but MUST NOT check for an existing lease.  The
@@ -1869,10 +1869,10 @@ static TCPIP_DHCPS_LEASE_STATE _DHCPS_ReplyToDiscovery(TCPIP_DHCPS_INTERFACE_DCP
 // 
 // RFC 2131: 4.3.5 DHCPINFORM message - pg 33/46
 //      The server responds to a DHCPINFORM message by sending a DHCPACK
-//      message directly to the address given in the ?ciaddr? field of the
+//      message directly to the address given in the ’ciaddr’ field of the
 //      DHCPINFORM message.
 //      The server MUST NOT send a lease expiration time to the client
-//      and SHOULD NOT fill in ?yiaddr?.
+//      and SHOULD NOT fill in ’yiaddr’.
 //      The server includes other parameters in the DHCPACK message as defined in section 4.3.1.
 //
 //
@@ -2112,11 +2112,11 @@ static TCPIP_DHCPS_LEASE_STATE _DHCPReplyToRequest_Ignore(TCPIP_DHCPS_INTERFACE_
 // RFC 2131 4.3.2 DHCPREQUEST message pg 32/46:
 //
 // DHCPREQUEST generated during RENEWING state:
-//      ?server identifier? MUST NOT be filled in, ?requested IP address? option MUST NOT be filled in,
-//      ?ciaddr? MUST be filled in with client?s IP address.
+//      ’server identifier’ MUST NOT be filled in, ’requested IP address’ option MUST NOT be filled in,
+//      ’ciaddr’ MUST be filled in with client’s IP address.
 //      In this situation, the client is completely configured, and is trying to extend its lease.
 //      This message will be unicast, so no relay agents will be involved in its transmission.
-//      Because ?giaddr? is therefore not filled in, the DHCP server will trust the value in ?ciaddr?,
+//      Because ’giaddr’ is therefore not filled in, the DHCP server will trust the value in ’ciaddr’,
 //      and use it when replying to the client.
 //
 //      A client MAY choose to renew or extend its lease prior to T1.
@@ -2124,16 +2124,16 @@ static TCPIP_DHCPS_LEASE_STATE _DHCPReplyToRequest_Ignore(TCPIP_DHCPS_INTERFACE_
 //      but should return a DHCPACK message regardless.
 //       
 // DHCPREQUEST generated during REBINDING state:   
-//      ?server identifier? MUST NOT be filled in, ?requested IP address? option MUST NOT be filled in,
-//      ?ciaddr? MUST be filled in with client?s IP address.
+//      ’server identifier’ MUST NOT be filled in, ’requested IP address’ option MUST NOT be filled in,
+//      ’ciaddr’ MUST be filled in with client’s IP address.
 //      In this situation, the client is completely configured, and is trying to extend its lease.
 //      This message MUST be broadcast to the 0xffffffff IP broadcast address.
-//      The DHCP server SHOULD check ?ciaddr? for correctness before replying to the DHCPREQUEST.
+//      The DHCP server SHOULD check ’ciaddr’ for correctness before replying to the DHCPREQUEST.
 //   
 //      The DHCPREQUEST from a REBINDING client is intended to accommodate sites
 //      that have multiple DHCP servers and a mechanism for maintaining consistency
 //      among leases managed by multiple servers.
-//      A DHCP server MAY extend a client?s lease only if it has local administrative authority to do so.
+//      A DHCP server MAY extend a client’s lease only if it has local administrative authority to do so.
 //    
 static TCPIP_DHCPS_LEASE_STATE _DHCPReplyToRequest_Bound(TCPIP_DHCPS_INTERFACE_DCPT* pIDcpt, BOOTP_HEADER* pHeader, TCPIP_DHCPS_RX_OPTIONS* pRxOpt, DHCPS_HASH_ENTRY** ppHe)
 {
@@ -2216,24 +2216,24 @@ static TCPIP_DHCPS_LEASE_STATE _DHCPReplyToRequest_Bound(TCPIP_DHCPS_INTERFACE_D
 // he->state == TCPIP_DHCPS_LEASE_STATE_EXPIRED
 //
 // RFC 2131 Using a previously allocated network address - INIT_REBOOT message pg 18/46:
-//      2. Servers with knowledge of the client?s configuration parameters
+//      2. Servers with knowledge of the client’s configuration parameters
 //      respond with a DHCPACK message to the client.  Servers SHOULD NOT
-//      check that the client?s network address is already in use;
+//      check that the client’s network address is already in use;
 //
 //      pg 22/46:
-//      If a server receives a DHCPREQUEST message with an invalid ?requested
-//      IP address?, the server SHOULD respond to the client with a DHCPNAK
+//      If a server receives a DHCPREQUEST message with an invalid ’requested
+//      IP address’, the server SHOULD respond to the client with a DHCPNAK
 //      message and may choose to report the problem to the system administrator. 
 //
 // RFC 2131 4.3.2 DHCPREQUEST message pg 31/46:
 // DHCPREQUEST generated during INIT-REBOOT state:
 //
-//  ?server identifier? MUST NOT be filled in, ?requested IP address?
-//      option MUST be filled in with client?s notion of its previously
-//      assigned address. ?ciaddr? MUST be zero.
+//  ’server identifier’ MUST NOT be filled in, ’requested IP address’
+//      option MUST be filled in with client’s notion of its previously
+//      assigned address. ’ciaddr’ MUST be zero.
 //      The client is seeking to verify a previously allocated, cached configuration.
 //
-//      Server SHOULD send a DHCPNAK message to the client if the ?requested IP address?
+//      Server SHOULD send a DHCPNAK message to the client if the ’requested IP address’
 //      is incorrect, or is on the wrong network.
 //
 //
@@ -2303,7 +2303,7 @@ static TCPIP_DHCPS_LEASE_STATE _DHCPReplyToRequest_Expired(TCPIP_DHCPS_INTERFACE
 // he->state == TCPIP_DHCPS_LEASE_STATE_OFFERED
 //
 // RFC 2131 4.3.2 DHCPREQUEST message pg 30/46:
-// If the DHCPREQUEST message contains a ?server identifier? option,
+// If the DHCPREQUEST message contains a ’server identifier’ option,
 //      the message is in response to a DHCPOFFER message.
 //      Otherwise, the message is a request to verify or extend an existing lease. 
 //
@@ -2311,25 +2311,25 @@ static TCPIP_DHCPS_LEASE_STATE _DHCPReplyToRequest_Expired(TCPIP_DHCPS_INTERFACE
 //      3. ... The client chooses one server from which to request configuration
 //      parameters, based on the configuration parameters offered in the
 //      DHCPOFFER messages.
-//      The client broadcasts a DHCPREQUEST message that MUST include the ?server identifier?
+//      The client broadcasts a DHCPREQUEST message that MUST include the ’server identifier’
 //      option to indicate which server it has selected, and that MAY include other options
 //      specifying desired configuration values. 
-//      The ?requested IP address? option MUST be set to the value of ?yiaddr? in the
+//      The ’requested IP address’ option MUST be set to the value of ’yiaddr’ in the
 //      DHCPOFFER message from the server.
 //      This DHCPREQUEST message is broadcast and relayed through DHCP/BOOTP relay agents.
 //      ...
 //
 //      4. The servers receive the DHCPREQUEST broadcast from the client.
 //      Those servers not selected by the DHCPREQUEST message use the
-//      message as notification that the client has declined that server?s
+//      message as notification that the client has declined that server’s
 //      offer. 
 //      The server selected in the DHCPREQUEST message commits the
 //      binding for the client to persistent storage and responds with a
 //      DHCPACK message containing the configuration parameters for the
 //      requesting client.
-//      The combination of ?client identifier? or
-//      ?chaddr? and assigned network address constitute a unique
-//      identifier for the client?s lease and are used by both the client
+//      The combination of ’client identifier’ or
+//      ’chaddr’ and assigned network address constitute a unique
+//      identifier for the client’s lease and are used by both the client
 //      and server to identify a lease referred to in any DHCP messages.
 // 
 //      ...
@@ -2346,8 +2346,8 @@ static TCPIP_DHCPS_LEASE_STATE _DHCPReplyToRequest_Expired(TCPIP_DHCPS_INTERFACE
 //
 // RFC 2131 4.3.2 pg 31/46:
 //  DHCPREQUEST generated during SELECTING state:
-//      Client inserts the address of the selected server in ?server identifier?,
-//      ?ciaddr? MUST be zero, ?requested IP address? MUST be filled in with the yiaddr value from the chosen DHCPOFFER.
+//      Client inserts the address of the selected server in ’server identifier’,
+//      ’ciaddr’ MUST be zero, ’requested IP address’ MUST be filled in with the yiaddr value from the chosen DHCPOFFER.
 //  
 //      servers may not receive a specific DHCPREQUEST from which they can
 //      decide whether or not the client has accepted the offer.
@@ -2355,8 +2355,8 @@ static TCPIP_DHCPS_LEASE_STATE _DHCPReplyToRequest_Expired(TCPIP_DHCPS_INTERFACE
 //      timeout mechanism to decide when to reuse an offered address.
 //  
 // RFC 2131 4.3.2 pg 22/46:
-// If a server receives a DHCPREQUEST message with an invalid ?requested
-// IP address?, the server SHOULD respond to the client with a DHCPNAK
+// If a server receives a DHCPREQUEST message with an invalid ’requested
+// IP address’, the server SHOULD respond to the client with a DHCPNAK
 // message and may choose to report the problem to the system administrator. 
 //  
 static TCPIP_DHCPS_LEASE_STATE _DHCPReplyToRequest_Offerred(TCPIP_DHCPS_INTERFACE_DCPT* pIDcpt, BOOTP_HEADER* pHeader, TCPIP_DHCPS_RX_OPTIONS* pRxOpt, DHCPS_HASH_ENTRY** ppHe)
@@ -2474,7 +2474,7 @@ static TCPIP_DHCPS_LEASE_STATE _DHCPS_ReplyToDecline(TCPIP_DHCPS_INTERFACE_DCPT*
 // RFC 2131: 4.3.4 DHCPRELEASE message
 // Upon receipt of a DHCPRELEASE message, the server marks the network
 // address as not allocated.  The server SHOULD retain a record of the
-// client?s initialization parameters for possible reuse in response to
+// client’s initialization parameters for possible reuse in response to
 // subsequent requests from the client.
 static TCPIP_DHCPS_LEASE_STATE _DHCPS_ReplyToRelease(TCPIP_DHCPS_INTERFACE_DCPT* pIDcpt, BOOTP_HEADER* pHeader, TCPIP_DHCPS_RX_OPTIONS* pRxOpt, DHCPS_HASH_ENTRY** ppHe)
 {
@@ -2541,7 +2541,7 @@ static bool isMacAddrValid(const uint8_t *macAddr)
 // Requested IP address      MUST NOT           MUST NOT
 // IP address lease time     MUST (DHCPREQUEST) MUST NOT
 //                           MUST NOT (DHCPINFORM)
-// Use ?file?/?sname? fields MAY                MUST NOT
+// Use ’file’/’sname’ fields MAY                MUST NOT
 // DHCP message type         DHCPACK            DHCPNAK
 // Parameter request list    MUST NOT           MUST NOT
 // Message                   SHOULD             SHOULD 
@@ -2643,7 +2643,7 @@ static bool _DHCPS_SendMessage(DHCPS_HASH_ENTRY* he)
         uPtr.wrPtr += sizeof(uPtr.pOption->ipLeaseTimeType);
     }
 
-    // Option: Use ?file?/?sname?: MAY
+    // Option: Use ’file’/’sname’: MAY
 
     // Option: DHCP message type: MUST
     uPtr.pOption->messageType.optionType = DHCP_OPTION_MESSAGE_TYPE;
@@ -2761,29 +2761,29 @@ static bool _DHCPS_SendMessage(DHCPS_HASH_ENTRY* he)
     // set the remote destination address:
     // unicast or broadcast
     /* RFC2131 pg 23/46 rules:
-        // - If the ?giaddr? field in a DHCP message from a client is non-zero,
-            // the server sends any return messages to the ?DHCP server? port (67) on the
-            // BOOTP relay agent whose address appears in ?giaddr?.
+        // - If the ’giaddr’ field in a DHCP message from a client is non-zero,
+            // the server sends any return messages to the ’DHCP server’ port (67) on the
+            // BOOTP relay agent whose address appears in ’giaddr’.
           
-        // - If the ?giaddr? field is zero and the ?ciaddr? field is nonzero,
-            //   then the server unicasts DHCPOFFER and DHCPACK messages to the address in ?ciaddr?.
+        // - If the ’giaddr’ field is zero and the ’ciaddr’ field is nonzero,
+            //   then the server unicasts DHCPOFFER and DHCPACK messages to the address in ’ciaddr’.
            
-        // - If ?giaddr? is zero and ?ciaddr? is zero, and the broadcast bit is
+        // - If ’giaddr’ is zero and ’ciaddr’ is zero, and the broadcast bit is
             //   set, then the server broadcasts DHCPOFFER and DHCPACK messages to 0xffffffff.
             
-        // - If the broadcast bit is not set and ?giaddr? is zero and
-            //   ?ciaddr? is zero, then the server unicasts DHCPOFFER and DHCPACK
-            //   messages to the client?s hardware address and ?yiaddr? address.
+        // - If the broadcast bit is not set and ’giaddr’ is zero and
+            //   ’ciaddr’ is zero, then the server unicasts DHCPOFFER and DHCPACK
+            //   messages to the client’s hardware address and ’yiaddr’ address.
 
-        // - In all cases, when ?giaddr? is zero, the server broadcasts any DHCPNAK messages to 0xffffffff.
+        // - In all cases, when ’giaddr’ is zero, the server broadcasts any DHCPNAK messages to 0xffffffff.
         // 
     
       RFC2131 pg 32/46 rules for DHCPREQUEST:
-        If ?giaddr? is 0x0 in the DHCPREQUEST message, the client is on
+        If ’giaddr’ is 0x0 in the DHCPREQUEST message, the client is on
         the same subnet as the server.  The server MUST broadcast the
         DHCPNAK message to the 0xffffffff broadcast address ...
 
-        If ?giaddr? is set in the DHCPREQUEST message, the client is on a
+        If ’giaddr’ is set in the DHCPREQUEST message, the client is on a
         different subnet.  The server MUST set the broadcast bit in the
         DHCPNAK, so that the relay agent will broadcast the DHCPNAK to the
         client, ...
@@ -2792,15 +2792,15 @@ static bool _DHCPS_SendMessage(DHCPS_HASH_ENTRY* he)
         Normally, DHCP servers and BOOTP relay agents attempt to deliver
         DHCPOFFER, DHCPACK and DHCPNAK messages directly to the client using
         unicast delivery.
-        The IP destination address (in the IP header) is set to the DHCP ?yiaddr? address
-        and the LINK-LAYER DESTINATION ADDRESS is set to the DHCP ?chaddr? address!!!
+        The IP destination address (in the IP header) is set to the DHCP ’yiaddr’ address
+        and the LINK-LAYER DESTINATION ADDRESS is set to the DHCP ’chaddr’ address!!!
 
         ...
         ...
       
         If the BROADCAST bit is cleared to 0, the message SHOULD be sent as an IP unicast
-        to the IP address specified in the ?yiaddr? field and the
-        LINK-LAYER ADDRESS SPECIFIED IN THE ?chaddr? field!!!
+        to the IP address specified in the ’yiaddr’ field and the
+        LINK-LAYER ADDRESS SPECIFIED IN THE ’chaddr’ field!!!
       
     */
     UDP_PORT destPort = TCPIP_DHCP_CLIENT_PORT;
