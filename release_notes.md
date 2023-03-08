@@ -22,7 +22,7 @@ The applications demonstrate the typical usage of Harmony 3 TCP/IP Stack on a ha
 
 - [MPLAB® X IDE v6.05](https://www.microchip.com/mplab/mplab-x-ide) or later
 - [MPLAB® XC32 C/C++ Compiler v4.20](https://www.microchip.com/mplab/compilers) or later
-- MPLAB® Code Configurator (MCC), 5.2.1
+- MPLAB® Code Configurator (MCC), 5.2.1 or later
 
 
 ### Development Kit Support
