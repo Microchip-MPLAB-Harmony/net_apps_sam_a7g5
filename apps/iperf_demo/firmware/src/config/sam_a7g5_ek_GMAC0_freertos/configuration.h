@@ -96,7 +96,7 @@ extern "C" {
 
 #define SYS_CMD_ENABLE
 #define SYS_CMD_DEVICE_MAX_INSTANCES       SYS_CONSOLE_DEVICE_MAX_INSTANCES
-#define SYS_CMD_PRINT_BUFFER_SIZE          2560
+#define SYS_CMD_PRINT_BUFFER_SIZE          2560U
 #define SYS_CMD_BUFFER_DMA_READY
 
 /* Command System Service RTOS Configurations*/
@@ -110,10 +110,10 @@ extern "C" {
 #define SYS_DEBUG_USE_CONSOLE
 
 
-#define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			1
-#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			1
-#define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		0
-#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		200
+#define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			(1U)
+#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(1U)
+#define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		(0U)
+#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		(200U)
 
 
 
@@ -188,7 +188,7 @@ extern "C" {
 #define TCPIP_TCP_AUTO_TRANSMIT_TIMEOUT_VAL			40
 #define TCPIP_TCP_WINDOW_UPDATE_TIMEOUT_VAL			200
 #define TCPIP_TCP_MAX_SOCKETS		                10
-#define TCPIP_TCP_TASK_TICK_RATE		        	5
+#define TCPIP_TCP_TASK_TICK_RATE		        	2
 #define TCPIP_TCP_MSL_TIMEOUT		        	    0
 #define TCPIP_TCP_QUIET_TIME		        	    0
 #define TCPIP_TCP_COMMANDS   false
@@ -261,10 +261,10 @@ extern "C" {
 
 /*** iperf Configuration ***/
 #define TCPIP_STACK_USE_IPERF
-#define TCPIP_IPERF_TX_BUFFER_SIZE		4096
-#define TCPIP_IPERF_RX_BUFFER_SIZE  	4096
+#define TCPIP_IPERF_TX_BUFFER_SIZE		32768
+#define TCPIP_IPERF_RX_BUFFER_SIZE  	32768
 #define TCPIP_IPERF_TX_WAIT_TMO     	100
-#define TCPIP_IPERF_TX_QUEUE_LIMIT  	2
+#define TCPIP_IPERF_TX_QUEUE_LIMIT  	10
 #define TCPIP_IPERF_TIMING_ERROR_MARGIN 0
 #define TCPIP_IPERF_MAX_INSTANCES       1
 #define TCPIP_IPERF_TX_BW_LIMIT  		1
@@ -285,7 +285,7 @@ extern "C" {
 
 /*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       128000
+#define TCPIP_STACK_DRAM_SIZE                       614400
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
@@ -315,8 +315,9 @@ extern "C" {
 #define TCPIP_STACK_USE_TCP
 #define TCPIP_STACK_USE_UDP
 
-#define TCPIP_STACK_TICK_RATE		        		1
+#define TCPIP_STACK_TICK_RATE		        		2
 #define TCPIP_STACK_SECURE_PORT_ENTRIES             10
+#define TCPIP_STACK_LINK_RATE		        		333
 
 #define TCPIP_STACK_ALIAS_INTERFACE_SUPPORT   false
 
@@ -408,31 +409,18 @@ extern "C" {
 
 
 
-
-#define DRV_KSZ9131_PHY_CONFIG_FLAGS       ( 0 \
-                                                    | DRV_ETHPHY_CFG_RGMII \
-                                                    | DRV_ETHPHY_CFG_DEFAULT \
-                                                    )
-
-#define DRV_KSZ9131_PHY_LINK_INIT_DELAY        500
-#define DRV_KSZ9131_PHY_ADDRESS                7
-#define DRV_KSZ9131_PHY_PERIPHERAL_ID          GMAC0_BASE_ADDRESS
-#define DRV_ETHPHY_KSZ9131_NEG_INIT_TMO        1
-#define DRV_ETHPHY_KSZ9131_NEG_DONE_TMO        2000
-#define DRV_ETHPHY_KSZ9131_RESET_CLR_TMO       500
-
-
 /*** GMAC0 Configuration ***/
 #define DRV_GMAC0
+#define DRV_SAMA7G
 #define TCPIP_GMAC0_TX_DESCRIPTORS_COUNT_DUMMY    1
 #define TCPIP_GMAC0_RX_DESCRIPTORS_COUNT_DUMMY    1
 #define TCPIP_GMAC0_RX_BUFF_SIZE_DUMMY            64
 #define TCPIP_GMAC0_TX_BUFF_SIZE_DUMMY            64
 /*** QUEUE 0 TX Configuration ***/
-#define TCPIP_GMAC0_TX_DESCRIPTORS_COUNT_QUE0            10
+#define TCPIP_GMAC0_TX_DESCRIPTORS_COUNT_QUE0            20
 #define TCPIP_GMAC0_MAX_TX_PKT_SIZE_QUE0                 1536
 /*** QUEUE 0 RX Configuration ***/
-#define TCPIP_GMAC0_RX_DESCRIPTORS_COUNT_QUE0            10
+#define TCPIP_GMAC0_RX_DESCRIPTORS_COUNT_QUE0            256
 #define TCPIP_GMAC0_RX_BUFF_SIZE_QUE0                    1536
 #define TCPIP_GMAC0_RX_DEDICATED_BUFFERS_QUE0            10
 #define TCPIP_GMAC0_RX_ADDL_BUFF_COUNT_QUE0              4
@@ -515,6 +503,20 @@ extern "C" {
 #define DRV_GMAC0_NUMBER_OF_QUEUES               6
 #define DRV_GMAC0_RMII_MODE                      0
 
+
+
+
+#define DRV_KSZ9131_PHY_CONFIG_FLAGS       ( 0 \
+                                                    | DRV_ETHPHY_CFG_RGMII \
+                                                    | DRV_ETHPHY_CFG_DEFAULT \
+                                                    )
+
+#define DRV_KSZ9131_PHY_LINK_INIT_DELAY        500
+#define DRV_KSZ9131_PHY_ADDRESS                7
+#define DRV_KSZ9131_PHY_PERIPHERAL_ID          GMAC0_BASE_ADDRESS
+#define DRV_ETHPHY_KSZ9131_NEG_INIT_TMO        1
+#define DRV_ETHPHY_KSZ9131_NEG_DONE_TMO        2000
+#define DRV_ETHPHY_KSZ9131_RESET_CLR_TMO       500
 
 
 
