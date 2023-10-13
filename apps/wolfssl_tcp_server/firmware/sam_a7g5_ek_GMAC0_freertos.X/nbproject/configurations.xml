@@ -36,7 +36,7 @@
             <logicalFolder name="miim" displayName="miim" projectFiles="true">
               <logicalFolder name="src" displayName="src" projectFiles="true">
                 <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
-                  <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/driver/miim/src/dynamic/drv_miim_mapping.h</itemPath>
+                  <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/driver/miim/src/dynamic/drv_miim_device.h</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/driver/miim/src/drv_miim_local.h</itemPath>
               </logicalFolder>
@@ -275,6 +275,7 @@
           <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/config.h</itemPath>
           <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/definitions.h</itemPath>
           <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/FreeRTOSConfig.h</itemPath>
+          <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
@@ -378,10 +379,10 @@
             <itemPath>../src/packs/SAMA7G54_DFP/component/trng.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/acc.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/nicgpv.h</itemPath>
-            <itemPath>../src/packs/SAMA7G54_DFP/component/mipicsi2phy.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/sdmmc.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/gpbr.h</itemPath>
             <itemPath>../src/packs/SAMA7G54_DFP/component/xdmac.h</itemPath>
+            <itemPath>../src/packs/SAMA7G54_DFP/component/csi.h</itemPath>
           </logicalFolder>
           <logicalFolder name="instance" displayName="instance" projectFiles="true">
             <itemPath>../src/packs/SAMA7G54_DFP/instance/tcpcb.h</itemPath>
@@ -481,6 +482,11 @@
           <itemPath>../src/packs/SAMA7G54_DFP/sama7g54.h</itemPath>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="system" displayName="system" projectFiles="true">
+        <logicalFolder name="tmr" displayName="tmr" projectFiles="true">
+          <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/system/tmr/sys_tmr.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <logicalFolder name="wolfcrypt" displayName="wolfcrypt" projectFiles="true">
         <logicalFolder name="port" displayName="port" projectFiles="true">
           <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/port/pic32/CryptoLib_GCD_pb.h</itemPath>
@@ -563,7 +569,6 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/ge_operations.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/poly1305.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/cmac.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/idea.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/md2.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/integer.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/signature.h</itemPath>
@@ -591,8 +596,6 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/dsa.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/aes.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/fips_test.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/rabbit.h</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/hc128.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/logging.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/srp.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/wc_encrypt.h</itemPath>
@@ -617,6 +620,11 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/cpuid.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/ge_448.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/ed448.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/siphash.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/kdf.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/falcon.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/sakke.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/eccsi.h</itemPath>
       </logicalFolder>
       <logicalFolder name="wolfssl" displayName="wolfssl" projectFiles="true">
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfio.h</itemPath>
@@ -630,6 +638,7 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/sniffer.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/internal.h</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/test.h</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/openssl/compat_types.h</itemPath>
       </logicalFolder>
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
@@ -675,6 +684,7 @@
               <logicalFolder name="src" displayName="src" projectFiles="true">
                 <logicalFolder name="dynamic" displayName="dynamic" projectFiles="true">
                   <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/driver/miim/src/dynamic/drv_miim.c</itemPath>
+                  <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/driver/miim/src/dynamic/drv_miim_gmac.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
             </logicalFolder>
@@ -893,7 +903,6 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/wc_dsp.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/md2.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/curve448.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/idea.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/fe_448.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/ed25519.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/wc_port.c</itemPath>
@@ -907,8 +916,11 @@
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sp_arm64.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sp_c64.c</itemPath>
         <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sha3.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/hc128.c</itemPath>
-        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/rabbit.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/kdf.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/sakke.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/siphash.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/eccsi.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/wolfssl/wolfcrypt/src/falcon.c</itemPath>
       </logicalFolder>
       <logicalFolder name="wolfssl" displayName="wolfssl" projectFiles="true">
         <itemPath>../src/third_party/wolfssl/src/sniffer.c</itemPath>
@@ -920,6 +932,11 @@
         <itemPath>../src/third_party/wolfssl/src/tls.c</itemPath>
         <itemPath>../src/third_party/wolfssl/src/wolfio.c</itemPath>
         <itemPath>../src/third_party/wolfssl/src/ssl.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/conf.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/dtls13.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/x509_str.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/x509.c</itemPath>
+        <itemPath>../src/third_party/wolfssl/src/pk.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/pin_configurations.csv</itemPath>
@@ -930,6 +947,7 @@
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
       <itemPath>wolfssl_tcp_server_GMAC0_freertos.mc3</itemPath>
+      <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -945,18 +963,18 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>jlink</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.21</languageToolchainVersion>
+        <languageToolchainVersion>4.35</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA7G5_DFP" vendor="Microchip" version="1.1.173"/>
+        <pack name="SAMA7G5_DFP" vendor="Microchip" version="1.2.178"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
         <ScriptingSetting key="boot.use" value="true"/>
         <ScriptingSetting key="boot.entry_adr" value=""/>
         <ScriptingSetting key="boot.path"
-                          value="${ProjectDir}\..\at91bootstrap_sam_a7g5_ek.X\build\binaries\at91bootstrap.elf"/>
+                          value="${ProjectDir}\..\..\..\..\deps\at91bootstrap_sam_a7g5_ek_binaries\at91bootstrap.elf"/>
         <ScriptingSetting key="boot.prj" value=""/>
       </ScriptingSettings>
       <compileType>
@@ -1134,6 +1152,8 @@
         <property key="communication.speed" value="4"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="event.recorder.enabled" value="false"/>
+        <property key="event.recorder.scvd.files" value=""/>
         <property key="jlink.override" value=""/>
         <property key="lastid" value=""/>
         <property key="loader.board_file" value="${ProjectDir}/board.xboard"/>
@@ -1165,6 +1185,8 @@
         <property key="communication.speed" value="4"/>
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
+        <property key="event.recorder.enabled" value="false"/>
+        <property key="event.recorder.scvd.files" value=""/>
         <property key="jlink.override" value=""/>
         <property key="lastid" value=""/>
         <property key="loader.board_file" value="${ProjectDir}/board.xboard"/>
