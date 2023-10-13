@@ -72,8 +72,8 @@
 #include "library/tcpip/tcpip.h"
 #include "system/sys_time_h2_adapter.h"
 #include "system/sys_random_h2_adapter.h"
-#include "driver/sdmmc/drv_sdmmc.h"
 #include "system/command/sys_command.h"
+#include "driver/sdmmc/drv_sdmmc.h"
 #include "peripheral/dwdt/plib_dwdt.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gic/plib_gic.h"
@@ -95,6 +95,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "SAMA7G54"
+#define DEVICE_ARCH			 "CORTEX-A7"
+#define DEVICE_FAMILY		 "SAMA"
+#define DEVICE_SERIES		 "SAMA7G"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 800000000
