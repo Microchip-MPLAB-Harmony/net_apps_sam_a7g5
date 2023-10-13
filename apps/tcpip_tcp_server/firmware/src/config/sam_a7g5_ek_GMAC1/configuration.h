@@ -96,7 +96,7 @@ extern "C" {
 
 #define SYS_CMD_ENABLE
 #define SYS_CMD_DEVICE_MAX_INSTANCES       SYS_CONSOLE_DEVICE_MAX_INSTANCES
-#define SYS_CMD_PRINT_BUFFER_SIZE          4096
+#define SYS_CMD_PRINT_BUFFER_SIZE          4096U
 #define SYS_CMD_BUFFER_DMA_READY
 
 
@@ -107,10 +107,10 @@ extern "C" {
 #define SYS_DEBUG_USE_CONSOLE
 
 
-#define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			1
-#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			2
-#define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		0
-#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		200
+#define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			(1U)
+#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(1U)
+#define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		(0U)
+#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		(200U)
 
 
 
@@ -299,6 +299,7 @@ extern "C" {
 
 #define TCPIP_STACK_TICK_RATE		        		5
 #define TCPIP_STACK_SECURE_PORT_ENTRIES             10
+#define TCPIP_STACK_LINK_RATE		        		333
 
 #define TCPIP_STACK_ALIAS_INTERFACE_SUPPORT   false
 
@@ -393,14 +394,9 @@ extern "C" {
 #define DRV_ETHPHY_KSZ8081_RESET_CLR_TMO           500
 
 
-#define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
-
-
-
-
-
 /*** GMAC1 Configuration ***/
 #define DRV_GMAC1
+#define DRV_SAMA7G
 #define TCPIP_GMAC1_TX_DESCRIPTORS_COUNT_DUMMY    1
 #define TCPIP_GMAC1_RX_DESCRIPTORS_COUNT_DUMMY    1
 #define TCPIP_GMAC1_RX_BUFF_SIZE_DUMMY            64
@@ -454,6 +450,12 @@ extern "C" {
 #define TCPIP_GMAC1_RX_PRIO_COUNT                1
 #define DRV_GMAC1_NUMBER_OF_QUEUES               2
 #define DRV_GMAC1_RMII_MODE                      0
+
+
+
+#define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
+
+
 
 
 
