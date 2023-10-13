@@ -60,8 +60,8 @@
 #include "system/reset/sys_reset.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "system/command/sys_command.h"
 #include "driver/sdmmc/drv_sdmmc.h"
+#include "system/command/sys_command.h"
 #include "peripheral/dwdt/plib_dwdt.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gic/plib_gic.h"
@@ -80,9 +80,9 @@
 #include "system/fs/fat_fs/file_system/ff.h"
 #include "system/fs/fat_fs/file_system/ffconf.h"
 #include "system/fs/fat_fs/hardware_access/diskio.h"
-#include "peripheral/sdmmc/plib_sdmmc1.h"
 #include "system/console/sys_console.h"
 #include "system/console/src/sys_console_uart_definitions.h"
+#include "peripheral/sdmmc/plib_sdmmc1.h"
 #include "driver/gmac/drv_gmac.h"
 #include "app.h"
 
@@ -95,6 +95,12 @@ extern "C" {
 
 #endif
 // DOM-IGNORE-END
+
+/* Device Information */
+#define DEVICE_NAME			 "SAMA7G54"
+#define DEVICE_ARCH			 "CORTEX-A7"
+#define DEVICE_FAMILY		 "SAMA"
+#define DEVICE_SERIES		 "SAMA7G"
 
 /* CPU clock frequency */
 #define CPU_CLOCK_FREQUENCY 800000000
