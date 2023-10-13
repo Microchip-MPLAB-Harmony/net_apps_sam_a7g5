@@ -3250,7 +3250,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC1\configuration.h</file>
-         <hash>e20170b048cb7ffec61ddeb29240f8ade29a02964ae5c5a7a255fe4a220956be</hash>
+         <hash>3a36b821a3041ac3f4ce13cbd2e07eb3f31a3356415189ce792e8a86db563e7a</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\component\secumod.h</file>
