@@ -82,7 +82,7 @@ extern "C" {
 
 #define SYS_CMD_ENABLE
 #define SYS_CMD_DEVICE_MAX_INSTANCES       SYS_CONSOLE_DEVICE_MAX_INSTANCES
-#define SYS_CMD_PRINT_BUFFER_SIZE          4096
+#define SYS_CMD_PRINT_BUFFER_SIZE          4096U
 #define SYS_CMD_BUFFER_DMA_READY
 
 
@@ -102,10 +102,10 @@ extern "C" {
 #define SYS_DEBUG_USE_CONSOLE
 
 
-#define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			1
-#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			2
-#define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		0
-#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		200
+#define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			(1U)
+#define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(1U)
+#define SYS_CONSOLE_USB_CDC_MAX_INSTANCES 	   		(0U)
+#define SYS_CONSOLE_PRINT_BUFFER_SIZE        		(200U)
 
 
 #define SYS_CONSOLE_INDEX_0                       0
@@ -246,8 +246,23 @@ extern "C" {
 
 
 
+
+#define DRV_KSZ9131_PHY_CONFIG_FLAGS       ( 0 \
+                                                    | DRV_ETHPHY_CFG_RGMII \
+                                                    | DRV_ETHPHY_CFG_DEFAULT \
+                                                    )
+
+#define DRV_KSZ9131_PHY_LINK_INIT_DELAY        500
+#define DRV_KSZ9131_PHY_ADDRESS                7
+#define DRV_KSZ9131_PHY_PERIPHERAL_ID          GMAC0_BASE_ADDRESS
+#define DRV_ETHPHY_KSZ9131_NEG_INIT_TMO        1
+#define DRV_ETHPHY_KSZ9131_NEG_DONE_TMO        2000
+#define DRV_ETHPHY_KSZ9131_RESET_CLR_TMO       500
+
+
 /*** GMAC0 Configuration ***/
 #define DRV_GMAC0
+#define DRV_SAMA7G
 #define TCPIP_GMAC0_TX_DESCRIPTORS_COUNT_DUMMY    1
 #define TCPIP_GMAC0_RX_DESCRIPTORS_COUNT_DUMMY    1
 #define TCPIP_GMAC0_RX_BUFF_SIZE_DUMMY            64
@@ -342,20 +357,6 @@ extern "C" {
 
 
 
-#define DRV_KSZ9131_PHY_CONFIG_FLAGS       ( 0 \
-                                                    | DRV_ETHPHY_CFG_RGMII \
-                                                    | DRV_ETHPHY_CFG_DEFAULT \
-                                                    )
-
-#define DRV_KSZ9131_PHY_LINK_INIT_DELAY        500
-#define DRV_KSZ9131_PHY_ADDRESS                7
-#define DRV_KSZ9131_PHY_PERIPHERAL_ID          GMAC0_BASE_ADDRESS
-#define DRV_ETHPHY_KSZ9131_NEG_INIT_TMO        1
-#define DRV_ETHPHY_KSZ9131_NEG_DONE_TMO        2000
-#define DRV_ETHPHY_KSZ9131_RESET_CLR_TMO       500
-
-
-
 /*** IPv4 Configuration ***/
 #define TCPIP_IPV4_ARP_SLOTS                        10
 #define TCPIP_IPV4_EXTERN_PACKET_PROCESS   false
@@ -401,6 +402,7 @@ extern "C" {
 
 #define TCPIP_STACK_TICK_RATE		        		5
 #define TCPIP_STACK_SECURE_PORT_ENTRIES             10
+#define TCPIP_STACK_LINK_RATE		        		333
 
 #define TCPIP_STACK_ALIAS_INTERFACE_SUPPORT   false
 
