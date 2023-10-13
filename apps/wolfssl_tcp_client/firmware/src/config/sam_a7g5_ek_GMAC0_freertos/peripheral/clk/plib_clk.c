@@ -46,13 +46,13 @@
 #define SYSTEM_COUNTER_FREQUENCY 24000000U
 
 typedef struct pmc_pll_cfg {
-	uint32_t mul;	
-	uint32_t div;
-    bool eniopllck;	
-	uint32_t divio;	
-	uint32_t count;	
-	uint32_t fracr; 
-	uint32_t acr;
+    uint32_t mul;
+    uint32_t divpll;
+    bool eniopllck;
+    uint32_t divio;
+    uint32_t count;
+    uint32_t fracr;
+    uint32_t acr;
     bool ss;
     uint32_t step;
     uint32_t nstep;
@@ -71,7 +71,7 @@ typedef struct
 
 static pmc_pll_cfg_t ethpll_cfg = {
     .mul = 40U,
-    .div = 7U,
+    .divpll = 7U,
     .eniopllck = false,
     .divio = 0U,
     .count = PLL_UPDT_STUPTIM_VAL,
@@ -88,7 +88,7 @@ Initialize PLL
 *********************************************************************************/
 static void initPLL(uint32_t pll_id, pmc_pll_cfg_t *pll_cfg)
 {
-    /* STEP 1: Define the ID and startup time by configuring the fields PMC_PLL_UPDT.ID and PMC_PLL_UPDT.STUPTIM. 
+    /* STEP 1: Define the ID and startup time by configuring the fields PMC_PLL_UPDT.ID and PMC_PLL_UPDT.STUPTIM.
        Set PMC_PLL_UPDT.UPDATE to 0 */
     uint32_t reg = PMC_REGS->PMC_PLL_UPDT & ~(PMC_PLL_UPDT_UPDATE_Msk);
     reg |= (PMC_PLL_UPDT_ID(pll_id)  | PMC_PLL_UPDT_STUPTIM(pll_cfg->count));
@@ -105,7 +105,7 @@ static void initPLL(uint32_t pll_id, pmc_pll_cfg_t *pll_cfg)
 
     /* STEP 5: In PMC_PLL_CTRL0, write 1 to ENLOCK and to ENPLL and configure DIVPMC, DIVIO, ENPLLCK and ENIOPLLCK */
     reg = PMC_REGS->PMC_PLL_CTRL0 & ~(PMC_PLL_CTRL0_Msk);
-    reg |= (PMC_PLL_CTRL0_ENPLL_Msk | PMC_PLL_CTRL0_ENPLLCK_Msk | PMC_PLL_CTRL0_ENLOCK_Msk | PMC_PLL_CTRL0_DIVPMC(pll_cfg->div));
+    reg |= (PMC_PLL_CTRL0_ENPLL_Msk | PMC_PLL_CTRL0_ENPLLCK_Msk | PMC_PLL_CTRL0_ENLOCK_Msk | PMC_PLL_CTRL0_DIVPMC(pll_cfg->divpll));
     if (pll_cfg->eniopllck)
     {
         reg |= (PMC_PLL_CTRL0_ENIOPLLCK_Msk | PMC_PLL_CTRL0_DIVIO(pll_cfg->divio));
@@ -116,11 +116,11 @@ static void initPLL(uint32_t pll_id, pmc_pll_cfg_t *pll_cfg)
     PMC_REGS->PMC_PLL_UPDT |= PMC_PLL_UPDT_UPDATE_Msk;
 
     /* STEP 7: Wait for the lock bit to rise by polling the PMC_PLL_ISR0 */
-    uint32_t pll_lock_mask = 1U << pll_id;
+    uint32_t pll_lock_mask = 1UL << pll_id;
     while ((PMC_REGS->PMC_PLL_ISR0 & pll_lock_mask) != pll_lock_mask)
-	{
-		
-	}
+    {
+        /* Wait for PLL lock to rise */
+    }
     /* Setup spread spectrum, if is enabled */
     if (pll_cfg->ss)
     {
@@ -132,7 +132,7 @@ static void initPLL(uint32_t pll_id, pmc_pll_cfg_t *pll_cfg)
 
 
 /*********************************************************************************
-Initialize Programmable clocks 
+Initialize Programmable clocks
 *********************************************************************************/
 static void initProgrammableClocks(void)
 {
@@ -144,6 +144,7 @@ Initialize Peripheral clocks
 *********************************************************************************/
 static void initPeripheralClocks(void)
 {
+    const uint8_t EOL_MARKER = ((uint8_t)ID_PERIPH_MAX + 1U);
     struct {
         uint8_t id;
         uint8_t clken;
@@ -152,17 +153,17 @@ static void initPeripheralClocks(void)
         uint8_t divs;
     } periphList[] =
     {
-        { ID_PIOA, 1U, 0U, 0U, 0U},
-        { ID_FLEXCOM3, 1U, 0U, 0U, 0U},
-        { ID_GMAC0, 1U, 1U, 10U, 0U},
-        { ID_TC0_CHANNEL0, 1U, 0U, 0U, 0U},
-        { ID_PERIPH_MAX + 1, 0U, 0U, 0U, 0U}//end of list marker
+        {ID_PIOA, 1U, 0U, 0U, 0U},
+        {ID_FLEXCOM3, 1U, 0U, 0U, 0U},
+        {ID_GMAC0, 1U, 1U, 10U, 0U},
+        {ID_TC0_CHANNEL0, 1U, 0U, 0U, 0U},
+        {EOL_MARKER, 0U, 0U, 0U, 0U}//end of list marker
     };
 
     uint32_t count = sizeof(periphList)/sizeof(periphList[0]);
     for (uint32_t i = 0U; i < count; i++)
     {
-        if (periphList[i].id == (ID_PERIPH_MAX + 1U))
+        if (periphList[i].id == EOL_MARKER)
         {
             break;
         }
@@ -172,7 +173,7 @@ static void initPeripheralClocks(void)
                             PMC_PCR_EN(periphList[i].clken) |\
                             PMC_PCR_GCLKDIV(periphList[i].divs) |\
                             PMC_PCR_GCLKCSS(periphList[i].css) |\
-                            PMC_PCR_PID(periphList[i].id);                
+                            PMC_PCR_PID(periphList[i].id);
     }
 
 }
@@ -190,19 +191,19 @@ static void initSystemCounter(void)
                             PMC_PCR_EN(0U) |\
                             PMC_PCR_GCLKDIV(0U) |\
                             PMC_PCR_GCLKCSS_MAINCK |\
-                            PMC_PCR_PID(29U);   
+                            PMC_PCR_PID(29U);
         while((PMC_REGS->PMC_GCSR0 & PMC_GCSR0_GPID29_Msk) == 0U)
-		{
-			
-		}
+        {
+            /* Wait for GCLK 29 to enabled */
+        }
     }
-    
+
     /* Set timestamp count frequency */
     PSELCTRL_REGS->CNTFID0 = SYSTEM_COUNTER_FREQUENCY;
-    
+
     /* Enable counter */
     PSELCTRL_REGS->CNTCR |= CNTCR_EN_Msk;
-    
+
 }
 
 /*********************************************************************************
