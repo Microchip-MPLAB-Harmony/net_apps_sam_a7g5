@@ -83,10 +83,7 @@ extern "C" {
 #define SYS_TIME_INDEX_0                            (0)
 #define SYS_TIME_MAX_TIMERS                         (5)
 #define SYS_TIME_HW_COUNTER_WIDTH                   (32)
-#define SYS_TIME_HW_COUNTER_PERIOD                  (4294967295U)
-#define SYS_TIME_HW_COUNTER_HALF_PERIOD             (SYS_TIME_HW_COUNTER_PERIOD>>1)
-#define SYS_TIME_CPU_CLOCK_FREQUENCY                (800000000)
-#define SYS_TIME_COMPARE_UPDATE_EXECUTION_CYCLES    (936)
+#define SYS_TIME_TICK_FREQ_IN_HZ                    (1000)
 
 #define SYS_CONSOLE_INDEX_0                       0
 
@@ -406,12 +403,6 @@ extern "C" {
 #define DRV_ETHPHY_KSZ8081_RESET_CLR_TMO           500
 
 
-#define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
-
-
-
-
-
 /*** GMAC1 Configuration ***/
 #define DRV_GMAC1
 #define DRV_SAMA7G
@@ -462,12 +453,18 @@ extern "C" {
 
 #define TCPIP_INTMAC_PERIPHERAL_CLK                 200000000
 
-#define DRV_GMAC1_RX_CHKSM_OFFLOAD               (TCPIP_MAC_CHECKSUM_NONE)           
-#define DRV_GMAC1_TX_CHKSM_OFFLOAD               (TCPIP_MAC_CHECKSUM_NONE)       
+#define DRV_GMAC1_RX_CHKSM_OFFLOAD             (TCPIP_MAC_CHECKSUM_TCP | TCPIP_MAC_CHECKSUM_UDP | TCPIP_MAC_CHECKSUM_IPV4)
+#define DRV_GMAC1_TX_CHKSM_OFFLOAD               (TCPIP_MAC_CHECKSUM_TCP | TCPIP_MAC_CHECKSUM_UDP | TCPIP_MAC_CHECKSUM_IPV4) 
 #define TCPIP_GMAC1_TX_PRIO_COUNT                1
 #define TCPIP_GMAC1_RX_PRIO_COUNT                1
 #define DRV_GMAC1_NUMBER_OF_QUEUES               2
 #define DRV_GMAC1_RMII_MODE                      0
+
+
+
+#define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
+
+
 
 
 

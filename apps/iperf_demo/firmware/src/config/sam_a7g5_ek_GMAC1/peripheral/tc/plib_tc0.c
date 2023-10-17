@@ -74,11 +74,11 @@ void TC0_CH0_TimerInitialize(void)
     TC0_REGS->TC_CHANNEL[0].TC_CMR =  TC_CMR_WAVEFORM_WAVSEL_UP_RC | TC_CMR_WAVE_Msk ;
 
     /* write period */
-    TC0_REGS->TC_CHANNEL[0].TC_RC = 0U;
+    TC0_REGS->TC_CHANNEL[0].TC_RC = 200000U;
 
 
     /* enable interrupt */
-    TC0_REGS->TC_CHANNEL[0].TC_IER = TC_IER_CPAS_Msk;
+    TC0_REGS->TC_CHANNEL[0].TC_IER = TC_IER_CPCS_Msk;
     TC0_CH0_CallbackObj.callback_fn = NULL;
 }
 
