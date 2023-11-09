@@ -96,7 +96,7 @@ void _APP_Commands_OpenURL(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv)
     appData.state = APP_TCPIP_PROCESS_COMMAND;
     if (argc == 2)
     {    
-        strncpy(appData.urlBuffer, argv[1], sizeof(appData.urlBuffer));
+        strncpy(appData.urlBuffer, argv[1], MAX_URL_SIZE);
     }
 }
 
