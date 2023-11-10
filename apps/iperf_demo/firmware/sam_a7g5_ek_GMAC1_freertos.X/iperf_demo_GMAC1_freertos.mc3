@@ -1880,6 +1880,17 @@
          <value>__ROOTVIEW</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_MAX_CMD_ARGS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_MAX_CMD_ARGS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;16&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_PRINT_BUFFER_SIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
   &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_PRINT_BUFFER_SIZE&quot;&gt;
@@ -3793,7 +3804,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC1_freertos\system\command\sys_command.h</file>
-         <hash>7ef4ded141f7f71e84038aa39c414929ee9cbd9cdacb92e06544f5bf53915dca</hash>
+         <hash>ed24ba3a9c5603783bf20b35fb5464928a5be5e07c9f3d19011ccbd42b621a99</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\instance\flexcom2.h</file>
@@ -5353,7 +5364,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC1_freertos\configuration.h</file>
-         <hash>099a3966ddd2db166614b5d5a3036cbdcd7bbe320a871a63be4429d609bfe952</hash>
+         <hash>01b25e6102111654b4acc8629ab1d95b7f5438230e24370514b75bc002ac3a5a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC1_freertos\library\tcpip\tcpip_mac_bridge.h</file>
