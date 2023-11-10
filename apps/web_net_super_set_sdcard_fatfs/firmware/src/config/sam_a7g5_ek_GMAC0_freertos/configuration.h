@@ -384,6 +384,16 @@ extern "C" {
 
 
 
+/*** FTPC Configuration ***/
+#define TCPIP_STACK_USE_FTP_CLIENT
+#define TCPIP_FTPC_TASK_TICK_RATE        5
+#define TCPIP_FTPC_TMO                   2
+#define TCPIP_FTPC_MAX_NUM_CLIENT        3
+#define TCPIP_FTPC_DATA_SKT_TX_BUFF_SIZE_DFLT        0
+#define TCPIP_FTPC_DATA_SKT_RX_BUFF_SIZE_DFLT        0
+#define TCPIP_FTPC_COMMANDS  
+
+
 /*** iperf Configuration ***/
 #define TCPIP_STACK_USE_IPERF
 #define TCPIP_IPERF_TX_BUFFER_SIZE		4096
@@ -394,16 +404,6 @@ extern "C" {
 #define TCPIP_IPERF_MAX_INSTANCES       1
 #define TCPIP_IPERF_TX_BW_LIMIT  		1
 
-
-
-/*** FTPC Configuration ***/
-#define TCPIP_STACK_USE_FTP_CLIENT
-#define TCPIP_FTPC_TASK_TICK_RATE        5
-#define TCPIP_FTPC_TMO                   2
-#define TCPIP_FTPC_MAX_NUM_CLIENT        3
-#define TCPIP_FTPC_DATA_SKT_TX_BUFF_SIZE_DFLT        0
-#define TCPIP_FTPC_DATA_SKT_RX_BUFF_SIZE_DFLT        0
-#define TCPIP_FTPC_COMMANDS  
 
 
 /*** IPv4 Configuration ***/
@@ -485,7 +485,7 @@ extern "C" {
 #define NET_PRES_NUM_SOCKETS 20
 
 /* Net Pres RTOS Configurations*/
-#define NET_PRES_RTOS_STACK_SIZE                4096
+#define NET_PRES_RTOS_STACK_SIZE                16192
 #define NET_PRES_RTOS_TASK_PRIORITY             1
 	
 #define FREERTOS
@@ -709,7 +709,7 @@ extern "C" {
 
 /*** TCPIP Heap Configuration ***/
 #define TCPIP_STACK_USE_INTERNAL_HEAP
-#define TCPIP_STACK_DRAM_SIZE                       138240
+#define TCPIP_STACK_DRAM_SIZE                       238240
 #define TCPIP_STACK_DRAM_RUN_LIMIT                  2048
 
 #define TCPIP_STACK_MALLOC_FUNC                     malloc
@@ -819,6 +819,9 @@ extern "C" {
 #define WOLFSSL_AES_SMALL_TABLES
 #define NO_MD4
 #define WOLFSSL_SHA224
+#define WOLFSSL_SHA384
+#define WOLFSSL_SHA512
+#define HAVE_SHA512
 #define WOLFSSL_AES_128
 #define WOLFSSL_AES_192
 #define WOLFSSL_AES_256
@@ -851,20 +854,6 @@ extern "C" {
 
 
 
-
-
-
-#define DRV_KSZ9131_PHY_CONFIG_FLAGS       ( 0 \
-                                                    | DRV_ETHPHY_CFG_RGMII \
-                                                    | DRV_ETHPHY_CFG_DEFAULT \
-                                                    )
-
-#define DRV_KSZ9131_PHY_LINK_INIT_DELAY        500
-#define DRV_KSZ9131_PHY_ADDRESS                7
-#define DRV_KSZ9131_PHY_PERIPHERAL_ID          GMAC0_BASE_ADDRESS
-#define DRV_ETHPHY_KSZ9131_NEG_INIT_TMO        1
-#define DRV_ETHPHY_KSZ9131_NEG_DONE_TMO        2000
-#define DRV_ETHPHY_KSZ9131_RESET_CLR_TMO       500
 
 
 /*** GMAC0 Configuration ***/
@@ -961,6 +950,20 @@ extern "C" {
 #define DRV_GMAC0_NUMBER_OF_QUEUES               6
 #define DRV_GMAC0_RMII_MODE                      0
 
+
+
+
+#define DRV_KSZ9131_PHY_CONFIG_FLAGS       ( 0 \
+                                                    | DRV_ETHPHY_CFG_RGMII \
+                                                    | DRV_ETHPHY_CFG_DEFAULT \
+                                                    )
+
+#define DRV_KSZ9131_PHY_LINK_INIT_DELAY        500
+#define DRV_KSZ9131_PHY_ADDRESS                7
+#define DRV_KSZ9131_PHY_PERIPHERAL_ID          GMAC0_BASE_ADDRESS
+#define DRV_ETHPHY_KSZ9131_NEG_INIT_TMO        1
+#define DRV_ETHPHY_KSZ9131_NEG_DONE_TMO        2000
+#define DRV_ETHPHY_KSZ9131_RESET_CLR_TMO       500
 
 
 

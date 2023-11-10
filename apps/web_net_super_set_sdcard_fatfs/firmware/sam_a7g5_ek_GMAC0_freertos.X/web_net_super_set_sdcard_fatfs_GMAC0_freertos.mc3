@@ -2515,7 +2515,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;XC32_HEAP_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;1024&quot;/&gt;
-      &lt;User dnOrder=&quot;1&quot; value=&quot;409600&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;750600&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -3246,6 +3246,28 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_sha384"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
+  &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_sha384&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/lib_wolfcrypt&gt;
+&lt;/lib_wolfcrypt&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfcrypt_sha512"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
+  &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfcrypt_sha512&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/lib_wolfcrypt&gt;
+&lt;/lib_wolfcrypt&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="lib_wolfcrypt" name="wolfssl_included"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;lib_wolfcrypt&gt;
   &lt;lib_wolfcrypt dnOrder=&quot;0&quot; id=&quot;wolfssl_included&quot;&gt;
@@ -3525,7 +3547,7 @@
   &lt;net_Pres dnOrder=&quot;0&quot; id=&quot;NET_PRES_RTOS_STACK_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;net_Pres&quot; value=&quot;32768&quot;/&gt;
-      &lt;User dnOrder=&quot;1&quot; value=&quot;16384&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;64768&quot;/&gt;
     &lt;/Values&gt;
   &lt;/net_Pres&gt;
 &lt;/net_Pres&gt;
@@ -5000,7 +5022,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipStack&gt;
   &lt;tcpipStack dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_DRAM_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;138240&quot;/&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;238240&quot;/&gt;
     &lt;/Values&gt;
   &lt;/tcpipStack&gt;
 &lt;/tcpipStack&gt;
@@ -5993,7 +6015,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0_freertos\driver\gmac\src\dynamic\drv_gmac_lib_samA7G5.c</file>
-         <hash>d1f3e0629f656aafdf5dedd30bdb060a4b84811487486eb382ae458c81b8b8a6</hash>
+         <hash>7c8b6f423c91b8661af7cfb6a89a537a285957a9081e6588d12e031dc07df4b0</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\component\gmac.h</file>
@@ -6009,7 +6031,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0_freertos\library\tcpip\src\berkeley_api.c</file>
-         <hash>f714655684f81261d1f78e34b467e420ead3a9267a65f67ff8e064940d98fe5a</hash>
+         <hash>af352971d2cee5ca38e9218fded909fec04908f4dc0dce68aaec40130a2dc005</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\crypt_rsa_pukcl.h</file>
@@ -6149,11 +6171,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0_freertos\initialization.c</file>
-         <hash>f9d0aca2b96e82ae5bc0b6af76437b64a1a03de32632ebcfd95f6ad25a7f1113</hash>
+         <hash>36c8e44124c31c350fab062d0bafa3a38d24be9d1f042dfa4e1eacfdfe5b6e57</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0_freertos\driver\gmac\src\dynamic\drv_gmac.c</file>
-         <hash>9dbd872b88897925d44d01c6248d3b3d541f11d18dcb36e53c3d6d17d8e27ee7</hash>
+         <hash>ec76666fa8119d45514373a33a553e0fa95e855087bf5e82748b4d7e55a4f58d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0_freertos\net_pres\pres\net_pres_enc_glue.h</file>
@@ -6249,7 +6271,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0_freertos\configuration.h</file>
-         <hash>ea1f6738f96610fbdec149022021f7f9fcb44d602636b3c225824c6c0f42b3d2</hash>
+         <hash>70140171c26a3de11a9b68d92a5f4e6e66e197de6c8d680d7411903dfe88605b</hash>
       </entry>
       <entry>
          <file>..\src\web_pages\email\index.htm</file>
@@ -6657,7 +6679,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0_freertos\library\tcpip\src\berkeley_manager.h</file>
-         <hash>19254a00f9a2c37a0f1199ce4053502487426784a97b7902832d734cff7106d8</hash>
+         <hash>523b55a8af2a7783868f95c9529ad55d260daad19a2f59214c63654fa85b0ee5</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\crypt_sha512_hw.h</file>
@@ -7257,7 +7279,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0_freertos\definitions.h</file>
-         <hash>d253bcb1cc893a4eee73a810ac7274703c2f2d279a2252eed0cace098af0b6e7</hash>
+         <hash>1ca75cbd8ae2d96c2a4f159098bc3e82c945c604062a17f81c122b9c4d01d579</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\CryptoLib_Rc_pb.h</file>
