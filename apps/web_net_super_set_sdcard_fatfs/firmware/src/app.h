@@ -32,6 +32,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include "configuration.h"
+#include "definitions.h"
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -158,7 +159,7 @@ typedef struct
 {
     /* The application's current state */
     APP_STATES state;
-
+    TCPIP_FTP_HANDLE    ftpHandle;
     /* TODO: Define any additional data used by the application. */
 
 } APP_DATA;

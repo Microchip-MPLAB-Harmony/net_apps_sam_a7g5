@@ -73,8 +73,15 @@ APP_LED_STATE LEDstate = APP_LED_STATE_OFF;
 
 /* TODO:  Add any necessary local functions.
 */
+#if defined TCPIP_STACK_USE_TELNET_SERVER
+static bool Telnet_AuthHandler(const char* user, const char* password, const TCPIP_TELNET_CONN_INFO* pInfo, const void* hParam);
+#endif  // defined TCPIP_STACK_USE_TELNET_SERVER
 
-
+#if (TCPIP_FTPS_OBSOLETE_AUTHENTICATION == 0)  
+/* TODO:  Add any necessary callback functions.
+*/
+static bool APP_FTPAuthHandler(const char* user, const char* password, const TCPIP_FTP_CONN_INFO* pInfo, const void* hParam);
+#endif
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Initialization and State Machine Functions
@@ -173,6 +180,19 @@ void APP_Tasks ( void )
                 HTTP_APP_Initialize();
 #endif // defined(TCPIP_STACK_USE_HTTP_NET_SERVER)
 
+#if defined TCPIP_STACK_USE_TELNET_SERVER
+                TCPIP_TELNET_HANDLE telH = TCPIP_TELNET_AuthenticationRegister(Telnet_AuthHandler, 0);
+                SYS_CONSOLE_PRINT("telnet aythentication registration: %s\r\n", (telH == 0) ? "Failed!" : "success");
+
+#endif  // defined TCPIP_STACK_USE_TELNET_SERVER
+
+#if (TCPIP_FTPS_OBSOLETE_AUTHENTICATION == 0)              
+                appData.ftpHandle = TCPIP_FTP_AuthenticationRegister(APP_FTPAuthHandler, 0);
+                if(appData.ftpHandle == 0)
+                {
+                    SYS_CONSOLE_MESSAGE("Failed to register FTP authentication handler!\r\n");
+                }
+#endif
                 appData.state = APP_TCPIP_TRANSACT;
             }
 
@@ -220,6 +240,41 @@ void APP_Tasks ( void )
             break;
     }
 }
+
+#if defined TCPIP_STACK_USE_TELNET_SERVER
+// simple authentication handler
+// replace with a stronger one
+static bool Telnet_AuthHandler(const char* user, const char* password, const TCPIP_TELNET_CONN_INFO* pInfo, const void* hParam)
+{
+    if(strcmp(user, "Microchip") == 0)
+    {
+        if(strcmp(password, "Harmony") == 0)
+        {
+            return true;
+        }
+    }
+
+    return false;
+}
+#endif  // defined TCPIP_STACK_USE_TELNET_SERVER
+
+
+#if (TCPIP_FTPS_OBSOLETE_AUTHENTICATION == 0)  
+// Implement the authentication handler
+// This trivial example does a simple string comparison
+// The application should implement a more secure aproach:
+// using hashes, digital signatures, etc.
+// The TCPIP_FTP_CONN_INFO can be used to get more details about the client requesting login
+static bool APP_FTPAuthHandler(const char* user, const char* password, const TCPIP_FTP_CONN_INFO* pInfo, const void* hParam)
+{
+    if(strcmp(user, "Microchip") == 0 && strcmp(password, "Harmony") == 0)
+    {
+        return true;
+    }
+
+    return false;
+}
+#endif
 
 /*******************************************************************************
  End of File
