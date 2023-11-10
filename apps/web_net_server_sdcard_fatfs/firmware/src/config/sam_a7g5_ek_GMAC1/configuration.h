@@ -321,6 +321,9 @@ extern "C" {
 
 
 
+#define TCPIP_STACK_USE_ICMPV6_SERVER
+
+
 /*** ARP Configuration ***/
 #define TCPIP_ARP_CACHE_ENTRIES                 		5
 #define TCPIP_ARP_CACHE_DELETE_OLD		        	true
@@ -336,9 +339,6 @@ extern "C" {
 #define TCPIP_ARP_PRIMARY_CACHE_ONLY		        	true
 #define TCPIP_ARP_COMMANDS false
 
-
-
-#define TCPIP_STACK_USE_ICMPV6_SERVER
 
 
 #define TCPIP_IPV6_NDP_MAX_RTR_SOLICITATION_DELAY 	1
@@ -574,12 +574,6 @@ extern "C" {
 #define DRV_ETHPHY_KSZ8081_RESET_CLR_TMO           500
 
 
-#define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
-
-
-
-
-
 /*** GMAC1 Configuration ***/
 #define DRV_GMAC1
 #define DRV_SAMA7G
@@ -636,6 +630,12 @@ extern "C" {
 #define TCPIP_GMAC1_RX_PRIO_COUNT                1
 #define DRV_GMAC1_NUMBER_OF_QUEUES               2
 #define DRV_GMAC1_RMII_MODE                      0
+
+
+
+#define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
+
+
 
 
 
