@@ -2524,6 +2524,17 @@
          <value>__ROOTVIEW</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_MAX_CMD_ARGS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
+  &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_MAX_CMD_ARGS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;16&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sys_command&gt;
+&lt;/sys_command&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_command" name="SYS_COMMAND_PRINT_BUFFER_SIZE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_command&gt;
   &lt;sys_command dnOrder=&quot;0&quot; id=&quot;SYS_COMMAND_PRINT_BUFFER_SIZE&quot;&gt;
@@ -4490,7 +4501,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0_freertos\initialization.c</file>
-         <hash>d461a6ba97ee315e8e6c0251a35baa4825ab998e97e4737a4179e423f68b060a</hash>
+         <hash>db8fa0506d55d002858219ef196750b4fb6ceb23818fb26d023c17dbf5f29c4b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0_freertos\driver\gmac\src\dynamic\drv_gmac.c</file>
@@ -4582,7 +4593,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0_freertos\configuration.h</file>
-         <hash>874cf13533ee3581c5ae9975adde11ba513e08de33fcb812c4c82a5e77e7d3e0</hash>
+         <hash>23ed4e6dc0d66c1dc2c647b21670bbcebe046fd0fedf7954e046bdcc3140e132</hash>
       </entry>
       <entry>
          <file>..\src\packs\SAMA7G54_DFP\component\sfr.h</file>
@@ -4622,7 +4633,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0_freertos\system\command\sys_command.h</file>
-         <hash>7ef4ded141f7f71e84038aa39c414929ee9cbd9cdacb92e06544f5bf53915dca</hash>
+         <hash>ed24ba3a9c5603783bf20b35fb5464928a5be5e07c9f3d19011ccbd42b621a99</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0_freertos\library\tcpip\src\zero_conf_manager.h</file>
