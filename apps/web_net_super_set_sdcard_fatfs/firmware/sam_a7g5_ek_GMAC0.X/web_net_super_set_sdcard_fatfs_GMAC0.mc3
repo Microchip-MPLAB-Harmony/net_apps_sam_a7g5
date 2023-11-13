@@ -443,27 +443,27 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;691&quot; canvasWidth=&quot;769&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;GraphSettings canvasHeight=&quot;515&quot; canvasWidth=&quot;1054&quot; dnOrder=&quot;0&quot;/&gt;
     &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;APPLICATION LAYER&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
-        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipAnnounce&quot; x=&quot;660&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipBerkeleyApi&quot; x=&quot;1130&quot; y=&quot;140&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;tcpipDhcp&quot; x=&quot;1140&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;tcpipDhcpServer&quot; x=&quot;970&quot; y=&quot;140&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;tcpipDhcpcv6&quot; x=&quot;30&quot; y=&quot;220&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;tcpipDns&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;tcpipDnss&quot; x=&quot;30&quot; y=&quot;120&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;tcpipFtpc&quot; x=&quot;1290&quot; y=&quot;140&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;tcpipFtps&quot; x=&quot;1300&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;tcpipHttpNet&quot; x=&quot;340&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;tcpipIperf&quot; x=&quot;670&quot; y=&quot;140&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipAnnounce&quot; x=&quot;23&quot; y=&quot;334&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipBerkeleyApi&quot; x=&quot;473&quot; y=&quot;283&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;tcpipDhcp&quot; x=&quot;604&quot; y=&quot;21&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;tcpipDhcpServer&quot; x=&quot;317&quot; y=&quot;332&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;tcpipDhcpcv6&quot; x=&quot;42&quot; y=&quot;219&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;tcpipDns&quot; x=&quot;609&quot; y=&quot;155&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;tcpipDnss&quot; x=&quot;25&quot; y=&quot;132&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;tcpipFtpc&quot; x=&quot;618&quot; y=&quot;246&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;tcpipFtps&quot; x=&quot;606&quot; y=&quot;357&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;tcpipHttpNet&quot; x=&quot;310&quot; y=&quot;23&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;tcpipIperf&quot; x=&quot;180&quot; y=&quot;270&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;tcpipNbns&quot; x=&quot;180&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;tcpipSmtpc&quot; x=&quot;350&quot; y=&quot;160&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;tcpipSntp&quot; x=&quot;500&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;tcpipSmtpc&quot; x=&quot;320&quot; y=&quot;170&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;tcpipSntp&quot; x=&quot;173&quot; y=&quot;381&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;tcpipTelnet&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;tcpipTftpc&quot; x=&quot;820&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;tcpipTftps&quot; x=&quot;190&quot; y=&quot;140&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;17&quot; id=&quot;tcpipZeroConf&quot; x=&quot;980&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;tcpipTftpc&quot; x=&quot;479&quot; y=&quot;18&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;tcpipTftps&quot; x=&quot;179&quot; y=&quot;129&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;17&quot; id=&quot;tcpipZeroConf&quot; x=&quot;473&quot; y=&quot;160&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
     &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;BASIC CONFIGURATION&quot;&gt;
@@ -4301,9 +4301,70 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtpc" name="TCPIP_FTPC_COMMANDS"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtpc&gt;
   &lt;tcpipFtpc dnOrder=&quot;0&quot; id=&quot;TCPIP_FTPC_COMMANDS&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtpc&gt;
+&lt;/tcpipFtpc&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtpc" name="TCPIP_FTPC_DATA_SKT_RX_BUFF_SIZE_DFLT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtpc&gt;
+  &lt;tcpipFtpc dnOrder=&quot;0&quot; id=&quot;TCPIP_FTPC_DATA_SKT_RX_BUFF_SIZE_DFLT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtpc&gt;
+&lt;/tcpipFtpc&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtpc" name="TCPIP_FTPC_DATA_SKT_TX_BUFF_SIZE_DFLT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtpc&gt;
+  &lt;tcpipFtpc dnOrder=&quot;0&quot; id=&quot;TCPIP_FTPC_DATA_SKT_TX_BUFF_SIZE_DFLT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtpc&gt;
+&lt;/tcpipFtpc&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtpc" name="TCPIP_FTPC_HEAP_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtpc&gt;
+  &lt;tcpipFtpc dnOrder=&quot;0&quot; id=&quot;TCPIP_FTPC_HEAP_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtpc&gt;
+&lt;/tcpipFtpc&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtpc" name="TCPIP_FTPC_MAX_NUM_CLIENT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtpc&gt;
+  &lt;tcpipFtpc dnOrder=&quot;0&quot; id=&quot;TCPIP_FTPC_MAX_NUM_CLIENT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtpc&gt;
+&lt;/tcpipFtpc&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtpc" name="TCPIP_FTPC_TASK_TICK_RATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtpc&gt;
+  &lt;tcpipFtpc dnOrder=&quot;0&quot; id=&quot;TCPIP_FTPC_TASK_TICK_RATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtpc&gt;
+&lt;/tcpipFtpc&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtpc" name="TCPIP_FTPC_TMO"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtpc&gt;
+  &lt;tcpipFtpc dnOrder=&quot;0&quot; id=&quot;TCPIP_FTPC_TMO&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtpc&gt;
+&lt;/tcpipFtpc&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtpc" name="TCPIP_STACK_USE_FTP_CLIENT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtpc&gt;
+  &lt;tcpipFtpc dnOrder=&quot;0&quot; id=&quot;TCPIP_STACK_USE_FTP_CLIENT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/tcpipFtpc&gt;
 &lt;/tcpipFtpc&gt;
 </value>
@@ -4318,6 +4379,159 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>APPLICATION LAYER</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTPS_AUTHENTICATION_CONN_INFO"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTPS_AUTHENTICATION_CONN_INFO&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTPS_AUTH_CONFIG"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTPS_AUTH_CONFIG&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTPS_COMMAND_LISTEN_PORT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTPS_COMMAND_LISTEN_PORT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTPS_DATA_LISTEN_PORT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTPS_DATA_LISTEN_PORT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTPS_HEAP_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTPS_HEAP_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTPS_TASK_TICK_RATE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTPS_TASK_TICK_RATE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTP_DATA_SKT_RX_BUFF_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTP_DATA_SKT_RX_BUFF_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTP_DATA_SKT_TX_BUFF_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTP_DATA_SKT_TX_BUFF_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTP_MAX_CONNECTIONS"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTP_MAX_CONNECTIONS&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTP_MOUNT_POINT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTP_MOUNT_POINT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTP_PASSWD_LEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTP_PASSWD_LEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTP_PASSWORD"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTP_PASSWORD&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTP_PUT_ENABLED"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTP_PUT_ENABLED&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTP_TIMEOUT"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTP_TIMEOUT&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTP_USER_NAME"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTP_USER_NAME&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_FTP_USER_NAME_LEN"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_FTP_USER_NAME_LEN&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipFtps" name="TCPIP_USE_FTP_MODULE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;tcpipFtps&gt;
+  &lt;tcpipFtps dnOrder=&quot;0&quot; id=&quot;TCPIP_USE_FTP_MODULE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/tcpipFtps&gt;
+&lt;/tcpipFtps&gt;
+</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="tcpipHttpNet" name="!@#harmonyAttachmentState"/>
@@ -6313,7 +6527,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\driver\gmac\src\dynamic\drv_gmac_lib_samA7G5.c</file>
-         <hash>d1f3e0629f656aafdf5dedd30bdb060a4b84811487486eb382ae458c81b8b8a6</hash>
+         <hash>7c8b6f423c91b8661af7cfb6a89a537a285957a9081e6588d12e031dc07df4b0</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\CryptoLib_RedMod_pb.h</file>
@@ -6413,11 +6627,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\driver\gmac\src\dynamic\drv_gmac.c</file>
-         <hash>9dbd872b88897925d44d01c6248d3b3d541f11d18dcb36e53c3d6d17d8e27ee7</hash>
+         <hash>ec76666fa8119d45514373a33a553e0fa95e855087bf5e82748b4d7e55a4f58d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\configuration.h</file>
-         <hash>1de89ed6d957f589f26446d0c7cc4e56fef625e434bffdcc6325bb31bc077f7f</hash>
+         <hash>822d7788892c7b08d0f74e8983e23a66daa61c3828a52c40a5e3dae32a27334d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\src\udp_private.h</file>
@@ -6769,7 +6983,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\src\berkeley_manager.h</file>
-         <hash>19254a00f9a2c37a0f1199ce4053502487426784a97b7902832d734cff7106d8</hash>
+         <hash>523b55a8af2a7783868f95c9529ad55d260daad19a2f59214c63654fa85b0ee5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\net_pres\pres\net_pres_enc_glue.c</file>
@@ -7081,7 +7295,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\src\berkeley_api.c</file>
-         <hash>f714655684f81261d1f78e34b467e420ead3a9267a65f67ff8e064940d98fe5a</hash>
+         <hash>af352971d2cee5ca38e9218fded909fec04908f4dc0dce68aaec40130a2dc005</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_a7g5_ek_GMAC0\library\tcpip\tcpip_ethernet.h</file>
