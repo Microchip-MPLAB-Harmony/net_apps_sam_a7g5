@@ -1,5 +1,5 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="24.1">
-    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="AT91Bootstrap loader MPU applications in this repository are linked to execute from external DRAM memory that is available on the evaluation kit(s). To do this, all peripherals and clock leading up-to ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="DC.rights.owner" content="(C) Copyright 2023"/><meta name="DC.type" content="topic"/><meta name="DC.relation" content="GUID-F46F62F1-5DFE-442A-AF40-05DD33869929.html"/><meta name="DC.format" content="HTML5"/><meta name="DC.identifier" content="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE"/><meta name="DC.language" content="en-US"/><title>2.1 Bootstrapping MPU applications using at91bootstrap loader</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE-d350e122"/><meta name="wh-source-relpath" content="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE.xml"/><meta name="wh-out-relpath" content="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE.html"/>
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="MPU Harmony3 applications are compiled and linked to execute from external DRAM memory that is available on the corresponding evaluation kit. This require all peripherals and clock leading to the DRAM ..."/><meta name="copyright" content="(C) Copyright 2023"/><meta name="generator" content="DITA-OT"/><title>2.1 Using at91boostrap loader with Harmony3 MPU applications</title><!--  Generated with Oxygen version 24.1, build number 2022062014.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE-d349e124"/><meta name="wh-source-relpath" content="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE.xml"/><meta name="wh-out-relpath" content="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE.html"/>
     <!-- Latest compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/lib/bootstrap/css/bootstrap.min.css"/>
     
@@ -16,6 +16,7 @@
 <script src="mchp-context-help.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+    <script src="https://assets.adobedtm.com/6a72a357eb48/a636c708c7fe/launch-0b0023397020.min.js"></script><!-- Adobe Analytics -->
 </head>
 
     <body id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE" class="wh_topic_page frmBody">
@@ -57,7 +58,7 @@
             
             
             
-            <form id="searchForm" method="get" role="search" action="search.html"><div><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div></form>
+            <form id="searchForm" method="get" role="search" action="search.html"><div class="d-flex justify-contents-around"><div class="flex-grow-1"></div><div class="position-relative flex-grow-1"><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div><div class="align-self-center flex-grow-1 ml-2"></div></div></form>
             
             <div class="mchp-color-stripe-grid-container">
   <div class="mchp-main-bar mchp-orange-bar"></div>
@@ -74,7 +75,7 @@
                     
                     <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="GUID-F46F62F1-5DFE-442A-AF40-05DD33869929"><div class="title"><a href="GUID-F46F62F1-5DFE-442A-AF40-05DD33869929.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
 Appendix</a></div></div></li><li class="active"><div class="topicref" data-id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE"><div class="title"><a href="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.1</ph>
-Bootstrapping MPU applications using at91bootstrap loader</a></div></div></li></ol></div>
+Using at91boostrap loader with Harmony3 MPU applications</a></div></div></li></ol></div>
                     
                     
                     
@@ -104,12 +105,13 @@ Bootstrapping MPU applications using at91bootstrap loader</a></div></div></li></
                         <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
                             <div id="wh_publication_toc_content">
 		                        
-                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-81D1D694-C056-44B3-88B7-1DFFFF6F9340-d350e9" class="topicref" data-id="GUID-81D1D694-C056-44B3-88B7-1DFFFF6F9340" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-81D1D694-C056-44B3-88B7-1DFFFF6F9340-d350e9-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D1D694-C056-44B3-88B7-1DFFFF6F9340.html" id="GUID-81D1D694-C056-44B3-88B7-1DFFFF6F9340-d350e9-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
-Harmony 3 TCP/IP Application for SAM A7G5 Family</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-F46F62F1-5DFE-442A-AF40-05DD33869929-d350e114" class="topicref" data-id="GUID-F46F62F1-5DFE-442A-AF40-05DD33869929" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-F46F62F1-5DFE-442A-AF40-05DD33869929-d350e114-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F46F62F1-5DFE-442A-AF40-05DD33869929.html" id="GUID-F46F62F1-5DFE-442A-AF40-05DD33869929-d350e114-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
-Appendix</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" class="active"><div data-tocid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE-d350e122" class="topicref" data-id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE.html" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE-d350e122-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.1</ph>
-Bootstrapping MPU applications using at91bootstrap loader</a></div></div></li><li role="treeitem"><div data-tocid="GUID-EFDFAC51-4427-494D-955C-33159B22FFAE-d350e130" class="topicref" data-id="GUID-EFDFAC51-4427-494D-955C-33159B22FFAE" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-EFDFAC51-4427-494D-955C-33159B22FFAE.html" id="GUID-EFDFAC51-4427-494D-955C-33159B22FFAE-d350e130-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.2</ph>
-MPLAB X Integrated Development Environment</a><div class="wh-tooltip"><p class="shortdesc">Enter a short description of your topic here (optional).</p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-B6A5215E-D22C-4D02-8262-8B39AC63C2B8-d350e141" class="topicref" data-id="GUID-B6A5215E-D22C-4D02-8262-8B39AC63C2B8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B6A5215E-D22C-4D02-8262-8B39AC63C2B8.html" id="GUID-B6A5215E-D22C-4D02-8262-8B39AC63C2B8-d350e141-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.3</ph>
-MPLAB Code Configurator</a></div></div></li></ul></li></ul></div>
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-81D1D694-C056-44B3-88B7-1DFFFF6F9340-d349e11" class="topicref" data-id="GUID-81D1D694-C056-44B3-88B7-1DFFFF6F9340" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-81D1D694-C056-44B3-88B7-1DFFFF6F9340-d349e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-81D1D694-C056-44B3-88B7-1DFFFF6F9340.html" id="GUID-81D1D694-C056-44B3-88B7-1DFFFF6F9340-d349e11-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+Harmony 3 TCP/IP Application for SAM A7G5 Family</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-F46F62F1-5DFE-442A-AF40-05DD33869929-d349e116" class="topicref" data-id="GUID-F46F62F1-5DFE-442A-AF40-05DD33869929" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-F46F62F1-5DFE-442A-AF40-05DD33869929-d349e116-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-F46F62F1-5DFE-442A-AF40-05DD33869929.html" id="GUID-F46F62F1-5DFE-442A-AF40-05DD33869929-d349e116-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Appendix</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" class="active"><div data-tocid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE-d349e124" class="topicref" data-id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE.html" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE-d349e124-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.1</ph>
+Using at91boostrap loader with Harmony3 MPU applications</a></div></div></li><li role="treeitem"><div data-tocid="GUID-C658DA4B-7AC7-42A5-B3D0-CBA19DE2EDD3-d349e132" class="topicref" data-id="GUID-C658DA4B-7AC7-42A5-B3D0-CBA19DE2EDD3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-C658DA4B-7AC7-42A5-B3D0-CBA19DE2EDD3.html" id="GUID-C658DA4B-7AC7-42A5-B3D0-CBA19DE2EDD3-d349e132-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.2</ph>
+Building at91bootstrap project using MPLABX</a></div></div></li><li role="treeitem"><div data-tocid="GUID-EFDFAC51-4427-494D-955C-33159B22FFAE-d349e140" class="topicref" data-id="GUID-EFDFAC51-4427-494D-955C-33159B22FFAE" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-EFDFAC51-4427-494D-955C-33159B22FFAE.html" id="GUID-EFDFAC51-4427-494D-955C-33159B22FFAE-d349e140-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.3</ph>
+MPLAB X Integrated Development Environment</a></div></div></li><li role="treeitem"><div data-tocid="GUID-B6A5215E-D22C-4D02-8262-8B39AC63C2B8-d349e148" class="topicref" data-id="GUID-B6A5215E-D22C-4D02-8262-8B39AC63C2B8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B6A5215E-D22C-4D02-8262-8B39AC63C2B8.html" id="GUID-B6A5215E-D22C-4D02-8262-8B39AC63C2B8-d349e148-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.4</ph>
+MPLAB Code Configurator</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d349e156" class="topicref backmatter backmatter_parent" data-id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d349e156-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B.html" id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d349e156-link">Microchip Information</a></div></div></li></ul></div>
 		                        
                             </div>
                         </nav>
@@ -127,150 +129,88 @@ MPLAB Code Configurator</a></div></div></li></ul></li></ul></div>
                             </span>
                         </button>
                         
-                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-4F359EC0-FFD4-4324-858D-9DD6807C55D1">
-<h1 class="- topic/title title topictitle1" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-4F359EC0-FFD4-4324-858D-9DD6807C55D1" style="">2.1 Bootstrapping MPU applications using at91bootstrap loader</h1>
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-3C4D8890-255B-4754-B97F-CEB02FAC3044">
+    <h1 class="- topic/title title topictitle1" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-3C4D8890-255B-4754-B97F-CEB02FAC3044" style="">2.1 Using at91boostrap loader with Harmony3
+        MPU applications</h1>
     <div class="- topic/body body">
-        <section class="- topic/section section" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_PBQ_JJS_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_PBQ_JJS_15B"><h2 class="- topic/title title sectiontitle">AT91Bootstrap loader</h2>MPU applications in this repository are linked to
-            execute from external DRAM memory that is available on the evaluation kit(s). To do
-            this, all peripherals and clock leading up-to the correct configuration of DRAM memory
-            needs to be setup correctly prior to programming the application into <p class="- topic/p p">Bootstrap
-                loader project used for this purpose is a variant of the AT91Bootstrap project
-                available for Microchip MPUs. It can be downloaded from <a class="- topic/xref xref" href="https://github.com/linux4sam/at91bootstrap/tree/at91bootstrap-3.x-mplabx" target="_blank" rel="external noopener">here</a>. This project is adapted to be used from within
-                MPLABX IDE on both Windows and Linux.</p> Bootstrap loader can be used with the
-            application in two ways: <ul class="- topic/ul ul" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_EFF_WJT_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_EFF_WJT_15B">
-                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-96EB2F33-F20A-46A5-8C20-5DD3BC07957F" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-96EB2F33-F20A-46A5-8C20-5DD3BC07957F">Load a binary by the name
-                        <strong class="+ topic/ph hi-d/b ph b">harmony.bin</strong> from SD Card</li>
-                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-B13B9F01-BC82-44F0-AD26-7B8E5796A1A4" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-B13B9F01-BC82-44F0-AD26-7B8E5796A1A4">Run or Debug the application from
-                    MPLAB X</li>
-            </ul></section>
-        <section class="- topic/section section" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_JWR_3LT_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_JWR_3LT_15B"><h2 class="- topic/title title sectiontitle">MPLABX application examples</h2>
-            
-            <p class="- topic/p p">Each application in this repository is bundled with its own copy of AT91Bootstrap
-                project. Each copy of the bootstrap project can be found under same folder as the
-                application project and is named and is prefixed with "at91bootstrap_". For eg: if
-                the application folder name is sam_a7g5_ek.X, then bootstrap project folder will be
-                named at91bootstrap_sam_a7g5_ek.X and will be present at the same folder level.
-                Additionally, each application is configured with a post-build script which will
-                generate a binary file called <strong class="+ topic/ph hi-d/b ph b">harmony.bin</strong>.</p>
-        </section>
-        <section class="- topic/section section" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_TVX_2G5_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_TVX_2G5_15B"><h2 class="- topic/title title sectiontitle">Build AT91Bootstrap MPLABX
-                project</h2>
-            
-            <ul class="- topic/ul ul" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_E4S_HG5_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_E4S_HG5_15B">
-                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-ECBEB096-719F-40EE-B81B-F487F9BD058E" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-ECBEB096-719F-40EE-B81B-F487F9BD058E">Bootstrap project can be
-                    configured using MPLABX using its KCONFIG menu. To do this, open the project in
-                    MPLABX, right click on the project and select "properties". In categories,
-                    select "Kconfig" as shown below:<div class="- topic/p p">
-                        <img class="- topic/image image break" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__IMAGE_XSP_PQ4_HWB" src="GUID-599A480A-51EF-4D7D-B271-6155BA17AA42-low.png"/>
-                    </div></li>
-                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-DEDBF1A0-F622-45F9-A94E-D946B623E12C" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-DEDBF1A0-F622-45F9-A94E-D946B623E12C">Click on "LOAD" button and
-                    navigate to the boards folder inside the project. Choose the a default
-                    configuration file (defconfig) config file to select a target evaluation board
-                    and boot method. <ul class="- topic/ul ul" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_AQR_VQ5_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_AQR_VQ5_15B">
-                        <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-706DCF09-A47A-486C-AF9C-B5B198CC3985" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-706DCF09-A47A-486C-AF9C-B5B198CC3985">To program and run the
-                            application from MPLABx, select
-                            &lt;board_name&gt;_bkpt_none_defconfig</li>
-                        <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-443ED52F-C51E-4F53-A25C-A7DA6EA8F436" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-443ED52F-C51E-4F53-A25C-A7DA6EA8F436">To load the application
-                            from SD card, select &lt;board_name&gt;sd_harmony_defconfig</li>
-                    </ul></li>
-                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-B522F096-4360-4328-8200-6F8944303BC1" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-B522F096-4360-4328-8200-6F8944303BC1">Click on "Apply" and "OK" buttons
-                    to configure the project</li>
-                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-33F51737-5BA6-4096-A655-B3A65A623DAC" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-33F51737-5BA6-4096-A655-B3A65A623DAC">Build the project to generate the
-                    bootstrap binaries<p class="- topic/p p"><em class="+ topic/ph hi-d/i ph i">Note: At91bootstrap project requires arm-gcc to build
-                            it. XC32 toolchain is not supported yet</em></p></li>
-            </ul>
-        </section>
-        <section class="- topic/section section" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_M5S_ZQ5_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_M5S_ZQ5_15B"><h2 class="- topic/title title sectiontitle">Configure Harmony MPLABX project
-                to use AT91Bootstrap loader</h2>
-            
-            <div class="- topic/p p">MPLABX debugger relies on AT91Bootstrap to configure the board before programming the
-                application binaries. To configure an application to use AT91Bootstrap, follow the
-                steps detailed below:<ul class="- topic/ul ul" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_O3C_2R5_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_O3C_2R5_15B">
-                    <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-9883B25D-91C5-4E25-82CE-94FF5E4E5A86" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-9883B25D-91C5-4E25-82CE-94FF5E4E5A86">Right click on the
-                        application project and select properties. This will open the properties
-                        window. In the configuration option, connected hardware tools, select the debugger.<div class="- topic/p p">
-                            <img class="- topic/image image break" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__IMAGE_KHC_TQ4_HWB" src="GUID-2F7801F0-9EE6-4E2A-ABF1-ABF2BE4669B5-low.png"/>
-                        </div><p class="- topic/p p"><em class="+ topic/ph hi-d/i ph i">Note: if no debugger is connected, click on the "show all" check
-                                box and select the supported debugger. Only Jlink options are
-                                supported</em></p></li>
-                    <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-8161B57F-DDD7-4FB2-B573-235CD504FF57" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-8161B57F-DDD7-4FB2-B573-235CD504FF57">Select the target toolchain
-                        and click on apply to save the changes</li>
-                    <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-364413BE-B9D5-40B6-95EF-19622C531862" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-364413BE-B9D5-40B6-95EF-19622C531862">This will result in an
-                        additional menu option to be available in the configuration tree view called
-                        "bootstrap" as shown below:<div class="- topic/p p">
-                            <img class="- topic/image image break" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__IMAGE_BXC_VQ4_HWB" src="GUID-5327C2EB-89C2-436D-A1EA-690F8D325E49-low.png"/>
-                        </div></li>
-                    <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-074E840B-2230-4766-95D3-FE67F4E2A933" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-074E840B-2230-4766-95D3-FE67F4E2A933">Click on "Use bootstrap"
-                        check box to enable bootstrap support</li>
-                    <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-6EFD9385-7921-49D2-83E0-5E2E6CC41DE2" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-6EFD9385-7921-49D2-83E0-5E2E6CC41DE2">
-                        <p class="- topic/p p">Click on the <strong class="+ topic/ph hi-d/b ph b">LOAD</strong> button to load the bootstrap file. This will
-                            open a file picker, which allows you to choose the bootstrap binary
-                            file.</p>
-                    </li>
-                </ul></div>
-        </section>
-        <section class="- topic/section section" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_ETS_ZQ5_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_ETS_ZQ5_15B">
-            <ul class="- topic/ul ul" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_FTS_ZQ5_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_FTS_ZQ5_15B">
-                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-9FE84505-3B02-4B73-A4F3-D7AEB6ADE3C4" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-9FE84505-3B02-4B73-A4F3-D7AEB6ADE3C4">Navigate to the "binaries" folder
-                    under the AT91Bootstrap project folder. This contains the build output of the
-                    bootstrap project. You can either choose the "AT91Bootstrap.elf" file or
-                    "boot.bin" file<ul class="- topic/ul ul" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_GTS_ZQ5_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_GTS_ZQ5_15B">
-                        <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-A118B2C1-DA23-4CC3-9ADA-D464418AC6C8" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-A118B2C1-DA23-4CC3-9ADA-D464418AC6C8">If ELF file is chosen,
-                            the "Bootstrap entry address" and the "Bootstrap load address" text box
-                            can be left empty as this information will be read from the ELF file
-                            (Choose this option for all apps in the repository, as the
-                            at91bootstrap.elf file checked into the repository is configured to load
-                            and run the application binaries)</li>
-                        <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-B4D97975-976B-43F5-B470-6135A7994BF5" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-B4D97975-976B-43F5-B470-6135A7994BF5">If BIN file is chosen,
-                            the bootstrap entry address and the load address should be filled in
-                            their corresponding text boxes</li>
-                        <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-91BCAB7D-250F-4547-857F-81AE7B9C9A1E" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-91BCAB7D-250F-4547-857F-81AE7B9C9A1E">An example configuration
-                            can be seen below. Here a relative path is used with respect to the
-                            project directory, to make the configuration portable<div class="- topic/p p">
-                                <img class="- topic/image image break" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__IMAGE_PFK_XQ4_HWB" src="GUID-8EB492B7-13AE-4E46-B888-E19E07AAD615-low.png"/>
-                            </div></li>
-                    </ul></li>
-            </ul>
-        </section>
-        <section class="- topic/section section" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_SNC_CKV_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_SNC_CKV_15B"><h2 class="- topic/title title sectiontitle">Debug application from
+        <p class="- topic/p p">MPU Harmony3 applications are compiled and linked to execute from external DRAM memory
+            that is available on the corresponding evaluation kit. This require all peripherals and
+            clock leading to the DRAM memory to be configured prior to the application being
+            programmed into DRAM. This is achieved using a bootstrap loader. We use <a class="- topic/xref xref" href="https://github.com/linux4sam/at91bootstrap" target="_blank" rel="external noopener">at91bootstrap</a> loader for this purpose.</p>
+        <p class="- topic/p p">We have deployed the following pre-built bootstrap binaries inside our application
+            repositories. They can be found under <strong class="+ topic/ph hi-d/b ph b">deps </strong>folder at the root of the
+            repository.</p>
+        <div class="table-container"><table class="- topic/table table" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__TABLE_FBP_CHB_NZB" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__TABLE_FBP_CHB_NZB" data-cols="2"><caption></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead">
+                    <tr class="- topic/row">
+                        <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__TABLE_FBP_CHB_NZB__entry__1">Binary Name</th>
+                        <th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__TABLE_FBP_CHB_NZB__entry__2">Description</th>
+                    </tr>
+                </thead><tbody class="- topic/tbody tbody">
+                    <tr class="- topic/row">
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__TABLE_FBP_CHB_NZB__entry__1">at91bootstrap.elf</td>
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__TABLE_FBP_CHB_NZB__entry__2">Bootstrap which allows debug or run application using MPLABX</td>
+                    </tr>
+                    <tr class="- topic/row">
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__TABLE_FBP_CHB_NZB__entry__1">boot.bin</td>
+                        <td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__TABLE_FBP_CHB_NZB__entry__2">Bootstrap which allows booting application using an SD Card</td>
+                    </tr>
+                </tbody></table></div>
+        <p class="- topic/p p">To use at91boostrap to load and run harmony applications from MPLABX, it should be build
+            with "bkpt_none_defconfig" configuration. If you are interested in building
+            at91bootstrap using MPLABX, you can read about it <a class="- topic/xref xref" href="GUID-C658DA4B-7AC7-42A5-B3D0-CBA19DE2EDD3.html">here</a>.</p>
+        <section class="- topic/section section" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_JWR_3LT_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_JWR_3LT_15B"><h2 class="- topic/title title sectiontitle">Configure a debug
+                tool</h2><ul class="- topic/ul ul" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_JYK_3HY_NZB" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_JYK_3HY_NZB">
+                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-E7644906-6927-4998-B2CF-31D4DE7B41E6" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-E7644906-6927-4998-B2CF-31D4DE7B41E6">Open the MPLABX applicaton that
+                    you want to debug or run in MPLABX.</li>
+                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-83390E09-3BC0-486D-9B1B-2EFFF589D898" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-83390E09-3BC0-486D-9B1B-2EFFF589D898">Right click on the application
+                    project and select properties. This will open the properties window. In the
+                    configuration option --&gt; connected hardware tools, select the debugger.</li>
+            </ul><div class=""><img class="- topic/image image" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__IMAGE_KYK_3HY_NZB" src="GUID-73BEF073-382C-4871-B43C-D7C9D2907925-high.png" width="800"/></div><p class="- topic/p p"><em class="+ topic/ph hi-d/i ph i">Note: if no debugger is connected, click on the "show all" check
+                    box and select the supported debugger</em></p><ul class="- topic/ul ul" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_LYK_3HY_NZB" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_LYK_3HY_NZB">
+                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-261BAA00-652F-4301-A0AB-48C4DDD11AEF" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-261BAA00-652F-4301-A0AB-48C4DDD11AEF">Select the target toolchain and
+                    click on apply to save the changes</li>
+                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-73383C09-952F-4CA8-B6EA-0A7F271316CC" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-73383C09-952F-4CA8-B6EA-0A7F271316CC">This will result in an additional
+                    menu option to be available in the configuration tree view called "bootstrap" as
+                    shown below:</li>
+            </ul><div class=""><img class="- topic/image image" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__IMAGE_MYK_3HY_NZB" src="GUID-A5B14604-0537-40C8-90D0-47786F5481E7-high.png" width="800"/></div></section>
+        <section class="- topic/section section" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_TVX_2G5_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_TVX_2G5_15B"><h2 class="- topic/title title sectiontitle">Configure bootstrap</h2><ul class="- topic/ul ul" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_NYK_3HY_NZB" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_NYK_3HY_NZB">
+                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-CD4239D9-7DB7-41C5-A464-3BD8E9878937" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-CD4239D9-7DB7-41C5-A464-3BD8E9878937">Click on "Use bootstrap" check
+                    box to enable bootstrap support</li>
+                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-30C585A5-71F6-4D1B-8AB2-6002C5F596F9" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-30C585A5-71F6-4D1B-8AB2-6002C5F596F9">Click on the "LOAD" button to
+                    load the bootstrap file. This will open a file picker, which allows you to
+                    choose the bootstrap binary file.</li>
+                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-36FE34ED-B70E-423F-9FFC-B2D1C1DA28E8" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-36FE34ED-B70E-423F-9FFC-B2D1C1DA28E8">Navigate to the “{repository
+                    root}\deps\at91bootstrap_{board name}_binaries” folder as explained in the
+                    previous section. You should choose "at91bootstrap.elf" file (The "Bootstrap
+                    entry address" and the "Bootstrap load address" text box can be left empty as
+                    this information will be read from the ELF file automatically)</li>
+            </ul><div class=""><img class="- topic/image image" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__IMAGE_OYK_3HY_NZB" src="GUID-03AA18F7-99C9-4702-8814-44DFAFCD0604-high.png" width="800"/></div></section>
+        <section class="- topic/section section" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_M5S_ZQ5_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_M5S_ZQ5_15B"><h2 class="- topic/title title sectiontitle">Run/Debug MPU applications using
                 MPLABX</h2>
             
-            <p class="- topic/p p">Once the application is configured to use bootstrap loader, debugging or running the
-                application is as simple right clicking the application and selecting "Debug" or
-                "Run" option. This will cause programmer to perform a two stage loading:</p>
+            <p class="- topic/p p">You can now Run/Debug the MPU application just like any other MPLABX applications.
+                When executed, MPLABX performs a two stage loading:</p>
             <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Stage 1:</strong> Loads the bootstrap loader into the internal SRAM and executes it.
-                The bootstrap will configure the board specific peripherals and memory and then wait
-                for a debugger attach</p>
+                This will configure the board specific peripherals and memory</p>
             <p class="- topic/p p"><strong class="+ topic/ph hi-d/b ph b">Stage 2:</strong> Loads the application into the external DRAM and debugs it. User can
                 perform actions like setting breakpoints, single-stepping etc.</p>
-            <p class="- topic/p p">Debugging the application using MPLABX has the following limitations:</p>
-            <ul class="- topic/ul ul" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_OZ1_4LV_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_OZ1_4LV_15B">
-                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-FFB2D456-E313-4A1B-9C51-4E33EF16BE6C" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-FFB2D456-E313-4A1B-9C51-4E33EF16BE6C">Call stack is not supported</li>
-                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-ADBCE32B-981C-4E20-9722-B4DEE0B30A1B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-ADBCE32B-981C-4E20-9722-B4DEE0B30A1B">Step in, step out using debugger
-                    does not work</li>
+            <p class="- topic/p p">When using MPLABX to debug a harmony application, you will face the following
+                limitations:</p>
+            <ul class="- topic/ul ul" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_PYK_3HY_NZB" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_PYK_3HY_NZB">
+                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-EEA71308-9722-466D-B8E6-6DEC8ABF96B7" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-EEA71308-9722-466D-B8E6-6DEC8ABF96B7">Call stack is not fully supported
+                    yet, hence stepping in and out of functions may not work correctly.</li>
             </ul>
-            <p class="- topic/p p"><em class="+ topic/ph hi-d/i ph i">Note: Make sure that you reset the board between each debug sessions so that the
-                    debugger can attach to the target correctly</em></p>
         </section>
-        <section class="- topic/section section" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_ADX_BLV_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_ADX_BLV_15B"><h2 class="- topic/title title sectiontitle">Run application using SD
+        <section class="- topic/section section" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_SNC_CKV_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_SNC_CKV_15B"><h2 class="- topic/title title sectiontitle">Boot to application using SD
                 card</h2>
             
-            <ul class="- topic/ul ul" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_Q55_MLV_15B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__UL_Q55_MLV_15B">
-                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-BD7E130A-6CC2-4F99-97E9-D1C871A3B41B" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-BD7E130A-6CC2-4F99-97E9-D1C871A3B41B">Build at91bootstrap project using
-                    &lt;board_name&gt;sd_harmony_defconfig configuration to generate "boot.bin"</li>
-                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-DD4715C6-2353-4152-B948-9546DDD90508" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-DD4715C6-2353-4152-B948-9546DDD90508">Build the application project
-                    with the post build step enabled to generate "harmony.bin"</li>
-                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-97D01E0B-8CB0-4BB9-A5B2-96E0D3D3EB23" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-97D01E0B-8CB0-4BB9-A5B2-96E0D3D3EB23">Prepare an SD card with FAT32
-                    partition</li>
-                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-726A4ED6-197C-4C42-A809-4B63BC8F0273" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-726A4ED6-197C-4C42-A809-4B63BC8F0273">Copy both "boot.bin" and
-                    "harmony.bin" binaries onto the SD card</li>
-                <li class="- topic/li li" id="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-8AD625FC-2583-4232-ADA5-E38EE29CC4B7" data-ofbid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__GUID-8AD625FC-2583-4232-ADA5-E38EE29CC4B7">Insert SD card into SD slot of
-                    the evaluation kit and press the reset button.</li>
-            </ul>
+            <p class="- topic/p p">Copy both the application binary named "harmony.bin" and the bootstrap binary named
+                "boot.bin" onto an SD card. Insert the SD card into the SD slot of the evaluation
+                kit and press the reset button.</p>
             <p class="- topic/p p">The ROM bootloader will copy the bootstrap binary "boot.bin" into the internal SRAM
-                and executes it. The bootstrap will then configure the external DRAM and the
-                required peripherals, then copy the application binary "harmony.bin" into the DRAM
-                and executes it.</p>
+                and executes it. The bootstrap will configure the external DRAM and the required
+                peripherals, then copy the applicaton binary "harmony.bin" into the DRAM and
+                executes it.</p>
         </section>
     </div>
 </article></main></div>
@@ -285,10 +225,9 @@ MPLAB Code Configurator</a></div></div></li></ul></li></ul></div>
                         <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
                             <div id="wh_topic_toc_content">
 		                        
-	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_PBQ_JJS_15B" data-tocid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_PBQ_JJS_15B">AT91Bootstrap loader</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_JWR_3LT_15B" data-tocid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_JWR_3LT_15B">MPLABX application examples</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_TVX_2G5_15B" data-tocid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_TVX_2G5_15B">Build AT91Bootstrap MPLABX
-                project</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_M5S_ZQ5_15B" data-tocid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_M5S_ZQ5_15B">Configure Harmony MPLABX project
-                to use AT91Bootstrap loader</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_SNC_CKV_15B" data-tocid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_SNC_CKV_15B">Debug application from
-                MPLABX</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_ADX_BLV_15B" data-tocid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_ADX_BLV_15B">Run application using SD
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_JWR_3LT_15B" data-tocid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_JWR_3LT_15B">Configure a debug
+                tool</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_TVX_2G5_15B" data-tocid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_TVX_2G5_15B">Configure bootstrap</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_M5S_ZQ5_15B" data-tocid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_M5S_ZQ5_15B">Run/Debug MPU applications using
+                MPLABX</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_SNC_CKV_15B" data-tocid="GUID-44EFCAD0-60B3-44FE-A338-FEA0928493DE__SECTION_SNC_CKV_15B">Boot to application using SD
                 card</a></div></li></ul></div>
 	                        	
                         	</div>
@@ -300,7 +239,7 @@ MPLAB Code Configurator</a></div></div></li></ul></li></ul></div>
             
             
         </div> 
-        <footer class="navbar navbar-default wh_footer">
+        <div class="mchp_disclaimer"><p class="mchp_disclaimer_text">The online versions of the documents are provided as a courtesy. Verify all content and data in the device’s PDF documentation found on the device product page.</p></div><footer class="navbar navbar-default wh_footer">
   <div class=" footer-container mx-auto ">
     <div class="footer">
   <div class="mchp-wh-footer">
@@ -409,6 +348,9 @@ MPLAB Code Configurator</a></div></div></li></ul></li></ul></div>
     gtag('js', new Date());   
     gtag('config', 'UA-2724382-19');
   </script>
+  
+  <script type="text/javascript">_satellite.pageBottom();</script><!-- Adobe Analytics -->
+  
 </div>
   </div>
 </footer>
@@ -425,5 +367,6 @@ MPLAB Code Configurator</a></div></div></li></ul></li></ul></div>
         
         
         
-    </body>
+       
+        </body>
 </html>
