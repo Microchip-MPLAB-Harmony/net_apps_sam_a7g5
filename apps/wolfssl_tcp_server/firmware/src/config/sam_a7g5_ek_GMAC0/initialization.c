@@ -68,12 +68,12 @@
 /* Forward declaration of MIIM 0 initialization data */
 static const DRV_MIIM_INIT drvMiimInitData_0;
 
+/* Forward declaration of PHY initialization data */
+const DRV_ETHPHY_INIT tcpipPhyInitData_KSZ9131;
+
 /* Forward declaration of GMAC0 initialization data */
 const TCPIP_MODULE_MAC_PIC32C_CONFIG tcpipGMAC0InitData;
 
-
-/* Forward declaration of PHY initialization data */
-const DRV_ETHPHY_INIT tcpipPhyInitData_KSZ9131;
 
 
 
@@ -424,6 +424,29 @@ static const NET_PRES_INIT_DATA netPresInitData =
   
  
 
+/*** KSZ9131 PHY Driver Time-Out Initialization Data ***/
+DRV_ETHPHY_TMO drvksz9131Tmo = 
+{
+    .resetTmo = DRV_ETHPHY_KSZ9131_RESET_CLR_TMO,
+    .aNegDoneTmo = DRV_ETHPHY_KSZ9131_NEG_DONE_TMO,
+    .aNegInitTmo = DRV_ETHPHY_KSZ9131_NEG_INIT_TMO,    
+};
+
+/*** ETH PHY Initialization Data ***/
+const DRV_ETHPHY_INIT tcpipPhyInitData_KSZ9131 =
+{    
+    .ethphyId               = DRV_KSZ9131_PHY_PERIPHERAL_ID,
+    .phyAddress             = DRV_KSZ9131_PHY_ADDRESS,
+    .phyFlags               = DRV_KSZ9131_PHY_CONFIG_FLAGS,
+    .pPhyObject             = &DRV_ETHPHY_OBJECT_KSZ9131,
+    .resetFunction          = 0,
+    .ethphyTmo              = &drvksz9131Tmo,
+    .pMiimObject            = &DRV_MIIM_OBJECT_BASE_Default,
+    .pMiimInit              = &drvMiimInitData_0,
+    .miimIndex              = 0,
+};
+
+
 
 uint8_t txPrioNumToQueIndxGmac0 [DRV_GMAC0_NUMBER_OF_QUEUES];
 uint8_t rxPrioNumToQueIndxGmac0 [DRV_GMAC0_NUMBER_OF_QUEUES];
@@ -528,29 +551,6 @@ const TCPIP_MODULE_MAC_PIC32C_CONFIG tcpipGMAC0InitData =
        .macTxPrioNum           = TCPIP_GMAC0_TX_PRIO_COUNT,
        .macRxPrioNum           = TCPIP_GMAC0_RX_PRIO_COUNT,  
        .macRxFilt              = TCPIP_GMAC0_RX_FILTERS,
-};
-
-
-/*** KSZ9131 PHY Driver Time-Out Initialization Data ***/
-DRV_ETHPHY_TMO drvksz9131Tmo = 
-{
-    .resetTmo = DRV_ETHPHY_KSZ9131_RESET_CLR_TMO,
-    .aNegDoneTmo = DRV_ETHPHY_KSZ9131_NEG_DONE_TMO,
-    .aNegInitTmo = DRV_ETHPHY_KSZ9131_NEG_INIT_TMO,    
-};
-
-/*** ETH PHY Initialization Data ***/
-const DRV_ETHPHY_INIT tcpipPhyInitData_KSZ9131 =
-{    
-    .ethphyId               = DRV_KSZ9131_PHY_PERIPHERAL_ID,
-    .phyAddress             = DRV_KSZ9131_PHY_ADDRESS,
-    .phyFlags               = DRV_KSZ9131_PHY_CONFIG_FLAGS,
-    .pPhyObject             = &DRV_ETHPHY_OBJECT_KSZ9131,
-    .resetFunction          = 0,
-    .ethphyTmo              = &drvksz9131Tmo,
-    .pMiimObject            = &DRV_MIIM_OBJECT_BASE_Default,
-    .pMiimInit              = &drvMiimInitData_0,
-    .miimIndex              = 0,
 };
 
 
