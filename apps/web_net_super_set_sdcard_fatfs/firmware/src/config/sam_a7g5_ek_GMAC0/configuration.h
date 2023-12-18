@@ -370,15 +370,6 @@ extern "C" {
 
 
 
-/*** FTPC Configuration ***/
-#define TCPIP_STACK_USE_FTP_CLIENT
-#define TCPIP_FTPC_TASK_TICK_RATE        5
-#define TCPIP_FTPC_TMO                   2
-#define TCPIP_FTPC_MAX_NUM_CLIENT        3
-#define TCPIP_FTPC_DATA_SKT_TX_BUFF_SIZE_DFLT        0
-#define TCPIP_FTPC_DATA_SKT_RX_BUFF_SIZE_DFLT        0
-
-
 /*** iperf Configuration ***/
 #define TCPIP_STACK_USE_IPERF
 #define TCPIP_IPERF_TX_BUFFER_SIZE		4096
@@ -389,6 +380,15 @@ extern "C" {
 #define TCPIP_IPERF_MAX_INSTANCES       1
 #define TCPIP_IPERF_TX_BW_LIMIT  		1
 
+
+
+/*** FTPC Configuration ***/
+#define TCPIP_STACK_USE_FTP_CLIENT
+#define TCPIP_FTPC_TASK_TICK_RATE        5
+#define TCPIP_FTPC_TMO                   2
+#define TCPIP_FTPC_MAX_NUM_CLIENT        3
+#define TCPIP_FTPC_DATA_SKT_TX_BUFF_SIZE_DFLT        0
+#define TCPIP_FTPC_DATA_SKT_RX_BUFF_SIZE_DFLT        0
 
 
 /*** IPv4 Configuration ***/
@@ -830,6 +830,20 @@ extern "C" {
 
 
 
+
+#define DRV_KSZ9131_PHY_CONFIG_FLAGS       ( 0 \
+                                                    | DRV_ETHPHY_CFG_RGMII \
+                                                    | DRV_ETHPHY_CFG_DEFAULT \
+                                                    )
+
+#define DRV_KSZ9131_PHY_LINK_INIT_DELAY        500
+#define DRV_KSZ9131_PHY_ADDRESS                7
+#define DRV_KSZ9131_PHY_PERIPHERAL_ID          GMAC0_BASE_ADDRESS
+#define DRV_ETHPHY_KSZ9131_NEG_INIT_TMO        1
+#define DRV_ETHPHY_KSZ9131_NEG_DONE_TMO        2000
+#define DRV_ETHPHY_KSZ9131_RESET_CLR_TMO       500
+
+
 /*** GMAC0 Configuration ***/
 #define DRV_GMAC0
 #define DRV_SAMA7G
@@ -924,20 +938,6 @@ extern "C" {
 #define DRV_GMAC0_NUMBER_OF_QUEUES               6
 #define DRV_GMAC0_RMII_MODE                      0
 
-
-
-
-#define DRV_KSZ9131_PHY_CONFIG_FLAGS       ( 0 \
-                                                    | DRV_ETHPHY_CFG_RGMII \
-                                                    | DRV_ETHPHY_CFG_DEFAULT \
-                                                    )
-
-#define DRV_KSZ9131_PHY_LINK_INIT_DELAY        500
-#define DRV_KSZ9131_PHY_ADDRESS                7
-#define DRV_KSZ9131_PHY_PERIPHERAL_ID          GMAC0_BASE_ADDRESS
-#define DRV_ETHPHY_KSZ9131_NEG_INIT_TMO        1
-#define DRV_ETHPHY_KSZ9131_NEG_DONE_TMO        2000
-#define DRV_ETHPHY_KSZ9131_RESET_CLR_TMO       500
 
 
 
