@@ -3,6 +3,48 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Network Application Examples for SAM A7G5 Family, v3.1.0
+
+### New Features
+- Support for MAC RX/TX Checksum offload feature.
+- Support for GMAC RGMII/GMII 10/100 speed.
+
+
+### Improvements and Bug Fixes
+- IPERF throughput improvement.
+- Fix for GMAC driver critical section access issue.
+- ETHPHY driver write function.
+- Fix for bind operation in berkeley module.
+- Fix for 'IntegerSymbol not found' MCC failure.
+- Updated demo documentation.
+
+### Known Issues
+- wolfssl_tcp_client with FreeRTOS fails during TLS Handshake.
+
+
+### Development Tools
+
+- [MPLAB® X IDE, v6.15](https://www.microchip.com/mplab/mplab-x-ide) or later
+- [MPLAB® XC32 C/C++ Compiler, v4.35](https://www.microchip.com/mplab/compilers) or later
+- [MPLAB® Code Configurator(MCC) Plugin, v5.3.7](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator) or later
+- [MPLAB® Harmony v3 net repository, v3.11.0](https://github.com/Microchip-MPLAB-Harmony/net/tree/v3.11.0)
+- [MPLAB® Harmony v3 net\_apps\_sam\_a7g5 demo apps repository, v3.1.0](https://github.com/Microchip-MPLAB-Harmony/net_apps_sam_a7g5/tree/v3.1.0)
+
+### Development Kit Support
+
+This release supports applications for the following development kit.
+
+| Development Kits |
+| --- |
+| [SAMA7G54-EK](https://www.microchip.com/en-us/development-tool/EV21H18A) |
+
+
+## Net Release Notes
+
+- See the [Net 3.11.0 Release Notes](https://github.com/Microchip-MPLAB-Harmony/net/tree/v3.11.0)
+
+---
+
 ## Harmony 3 Network Application Examples for SAM A7G5 Family v3.0.0
 The applications demonstrate the typical usage of Harmony 3 TCP/IP Stack on a hardware board with SAMA7G54 device.
 - All applications use MCC for configuration.
