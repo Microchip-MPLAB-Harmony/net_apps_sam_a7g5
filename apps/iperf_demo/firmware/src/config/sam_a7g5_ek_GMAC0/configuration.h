@@ -424,10 +424,10 @@ extern "C" {
 /*** QUEUE 0 RX Configuration ***/
 #define TCPIP_GMAC0_RX_DESCRIPTORS_COUNT_QUE0            256
 #define TCPIP_GMAC0_RX_BUFF_SIZE_QUE0                    1536
-#define TCPIP_GMAC0_RX_DEDICATED_BUFFERS_QUE0            10
-#define TCPIP_GMAC0_RX_ADDL_BUFF_COUNT_QUE0              4
+#define TCPIP_GMAC0_RX_DEDICATED_BUFFERS_QUE0            256
+#define TCPIP_GMAC0_RX_ADDL_BUFF_COUNT_QUE0              10
 #define TCPIP_GMAC0_RX_BUFF_COUNT_THRESHOLD_QUE0         2
-#define TCPIP_GMAC0_RX_BUFF_ALLOC_COUNT_QUE0             3
+#define TCPIP_GMAC0_RX_BUFF_ALLOC_COUNT_QUE0             5
 /*** QUEUE 1 Not Enabled - Dummy Configuration ***/
 #define TCPIP_GMAC0_TX_DESCRIPTORS_COUNT_QUE1             TCPIP_GMAC0_TX_DESCRIPTORS_COUNT_DUMMY
 #define TCPIP_GMAC0_MAX_TX_PKT_SIZE_QUE1                  0

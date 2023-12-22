@@ -320,10 +320,10 @@ TCPIP_MODULE_GMAC_QUEUE_CONFIG  gmac0_queue_config[DRV_GMAC0_NUMBER_OF_QUEUES]=
        .nTxDescCnt    = 20,
        .rxBufferSize  = 1536,
        .txMaxPktSize  = 1536,
-       .nRxDedicatedBuffers   = 10,
-       .nRxAddlBuffCount  = 4,
+       .nRxDedicatedBuffers   = 256,
+       .nRxAddlBuffCount  = 10,
        .nRxBuffCntThres   = 2,
-       .nRxBuffAllocCnt   = 3,   
+       .nRxBuffAllocCnt   = 5,   
        .queueIntSrc       = GMAC0_IRQn,                               
    },
    {   /** QUEUE 1 Initialization**/
