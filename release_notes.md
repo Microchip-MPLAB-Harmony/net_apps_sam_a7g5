@@ -3,6 +3,28 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Network Application Examples for SAMA7G5 Family, v3.1.1
+
+### New Features
+- None
+
+### Improvements and Bug Fixes
+- Documentation updates
+
+### Known Issues
+- Same as previous release (v3.1.0)
+
+### Development Tools
+- Same as previous release (v3.1.0)
+
+### Development Kit Support
+- Same as previous release (v3.1.0)
+
+## Net Release Notes
+- Same as previous release (v3.1.0)
+
+---
+
 ## Network Application Examples for SAM A7G5 Family, v3.1.0
 
 ### New Features
