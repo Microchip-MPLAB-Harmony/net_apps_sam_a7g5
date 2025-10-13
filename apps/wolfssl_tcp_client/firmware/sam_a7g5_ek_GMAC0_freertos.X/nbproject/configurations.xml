@@ -643,6 +643,13 @@
       <itemPath>../src/app.h</itemPath>
       <itemPath>../src/app_commands.h</itemPath>
     </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>wolfssl_tcp_client_GMAC0_freertos.mc3</itemPath>
+      <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/harmony-manifest-success.yml</itemPath>
+    </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
@@ -943,13 +950,6 @@
       <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/pin_configurations.csv</itemPath>
       <itemPath>../src/app.c</itemPath>
       <itemPath>../src/app_commands.c</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>wolfssl_tcp_client_GMAC0_freertos.mc3</itemPath>
-      <itemPath>../src/config/sam_a7g5_ek_GMAC0_freertos/harmony-manifest-success.yml</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -1575,7 +1575,7 @@
         </C32Global>
       </item>
       <C32>
-        <property key="additional-warnings" value="true"/>
+        <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
         <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
@@ -1588,7 +1588,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
-        <property key="make-warnings-into-errors" value="true"/>
+        <property key="make-warnings-into-errors" value="false"/>
         <property key="optimization-level" value="-O1"/>
         <property key="place-data-into-section" value="true"/>
         <property key="post-instruction-scheduling" value="default"/>
